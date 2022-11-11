@@ -1,0 +1,32 @@
+---
+permalink: health-checker/task_view_encryption_status_of_all_volumes.html 
+sidebar: sidebar 
+keywords: view, encryption status, volumes 
+summary: Sie können eine Liste aller Volumes und ihren aktuellen Verschlüsselungsstatus anzeigen, um zu ermitteln, ob die Daten auf Ihren Volumes vor dem Zugriff durch nicht autorisierte Benutzer angemessen geschützt sind. 
+---
+= Anzeigen des Verschlüsselungsstatus aller Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Liste aller Volumes und ihren aktuellen Verschlüsselungsstatus anzeigen, um zu ermitteln, ob die Daten auf Ihren Volumes vor dem Zugriff durch nicht autorisierte Benutzer angemessen geschützt sind.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+
+Auf ein Volume können folgende Verschlüsselungsarten angewendet werden:
+
+* Software – Volumes, die mit Hilfe von NetApp Volume Encryption (NVE) oder NetApp Software-Verschlüsselungslösungen (NAE) gesichert werden.
+* Hardware – Volumes, die mit der Hardware-Verschlüsselung von NetApp Storage Encryption (NSE) gesichert werden.
+* Software- und Hardware-Volumes, die sowohl durch Software- als auch durch Hardware-Verschlüsselung geschützt sind.
+* Keine - Volumen, die nicht verschlüsselt sind.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Volumes*.
+. Wählen Sie im Menü Ansicht die Option *Gesundheit* > *Volumen-Verschlüsselung*
+. Sortieren Sie in der Ansicht *Health: Volumes Encryption* das Feld *Verschlüsselungstyp*, oder verwenden Sie den Filter, um Volumes mit einem bestimmten Verschlüsselungstyp anzuzeigen oder die nicht verschlüsselt sind (Verschlüsselungstyp von „`Keine`“).
+

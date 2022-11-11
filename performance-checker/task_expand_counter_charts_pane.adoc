@@ -1,0 +1,38 @@
+---
+permalink: performance-checker/task_expand_counter_charts_pane.html 
+sidebar: sidebar 
+keywords: expand, counter, charts, pane 
+summary: Sie können das Fenster Zählerdiagramme so erweitern, dass die Diagramme größer und lesbarer sind. 
+---
+= Erweitern des Fensterbereichs Counter Charts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Fenster Zählerdiagramme so erweitern, dass die Diagramme größer und lesbarer sind.
+
+Nachdem Sie die Vergleichsobjekte und den Zeitbereich für Zähler definiert haben, können Sie einen größeren Counter Charts-Bereich anzeigen. Sie verwenden die *<*-Schaltfläche in der Mitte des Performance Explorer-Fensters, um das Fenster zu erweitern.
+
+.Schritt
+. Erweitern oder verkleinern Sie das Fenster *Counter Charts*.
+
+
+|===
+| An... | Tun Sie das... 
+
+
+ a| 
+Erweitern Sie das Fenster Counter Charts, um die Breite der Seite anzupassen
+ a| 
+Klicken Sie auf die Schaltfläche *<*
+
+
+
+ a| 
+Verkleinern Sie das Fenster Counter Charts auf die rechte Hälfte der Seite
+ a| 
+Klicken Sie auf die Schaltfläche *>*
+
+|===

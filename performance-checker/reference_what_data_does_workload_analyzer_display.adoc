@@ -1,0 +1,70 @@
+---
+permalink: performance-checker/reference_what_data_does_workload_analyzer_display.html 
+sidebar: sidebar 
+keywords: workload analyzer, charts, display, data 
+summary: Die Seite Workload Analyzer enthält Informationen zu aktuellen Ereignissen, die Auswirkungen auf den Workload haben könnten, Empfehlungen zur potenziellen Behebung des Ereignisses und Diagramme zur Analyse des Performance- und Kapazitätsverlaufs. 
+---
+= Welche Daten werden vom Workload Analyzer angezeigt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite Workload Analyzer enthält Informationen zu aktuellen Ereignissen, die Auswirkungen auf den Workload haben könnten, Empfehlungen zur potenziellen Behebung des Ereignisses und Diagramme zur Analyse des Performance- und Kapazitätsverlaufs.
+
+Oben auf der Seite geben Sie den Namen des Workloads (Volume oder LUN) an, den Sie analysieren möchten, und den Zeitrahmen, über den Sie Statistiken anzeigen möchten. Sie können den Zeitrahmen jederzeit ändern, wenn Sie einen kürzeren oder längeren Zeitraum anzeigen möchten.
+
+In den anderen Bereichen der Seite werden die Analyseergebnisse sowie die Performance- und Kapazitätsdiagramme angezeigt.
+
+[NOTE]
+====
+Workload-Diagramme für LUNs bieten nicht dasselbe Maß an Statistiken wie die Diagramme für Volumes. Daher werden bei der Analyse dieser beiden Workload-Typen Unterschiede feststellen.
+
+====
+* *Veranstaltungsübersicht*
++
+Zeigt eine kurze Übersicht über Anzahl und Art der Ereignisse an, die im Laufe des Zeitraums aufgetreten sind. Wenn Ereignisse aus unterschiedlichen Wirkungsbereichen vorliegen (z. B. Leistung und Kapazität), werden diese Informationen angezeigt, sodass Sie Details für den gewünschten Ereignistyp auswählen können. Klicken Sie auf den Ereignistyp, um eine Liste der Ereignisnamen anzuzeigen.
+
++
+Wenn während des Zeitraums nur ein Ereignis auftritt, wird für einige Ereignisse eine Liste mit Empfehlungen zur Behebung des Problems aufgeführt.
+
+* *Veranstaltungstermine*
++
+Zeigt alle Vorkommen von Ereignissen während des angegebenen Zeitraums an. Bewegen Sie den Cursor über jedes Ereignis, um den Ereignisnamen anzuzeigen.
+
++
+Wenn Sie auf dieser Seite angekommen sind, indem Sie auf der Seite Ereignisdetails auf die Schaltfläche *Workload analysieren* klicken, erscheint das Symbol für das ausgewählte Ereignis größer, sodass Sie das Ereignis identifizieren können.
+
+* *Bereich der Performance-Diagramme*
++
+Zeigt Diagramme für Latenz, Durchsatz (sowohl IOPS als auch MB/s) und Auslastung (sowohl für den Node als auch für das Aggregat) basierend auf dem ausgewählten Zeitraum an. Sie können auf den Link Performance-Details anzeigen klicken, um die Seite im Performance Explorer für den Workload anzuzeigen, falls Sie eine weitere Analyse durchführen möchten.
+
++
+** *Latenz* zeigt die Latenz für den Workload über den ausgewählten Zeitraum an. Das Diagramm enthält drei Ansichten, mit denen Sie Folgendes anzeigen können:
++
+*** * Total * Latenz
+*** *Aufschlüsselung* Latenz (aufgeschlüsselt nach Lese-, Schreib- und anderen Prozessen)
+*** *Cluster-Komponenten* Latenz (aufgeschlüsselt nach Cluster-Komponente)
+
+
+
+
+
+
+Siehe link:concept_cluster_components_and_why_they_can_be_in_contention.html["Cluster-Komponenten und warum sie über Konflikte verfügen können"] Eine Beschreibung der hier angezeigten Cluster-Komponenten. ** * Throughput* zeigt IOPS und MB/s Durchsatz für den Workload über den ausgewählten Zeitraum an. Das Diagramm hat vier Ansichten, die es Ihnen ermöglichen zu sehen: *** *Gesamtdurchsatz* *** *Aufschlüsselung* Durchsatz (gebrochen durch Lese-, Schreib- und andere Prozesse) *** *Cloud Throughput* (die MB/s, die zum Schreiben von Daten in die Cloud und zum Lesen von Daten verwendet werden; Für Workloads, die Tiering-Kapazität in die Cloud darstellen) *** *IOPS mit Prognose* (eine Vorhersage darüber, welche Werte für den oberen und unteren IOPS-Durchsatz über den Zeitraum hinweg erwartet wurden) Dieses Diagramm zeigt auch Quality of Service (QoS) maximale und minimale Durchsatzschwellenwerte, falls konfiguriert, Sie sehen also, wo das System den Durchsatz absichtlich mit QoS-Richtlinien begrenzt. ** *Auslastung* zeigt die Auslastung sowohl für das Aggregat als auch für den Node an, auf dem der Workload über den ausgewählten Zeitraum ausgeführt wird. Von hier aus sehen Sie, ob Ihr Aggregat oder die Knoten überausgelastet sind, was möglicherweise zu hoher Latenz führt. Bei der Analyse von FlexGroup Volumes werden in den Nutzungsdiagrammen mehrere Nodes und mehrere Aggregate aufgeführt.
+
+* *Kapazität Diagrammbereich*
++
+Zeigt Diagramme für die Datenkapazität und Snapshot-Kapazität der letzten einen Monat für den Workload an.
+
++
+Bei Volumes können Sie über den Link Kapazitätsdetails anzeigen auf die Seite Integritätsdetails für den Workload anzeigen klicken, falls Sie weitere Analysen durchführen möchten. LUNs stellen diesen Link nicht bereit, da für LUNs keine Seite „Integritätsdetails“ vorhanden ist.
+
++
+** *Kapazitätsansicht* zeigt den gesamten verfügbaren Speicherplatz an, der für den Workload und den logischen genutzten Speicherplatz zugewiesen ist (nach allen NetApp Optimierungen).
+** *Snapshot View* zeigt den gesamten reservierten Speicherplatz für Snapshot Kopien und die Menge des derzeit genutzten Speicherplatzes an. Beachten Sie, dass LUNs keine Snapshot-Ansicht bereitstellen.
+** *Cloud Tier View* zeigt an, wie viel Kapazität in der lokalen Performance-Tier verwendet wird und wie viel in der Cloud Tier verwendet wird. Diese Diagramme beinhalten eine Schätzung der verbleibenden Zeit, bevor die Kapazität für diesen Workload voll ist. Diese Informationen basieren auf historischer Nutzung und erfordern mindestens 10 Tage Daten. Wenn die Kapazität weniger als 30 Tage verbleibt, identifiziert Unified Manager den Storage als „`nahezu voll`“.
+
+
+

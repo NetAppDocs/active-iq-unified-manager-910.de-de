@@ -1,0 +1,36 @@
+---
+permalink: reporting/task_edit_scheduled_reports.html 
+sidebar: sidebar 
+keywords: editing, schedule, reports 
+summary: Nach der Planung von Berichten können Sie diese auf der Seite „Berichtszeitpläne“ bearbeiten. 
+---
+= Bearbeiten von geplanten Berichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach der Planung von Berichten können Sie diese auf der Seite „Berichtszeitpläne“ bearbeiten.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Berichtspläne*.
++
+image::../media/scheduled_reports_2.gif[Geplante Berichte 2]
+
++
+[NOTE]
+====
+Wenn Sie über die entsprechenden Berechtigungen verfügen, können Sie jeden Bericht und seinen Zeitplan im System ändern.
+
+====
+. Klicken Sie auf das Symbol Weitere image:../media/more_icon.gif[""] Für den Zeitplan, den Sie ändern möchten.
+. Klicken Sie Auf *Bearbeiten*.
+. Sie können die Liste *Terminplanname*, *Empfänger*, *Frequenz* und *Format* für den Berichtsplan ändern.
+. Wenn Sie fertig sind, klicken Sie auf das Häkchen, um Ihre Änderungen zu speichern.
+

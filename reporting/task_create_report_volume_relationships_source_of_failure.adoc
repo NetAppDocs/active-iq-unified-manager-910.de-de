@@ -1,0 +1,45 @@
+---
+permalink: reporting/task_create_report_volume_relationships_source_of_failure.html 
+sidebar: sidebar 
+keywords: create, report, group, volume, relationships, source, failure 
+summary: Sie können einen Bericht erstellen, in dem Volumes gruppiert werden, weil die Beziehung sich in einem ungesunden Zustand befindet. 
+---
+= Erstellen eines Berichts, um Volume-Beziehungen nach Fehlerquelle zu gruppieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, in dem Volumes gruppiert werden, weil die Beziehung sich in einem ungesunden Zustand befindet.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht zu erstellen, die Volumes nach Fehlerquelle gruppiert und dann einen Bericht für diese Ansicht zu erstellen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Volumes*.
+. Wählen Sie im Menü Ansicht die Option *Beziehung* > *Alle Beziehungen*.
+. Wählen Sie *ein-/Ausblenden* aus, um sicherzustellen, dass die Spalten „`Beziehungsgesundheit`“ und „`ungesunder Grund`“ in der Ansicht angezeigt werden.
++
+Fügen Sie weitere Spalten hinzu oder entfernen Sie diese, um eine für Ihren Bericht wichtige Ansicht zu erstellen.
+
+. Ziehen Sie die Spalten „`Relationship Health`“ und „`ungesunder Grund`“ in die Nähe der Spalte „`State`“.
+. Klicken Sie auf das Filtersymbol, fügen Sie den folgenden Filter hinzu und klicken Sie dann auf *Filter anwenden*:
++
+** Gesundheit der Beziehung ist schlecht
+
+
+. Klicken Sie oben in der Spalte „`ungesunder Grund`“, um die Volume-Beziehungen nach Fehlerquelle zu gruppieren.
+. Speichern Sie die Ansicht mit einem bestimmten Namen, der die Anzeige beschreibt, z. B. „`Vol Relationships by Failure`“.
+. Klicken Sie auf der Bestandsseite auf die Schaltfläche *geplante Berichte*.
+. Geben Sie einen Namen für den Berichtsplan ein, und füllen Sie die anderen Berichtsfelder aus, und klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""]Am Ende der Reihe.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und per E-Mail an die Empfänger gesendet, die unter der angegebenen Häufigkeit aufgeführt sind.
+
+
+
+Auf der Grundlage der im Bericht angezeigten Ergebnisse können Sie die Quelle und die Auswirkungen jeder Art von Fehlern untersuchen.

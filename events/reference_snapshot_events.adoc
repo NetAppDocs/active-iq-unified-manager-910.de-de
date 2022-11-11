@@ -1,0 +1,55 @@
+---
+permalink: events/reference_snapshot_events.html 
+sidebar: sidebar 
+keywords: snapshot, events, impact area, availability 
+summary: Snapshot Ereignisse liefern Informationen zum Status von Snapshots, mit denen Sie die Snapshots auf potenzielle Probleme überwachen können. Die Ereignisse sind nach dem Impact-Bereich gruppiert und umfassen den Event-Namen, den Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad. 
+---
+= Snapshot Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot Ereignisse liefern Informationen zum Status von Snapshots, mit denen Sie die Snapshots auf potenzielle Probleme überwachen können. Die Ereignisse sind nach dem Impact-Bereich gruppiert und umfassen den Event-Namen, den Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.
+
+
+
+== Impact Area: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Snapshot Auto-delete deaktiviert (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Automatische Löschung von Snapshot aktiviert (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Snapshot Auto-delete-Konfiguration geändert(nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+|===

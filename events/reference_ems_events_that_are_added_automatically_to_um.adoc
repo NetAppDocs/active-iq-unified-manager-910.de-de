@@ -1,0 +1,570 @@
+---
+permalink: events/reference_ems_events_that_are_added_automatically_to_um.html 
+sidebar: sidebar 
+keywords: ems events, added, automatically, unified manager 
+summary: Die folgenden ONTAP EMS-Ereignisse werden dem Unified Manager automatisch hinzugefügt. Diese Ereignisse werden generiert, wenn sie auf jedem Cluster ausgelöst werden, das Unified Manager überwacht. 
+---
+= EMS-Ereignisse, die automatisch dem Unified Manager hinzugefügt werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die folgenden ONTAP EMS-Ereignisse werden dem Unified Manager automatisch hinzugefügt. Diese Ereignisse werden generiert, wenn sie auf jedem Cluster ausgelöst werden, das Unified Manager überwacht.
+
+Die folgenden EMS-Ereignisse stehen zur Verfügung, wenn Cluster mit ONTAP 9.5 oder höher überwacht werden:
+
+|===
+| Name des Unified Manager Events | EMS-Ereignisname | Betroffene Ressource | Schweregrad von Unified Manager 
+
+
+ a| 
+Zugriff auf Cloud-Tier für Aggregatverschiebung verweigert
+ a| 
+arl.netra.ca.check.failed
+ a| 
+Aggregat
+ a| 
+Fehler
+
+
+
+ a| 
+Beim Storage Failover wurde der Zugriff auf Cloud-Tier für Aggregatverschiebung verweigert
+ a| 
+gb.netra.ca.check.failed
+ a| 
+Aggregat
+ a| 
+Fehler
+
+
+
+ a| 
+Resync der FabricPool-Spiegelreplikation abgeschlossen
+ a| 
+wafl.ca.resync.complete
+ a| 
+Cluster
+ a| 
+Fehler
+
+
+
+ a| 
+FabricPool Speicherplatz fast voll
+ a| 
+Fabricpool.Fast.full
+ a| 
+Cluster
+ a| 
+Fehler
+
+
+
+ a| 
+Beginn des NVMe-of-Grace-Zeitraums
+ a| 
+nvmf.graceperiod.start
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+NVMe-of-Grace-Zeitraum aktiv
+ a| 
+nvmf.graceperiod.active
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+NVMe-of-Grace-Zeitraum abgelaufen
+ a| 
+nvmf.graceperiod.expired
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+LUN wurde zerstört
+ a| 
+lun.destroy
+ a| 
+LUN
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Cloud AWS MetaDataConnFail
+ a| 
+Cloud.aws.metadataConnFail
+ a| 
+Knoten
+ a| 
+Fehler
+
+
+
+ a| 
+Cloud AWS IAMCredsExpired – Cloud
+ a| 
+Cloud.aws.iamCredsExpired
+ a| 
+Knoten
+ a| 
+Fehler
+
+
+
+ a| 
+Cloud AWS IAMCredsungültig
+ a| 
+Cloud.aws.iamCredsungültig
+ a| 
+Knoten
+ a| 
+Fehler
+
+
+
+ a| 
+Cloud AWS IAMCredsNotFound
+ a| 
+Cloud.aws.iamCredsNotFound
+ a| 
+Knoten
+ a| 
+Fehler
+
+
+
+ a| 
+Cloud AWS IAMCredsNotinitialisiert
+ a| 
+Cloud.aws.iamNotinitialisiert
+ a| 
+Knoten
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Cloud AWS IAMRoleInvalid
+ a| 
+Cloud.AWS.iamRoleIngültig
+ a| 
+Knoten
+ a| 
+Fehler
+
+
+
+ a| 
+Cloud AWS IAMRoleNotFound
+ a| 
+Cloud.aws.iamRoleNotFound
+ a| 
+Knoten
+ a| 
+Fehler
+
+
+
+ a| 
+Unlösbar Für Cloud Tier Host
+ a| 
+Objstore.Host.unlösbar
+ a| 
+Knoten
+ a| 
+Fehler
+
+
+
+ a| 
+Intercluster für Cloud Tiering inaktiv
+ a| 
+objstore.interclusterlifDown
+ a| 
+Knoten
+ a| 
+Fehler
+
+
+
+ a| 
+Anforderung Einer Signatur Für Die Cloud-Ebene Mit Nicht Übereinstimmung
+ a| 
+osc.signatureMismatch
+ a| 
+Knoten
+ a| 
+Fehler
+
+
+
+ a| 
+Einer der NFSv4-Pools ist erschöpft
+ a| 
+Nblade.nfsV4PoolAust
+ a| 
+Knoten
+ a| 
+Kritisch
+
+
+
+ a| 
+QoS Monitor Memory-Besteuerung
+ a| 
+qos.Monitor.Memory.maxed
+ a| 
+Knoten
+ a| 
+Fehler
+
+
+
+ a| 
+QoS Monitor Memory nicht gespeichert
+ a| 
+qos.Monitor.Memory.abgenutzt
+ a| 
+Knoten
+ a| 
+Informationsdaten
+
+
+
+ a| 
+NVMeNS zerstören
+ a| 
+NVMeNS.destroy
+ a| 
+Namespace
+ a| 
+Informationsdaten
+
+
+
+ a| 
+NVMeNS Online
+ a| 
+NVMeNS.offline
+ a| 
+Namespace
+ a| 
+Informationsdaten
+
+
+
+ a| 
+NVMeNS Offline
+ a| 
+NVMeNS.online
+ a| 
+Namespace
+ a| 
+Informationsdaten
+
+
+
+ a| 
+NVMe Out of Space
+ a| 
+NVMeNS.out.of.space
+ a| 
+Namespace
+ a| 
+Warnung
+
+
+
+ a| 
+Synchrone Replizierung Aus Sync Heraus
+ a| 
+sms.Status.out.of.Sync
+ a| 
+SnapMirror Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+Synchrone Replizierung Wiederhergestellt
+ a| 
+sms.status.in.sync
+ a| 
+SnapMirror Beziehung
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Fehler Bei Der Automatischen Synchronisierung Der Replikation
+ a| 
+sms.Resync.Versuch.failed
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Viele CIFS-Verbindungen
+ a| 
+Nblade.cifsManyAuths
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+Max. CIFS-Verbindung überschritten
+ a| 
+Nblade.cifsMaxOpenSameFile
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+Max. Anzahl der CIFS-Verbindung pro Benutzer überschritten
+ a| 
+Nblade.cifsMaxSessPerUsrConn
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+CIFS NetBIOS-Namenskonflikt
+ a| 
+Nblade.cifsNbNameConflict
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+Versucht, eine nicht existierende CIFS-Freigabe zu verbinden
+ a| 
+Nblade.cifsNoPrivShare
+ a| 
+SVM
+ a| 
+Kritisch
+
+
+
+ a| 
+Fehler beim CIFS Shadow Copy-Vorgang
+ a| 
+cifs.shadowcopy.Failure
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+Vom AV-Server gefundener Virus
+ a| 
+Nblade.vscanVirusDetected
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+Keine AV-Server-Verbindung für Virus Scan
+ a| 
+Nblade.vscanNoScannerKonn
+ a| 
+SVM
+ a| 
+Kritisch
+
+
+
+ a| 
+Kein AV-Server registriert
+ a| 
+Nblade.vscanNoRegdScanner
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+Keine reaktionsfähige AV-Server-Verbindung
+ a| 
+Nblade.vscanConnInaktiv
+ a| 
+SVM
+ a| 
+Informationsdaten
+
+
+
+ a| 
+AV-Server ist zu beschäftigt, um neue Scananforderung zu akzeptieren
+ a| 
+Nblade.vscanConnBackPressure
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+Nicht autorisierter Benutzer versucht, AV-Server zu verwenden
+ a| 
+Nblade.vscanBadUserPrivAccess
+ a| 
+SVM
+ a| 
+Fehler
+
+
+
+ a| 
+FlexGroup-Komponenten haben Platzprobleme
+ a| 
+Flexgroup.debestandals.have.space.Issues
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+
+
+ a| 
+FlexGroup-Komponenten-Space-Status alles OK
+ a| 
+Flexgroup.Komponenten.space.Status.all.ok
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+FlexGroup-Komponenten haben Inodes-Probleme
+ a| 
+flexgroup.constituents.have.inodes.issues
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+
+
+ a| 
+FlexGroup-Komponenten inodes Status Alle OK
+ a| 
+flexgroup.constituents.inodes.status.all.ok
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Logischer Volume-Speicherplatz Fast Voll
+ a| 
+monitor.vol.nearFull.inc.sav
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Logischer Speicherplatz Des Volume Voll
+ a| 
+monitor.vol.full.inc.sav
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+
+
+ a| 
+Logischer Speicherplatz Des Volume Ist Normal
+ a| 
+monitor.vol.one.ok.inc.sav
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Fehler bei der automatischen WAFL-Volume-Größe
+ a| 
+wafl.vol.autoSize.fail
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+
+
+ a| 
+Die automatische WAFL-Volume-Größe ist abgeschlossen
+ a| 
+wafl.vol.autoSize.done
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Timeout für den Vorgang der WAFL-READDIR-Datei
+ a| 
+wafl.readdir.exist
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+|===

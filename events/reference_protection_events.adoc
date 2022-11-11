@@ -1,0 +1,44 @@
+---
+permalink: events/reference_protection_events.html 
+sidebar: sidebar 
+keywords: protection, events, impact area, protection 
+summary: Schutzereignisse geben an, ob ein Job ausgefallen ist oder abgebrochen wurde, damit Sie eine Überwachung auf Probleme durchführen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad. 
+---
+= Schutzereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Schutzereignisse geben an, ob ein Job ausgefallen ist oder abgebrochen wurde, damit Sie eine Überwachung auf Probleme durchführen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.
+
+
+
+== Aufprallbereich: Schutz
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Schutzjob fehlgeschlagen (ocumEvtProtectionJobTaskFailed)
+ a| 
+Vorfall
+ a| 
+Volume oder Storage-Service
+ a| 
+Kritisch
+
+
+
+ a| 
+Schutzauftrag abgebrochen(OktaVerkündungSchutzJobAbgebrochen)
+ a| 
+Dar
+ a| 
+Volume oder Storage-Service
+ a| 
+Warnung
+
+|===

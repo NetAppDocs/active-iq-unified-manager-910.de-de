@@ -1,0 +1,79 @@
+---
+permalink: health-checker/task_create_annotation_rules.html 
+sidebar: sidebar 
+keywords: create, annotation rules 
+summary: 'Zudem können Anmerkungsregeln erstellt werden, die in Unified Manager verwendet werden, um Storage-Objekte wie Volumes, Cluster oder Storage Virtual Machines (SVMs) dynamisch anzunotieren.' 
+---
+= Anmerkungsregeln werden erstellt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zudem können Anmerkungsregeln erstellt werden, die in Unified Manager verwendet werden, um Storage-Objekte wie Volumes, Cluster oder Storage Virtual Machines (SVMs) dynamisch anzunotieren.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Aktuell überwachte Storage-Objekte werden kommentiert, sobald die Anmerkungsregel erstellt wurde. Neue Objekte werden erst nach Abschluss des Überwachungszyklus mit Anmerkungen versehen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage-Management* > *Anmerkungen*.
+. Klicken Sie auf der Registerkarte *Anmerkungsregeln* auf *Hinzufügen*.
+. Geben Sie im Dialogfeld *Anmerkungsregel hinzufügen* einen Namen für die Anmerkungsregel an.
+. Wählen Sie im Feld *Zielobjekttyp* den Typ des Speicherobjekts aus, das Sie mit Anmerkungen versehen möchten.
+. Wählen Sie in den Feldern *Anmerkung anwenden* den Anmerkungs- und Anmerkungswert aus, den Sie verwenden möchten.
+. Führen Sie im Abschnitt Bedingungen die entsprechende Aktion aus, um eine Bedingung, eine Bedingungsgruppe oder beide zu erstellen:
++
+[cols="2*"]
+|===
+| Zu erstellen... | Tun Sie das... 
+
+
+ a| 
+Ein Zustand
+ a| 
+.. Wählen Sie einen Operand aus der Liste der Operanden aus.
+.. Wählen Sie als Operator entweder *enthält* oder *IS* aus.
+.. Geben Sie einen Wert ein, oder wählen Sie einen Wert aus der Liste verfügbar aus.
+
+
+
+
+ a| 
+Eine Bedingungsgruppe
+ a| 
+.. Klicken Sie Auf *Bedingungsgruppe Hinzufügen*.
+.. Wählen Sie einen Operand aus der Liste der Operanden aus.
+.. Wählen Sie als Operator entweder *enthält* oder *IS* aus.
+.. Geben Sie einen Wert ein, oder wählen Sie einen Wert aus der Liste verfügbar aus.
+.. Klicken Sie auf *Bedingung hinzufügen*, um bei Bedarf weitere Bedingungen zu erstellen, und wiederholen Sie die Schritte a bis d für jede Bedingung.
+
+
+|===
+. Klicken Sie Auf *Hinzufügen*.
+
+
+
+
+== Beispiel für das Erstellen einer Anmerkungsregel
+
+Führen Sie im Dialogfeld Anmerkungsregel hinzufügen die folgenden Schritte aus, um eine Anmerkungsregel zu erstellen, einschließlich der Konfiguration einer Bedingung und des Hinzufügens einer Bedingungsgruppe:
+
+.Schritte
+. Geben Sie einen Namen für die Anmerkungsregel an.
+. Wählen Sie den Zielobjekttyp als Storage Virtual Machine (SVM) aus.
+. Wählen Sie eine Anmerkung aus der Liste der Anmerkungen aus, und geben Sie einen Wert an.
+. Wählen Sie im Abschnitt Bedingungen als Operand *Objektname* aus.
+. Wählen Sie als Operator * enthält* aus.
+. Geben Sie den Wert als ein `svm_data`.
+. Klicken Sie auf *Bedingungsgruppe hinzufügen*.
+. Wählen Sie als Operand *Objektname* aus.
+. Wählen Sie als Operator * enthält* aus.
+. Geben Sie den Wert als ein `vol`.
+. Klicken Sie auf *Bedingung hinzufügen*.
+. Wiederholen Sie die Schritte 8 bis 10, indem Sie *Datenpriorität* als Operand in Schritt 8, *ist* als Operator in Schritt 9 und *unternehmenskritisch* als Wert in Schritt 10 auswählen.
+. Klicken Sie Auf *Hinzufügen*.
+

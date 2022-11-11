@@ -1,0 +1,20 @@
+---
+permalink: storage-mgmt/concept_how_discovery_process_works_tobe_rmvd.html 
+sidebar: sidebar 
+keywords: discovery, process, works 
+summary: Nachdem Sie den Cluster Unified Manager hinzugefügt haben, erkennt der Server die Cluster-Objekte und fügt sie seiner Datenbank hinzu. Wenn Sie verstehen, wie der Erkennungsprozess funktioniert, können Sie die Cluster und deren Objekte Ihres Unternehmens verwalten. 
+---
+= Funktionsweise des Erkennungsvorgangs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie den Cluster Unified Manager hinzugefügt haben, erkennt der Server die Cluster-Objekte und fügt sie seiner Datenbank hinzu. Wenn Sie verstehen, wie der Erkennungsvorgang funktioniert, können Sie die Cluster und ihre Objekte im Unternehmen managen.
+
+Das Standard-Monitoring-Intervall beträgt 15 Minuten: Wenn Sie zum Unified Manager Server einen Cluster hinzugefügt haben, dauert es 15 Minuten, bis die Cluster-Details in der Benutzeroberfläche von Unified Manager angezeigt werden.
+
+Das folgende Image veranschaulicht den Erkennungsvorgang in Active IQ Unified Manager:
+
+image::../media/discovery_process_oc_6_0.gif[Funktionsweise des Erkennungsvorgangs]

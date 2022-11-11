@@ -1,0 +1,74 @@
+---
+permalink: health-checker/task_view_fabricpool_capacity_information.html 
+sidebar: sidebar 
+keywords: view, fabricPool, cloud tier, mirror tier, capacity, information 
+summary: Sie können FabricPool Kapazitätsinformationen für Cluster, Aggregate und Volumes auf den Seiten zu Kapazität und Performance-Inventar anzeigen sowie Details zu diesen Objekten. Auf diesen Seiten werden auch Informationen zur FabricPool-Spiegelung angezeigt, wenn eine Spiegelebene konfiguriert wurde. 
+---
+= Anzeigen von Informationen zur FabricPool-Kapazität
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können FabricPool Kapazitätsinformationen für Cluster, Aggregate und Volumes auf den Seiten zu Kapazität und Performance-Inventar anzeigen sowie Details zu diesen Objekten. Auf diesen Seiten werden auch Informationen zur FabricPool-Spiegelung angezeigt, wenn eine Spiegelebene konfiguriert wurde.
+
+Auf diesen Seiten werden Informationen angezeigt, beispielsweise die verfügbare Kapazität auf der lokalen Performance-Tier und auf der Cloud-Tier. Sie erfahren, wie viel Kapazität in beiden Tiers verwendet wird, welche Aggregate an ein Cloud-Tier angebunden sind. Welche Volumes die Funktionen von FabricPool implementieren, indem bestimmte Informationen in das Cloud-Tier verschoben werden
+
+Wenn ein Cloud-Tier zu einem anderen Cloud-Provider (die "`mMirror Tier`") gespiegelt wird, werden beide Cloud-Ebenen auf der Seite Aggregate / Health Details angezeigt.
+
+.Schritte
+. Führen Sie einen der folgenden Schritte aus:
++
+[cols="2*"]
+|===
+| So zeigen Sie Kapazitätsinformationen für... | Tun Sie das... 
+
+
+ a| 
+Cluster
+ a| 
+.. Klicken Sie in der Ansicht Capacity: All Clusters auf ein Cluster.
+.. Klicken Sie auf der Seite Cluster / Health Details auf die Registerkarte *Konfiguration*.
++
+Auf der Anzeige werden die Namen aller Cloud-Tiers angezeigt, mit denen dieses Cluster verbunden ist.
+
+
+
+
+
+ a| 
+Aggregate
+ a| 
+.. Auf der Ansicht Kapazität: Alle Aggregate klicken Sie auf ein Aggregat, in dem das Feld Typ „`SSD (FabricPool)`“ oder „`HDD (FabricPool)`“ anzeigt.
+.. Klicken Sie auf der Seite Aggregate / Health Details auf die Registerkarte *Capacity*.
++
+Auf dem Display wird die Gesamtkapazität angezeigt, die im Cloud-Tier verwendet wird.
+
+.. Klicken Sie auf die Registerkarte *Disk Information*.
++
+Das Display zeigt den Namen der Cloud-Tier und die verwendete Kapazität an.
+
+.. Klicken Sie auf die Registerkarte *Konfiguration*.
++
+Das Display zeigt den Namen der Cloud-Tier sowie weitere detaillierte Informationen zum Cloud-Tier an.
+
+
+
+
+
+ a| 
+Volumes
+ a| 
+.. Auf der Ansicht Kapazität: Alle Volumes klicken Sie im Feld „`Tiering Policy`“ auf ein Volume mit einem Richtliniennamen.
+.. Klicken Sie auf der Seite Volume/Health Details auf die Registerkarte *Konfiguration*.
++
+Auf der Anzeige wird der Name der FabricPool-Tiering-Richtlinie angezeigt, die dem Volume zugewiesen ist.
+
+
+
+|===
+. Auf der Seite *Workload Analysis* können Sie im Bereich *Capacity Trend* „`Cloud Tier View`“ auswählen, um die im lokalen Performance Tier und in der Cloud Tier im Vormonat verwendete Kapazität anzuzeigen.
+
+
+Weitere Informationen zu FabricPool-Aggregaten finden Sie unter https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["Überblick über Festplatten und Aggregate"].

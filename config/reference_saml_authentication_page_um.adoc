@@ -1,0 +1,58 @@
+---
+permalink: config/reference_saml_authentication_page_um.html 
+sidebar: sidebar 
+keywords: saml authentication page 
+summary: 'Mithilfe der Seite SAML Authentication kann Unified Manager für die Authentifizierung von Remote-Benutzern mit SAML über einen sicheren Identitäts-Provider (IdP) konfiguriert werden, bevor sie sich bei der Web-UI von Unified Manager anmelden können.' 
+---
+= Seite SAML Authentication
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe der Seite SAML Authentication kann Unified Manager für die Authentifizierung von Remote-Benutzern mit SAML über einen sicheren Identitäts-Provider (IdP) konfiguriert werden, bevor sie sich bei der Web-UI von Unified Manager anmelden können.
+
+* Sie müssen über die Anwendungsadministratorrolle verfügen, um die SAML-Konfiguration zu erstellen oder zu ändern.
+* Sie müssen die Remote-Authentifizierung konfiguriert haben.
+* Sie müssen mindestens einen Remote-Benutzer oder eine Remote-Gruppe konfiguriert haben.
+
+
+Nachdem die Remote-Authentifizierung und Remote-Benutzer konfiguriert wurden, können Sie das Kontrollkästchen SAML-Authentifizierung aktivieren aktivieren aktivieren auswählen, um die Authentifizierung über einen sicheren Identitätsanbieter zu aktivieren.
+
+* *IdP URI*
++
+Der URI für den Zugriff auf das IdP vom Unified Manager-Server aus. Beispiel-URIs sind unten aufgeführt.
+
++
+ADFS-Beispiel-URI:
+
++
+`+https://win2016-dc.ntap2016.local/federationmetadata/2007-06/federationmetadata.xml+`
+
++
+Shibboleth Beispiel URI:
+
++
+`+https://centos7.ntap2016.local/idp/shibboleth+`
+
+* *IdP-Metadaten*
++
+Die IdP-Metadaten im XML-Format.
+
++
+Wenn über den Unified Manager-Server auf die IdP-URL zugegriffen werden kann, können Sie auf die Schaltfläche *IdP-Metadaten abrufen* klicken, um dieses Feld auszufüllen.
+
+* *Host-System (FQDN)*
++
+Der FQDN des Unified Manager-Hostsystems, wie bei der Installation definiert. Sie können diesen Wert bei Bedarf ändern.
+
+* *Host-URI*
++
+Die URI für den Zugriff auf das Unified Manager-Hostsystem von der IdP aus.
+
+* *Host-Metadaten*
++
+Die Metadaten des Host-Systems im XML-Format.
+
+

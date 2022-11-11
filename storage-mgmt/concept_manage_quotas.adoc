@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_manage_quotas.html 
+sidebar: sidebar 
+keywords: manage, quotas 
+summary: Mit Benutzer- und Gruppenquoten lässt sich die Menge an Festplattenspeicher oder die Anzahl der Dateien begrenzen, die ein Benutzer oder eine Benutzergruppe verwenden kann. Sie können Quota-Informationen für Benutzer und Benutzergruppen anzeigen, z. B. die Festplatten- und Dateiverwendung und die verschiedenen auf Festplatten festgelegten Grenzwerte. 
+---
+= Management von Kontingenten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Benutzer- und Gruppenquoten lässt sich die Menge an Festplattenspeicher oder die Anzahl der Dateien begrenzen, die ein Benutzer oder eine Benutzergruppe verwenden kann. Sie können Quota-Informationen für Benutzer und Benutzergruppen anzeigen, z. B. die Festplatten- und Dateiverwendung und die verschiedenen auf Festplatten festgelegten Grenzwerte.

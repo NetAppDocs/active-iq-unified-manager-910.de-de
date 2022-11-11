@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_volume_capacity_reports.html 
+sidebar: sidebar 
+keywords: customize, volume, capacity reports 
+summary: Anhand dieser individuellen Berichte können Sie potenzielle Probleme im Zusammenhang mit Volume-Kapazität und Performance identifizieren und beheben. 
+---
+= Anpassen der Berichte zur Volume-Kapazität
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Anhand dieser individuellen Berichte können Sie potenzielle Probleme im Zusammenhang mit Volume-Kapazität und Performance identifizieren und beheben.

@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/task_use_workload_analyzer.html 
+sidebar: sidebar 
+keywords: workload analyzer 
+summary: Es gibt viele Möglichkeiten, die Workload-Analyse von der Benutzeroberfläche aus zu starten. Hier beschreiben wir das Starten des Tools aus dem linken Navigationsbereich. 
+---
+= Workload Analyzer verwenden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es gibt viele Möglichkeiten, die Workload-Analyse von der Benutzeroberfläche aus zu starten. Hier beschreiben wir das Starten des Tools aus dem linken Navigationsbereich.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Workload Analysis*.
++
+Die Seite Workload Analysis wird angezeigt.
+
+. Wenn Sie den Workload-Namen kennen, geben Sie den Namen ein. Wenn Sie den vollständigen Namen nicht sicher sind, geben Sie mindestens 3 Zeichen ein, und das System zeigt eine Liste von Workloads an, die mit dem String übereinstimmen.
+. Wählen Sie den Zeitbereich aus, wenn Sie Statistiken länger als die Standardstunden anzeigen möchten, und klicken Sie auf *Anwenden*.
+. Zeigen Sie den Übersichtsbereich an, um die Ereignisse anzuzeigen, die während des Zeitraums aufgetreten sind.
+. In den Performance- und Kapazitätsdiagrammen finden Sie Informationen dazu, wann irgendwelche Metriken anormal sind, und überprüfen Sie, ob Ereignisse auf den anormalen Eintrag ausgerichtet sind.
+

@@ -1,0 +1,64 @@
+---
+permalink: performance-checker/concept_how_qos_policies_are_displayed_in_throughput_charts.html 
+sidebar: sidebar 
+keywords: different, types, qos, policies, display, throughput, charts 
+summary: 'Sie können die von ONTAP definierten Quality of Service-Richtlinieneinstellungen (QoS) anzeigen, die auf ein Volume oder eine LUN angewendet wurden. Sie finden sie im Performance-Explorer und in den Diagrammen für Workload-Analysen, IOPS/TB und MB/s. Die in den Diagrammen angezeigten Informationen unterscheiden sich je nach QoS-Richtlinie, die auf den Workload angewendet wurde.' 
+---
+= Die Darstellung der verschiedenen QoS-Richtlinien in den Durchsatzdiagrammen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die von ONTAP definierten Quality of Service-Richtlinieneinstellungen (QoS) anzeigen, die auf ein Volume oder eine LUN angewendet wurden. Sie finden sie im Performance-Explorer und in den Diagrammen für Workload-Analysen, IOPS/TB und MB/s. Die in den Diagrammen angezeigten Informationen unterscheiden sich je nach QoS-Richtlinie, die auf den Workload angewendet wurde.
+
+Eine Einstellung für maximalen Durchsatz (oder „`Peak`“) definiert den maximalen Durchsatz, den der Workload nutzen kann, und begrenzt damit die Auswirkungen auf konkurrierende Workloads für Systemressourcen. Ein Mindestdurchsatz (bzw. „`erwarteten`“) definiert den Mindestdurchsatz, der für den Workload verfügbar sein muss, damit ein kritischer Workload die Mindestdurchsatz-Ziele erfüllt, unabhängig von der Nachfrage durch konkurrierende Workloads.
+
+Gemeinsam genutzte und nicht gemeinsam genutzte QoS-Richtlinien für IOPS und MB/s definieren Boden und Decke mit den Begriffen „`minimum`“ und „`mahximum`“. Adaptive QoS-Richtlinien für IOPS/TB, die mit ONTAP 9.3 eingeführt wurden, definieren Boden und Obergrenze mit den Begriffen „`erwarted`“ und „`Peak`“.
+
+Mit ONTAP können Sie diese zwei Arten von QoS-Richtlinien erstellen, abhängig davon, wie sie auf Workloads angewendet werden, gibt es in den Performance-Diagrammen drei Arten, die QoS-Richtlinie angezeigt wird.
+
+|===
+| Art der Richtlinie | Funktionalität | Anzeige in der Unified Manager-Schnittstelle 
+
+
+ a| 
+QoS-Richtlinien für gemeinsame Workloads, die einem einzelnen Workload zugewiesen sind oder QoS-Richtlinien, die nicht gemeinsam genutzt werden, die einem einzelnen Workload oder mehreren Workloads zugewiesen sind
+ a| 
+Jeder Workload kann die angegebene Durchsatzeinstellung belegen
+ a| 
+Zeigt „`(QoS)`“ an.
+
+
+
+ a| 
+QoS-Richtlinien für gemeinsame Nutzung, die mehreren Workloads zugewiesen sind
+ a| 
+Alle Workloads teilen sich die angegebene Durchsatzeinstellung
+ a| 
+Zeigt „`(QoS Shared)`“ an.
+
+
+
+ a| 
+Anpassungsfähige QoS-Richtlinie, die einem einzelnen oder mehreren Workloads zugewiesen ist
+ a| 
+Jeder Workload kann die angegebene Durchsatzeinstellung belegen
+ a| 
+Zeigt „`(QoS Adaptive)`“ an
+
+|===
+Die folgende Abbildung zeigt ein Beispiel dafür, wie die drei Optionen in den Zählerdiagrammen angezeigt werden.
+
+image::../media/3_qos_policy_charts.gif[3 qos-Richtlinienkarten]
+
+Wenn eine normale QoS-Richtlinie, die in IOPS definiert wurde, im IOPS/TB-Diagramm für einen Workload angezeigt wird, konvertiert ONTAP den IOPS-Wert in einen IOPS/TB-Wert, und Unified Manager zeigt diese Richtlinie im IOPS/TB-Diagramm zusammen mit dem Text „`QoS“, definiert in IOPS`“ an.
+
+Wenn eine in IOPS/TB definierte anpassungsfähige QoS-Richtlinie im IOPS-Diagramm für einen Workload angezeigt wird, konvertiert ONTAP den IOPS/TB-Wert in einen IOPS-Wert und Unified Manager zeigt diese Richtlinie im IOPS-Diagramm zusammen mit dem Text „`QoS Adaptive - verwendet“ an. Definiert in IOPS/TB`“ oder „`QoS Adaptive – zugewiesen, definiert in IOPS/TB`“, abhängig davon, wie die Einstellung für die IOPS-Spitzenzuweisung konfiguriert ist. Wenn die Zuweisungseinstellung auf „`Alered-space`“ festgelegt ist, wird der IOPS-Spitzenwert basierend auf der Größe des Volumes berechnet. Wenn die Zuweisungseinstellung auf „`used-space`“ festgelegt ist, wird die IOPS-Spitzenauslastung basierend auf der im Volume gespeicherten Datenmenge unter Berücksichtigung der Storage-Effizienz berechnet.
+
+[NOTE]
+====
+Das IOPS/TB-Diagramm zeigt Performance-Daten nur an, wenn die logische Kapazität, die vom Volume verwendet wird, größer als oder gleich 128 GB ist. In der Tabelle werden Lücken angezeigt, wenn die genutzte Kapazität im ausgewählten Zeitrahmen unter 128 GB fällt.
+
+====

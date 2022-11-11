@@ -1,0 +1,155 @@
+---
+permalink: data-protection/reference_protection_jobs_page.html 
+sidebar: sidebar 
+keywords: jobs, page 
+summary: Auf der Seite „Jobs“ können Sie den aktuellen Status und weitere Informationen zu allen aktuell ausgeführten Partneranwendungen sowie zu abgeschlossenen Jobs anzeigen. Anhand dieser Informationen können Sie feststellen, welche Jobs noch ausgeführt werden und ob ein Job erfolgreich oder fehlgeschlagen ist. 
+---
+= Seite Jobs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Jobs“ können Sie den aktuellen Status und weitere Informationen zu allen aktuell ausgeführten Partneranwendungen sowie zu abgeschlossenen Jobs anzeigen. Anhand dieser Informationen können Sie feststellen, welche Jobs noch ausgeführt werden und ob ein Job erfolgreich oder fehlgeschlagen ist.
+
+
+
+== Befehlsschaltflächen
+
+Mit den Schaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Abbrechen*
++
+Bricht den ausgewählten Job ab. Diese Option ist nur verfügbar, wenn der ausgewählte Job ausgeführt wird.
+
+* *Retry*
++
+Startet einen fehlgeschlagenen Job vom Typ Schutzkonfiguration oder Schutzbeziehung neu. Sie können nur einen fehlgeschlagenen Job gleichzeitig erneut versuchen. Wenn mehrere fehlgeschlagene Jobs ausgewählt wurden, ist die Schaltfläche *Wiederholen* deaktiviert. Fehlgeschlagene Speicherserviceaufträge können nicht erneut ausgeführt werden.
+
+* *Aktualisieren*
++
+Aktualisiert die Liste der Jobs und die ihnen zugeordneten Informationen.
+
+
+
+
+
+== Auftragsliste
+
+Die Liste Jobs zeigt im Tabellenformat eine Liste der laufenden Jobs an. Standardmäßig werden in der Liste nur die Jobs angezeigt, die innerhalb der letzten Woche generiert wurden. Sie können die Spaltensortierung und -Filterung verwenden, um die angezeigten Jobs anzupassen.
+
+* *Status*
++
+Zeigt den aktuellen Status eines Jobs an. Der Status kann „Fehler“ sein (image:../media/sev_error.gif[""]) Oder normal (image:../media/sev_normal.gif[""]).
+
+* *Job-Id*
++
+Zeigt die Identifikationsnummer des Jobs an. Standardmäßig ist diese Spalte ausgeblendet.
+
++
+Die Job-ID-Nummer ist eindeutig und wird vom Server beim Start des Jobs zugewiesen. Sie können nach einem bestimmten Job suchen, indem Sie die Job-ID-Nummer in das Textfeld eingeben, das vom Spaltenfilter bereitgestellt wird.
+
+* *Name*
++
+Zeigt den Namen des Jobs an.
+
+* *Typ*
++
+Zeigt den Jobtyp an. Die Jobtypen sind wie folgt:
+
++
+** *Cluster Acquisition*
++
+Ein Workflow Automation Job findet gerade ein Cluster neu statt.
+
+** *Schutzkonfiguration*
++
+Ein Sicherungsauftrag initiiert Workflow Automation Workflows wie beispielsweise cron-Zeitpläne, die Erstellung von SnapMirror Richtlinien usw.
+
+** *Schutz Beziehung Betrieb*
++
+Ein Schutzauftrag führt SnapMirror Vorgänge aus.
+
+** *Protection Workflow Chain*
++
+Ein Workflow Automation Job führt mehrere Workflows aus.
+
+** *Wiederherstellen*
++
+Ein Wiederherstellungsauftrag wird ausgeführt.
+
+** *Cleanup*
++
+Der Job reinigt Artefakte von Storage-Servicemitgliedern, die für Wiederherstellungen nicht mehr benötigt werden.
+
+** *Konform*
++
+Der Job überprüft die Konfiguration der Storage Service-Mitglieder, um sicherzustellen, dass sie den Anforderungen entsprechen.
+
+** * Zerstöre*
++
+Der Job zerstört einen Speicherdienst.
+
+** *Import*
++
+Der Job importiert nicht verwaltete Speicherobjekte in einen vorhandenen Speicherdienst.
+
+** *Ändern*
++
+Der Job ändert die Attribute eines vorhandenen Storage-Service.
+
+** *Anmeldung*
++
+Der Job abonnieren Mitglieder zu einem Storage-Service.
+
+** *Abmelden*
++
+Der Job hebt Mitglieder von einem Storage-Service ab.
+
+** *Aktualisierung*
++
+Ein Update-Auftrag für den Schutz wird ausgeführt.
+
+** *WFA Konfiguration*
++
+Ein Workflow Automation Job führt zur Übermittlung von Cluster-Anmeldedaten und zur Synchronisierung von Datenbank-Caches.
+
+
+
+* *Bundesland*
++
+Zeigt den laufenden Status des Jobs an. Folgende Statusoptionen stehen zur Verfügung:
+
++
+** *Abgebrochen*
++
+Der Job wurde abgebrochen.
+
+** *Aborting*
++
+Der Job wird abgebrochen.
+
+** *Abgeschlossen*
++
+Der Job ist abgeschlossen.
+
+** *Laufen*
++
+Der Job wird ausgeführt.
+
+
+
+* *Einreichungszeit*
++
+Zeigt die Zeit an, zu der der Job gesendet wurde.
+
+* *Dauer*
++
+Zeigt die Zeit an, die der Job zum Abschluss benötigt hat. Diese Spalte wird standardmäßig angezeigt.
+
+* *Abgeschlossene Zeit*
++
+Zeigt die Zeit an, zu der der Job beendet wurde. Standardmäßig ist diese Spalte ausgeblendet.
+
+

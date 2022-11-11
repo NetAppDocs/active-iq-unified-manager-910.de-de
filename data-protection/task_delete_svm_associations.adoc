@@ -1,0 +1,36 @@
+---
+permalink: data-protection/task_delete_svm_associations.html 
+sidebar: sidebar 
+keywords: delete, storage, vm, peers 
+summary: Storage VM Peers für Partnerapplikationen können gelöscht werden, um die sekundäre Bereitstellungsbeziehung zwischen Quell- und Ziel-Storage VM zu entfernen. Sie können beispielsweise Folgendes tun, wenn die Ziel-Storage-VM voll ist und Sie einen neuen Storage VM Protection Peer erstellen möchten. 
+---
+= Löschen von Speicher-VM-Peers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Storage VM Peers für Partnerapplikationen können gelöscht werden, um die sekundäre Bereitstellungsbeziehung zwischen Quell- und Ziel-Storage VM zu entfernen. Sie können beispielsweise Folgendes tun, wenn die Ziel-Storage-VM voll ist und Sie einen neuen Storage VM Protection Peer erstellen möchten.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Die Schaltfläche *Löschen* ist deaktiviert, bis mindestens ein Speicher-VM-Peer ausgewählt ist. Das Ändern von Zuordnungen mithilfe der Funktionen „Löschen und Erstellen“ wirkt sich nur auf zukünftige Bereitstellungsvorgänge aus. Vorhandene Ziel-Volumes werden nicht verschoben.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Schutz* > *Storage VM Peers*.
+. Wählen Sie mindestens einen Storage-VM-Peer aus.
++
+Die Schaltfläche *Löschen* ist aktiviert.
+
+. Klicken Sie Auf *Löschen.*
++
+Ein Warndialogfeld wird angezeigt.
+
+. Klicken Sie auf *Ja*, um fortzufahren.
++
+Der ausgewählte Speicher-VM-Peer wird aus der Liste entfernt.
+
+

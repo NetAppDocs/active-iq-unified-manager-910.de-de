@@ -1,0 +1,31 @@
+---
+permalink: config/task_edit_user_setts.html 
+sidebar: sidebar 
+keywords: edit, user, settings 
+summary: Sie können Benutzereinstellungen, wie z. B. die E-Mail-Adresse und die Rolle, bearbeiten, die für jeden Benutzer angegeben sind. Beispielsweise können Sie die Rolle eines Benutzers, der ein Speicheroperator ist, ändern und dem Benutzer Berechtigungen für Speicheradministratoren zuweisen. 
+---
+= Bearbeiten der Benutzereinstellungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Benutzereinstellungen bearbeiten, z. B. die E-Mail-Adresse und die Rolle, die jeder Benutzer angegeben hat. Beispielsweise können Sie die Rolle eines Benutzers, der ein Speicheroperator ist, ändern und dem Benutzer Berechtigungen für Speicheradministratoren zuweisen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Anwendungsadministratorrolle verfügen.
+
+Wenn Sie die Rolle ändern, die einem Benutzer zugewiesen ist, werden die Änderungen angewendet, wenn eine der folgenden Aktionen ausgeführt wird:
+
+* Der Benutzer meldet sich bei Unified Manager ab und meldet sich zurück.
+* Das Sitzungszeitlimit von 24 Stunden wird erreicht.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Benutzer*.
+. Wählen Sie auf der Benutzerseite den Benutzer aus, für den Sie die Einstellungen bearbeiten möchten, und klicken Sie auf *Bearbeiten*.
+. Bearbeiten Sie im Dialogfeld Benutzer bearbeiten die entsprechenden Einstellungen, die für den Benutzer angegeben sind.
+. Klicken Sie Auf *Speichern*.
+

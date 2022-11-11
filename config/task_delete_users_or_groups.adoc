@@ -1,0 +1,29 @@
+---
+permalink: config/task_delete_users_or_groups.html 
+sidebar: sidebar 
+keywords: delete, users, groups 
+summary: Sie können einen oder mehrere Benutzer aus der Management-Server-Datenbank löschen, um den Zugriff bestimmter Benutzer auf Unified Manager zu verhindern. Sie können auch Gruppen löschen, sodass alle Benutzer der Gruppe nicht mehr auf den Verwaltungsserver zugreifen können. 
+---
+= Benutzer oder Gruppen werden gelöscht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen oder mehrere Benutzer aus der Management-Server-Datenbank löschen, um den Zugriff bestimmter Benutzer auf Unified Manager zu verhindern. Sie können auch Gruppen löschen, sodass alle Benutzer der Gruppe nicht mehr auf den Verwaltungsserver zugreifen können.
+
+*Was Sie brauchen*
+
+* Wenn Sie Remote-Gruppen löschen, müssen Sie die Ereignisse neu zugewiesen haben, die den Benutzern der Remote-Gruppen zugewiesen sind.
++
+Wenn Sie lokale Benutzer oder Remote-Benutzer löschen, werden die diesen Benutzern zugewiesenen Ereignisse automatisch aufgehoben.
+
+* Sie müssen über die Anwendungsadministratorrolle verfügen.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Benutzer*.
+. Wählen Sie auf der Seite Benutzer die Benutzer oder Gruppen aus, die Sie löschen möchten, und klicken Sie dann auf *Löschen*.
+. Klicken Sie auf *Ja*, um den Löschvorgang zu bestätigen.
+

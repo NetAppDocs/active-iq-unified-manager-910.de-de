@@ -1,0 +1,50 @@
+---
+permalink: performance-checker/reference_managed_objects_pane.html 
+sidebar: sidebar 
+keywords: managed, objects, pane 
+summary: Der Fensterbereich verwaltete Objekte auf der Registerkarte Performance-Übersicht bietet eine Übersicht über die Speicherobjekttypen und -Zählungen für das Cluster. In diesem Teilfenster können Sie den Status der Objekte in jedem Cluster verfolgen. 
+---
+= Bereich „Managed Objects“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Fensterbereich verwaltete Objekte auf der Registerkarte Performance-Übersicht bietet eine Übersicht über die Speicherobjekttypen und -Zählungen für das Cluster. In diesem Teilfenster können Sie den Status der Objekte in jedem Cluster verfolgen.
+
+Die Anzahl der verwalteten Objekte ist die Anzahl der Point-in-Time-Daten vom letzten Erfassungszeitraum. Neue Objekte werden in 15-Minuten-Intervallen entdeckt.
+
+Durch Klicken auf die verknüpfte Nummer eines Objekttyps wird die Seite „Objekt-Performance-Bestandsaufnahme“ für diesen Objekttyp angezeigt. Die Seite „Objektbestandsliste“ wird gefiltert, um nur die Objekte auf diesem Cluster anzuzeigen.
+
+Die verwalteten Objekte sind:
+
+* *Knoten*
++
+Ein physisches System in einem Cluster
+
+* *Aggregate*
++
+Ein Satz aus mehreren redundanten Array von unabhängigen Festplatten (RAID)-Gruppen, die als eine einzige Einheit zur Sicherung und Bereitstellung gemanagt werden können.
+
+* *Ports*
++
+Ein physischer Verbindungspunkt auf Knoten, der zur Verbindung mit anderen Geräten im Netzwerk verwendet wird.
+
+* *Storage VMs*
++
+Eine virtuelle Maschine, die Netzwerkzugriff über eindeutige Netzwerkadressen ermöglicht. Eine SVM kann Daten aus einem anderen Namespace bereitstellen und kann vom Rest des Clusters getrennt verwaltet werden.
+
+* *Bände*
++
+Eine logische Einheit, die über ein oder mehrere der unterstützten Zugriffsprotokolle zugängliche Benutzerdaten enthält. Die Zählung umfasst sowohl FlexVol Volumes als auch FlexGroup Volumes. FlexGroup Komponenten sind darin nicht enthalten.
+
+* *LUNs*
++
+Der Bezeichner einer logischen Fibre Channel (FC)-Einheit oder einer logischen iSCSI-Einheit. Eine logische Einheit entspricht in der Regel einem Speichervolumen und wird innerhalb eines Computerbetriebssystems als Gerät dargestellt.
+
+* *Netzwerkschnittstellen*
++
+Eine logische Netzwerkschnittstelle, die einen Netzwerkzugriffspunkt für einen Node darstellt. Die Zählung umfasst alle Schnittstellentypen.
+
+

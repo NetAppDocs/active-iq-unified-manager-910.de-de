@@ -1,0 +1,32 @@
+---
+permalink: health-checker/task_delete_values_from_annotations.html 
+sidebar: sidebar 
+keywords: delete, values, annotations 
+summary: Sie können Werte löschen, die mit benutzerdefinierten Anmerkungen verknüpft sind, wenn dieser Wert nicht mehr für die Anmerkung gilt. 
+---
+= Löschen von Werten aus Anmerkungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Werte löschen, die mit benutzerdefinierten Anmerkungen verknüpft sind, wenn dieser Wert nicht mehr für die Anmerkung gilt.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Der Anmerkungswert darf keiner Anmerkungsregel oder Gruppenregeln zugeordnet werden.
+
+
+Werte können nicht aus vordefinierten Anmerkungen gelöscht werden.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage-Management* > *Anmerkungen*.
+. Wählen Sie in der Anmerkungsliste auf der Registerkarte *Anmerkungen* die Anmerkung aus, aus der Sie einen Wert löschen möchten.
+. Wählen Sie im Bereich *Werte* der Registerkarte *Anmerkungen* den Wert aus, den Sie löschen möchten, und klicken Sie dann auf *Löschen*.
+. Klicken Sie im Dialogfeld *Warnung* auf *Ja*.
++
+Der Wert wird gelöscht und nicht mehr in der Liste der Werte für die ausgewählte Anmerkung angezeigt.
+
+

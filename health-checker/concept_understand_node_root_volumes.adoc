@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_understand_node_root_volumes.html 
+sidebar: sidebar 
+keywords: understand, node, root, volumes 
+summary: Sie können das Root-Volume des Nodes mithilfe von Unified Manager überwachen. Als Best Practice wird empfohlen, dass das Node-Root-Volume über ausreichende Kapazitäten verfügen sollte, um zu verhindern, dass der Node ausfällt. 
+---
+= Allgemeines zu Root-Volumes von Nodes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Root-Volume des Nodes mithilfe von Unified Manager überwachen. Als Best Practice wird empfohlen, dass das Node-Root-Volume über ausreichende Kapazitäten verfügen sollte, um zu verhindern, dass der Node ausfällt.
+
+Wenn die verwendete Kapazität des Node-Root-Volumes 80 Prozent der Gesamt-Root-Volume-Kapazität des Nodes überschreitet, wird das Ereignis Node Root Volume Space fast Full generiert. Sie können eine Meldung für das Ereignis konfigurieren, um eine Benachrichtigung zu erhalten. Sie können geeignete Maßnahmen ergreifen, um zu verhindern, dass der Node unter Verwendung von ONTAP System Manager oder der ONTAP CLI ausfällt.

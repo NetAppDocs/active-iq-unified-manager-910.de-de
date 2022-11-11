@@ -1,0 +1,41 @@
+---
+permalink: storage-mgmt/task_create_rules_to_generate_email_addresses.html 
+sidebar: sidebar 
+keywords: create, rules, generate, email, addresses 
+summary: 'Sie können Regeln erstellen, um die E-Mail-Adresse auf der Grundlage des mit Clustern, Storage Virtual Machines (SVMs), Volumes, qtrees, Benutzern oder Benutzergruppen verbundenen Benutzerkontingente anzugeben. Bei einer Quota-Verletzung wird eine Benachrichtigung an die angegebene E-Mail-Adresse gesendet.' 
+---
+= Erstellen von Regeln zum Generieren von E-Mail-Adressen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Regeln erstellen, um die E-Mail-Adresse auf der Grundlage des mit Clustern, Storage Virtual Machines (SVMs), Volumes, qtrees, Benutzern oder Benutzergruppen verbundenen Benutzerkontingente anzugeben. Bei einer Quota-Verletzung wird eine Benachrichtigung an die angegebene E-Mail-Adresse gesendet.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen die Richtlinien auf der Seite Regeln zur Erstellung von Benutzer- und Gruppenkontingente-E-Mail-Adresse geprüft haben.
+
+
+Sie müssen die Regeln für Quota-E-Mail-Adressen definieren und in der Reihenfolge eingeben, in der sie ausgeführt werden sollen. Wenn Sie beispielsweise die E-Mail-Adresse qtree1@xyz.com verwenden möchten, um Benachrichtigungen über Quotenverletzungen für qtree1 zu erhalten und die E-Mail-Adresse admin@xyz.com für alle anderen qtrees zu verwenden, müssen die Regeln in der folgenden Reihenfolge aufgeführt werden:
+
+* Bei (€ QTREE =='qtre1' ) dann qtree1@xyz.com
+* Bei (€ QTREE == * ) dann admin@xyz.com
+
+
+Wenn keines der von Ihnen angegebenen Kriterien erfüllt ist, wird die Standardregel verwendet:
+
+WENN ( US-DOLLAR USER_OR_GROUP == * ) DANN USD USER_OR_GROUP@ USD DOMAIN
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Quota Email Rules*.
+. Geben Sie die Regel basierend auf Ihren Kriterien ein.
+. Klicken Sie auf *Validieren*, um die Syntax der Regel zu validieren.
++
+Wenn die Syntax der Regel nicht korrekt ist, wird eine Fehlermeldung angezeigt. Sie müssen die Syntax korrigieren und erneut auf *Validieren* klicken.
+
+. Klicken Sie Auf *Speichern*.
+. Überprüfen Sie, ob die von Ihnen erstellte E-Mail-Adresse auf der Seite Storage *VM / Health* Details auf der Registerkarte *Benutzer- und Gruppenquoten* angezeigt wird.
+

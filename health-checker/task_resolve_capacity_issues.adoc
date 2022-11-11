@@ -1,0 +1,42 @@
+---
+permalink: health-checker/task_resolve_capacity_issues.html 
+sidebar: sidebar 
+keywords: resolve, capacity issues 
+summary: Dieser Workflow bietet ein Beispiel dafür, wie Sie ein Kapazitätsproblem lösen können. In diesem Szenario greifen Sie als Administrator oder Operator auf die Seite Unified Manager Dashboard zu, um zu ermitteln, ob eines der überwachten Speicherobjekte Kapazitätsprobleme haben. Sie möchten die mögliche Ursache und Lösung des Problems ermitteln. 
+---
+= Behebung von Kapazitätsproblemen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dieser Workflow bietet ein Beispiel dafür, wie Sie ein Kapazitätsproblem lösen können. In diesem Szenario greifen Sie als Administrator oder Operator auf die Seite Unified ManagerDashboard zu, um zu sehen, ob eines der überwachten Speicherobjekte Kapazitätsprobleme haben. Sie möchten die mögliche Ursache und Lösung des Problems ermitteln.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+
+Auf der Dashboard-Seite suchen Sie im Kapazitätsbereich unter der Dropdown-Liste Ereignisse ein Fehlerereignis „`Volume Space Full`“.
+
+.Schritte
+. Klicken Sie im Bereich *Kapazität* der Seite *Dashboard* auf den Namen des Fehlerereignisses Volume Space Full.
++
+Die Seite Ereignisdetails für den Fehler wird angezeigt.
+
+. Auf der Seite *Event* Details können Sie eine oder mehrere der folgenden Aufgaben ausführen:
++
+** Überprüfen Sie die Fehlermeldung im Feld Ursache, und klicken Sie auf die Vorschläge unter vorgeschlagene Korrekturmaßnahmen, um Beschreibungen möglicher Korrekturmaßnahmen zu prüfen.
+** Klicken Sie im Feld Quelle auf den Objektnamen, in diesem Fall ein Volume, um Details zum Objekt anzuzeigen.
+** Suchen Sie nach Notizen, die zu diesem Event hinzugefügt wurden.
+** Fügen Sie dem Ereignis eine Notiz hinzu.
+** Das Ereignis einem anderen Benutzer zuweisen.
+** Bestätigen Sie das Ereignis.
+** Markieren Sie das Ereignis als erledigt.
+
+
+
+
+*Verwandte Informationen*
+
+link:../events/reference_event_details_page.html["Seite mit den Veranstaltungsdetails"]

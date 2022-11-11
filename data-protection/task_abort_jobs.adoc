@@ -1,0 +1,24 @@
+---
+permalink: data-protection/task_abort_jobs.html 
+sidebar: sidebar 
+keywords: abort, jobs 
+summary: Sie können die Seite Jobs verwenden, um einen Job abzubrechen, wenn er zu lange dauert, zu viele Fehler auftritt oder nicht mehr benötigt wird. Sie können einen Job nur dann abbrechen, wenn ihm Status und Typ erlauben. Sie können jeden laufenden Job abbrechen. 
+---
+= Abbrechen von Jobs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Seite Jobs verwenden, um einen Job abzubrechen, wenn er zu lange dauert, zu viele Fehler auftritt oder nicht mehr benötigt wird. Sie können einen Job nur dann abbrechen, wenn ihm Status und Typ erlauben. Sie können jeden laufenden Job abbrechen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Schutz* > *Jobs*.
+. Wählen Sie in der Liste der Jobs einen Job aus, und klicken Sie dann auf *Abbrechen*.
+. Klicken Sie in der Bestätigungsaufforderung auf *Ja*, um den ausgewählten Job abzubrechen.
+

@@ -1,0 +1,40 @@
+---
+permalink: health-checker/task_view_storage_pool_details.html 
+sidebar: sidebar 
+keywords: view, storage pool, details 
+summary: Sie können Details zum Speicherpool anzeigen, um den Zustand des Speicherpools, den gesamten und verfügbaren Cache sowie die verwendeten und verfügbaren Zuweisungen zu überwachen. 
+---
+= Anzeigen von Details zum Speicherpool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Details zum Speicherpool anzeigen, um den Zustand des Speicherpools, den gesamten und verfügbaren Cache sowie die verwendeten und verfügbaren Zuweisungen zu überwachen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Aggregate*.
+. Klicken Sie auf den Aggregatnamen.
++
+Die Details zum ausgewählten Aggregat werden angezeigt.
+
+. Klicken Sie auf die Registerkarte *Disk Information*.
++
+Detaillierte Laufwerksinformationen werden angezeigt.
+
++
+[NOTE]
+====
+Die Cache-Tabelle wird nur angezeigt, wenn das ausgewählte Aggregat einen Speicherpool verwendet.
+
+====
+. Bewegen Sie in der Cache-Tabelle den Zeiger über den Namen des erforderlichen Storage Pools.
++
+Die Details des Speicherpools werden angezeigt.
+
+

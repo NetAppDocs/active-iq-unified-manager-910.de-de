@@ -1,0 +1,30 @@
+---
+permalink: health-checker/concept_what_security_criteria_is_being_evaluated.html 
+sidebar: sidebar 
+keywords: security criteria, evaluated 
+summary: 'Im Allgemeinen werden die Sicherheitskriterien für Ihre ONTAP Cluster, Storage Virtual Machines (SVMs) und Volumes im Vergleich zu den im NetApp Leitfaden für verstärkte Sicherheit für ONTAP 9 definierten Empfehlungen evaluiert.' 
+---
+= Welche Sicherheitskriterien werden bewertet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Allgemeinen werden die Sicherheitskriterien für Ihre ONTAP Cluster, Storage Virtual Machines (SVMs) und Volumes im Vergleich zu den im „ _NetApp Security Hardening Guide for ONTAP 9_“ definierten Empfehlungen evaluiert.
+
+Einige der Sicherheitsprüfungen umfassen:
+
+* Gibt an, ob ein Cluster eine sichere Authentifizierungsmethode wie SAML verwendet
+* Unabhängig davon, ob Peering-Cluster ihre Kommunikation verschlüsselt haben
+* Gibt an, ob das Auditprotokoll auf einer Storage-VM aktiviert ist
+* Ob Ihre Volumes eine Software- oder Hardwareverschlüsselung aktiviert haben
+
+
+Weitere Informationen finden Sie unter Compliance-Kategorien und im http://www.netapp.com/us/media/tr-4569.pdf["NetApp Leitfaden zur verstärkte Sicherheit in ONTAP 9"] Ausführliche Informationen finden Sie unter.
+
+[NOTE]
+====
+Auch Upgrade-Ereignisse, die von der Active IQ-Plattform gemeldet werden, gelten als Sicherheitsereignisse. Diese Ereignisse erkennen Probleme, wenn für die Lösung ein Upgrade der ONTAP Software, Node-Firmware oder Betriebssystemsoftware erforderlich ist (für Sicherheitsempfehlungen). Diese Ereignisse werden nicht im Fenster „Sicherheit“ angezeigt, sind aber auf der Seite „Ereignisverwaltung“ verfügbar.
+
+====

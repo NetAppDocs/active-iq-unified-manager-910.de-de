@@ -1,0 +1,35 @@
+---
+permalink: reporting/task_create_report_to_view_volume_transfers_grouped_by_day.html 
+sidebar: sidebar 
+keywords: create, report, view, volume, transfers, day 
+summary: Sie können einen Bericht erstellen, um Volume-Transfers nach Tagen gruppiert anzuzeigen. 
+---
+= Erstellen eines Berichts zur Anzeige von Volume-Transfers nach Tag gruppiert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um Volume-Transfers nach Tagen gruppiert anzuzeigen.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Mit den folgenden Schritten erstellen Sie eine benutzerdefinierte Ansicht für Volume-Transfers nach Tag gruppiert und planen dann einen Bericht für diese Ansicht zu erstellen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Volumes*.
+. Wählen Sie im Menü Ansicht die Option *Beziehung* > *Letzter 1 Monat Transferrate*.
+. Klicken Sie oben in der Spalte „`Day`“, um die Volume-Transfers nach Tag zu sortieren.
+. Speichern Sie die Ansicht mit einem bestimmten Namen, der die Anzeige beschreibt, z. B. „`Volume Transfers by day`“.
+. Klicken Sie auf der Bestandsseite auf die Schaltfläche *geplante Berichte*.
+. Geben Sie einen Namen für den Berichtsplan ein, und füllen Sie die anderen Berichtsfelder aus, und klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""]Am Ende der Reihe.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und per E-Mail an die Empfänger gesendet, die unter der angegebenen Häufigkeit aufgeführt sind.
+
+
+
+Auf Grundlage der im Bericht gezeigten Ergebnisse können Sie die Volume-Transfers pro Tag untersuchen.

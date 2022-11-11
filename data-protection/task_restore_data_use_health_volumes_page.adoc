@@ -1,0 +1,44 @@
+---
+permalink: data-protection/task_restore_data_use_health_volumes_page.html 
+sidebar: sidebar 
+keywords: restore, data, health, volumes view 
+summary: 'Mit der Wiederherstellungsfunktion in der Ansicht Systemzustand: Alle Volumes können Sie überschreibende oder gelöschte Dateien, Verzeichnisse oder ein gesamtes Volume aus einer Snapshot Kopie wiederherstellen.' 
+---
+= Wiederherstellen von Daten mithilfe der Ansicht „Systemzustand: Alle Volumes“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der Wiederherstellungsfunktion in der Ansicht Systemzustand: Alle Volumes können Sie überschreibende oder gelöschte Dateien, Verzeichnisse oder ein gesamtes Volume aus einer Snapshot Kopie wiederherstellen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+NTFS-Dateiströme können nicht wiederhergestellt werden.
+
+Die Wiederherstellungsoption ist nicht verfügbar, wenn:
+
+* Die Volume-ID ist unbekannt, z. B. wenn Sie eine Intercluster-Beziehung haben und der Ziel-Cluster noch nicht erkannt wurde.
+* Das Volume ist für die synchrone SnapMirror Replizierung konfiguriert.
+
+
+.Schritte
+. Wählen Sie in der Ansicht *Health: Alle Volumes* ein Volume aus, aus dem Sie Daten wiederherstellen möchten.
+. Klicken Sie in der Symbolleiste auf *Wiederherstellen*.
++
+Das Dialogfeld Wiederherstellen wird angezeigt. Das Dialogfeld wird so geändert, dass ein 2-Spalten-Layout zum Anzeigen und Auswählen mehrerer Dateien vorhanden ist. Sie können aber nur 10 Datensätze gleichzeitig auswählen.
+
+. Wählen Sie das Volume und die Snapshot Kopie aus, von dem Sie Daten wiederherstellen möchten, falls sie sich von dem Standard unterscheiden.
+. Wählen Sie die Elemente aus, die Sie wiederherstellen möchten.
++
+Sie können das gesamte Volume wiederherstellen oder Ordner und Dateien angeben, die wiederhergestellt werden sollen.
+
+. Wählen Sie den Speicherort aus, an dem die ausgewählten Elemente wiederhergestellt werden sollen; entweder *Originalstandort* oder *alternativer Standort*.
+. Klicken Sie Auf *Wiederherstellen*.
++
+Der Wiederherstellungsprozess beginnt.
+
+

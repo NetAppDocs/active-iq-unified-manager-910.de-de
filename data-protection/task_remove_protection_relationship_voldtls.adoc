@@ -1,0 +1,32 @@
+---
+permalink: data-protection/task_remove_protection_relationship_voldtls.html 
+sidebar: sidebar 
+keywords: remove, protection, relationship,  volume, health details page 
+summary: Sie können eine Schutzbeziehung entfernen, um eine vorhandene Beziehung zwischen der ausgewählten Quelle und dem ausgewählten Ziel dauerhaft zu löschen, z. B. wenn Sie eine Beziehung unter Verwendung eines anderen Ziels erstellen möchten. Durch diesen Vorgang werden alle Metadaten entfernt und können nicht rückgängig gemacht werden. 
+---
+= Entfernen einer Schutzbeziehung von der Seite Volume / Health Details
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Schutzbeziehung entfernen, um eine vorhandene Beziehung zwischen der ausgewählten Quelle und dem ausgewählten Ziel dauerhaft zu löschen, z. B. wenn Sie eine Beziehung unter Verwendung eines anderen Ziels erstellen möchten. Durch diesen Vorgang werden alle Metadaten entfernt und können nicht rückgängig gemacht werden.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen Workflow Automation einrichten.
+
+
+.Schritte
+. Wählen Sie auf der Registerkarte *Protection* der Seite *Volume / Health* Details aus der Topologie die SnapMirror Beziehung aus, die Sie entfernen möchten.
+. Klicken Sie mit der rechten Maustaste auf den Namen des Ziels und wählen Sie im Menü die Option *Entfernen*.
++
+Das Dialogfeld Beziehung entfernen wird angezeigt.
+
+. Klicken Sie auf *Weiter*, um die Beziehung zu entfernen.
++
+Die Beziehung wird von der Seite Volume / Health Details entfernt.
+
+

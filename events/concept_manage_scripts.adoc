@@ -1,0 +1,20 @@
+---
+permalink: events/concept_manage_scripts.html 
+sidebar: sidebar 
+keywords: manage, scripts 
+summary: Mithilfe von Skripten können mehrere Storage-Objekte in Unified Manager automatisch geändert oder aktualisiert werden. Das Skript ist einer Warnung zugeordnet. Wenn ein Ereignis eine Warnung auslöst, wird das Skript ausgeführt. Sie können benutzerdefinierte Skripts hochladen und deren Ausführung testen, wenn eine Warnung erzeugt wird. 
+---
+= Verwalten von Skripten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe von Skripten können mehrere Storage-Objekte in Unified Manager automatisch geändert oder aktualisiert werden. Das Skript ist einer Warnung zugeordnet. Wenn ein Ereignis eine Warnung auslöst, wird das Skript ausgeführt. Sie können benutzerdefinierte Skripts hochladen und deren Ausführung testen, wenn eine Warnung erzeugt wird.
+
+Die Möglichkeit, Skripts in Unified Manager hochzuladen und sie auszuführen, ist standardmäßig aktiviert. Wenn Ihr Unternehmen diese Funktionalität aus Sicherheitsgründen nicht zulassen möchte, können Sie diese Funktion unter *Storage Management* > *Feature-Einstellungen* deaktivieren.
+
+*Verwandte Informationen*
+
+link:../config/task_enable_and_disable_ability_to_upload_scripts.html["Aktivieren und Deaktivieren der Fähigkeit zum Hochladen von Skripten"]

@@ -1,0 +1,42 @@
+---
+permalink: config/task_enable_and_disable_ability_to_upload_scripts.html 
+sidebar: sidebar 
+keywords: script upload, enable, disable 
+summary: Die Möglichkeit, Skripts in Unified Manager hochzuladen und sie auszuführen, ist standardmäßig aktiviert. Wenn Ihr Unternehmen diese Aktivität aus Sicherheitsgründen nicht zulassen möchte, können Sie diese Funktion deaktivieren. 
+---
+= Aktivieren und Deaktivieren des Hochladen von Skripten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Möglichkeit, Skripts in Unified Manager hochzuladen und sie auszuführen, ist standardmäßig aktiviert. Wenn Ihr Unternehmen diese Aktivität aus Sicherheitsgründen nicht zulassen möchte, können Sie diese Funktion deaktivieren.
+
+*Was Sie brauchen*
+
+Sie müssen über die Anwendungsadministratorrolle verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Funktionseinstellungen*.
+. Deaktivieren oder aktivieren Sie auf der Seite *Feature Settings* das Skript, indem Sie eine der folgenden Optionen auswählen:
++
+[cols="2*"]
+|===
+| Ihr Ziel ist | Dann tun Sie das... 
+
+
+ a| 
+Deaktivieren von Skripten
+ a| 
+Bewegen Sie im Bereich *Skript-Upload* die Schieberegler-Taste nach links.
+
+
+
+ a| 
+Skripte aktivieren
+ a| 
+Bewegen Sie im Bereich *Skript-Upload* die Schieberegler-Taste nach rechts.
+
+|===
+

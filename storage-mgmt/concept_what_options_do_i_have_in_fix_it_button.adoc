@@ -1,0 +1,81 @@
+---
+permalink: storage-mgmt/concept_what_options_do_i_have_in_fix_it_button.html 
+sidebar: sidebar 
+keywords: fix it,fix all 
+summary: Auf der Seite „Management Actions“ finden Sie die Schaltfläche „Fix it“ oder „Fix All“, um Probleme zu beheben, die Unified Manager über ein Ereignis benachrichtigt hat. 
+---
+= Welche Optionen habe ich, wenn ich die Schaltfläche „alles beheben“ oder „Alle beheben“ sehe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Management Actions“ finden Sie die Schaltfläche *Fix IT* oder *Fix All*, um Probleme zu beheben, über die Unified Manager über ein Ereignis benachrichtigt wurde.
+
+Wir empfehlen, dass Sie auf die Schaltflächen klicken, um ein Problem zu beheben, falls erforderlich. Wenn Sie jedoch nicht sicher sind, dass Sie das Problem wie von Unified Manager empfohlen lösen möchten, können Sie die folgenden Aktionen durchführen:
+
+|===
+| Was möchten Sie tun? | *Aktion* 
+
+
+ a| 
+Unified Manager hat das Problem für alle ermittelten Objekte behoben.
+ a| 
+Klicken Sie auf die Schaltfläche * Alle beheben.
+
+
+
+ a| 
+Beheben Sie das Problem derzeit nicht für eines der identifizierten Objekte, und verbergen Sie diese Verwaltungsaktion, bis das Ereignis erneut angesprochen wird.
+ a| 
+Klicken Sie auf den Pfeil nach unten und klicken Sie auf *Alle verwerfen*.
+
+
+
+ a| 
+Beheben Sie das Problem nur bei einigen der identifizierten Objekte.
+ a| 
+Klicken Sie auf den Namen der Management-Aktion, um die Liste zu erweitern und alle einzelnen *Fix IT*-Aktionen anzuzeigen.dann folgen Sie den Schritten, um einzelne Management-Aktionen zu beheben oder zu verfehlen.
+
+|===
+|===
+| Was möchten Sie tun? | Aktion 
+
+
+ a| 
+Lassen Sie das Problem mit Unified Manager beheben.
+ a| 
+Klicken Sie auf die Schaltfläche *Fix it*.
+
+
+
+ a| 
+Beheben Sie das Problem derzeit nicht und verbergen Sie diese Verwaltungsaktion, bis das Ereignis erneut angesprochen wird.
+ a| 
+Klicken Sie auf den Abwärtspfeil und klicken Sie auf *Abweisen*.
+
+
+
+ a| 
+Zeigen Sie die Details für dieses Ereignis an, damit Sie das Problem besser verstehen können.
+ a| 
+* Klicken Sie auf die Schaltfläche *Fix it* und prüfen Sie die Fehlerbehebung, die im resultierenden Dialogfeld angewendet wird.
+* Klicken Sie auf den Abwärtspfeil und klicken Sie auf *Ereignisdetails anzeigen*, um die Seite Ereignisdetails anzuzeigen.
+
+
+Klicken Sie dann auf einer dieser Seiten auf *Fix it*, wenn Sie das Problem beheben möchten.
+
+
+
+ a| 
+Zeigen Sie die Details für dieses Speicherobjekt an, damit Sie das Problem besser verstehen.
+ a| 
+Klicken Sie auf den Namen des Speicherobjekts, um Details auf der Seite Performance Explorer oder Health Details anzuzeigen.
+
+|===
+In einigen Fällen wird der Fix in der nächsten 15-minütigen Konfigurationsabfrage reflektiert. In anderen Fällen kann es bis zu viele Stunden dauern, bis die Konfigurationsänderung überprüft und das Ereignis veraltet ist.
+
+Um die Liste der abgeschlossenen oder laufenden Management-Aktionen anzuzeigen, klicken Sie auf das Filtersymbol und wählen Sie *abgeschlossen* oder *in Bearbeitung* aus.
+
+Fix Alle Operationen laufen seriell, so dass, wenn Sie das *in progress* Panel sehen, einige Objekte den Status *in progress* haben, während andere den Status *terminiert* haben; das heißt, sie warten noch auf die Implementierung.

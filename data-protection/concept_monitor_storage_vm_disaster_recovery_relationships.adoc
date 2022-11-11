@@ -1,0 +1,18 @@
+---
+permalink: data-protection/concept_monitor_storage_vm_disaster_recovery_relationships.html 
+sidebar: sidebar 
+keywords: disaster recovery, monitor, storage vm protection, relationships 
+summary: Active IQ Unified Manager unterstützt das Monitoring von Disaster-Recovery-Beziehungen für Storage-VMs, sodass Disaster Recovery auf Ebene einer Storage-VM möglich ist. Die Disaster Recovery für Storage-VMs ermöglicht die Wiederherstellung der vorhandenen Daten in den zusammengehörigen Volumes der Storage-VM und der Wiederherstellung der Storage-VM-Konfiguration. 
+---
+= Monitoring der Disaster-Recovery-Sicherungsbeziehungen für Storage VMs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager unterstützt das Monitoring von Disaster-Recovery-Beziehungen für Storage-VMs, sodass Disaster Recovery auf Ebene einer Storage-VM möglich ist. Die Disaster Recovery für Storage-VMs ermöglicht die Wiederherstellung der vorhandenen Daten in den zusammengehörigen Volumes der Storage-VM und der Wiederherstellung der Storage-VM-Konfiguration.
+
+Zur Gewährleistung eines asynchronen Disaster Recoverys wird eine DR-Beziehung zwischen Storage und einer Storage VM auf der Quell-Storage-VM der Ziel-Storage-VM erstellt. Sie können entweder die gesamte Storage-VM-Konfiguration oder den Teil der Storage-VM-Konfiguration replizieren (außer Netzwerk- und Protokollkonfiguration) und die Daten-Volumes basierend auf dem Cluster-Setup.
+
+Nachdem die Disaster Recovery-Beziehung für die Storage-VM konfiguriert ist und die Storage-Quell-VM aufgrund eines Hardware-Ausfalls oder eines Umweltausfalls nicht mehr verfügbar ist, wird die Ziel-Storage-VM gestartet, die den Zugriff auf die Daten mit minimalen Unterbrechungen ermöglicht. Auf ähnliche Weise wird die Quell-Storage-VM erneut mit der Ziel-Storage-VM synchronisiert, sodass die Quelle dann neu startet, um Daten bereitzustellen. Mit SnapMirror Befehlen können Sie die Disaster-Recovery-Beziehung für Storage-VMs konfigurieren und managen.

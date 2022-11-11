@@ -1,0 +1,86 @@
+---
+permalink: performance-checker/task_move_workloads_to_an_aggregate_on_different_node.html 
+sidebar: sidebar 
+keywords: moving, workloads, aggregate, different, node 
+summary: Mithilfe von Unified Manager können Sie ein Aggregat auf einem anderen Node identifizieren, der weniger ausgelastet ist als der Node, auf dem Ihre Workloads gerade ausgeführt werden. Anschließend können Sie ausgewählte Volumes zu diesem Aggregat verschieben. Durch die Migration hochperformanter Workloads auf ein Aggregat auf einem weniger ausgelasteten Node können Workloads auf beiden Nodes effizienter ausgeführt werden. 
+---
+= Verschieben von Workloads in ein Aggregat auf einem anderen Node
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe von Unified Manager können Sie ein Aggregat auf einem anderen Node identifizieren, der weniger ausgelastet ist als der Node, auf dem Ihre Workloads gerade ausgeführt werden. Anschließend können Sie ausgewählte Volumes zu diesem Aggregat verschieben. Durch die Migration hochperformanter Workloads auf ein Aggregat auf einem weniger ausgelasteten Node können Workloads auf beiden Nodes effizienter ausgeführt werden.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+* Sie müssen den Namen des Node notiert haben, der derzeit ein Performance-Problem hat.
+* Sie müssen das Datum und die Uhrzeit aufgezeichnet haben, zu der der Node das Performance-Ereignis erhalten hat.
+* Unified Manager muss einen Monat oder mehrere Performance-Daten erfasst und analysiert haben.
+
+
+Anhand dieser Schritte werden die folgenden Ressourcen ermittelt, damit Sie hochperformante Workloads auf einen weniger ausgelasteten Node verschieben können:
+
+* Die Nodes auf demselben Cluster, die weniger genutzt werden
+* Die Aggregate auf dem neuen Node, die am wenigsten genutzt werden
+* Die Volumes mit der höchsten Performance auf dem aktuellen Node
+
+
+.Schritte
+. Identifizieren Sie einen Knoten im Cluster, der am wenigsten genutzt wird:
++
+.. Klicken Sie auf der Seite *Event* Details auf den Namen des Clusters, auf dem sich der Knoten befindet.
++
+Die Cluster-Details werden auf der Landing Page Performance/Cluster angezeigt.
+
+.. Klicken Sie auf der Seite *Übersicht* im Bereich *verwaltete Objekte* auf *Knoten*.
++
+Die Liste der Nodes auf diesem Cluster wird angezeigt.
+
+.. Klicken Sie auf die Spalte *Auslastung*, um die Knoten nach der geringsten Auslastung zu sortieren.
++
+Sie können auch die Knoten identifizieren, die die größte *freie Kapazität* haben. Diese enthält eine Liste potenzieller Nodes, zu die Sie Workloads verschieben können.
+
+.. Notieren Sie sich den Namen des Node, auf den Sie die Workloads verschieben möchten.
+
+
+. Identifizieren Sie ein Aggregat auf dem neuen Node, der am wenigsten genutzt wird:
++
+.. Klicken Sie im linken Navigationsbereich auf *Storage* > *Aggregate* und wählen Sie im Menü Ansicht die Option *Performance* > *Alle Aggregate* aus.
++
+Die Performance: Die Ansicht aller Aggregate wird angezeigt.
+
+.. Klicken Sie im linken Dropdown-Menü auf *Filterung*, wählen Sie *Knoten* aus, geben Sie den Namen des Knotens in das Textfeld ein und klicken Sie dann auf *Filter anwenden*.
++
+Die Performance: Alle Aggregate Ansicht wird mit der Liste der auf diesem Node verfügbaren Aggregate neu angezeigt.
+
+.. Klicken Sie auf die Spalte *Nutzung*, um die Aggregate nach den am wenigsten verwendeten Aggregaten zu sortieren.
++
+Sie können auch jene Aggregate identifizieren, die die größte *freie Kapazität* haben. Diese Liste enthält potenzielle Aggregate, zu denen Workloads verschoben werden können.
+
+.. Notieren Sie sich den Namen des Aggregats, zu dem Sie die Workloads verschieben möchten.
+
+
+. Ermitteln Sie die hochperformanten Workloads vom Node, der das Ereignis erhalten hat:
++
+.. Kehren Sie zur Seite *Event*-Details für die Veranstaltung zurück.
+.. Klicken Sie im Feld *Betroffene Volumes* auf den Link für die Anzahl der Volumes.
++
+Die Ansicht Leistung: Alle Volumes wird mit einer gefilterten Liste der Volumes auf diesem Node angezeigt.
+
+.. Klicken Sie auf die Spalte *Gesamtkapazität*, um die Volumes nach dem größten zugewiesenen Speicherplatz zu sortieren.
++
+Hier wird eine Liste potenzieller Volumes angezeigt, die Sie möglicherweise verschieben möchten.
+
+.. Notieren Sie sich die Namen der Volumes, die Sie verschieben möchten, sowie die Namen der aktuellen Aggregate, auf denen sich diese befinden.
+
+
+. Verschieben Sie die Volumes zu den Aggregaten, die Sie als niedrige Auslastung auf dem neuen Node angegeben haben.
++
+Sie können den Vorgang der Verschiebung mit ONTAP System Manager, OnCommand Workflow Automation, ONTAP Befehlen oder einer Kombination dieser Tools ausführen.
+
+
+
+Prüfen Sie nach einigen Tagen, ob Sie dieselbe Art von Ereignissen von diesem Node oder Aggregat erhalten.

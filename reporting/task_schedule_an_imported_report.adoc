@@ -1,0 +1,40 @@
+---
+permalink: reporting/task_schedule_an_imported_report.html 
+sidebar: sidebar 
+keywords: schedule, imported, reports 
+summary: Sie können vorhandene Berichte planen, die in einer früheren Version von Unified Manager erstellt und importiert wurden. 
+---
+= Planen importierter .rptdesign-Berichte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können vorhandene Berichte planen, die in einer früheren Version von Unified Manager erstellt und importiert wurden.
+
+Die Planung importierter Berichte erfordert Folgendes:
+
+* Importierte BIRT-Datei erstellt .rptdesign-Berichte in einer früheren Unified Manager-Version
+* Verfügbar beim Upgrade auf Unified Manager 9.6 GA oder höher
+
+
+Nach dem Upgrade auf Unified Manager 9.6 GA oder höher werden auf der Seite „Berichtszeitpläne“ die importierten Berichte aufgeführt. Sie können den Zeitplan für diese Berichte bearbeiten, um die E-Mail-Adressen, die Häufigkeit und das Format (PDF oder CSV) des Empfängers anzugeben. Andernfalls können diese Berichte nicht in der Benutzeroberfläche von Unified Manager bearbeitet oder angezeigt werden.
+
+.Schritte
+. Öffnen Sie die Seite Berichtszeitpläne. Wenn Sie Berichte importiert haben, wird eine Meldung angezeigt.
++
+image::../media/message_non_scehduled_reports.png[Nachricht nicht verseucht Berichte]
+
+. Klicken Sie auf den Namen *Ansicht*, um die SQL-Abfrage anzuzeigen, die zur Generierung des Berichts verwendet wird.
++
+image::../media/importedreport1.png[ImportiertBericht1]
+
+. Klicken Sie auf das Symbol Weitere image:../media/more_icon.gif[""]Klicken Sie auf *Bearbeiten*, definieren Sie die Details zum Berichtsplan und speichern Sie den Bericht.
++
+[NOTE]
+====
+Sie können auch unerwünschte Berichte aus dem weiteren Symbol löschen image:../media/more_icon.gif[""].
+
+====
+

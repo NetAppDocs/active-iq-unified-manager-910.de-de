@@ -1,0 +1,33 @@
+---
+permalink: health-checker/concept_what_database_restore_is.html 
+sidebar: sidebar 
+keywords: unified manager, database, restore 
+summary: Bei einer Wiederherstellung einer MySQL Datenbank wird eine vorhandene Unified Manager Backup-Datei auf demselben oder einem anderen Unified Manager Server wiederhergestellt. Sie führen die Wiederherstellung über die Unified Manager-Wartungskonsole aus. 
+---
+= Was ist ein Datenbank-Restore
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei einer Wiederherstellung einer MySQL Datenbank wird eine vorhandene Unified Manager Backup-Datei auf demselben oder einem anderen Unified Manager Server wiederhergestellt. Sie führen die Wiederherstellung über die Unified Manager-Wartungskonsole aus.
+
+Wenn Sie einen Wiederherstellungsvorgang auf demselben (lokalen) System durchführen und die Sicherungsdateien alle lokal gespeichert sind, können Sie die Wiederherstellungsoption über den Standardspeicherort ausführen. Wenn Sie eine Wiederherstellung auf einem anderen Unified Manager-System (einem Remote-System) durchführen, müssen Sie die Sicherungsdatei oder Dateien vom sekundären Speicher auf die lokale Festplatte kopieren, bevor Sie die Wiederherstellungsoption ausführen.
+
+Während des Wiederherstellungsprozesses werden Sie von Unified Manager abgemeldet. Sie können sich nach Abschluss der Wiederherstellung beim System anmelden.
+
+Wenn Sie das Backup-Image auf einem neuen Server wiederherstellen, müssen Sie nach Abschluss des Wiederherstellungsvorgangs ein neues HTTPS-Sicherheitszertifikat generieren und den Unified Manager-Server neu starten. Wenn Sie das Backup-Image auf einem neuen Server wiederherstellen müssen, müssen Sie auch SAML-Authentifizierungseinstellungen neu konfigurieren.
+
+[NOTE]
+====
+Alte Sicherungsdateien können nicht verwendet werden, um ein Image wiederherzustellen, nachdem Unified Manager auf eine neuere Softwareversion aktualisiert wurde. Um Speicherplatz zu sparen, werden alle alten Backupdateien außer der neuesten Datei beim Upgrade von Unified Manager automatisch entfernt.
+
+====
+*Verwandte Informationen*
+
+link:../config/task_generate_an_https_security_certificate_ocf.html["Erstellen eines HTTPS-Sicherheitszertifikats"]
+
+link:../config/task_enable_saml_authentication_um.html["Aktivieren der SAML-Authentifizierung"]
+
+link:..//config/concept_authentication_with_active_directory_or_openldap.html["Authentifizierung mit Active Directory oder OpenLDAP"]

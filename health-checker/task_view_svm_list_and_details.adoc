@@ -1,0 +1,34 @@
+---
+permalink: health-checker/task_view_svm_list_and_details.html 
+sidebar: sidebar 
+keywords: view, storage vm list, details 
+summary: 'Aus der Ansicht „Systemzustand“: Alle Storage VMs können Sie Ihr Inventar an Storage Virtual Machines (SVMs) überwachen. Mithilfe der Seite Storage VM/Health Details können Sie detaillierte Informationen zu überwachten SVMs anzeigen.' 
+---
+= Anzeigen der Liste und Details der Speicher-VM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aus der Ansicht „Systemzustand“: Alle Storage VMs können Sie Ihr Inventar an Storage Virtual Machines (SVMs) überwachen. Mithilfe der Seite Storage VM/Health Details können Sie detaillierte Informationen zu überwachten SVMs anzeigen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+
+Sie können SVM-Details anzeigen, beispielsweise die Kapazität, Effizienz und Konfiguration einer SVM. Sie können auch Informationen zu zugehörigen Geräten und zugehörigen Warnmeldungen für diese SVM anzeigen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Storage VMs*.
+. Wählen Sie eine der folgenden Möglichkeiten, um die SVM-Details anzuzeigen:
++
+** Um Informationen über den Zustand aller SVMs in allen Clustern anzuzeigen, wählen Sie im Menü Ansicht den Status: Alle Storage-VMs aus.
+** Um die vollständigen Details anzuzeigen, klicken Sie auf den Namen der Speicher-VM.
++
+Sie können die vollständigen Details auch anzeigen, indem Sie im Dialogfeld mit den minimalen Details auf *Details anzeigen* klicken.
+
+
+
+. Zeigen Sie die Objekte an, die mit der SVM in Verbindung stehen, indem Sie im Dialogfeld mit den minimalen Details auf *View Related* klicken.
+

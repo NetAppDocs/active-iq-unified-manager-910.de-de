@@ -1,0 +1,376 @@
+---
+permalink: api-automation/concept_metrics_apis.html 
+sidebar: sidebar 
+keywords: view, performance, metrics 
+summary: Active IQ Unified Manager bietet Ihnen einen Satz von APIs unter der Kategorie /Datacenter, mit denen Sie die Performance-Daten Ihrer Cluster und Storage-Objekte in einem Datacenter anzeigen können. Diese APIs rufen Performance-Daten der unterschiedlichen Storage-Objekte wie Cluster, Nodes, LUNs, Volumes ab. Aggregate und Storage VMs. 
+---
+= Anzeigen von Performance-Metriken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager stellt Ihnen unter dem eine Reihe von APIs zur Verfügung `/datacenter` Kategorien, mit denen Sie die Performance-Daten Ihrer Cluster und Storage-Objekte in einem Datacenter anzeigen können. Diese APIs rufen Performance-Daten der unterschiedlichen Storage-Objekte wie Cluster, Nodes, LUNs, Volumes, Aggregate, ab. Storage-VMs, FC-Schnittstellen, FC-Ports, Ethernet-Ports und IP-Schnittstellen.
+
+Der `/metrics` Und `/analytics` APIs bieten verschiedene Ansichten der Performance-Metriken, mit denen Sie verschiedene Detailebenen für die folgenden Storage-Objekte im Datacenter anzeigen können:
+
+* Cluster
+* Knoten
+* Storage-VMs
+* Aggregate
+* Volumes
+* LUNs
+* FC-Schnittstellen
+* FC-Ports
+* Ethernet-Ports
+* IP-Schnittstellen
+
+
+In der folgenden Tabelle wird ein Vergleich zwischen dem erstellt `/metrics` Und `/analytics` APIs hinsichtlich der Angaben zu den abgerufenen Leistungsdaten.
+
+[cols="2*"]
+|===
+| Metriken | Analysen 
+
+
+ a| 
+Performance-Details für ein einzelnes Objekt. Beispiel: Der `/datacenter/cluster/clusters/\{key}/metrics` Über eine API muss der Cluster-Schlüssel als Pfadparameter zum Abrufen der Metriken für das spezifische Cluster eingegeben werden.
+ a| 
+Performance-Details für mehrere Objekte desselben Typs in einem Datacenter. Beispiel: Der `/datacenter/cluster/clusters/analytics` Die API ruft die kollektiven Kennzahlen aller Cluster in einem Datacenter ab.
+
+
+
+ a| 
+Beispiel für Performance-Kennzahlen für ein Storage-Objekt auf Basis des Zeitungsintervalls für den Abruf.
+ a| 
+Der aggregierte Nutzwert der Performance auf hoher Ebene für einen bestimmten Storage-Typ für einen bestimmten Zeitraum (über 72 Stunden).
+
+
+
+ a| 
+Grundlegende Details des Objekts werden abgerufen, z. B. Details zu einem Node oder Cluster.
+ a| 
+Es werden keine Details abgerufen.
+
+
+
+ a| 
+Akkumulierte Zähler, wie z. B. Minimum, Maximum, 95. Perzentil und die durchschnittlichen Performance-Werte über einen Zeitraum, werden für ein einzelnes Objekt wie Lesen, Schreiben, gesamt und andere Zähler abgerufen. Beispiel: Der `/datacenter/cluster/nodes/\{key}/metrics` API ruft (unter anderem) die folgenden Details für einen Knoten ab:
+
+
+NOTE: Das 95 Perzentil im Zusammenfassungswert zeigt an, dass 95 % der für den Zeitraum erfassten Proben einen Zählerwert haben, der unter dem als 95 Perzentil angegebenen Wert liegt.
+
+[listing]
+----
+{
+     "iops": {
+       "local": {
+         "other": 100.53,
+         "read": 100.53,
+         "total": 100.53,
+         "write": 100.53
+       },
+       "other": 100.53,
+       "read": 100.53,
+       "total": 100.53,
+       "write": 100.53
+     },
+     "latency": {
+       "other": 100.53,
+       "read": 100.53,
+       "total": 100.53,
+       "write": 100.53
+     },
+     "performance_capacity": {
+       "available_iops_percent": 0,
+       "free_percent": 0,
+       "system_workload_percent": 0,
+       "used_percent": 0,
+       "user_workload_percent": 0
+     },
+     "throughput": {
+       "other": 100.53,
+       "read": 100.53,
+       "total": 100.53,
+       "write": 100.53
+     },
+     "timestamp": "2018-01-01T12:00:00-04:00",
+     "utilization_percent": 0
+   }
+ ],
+ "start_time": "2018-01-01T12:00:00-04:00",
+ "summary": {
+   "iops": {
+     "local_iops": {
+       "other": {
+         "95th_percentile": 28,
+         "avg": 28,
+         "max": 28,
+         "min": 5
+       },
+       "read": {
+         "95th_percentile": 28,
+         "avg": 28,
+         "max": 28,
+         "min": 5
+       },
+       "total": {
+         "95th_percentile": 28,
+         "avg": 28,
+         "max": 28,
+         "min": 5
+       },
+       "write": {
+         "95th_percentile": 28,
+         "avg": 28,
+         "max": 28,
+         "min": 5
+       }
+     },
+---- a| 
+Für alle Objekte desselben Typs wird ein einzelner aggregierter Wert angezeigt. Beispiel: Der `/datacenter/cluster/nodes/analytics` API ruft (unter anderem) die folgenden Werte für alle Knoten ab:
+
+[listing]
+----
+{
+     "iops": 1.7471,
+     "latency": 60.0933,
+     "throughput": 5548.4678,
+     "utilization_percent": 4.8569,
+     "period": 72,
+     "performance_capacity": {
+       "used_percent": 5.475,
+       "available_iops_percent": 168350
+     },
+     "node": {
+       "key": "37387241-8b57-11e9-8974-00a098e0219a:type=cluster_node,uuid=95f94e8d-8b4e-11e9-8974-00a098e0219a",
+       "uuid": "95f94e8d-8b4e-11e9-8974-00a098e0219a",
+       "name": "ocum-infinity-01",
+       "_links": {
+         "self": {
+           "href": "/api/datacenter/cluster/nodes/37387241-8b57-11e9-8974-00a098e0219a:type=cluster_node,uuid=95f94e8d-8b4e-11e9-8974-00a098e0219a"
+         }
+       }
+     },
+     "cluster": {
+       "key": "37387241-8b57-11e9-8974-00a098e0219a:type=cluster,uuid=37387241-8b57-11e9-8974-00a098e0219a",
+       "uuid": "37387241-8b57-11e9-8974-00a098e0219a",
+       "name": "ocum-infinity",
+       "_links": {
+         "self": {
+           "href": "/api/datacenter/cluster/clusters/37387241-8b57-11e9-8974-00a098e0219a:type=cluster,uuid=37387241-8b57-11e9-8974-00a098e0219a"
+         }
+       }
+     },
+     "_links": {
+       "self": {
+         "href": "/api/datacenter/cluster/nodes/analytics"
+       }
+     }
+   },
+----
+
+
+ a| 
+Der Zeitbereich und die Probendaten basieren auf dem folgenden Zeitplan:dem Zeitbereich für die Daten. Beispiele können 1 h, 12 h, 1d, 2d, 3d, 15 D, 1 w, 1 m, 2 m, 3 m, 6 m Sie erhalten 1 Stunde Proben, wenn der Bereich mehr als 3 Tage (72 Std.), sonst sind es 5 Minuten Proben. Der Zeitraum für jeden Zeitbereich ist wie folgt:
+
+* 1h: Kennzahlen der letzten Stunde, die über 5 Minuten erfasst wurden.
+* 12h: Kennzahlen über die letzten 12 Stunden, die über 5 Minuten erfasst wurden.
+* 1d: Kennzahlen des letzten Tages, abgetastet über 5 Minuten
+* 2d: Kennzahlen der letzten 2 Tage, die über 5 Minuten erfasst wurden.
+* 3d: Kennzahlen der letzten 3 Tage, die über 5 Minuten erfasst wurden.
+* 15d: Kennzahlen der letzten 15 Tage, die über eine Stunde abgetastet wurden.
+* 1w: Kennzahlen in der letzten Woche, die über 1 Stunde erfasst wurden.
+* 1M: Kennzahlen im letzten Monat, die über 1 Stunde abgetastet wurden.
+* 2 m: Kennzahlen der letzten 2 Monate, die über eine Stunde erfasst wurden.
+* 3m: Kennzahlen in den letzten 3 Monaten, die über eine Stunde erfasst wurden.
+* 6m: Kennzahlen der letzten 6 Monate, die über 1 Stunde abgetastet wurden.
++
+Verfügbare Werte : 1h, 12h, 1d, 2d, 3d, 15 D, 1 w, 1 m, 2 m, 3 m, 6 m
+
++
+Standardwert : 1h
+
+
+ a| 
+Über 72 Stunden. Die Dauer, über die diese Probe berechnet wird, wird im ISO-8601-Standardformat dargestellt.
+
+|===
+Die folgende Tabelle beschreibt das `/metrics` Und `/analytics` APIs im Detail.
+
+[NOTE]
+====
+Die von diesen APIs zurückgegebenen IOPS- und Performance-Metriken sind beispielsweise doppelte Werte `100.53`. Das Filtern dieser Float-Werte durch die Pfeife („) und die Platzhalter (*)-Zeichen wird nicht unterstützt.
+
+====
+[cols="3*"]
+|===
+| HTTP-Verb | Pfad | Beschreibung 
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/cluster/clusters/\{key}/metrics`
+ a| 
+Ruft die Performance-Daten (Beispiel und Zusammenfassung) für ein Cluster ab, das vom Eingabeparameter des Cluster-Schlüssels angegeben wurde. Informationen wie der Cluster-Schlüssel und die UUID, der Zeitbereich, IOPS, Durchsatz und die Anzahl der Proben werden zurückgegeben.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/cluster/clusters/analytics`
+ a| 
+Ruft Performance-Kennzahlen auf hoher Ebene für alle Cluster in einem Datacenter ab. Sie können Ihre Ergebnisse nach den erforderlichen Kriterien filtern. Werte wie aggregierte IOPS, Durchsatz und Erfassungszeitraum (in Stunden) werden zurückgegeben.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/cluster/nodes/\{key}/metrics`
+ a| 
+Ruft Performance-Daten (Beispiel und Zusammenfassung) für einen Node ab, der durch den Eingabeparameter des Node-Schlüssels angegeben wurde. Informationen wie Node-UUID, Zeitbereich, Zusammenfassung der IOPS, Durchsatz, Latenz und Performance, die Anzahl der erfassten Proben und der verwendete Prozentsatz werden zurückgegeben.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/cluster/nodes/analytics`
+ a| 
+Ruft High-Level-Performance-Metriken für alle Nodes im Datacenter ab. Sie können Ihre Ergebnisse nach den erforderlichen Kriterien filtern. Informationen wie Node- und Cluster-Schlüssel und Werte wie aggregierte IOPS, Durchsatz und Erfassungszeitraum (in Stunden) werden zurückgegeben.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/storage/aggregates/\{key}/metrics`
+ a| 
+Ruft Performance-Daten (Probe und Zusammenfassung) für ein Aggregat ab, das durch den Eingabeparameter des Aggregatschlüssels angegeben wurde. Informationen wie z. B. Zeitraum, Zusammenfassung der IOPS, Latenz, Durchsatz und Performance-Kapazität, die Anzahl der für jeden Zähler gesammelten Proben und der Prozentsatz der genutzten Kapazität werden zurückgegeben.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/storage/aggregates/analytics`
+ a| 
+Ruft Performance-Kennzahlen auf höchster Ebene für alle Aggregate in einem Datacenter ab. Sie können Ihre Ergebnisse nach den erforderlichen Kriterien filtern. Informationen wie Aggregat- und Cluster-Schlüssel und Werte wie aggregierte IOPS, Durchsatz und Erfassungszeitraum (in Stunden) werden zurückgegeben.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/storage/luns/\{key}/metrics`
+
+`/datacenter/storage/volumes/\{key}/metrics`
+ a| 
+Ruft Performance-Daten (Beispiel und Zusammenfassung) für eine LUN oder eine Dateifreigabe (Volume) ab, die vom Eingabeparameter der LUN- oder Volume-Taste angegeben wurde. Informationen, z. B. eine Zusammenfassung des minimalen, maximalen und durchschnittlichen Lese-, Schreib- und Gesamt-IOPS, der Latenz und des Durchsatzes Und die Anzahl der Proben, die für jeden Zähler gesammelt wurden, wird zurückgegeben.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/storage/luns/analytics`
+
+`/datacenter/storage/volumes/analytics`
+ a| 
+Ruft Performance-Kennzahlen auf höchster Ebene für alle LUNs oder Volumes eines Datacenters ab. Sie können Ihre Ergebnisse nach den erforderlichen Kriterien filtern. Informationen wie Storage-VM- und Cluster-Schlüssel und Werte wie aggregierte IOPS, Durchsatz und Erfassungszeitraum (in Stunden) werden zurückgegeben.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/svm/svms/{key}/metrics`
+ a| 
+Ruft die Performance-Daten (Beispiel und Zusammenfassung) für eine Storage-VM ab, die durch den Eingabeparameter des Storage-VM-Schlüssels angegeben wurde. Eine Zusammenfassung der IOPS basierend auf den einzelnen unterstützten Protokollen, z. B. `nvmf, fcp, iscsi,` Und `nfs`, Durchsatz, Latenz und die Anzahl der gesammelten Proben zurückgegeben werden.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/svm/svms/analytics`
+ a| 
+Abruf von Performance-Metriken auf höchster Ebene für alle Storage VMs in einem Datacenter Sie können Ihre Ergebnisse nach den erforderlichen Kriterien filtern. Informationen wie Storage-VM-UUID, aggregierte IOPS, Latenz, Durchsatz und der Erfassungszeitraum (in Stunden) werden zurückgegeben.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/network/ethernet/ports/{key}/metrics`
+ a| 
+Ruft die Leistungskennzahlen für einen bestimmten ethernet-Port ab, der durch den Eingabeparameter des Portschlüssels angegeben wird. Wenn ein Intervall (Zeitraum) aus dem unterstützten Bereich angegeben wird, gibt die API die kumulierten Zähler zurück, z. B. Minimum, Maximum und die durchschnittlichen Leistungswerte über den Zeitraum.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/network/ethernet/ports/analytics`
+ a| 
+Ruft die grundlegenden Performance-Kennzahlen für alle ethernet-Ports in Ihrer Datacenter-Umgebung ab. Informationen wie der Cluster- und Node-Schlüssel und die UUID, Durchsatz, Erfassungszeitraum und Prozentsatz der Auslastung für die Ports werden zurückgegeben. Sie können das Ergebnis nach den verfügbaren Parametern filtern, wie z. B. Portschlüssel, Auslastungsgrad, Cluster- und Node-Name und UUID.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/network/fc/interfaces/{key}/metrics`
+ a| 
+Ruft die Leistungskennzahlen für eine bestimmte Netzwerk-FC-Schnittstelle ab, die vom Eingabeparameter des Interface Key angegeben wird. Wenn ein Intervall (Zeitraum) aus dem unterstützten Bereich angegeben wird, gibt die API die kumulierten Zähler zurück, z. B. Minimum, Maximum und die durchschnittlichen Leistungswerte über den Zeitraum.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/network/fc/interfaces/analytics`
+ a| 
+Ruft die grundlegenden Performance-Kennzahlen für alle ethernet-Ports in Ihrer Datacenter-Umgebung ab. Informationen wie der Schlüssel für die Cluster- und FC-Schnittstelle und die UUID, Durchsatz, IOPS, Latenz und Storage VM werden zurückgegeben. Sie können das Ergebnis nach den verfügbaren Parametern filtern, z. B. dem Namen des Clusters und der FC-Schnittstelle und der UUID, Storage VM, Durchsatz usw.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/network/fc/ports/{key}/metrics`
+ a| 
+Ruft die Performance-Metriken für einen bestimmten FC-Port ab, der durch den Eingabeparameter des Port-Schlüssels angegeben wurde. Wenn ein Intervall (Zeitraum) aus dem unterstützten Bereich angegeben wird, gibt die API die kumulierten Zähler zurück, z. B. Minimum, Maximum und die durchschnittlichen Leistungswerte über den Zeitraum.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/network/fc/ports/analytics`
+ a| 
+Ruft die grundlegenden Performance-Metriken für alle FC Ports in Ihrer Datacenter-Umgebung ab. Informationen wie der Cluster- und Node-Schlüssel und die UUID, Durchsatz, Erfassungszeitraum und Prozentsatz der Auslastung für die Ports werden zurückgegeben. Sie können das Ergebnis nach den verfügbaren Parametern filtern, wie z. B. Portschlüssel, Auslastungsgrad, Cluster- und Node-Name und UUID.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/network/ip/interfaces/{key}/metrics`
+ a| 
+Ruft die Leistungskennzahlen für eine Netzwerk-IP-Schnittstelle ab, die durch den Eingabeparameter des Schnittstellenschlüssels festgelegt wurden. Wenn ein Intervall (Zeitraum) aus dem unterstützten Bereich bereitgestellt wird, gibt die API Informationen zurück, wie z. B. die Anzahl der Proben, angesammelte Zähler, Durchsatz und die Anzahl der empfangenen und übertragenen Pakete.
+
+
+
+ a| 
+`GET`
+ a| 
+`/datacenter/network/ip/interfaces/analytics`
+ a| 
+Ruft die Performance-Kennzahlen auf hoher Ebene für alle Netzwerk-IP-Schnittstellen in Ihrer Datacenter-Umgebung ab. Informationen wie der Schlüssel zum Cluster und die IP-Schnittstelle und die UUID, Durchsatz, IOPS und Latenz werden zurückgegeben. Sie können das Ergebnis nach den verfügbaren Parametern filtern, z. B. den Namen der Cluster- und IP-Schnittstelle und die UUID, IOPS, Latenz, Durchsatz usw.
+
+|===

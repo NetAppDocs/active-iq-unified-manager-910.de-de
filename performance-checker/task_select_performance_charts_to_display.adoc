@@ -1,0 +1,47 @@
+---
+permalink: performance-checker/task_select_performance_charts_to_display.html 
+sidebar: sidebar 
+keywords: select, performance, charts, display 
+summary: In der Dropdown-Liste Diagramme auswählen können Sie die Arten von Performance-Zählerdiagrammen auswählen, die im Bereich Counter Charts angezeigt werden sollen. So können Sie basierend auf Ihren Performance-Anforderungen bestimmte Daten und Zähler anzeigen. 
+---
+= Auswählen der anzuzeigenden Leistungsdiagramme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In der Dropdown-Liste Diagramme auswählen können Sie die Arten von Performance-Zählerdiagrammen auswählen, die im Bereich Counter Charts angezeigt werden sollen. So können Sie basierend auf Ihren Performance-Anforderungen bestimmte Daten und Zähler anzeigen.
+
+.Schritte
+. Klicken Sie im Fensterbereich *Counter Charts* auf die Dropdown-Liste *Diagramme auswählen*.
+. Diagramme hinzufügen oder entfernen:
++
+|===
+| An... | Tun Sie das... 
+
+
+ a| 
+Einzelne Diagramme hinzufügen oder entfernen
+ a| 
+Aktivieren Sie die Kontrollkästchen neben den Diagrammen, die Sie anzeigen oder ausblenden möchten
+
+
+
+ a| 
+Alle Diagramme hinzufügen
+ a| 
+Klicken Sie Auf *Alle Auswählen*
+
+
+
+ a| 
+Alle Diagramme entfernen
+ a| 
+Klicken Sie Auf *Auswahl Aufheben*
+
+|===
++
+Ihre Diagrammauswahl wird im Bereich Counter Charts angezeigt. Beachten Sie, dass beim Hinzufügen von Diagrammen die neuen Diagramme in den Bereich Counter Charts eingefügt werden, um mit der Reihenfolge der Diagramme zu übereinstimmen, die in der Dropdown-Liste Choose Charts aufgeführt sind. Wenn Sie weitere Diagramme auswählen, muss möglicherweise ein zusätzliches Scrollen durchgeführt werden.
+
+

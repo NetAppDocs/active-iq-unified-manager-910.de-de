@@ -1,0 +1,22 @@
+---
+permalink: reporting/task_filter_data.html 
+sidebar: sidebar 
+keywords: filtering, data 
+summary: Filtern Sie die Daten, um sicherzustellen, dass die Ergebnisse Ihren Berichtsanforderungen entsprechen. Durch Filtern können Sie nur die Daten anzeigen, für die Sie sich interessieren. 
+---
+= Filtern von Daten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Filtern Sie die Daten, um sicherzustellen, dass die Ergebnisse Ihren Berichtsanforderungen entsprechen. Durch Filtern können Sie nur die Daten anzeigen, für die Sie sich interessieren.
+
+.Schritte
+. Klicken Sie auf das Filtersymbol, um Filter hinzuzufügen, um die gewünschten Ergebnisse zu fokussieren, und klicken Sie dann auf *Filter anwenden*.
++
+image::../media/filter_cold_data_2.png[Filtern kalter Daten 2]
+
+. Benennen Sie die nicht gespeicherte Ansicht, um Ihre Änderungen zu speichern.
+

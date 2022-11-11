@@ -1,0 +1,159 @@
+---
+permalink: performance-checker/reference_types_of_system_defined_performance_threshold_policies.html 
+sidebar: sidebar 
+keywords: system-defined, performance, threshold, policies, cluster, node. aggregate, qos 
+summary: Unified Manager bietet einige standardmäßige Schwellenwertrichtlinien, die die Cluster-Performance überwachen und Ereignisse automatisch generieren. Diese Richtlinien sind standardmäßig aktiviert und erzeugen Warn- oder Informationsereignisse, wenn die überwachten Performance-Schwellenwerte nicht eingehalten werden. 
+---
+= Typen systemdefinierter Performance-Schwellenwerte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager bietet einige standardmäßige Schwellenwertrichtlinien, die die Cluster-Performance überwachen und Ereignisse automatisch generieren. Diese Richtlinien sind standardmäßig aktiviert und erzeugen Warn- oder Informationsereignisse, wenn die überwachten Performance-Schwellenwerte nicht eingehalten werden.
+
+[NOTE]
+====
+Systemdefinierte Performance-Schwellenwerte sind auf Cloud Volumes ONTAP-, ONTAP Edge- oder ONTAP Select-Systemen nicht aktiviert.
+
+====
+Wenn Sie aus systemdefinierten Performance-Schwellenwertrichtlinien unnötige Ereignisse erhalten, können Sie die Ereignisse für einzelne Richtlinien auf der Seite Event Setup deaktivieren.
+
+
+
+== Cluster-Schwellenwertrichtlinien
+
+Die systemdefinierten Schwellwerte für die Cluster-Performance werden standardmäßig jedem von Unified Manager überwachten Cluster zugewiesen:
+
+* *Unwucht Clusterlast*
++
+Identifiziert Situationen, in denen ein Node mit einer viel höheren Last betrieben wird als andere Nodes im Cluster und somit die Workload-Latenzen potenziell beeinträchtigen.
+
++
+Dazu wird der verwendete Wert der Performance-Kapazität für alle Nodes in einem Cluster verglichen, um festzustellen, ob ein Node den Schwellenwert von 30 % für mehr als 24 Stunden überschritten hat. Dies ist ein Warnereignis.
+
+* *Unwucht Clusterkapazität*
++
+Ermittelt Situationen, in denen ein Aggregat eine viel höhere genutzte Kapazität als andere Aggregate im Cluster hat und so potenziell den für Vorgänge erforderlichen Speicherplatz beeinträchtigt.
+
++
+Dazu vergleichen Sie den verwendeten Kapazitätswert für alle Aggregate im Cluster, um zu ermitteln, ob es zwischen allen Aggregaten einen Unterschied von 70 % gibt. Dies ist ein Warnereignis.
+
+
+
+
+
+== Richtlinien für Node-Schwellwerte
+
+Die systemdefinierten Richtlinien für Node-Performance-Schwellenwerte werden standardmäßig jedem Node in den von Unified Manager überwachten Clustern zugewiesen:
+
+* *Überschreitung Der Leistungskapazität Des Schwellenwerts*
++
+Identifiziert Situationen, in denen ein einzelner Node über dem Grenzen seiner betrieblichen Effizienz arbeitet und so Workload-Latenzen potenziell beeinträchtigen kann.
+
++
+Dies ergibt sich aus Nodes, die mehr als 12 Stunden lang mehr als 100 % ihrer Performance-Kapazität nutzen. Dies ist ein Warnereignis.
+
+* *Node HA-Paar überausgelastet*
++
+Bestimmt, in welchen Fällen die Nodes in einem HA-Paar über den Grenzen der betrieblichen Effizienz des HA-Paars arbeiten.
+
++
+Dies erfolgt durch einen Blick auf den verwendeten Wert für die Performance-Kapazität der beiden Nodes im HA-Paar. Wenn die kombinierte Performance-Kapazität der beiden Nodes über 200 % für mehr als 12 Stunden beträgt, wirkt sich ein Controller-Failover auf die Workload-Latenzen aus. Dies ist ein Informationsereignis.
+
+* *Node-Disk-Fragmentierung*
++
+Die Situation erkennt, dass eine Festplatte oder eine Festplatte in einem Aggregat fragmentiert ist, was die Services eines wichtigen Systems verlangsamt und die Workload-Latenzen auf einem Node potenziell beeinträchtigt.
+
++
+Hier werden bestimmte Lese- und Schreibverhältnisse über alle Aggregate auf einem Node hinweg betrachtet. Diese Richtlinie kann auch während der Resynchronisierung der SyncMirror ausgelöst werden oder wenn Fehler während des Scrub-Betriebs der Festplatte gefunden werden. Dies ist ein Warnereignis.
+
++
+[NOTE]
+====
+Die Richtlinie „`Node Disk Fragmentierung`“ analysiert rein HDD-basierte Aggregate; Flash Pool, SSD und FabricPool Aggregate werden nicht analysiert.
+
+====
+
+
+
+
+== Aggregieren von Schwellenwertrichtlinien
+
+Die systemdefinierte Aggregat-Performance-Schwellenwertrichtlinie wird standardmäßig jedem Aggregat in den von Unified Manager überwachten Clustern zugewiesen:
+
+* *Aggregat Festplatten überausgelastet*
++
+Die Situation erkennt, in denen ein Aggregat über den Grenzen seiner betrieblichen Effizienz arbeitet und so die Workload-Latenzen potenziell beeinträchtigt werden. Es identifiziert diese Situationen durch die Suche nach Aggregaten, bei denen die Festplatten im Aggregat mehr als 95% für mehr als 30 Minuten ausgelastet sind. Diese Multicondition-Richtlinie führt dann die folgende Analyse durch, um die Ursache des Problems zu ermitteln:
+
++
+** Wird eine Festplatte im Aggregat derzeit im Hintergrund gewartet?
++
+Zu den Hintergrund-Wartungsaktivitäten, für die eine Festplatte möglicherweise benötigt wird, zählen die Festplattenrekonstruktion, der Festplattenscrub, die SyncMirror-Neusynchronisierung und das Reparität.
+
+** Gibt es einen Kommunikationsengpass für den Fibre Channel Interconnect im Platten-Shelf?
+** Gibt es zu wenig freien Platz im Aggregat? Ein Warnereignis wird für diese Richtlinie nur dann ausgegeben, wenn eine (oder mehrere) der drei untergeordneten Richtlinien ebenfalls als verletzt betrachtet wird. Ein Performance-Ereignis wird nicht ausgelöst, wenn nur die Festplatten im Aggregat mehr als 95 % ausgelastet sind.
+
+
+
+
+[NOTE]
+====
+Die Richtlinie „`Aggregate Disks Over-used`“ analysiert rein HDD-basierte Aggregate und Flash Pool (Hybrid) Aggregate, SSD- und FabricPool-Aggregate werden nicht analysiert.
+
+====
+
+
+== Workload-Latenzschwellenrichtlinien
+
+Die vom System definierten Schwellwerte für die Workload-Latenz werden jedem Workload mit einer konfigurierten Performance-Service-Level-Richtlinie zugewiesen, die über einen definierten Wert für „`erwartete Latenz`“ verfügt:
+
+* *Workload Volume/LUN Latenzschwellenwert verletzt gemäß Performance Service Level*
++
+Identifiziert Volumes (Dateifreigaben) und LUNs, die ihr Limit für „`erwartete Latenz`“ überschritten haben und die die Workload-Performance beeinträchtigen. Dies ist ein Warnereignis.
+
++
+Dies entspricht Workloads, die für 30 % der Zeit während der vorherigen Stunde den erwarteten Latenzwert überschritten haben.
+
+
+
+
+
+== QoS-Schwellenwertrichtlinien
+
+Die systemdefinierten QoS-Performance-Schwellenwertrichtlinien werden jedem Workload mit einer konfigurierten ONTAP-QoS-Richtlinie für einen maximalen Durchsatz (IOPS, IOPS/TB oder MB/s) zugewiesen. Unified Manager löst ein Ereignis aus, wenn der Workload-Durchsatzwert 15 % geringer ist als der konfigurierte QoS-Wert:
+
+* *QoS max IOPS oder MB/s Schwellenwert*
++
+Identifiziert Volumes und LUNs, die ihre maximalen IOPS-Werte durch QoS oder Durchsatzbegrenzungen von MB/s überschritten haben und die Workload-Latenz beeinträchtigen. Dies ist ein Warnereignis.
+
++
+Wird einem einzelnen Workload einer Richtliniengruppe zugewiesen, so wird dies durch Workloads gesucht, die während jedes Erfassungszeitraums für die vorherige Stunde den in der zugewiesenen QoS-Richtliniengruppe definierten Maximaldurchsatz überschritten haben.
+
++
+Wenn mehrere Workloads eine einzelne QoS-Richtlinie teilen, wird dies durch Hinzufügen der IOPS oder MB/s aller Workloads in der Richtlinie möglich und es wird überprüft, ob die Gesamtsumme im Vergleich zum Schwellenwert enthalten ist.
+
+* *QoS Peak IOPS/TB oder IOPS/TB mit Block Size Schwellenwert*
++
+Identifiziert Volumes, die die adaptive QoS-Grenze für IOPS/TB-Durchsatz überschritten haben (oder IOPS/TB mit Blockgrößen-Limit) und die sich auf die Workload-Latenz auswirken. Dies ist ein Warnereignis.
+
++
+Dazu wird der in der adaptiven QoS-Richtlinie definierte IOPS-Spitzenwert pro TB in einen QoS-Maximalwert für IOPS basierend auf der Größe jedes Volumes konvertiert. Anschließend werden Volumes untersucht, die während jedes Performance-Erfassungszeitraums für die vorherige Stunde die maximalen IOPS-Werte für QoS überschritten haben.
+
++
+[NOTE]
+====
+Diese Richtlinie wird nur auf Volumes angewendet, wenn das Cluster mit ONTAP 9.3 und höher installiert ist.
+
+====
++
+Wurde in der anpassungsfähigen QoS-Richtlinie das Element „`Blockgröße`“ definiert, wird dieser Schwellenwert basierend auf der Größe jedes Volumes in einen QoS-Maximalwert für MB/s umgewandelt. Dann sucht es nach Volumes, die die QoS-max. MB/s während jedes Performance-Erfassungszeitraums für die vorherige Stunde überschritten haben.
+
++
+[NOTE]
+====
+Diese Richtlinie wird nur auf Volumes angewendet, wenn das Cluster mit ONTAP 9.5 und höher installiert ist.
+
+====
+

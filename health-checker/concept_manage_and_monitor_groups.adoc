@@ -1,0 +1,14 @@
+---
+permalink: health-checker/concept_manage_and_monitor_groups.html 
+sidebar: sidebar 
+keywords: manage, monitor, groups 
+summary: Sie können Gruppen in Unified Manager erstellen, um Storage-Objekte zu managen. 
+---
+= Verwalten und Überwachen von Gruppen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Gruppen in Unified Manager erstellen, um Storage-Objekte zu managen.

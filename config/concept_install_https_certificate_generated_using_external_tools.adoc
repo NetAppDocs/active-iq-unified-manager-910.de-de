@@ -1,0 +1,119 @@
+---
+permalink: config/concept_install_https_certificate_generated_using_external_tools.html 
+sidebar: sidebar 
+keywords: install, HTTPS, certificate, generated from external tools 
+summary: Sie können Zertifikate installieren, die selbst signiert sind oder CA-signiert sind und mit einem externen Tool wie OpenSSL, BoringSSL, LetsEncrt generiert werden. 
+---
+= Installieren eines HTTPS-Zertifikats, das mit externen Tools generiert wurde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Zertifikate installieren, die selbst signiert sind oder CA-signiert sind und mit einem externen Tool wie OpenSSL, BoringSSL, LetsEncrt generiert werden.
+
+Sie sollten den privaten Schlüssel zusammen mit der Zertifikatskette laden, da diese Zertifikate extern öffentlich-private Schlüsselpaare sind. Die zulässigen Schlüssel-Paar-Algorithmen sind „`RSA`“ und „`EC`“. Die Option *HTTPS-Zertifikat installieren* ist auf der Seite HTTPS-Zertifikate im Abschnitt Allgemein verfügbar. Die Datei, die Sie hochladen, sollte das folgende Eingabeformat aufweisen.
+
+. Privater Schlüssel des Servers, der zum Active IQ um-Host gehört
+. Zertifikat des Servers, das mit dem privaten Schlüssel übereinstimmt
+. Zertifikat der CAS in umgekehrter Reihenfolge bis zum Root, die zum Signieren des obigen Zertifikats verwendet werden
+
+
+
+
+== Format zum Laden eines Zertifikats mit einem EC-Schlüsselpaar
+
+Die zulässigen Kurven sind „`prime256v1`“ und „`secp384r1`“. Beispiel eines Zertifikats mit einem extern generierten EC-Paar:
+
+[listing]
+----
+ -----BEGIN EC PRIVATE KEY-----
+<EC private key of Server>
+-----END EC PRIVATE KEY-----
+----
+[listing]
+----
+ -----BEGIN CERTIFICATE-----
+ <Server certificate>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #1 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #2 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Root signing certificate>
+ -----END CERTIFICATE-----
+----
+
+
+== Format zum Laden eines Zertifikats mit einem RSA-Schlüsselpaar
+
+Die zulässigen Schlüsselgrößen für das RSA-Schlüsselpaar, das zum Host-Zertifikat gehört, sind 2048, 3072 und 4096. Zertifikat mit einem extern generierten * RSA-Schlüsselpaar*:
+
+[listing]
+----
+-----BEGIN RSA PRIVATE KEY-----
+ <RSA private key of Server>
+ -----END RSA PRIVATE KEY-----
+ -----BEGIN CERTIFICATE-----
+ <Server certificate>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #1 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #2 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Root signing certificate>
+ -----END CERTIFICATE-----
+----
+Nachdem das Zertifikat hochgeladen wurde, sollten Sie die Active IQ Unified Manager-Instanz neu starten, damit die Änderungen wirksam werden.
+
+
+
+== Überprüft beim Hochladen extern generierter Zertifikate
+
+Das System führt Prüfungen beim Hochladen eines Zertifikats durch, das mit externen Tools erstellt wurde. Wenn eine der Prüfungen fehlschlägt, wird das Zertifikat abgelehnt. Es gibt auch eine Validierung für die Zertifikate, die aus der CSR innerhalb des Produkts erzeugt werden, und für Zertifikate, die mit externen Tools generiert werden.
+
+* Der private Schlüssel in der Eingabe wird anhand des Hostzertifikats in der Eingabe validiert.
+* Der allgemeine Name (CN) im Hostzertifikat wird mit dem FQDN des Hosts überprüft.
+* Der allgemeine Name (CN) des Host-Zertifikats sollte nicht leer oder leer sein und nicht auf localhost gesetzt werden.
+* Das Startdatum der Gültigkeit darf nicht in der Zukunft liegen und das Gültigkeitsdatum des Zertifikats sollte nicht in der Vergangenheit liegen.
+* Wenn Intermediate CA oder CA vorhanden ist, sollte das Startdatum des Zertifikats nicht in der Zukunft liegen und das Gültigkeitsdatum sollte nicht in der Vergangenheit liegen.
+
+
+[NOTE]
+====
+Der private Schlüssel in der Eingabe sollte nicht verschlüsselt werden. Wenn private Schlüssel verschlüsselt sind, werden sie vom System abgelehnt.
+
+====
+Beispiel 1
+
+[listing]
+----
+----BEGIN ENCRYPTED PRIVATE KEY-----
+<Encrypted private key>
+-----END ENCRYPTED PRIVATE KEY-----
+----
+Beispiel 2
+
+[listing]
+----
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+<content here>
+-----END RSA PRIVATE KEY-----
+----
+Beispiel 3
+
+[listing]
+----
+-----BEGIN EC PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+<content here>
+-----END EC PRIVATE KEY-----
+----

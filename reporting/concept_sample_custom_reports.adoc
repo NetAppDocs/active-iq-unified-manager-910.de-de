@@ -1,0 +1,22 @@
+---
+permalink: reporting/concept_sample_custom_reports.html 
+sidebar: sidebar 
+keywords: sample, custom, reports 
+summary: Benutzerdefinierte Beispielberichte werden üblicherweise verwendet, um Ihnen dabei zu helfen, potenzielle Probleme zu identifizieren und auf potenzielle Probleme zu reagieren, bevor sie auftreten. 
+---
+= Beispiel für benutzerdefinierte Berichte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Benutzerdefinierte Beispielberichte werden üblicherweise verwendet, um Ihnen dabei zu helfen, potenzielle Probleme zu identifizieren und auf potenzielle Probleme zu reagieren, bevor sie auftreten.
+
+Die Liste der Berichte in diesem Abschnitt ist nicht vollständig und wird mit der Zeit wachsen. Sie können vorschlagen, benutzerdefinierte Berichte zu diesem Abschnitt hinzuzufügen, indem Sie Feedback zur Dokumentation geben.
+
+[NOTE]
+====
+Zum Verwalten von Berichten müssen Sie über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+====

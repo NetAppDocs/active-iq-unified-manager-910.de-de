@@ -1,0 +1,35 @@
+---
+permalink: data-protection/task_create_snapmirror_policy_to_maximize_transfer_efficiency.html 
+sidebar: sidebar 
+keywords: create, snapmirror, policy, maximize, transfer, efficiency 
+summary: Sie können eine SnapMirror-Richtlinie erstellen, um die SnapMirror Übertragungspriorität für Sicherungsbeziehungen festzulegen. Mithilfe der SnapMirror Richtlinien lässt sich die Übertragungseffizienz von der Quelle zum Ziel maximieren, indem Prioritäten zugewiesen werden, sodass Transfers mit niedriger Priorität nach Transfers mit normaler Priorität geplant werden. 
+---
+= Erstellen einer SnapMirror-Richtlinie zur Maximierung der Übertragungseffizienz
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine SnapMirror-Richtlinie erstellen, um die SnapMirror Übertragungspriorität für Sicherungsbeziehungen festzulegen. Mithilfe der SnapMirror Richtlinien lässt sich die Übertragungseffizienz von der Quelle zum Ziel maximieren, indem Prioritäten zugewiesen werden, sodass Transfers mit niedriger Priorität nach Transfers mit normaler Priorität geplant werden.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen Workflow Automation einrichten.
+* Bei dieser Aufgabe wird davon ausgegangen, dass Sie den Bereich Zielinformationen im Dialogfeld Schutz konfigurieren bereits abgeschlossen haben.
+
+
+.Schritte
+. Klicken Sie im Dialogfeld *Schutz konfigurieren* auf der Registerkarte *SnapMirror* im Bereich *Beziehungseinstellungen* auf den Link *Richtlinien erstellen*.
++
+Das Dialogfeld SnapMirror-Richtlinie erstellen wird angezeigt.
+
+. Geben Sie im Feld *Policy Name* einen Namen ein, den Sie der Richtlinie geben möchten.
+. Wählen Sie im Feld * Priorität übertragen* die Übertragungspriorität aus, die Sie der Richtlinie zuweisen möchten.
+. Geben Sie im Feld *Kommentar* einen optionalen Kommentar für die Richtlinie ein.
+. Klicken Sie Auf *Erstellen*.
++
+Die neue Richtlinie wird in der Dropdown-Liste SnapMirror-Richtlinie angezeigt.
+
+

@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: legal-notices.html 
+keywords:  
+summary:  
+---
+= Rechtliche Hinweise
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Rechtliche Hinweise ermöglichen den Zugriff auf Copyright-Erklärungen, Marken, Patente und mehr.
+
+
+
+== Urheberrecht
+
+http://www.netapp.com/us/legal/copyright.aspx[]
+
+
+
+== Marken
+
+NetApp, das NETAPP Logo und die auf der NetApp Markenseite aufgeführten Marken sind Marken von NetApp Inc. Andere Firmen- und Produktnamen können Marken der jeweiligen Eigentümer sein.
+
+http://www.netapp.com/us/legal/netapptmlist.aspx[]
+
+
+
+== Patente
+
+Eine aktuelle Liste der NetApp Patente finden Sie unter:
+
+https://www.netapp.com/us/media/patents-page.pdf[]
+
+
+
+== Datenschutzrichtlinie
+
+https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
+
+
+
+== Open Source
+
+Informationen über das Urheberrecht und die Lizenzen Dritter, die in diesem Produkt verwendet werden.
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2879276["Hinweis zu Active IQ Unified Manager 9.10"]

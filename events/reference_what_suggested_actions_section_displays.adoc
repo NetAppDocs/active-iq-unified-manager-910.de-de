@@ -1,0 +1,26 @@
+---
+permalink: events/reference_what_suggested_actions_section_displays.html 
+sidebar: sidebar 
+keywords: suggest, actions, section, displays 
+summary: Der Abschnitt „Empfohlene Maßnahmen“ auf der Seite „Veranstaltungsdetails“ enthält mögliche Gründe für das Ereignis und schlägt einige Maßnahmen vor, damit Sie versuchen können, das Ereignis selbst zu lösen. Die vorgeschlagenen Maßnahmen werden auf Grundlage der Art des Ereignisses oder des Schwellenwerts, die nicht eingehalten wurden, angepasst. 
+---
+= Der Abschnitt „Empfohlene Maßnahmen“ wird angezeigt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Abschnitt „Empfohlene Maßnahmen“ auf der Seite „Veranstaltungsdetails“ enthält mögliche Gründe für das Ereignis und schlägt einige Maßnahmen vor, damit Sie versuchen können, das Ereignis selbst zu lösen. Die vorgeschlagenen Maßnahmen werden auf Grundlage der Art des Ereignisses oder des Schwellenwerts, die nicht eingehalten wurden, angepasst.
+
+Dieser Bereich wird nur für bestimmte Ereignistypen angezeigt.
+
+In einigen Fällen gibt es *Hilfe* Links auf der Seite, die zusätzliche Informationen für viele empfohlene Aktionen, einschließlich Anweisungen für die Durchführung einer bestimmten Aktion. Einige der Aktionen können die Verwendung von Unified Manager, ONTAP System Manager, OnCommand Workflow Automation, ONTAP CLI-Befehlen oder einer Kombination dieser Tools umfassen.
+
+Die hier vorgeschlagenen Maßnahmen sollten Sie nur als Anleitung zur Lösung dieses Ereignisses betrachten. Die Maßnahmen, die Sie zur Lösung dieses Ereignisses ergreifen, sollten auf dem Kontext Ihrer Umgebung beruhen.
+
+Wenn Sie das Objekt und das Ereignis genauer analysieren möchten, klicken Sie auf die Schaltfläche *Workload analysieren*, um die Seite Workload Analysis anzuzeigen.
+
+Es gibt bestimmte Ereignisse, die Unified Manager sorgfältig diagnostizieren und eine einzige Lösung anbieten kann. Wenn verfügbar, werden diese Auflösungen mit der Schaltfläche *Fix IT* angezeigt. Klicken Sie auf diese Schaltfläche, damit Unified Manager das Problem, das das Ereignis verursacht, behebt.
+
+Bei Ereignissen der Active IQ Plattform kann dieser Abschnitt einen Link zu einem NetApp Knowledgebase Artikel enthalten, sofern verfügbar, der das Problem und mögliche Lösungen beschreibt. In Sites ohne externen Netzwerkzugriff wird lokal eine PDF-Datei des Knowledgebase-Artikels geöffnet. Die PDF-Datei ist Teil der Regeldatei, die Sie manuell in die Unified Manager-Instanz herunterladen.

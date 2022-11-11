@@ -1,0 +1,58 @@
+---
+permalink: data-protection/reference_create_resource_pool_dialog_box.html 
+sidebar: sidebar 
+keywords: create, resource pool, dialog box 
+summary: Sie können im Dialogfeld Ressourcen-Pool erstellen einen neuen Ressourcen-Pool benennen und beschreiben sowie Aggregate zu diesem Ressourcenpool hinzufügen und aus diesem Ressourcenpool löschen. 
+---
+= Dialogfeld „Ressourcen-Pool erstellen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können im Dialogfeld Ressourcen-Pool erstellen einen neuen Ressourcen-Pool benennen und beschreiben sowie Aggregate zu diesem Ressourcenpool hinzufügen und aus diesem Ressourcenpool löschen.
+
+
+
+== Name Des Ressourcenpool
+
+Mit den Textfeldern können Sie die folgenden Informationen hinzufügen, um einen Ressourcenpool zu erstellen:
+
+Ermöglicht die Angabe eines Ressourcenpoolnamens.
+
+
+
+== Beschreibung
+
+Ermöglicht Ihnen, einen Ressourcenpool zu beschreiben.
+
+
+
+== Mitglieder
+
+Zeigt die Mitglieder des Ressourcen-Pools an. Sie können auch Mitglieder hinzufügen und löschen.
+
+
+
+== Befehlsschaltflächen
+
+Mit den Schaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Hinzufügen*
++
+Öffnet das Dialogfeld Aggregate, damit Sie dem Ressourcen-Pool Aggregate von einem bestimmten Cluster hinzufügen können. Sie können Aggregate von verschiedenen Clustern hinzufügen. Dasselbe Aggregat kann jedoch nicht mehr als einem Ressourcen-Pool hinzugefügt werden.
+
+* *Entfernen*
++
+Hiermit können Sie ausgewählte Aggregate aus dem Ressourcen-Pool entfernen.
+
+* *Erstellen*
++
+Erstellt den Ressourcenpool. Diese Schaltfläche ist erst aktiviert, wenn die Informationen in die Felder „Ressourcenpoolname“ oder „Beschreibung“ eingegeben wurden.
+
+* *Abbrechen*
++
+Die Änderungen werden nicht mehr gespeichert, und das Dialogfeld „Create Resource Pool“ wird geschlossen.
+
+

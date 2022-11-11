@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_how_enabling_flash_pool_can_improve_workload_performance.html 
+sidebar: sidebar 
+keywords: enable, flash pool, storage, aggregate, improve, workload, performance 
+summary: Sie können die Workload-Performance durch Aktivierung der Flash Pool Funktion auf einem Aggregat verbessern. Ein Flash Pool ist ein Aggregat, das sowohl HDDs als auch SSDs umfasst. Die HDDs werden im primären Storage eingesetzt und die SSDs bieten einen hochperformanten Lese- und Schreib-Cache, um die Aggregat-Performance zu steigern. 
+---
+= Die Aktivierung von Flash Pool auf einem Storage-Aggregat kann die Workload-Performance verbessern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Workload-Performance durch Aktivierung der Flash Pool Funktion auf einem Aggregat verbessern. Ein Flash Pool ist ein Aggregat, das sowohl HDDs als auch SSDs umfasst. Die HDDs werden im primären Storage eingesetzt und die SSDs bieten einen hochperformanten Lese- und Schreib-Cache, um die Aggregat-Performance zu steigern.
+
+In Unified Manager wird auf der Seite „Event Details“ der Name des Aggregats mit Konflikten angezeigt. Sie können mit ONTAP System Manager oder mit den ONTAP-Befehlen herausfinden, ob Flash Pool für ein Aggregat aktiviert ist. Wenn SSDs installiert sind, kann sie über die Befehlszeilenschnittstelle aktiviert werden. Wenn SSDs installiert sind, können Sie mit dem folgenden Befehl auf dem Aggregat feststellen, ob Flash Pool aktiviert ist: `*cluster::> storage aggregate show -aggregate aggr_name -field hybrid-enabled*`
+
+In diesem Befehl `_aggr_name_` Ist der Name des Aggregats, z. B. das Aggregat, das über Konflikte verfügt.
+
+Weitere Informationen zu Flash Pool und den jeweiligen Anforderungen finden Sie im _Clustered Data ONTAP Leitfaden zum Management von physischem Storage_.

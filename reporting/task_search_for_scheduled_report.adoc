@@ -1,0 +1,52 @@
+---
+permalink: reporting/task_search_for_scheduled_report.html 
+sidebar: sidebar 
+keywords: search, schedule, report 
+summary: Sie können nach geplanten Berichten nach Name, Ansichtsname, Objekttyp oder Empfänger suchen. 
+---
+= Suche nach einem geplanten Bericht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können nach geplanten Berichten nach Name, Ansichtsname, Objekttyp oder Empfänger suchen.
+
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Berichtspläne*.
+. Verwenden Sie das Textfeld *geplante Berichte suchen*.
++
+[cols="2*"]
+|===
+| Um Berichte von ... | Versuchen Sie ... 
+
+
+ a| 
+Name des Zeitplans
+ a| 
+Geben Sie einen Teil des Berichtszeitplans ein.
+
+
+
+ a| 
+Name anzeigen
+ a| 
+Geben Sie einen Teil des Namens für die Berichtsansicht ein. Standardansichten und benutzerdefinierte Ansichten werden in der Ansichtsliste angezeigt.
+
+
+
+ a| 
+Empfänger
+ a| 
+Geben Sie einen Teil der E-Mail-Adresse ein.
+
+
+
+ a| 
+Dateityp
+ a| 
+Geben Sie „PDF“, „CSV“ oder „XLSX“ ein.
+
+|===
+. Sie können auf eine Spaltenüberschrift klicken, um Berichte in aufsteigender oder absteigender Reihenfolge nach dieser Spalte zu sortieren, z. B. Name oder Format des Zeitplans.
+

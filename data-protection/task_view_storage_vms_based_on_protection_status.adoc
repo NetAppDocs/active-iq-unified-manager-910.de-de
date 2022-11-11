@@ -1,0 +1,63 @@
+---
+permalink: data-protection/task_view_storage_vms_based_on_protection_status.html 
+sidebar: sidebar 
+keywords: storage vm, view protection status 
+summary: Sie können auf der Seite Storage VMs im Inventar alle Storage VMs in Active IQ Unified Manager anzeigen und die Storage-VMs anhand ihres Sicherungsstatus filtern. 
+---
+= Anzeigen von Storage VMs basierend auf dem Sicherungsstatus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können auf der Seite Storage VMs im Inventar alle Storage VMs in Active IQ Unified Manager anzeigen und die Storage-VMs anhand ihres Sicherungsstatus filtern.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Eine neue Spalte Sicherungsrolle wird der Storage VMs-Ansicht hinzugefügt. Sie enthält Informationen darüber, ob die Storage-VM geschützt oder ungesichert ist.
+
+[NOTE]
+====
+Wenn ein Quell-Cluster nicht zu Active IQ Unified Manager hinzugefügt wird, sind alle Informationen zu diesem Cluster nicht in den Grids verfügbar.
+
+====
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *STORAGE* > *Storage VMs*.
+. Wählen Sie im Menü *ANSICHT* die Option *Systemzustand* > *Alle Storage VMs*.
++
+Der Status: Alle Speicher-VMs wird angezeigt.
+
+. Klicken Sie auf *Filter*, um eine der folgenden Speicher-VMs anzuzeigen.
++
+[cols="2*"]
+|===
+| Um sie anzuzeigen | Filterwert 
+
+
+ a| 
+* Geschützte Storage-VMs*
+ a| 
+*Schutzrolle* ist *geschützt*
+
+
+
+ a| 
+*Ungeschützte Storage VMs*
+ a| 
+*Schutzrolle* ist *ungeschützt*
+
+|===
++
+[NOTE]
+====
+Sie können die geschützten und nicht geschützten Storage VMs nicht gleichzeitig anzeigen. Sie müssen den vorhandenen Filter löschen, um eine neue Filteroption erneut anzuwenden.
+
+====
+. Klicken Sie Auf *Filter Anwenden*.
++
+In der nicht gespeicherten Ansicht werden alle Storage-VMs angezeigt, die entweder gesichert oder ungeschützt sind, basierend auf Ihrer Filterauswahl durch die Disaster Recovery der Storage-VM.
+
+

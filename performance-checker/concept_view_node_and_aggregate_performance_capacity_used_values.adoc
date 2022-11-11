@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_view_node_and_aggregate_performance_capacity_used_values.html 
+sidebar: sidebar 
+keywords: view, node, aggregate, performance, capacity, used, values 
+summary: Sie können die verwendeten Werte für die Performance-Kapazität für alle Nodes oder für alle Aggregate in einem Cluster überwachen oder Details für einen einzelnen Node oder Aggregat anzeigen. 
+---
+= Anzeigen der verwendeten Werte für die Node- und Aggregat-Performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die verwendeten Werte für die Performance-Kapazität für alle Nodes oder für alle Aggregate in einem Cluster überwachen oder Details für einen einzelnen Node oder Aggregat anzeigen.
+
+Die verwendeten Werte für die Performance-Kapazität werden auf der Seite Dashboard, auf den Seiten Performance Inventory, auf der Seite Top Performers, Create Threshold Policy, auf den Seiten Performance Explorer und in Detaildiagrammen angezeigt. Beispielsweise bietet die Seite Performance: Alle Aggregate eine Spalte. Die Performance-Kapazität wird verwendet, um den verwendeten Wert für die Performance-Kapazität aller Aggregate anzuzeigen.
+
+image::../media/node_inventory_used_headroom.gif[Node-Inventar genutzte Reserve]
+
+Durch das Monitoring des verwendeten Zählers für die Performance-Kapazität können Sie Folgendes identifizieren:
+
+* Unabhängig davon, ob Nodes oder Aggregate auf jedem Cluster einen hohen Wert an Performance-Kapazität aufweisen
+* Gibt an, ob Nodes oder Aggregate auf beliebigen Clustern über Ereignisse mit aktiver Performance-Kapazität verfügen
+* Die Nodes und Aggregate verfügen über die in einem Cluster genutzte Kapazität mit der höchsten und niedrigsten Performance
+* Zählerwerte im Bereich Latenz und Auslastung in Verbindung mit Nodes oder Aggregaten mit hohen Werten im Bereich der Performance-Kapazität
+* Auswirkungen auf die verwendete Performance-Kapazität für Nodes in einem HA-Paar auf einen Node, wenn einer der Nodes ausfällt
+* Die am stärksten ausgelasteten Volumes und LUNs auf einem Aggregat mit hoher Performance-Kapazität
+

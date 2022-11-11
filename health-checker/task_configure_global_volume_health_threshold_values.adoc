@@ -1,0 +1,37 @@
+---
+permalink: health-checker/task_configure_global_volume_health_threshold_values.html 
+sidebar: sidebar 
+keywords: configure, global, volume, health, threshold values 
+summary: Sie können die globalen Schwellenwerte für den Zustand für alle Volumes konfigurieren, um eine Schwellenverletzung zu verfolgen. Geeignete Ereignisse werden zum Erreichen von Gesundheitsschwellenwerten generiert und anhand dieser Ereignisse können vorbeugende Maßnahmen ergriffen werden. Sie können die globalen Werte basierend auf den Best-Practice-Einstellungen für Schwellenwerte konfigurieren, die für alle überwachten Volumes gelten. 
+---
+= Konfigurieren von globalen Schwellenwerten für den Zustand des Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die globalen Schwellenwerte für den Zustand für alle Volumes konfigurieren, um eine Schwellenverletzung zu verfolgen. Geeignete Ereignisse werden zum Erreichen von Gesundheitsschwellenwerten generiert und anhand dieser Ereignisse können vorbeugende Maßnahmen ergriffen werden. Sie können die globalen Werte basierend auf den Best-Practice-Einstellungen für Schwellenwerte konfigurieren, die für alle überwachten Volumes gelten.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Die meisten Schwellenwertoptionen verfügen über Standardwerte für eine bessere Überwachung. Sie können die Werte jedoch entsprechend den Anforderungen Ihrer Umgebung ändern.
+
+Beachten Sie, dass bei Aktivierung von Autogrow auf einem Volume die Kapazitätsschwellenwerte basierend auf der durch Autogrow festgelegten maximalen Volume-Größe gelten und nicht auf der ursprünglichen Volume-Größe basieren.
+
+[NOTE]
+====
+Der Standardwert von 1000 Snapshot Kopien ist nur für FlexVol Volumes anwendbar, wenn die ONTAP Version 9.4 oder höher ist, und auf FlexGroup Volumes, wenn ONTAP Version 9.8 und höher ist. Bei Clustern, die mit älteren Versionen der ONTAP Software installiert sind, beträgt die maximale Anzahl 250 Snapshot Kopien pro Volume. Bei diesen älteren Versionen interpretiert Unified Manager diese Nummer 1000 (und eine beliebige Zahl zwischen 1000 und 250) als 250. Das bedeutet, dass Sie weiterhin Ereignisse erhalten, wenn die Anzahl der Snapshot-Kopien 250 erreicht. Wenn Sie diesen Schwellenwert für diese älteren Versionen auf weniger als 250 setzen möchten, müssen Sie hier in der Ansicht Gesundheit: Alle Volumen oder auf der Seite Volume / Health Details den Schwellenwert auf 250 oder niedriger einstellen.
+
+====
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Ereignisschwellenwerte* > *Lautstärke*.
+. Konfigurieren Sie die entsprechenden Schwellenwerte für Kapazität, Snapshot-Kopien, qtree-Kontingente, Volume-Wachstum und Inodes.
+. Klicken Sie Auf *Speichern*.
+
+
+*Verwandte Informationen*
+
+link:../config/task_add_users.html["Benutzer hinzufügen"]

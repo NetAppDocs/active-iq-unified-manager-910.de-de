@@ -1,0 +1,32 @@
+---
+permalink: performance-checker/concept_what_expected_range_of_performance_is.html 
+sidebar: sidebar 
+keywords: expected, range, performance, latency, forecast, formed 
+summary: Die Latenzprognose stellt eine Vorhersage des Wert für die obere und untere Performance dar, die zu einem bestimmten Zeitpunkt erwartet werden. Bei der Workload-Latenz bilden die oberen Werte den Performance-Schwellenwert. Wenn der tatsächliche Wert den Performance-Schwellenwert überschreitet, löst Unified Manager ein dynamisches Performance-Ereignis aus. 
+---
+= Der erwartete Leistungsbereich
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Latenzprognose stellt eine Vorhersage des Wert für die obere und untere Performance dar, die zu einem bestimmten Zeitpunkt erwartet werden. Bei der Workload-Latenz bilden die oberen Werte den Performance-Schwellenwert. Wenn der tatsächliche Wert den Performance-Schwellenwert überschreitet, löst Unified Manager ein dynamisches Performance-Ereignis aus.
+
+Beispiel: Während der regulären Geschäftszeiten zwischen 9:00 Uhr Bis 5:00 Uhr checken die meisten Mitarbeiter ihre E-Mail-Adresse möglicherweise zwischen 9:00 Uhr ein Und 10:30 Uhr Der erhöhte Bedarf an E-Mail-Servern bedeutet eine Zunahme der Workload-Aktivitäten im Back-End Storage während dieser Zeit. Mitarbeiter können von ihren E-Mail-Clients langsame Reaktionszeiten feststellen.
+
+Während der Mittagspause zwischen 12:00 Uhr Und 13:00 Uhr Und am Ende des Arbeitstages nach 5:00 Uhr werden die meisten Mitarbeiter wahrscheinlich von ihren Computern weg. Der Bedarf an E-Mail-Servern sinkt in der Regel, wodurch auch der Bedarf an Back-End Storage sinkt. Alternativ können geplante Workload-Operationen wie Storage-Backups oder Virus-Scans nach 5:00 Uhr geplant werden Und erhöhen Sie die Aktivität im Back-End Storage.
+
+Über mehrere Tage bestimmt der Anstieg und die Abnahme der Workload-Aktivität den erwarteten Bereich (Latenzprognose) der Aktivität, wobei obere und untere Grenzen für einen Workload festgelegt sind. Wenn sich die tatsächlichen Workload-Aktivitäten für ein Objekt außerhalb der oberen oder unteren Grenzen befinden und für einen bestimmten Zeitraum außerhalb der Grenzen liegen, kann dies darauf hindeuten, dass das Objekt überlastet oder nicht ausgelastet ist.
+
+
+
+== Bildung der Latenzprognose
+
+Unified Manager muss die Workload-Aktivität mindestens 3 Tage lang sammeln, bevor sie mit der Analyse beginnen kann und bevor die Latenzprognose für die I/O-Reaktionszeit auf der GUI angezeigt werden kann. Die erforderliche Mindesterfassung berücksichtigt nicht alle Änderungen, die von der Workload-Aktivität durchgeführt werden. Nach Erfassung der ersten 3 Tage Aktivität passt Unified Manager die Latenzprognose alle 24 Stunden um 12:00 Uhr an Um Änderungen der Workload-Aktivität widerzuspiegeln und einen präziseren dynamischen Performance-Schwellenwert festzulegen.
+
+[NOTE]
+====
+Bei der Sommerzeit (Sommerzeit) wird die Systemzeit geändert, wodurch die Latenzprognose für Performance-Statistiken für überwachte Workloads verändert wird. Unified Manager beginnt sofort mit der Korrektur des Latenzvorhersage, das etwa 15 Tage dauert. Während dieser Zeit können Sie Unified Manager weiterhin verwenden. Da Unified Manager jedoch die Latenzprognose verwendet, um dynamische Ereignisse zu erkennen, sind einige Ereignisse möglicherweise nicht korrekt. Ereignisse, die vor der Zeitänderung erkannt wurden, werden nicht beeinträchtigt.
+
+====

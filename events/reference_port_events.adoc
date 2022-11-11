@@ -1,0 +1,128 @@
+---
+permalink: events/reference_port_events.html 
+sidebar: sidebar 
+keywords: port, events, impact area, availability, performance 
+summary: Port-Ereignisse bieten Ihnen den Status zu Cluster-Ports, sodass Sie Änderungen oder Probleme am Port überwachen können, z. B. ob der Port ausgefallen ist. 
+---
+= Port-Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Port-Ereignisse bieten Ihnen den Status zu Cluster-Ports, sodass Sie Änderungen oder Probleme am Port überwachen können, z. B. ob der Port ausgefallen ist.
+
+
+
+== Impact Area: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Port Status Down (ocumEvtPortStatusDown)
+ a| 
+Vorfall
+ a| 
+Knoten
+ a| 
+Kritisch
+
+|===
+
+
+== Impact Area: Performance
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Port MB/s kritischer Schwellenwert überschritten (ocumNetworkPortMbpsVorfall)
+ a| 
+Vorfall
+ a| 
+Port
+ a| 
+Kritisch
+
+
+
+ a| 
+Netzwerk-Port MB/s Warnschwellenwert nicht eingehalten (ocumNetworkPortMbpsWarnung)
+ a| 
+Dar
+ a| 
+Port
+ a| 
+Warnung
+
+
+
+ a| 
+MB/s kritischer Schwellenwert für FCP-Port überschritten (ocumFcpPortMbpsVorfall)
+ a| 
+Vorfall
+ a| 
+Port
+ a| 
+Kritisch
+
+
+
+ a| 
+MB/s-Warnschwellenwert für FCP-Port überschritten(ocumFcpPortMbpsWarnung)
+ a| 
+Dar
+ a| 
+Port
+ a| 
+Warnung
+
+
+
+ a| 
+Auslastung des Netzwerkports – kritischer Schwellenwert – unterlaufen (NetzwerkPortUtilizationVorfall)
+ a| 
+Vorfall
+ a| 
+Port
+ a| 
+Kritisch
+
+
+
+ a| 
+Warnung über Netzwerk-Port-Auslastung, nicht überschritten (OktumNetzwerkPortUtilizationWarnung)
+ a| 
+Dar
+ a| 
+Port
+ a| 
+Warnung
+
+
+
+ a| 
+Unterschreitender Schwellenwert für die FCP-Port-Auslastung (ocumFcpPortUtilizationVorfall)
+ a| 
+Vorfall
+ a| 
+Port
+ a| 
+Kritisch
+
+
+
+ a| 
+Warnung: Nicht gestauter Schwellenwert für die FCP-Port-Auslastung (ocumFcpPortUtilizationWarnung)
+ a| 
+Dar
+ a| 
+Port
+ a| 
+Warnung
+
+|===

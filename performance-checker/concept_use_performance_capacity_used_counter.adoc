@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_use_performance_capacity_used_counter.html 
+sidebar: sidebar 
+keywords: performance, capacity, counter, manage, performance 
+summary: In der Regel möchten Unternehmen mit einer Performance-Kapazität von unter 100 Prozent betreiben, um die Ressourcen effizient zu nutzen und gleichzeitig zusätzliche Performance-Kapazitäten zu reservieren, um Spitzenlasten zu erzielen. Anhand von Schwellenwertrichtlinien kann angepasst werden, wenn Warnmeldungen gesendet werden, um hohe Werte für die verwendete Kapazität zu erreichen. 
+---
+= Verwenden der Performance-Kapazität, die zum Managen der Performance verwendet wird
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In der Regel möchten Unternehmen mit einer Performance-Kapazität von unter 100 Prozent betreiben, um die Ressourcen effizient zu nutzen und gleichzeitig zusätzliche Performance-Kapazitäten zu reservieren, um Spitzenlasten zu erzielen. Anhand von Schwellenwertrichtlinien kann angepasst werden, wenn Warnmeldungen gesendet werden, um hohe Werte für die verwendete Kapazität zu erreichen.
+
+Sie können bestimmte Ziele basierend auf Ihren Performance-Anforderungen festlegen. So könnten Finanzdienstleister mehr Performance-Kapazität reservieren, um eine zeitnahe Ausführung von Transaktionen zu gewährleisten. Diese Unternehmen möchten möglicherweise Schwellenwerte für die verwendete Performance-Kapazität im Bereich von 70-80 Prozent festlegen. Produzierende Unternehmen mit geringeren Margen können sich für weniger Performance-Kapazität entscheiden, wenn sie bereit sind, Performance zu riskieren, um DIE IT-Kosten besser zu managen. Diese Unternehmen können Grenzwerte für die verwendete Performance-Kapazität im Bereich von 85-95 Prozent festlegen.
+
+Wenn der verwendete Wert für die Performance-Kapazität den in einer benutzerdefinierten Schwellenwertrichtlinie festgelegten Prozentsatz überschreitet, sendet Unified Manager eine Alarm-E-Mail und fügt das Ereignis zur Seite „Ereignisbestand“ hinzu. Auf diese Weise lassen sich potenzielle Probleme verwalten, bevor sie die Performance beeinträchtigen. Diese Ereignisse können auch als Indikatoren verwendet werden, an denen Sie Workloads und Änderungen innerhalb Ihrer Nodes und Aggregate vornehmen müssen.

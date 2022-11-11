@@ -1,0 +1,16 @@
+---
+permalink: config/concept_what_maintenance_user_does.html 
+sidebar: sidebar 
+keywords: what, maintenance, user does, installation, unified manager 
+summary: Der Wartungbenutzer wird während der Installation von Unified Manager auf einem Red hat Enterprise Linux oder CentOS System erstellt. Der Wartungs-Benutzername ist der Benutzer „umadmin“. Der Wartungsbenutzer hat die Rolle „Anwendungsadministrator“ in der Web-Benutzeroberfläche, und dieser Benutzer kann nachfolgende Benutzer erstellen und ihnen Rollen zuweisen. 
+---
+= Was der Wartungsbenutzer tut
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Wartungbenutzer wird während der Installation von Unified Manager auf einem Red hat Enterprise Linux oder CentOS System erstellt. Der Wartungs-Benutzername ist der Benutzer „`umadmin`“. Der Wartungsbenutzer hat die Rolle „Anwendungsadministrator“ in der Web-Benutzeroberfläche, und dieser Benutzer kann nachfolgende Benutzer erstellen und ihnen Rollen zuweisen.
+
+Der Wartungsbenutzer oder umadmin-Benutzer kann auch auf die Unified Manager Wartungskonsole zugreifen.

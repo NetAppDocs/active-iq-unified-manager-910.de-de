@@ -1,0 +1,75 @@
+---
+permalink: reporting/task_schedule_report.html 
+sidebar: sidebar 
+keywords: report, schedule 
+summary: Nachdem Sie über eine Ansicht oder eine Excel-Datei verfügen, die Sie für die regelmäßige Erstellung und Verteilung planen möchten, können Sie den Bericht planen. 
+---
+= Planen eines Berichts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie über eine Ansicht oder eine Excel-Datei verfügen, die Sie für die regelmäßige Erstellung und Verteilung planen möchten, können Sie den Bericht planen.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen die SMTP-Servereinstellungen auf der Seite *Allgemein* > *Benachrichtigungen* konfiguriert haben, damit die Reporting-Engine Berichte als E-Mail-Anhänge an die Empfängerliste des Unified Manager-Servers senden kann.
+* Der E-Mail-Server muss so konfiguriert sein, dass Anhänge mit den generierten E-Mails gesendet werden können.
+
+
+Führen Sie die folgenden Schritte aus, um einen Bericht für eine Ansicht zu testen und zu planen. Wählen Sie die gewünschte Ansicht aus oder passen Sie sie an. Im folgenden Verfahren wird eine Netzwerkansicht verwendet, die die Leistung Ihrer Netzwerkschnittstellen zeigt, aber Sie können jede beliebige Ansicht verwenden.
+
+.Schritte
+. Öffnen Sie Ihre Ansicht. Dieses Beispiel verwendet die Standardansicht, die die LIF-Performance zeigt. Klicken Sie im linken Navigationsbereich auf**Netzwerk** > *Netzwerkschnittstellen*.
+. Die Ansicht wird mithilfe der integrierten Unified Manager Funktionen nach Bedarf angepasst.
+. Nachdem Sie die Ansicht angepasst haben, können Sie im Feld *Ansicht* einen eindeutigen Namen angeben und auf das Häkchen klicken, um sie zu speichern.
++
+image::../media/view_save.gif[Anzeige speichern]
+
+. Sie können die erweiterten Funktionen von Microsoft® Excel verwenden, um Ihren Bericht anzupassen. Weitere Informationen finden Sie unter link:task_use_excel_to_customize_your_report.html["Verwenden von Excel zum Anpassen des Berichts"].
+. So sehen Sie die Ausgabe, bevor Sie sie planen oder teilen:
++
+[cols="2*"]
+|===
+| Option | Beschreibung 
+
+
+ a| 
+*Wenn Sie Excel zum Anpassen des Berichts verwendet haben*
+ a| 
+Zeigen Sie die vorhandene heruntergeladene Excel-Datei an.
+
+
+
+ a| 
+*Wenn Sie Excel nicht zum Anpassen des Berichts verwendet haben*
+ a| 
+Laden Sie den Bericht als *CSV*-, *PDF*- oder *XLSX*-Datei herunter.
+
+|===
++
+Öffnen Sie die Datei mit einer installierten Anwendung, z. B. Microsoft Excel (CSV/XSLX) oder Adobe Acrobat (PDF).
+
+. Wenn Sie mit dem Bericht zufrieden sind, klicken Sie auf *geplante Berichte*.
+. Klicken Sie auf der Seite Berichtspläne auf *Zeitplan hinzufügen*.
+. Akzeptieren Sie den Standardnamen, der eine Kombination aus dem Ansichtsnamen und der Frequenz ist, oder passen Sie den *Terminplannamen* an.
+. Um den geplanten Bericht zum ersten Mal zu testen, fügen Sie sich nur als *Empfänger* hinzu. Wenn Sie zufrieden sind, fügen Sie die E-Mail-Adressen für alle Berichtsempfänger hinzu.
+. Geben Sie an, wie oft der Bericht erstellt und an die Empfänger gesendet wird. Sie können *Daily*, *Weekly* oder *Monthly* wählen.
+. Wählen Sie das Format aus, entweder *PDF*, *CSV* oder *XSLX*.
++
+[NOTE]
+====
+Wählen Sie für Berichte, in denen Sie Excel zum Anpassen des Inhalts verwendet haben, immer *XSLX* aus.
+
+====
+. Klicken Sie auf das Häkchen (image:../media/blue_check.gif[""]) Um den Berichtsplan zu speichern.
++
+image::../media/scheduled_reports.gif[Geplante Berichte]
+
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht unter Verwendung der geplanten Häufigkeit generiert und per E-Mail an die Empfänger gesendet.
+
+

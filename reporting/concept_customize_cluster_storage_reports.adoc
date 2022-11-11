@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_cluster_storage_reports.html 
+sidebar: sidebar 
+keywords: customize, cluster, storage, reports 
+summary: Die Beispiel-Berichte für Cluster-Storage in diesem Abschnitt sind nur Beispiele für das Verständnis, wie Berichte zur Cluster-Kapazität erstellt werden können, die Ihnen helfen, die Storage-Systemressourcen zu überwachen. 
+---
+= Anpassen von Berichten zu Cluster-Storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Beispiel-Berichte für Cluster-Storage in diesem Abschnitt sind nur Beispiele für das Verständnis, wie Berichte zur Cluster-Kapazität erstellt werden können, die Ihnen helfen, die Storage-Systemressourcen zu überwachen.

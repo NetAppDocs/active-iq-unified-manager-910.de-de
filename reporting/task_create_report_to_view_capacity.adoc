@@ -1,0 +1,96 @@
+---
+permalink: reporting/task_create_report_to_view_capacity.html 
+sidebar: sidebar 
+keywords: create, report, show, aggregate, capacity, table, chart 
+summary: Sie können einen Bericht erstellen, um die Kapazität in einer Excel-Datei zu analysieren, indem Sie die summierten Summen und das Format der Cluster-Spaltendiagramme verwenden. 
+---
+= Erstellen eines Berichts zur Anzeige einer aggregierten Kapazitätstabelle und eines Diagramms
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um die Kapazität in einer Excel-Datei zu analysieren, indem Sie die summierten Summen und das Format der Cluster-Spaltendiagramme verwenden.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Gehen Sie wie folgt vor, um eine Integritätsansicht zu öffnen: Alle Aggregate, laden Sie die Ansicht in Excel herunter, erstellen Sie ein verfügbares Kapazitätdiagramm, laden Sie die angepasste Excel-Datei hoch und planen Sie den Abschlussbericht.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Aggregate*.
+. Wählen Sie *Berichte* > *Excel Herunterladen*.
++
+image::../media/download_excel_menu.png[Excel-Menü herunterladen]
+
++
+Je nach Browser müssen Sie möglicherweise auf *OK* klicken, um die Datei zu speichern.
+
+. Klicken Sie bei Bedarf auf *Bearbeiten aktivieren*.
+. Öffnen Sie in Excel die heruntergeladene Datei.
+. Erstellen Sie ein neues Blatt (image:../media/excel_new_sheet_icon.png[""]) Nach dem `data` Tabelle und Name: *Gesamtkapazität der Daten*.
+. Fügen Sie auf der neuen Seite „Gesamtkapazität Daten“ die folgenden Spalten hinzu:
++
+.. Datenkapazität (GB) insgesamt
+.. Engagierte Kapazität (GB)
+.. Genutzte Datenkapazität (GB)
+.. Verfügbare Datenkapazität (GB)
+
+
+. Geben Sie in der ersten Zeile jeder Spalte die folgende Formel ein, achten Sie darauf, dass sie auf das Datenblatt (Daten!) verweist und die korrekten Spalten- und Zeilenangaben für die erfassten Daten referenziert (die Gesamtkapazität der Daten zieht Daten aus Spalte E, Zeilen 2 bis 20).
++
+.. =SUM(Daten!E-Dollar 2:Daten!E-20 USD)
+.. =SUM(Data!F €2:Data!F €50)
+.. =SUM(Data!G 2:Data!G 50 USD)
+.. =SUM(Daten!H 2 USD:Daten!H 50 USD)
+
+
++
+Die Formel summensiert jede Spalte basierend auf den aktuellen Daten.
+
+
+
+image::../media/capacitysums.png[Kapazitätsbeträge]
+
+. Wählen Sie auf dem Datenblatt die Spalten *Gesamtkapazität (GB)* und *Kapazität (GB)* aus.
+. Wählen Sie im Menü * Einfügen* * * * * die Option *geclusterte Spalte* aus.
+. Klicken Sie mit der rechten Maustaste auf das Diagramm, und wählen Sie *Diagramm verschieben*, um das Diagramm in das zu verschieben `Total Data Capacity` Tabelle:
+. Mit den Menüs *Design* und *Format*, die bei der Auswahl des Diagramms zur Verfügung stehen, können Sie die Darstellung des Diagramms anpassen.
+. Wenn Sie zufrieden sind, speichern Sie die Datei mit Ihren Änderungen. Ändern Sie nicht den Dateinamen oder den Speicherort.
++
+image::../media/cluster_column_chart_2.png[Cluster-Spaltendiagramm 2]
+
+. Wählen Sie in Unified Manager die Option *Berichte* > *Excel hochladen* aus.
++
+[NOTE]
+====
+Stellen Sie sicher, dass Sie sich in der gleichen Ansicht befinden, in der Sie die Excel-Datei heruntergeladen haben.
+
+====
+. Wählen Sie die Excel-Datei aus, die Sie geändert haben.
+. Klicken Sie Auf *Offen*.
+. Klicken Sie Auf *Absenden*.
++
+Neben dem Menüpunkt *Berichte* > *Excel hochladen* wird ein Häkchen angezeigt.
+
++
+image::../media/upload_excel.png[Laden Sie Excel hoch]
+
+. Klicken Sie Auf *Geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite Berichtspläne eine neue Zeile hinzuzufügen, damit Sie die Terminplaneigenschaften für den neuen Bericht definieren können.
++
+[NOTE]
+====
+Wählen Sie das Format *XLSX* für den Bericht aus.
+
+====
+. Geben Sie einen Namen für den Berichtsplan ein, und füllen Sie die anderen Berichtsfelder aus, und klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""]Am Ende der Reihe.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und per E-Mail an die Empfänger gesendet, die unter der angegebenen Häufigkeit aufgeführt sind.
+
+
+
+Auf der Grundlage der im Bericht gezeigten Ergebnisse sollten Sie möglicherweise untersuchen, wie Sie die verfügbare Kapazität in Ihrem Netzwerk am besten nutzen können.

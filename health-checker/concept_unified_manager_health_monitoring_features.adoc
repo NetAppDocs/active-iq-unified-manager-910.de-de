@@ -1,0 +1,51 @@
+---
+permalink: health-checker/concept_unified_manager_health_monitoring_features.html 
+sidebar: sidebar 
+keywords: unified manager, health, monitor, features 
+summary: Unified Manager basiert auf einer Serverinfrastruktur, die Skalierbarkeit, Unterstützbarkeit sowie verbesserte Monitoring- und Benachrichtigungsfunktionen bietet. Unified Manager unterstützt das Monitoring von Systemen mit ONTAP Software. 
+---
+= Unified Manager Funktionen für das Monitoring des Systemzustands
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager basiert auf einer Serverinfrastruktur, die Skalierbarkeit, Unterstützbarkeit sowie verbesserte Monitoring- und Benachrichtigungsfunktionen bietet. Unified Manager unterstützt das Monitoring von Systemen mit ONTAP Software.
+
+Unified Manager umfasst die folgenden Funktionen:
+
+* Bestandsaufnahme, Monitoring und Benachrichtigungen für Systeme, die mit der ONTAP Software installiert sind:
++
+** Physische Objekte: Nodes, Festplatten, Festplatten-Shelfs, SFO-Paare, Ports, Und Flash Cache
+** Logische Objekte: Cluster, Storage Virtual Machines (SVMs), Aggregate, Volumes, LUNs, Namespaces Qtrees, LIFs, Snapshot Kopien, Verbindungspfade, NFS-Freigaben SMB-Freigaben, Benutzer- und Gruppenkontingente, QoS-Richtliniengruppen und Initiatorgruppen
+** Protokolle: CIFS, NFS, FC, iSCSI, NVMe, Und FCoE
+** Storage-Effizienz: SSD-Aggregate, Flash Pool-Aggregate, FabricPool-Aggregate, Deduplizierung und Komprimierung
+** Sicherung: SnapMirror Beziehungen (synchron und asynchron) sowie SnapVault Beziehungen
+
+
+* Anzeigen des Cluster-Erkennungs- und Überwachungsstatus
+* MetroCluster Konfiguration: Anzeigen und Überwachen der Konfiguration, MetroCluster Switches und Bridges, Probleme und des Konnektivitätsstatus der Cluster-Komponenten
+* Erweiterte Alarmfunktionen, Ereignisse und Schwellenwertsinfrastruktur
+* LDAP, LDAPS, SAML-Authentifizierung und Unterstützung lokaler Benutzer
+* RBAC (für vordefinierte Rollen)
+* AutoSupport und Support-Bundle
+* Erweitertes Dashboard zur Anzeige des Kapazitäts-, Verfügbarkeits-, Sicherungs- und Performance-Zustands der Umgebung
+* Interoperabilität bei Volume-Verschiebung, Verlauf der Volume-Verschiebung und Änderungsverlauf für Verbindungspfade
+* Bereich „Auswirkungen“, in dem die Ressourcen angezeigt werden, die für Ereignisse wie fehlerhafte Festplatten, heruntergestuften MetroCluster Aggregatspiegelung und MetroCluster-Ersatzfestplatten, die bei Ereignissen noch nicht vorhanden sind, betroffen sind
+* Möglicher Effektbereich, der die Wirkung der MetroCluster-Ereignisse anzeigt
+* Bereich „Empfohlene Korrekturmaßnahmen“, in dem die Aktionen angezeigt werden, die zur Behebung von Ereignissen durchgeführt werden können, z. B. fehlerhafte Festplatten, eingeschränkte MetroCluster Aggregatspiegelung und nicht mehr vorhandene MetroCluster-Ersatzfestplatten
+* Ressourcen, die möglicherweise betroffen sein könnten, zeigen die Ressourcen an, die für Ereignisse wie das Offline-Ereignis von Volume, das Ereignis Volume Restricted und den risikobehaftete Volume-Speicherplatz auf einem Volume mit Thin Provisioning verfügbar sein könnten
+* Unterstützung von SVMs mit FlexVol oder FlexGroup Volumes
+* Unterstützung für das Monitoring von Root-Volumes der Nodes
+* Verbessertes Monitoring von Snapshot Kopien, einschließlich Computing von zurückforderbarem Speicherplatz und Löschen von Snapshot Kopien
+* Anmerkungen für Speicherobjekte
+* Berichte für die Erstellung und das Management von Storage-Objektinformationen wie physische und logische Kapazität, Auslastung, Platzeinsparungen, Performance und zugehörige Ereignisse
+* Integration in OnCommand Workflow Automation zur Ausführung von Workflows
++
+Der Storage Automation Store enthält von NetApp zertifizierte automatisierte Workflow-Pakete für die Verwendung mit OnCommand Workflow Automation (WFA). Sie können die Pakete herunterladen und anschließend in WFA importieren, um sie auszuführen. Hier sind die automatisierten Workflows verfügbar:
+
++
+https://automationstore.netapp.com["Storage Automation Store"]
+
+

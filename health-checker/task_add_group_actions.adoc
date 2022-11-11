@@ -1,0 +1,31 @@
+---
+permalink: health-checker/task_add_group_actions.html 
+sidebar: sidebar 
+keywords: add, group, actions 
+summary: Sie können Gruppenaktionen konfigurieren, die Sie auf Speicherobjekte in einer Gruppe anwenden möchten. Durch das Konfigurieren von Aktionen für eine Gruppe sparen Sie Zeit, da Sie diese Aktionen nicht einzeln zu jedem Objekt hinzufügen müssen. 
+---
+= Gruppenaktionen werden hinzugefügt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Gruppenaktionen konfigurieren, die Sie auf Speicherobjekte in einer Gruppe anwenden möchten. Durch das Konfigurieren von Aktionen für eine Gruppe sparen Sie Zeit, da Sie diese Aktionen nicht einzeln zu jedem Objekt hinzufügen müssen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Gruppen*.
+. Klicken Sie auf der Registerkarte *Gruppenaktionen* auf *Hinzufügen*.
+. Geben Sie im Dialogfeld * Gruppenaktion* einen Namen und eine Beschreibung für die Aktion ein.
+. Wählen Sie im Menü *Gruppe* eine Gruppe aus, für die Sie die Aktion konfigurieren möchten.
+. Wählen Sie im Menü *Aktionstyp* einen Aktionstyp aus.
++
+Das Dialogfeld wird erweitert, sodass Sie den ausgewählten Aktionstyp mit den erforderlichen Parametern konfigurieren können.
+
+. Geben Sie die erforderlichen Werte für die erforderlichen Parameter ein, um eine Gruppenaktion zu konfigurieren.
+. Klicken Sie Auf *Hinzufügen*.
+

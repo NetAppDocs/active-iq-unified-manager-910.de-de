@@ -1,0 +1,48 @@
+---
+permalink: health-checker/task_determine_if_volume_offline_condition_is_by_down_cluster_node.html 
+sidebar: sidebar 
+keywords: determine, volume, offline, host, node 
+summary: Mit der Unified Manager Web-UI lässt sich die Möglichkeit bestätigen oder ganz ausschließen, dass ein Volume offline ist, da der Host-Node ausfällt und das Storage Failover auf seinen HA-Paar-Partner nicht erfolgreich ist. 
+---
+= Ermitteln, ob ein Volume offline ist, da sein Host-Node ausfällt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der Unified Manager Web-UI lässt sich die Möglichkeit bestätigen oder ganz ausschließen, dass ein Volume offline ist, da der Host-Node ausfällt und das Storage Failover auf seinen HA-Paar-Partner nicht erfolgreich ist.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+
+Um zu ermitteln, ob der Offlinezustand des Volumes durch einen Ausfall des Hosting-Node und eines nachfolgenden nicht erfolgreichen Storage-Failovers verursacht wird, führen Sie folgende Aktionen durch:
+
+.Schritte
+. Suchen und klicken Sie auf den Hypertext-Link, der unter SVM im Bereich *Related Devices* des Offline-Volume der Seite *Volume / Health* Details angezeigt wird.
++
+Auf der Seite Storage VM / Health Details werden Informationen zur SVM (Hosting Storage Virtual Machine) des Offline-Volumes angezeigt.
+
+. Suchen Sie im Bereich *Related Devices* der Seite *Storage VM / Health* Details den Hypertext-Link, der unter Volumes angezeigt wird, und klicken Sie auf diesen.
++
+In der Ansicht Systemzustand: Alle Volumes wird eine Tabelle mit Informationen zu allen Volumes angezeigt, die von der SVM gehostet werden.
+
+. Klicken Sie in der Spaltenüberschrift *Health: All Volumes* view State auf das Filtersymbol image:../media/filtericon_um60.png["Symbol für Spaltenfilter"], Und wählen Sie dann die Option *Offline*.
++
+Es werden nur die SVM-Volumes im Offline-Zustand aufgeführt.
+
+. Klicken Sie in der Ansicht Systemzustand: Alle Volumes auf das Raster-Symbol image:../media/gridviewicon.gif["Symbol für die Rasteransicht"], Und wählen Sie dann die Option *Cluster-Knoten*.
++
+Möglicherweise müssen Sie im Auswahlfeld Raster blättern, um die Option *Cluster Nodes* zu finden.
+
++
+Die Spalte Cluster Nodes wird dem Bestand der Volumes hinzugefügt und zeigt den Namen des Node an, der jedes Offline Volume hostet.
+
+. Suchen Sie in der Ansicht *Health: All Volumes* die Liste für das Offline-Volume und klicken Sie in der Spalte Cluster Node auf den Namen seines Hostknoten.
++
+Auf der Registerkarte Nodes auf der Seite Cluster / Health Details wird der Status des HA-Paar von Nodes angezeigt, zu dem der Hosting-Node gehört. Der Status des Hosting-Node und der Erfolg eines Cluster-Failover-Vorgangs wird in der Anzeige angezeigt.
+
+
+
+Nachdem Sie bestätigt haben, dass der Offline-Zustand des Volume vorliegt, weil sein Host-Node ausgefallen ist und das Storage Failover zum HA-Paar-Partner fehlgeschlagen ist, wenden Sie sich an den entsprechenden Administrator oder Operator, um den heruntergeschilterten Node manuell neu zu starten und das Storage-Failover-Problem zu beheben.

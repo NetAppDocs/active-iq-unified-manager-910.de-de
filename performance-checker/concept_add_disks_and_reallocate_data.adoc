@@ -1,0 +1,34 @@
+---
+permalink: performance-checker/concept_add_disks_and_reallocate_data.html 
+sidebar: sidebar 
+keywords: add, disks, reallocate, data 
+summary: Sie können einem Aggregat Festplatten hinzufügen, um die Storage-Kapazität und Performance dieses Aggregats zu erhöhen. Nach dem Hinzufügen von Festplatten wird die Lese-Performance nur verbessert, wenn die Daten über die hinzugefügten Festplatten verteilt werden. 
+---
+= Fügen Sie Festplatten hinzu und weisen Sie Daten erneut zu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einem Aggregat Festplatten hinzufügen, um die Storage-Kapazität und Performance dieses Aggregats zu erhöhen. Nach dem Hinzufügen von Festplatten wird die Lese-Performance nur verbessert, wenn die Daten über die hinzugefügten Festplatten verteilt werden.
+
+Sie können diese Anweisungen verwenden, wenn Unified Manager aggregierte Ereignisse erhalten hat, die durch dynamische Schwellenwerte oder durch vom System definierte Performance-Schwellenwerte ausgelöst wurden:
+
+* Wenn Sie ein dynamisches Schwellenwertereignis erhalten haben, wird auf der Seite „Ereignisdetails“ das Symbol für die Clusterkomponente, das das „Aggregat mit Konflikten“ darstellt, rot hervorgehoben.
++
+Unter dem Symbol in Klammern steht der Name des Aggregats, das das Aggregat identifiziert, zu dem Sie Festplatten hinzufügen können.
+
+* Wenn Sie ein systemdefiniertes Schwellenwertereignis erhalten haben, wird auf der Seite Ereignisdetails der Text für die Ereignisbeschreibung den Namen des Aggregats mit dem Problem aufgeführt.
++
+Sie können Platten hinzufügen und Daten zu diesem Aggregat neu zuweisen.
+
+
+
+Die Festplatten, die Sie dem Aggregat hinzufügen, müssen bereits im Cluster vorhanden sein. Wenn auf dem Cluster keine zusätzlichen Festplatten verfügbar sind, müssen Sie sich möglicherweise an den Administrator wenden oder weitere Festplatten erwerben. Mit ONTAP System Manager oder den ONTAP-Befehlen können Sie einem Aggregat Festplatten hinzufügen.
+
+[NOTE]
+====
+Sie sollten Daten nur bei Nutzung von HDD- und Flash Pool-Aggregaten neu zuweisen. Weisen Sie Daten nicht auf SSD- oder FabricPool-Aggregaten neu zu.
+
+====

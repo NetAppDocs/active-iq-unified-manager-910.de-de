@@ -1,0 +1,66 @@
+---
+permalink: health-checker/task_access_maintenance_console.html 
+sidebar: sidebar 
+keywords: access, maintenance, console 
+summary: Wenn die Benutzeroberfläche von Unified Manager nicht ausgeführt wird oder Sie Funktionen ausführen müssen, die in der Benutzeroberfläche nicht verfügbar sind, können Sie auf die Wartungskonsole zugreifen, um Ihr Unified Manager System zu verwalten. 
+---
+= Zugriff auf die Wartungskonsole
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn die Benutzeroberfläche von Unified Manager nicht ausgeführt wird oder Sie Funktionen ausführen müssen, die in der Benutzeroberfläche nicht verfügbar sind, können Sie auf die Wartungskonsole zugreifen, um Ihr Unified Manager System zu verwalten.
+
+*Was Sie brauchen*
+
+Sie müssen Unified Manager installiert und konfiguriert haben.
+
+Nach 15 Minuten Inaktivität meldet die Wartungskonsole sie aus.
+
+[NOTE]
+====
+Wenn Sie auf VMware installiert sind und sich bereits über die VMware-Konsole als Wartungsbenutzer angemeldet haben, können Sie sich nicht gleichzeitig mit Secure Shell anmelden.
+
+====
+.Schritt
+. Führen Sie die folgenden Schritte aus, um auf die Wartungskonsole zuzugreifen:
++
+[cols="2*"]
+|===
+| Auf diesem Betriebssystem... | Führen Sie die folgenden Schritte aus... 
+
+
+ a| 
+VMware
+ a| 
+.. Stellen Sie mithilfe von Secure Shell eine Verbindung mit der IP-Adresse oder dem vollständig qualifizierten Domänennamen der virtuellen Unified Manager-Appliance her.
+.. Melden Sie sich mit Ihrem Wartungs-Benutzernamen und -Passwort an der Wartungskonsole an.
+
+
+
+
+ a| 
+Linux
+ a| 
+.. Stellen Sie mithilfe von Secure Shell eine Verbindung mit der IP-Adresse oder dem vollständig qualifizierten Domänennamen des Unified Manager-Systems her.
+.. Melden Sie sich beim System mit dem Wartungs-Benutzer (umadmin) und dem Passwort an.
+.. Geben Sie den Befehl ein `maintenance_console` Und drücken Sie die Eingabetaste.
+
+
+
+
+ a| 
+Windows
+ a| 
+.. Melden Sie sich mit den Administratoranmeldeinformationen beim Unified Manager-System an.
+.. Starten Sie PowerShell als Windows-Administrator.
+.. Geben Sie den Befehl ein `maintenance_console` Und drücken Sie die Eingabetaste.
+
+
+|===
++
+Das Menü der Unified Manager-Wartungskonsole wird angezeigt.
+
+

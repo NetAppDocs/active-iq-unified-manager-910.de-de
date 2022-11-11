@@ -1,0 +1,24 @@
+---
+permalink: config/task_configure_audit_logs.html 
+sidebar: sidebar 
+keywords: configure, audit logs 
+summary: Mit der Schaltfläche Konfigurieren im Bereich „Audit Logs“ können Sie die rollende Richtlinie für Audit-Log-Dateien konfigurieren und die Remote-Protokollierung für die Audit-Protokolle aktivieren. 
+---
+= Audit-Protokolle werden konfiguriert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Schaltfläche *Konfigurieren* im Bereich Audit Logs verwenden, um die Rolling Policy für Audit Log-Dateien zu konfigurieren und auch die Remote-Protokollierung für die Audit-Protokolle zu aktivieren.
+
+Sie können die Werte in den AUFBEWAHRUNGSTAGEN *MAX-DATEIGRÖSSE* und *AUDIT-LOGBUCH* entsprechend der gewünschten Menge und Häufigkeit der Daten festlegen, die Sie im System speichern möchten. Der Wert im Feld *GESAMTE LOGGRÖSSE DES AUDITS* ist die Größe der gesamten Audit-Log-Daten im System. Die Roll-Over-Richtlinie wird durch die Werte im Feld *AUDIT LOG RETENTION DAYS*, *MAX FILE SIZE* und *TOTAL AUDIT LOG SIZE* bestimmt. Wenn die Größe des Backups des Revisionsprotokolls den in *GESAMT-AUDIT-LOG-GRÖSSE* konfigurierten Wert erreicht, wird die zuerst archivierte Datei gelöscht. Das bedeutet, dass die älteste Datei gelöscht wird. Der Dateieintrag ist jedoch weiterhin in der Datenbank verfügbar und wird als „`Rollover Delete`“ markiert. Der *AUDIT LOG RETENTION DAYS*-Wert gilt für die Anzahl der Tage, an denen die Audit Log-Dateien aufbewahrt werden. Jede Datei, die älter als der in diesem Feld eingestellte Wert ist, wird über gerollt.
+
+.Schritte
+. Klicken Sie Auf *Prüfprotokolle* > *Konfigurieren*.
+. Geben Sie die Werte in den * MAX-DATEIGRÖSSEN*, *GESAMT-AUDIT-LOG-GRÖSSE* und *AUDIT-LOG-AUFBEWAHRUNGSTAGE* ein.
++
+Wenn Sie die Fernprotokollierung aktivieren möchten, wählen Sie die Option *Remote Logging aktivieren*.
+
+

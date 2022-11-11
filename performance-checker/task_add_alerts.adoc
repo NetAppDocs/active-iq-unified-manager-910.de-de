@@ -1,0 +1,88 @@
+---
+permalink: performance-checker/task_add_alerts.html 
+sidebar: sidebar 
+keywords: add, alerts 
+summary: Sie können Benachrichtigungen konfigurieren, um Sie über die Erzeugung eines bestimmten Ereignisses zu benachrichtigen. Sie können Meldungen für eine einzelne Ressource, für eine Gruppe von Ressourcen oder für Ereignisse mit einem bestimmten Schweregrad konfigurieren. Sie können die Häufigkeit angeben, mit der Sie benachrichtigt werden möchten, und ein Skript der Warnmeldung zuordnen. 
+---
+= Hinzufügen von Meldungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Benachrichtigungen konfigurieren, um Sie über die Erzeugung eines bestimmten Ereignisses zu benachrichtigen. Sie können Meldungen für eine einzelne Ressource, für eine Gruppe von Ressourcen oder für Ereignisse mit einem bestimmten Schweregrad konfigurieren. Sie können die Häufigkeit angeben, mit der Sie benachrichtigt werden möchten, und ein Skript der Warnmeldung zuordnen.
+
+*Was Sie brauchen*
+
+* Sie müssen Benachrichtigungseinstellungen wie die Benutzer-E-Mail-Adresse, den SMTP-Server und den SNMP-Trap-Host konfiguriert haben, damit der Active IQ Unified Manager-Server diese Einstellungen verwenden kann, um Benachrichtigungen an Benutzer zu senden, wenn ein Ereignis generiert wird.
+* Sie müssen die Ressourcen und Ereignisse kennen, für die Sie die Meldung auslösen möchten, sowie die Benutzernamen oder E-Mail-Adressen der Benutzer, die Sie benachrichtigen möchten.
+* Wenn Sie ein Skript auf der Grundlage des Ereignisses ausführen möchten, müssen Sie das Skript mithilfe der Seite „Skripte“ zu Unified Manager hinzugefügt haben.
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Sie können eine Warnmeldung direkt auf der Seite Ereignisdetails erstellen, nachdem Sie ein Ereignis empfangen haben. Zusätzlich können Sie eine Warnung auf der Seite „Alarmkonfiguration“ erstellen, wie hier beschrieben.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage-Management* > *Alarm-Setup*.
+. Klicken Sie auf der Seite *Alarm-Setup* auf *Hinzufügen*.
+. Klicken Sie im Dialogfeld *Alarm hinzufügen* auf *Name* und geben Sie einen Namen und eine Beschreibung für den Alarm ein.
+. Klicken Sie auf *Ressourcen*, und wählen Sie die Ressourcen aus, die in die Warnung aufgenommen oder von ihr ausgeschlossen werden sollen.
++
+Sie können einen Filter festlegen, indem Sie im Feld *Name enthält* eine Textzeichenfolge angeben, um eine Gruppe von Ressourcen auszuwählen. Die Liste der verfügbaren Ressourcen zeigt auf der Grundlage der angegebenen Textzeichenfolge nur die Ressourcen an, die der Filterregel entsprechen. Die von Ihnen angegebene Textzeichenfolge ist die Groß-/Kleinschreibung.
+
++
+Wenn eine Ressource sowohl den von Ihnen angegebenen Einschl- als auch Ausschlussregeln entspricht, hat die Ausschlussregel Vorrang vor der Einschließregel, und die Warnung wird nicht für Ereignisse generiert, die sich auf die ausgeschlossene Ressource beziehen.
+
+. Klicken Sie auf *Events* und wählen Sie die Ereignisse basierend auf dem Ereignisnamen oder dem Schweregrad aus, für den Sie eine Warnung auslösen möchten.
++
+[TIP]
+====
+Um mehrere Ereignisse auszuwählen, drücken Sie die Strg-Taste, während Sie Ihre Auswahl treffen.
+
+====
+. Klicken Sie auf *Actions*, und wählen Sie die Benutzer aus, die Sie benachrichtigen möchten, wählen Sie die Benachrichtigungshäufigkeit aus, wählen Sie aus, ob ein SNMP-Trap an den Trap-Empfänger gesendet wird, und weisen Sie ein Skript zu, das ausgeführt werden soll, wenn eine Warnung erzeugt wird.
++
+[NOTE]
+====
+Wenn Sie die für den Benutzer angegebene E-Mail-Adresse ändern und die Warnmeldung zur Bearbeitung erneut öffnen, erscheint das Feld Name leer, da die geänderte E-Mail-Adresse dem zuvor ausgewählten Benutzer nicht mehr zugeordnet ist. Wenn Sie die E-Mail-Adresse des ausgewählten Benutzers auf der Seite Benutzer geändert haben, wird die geänderte E-Mail-Adresse für den ausgewählten Benutzer nicht aktualisiert.
+
+====
++
+Sie können auch Benutzer über SNMP-Traps benachrichtigen.
+
+. Klicken Sie Auf *Speichern*.
+
+
+
+
+== Beispiel für das Hinzufügen einer Meldung
+
+Dieses Beispiel zeigt, wie eine Warnung erstellt wird, die die folgenden Anforderungen erfüllt:
+
+* Alarmname: HealthTest
+* Ressourcen: Enthält alle Volumes, deren Name „`abc`“ enthält und schließt alle Volumes aus, deren Name „`xyz`“ enthält
+* Ereignisse: Umfasst alle kritischen Systemzustandsereignisse
+* Aktionen: Enthält „+sample@domain.com+“, ein Skript „`Test`“ und der Benutzer muss alle 15 Minuten benachrichtigt werden
+
+
+Führen Sie im Dialogfeld Alarm hinzufügen die folgenden Schritte aus:
+
+. Klicken Sie auf *Name* und geben Sie ein `*HealthTest*` Im Feld *Alarmname*.
+. Klicken Sie auf *Ressourcen*, und wählen Sie in der Einschließen-Registerkarte *Volumes* aus der Dropdown-Liste aus.
++
+.. Eingabe `*abc*` Im Feld *Name enthält* werden die Volumes angezeigt, deren Name „`abc`“ enthält.
+.. Wählen Sie << *Alle Volumes, deren Name 'abc'*>> im Bereich Verfügbare Ressourcen enthält, und verschieben Sie sie in den Bereich Ausgewählte Ressourcen.
+.. Klicken Sie auf *Ausschließe*, und geben Sie ein `*xyz*` Klicken Sie im Feld *Name enthält* auf *Hinzufügen*.
+
+
+. Klicken Sie auf *Events* und wählen Sie im Feld Ereignis Severity * die Option *kritisch* aus.
+. Wählen Sie im Bereich passende Ereignisse die Option * Alle kritischen Ereignisse* aus, und verschieben Sie sie in den Bereich Ausgewählte Ereignisse.
+. Klicken Sie auf *Aktionen* und geben Sie ein `*sample@domain.com*` Im Feld „Diese Benutzer benachrichtigen“.
+. Wählen Sie *alle 15 Minuten*, um den Benutzer alle 15 Minuten zu benachrichtigen.
++
+Sie können eine Warnung konfigurieren, um wiederholt Benachrichtigungen an die Empfänger für eine bestimmte Zeit zu senden. Legen Sie fest, zu welchem Zeitpunkt die Ereignisbenachrichtigung für die Warnmeldung aktiv ist.
+
+. Wählen Sie im Menü Skript zum Ausführen auswählen die Option *Test*-Skript aus.
+. Klicken Sie Auf *Speichern*.
+

@@ -1,0 +1,56 @@
+---
+permalink: health-checker/task_add_annotations_manually_to_individual_storage_objects.html 
+sidebar: sidebar 
+keywords: add, annotations, manually, individual, storage objects 
+summary: Ausgewählte Volumes, Cluster und SVMs lassen sich manuell und ohne Verwendung von Annotationsregeln beschriften. Sie können ein einzelnes Storage-Objekt oder mehrere Storage-Objekte mit Anmerkungen versehen und die erforderliche Kombination aus Name-Wert-Paaren für die Annotation angeben. 
+---
+= Anmerkungen manuell zu einzelnen Speicherobjekten hinzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ausgewählte Volumes, Cluster und SVMs lassen sich manuell und ohne Verwendung von Annotationsregeln beschriften. Sie können ein einzelnes Storage-Objekt oder mehrere Storage-Objekte mit Anmerkungen versehen und die erforderliche Kombination aus Name-Wert-Paaren für die Annotation angeben.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritte
+. Navigieren Sie zu den Storage-Objekten, die Anmerkungen machen sollen:
++
+[cols="2*"]
+|===
+| So fügen Sie Kommentare hinzu: | Tun Sie das... 
+
+
+ a| 
+Cluster
+ a| 
+.. Klicken Sie Auf *Storage* > *Cluster*.
+.. Wählen Sie ein oder mehrere Cluster aus.
+
+
+
+
+ a| 
+Volumes
+ a| 
+.. Klicken Sie Auf *Storage* > *Volumes*.
+.. Wählen Sie ein oder mehrere Volumes aus.
+
+
+
+
+ a| 
+SVMs
+ a| 
+.. Klicken Sie auf *Storage* > *SVMs*.
+.. Wählen Sie eine oder mehrere SVMs aus.
+
+
+|===
+. Klicken Sie auf *Annotate* und wählen Sie ein Name-Wert-Paar aus.
+. Klicken Sie Auf *Anwenden*.
+

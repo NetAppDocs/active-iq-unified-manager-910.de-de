@@ -1,0 +1,42 @@
+---
+permalink: reporting/task_create_report_to_view_aggregates_reaching_full_capacity.html 
+sidebar: sidebar 
+keywords: create, report, view, aggregates, reaching, full capacity 
+summary: Sie können einen Bericht erstellen, um die volle Kapazität der Aggregate zu ermitteln, damit Sie mehr Kapazität hinzufügen oder Workloads zu anderen Aggregaten verschieben können. 
+---
+= Erstellen eines Berichts, um Aggregate anzuzeigen, die voll ausgelastet sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um die volle Kapazität der Aggregate zu ermitteln, damit Sie mehr Kapazität hinzufügen oder Workloads zu anderen Aggregaten verschieben können.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Mit den folgenden Schritten erstellen Sie eine benutzerdefinierte Ansicht, auf der Aggregate vollständig ausgelastet sind. Planen Sie dann einen Bericht, der für diese Ansicht erstellt werden soll.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Aggregate*.
+. Wählen Sie im Menü Ansicht die Option *Kapazität* > *Alle Aggregate*.
+. Wählen Sie *ein-/Ausblenden* aus, um alle Spalten zu entfernen, die im Bericht nicht benötigt werden.
+. Klicken Sie auf das Filtersymbol, fügen Sie den folgenden Filter hinzu und klicken Sie dann auf *Filter anwenden*:
++
+** Tage bis zur vollen Zeit weniger als 45 Tage
+
+
+. Klicken Sie oben in der Spalte „`Dzu voll`“, um die Ergebnisse nach der verbleibenden Anzahl an Tagen zu sortieren, um die volle Kapazität zu erreichen.
+. Speichern Sie die Ansicht mit einem bestimmten Namen, der angibt, was die Ansicht zeigt, z. B. „`DTage bis volle Aggregatskapazität`“, und klicken Sie auf das Häkchen (image:../media/blue_check.gif[""]).
+. Klicken Sie auf der Bestandsseite auf die Schaltfläche *geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite *Berichtspläne* eine neue Zeile hinzuzufügen, damit Sie die Terminplaneigenschaften für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtsplan ein, und füllen Sie die anderen Berichtsfelder aus, und klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""]Am Ende der Reihe.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und per E-Mail an die Empfänger gesendet, die unter der angegebenen Häufigkeit aufgeführt sind.
+
+
+
+Basierend auf den im Bericht gezeigten Ergebnissen sollten Sie den Storage für Aggregate erhöhen, die die volle Kapazität erreichen. Außerdem können Sie die Tage bis zur vollständigen Kapazitätsgrenze auf mehr als die standardmäßigen 7 Tage erhöhen, sodass Sie Ereignisse erhalten, die mehr Zeit bieten, um auf den bei Aggregaten niedrig zu reagieren.

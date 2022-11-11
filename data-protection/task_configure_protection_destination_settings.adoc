@@ -1,0 +1,30 @@
+---
+permalink: data-protection/task_configure_protection_destination_settings.html 
+sidebar: sidebar 
+keywords: configure, destination, efficiency, settings 
+summary: Mithilfe des Dialogfelds „Advanced Destination Settings“ können Sie die Effizienzeinstellungen des Ziels, wie Deduplizierung, Komprimierung, Autogrow und Speicherplatzzusage für ein Schutzziel, konfigurieren. Sie verwenden diese Einstellungen, um die Speicherauslastung auf einem Ziel oder einem sekundären Volume zu maximieren. 
+---
+= Konfigurieren von Ziel-Effizienzeinstellungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe des Dialogfelds „Advanced Destination Settings“ können Sie die Effizienzeinstellungen des Ziels, wie Deduplizierung, Komprimierung, Autogrow und Speicherplatzzusage für ein Schutzziel, konfigurieren. Sie verwenden diese Einstellungen, um die Speicherauslastung auf einem Ziel oder einem sekundären Volume zu maximieren.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Standardmäßig stimmen die Effizienzeinstellungen mit denen des Quell-Volume überein. Ausgenommen sind Komprimierungseinstellungen in einer SnapVault-Beziehung, die standardmäßig deaktiviert sind.
+
+.Schritte
+. Klicken Sie je nach Art der zu konfigurierende Beziehung entweder auf die Registerkarte *SnapMirror* oder auf die Registerkarte *SnapVault* im Dialogfeld *Schutz konfigurieren*.
+. Klicken Sie im Bereich *Zielinformationen* auf *Erweitert*.
++
+Das Dialogfeld Erweiterte Zieleinstellungen wird geöffnet.
+
+. Aktivierung oder Deaktivierung der Effizienzeinstellungen für Deduplizierung, Komprimierung, Autogrow und Speicherplatzzusagen nach Bedarf
+. Klicken Sie auf *Anwenden*, um Ihre Auswahl zu speichern und zum Dialogfeld *Schutz konfigurieren* zurückzukehren.
+

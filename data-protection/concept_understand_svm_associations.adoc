@@ -1,0 +1,32 @@
+---
+permalink: data-protection/concept_understand_svm_associations.html 
+sidebar: sidebar 
+keywords: understand storage vm peers 
+summary: Storage VM Peers sind Zuordnungen von einer Quell-Storage-VM zu einer Ziel-Storage-VM, die von den Partnerapplikationen zur Ressourcenauswahl und zur Bereitstellung von sekundären Volumes verwendet werden. 
+---
+= Kollegen von Storage VM verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Storage VM Peers sind Zuordnungen von einer Quell-Storage-VM zu einer Ziel-Storage-VM, die von den Partnerapplikationen zur Ressourcenauswahl und zur Bereitstellung von sekundären Volumes verwendet werden.
+
+Peers werden immer zwischen einer Quell-Storage-VM und einer Ziel-Storage-VM erstellt, unabhängig davon, ob es sich bei der Ziel-Storage-VM um ein Sekundärziel oder ein tertiäres Ziel handelt. Es ist nicht möglich, eine sekundäre Ziel-Storage-VM als Quelle zu verwenden, um einen Peer mit einer tertiären Ziel-Storage-VM zu erstellen.
+
+Sie haben drei Möglichkeiten, eine Storage-VM Peer-to-Peer einzusetzen:
+
+* Peers jede Storage-VM
++
+Sie können ein Peer zwischen jeder beliebigen primären Quell-Storage-VM und einer oder mehreren Ziel-Storage-VM erstellen. Das heißt, alle bestehenden Storage-VM, die derzeit geschützt werden muss, sowie alle zukünftig erstellten Storage-VMs werden mit der angegebenen Ziel-Storage-VM Peering durchgeführt. Beispielsweise könnte es sinnvoll sein, dass Applikationen aus verschiedenen Quellen an verschiedenen Standorten auf einer oder mehreren Ziel-Storage-VMs an einem Standort gesichert werden.
+
+* Eine bestimmte Storage-VM abgleichen
++
+Sie können eine Peer zwischen einer bestimmten Quell-Storage-VM und einer oder mehreren spezifischen Ziel-Storage-VM erstellen. Wenn Sie beispielsweise vielen Clients Storage-Services bereitstellen, deren Daten voneinander getrennt sein müssen, können Sie diese Option auswählen, um eine bestimmte Quell-Storage-VM einer bestimmten Ziel-Storage-VM zu zuordnen, die nur diesem Client zugewiesen ist.
+
+* Peer mit einer externen Storage-VM
++
+Sie können ein Peer zwischen einer Quell-Storage-VM und einem externen, flexiblen Volume einer Ziel-Storage-VM erstellen.
+
+

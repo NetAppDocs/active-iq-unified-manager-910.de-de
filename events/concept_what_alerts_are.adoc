@@ -1,0 +1,16 @@
+---
+permalink: events/concept_what_alerts_are.html 
+sidebar: sidebar 
+keywords: alerts 
+summary: Während Ereignisse kontinuierlich auftreten, generiert der Unified Manager eine Meldung nur, wenn ein Ereignis die angegebenen Filterkriterien erfüllt. Sie können die Ereignisse auswählen, für die Warnmeldungen generiert werden sollen. Dies kann z. B. der Fall sein, wenn ein Schwellenwert überschritten wird oder ein Objekt offline geht. Sie können auch eine Warnung einem Skript zuordnen, das ausgeführt wird, wenn eine Warnung ausgelöst wird. 
+---
+= Um welche Warnmeldungen geht es
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Während Ereignisse kontinuierlich auftreten, generiert der Unified Manager eine Meldung nur, wenn ein Ereignis die angegebenen Filterkriterien erfüllt. Sie können die Ereignisse auswählen, für die Warnmeldungen generiert werden sollen. Beispielsweise wenn ein Speicherplatzschwellenwert überschritten wird oder ein Objekt in den Offline-Modus wechselt. Sie können auch eine Warnung einem Skript zuordnen, das ausgeführt wird, wenn eine Warnung ausgelöst wird.
+
+Filterkriterien umfassen Objektklasse, Namen oder Ereignisschweregrad.

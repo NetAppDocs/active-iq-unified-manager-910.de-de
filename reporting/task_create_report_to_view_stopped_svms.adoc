@@ -1,0 +1,42 @@
+---
+permalink: reporting/task_create_report_to_view_stopped_svms.html 
+sidebar: sidebar 
+keywords: create, report, view, stopped, storage VMs 
+summary: Sie können einen Bericht erstellen, um eine Liste aller angehalten SVMs anzuzeigen. 
+---
+= Erstellen eines Berichts, um angehalten Storage-VMs anzuzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um eine Liste aller angehalten SVMs anzuzeigen.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht zu erstellen, die angehörte Storage-VMs anzeigt, und planen Sie dann einen Bericht für diese Ansicht zu erstellen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Storage VMs*.
+. Wählen Sie im Menü Ansicht die Option *Systemzustand* > *Alle Storage VMs* aus.
+. Wählen Sie *ein-/Ausblenden* aus, um alle Spalten zu entfernen, die im Bericht nicht benötigt werden.
+. Ziehen Sie die Spalte „`State`“ in der Spalte „`Storage VM`“.
+. Klicken Sie auf das Filtersymbol, fügen Sie den folgenden Filter hinzu und klicken Sie dann auf *Filter anwenden*:
++
+** Der Status wurde angehalten
+
+
+. Speichern Sie die Ansicht mit einem spezifischen Namen, der die Anzeige wiedergibt. Hierzu zählen z. B. „`Sgekrönte SVMs`“, und klicken Sie auf das Häkchen (image:../media/blue_check.gif[""]).
+. Klicken Sie auf der Bestandsseite auf die Schaltfläche *geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite *Berichtspläne* eine neue Zeile hinzuzufügen, damit Sie die Terminplaneigenschaften für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtsplan ein, und füllen Sie die anderen Berichtsfelder aus, und klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""]Am Ende der Reihe.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und per E-Mail an die Empfänger gesendet, die unter der angegebenen Häufigkeit aufgeführt sind.
+
+
+
+Auf der Grundlage der im Bericht gezeigten Ergebnisse sollten Sie möglicherweise untersuchen, warum die SVM angehalten wurde, um zu sehen, ob Sie die angehalten SVMs neu starten möchten.

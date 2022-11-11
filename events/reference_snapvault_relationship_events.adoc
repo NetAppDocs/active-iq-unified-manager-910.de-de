@@ -1,0 +1,99 @@
+---
+permalink: events/reference_snapvault_relationship_events.html 
+sidebar: sidebar 
+keywords: snapvault, relationship, events, impact area, protection 
+summary: SnapVault Beziehungsveranstaltungen enthalten Informationen zum Status Ihrer SnapVault Beziehungen, sodass Sie mögliche Probleme überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad. 
+---
+= SnapVault Beziehungsereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapVault Beziehungsveranstaltungen enthalten Informationen zum Status Ihrer SnapVault Beziehungen, sodass Sie mögliche Probleme überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.
+
+
+
+== Aufprallbereich: Schutz
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Asynchronous Vault ungesund(OcumEvtSnapVaultRelationshipUnHealthy)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+Asynchronous Vault broken-off (ocumEvtSnapVaultRelationshipStateBrokenoff)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Asynchrone Vault-Initialisierung fehlgeschlagen (OktEvtSnapVaultRelationshierInitialisierenFailed)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Asynchrones Vault Update fehlgeschlagen (OktEvtSnapVaultRelationshipUpdateFailed)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Asynchroner Vault lag Fehler (ocumEvtSnapVaultRelationshipLagerFehler)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Asynchronous Vault lag Warnung (ocumEvtSnapVaultRelationshipLagerWarnung)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+Resync für asynchronen Tresor fehlgeschlagen (ocumEvtsnapvaultRelationshipResyncFailed)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+|===

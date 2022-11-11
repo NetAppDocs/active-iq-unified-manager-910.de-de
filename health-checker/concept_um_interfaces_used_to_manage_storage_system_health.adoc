@@ -1,0 +1,32 @@
+---
+permalink: health-checker/concept_um_interfaces_used_to_manage_storage_system_health.html 
+sidebar: sidebar 
+keywords: unified manager, interfaces, manage, storage system, health 
+summary: Dieser Abschnitt enthält Informationen zu den beiden Benutzeroberflächen, die Active IQ Unified Manager zur Fehlerbehebung von Storage-Kapazität, -Verfügbarkeit und -Sicherung bereitstellt. Die beiden UIs sind die Unified Manager Web-UI und die Wartungskonsole. 
+---
+= Unified Manager-Schnittstellen, die zum Management des Zustands des Storage-Systems verwendet werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese Abschnitte enthalten Informationen zu den beiden Benutzeroberflächen, die Active IQ Unified Manager zur Fehlerbehebung von Storage-Kapazität, -Verfügbarkeit und -Sicherung bereitstellt. Die beiden UIs sind die Unified Manager Web-UI und die Wartungskonsole.
+
+Um die Sicherungsfunktionen in Unified Manager nutzen zu können, müssen auch OnCommand Workflow Automation (WFA) installiert und konfiguriert werden.
+
+
+
+== Unified Manager Web-UI
+
+Die Unified Manager Web-UI ermöglicht einem Administrator, Cluster-Probleme in Bezug auf Kapazität, Verfügbarkeit und Sicherung der Daten zu überwachen und zu beheben.
+
+In diesen Abschnitten werden einige gängige Workflows beschrieben, die ein Administrator befolgen kann, um Fehler bei der Storage-Kapazität, Datenverfügbarkeit oder Sicherungsproblemen zu beheben, die in der Web-UI von Unified Manager angezeigt werden.
+
+
+
+== Wartungskonsole
+
+Die Unified Manager-Wartungskonsole ermöglicht Administratoren das Überwachen, Diagnostizieren und behandeln von Betriebssystemproblemen, Problemen mit dem Versionsaktualisierung, Problemen mit dem Benutzerzugriff und Netzwerkproblemen im Zusammenhang mit dem Unified Manager-Server selbst. Wenn die Web-UI von Unified Manager nicht verfügbar ist, stellt die Wartungskonsole die einzige Zugriffsmöglichkeit auf Unified Manager dar.
+
+Sie können diese Informationen für den Zugriff auf die Wartungskonsole verwenden, um Probleme im Zusammenhang mit der Funktionsweise des Unified Manager-Servers zu beheben.

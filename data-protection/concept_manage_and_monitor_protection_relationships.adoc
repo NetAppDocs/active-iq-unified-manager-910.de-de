@@ -1,0 +1,28 @@
+---
+permalink: data-protection/concept_manage_and_monitor_protection_relationships.html 
+sidebar: sidebar 
+keywords: manage, monitor, protection, relationships 
+summary: Mit Active IQ Unified Manager können Sie Sicherungsbeziehungen erstellen, SnapMirror und SnapVault Beziehungen auf gemanagten Clustern überwachen und Fehler beheben und Daten beim Überschreiben oder Verlust wiederherstellen. 
+---
+= Managen und Überwachen von Sicherungsbeziehungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Active IQ Unified Manager können Sie Sicherungsbeziehungen erstellen, SnapMirror und SnapVault Beziehungen auf gemanagten Clustern überwachen und Fehler beheben und Daten beim Überschreiben oder Verlust wiederherstellen.
+
+Für SnapMirror Vorgänge gibt es zwei Replizierungstypen:
+
+* Asynchron
++
+Die Replizierung vom primären zum sekundären Volume wird durch einen Zeitplan festgelegt.
+
+* Synchron
++
+Die Replizierung wird gleichzeitig auf dem primären und sekundären Volume durchgeführt.
+
+
+
+Sie können bis zu 10 Sicherungsjobs gleichzeitig ausführen, ohne die Leistung zu beeinträchtigen. Möglicherweise haben Sie Auswirkungen auf die Leistung, wenn Sie zwischen 11 und 30 Jobs gleichzeitig ausführen. Es wird nicht empfohlen, mehr als 30 Jobs gleichzeitig auszuführen.

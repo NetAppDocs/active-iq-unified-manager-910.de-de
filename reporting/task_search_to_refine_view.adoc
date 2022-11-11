@@ -1,0 +1,23 @@
+---
+permalink: reporting/task_search_to_refine_view.html 
+sidebar: sidebar 
+keywords: search, refine, view 
+summary: Nachdem Sie über die gewünschte Ansicht verfügen, können Sie die Ergebnisse mithilfe des Feldes „Suchen“ weiter verfeinern, um sich auf die Ergebnisse zu konzentrieren, die in den Bericht einbezogen werden sollen. 
+---
+= Mit der Suche können Sie Ihre Ansicht verfeinern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie über die gewünschte Ansicht verfügen, können Sie die Ergebnisse mithilfe des Feldes „Suchen“ weiter verfeinern, um sich auf die Ergebnisse zu konzentrieren, die in den Bericht einbezogen werden sollen.
+
+.Schritte
+. Öffnen Sie die benutzerdefinierte oder Standardansicht, die Sie als Grundlage Ihres Berichts verwenden möchten.
+. Geben Sie das Suchfeld ein, um die in der Ansicht aufgeführten Daten zu verfeinern. Sie können Teildaten in eine der angezeigten Spalten eingeben. Wenn Sie beispielsweise nach Knoten suchen möchten, die den Namen „US_East“ enthalten, können Sie die vollständige Liste der Knoten verfeinern.
++
+Die Ergebnisse Ihrer Suche werden in der benutzerdefinierten Ansicht gespeichert und in den resultierenden geplanten Bericht verwendet.
+
+. Benennen Sie die nicht gespeicherte Ansicht, um Ihre Änderungen zu speichern.
+

@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_options_for_improving_workload_performance_from_client.html 
+sidebar: sidebar 
+keywords: options, improving, workload, performance, client-side 
+summary: Sie können Ihre Client-Workloads, z. B. Applikationen oder Datenbanken, prüfen, die I/O-Vorgänge an Volumes senden, die an einem Performance-Ereignis beteiligt sind, um zu ermitteln, ob eine Client-seitige Änderung das Ereignis möglicherweise korrigiert. 
+---
+= Optionen zur Verbesserung der Workload Performance von Client-Seite
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Ihre Client-Workloads, z. B. Applikationen oder Datenbanken, prüfen, die I/O-Vorgänge an Volumes senden, die an einem Performance-Ereignis beteiligt sind, um zu ermitteln, ob eine Client-seitige Änderung das Ereignis möglicherweise korrigiert.
+
+Wenn Clients, die mit Volumes in einem Cluster verbunden sind, ihre I/O-Anforderungen erhöhen, muss das Cluster schwieriger arbeiten, die Anforderungen zu erfüllen. Wenn Sie wissen, welche Clients eine hohe Anzahl von I/O-Anforderungen an ein bestimmtes Volume im Cluster haben, können Sie die Cluster-Performance verbessern, indem Sie die Anzahl der Clients, die auf das Volume zugreifen, anpassen oder die I/O-Menge an diesem Volume verringern. Sie können auch eine Obergrenze für die QoS-Richtliniengruppe festlegen, deren Mitglied das Volume ist.
+
+Sie können Clients und deren Applikationen untersuchen, um festzustellen, ob die Clients mehr I/O als gewöhnlich senden, was zu Konflikten bei einer Cluster-Komponente führen kann. Auf der Seite Ereignisdetails werden im Abschnitt Systemdiagnose die wichtigsten Volume-Workloads unter Verwendung der zu verstrittenden Komponente angezeigt. Wenn Sie wissen, welcher Client auf ein bestimmtes Volume zugreift, können Sie auf den Client zugreifen, um zu ermitteln, ob die Client-Hardware oder eine Anwendung nicht wie erwartet funktioniert oder mehr Arbeit geleistet hat als sonst.
+
+In einer MetroCluster-Konfiguration werden Schreibanforderungen an ein Volume in einem lokalen Cluster auf einem Volume im Remote-Cluster gespiegelt. Wenn das Quell-Volume auf dem lokalen Cluster synchron mit dem Ziel-Volume auf dem Remote-Cluster gehalten werden soll, kann auch der Bedarf beider Cluster in der MetroCluster Konfiguration erhöht werden. Indem die Schreibvorgänge auf diese gespiegelten Volumes reduziert werden, führen die Cluster weniger Synchronisierungsvorgänge aus, wodurch die Auswirkungen auf die Performance anderer Workloads reduziert werden.

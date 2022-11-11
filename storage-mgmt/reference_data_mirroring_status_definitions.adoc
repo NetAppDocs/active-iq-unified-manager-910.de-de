@@ -1,0 +1,42 @@
+---
+permalink: storage-mgmt/reference_data_mirroring_status_definitions.html 
+sidebar: sidebar 
+keywords: data mirror, status, definitions 
+summary: MetroCluster Konfigurationen ermöglichen Datenspiegelung und zusätzlich die Möglichkeit, einen Failover zu initiieren, wenn der gesamte Standort nicht mehr verfügbar ist. Der Status der Datenspiegelung zwischen den Clustern in einer MetroCluster Konfiguration kann entweder „Normal“ oder „Spiegelung nicht verfügbar“ lauten. Wenn Sie diese Informationen kennen, können Sie Ihre MetroCluster Konfigurationen effektiv managen. 
+---
+= Statusdefinitionen zur Datenspiegelung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MetroCluster Konfigurationen ermöglichen Datenspiegelung und zusätzlich die Möglichkeit, einen Failover zu initiieren, wenn der gesamte Standort nicht mehr verfügbar ist. Der Status der Datenspiegelung zwischen den Clustern in einer MetroCluster Konfiguration kann entweder „Normal“ oder „Spiegelung nicht verfügbar“ lauten. Wenn Sie diese Informationen kennen, können Sie Ihre MetroCluster Konfigurationen effektiv managen.
+
+|===
+| Status Datenspiegelung | Beschreibung | Wird angezeigt 
+
+
+ a| 
+Normal
+ a| 
+Die Datenspiegelung zwischen den Clustern in der MetroCluster Konfiguration ist normal.
+ a| 
+image:../media/metrocluster_connectivity_optimal.gif[""]
+
+
+
+ a| 
+Spiegelung Nicht Verfügbar
+ a| 
+Das Daten-Mirroring zwischen den Clustern in der MetroCluster Konfiguration ist aufgrund der Umschaltung nicht verfügbar. Wenn das Partner-Cluster beispielsweise aufgrund eines Ausfalls oder bei einem geplanten Switchover zu Testzwecken ausfällt,
+ a| 
+Umschaltung mit Fehlern:
+
+image::../media/metrocluster_connectivity_down.gif[MetroCluster-Konnektivität nicht verbunden]
+
+Umschaltung erfolgreich:
+
+image::../media/metrocluster_connectivity_failover.gif[Failover für MetroCluster-Konnektivität]
+
+|===

@@ -1,0 +1,74 @@
+---
+permalink: data-protection/reference_create_schedule_dialog_box.html 
+sidebar: sidebar 
+keywords: create, schedule, dialog box 
+summary: Im Dialogfeld „Zeitplan erstellen“ können Sie einen einfachen oder erweiterten Sicherungsplan für SnapMirror und SnapVault Beziehungsübertragungen erstellen. Möglicherweise erstellen Sie einen neuen Zeitplan, mit dem sich die Häufigkeit der Datentransfers durch häufige Datenaktualisierungen erhöhen lässt. Zudem können Sie bei unregelmäßigen Datenänderungen einen weniger Zeitplan erstellen. 
+---
+= Dialogfeld „Zeitplan erstellen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „Zeitplan erstellen“ können Sie einen einfachen oder erweiterten Sicherungsplan für SnapMirror und SnapVault Beziehungsübertragungen erstellen. Möglicherweise erstellen Sie einen neuen Zeitplan, mit dem sich die Häufigkeit der Datentransfers durch häufige Datenaktualisierungen erhöhen lässt. Zudem können Sie bei unregelmäßigen Datenänderungen einen weniger Zeitplan erstellen.
+
+Zeitpläne können nicht für SnapMirror synchrone Beziehungen konfiguriert werden.
+
+* *Zielcluster*
++
+Der Name des Clusters, den Sie auf der Registerkarte SnapVault oder auf der Registerkarte SnapMirror im Dialogfeld Schutz konfigurieren ausgewählt haben.
+
+* *Terminplanname*
++
+Den Namen, den Sie für den Zeitplan angeben. Zeitplannamen können aus den Zeichen A bis Z, a bis z, 0 bis 9 sowie einem der folgenden Sonderzeichen bestehen: ! @ # € % {caret} & * ( ) _ -. Die Namen des Zeitplans dürfen die folgenden Zeichen nicht enthalten: < >.
+
+* *Basic oder Advanced*
++
+Der Zeitplanmodus, den Sie verwenden möchten.
+
++
+Der Basismodus umfasst die folgenden Elemente:
+
++
+** Wiederholen
++
+Wie oft eine geplante Übertragung erfolgt. Zur Auswahl stehen stündlich, täglich und wöchentlich.
+
+** Tag
++
+Wenn eine Wiederholung von wöchentlich ausgewählt wird, wird der Tag der Woche, an dem eine Übertragung stattfindet, angezeigt.
+
+** Zeit
++
+Wenn Daily oder Weekly ausgewählt ist, wird die Uhrzeit des Transfers angezeigt.
+
+
+
++
+Der erweiterte Modus umfasst die folgenden Elemente:
+
++
+** Monaten
++
+Eine kommagetrennte numerische Liste, die die Monate des Jahres darstellt. Gültige Werte betragen 0 bis 11, wobei der Wert 0 im Januar steht usw. Dieses Element ist optional. Wenn Sie das Feld leer lassen, müssen Sie jeden Monat Transfers machen.
+
+** Tage
++
+Eine kommagetrennte numerische Liste, die den Tag des Monats darstellt. Gültige Werte sind 1 bis 31. Dieses Element ist optional. Wenn Sie das Feld leer lassen, bedeutet dies, dass ein Transfer jeden Tag des Monats stattfindet.
+
+** Wochentage
++
+Eine kommagetrennte numerische Liste, die die Wochentage darstellt. Gültige Werte sind 0 bis 6, wobei 0 für Sonntag usw. gelten. Dieses Element ist optional. Wenn Sie das Feld leer lassen, bedeutet dies, dass ein Transfer jeden Tag der Woche stattfindet. Wenn ein Wochentag, jedoch ein Tag des Monats nicht angegeben wird, erfolgt eine Übertragung nur am angegebenen Wochentag und nicht am Tag.
+
+** Stunden
++
+Eine kommagetrennte numerische Liste, die die Anzahl der Stunden pro Tag darstellt. Gültige Werte sind 0 bis 23, wobei 0 für Mitternacht stehen. Dieses Element ist optional.
+
+** Minuten
++
+Eine kommagetrennte numerische Liste, die die Minuten in einer Stunde darstellt. Gültige Werte sind 0 bis 59. Dieses Element ist erforderlich.
+
+
+
+

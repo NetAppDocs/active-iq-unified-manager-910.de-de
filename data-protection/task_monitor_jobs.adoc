@@ -1,0 +1,30 @@
+---
+permalink: data-protection/task_monitor_jobs.html 
+sidebar: sidebar 
+keywords: monitor, jobs 
+summary: Auf der Seite Jobs können Sie den Jobstatus überwachen und Jobeigenschaften wie Speicherservicetyp, Status, Abges. Zeit und Abgeschlossene Zeit anzeigen, um zu bestimmen, ob ein Job erfolgreich abgeschlossen wurde oder nicht. 
+---
+= Überwachen von Jobs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite Jobs können Sie den Jobstatus überwachen und Jobeigenschaften wie Speicherservicetyp, Status, Abges. Zeit und Abgeschlossene Zeit anzeigen, um zu bestimmen, ob ein Job erfolgreich abgeschlossen wurde oder nicht.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Schutz* > *Jobs*.
++
+Die Seite Jobs wird angezeigt.
+
+. Zeigen Sie die Spalte *Status* an, um den Status der aktuell ausgeführten Jobs zu bestimmen.
+. Klicken Sie auf einen Jobnamen, um Details zu diesem Job anzuzeigen.
++
+Die Seite Jobdetails wird angezeigt.
+
+

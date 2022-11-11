@@ -1,0 +1,38 @@
+---
+permalink: storage-mgmt/reference_issue_with_ldap_using_other_authentication_services.html 
+sidebar: sidebar 
+keywords: issue, addi, ldap, use, other, authentication, services 
+summary: 'Fehlerbehebung: Problem beim Hinzufügen von LDAP mit anderen Authentifizierungsdiensten' 
+---
+= Problem beim Hinzufügen von LDAP über andere Authentifizierungsdienste
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie andere als den Authentifizierungsdienst auswählen, behalten die Benutzer- und Gruppenobjektklasse die Werte aus der zuvor ausgewählten Vorlage bei. Wenn der LDAP-Server nicht die gleichen Werte verwendet, kann der Vorgang fehlschlagen.
+
+*Ursache*
+
+Die Benutzer sind in OpenLDAP nicht richtig konfiguriert.
+
+*Korrekturmaßnahmen*
+
+Sie können dieses Problem mithilfe einer der folgenden Problemumgehungen manuell beheben.
+
+Wenn die Objektklasse und die Objektklasse der LDAP-Benutzer Benutzer Benutzer bzw. Gruppen sind, führen Sie die folgenden Schritte aus:
+
+. Klicken Sie im linken Navigationsbereich auf**Allgemein** > *Remote Authentication*.
+. Wählen Sie im Dropdown-Menü *Authentifizierungsdienst* die Option *Active Directory* aus, und wählen Sie dann *andere* aus.
+. Füllen Sie die Textfelder aus.
+
+
+Wenn die Objektklasse und die Objektklasse des LDAP-Benutzers positixAccount bzw. positixGroup sind, führen Sie die folgenden Schritte aus:
+
+. Klicken Sie im linken Navigationsbereich auf **Allgemein** > *Remote Authentication*.
+. Wählen Sie im Dropdown-Menü *Authentifizierungsdienst* die Option *OpenLDAP* aus, und wählen Sie dann *andere* aus.
+. Füllen Sie die Textfelder aus.
+
+
+Wenn die ersten beiden Problemumgehungen nicht gelten, rufen Sie den an `option-set` API, und legen Sie den fest `auth.ldap.userObjectClass` Und `auth.ldap.groupObjectClass` Optionen für die richtigen Werte.

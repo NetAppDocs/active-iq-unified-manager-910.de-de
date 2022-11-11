@@ -1,0 +1,32 @@
+---
+permalink: config/task_access_unified_manager_web_ui.html 
+sidebar: sidebar 
+keywords: access, unified manager, web ui 
+summary: Nach der Installation von Unified Manager können Sie auf die Web-Benutzeroberfläche zugreifen, um Unified Manager einzurichten, damit Sie mit der Überwachung Ihrer ONTAP-Systeme beginnen können. 
+---
+= Zugriff auf die Web-Benutzeroberfläche von Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach der Installation von Unified Manager können Sie auf die Web-Benutzeroberfläche zugreifen, um Unified Manager einzurichten, damit Sie mit der Überwachung Ihrer ONTAP-Systeme beginnen können.
+
+*Was Sie brauchen*
+
+* Wenn Sie zum ersten Mal auf die Web-UI zugreifen, müssen Sie sich als Wartungbenutzer (oder umadmin-Benutzer für Linux-Installationen) einloggen.
+* Wenn Sie Benutzern den Zugriff auf Unified Manager mit dem Kurznamen erlauben möchten, anstatt den vollständig qualifizierten Domänennamen (FQDN) oder die IP-Adresse zu verwenden, muss die Netzwerkkonfiguration diesen Kurznamen auf einen gültigen FQDN auflösen.
+* Wenn der Server ein selbstsigniertes digitales Zertifikat verwendet, zeigt der Browser möglicherweise eine Warnung an, dass das Zertifikat nicht vertrauenswürdig ist. Sie können entweder das Risiko bestätigen, dass der Zugriff fortgesetzt wird, oder ein Zertifikat einer Zertifizierungsstelle (CA) installieren, das digitale Zertifikat für die Serverauthentifizierung unterzeichnet hat.
+
+
+.Schritte
+. Starten Sie die Web-UI von Unified Manager über Ihren Browser, indem Sie die am Ende der Installation angezeigte URL verwenden. Die URL ist die IP-Adresse oder der vollqualifizierte Domain-Name (FQDN) des Unified Manager-Servers.
++
+Der Link hat das folgende Format: `\https://URL`.
+
+. Melden Sie sich mit den Anmeldedaten der Wartungsbenutzer bei der Web-Benutzeroberfläche von Unified Manager an.
+
+
+
+NOTE: Wenn Sie innerhalb einer Stunde drei aufeinanderfolgende erfolglose Versuche zur Anmeldung bei der Web-Benutzeroberfläche vornehmen, werden Sie aus dem System gesperrt und müssen sich an Ihren Systemadministrator wenden. Dies gilt nur für lokale Benutzer.

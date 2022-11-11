@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_about_quotas.html 
+sidebar: sidebar 
+keywords: about, quotas 
+summary: Quoten bieten eine Möglichkeit, den Festplattenspeicherplatz und die Anzahl der Dateien zu beschränken, die von einem Benutzer, einer Gruppe oder einem qtree verwendet werden. Sie geben Quoten mithilfe der Datei /etc/Quotas an. Sie werden auf ein bestimmtes Volume oder einen bestimmten qtree angewendet. 
+---
+= Über Kontingente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quoten bieten eine Möglichkeit, den Festplattenspeicherplatz und die Anzahl der Dateien zu beschränken, die von einem Benutzer, einer Gruppe oder einem qtree verwendet werden. Sie geben Quoten mit an `/etc/quotas` Datei: Sie werden auf ein bestimmtes Volume oder einen bestimmten qtree angewendet.

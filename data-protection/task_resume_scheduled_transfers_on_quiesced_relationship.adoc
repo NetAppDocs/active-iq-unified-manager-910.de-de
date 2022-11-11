@@ -1,0 +1,42 @@
+---
+permalink: data-protection/task_resume_scheduled_transfers_on_quiesced_relationship.html 
+sidebar: sidebar 
+keywords: resume, schedule, transfers, quiesce, relationship, volume relationships page 
+summary: Nachdem Sie eine Beziehung stillgelegt haben, um geplante Transfers zu stoppen, können Sie mit Resume geplante Transfers erneut aktivieren, um so die Daten auf dem Quell- oder primären Volume zu schützen. Transfers werden im nächsten geplanten Transferintervall von einem Kontrollpunkt fortgesetzt, falls vorhanden. 
+---
+= Wiederaufnahme geplanter Transfers für eine stillgelegte Beziehung von der Seite Volume-Beziehungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie eine Beziehung stillgelegt haben, um geplante Transfers zu stoppen, können Sie *Resume* verwenden, um geplante Transfers wieder zu aktivieren, damit Daten auf dem Quell- oder Primärvolume geschützt sind. Transfers werden im nächsten geplanten Transferintervall von einem Kontrollpunkt fortgesetzt, falls vorhanden.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen Workflow Automation einrichten.
+
+
+Sie können maximal 10 stillgelegene Beziehungen auswählen, auf denen die Übertragung fortgesetzt werden soll.
+
+.Schritte
+. Wählen Sie auf der Seite Volume *Relationships* ein oder mehrere Volumes mit stillgelegten Beziehungen aus, und klicken Sie in der Symbolleiste auf *Fortsetzen*.
+. Klicken Sie im Dialogfeld *Fortsetzen* auf *Weiter*.
++
+Sie werden zur Seite Volume Relationships zurückkehren.
+
+. Um die zugehörigen Aufgaben anzuzeigen und deren Fortschritt zu verfolgen, klicken Sie auf den Job-Link, der oben auf der Seite *Volume Relationships* angezeigt wird.
+. Führen Sie einen der folgenden Schritte aus:
++
+** Wenn nur ein Job angezeigt wird, klicken Sie auf der Seite Jobdetails auf *Aktualisieren*, um die Aufgabenliste und die mit dem Konfigurationsauftrag für den Schutz verknüpften Aufgaben zu aktualisieren und zu bestimmen, wann der Job abgeschlossen ist.
+** Wenn mehrere Jobs angezeigt werden,
++
+... Klicken Sie auf der Seite Jobs auf den Job, für den Sie die Details anzeigen möchten.
+... Klicken Sie auf der Seite Jobdetails auf *Aktualisieren*, um die Aufgabenliste und die Aufgabendetails zu aktualisieren, die mit dem Konfigurationsauftrag für den Schutz verknüpft sind, und um festzustellen, wann der Job abgeschlossen ist. Nach Abschluss der Jobs werden die Datenübertragungen im nächsten geplanten Übertragungsintervall fortgesetzt.
+
+
+
+
+

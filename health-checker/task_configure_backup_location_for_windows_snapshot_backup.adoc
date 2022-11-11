@@ -1,0 +1,49 @@
+---
+permalink: health-checker/task_configure_backup_location_for_windows_snapshot_backup.html 
+sidebar: sidebar 
+keywords: configure, backup, location, windows, snapshot copy, copies 
+summary: Sie sollten das Volume so konfigurieren, dass es auch dann gespeichert werden kann, wenn Active IQ Unified Manager auf Windows installiert sind. 
+---
+= Konfigurieren des Backup-Standorts für Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten das Volume zum Speichern von Snapshot Kopien konfigurieren, nachdem Sie Unified Manager auf Windows gesichert haben.
+
+*Was Sie brauchen*
+
+Der Cluster, die Storage-VM und das Volume müssen folgende Anforderungen erfüllen:
+
+* Cluster-Anforderungen:
++
+** ONTAP 9.3 oder höher muss installiert sein
+** Sie sollten sich in geographischer Nähe zum Unified Manager-Server befinden
+** Die Überwachung erfolgt durch Unified Manager
+
+
+* Storage-VM-Anforderungen:
++
+** ISCSI-Konnektivität auf ONTAP-Cluster
+** Das iSCSI-Protokoll muss für den konfigurierten Computer aktiviert sein
+** Sie sollten ein dediziertes Volume und eine LUN für die Backup-Konfiguration verwenden. Das ausgewählte Volume sollte nur eine LUN und nichts anderes enthalten.
+** Die LUN-Größe sollte mindestens die doppelte Datenmenge sein, die voraussichtlich in den 9.9 Active IQ Unified Manager verarbeitet werden soll.
++
+Dadurch wird auch auf dem Volume die gleiche Größenanforderung festgelegt.
+
+** Stellen Sie sicher, dass alle Lese-/Schreibzugriff ausgewählt ist
+** Stellen Sie sicher, dass Superuser Access in der Exportrichtlinie auf „`any`“ eingestellt ist
+
+
+* Volume- und LUN-Anforderungen:
++
+** Das Volume sollte mindestens die doppelte Größe im Unified Manager MySQL-Datenverzeichnis haben.
+** Der Sicherheitsstil muss auf Windows festgelegt sein
+** Die lokale Snapshot-Richtlinie muss deaktiviert werden
+** Die automatische Volume-Größe sollte aktiviert sein
+** Das Performance-Service-Level sollte auf eine Richtlinie mit hohen IOPS-Werten und niedriger Latenz, wie z. B. „`Extreme`“, festgelegt werden.
+
+
+

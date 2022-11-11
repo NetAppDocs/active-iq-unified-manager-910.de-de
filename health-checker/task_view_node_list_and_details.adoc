@@ -1,0 +1,48 @@
+---
+permalink: health-checker/task_view_node_list_and_details.html 
+sidebar: sidebar 
+keywords: view, node list, details 
+summary: 'Sie können die Ansicht Systemzustand: Alle Knoten verwenden, um die Liste der Knoten in Ihren Clustern anzuzeigen. Mit der Seite „Cluster/Systemzustand“ werden ausführliche Informationen zu Nodes angezeigt, die Teil des überwachten Clusters sind.' 
+---
+= Anzeigen der Node-Liste und der Details
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Ansicht Systemzustand: Alle Knoten verwenden, um die Liste der Knoten in Ihren Clustern anzuzeigen. Mit der Seite „Cluster/Systemzustand“ werden ausführliche Informationen zu Nodes angezeigt, die Teil des überwachten Clusters sind.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+
+Sie können Details wie den Node-Status, den Cluster mit dem Node, die zusammengefasste Kapazität (verwendet und insgesamt) und Details zur Rohkapazität (nutzbar, frei und insgesamt) anzeigen. Zudem erhalten Sie Informationen über HA-Paare, Festplatten-Shelfs und Ports.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherung* > *Knoten*.
+. Klicken Sie in der Ansicht *Health: Alle Nodes* auf den Knoten, dessen Details Sie anzeigen möchten.
++
+Die detaillierten Informationen für den ausgewählten Node werden auf der Seite „Cluster/Health Details“ angezeigt. Im linken Teilfenster wird die Liste der HA-Paare angezeigt. Standardmäßig sind die HA-Details geöffnet, in denen Details zum HA-Status und Ereignisse im Zusammenhang mit dem ausgewählten HA-Paar angezeigt werden.
+
+. Um weitere Details zum Knoten anzuzeigen, führen Sie die entsprechende Aktion aus:
++
+[cols="2*"]
+|===
+| Anzeigen... | Klicken Sie Auf... 
+
+
+ a| 
+Informationen zu Platten-Shelves
+ a| 
+*Platten-Shelves*.
+
+
+
+ a| 
+Port-bezogene Informationen
+ a| 
+*Ports*.
+
+|===
+

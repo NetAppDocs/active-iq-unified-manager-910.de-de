@@ -1,0 +1,34 @@
+---
+permalink: health-checker/task_view_list_of_snapshot_copies.html 
+sidebar: sidebar 
+keywords: view, list, Snapshot copies 
+summary: Sie können die Liste der Snapshot Kopien für ein ausgewähltes Volume anzeigen. Mithilfe der Liste der Snapshot Kopien lässt sich die Menge an Festplattenspeicher berechnen, die zurückgewonnen werden kann, wenn eine oder mehrere Snapshot Kopien gelöscht werden. Außerdem können Sie die Snapshot Kopien bei Bedarf löschen. 
+---
+= Anzeigen der Liste der Snapshot Kopien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Liste der Snapshot Kopien für ein ausgewähltes Volume anzeigen. Mithilfe der Liste der Snapshot Kopien lässt sich die Menge an Festplattenspeicher berechnen, die zurückgewonnen werden kann, wenn eine oder mehrere Snapshot Kopien gelöscht werden. Außerdem können Sie die Snapshot Kopien bei Bedarf löschen.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+* Das Volume, das die Snapshot Kopien enthält, muss online sein.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Volumes*.
+. Wählen Sie in der Ansicht *Systemzustand: Alle Volumes* das Volume aus, das die Snapshot Kopien enthält, die Sie anzeigen möchten.
+. Klicken Sie auf der Seite *Volumen / Gesundheit* Details auf die Registerkarte *Kapazität*.
+. Klicken Sie im Fensterbereich *Details* der Registerkarte *Kapazität* im Abschnitt Weitere Details auf den Link neben *Snapshot Kopien*.
++
+Die Anzahl der Snapshot Kopien ist ein Link, der die Liste der Snapshot Kopien anzeigt.
+
+
+
+*Verwandte Informationen*
+
+link:../health-checker/reference_health_volume_details_page.html["Systemzustand/Volumes-Seite"]

@@ -1,0 +1,43 @@
+---
+permalink: events/task_disable_alerts_for_resolved_and_obsolete_events.html 
+sidebar: sidebar 
+keywords: enable, disable, alerts, resolved, obsolete, events 
+summary: 'Für alle Ereignisse, die Sie für das Senden von Warnungen konfiguriert haben, wird eine Warnmeldung gesendet, wenn diese Ereignisse alle verfügbaren Status durchlaufen: Neu, bestätigt, behoben und veraltet. Wenn Sie keine Benachrichtigungen für Ereignisse erhalten möchten, während diese in den Status „aufgelöst“ und „veraltet“ verschoben werden, können Sie eine globale Einstellung konfigurieren, um diese Warnmeldungen zu unterdrücken.' 
+---
+= Aktivieren und Deaktivieren von Warnmeldungen für gelöste und veraltete Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für alle Ereignisse, die Sie für das Senden von Warnungen konfiguriert haben, wird eine Warnmeldung gesendet, wenn diese Ereignisse alle verfügbaren Status durchlaufen: Neu, bestätigt, behoben und veraltet. Wenn Sie keine Benachrichtigungen für Ereignisse erhalten möchten, während diese in den Status „aufgelöst“ und „veraltet“ verschoben werden, können Sie eine globale Einstellung konfigurieren, um diese Warnmeldungen zu unterdrücken.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Standardmäßig werden keine Warnmeldungen für Ereignisse gesendet, wenn sie in den Status „aufgelöst“ und „veraltet“ verschoben werden.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage-Management* > *Alarm-Setup*.
+. Führen Sie auf der Seite *Alarm Setup* eine der folgenden Aktionen durch, indem Sie das Schieberegler neben dem Element *Warnungen für gelöste und veraltete Ereignisse* verwenden:
++
+|===
+| An... | Tun Sie das... 
+
+
+ a| 
+Das Senden von Warnmeldungen wird unterbrochen, wenn Ereignisse aufgelöst oder veraltet sind
+ a| 
+Schieben Sie den Regler nach links
+
+
+
+ a| 
+Beginnen Sie mit dem Senden von Warnungen, wenn Ereignisse aufgelöst oder veraltet sind
+ a| 
+Bewegen Sie den Schieberegler nach rechts
+
+|===
+

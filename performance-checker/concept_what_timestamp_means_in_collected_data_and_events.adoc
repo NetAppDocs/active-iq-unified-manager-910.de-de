@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_what_timestamp_means_in_collected_data_and_events.html 
+sidebar: sidebar 
+keywords: timestamp, means, collected, data, events 
+summary: Der Zeitstempel, der in den erfassten Systemzustand und Performance-Daten angezeigt wird oder der als Erkennungszeit für ein Ereignis angezeigt wird, basiert auf der ONTAP Cluster-Zeit, die an die im Webbrowser eingestellte Zeitzone angepasst wurde. 
+---
+= Was bedeutet der Zeitstempel bei erfassten Daten und Ereignissen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Zeitstempel, der in den erfassten Systemzustand und Performance-Daten angezeigt wird oder der als Erkennungszeit für ein Ereignis angezeigt wird, basiert auf der ONTAP Cluster-Zeit, die an die im Webbrowser eingestellte Zeitzone angepasst wurde.
+
+Es wird dringend empfohlen, einen NTP-Server (Network Time Protocol) zu verwenden, um die Zeit auf Unified Manager-Servern, ONTAP-Clustern und Webbrowsern zu synchronisieren.
+
+[NOTE]
+====
+Wenn Zeitstempel, die für ein bestimmtes Cluster nicht korrekt angezeigt werden, möchten Sie möglicherweise überprüfen, ob die Cluster-Zeit ordnungsgemäß festgelegt wurde.
+
+====

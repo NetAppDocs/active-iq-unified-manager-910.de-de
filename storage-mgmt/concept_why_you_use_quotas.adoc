@@ -1,0 +1,21 @@
+---
+permalink: storage-mgmt/concept_why_you_use_quotas.html 
+sidebar: sidebar 
+keywords: use, quotas 
+summary: Mithilfe von Quotas lässt sich die Ressourcennutzung in FlexVol Volumes begrenzen, Benachrichtigungen bereitstellen, wenn die Ressourcenauslastung bestimmte Level erreicht oder die Ressourcenauslastung nachverfolgt. 
+---
+= Warum man Quoten verwendet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe von Quotas lässt sich die Ressourcennutzung in FlexVol Volumes begrenzen, Benachrichtigungen bereitstellen, wenn die Ressourcenauslastung bestimmte Level erreicht oder die Ressourcenauslastung nachverfolgt.
+
+Sie geben aus folgenden Gründen ein Kontingent an:
+
+* Um die Menge an Festplattenspeicher oder die Anzahl der Dateien zu begrenzen, die von einem Benutzer oder einer Gruppe verwendet werden können oder die von einem qtree enthalten sein können
+* Um den von einem Benutzer, einer Gruppe oder einem qtree verwendeten Dateispeicherplatz oder die Anzahl der Dateien zu verfolgen, ohne dass ein Limit gesetzt wird
+* Um Anwender bei einer hohen Festplatten- oder Dateiennutzung zu warnen
+

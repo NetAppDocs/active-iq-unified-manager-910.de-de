@@ -1,0 +1,28 @@
+---
+permalink: include/upgrade-path.html 
+sidebar: sidebar 
+keywords: supported upgrade path, upgrade path, n-2, which versions can be upgraded 
+summary: Unterstützter Upgrade-Pfad 
+---
+= Unterstützter Upgrade-Pfad für Unified Manager-Versionen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager unterstützt für jede Version einen bestimmten Upgrade-Pfad.
+
+Nicht alle Versionen von Unified Manager können ein Upgrade ohne Upgrade auf neuere Versionen durchführen. Die Unified Manager Upgrades sind auf ein N-2-Modell beschränkt, d. h. ein Upgrade kann nur innerhalb der nächsten zwei Versionen auf allen Plattformen durchgeführt werden. Sie können beispielsweise nur von Unified Manager 9.8 und 9.9 ein Upgrade auf Unified Manager 9.10 durchführen.
+
+Wenn Sie eine Version verwenden, die vor den unterstützten Versionen liegt, muss Ihre Unified Manager Instanz zuerst auf eine der unterstützten Versionen aktualisiert und dann auf die aktuelle Version aktualisiert werden.
+
+Wenn Ihre installierte Version beispielsweise OnCommand Unified Manager 9.5 ist und Sie ein Upgrade auf die neueste Version Active IQ Unified Manager 9.10 durchführen möchten, folgen Sie einer Reihe von Upgrades.
+
+.Beispiel für ein Upgrade-Pfad:
+. Upgrade OnCommand Unified Manager 9.5 -> Active IQ Unified Manager 9.7.
+. Upgrade 9.7 -> 9.9.
+. Upgrade 9.9 -> 9.10.
+
+
+Weitere Informationen zur Upgrade-Pfad-Matrix finden Sie hier https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/What_is_the_upgrade_path_for_Active_IQ_Unified_Manager_versions["Knowledge Base-Artikel (KB"^].

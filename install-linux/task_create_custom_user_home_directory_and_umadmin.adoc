@@ -1,0 +1,61 @@
+---
+permalink: install-linux/task_create_custom_user_home_directory_and_umadmin.html 
+sidebar: sidebar 
+keywords: create, custom, user, home, directory, umadmin, password, prior, installation 
+summary: Sie können ein benutzerdefiniertes Home-Verzeichnis erstellen und Ihr eigenes umadmin-Benutzerpasswort vor der Installation von Unified Manager definieren. Diese Aufgabe ist optional, aber einige Standorte benötigen möglicherweise die Flexibilität, die Standardeinstellungen für die Unified Manager-Installation zu überschreiben. 
+---
+= Erstellen eines benutzerdefinierten Home-Verzeichnisses für Benutzer und eines umadmin-Passworts vor der Installation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein benutzerdefiniertes Home-Verzeichnis erstellen und Ihr eigenes umadmin-Benutzerpasswort vor der Installation von Unified Manager definieren. Diese Aufgabe ist optional, aber einige Standorte benötigen möglicherweise die Flexibilität, die Standardeinstellungen für die Unified Manager-Installation zu überschreiben.
+
+*Was Sie brauchen*
+
+* Das System muss die in beschriebenen Anforderungen erfüllen link:concept_virtual_infrastructure_or_hardware_system_requirements.html["Hardwaresystemanforderungen"].
+* Sie müssen sich als Root-Benutzer beim Red hat Enterprise Linux oder CentOS System anmelden können.
+
+
+Die Standardinstallation von Unified Manager führt die folgenden Aufgaben aus:
+
+* Erstellt den umadmin-Benutzer mit `/home/umadmin` Als Home Directory damit füllt.
+* Weist dem umadmin-Benutzer das Standardpasswort „`admin`“ zu.
+
+
+Weil einige Installationsumgebungen den Zugriff auf beschränken `/home`, Die Installation schlägt fehl. Sie müssen das Home-Verzeichnis an einem anderen Speicherort erstellen. Darüber hinaus können auf einigen Websites Regeln über die Komplexität von Passwörtern oder die Festlegung von Passwörtern durch lokale Administratoren statt durch das Installationsprogramm festgelegt werden.
+
+Wenn in Ihrer Installationsumgebung die Standardeinstellungen dieser Installation außer Kraft gesetzt werden müssen, führen Sie die folgenden Schritte aus, um ein benutzerdefiniertes Home-Verzeichnis zu erstellen und das Kennwort des umadmin-Benutzers zu definieren.
+
+Wenn diese Informationen vor der Installation definiert werden, erkennt das Installationsskript diese Einstellungen und verwendet die definierten Werte anstatt die Standardeinstellungen der Installation zu verwenden.
+
+Darüber hinaus enthält die standardmäßige Unified Manager-Installation den umadmin-Benutzer in den Sudoers-Dateien (`ocum_sudoers` Und `ocie_sudoers`) Im `/etc/sudoers.d/` Verzeichnis. Wenn Sie diesen Inhalt aufgrund von Sicherheitsrichtlinien aus Ihrer Umgebung entfernen oder aufgrund eines Tools zur Sicherheitsüberwachung wieder hinzufügen müssen. Sie müssen die sudoers-Konfiguration beibehalten, da für einige Unified Manager-Vorgänge diese sudo-Berechtigungen erforderlich sind.
+
+Die Sicherheitsrichtlinien in Ihrer Umgebung dürfen die Sudo-Berechtigungen für den Unified Manager-Wartungsbenutzer nicht einschränken. Einige Vorgänge von Unified Manager können fehlschlagen, wenn die Berechtigungen eingeschränkt sind. Überprüfen Sie, ob Sie den folgenden sudo-Befehl ausführen können, wenn Sie sich nach der erfolgreichen Installation als umadmin-Benutzer angemeldet haben.
+
+`sudo /etc/init.d/ocie status`
+
+Dieser Befehl sollte den entsprechenden Status des ocie-Dienstes fehlerfrei zurückgeben.
+
+.Schritte
+. Melden Sie sich als Root-Benutzer beim Server an.
+. Erstellen Sie das umadmin Gruppenkonto mit dem Namen "`maintual`":
++
+`groupadd maintenance`
+
+. Erstellen Sie das Benutzerkonto „`umadmin`“ in der Wartungsgruppe unter einem Home-Verzeichnis Ihrer Wahl:
++
+`adduser --home <home_directory\> -g maintenance umadmin`
+
+. Definieren Sie das umadmin-Passwort:
++
+`passwd umadmin`
+
++
+Das System fordert Sie zur Eingabe einer neuen Passwort-Zeichenfolge für den umadmin-Benutzer auf.
+
+
+
+Nachdem Sie Unified Manager installiert haben, müssen Sie die Anmeldungs-Shell für den umadmin-Benutzer angeben.

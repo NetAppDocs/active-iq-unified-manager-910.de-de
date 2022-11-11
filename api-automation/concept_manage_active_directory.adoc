@@ -1,0 +1,55 @@
+---
+permalink: api-automation/concept_manage_active_directory.html 
+sidebar: sidebar 
+keywords: manage, active, directory, mapping 
+summary: Mithilfe der hier aufgeführten APIs können Sie die Active Directory-Zuordnungen auf der SVM managen, die für die Bereitstellung von CIFS-Freigaben auf den SVMs erforderlich sind. Active Directory-Zuordnungen müssen konfiguriert werden, um die SVMs mit ONTAP zuzuordnen. 
+---
+= Verwalten der Active Directory-Zuordnung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe der hier aufgeführten APIs können Sie die Active Directory-Zuordnungen auf der SVM managen, die für die Bereitstellung von CIFS-Freigaben auf den SVMs erforderlich sind. Active Directory-Zuordnungen müssen konfiguriert werden, um die SVMs mit ONTAP zuzuordnen.
+
+
+
+== Anzeigen von Active Directory-Zuordnungen
+
+Sie können die Konfigurationsdetails der Active Directory-Zuordnungen für eine SVM über die folgende Methode anzeigen. Um die Active Directory-Zuordnungen auf einer SVM anzuzeigen, müssen Sie den SVM-Schlüssel eingeben. Um die Details einer bestimmten Zuordnung abfragen zu können, müssen Sie den Zuordnungsschlüssel eingeben.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Anbieter von Storage-Lösungen
+ a| 
+GET
+ a| 
+`/storage-provider/active-directories-mappings`
+
+`/storage-provider/active-directories-mappings/\{key}`
+
+|===
+
+
+== Fügen Sie die Active Directory-Zuordnung hinzu
+
+Sie können Active Directory-Zuordnungen auf einer SVM mit der folgenden Methode erstellen. Sie müssen die Zuordnungsdetails als Eingabeparameter eingeben.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Anbieter von Storage-Lösungen
+ a| 
+POST
+ a| 
+`/storage-provider/active-directories-mappings`
+
+|===

@@ -1,0 +1,43 @@
+---
+permalink: reporting/task_create_report_to_view_ha_pairs_with_most_available_capacity.html 
+sidebar: sidebar 
+keywords: create, report, view, HA pairs, available, capacity 
+summary: 'Sie können einen Bericht erstellen, um zu ermitteln, welche Hochverfügbarkeitspaare (HA) mit der größten Kapazität zur Bereitstellung neuer Volumes und LUNs bestehen.' 
+---
+= Erstellen eines Berichts zur Anzeige von HA-Paaren mit der höchsten verfügbaren Kapazität
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um zu ermitteln, welche Hochverfügbarkeitspaare (HA) mit der größten Kapazität zur Bereitstellung neuer Volumes und LUNs bestehen.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Mit den folgenden Schritten erstellen Sie eine benutzerdefinierte Ansicht, in der HA-Paare angezeigt werden, die nach der meisten verfügbaren Kapazität zur Bereitstellung neuer Volumes und LUNs sortiert sind. Anschließend können Sie einen Bericht für diese Ansicht erstellen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Cluster*.
+. Wählen Sie im Menü Ansicht die Option *Kapazität* > *Alle Cluster*.
+. Wählen Sie *ein-/Ausblenden* aus, um alle Spalten zu entfernen, die im Bericht nicht benötigt werden.
+. Ziehen Sie die Spalte „`Aggregate unused Capacity`“ nahe der Spalte „`HA Pair`“.
+. Klicken Sie auf das Filtersymbol, fügen Sie den folgenden Filter hinzu und klicken Sie dann auf *Filter anwenden*:
++
+** Ungenutzte Kapazität aggregieren über 0.5 TB
+
+
+. Klicken Sie oben in der Spalte „`Aggregate Unused Capacity`“, um die Ergebnisse nach der größten Menge an ungenutzter Aggregatskapazität zu sortieren.
+. Speichern Sie die Ansicht mit einem bestimmten Namen, der angibt, was die Ansicht zeigt, z. B. „`Least Used Aggregate Capacity`“, und klicken Sie auf das Häkchen (image:../media/blue_check.gif[""]).
+. Klicken Sie auf der Bestandsseite auf die Schaltfläche *geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite Berichtspläne eine neue Zeile hinzuzufügen, damit Sie die Terminplaneigenschaften für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtsplan ein, und füllen Sie die anderen Berichtsfelder aus, und klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""]Am Ende der Reihe.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und per E-Mail an die Empfänger gesendet, die unter der angegebenen Häufigkeit aufgeführt sind.
+
+
+
+Auf Grundlage der im Bericht gezeigten Ergebnisse sollten Sie basierend auf der Aggregatskapazität den Ausgleich der HA-Paare schaffen.

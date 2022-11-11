@@ -1,0 +1,34 @@
+---
+permalink: health-checker/task_view_health_and_capacity_status_of_all_san_array_clusters.html 
+sidebar: sidebar 
+keywords: view, all san array, health and capacity, clusters 
+summary: Mithilfe der Cluster-Bestandsseiten können Sie den Zustand und den Kapazitätsstatus Ihrer All-SAN-Array-Cluster anzeigen. 
+---
+= Anzeigen des Funktionszustands und Kapazitätsstatus aller SAN-Array-Cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe der Cluster-Bestandsseiten können Sie den Zustand und den Kapazitätsstatus Ihrer All-SAN-Array-Cluster anzeigen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+
+Sie können die Übersichtsinformationen für alle SAN-Array-Cluster in der Ansicht Systemzustand: Alle Cluster und Kapazität: Alle Cluster anzeigen. Außerdem können Sie Details auf der Seite „Cluster/Health Details“ anzeigen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Cluster*.
+. Stellen Sie sicher, dass die Spalte „`personality`“ in der Ansicht *Health: All Clusters* angezeigt wird, oder fügen Sie sie mit dem Steuerelement *Anzeigen / Ausblenden* hinzu.
++
+In dieser Spalte wird „`All-SAN-Array`“ für Ihre All-SAN-Array-Cluster angezeigt.
+
+. Überprüfen Sie die Informationen.
+. Um Informationen zur Speicherkapazität in diesen Clustern anzuzeigen, wählen Sie die Ansicht Kapazität: Alle Cluster aus.
+. Um detaillierte Informationen zum Systemzustand und zur Storage-Kapazität in diesen Clustern anzuzeigen, klicken Sie auf den Namen eines All-SAN-Array-Clusters.
++
+Zeigen Sie auf der Seite Cluster/Integritätsdetails die Details auf den Registerkarten Systemzustand, Kapazität und Nodes an
+
+

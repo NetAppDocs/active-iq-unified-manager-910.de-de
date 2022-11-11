@@ -1,0 +1,72 @@
+---
+permalink: performance-checker/task_move_workloads_to_different_aggregate.html 
+sidebar: sidebar 
+keywords: move, workloads, different, aggregate 
+summary: Mithilfe von Unified Manager können Sie ein Aggregat identifizieren, das weniger ausgelastet ist als das Aggregat, in dem Ihre Workloads sich befinden. Anschließend können Sie ausgewählte Volumes oder LUNs zu diesem Aggregat verschieben. Durch die Verschiebung hochperformanter Workloads in ein weniger ausgelastete Aggregat oder ein Aggregat mit aktiviertem Flash-Storage können die Workloads effizienter arbeiten. 
+---
+= Verschieben von Workloads in ein anderes Aggregat
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe von Unified Manager können Sie ein Aggregat identifizieren, das weniger ausgelastet ist als das Aggregat, in dem Ihre Workloads sich befinden. Anschließend können Sie ausgewählte Volumes oder LUNs zu diesem Aggregat verschieben. Durch die Verschiebung hochperformanter Workloads in ein weniger ausgelastete Aggregat oder ein Aggregat mit aktiviertem Flash-Storage können die Workloads effizienter arbeiten.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+* Sie müssen den Namen des Aggregats aufgezeichnet haben, das derzeit ein Performance-Problem hat.
+* Sie müssen das Datum und die Uhrzeit aufgezeichnet haben, zu der das Aggregat das Ereignis erhalten hat.
+* Unified Manager muss einen Monat oder mehrere Performance-Daten erfasst und analysiert haben.
+
+
+Anhand dieser Schritte werden die folgenden Ressourcen ermittelt, damit Sie hochperformante Workloads in ein weniger ausgelasttes Aggregat verschieben können:
+
+* Die Aggregate auf demselben Cluster, die weniger genutzt werden
+* Die Volumes mit der höchsten Performance im aktuellen Aggregat
+
+
+.Schritte
+. Identifizieren Sie das Aggregat im Cluster, das am wenigsten genutzt wird:
++
+.. Klicken Sie auf der Seite *Event* Details auf den Namen des Clusters, auf dem sich das Aggregat befindet.
++
+Die Cluster-Details werden auf der Landing Page Performance/Cluster angezeigt.
+
+.. Klicken Sie auf der Seite *Zusammenfassung* im Bereich *verwaltete Objekte* auf *Aggregate*.
++
+Die Liste der Aggregate auf diesem Cluster wird angezeigt.
+
+.. Klicken Sie auf die Spalte *Nutzung*, um die Aggregate nach den am wenigsten verwendeten Aggregaten zu sortieren.
++
+Sie können auch jene Aggregate identifizieren, die die größte *freie Kapazität* haben. Diese Liste enthält potenzielle Aggregate, zu denen Workloads verschoben werden können.
+
+.. Notieren Sie sich den Namen des Aggregats, zu dem Sie die Workloads verschieben möchten.
+
+
+. Ermitteln Sie die hochperformanten Volumes des Aggregats, das das Ereignis erhalten hat:
++
+.. Klicken Sie auf das Aggregat mit der Leistungsfrage.
++
+Die Aggregatdetails werden auf der Seite „Performance/Aggregate Explorer“ angezeigt.
+
+.. Wählen Sie im Auswahlfeld *Zeitbereich* die Option *Letzte 30 Tage* aus und klicken Sie dann auf *Bereich anwenden*.
++
+So können Sie einen längeren Performance-Verlauf anzeigen als die Standarddauer von 72 Stunden. Sie möchten ein Volume verschieben, das viele Ressourcen auf einer konsistenten Basis verwendet, und nicht nur in den letzten 72 Stunden.
+
+.. Wählen Sie im Steuerelement *Ansicht und Vergleich* *Volumen auf diesem Aggregat* aus.
++
+Es wird eine Liste der FlexVol Volumes und FlexGroup-zusammengehörigen Volumes auf diesem Aggregat angezeigt.
+
+.. Sortieren Sie die Volumes nach den höchsten MB/s und dann nach den höchsten IOPS, um die Volumes mit der höchsten Performance zu sehen.
+.. Notieren Sie sich die Namen der Volumes, die Sie in ein anderes Aggregat verschieben möchten.
+
+
+. Verschieben Sie die hochperformanten Volumes auf das identifizierte Aggregat mit niedriger Auslastung.
++
+Sie können den Vorgang der Verschiebung mit ONTAP System Manager, OnCommand Workflow Automation, ONTAP Befehlen oder einer Kombination dieser Tools ausführen.
+
+
+
+Prüfen Sie nach einigen Tagen, ob Sie dieselbe Art von Ereignissen von diesem Node oder Aggregat erhalten.

@@ -1,0 +1,43 @@
+---
+permalink: reporting/task_create_report_to_view_aggregates_that_are_overcommitted.html 
+sidebar: sidebar 
+keywords: create, report, view, aggregates, overcommitted 
+summary: Sie können einen Bericht erstellen, um die Storage-Kapazität und die Verwendung von Aggregaten zu analysieren und überzugesetzte Aggregate anzuzeigen. 
+---
+= Erstellen eines Berichts, um überzugesetzte Aggregate anzuzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um die Storage-Kapazität und die Verwendung von Aggregaten zu analysieren und überzugesetzte Aggregate anzuzeigen.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht zu erstellen, in der Aggregate angezeigt werden, die den überdefinierten Schwellenwert überschreiten. Planen Sie dann einen Bericht für diese Ansicht zu erstellen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Aggregate*.
+. Wählen Sie im Menü Ansicht die Option *Kapazität* > *Alle Aggregate*.
+. Wählen Sie *ein-/Ausblenden* aus, um alle Spalten zu entfernen, die im Bericht nicht benötigt werden.
+. Ziehen Sie die Spalte „`overovered Capacity %`“ nahe der Spalte „`Aggregate`“.
+. Klicken Sie auf das Filtersymbol, fügen Sie die folgenden Filter hinzu und klicken Sie dann auf *Filter anwenden*:
++
+** Überzuviel Kapazität % ist größer als 100 %
+
+
+. Klicken Sie oben in der Spalte „`overed Capacity %`“, um die Ergebnisse nach Capacity prozentual zu sortieren.
+. Speichern Sie die Ansicht mit einem bestimmten Namen, der angibt, was die Ansicht zeigt, z. B. „`Aggregate overed`“, und klicken Sie auf das Häkchen (image:../media/blue_check.gif[""]).
+. Klicken Sie auf der Bestandsseite auf die Schaltfläche *geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite Berichtspläne eine neue Zeile hinzuzufügen, damit Sie die Terminplaneigenschaften für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtsplan ein, und füllen Sie die anderen Berichtsfelder aus, und klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""]Am Ende der Reihe.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und per E-Mail an die Empfänger gesendet, die unter der angegebenen Häufigkeit aufgeführt sind.
+
+
+
+Basierend auf den im Bericht gezeigten Ergebnissen möchten Sie möglicherweise zusätzliche Kapazitäten zu Aggregaten hinzufügen oder einige Daten von bestimmten Aggregaten verschieben.

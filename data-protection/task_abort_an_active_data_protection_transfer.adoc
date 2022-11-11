@@ -1,0 +1,43 @@
+---
+permalink: data-protection/task_abort_an_active_data_protection_transfer.html 
+sidebar: sidebar 
+keywords: abort, active data protection, transfer, volume relationships page, smbc, sm-bc 
+summary: Sie können eine aktive Datensicherung abbrechen, wenn Sie eine SnapMirror Replikation anhalten möchten, die gerade ausgeführt wird. Sie können auch den Checkpoint beim Neustart für Transfers nach dem Basistransfer löschen. Sie können eine Übertragung abbrechen, wenn sie mit einem anderen Vorgang, z. B. einer Volume-Verschiebung, kollidieren. 
+---
+= Aktive Datensicherung wird von der Seite „Volume Relationships“ abgebrochen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine aktive Datensicherung abbrechen, wenn Sie eine SnapMirror Replikation anhalten möchten, die gerade ausgeführt wird. Sie können auch den Checkpoint beim Neustart für Transfers nach dem Basistransfer löschen. Sie können eine Übertragung abbrechen, wenn sie mit einem anderen Vorgang, z. B. einer Volume-Verschiebung, kollidieren.
+
+*HINWEIS:* Sie können keine Volume-Beziehungen abbrechen, die durch die Consistency Group geschützt sind.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen Workflow Automation einrichten.
+
+
+Die Abbruchaktion wird in den folgenden Fällen nicht angezeigt:
+
+* Wenn die RBAC-Einstellungen diese Aktion nicht zulassen, z. B. wenn Sie nur über Operatorrechte verfügen
+* Wenn die Volume-ID unbekannt ist, z. B. wenn eine Intercluster-Beziehung besteht und der Ziel-Cluster noch nicht erkannt wurde
+
+
+Sie können den Kontrollpunkt für den Neustart für einen Basistransfer nicht löschen.
+
+.Schritte
+. Um Übertragungen für eine oder mehrere Schutzbeziehungen abzubrechen, wählen Sie auf der Seite *Volume Relationships* ein oder mehrere Volumes aus, und klicken Sie in der Symbolleiste auf *Abbrechen*.
++
+Das Dialogfeld Übertragung abbrechen wird angezeigt.
+
+. Wenn Sie den Kontrollpunkt für den Neustart für einen Transfer löschen möchten, der kein Basistransfer ist, wählen Sie *Checkpoints löschen* aus.
+. Klicken Sie Auf *Weiter*.
++
+Das Dialogfeld Übertragung abbrechen wird geschlossen, und der Status des Jobs abbrechen wird oben auf der Seite Volume-Beziehungen angezeigt, zusammen mit einem Link zu den Jobdetails.
+
+. *Optional:* Klicken Sie auf den Link *Details anzeigen*, um zur Seite *Job* Details weitere Details zu gelangen und den Fortschritt der Aufträge anzuzeigen.
+

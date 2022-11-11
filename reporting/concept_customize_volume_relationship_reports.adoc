@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_volume_relationship_reports.html 
+sidebar: sidebar 
+keywords: customize, volume, relationship, reports 
+summary: Der Bericht zum Bestand von Volume-Beziehungen ermöglicht Ihnen die Analyse der Details zum Storage-Inventar in einem Cluster, die Analyse des für Volumes erforderlichen Schutzes sowie die Filterung der Volume-Details basierend auf den Fehlerquellen, Mustern und Zeitplänen. 
+---
+= Anpassen von Berichten zu Volume-Beziehungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Bericht zum Bestand von Volume-Beziehungen ermöglicht Ihnen die Analyse der Details zum Storage-Inventar in einem Cluster, die Analyse des für Volumes erforderlichen Schutzes sowie die Filterung der Volume-Details basierend auf den Fehlerquellen, Mustern und Zeitplänen.

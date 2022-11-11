@@ -1,0 +1,14 @@
+---
+permalink: events/concept_manage_events.html 
+sidebar: sidebar 
+keywords: manage, events 
+summary: Ereignisse unterstützen Sie bei der Erkennung von Problemen in den überwachten Clustern. 
+---
+= Verwalten von Ereignissen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ereignisse unterstützen Sie bei der Erkennung von Problemen in den überwachten Clustern.

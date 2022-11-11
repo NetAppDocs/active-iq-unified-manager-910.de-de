@@ -1,0 +1,49 @@
+---
+permalink: performance-checker/concept_roles_of_workloads_involved_in_performance_incident.html 
+sidebar: sidebar 
+keywords: roles, workloads, involved, performance, event 
+summary: Unified Manager verwendet Rollen, um die Beteiligung eines Workloads bei einem Performance-Ereignis zu ermitteln. Zu den Rollen gehören Opfer, Bullies und Haie. Ein benutzerdefiniertes Workload kann gleichzeitig Opfer, Bully und Haifisch sein. 
+---
+= Rollen von Workloads, die an einem Performance-Ereignis beteiligt sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager verwendet Rollen, um die Beteiligung eines Workloads bei einem Performance-Ereignis zu ermitteln. Zu den Rollen gehören Opfer, Bullies und Haie. Ein benutzerdefiniertes Workload kann gleichzeitig Opfer, Bully und Haifisch sein.
+
+|===
+| Rolle | Beschreibung 
+
+
+ a| 
+Opfer
+ a| 
+Ein benutzerdefiniertes Workload, dessen Performance aufgrund anderer Workloads, sogenannte „Verursacher“, stark gesunken ist, die eine Cluster-Komponente überlasten. Es werden nur benutzerdefinierte Workloads als „Opfer“ identifiziert. Unified Manager ermittelt anhand der Latenzabweichung von Opfer-Workloads, bei der die tatsächliche Latenz während eines Ereignisses seit der Latenzprognose (erwarteter Bereich) deutlich zugenommen hat.
+
+
+
+ a| 
+Bully
+ a| 
+Ein benutzerdefiniertes oder systemdefiniertes Workload, dessen Überprovisionierung einer Cluster-Komponente die Performance anderer Workloads, genannt „Opfern“, abnimmt. Unified Manager identifiziert problematische Workloads basierend auf der abweichenden Nutzung einer Cluster-Komponente, wobei die tatsächliche Nutzung während eines Ereignisses deutlich größer ist als der erwartete Nutzungsumfang.
+
+
+
+ a| 
+Hai
+ a| 
+Einen benutzerdefinierten Workload mit der höchsten Auslastung einer Cluster-Komponente im Vergleich zu allen an einem Ereignis beteiligten Workloads. Unified Manager identifiziert Haifisch-Workloads auf der Grundlage ihrer Verwendung einer Clusterkomponente bei einem Ereignis.
+
+|===
+Workloads auf einem Cluster können viele der Cluster-Komponenten gemeinsam nutzen, z. B. Aggregate und die CPU für Netzwerk und Datenverarbeitung. Wenn ein Workload, z. B. ein Volume, seine Nutzung einer Cluster-Komponente so erhöht, dass die Komponente die Workload-Anforderungen nicht effizient erfüllen kann, hat die Komponente Konflikte. Der Workload, der eine Cluster-Komponente übernutzt, ist ein problematischer Bestandteil. Die anderen Workloads, die diese Komponenten gemeinsam nutzen und deren Performance durch die Täter beeinträchtigt wird, sind Opfer. Aktivitäten systemdefinierter Workloads wie Deduplizierung oder Snapshot Kopien können sich auch in „`bullying`“ eskalieren.
+
+Wenn Unified Manager ein Ereignis erkennt, werden alle betroffenen Workloads und Cluster-Komponenten identifiziert, einschließlich der problematische Workloads, die das Ereignis verursacht haben, der Clusterkomponente, die Konflikte verursacht hat, und der Opfer-Workloads, deren Performance aufgrund der gesteigerten Aktivitäten als Folge problematischer Workloads gesunken ist.
+
+[NOTE]
+====
+Wenn Unified Manager die problematische Workloads nicht identifizieren kann, werden nur bei den betroffenen Workloads und der betroffenen Cluster-Komponente ein Alarm ausgegeben.
+
+====
+Unified Manager erkennt Workloads, die Opfer problematischer Workloads sind, und ermittelt zudem, ob dieselben Workloads problematische Workloads werden. Ein Workload kann für sich selbst eine problematische sein. Ein so leistungsstarker Workload, der durch eine Richtliniengruppenbeschränkung gedrosselt wird, führt beispielsweise dazu, dass alle Workloads in der Richtliniengruppe gedrosselt werden – auch selbst. Ein Workload, der ein problematischer oder Opfer in einem laufenden Performance-Ereignis ist, kann seine Rolle ändern oder nicht mehr Teilnehmer des Ereignisses sein.

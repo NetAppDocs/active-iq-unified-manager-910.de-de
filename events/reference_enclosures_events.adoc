@@ -1,0 +1,101 @@
+---
+permalink: events/reference_enclosures_events.html 
+sidebar: sidebar 
+keywords: enclosures, events, impact area, availability, configuration 
+summary: Gehäuse-Events liefern Ihnen Informationen zum Status der Festplatten-Shelf-Gehäuse im Datacenter, sodass Sie mögliche Probleme überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad. 
+---
+= Gehäuse-Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gehäuse-Events liefern Ihnen Informationen zum Status der Festplatten-Shelf-Gehäuse im Datacenter, sodass Sie mögliche Probleme überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.
+
+
+
+== Impact Area: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Platten-Shelf-Lüfter fehlgeschlagen(ocumEvtShelfFanFailed)
+ a| 
+Vorfall
+ a| 
+Storage Shelf
+ a| 
+Kritisch
+
+
+
+ a| 
+Fehler bei der Festplatten-Shelf-Stromversorgung(ocumEvtShelfPowerSupplyFailed)
+ a| 
+Vorfall
+ a| 
+Storage Shelf
+ a| 
+Kritisch
+
+
+
+ a| 
+Platten-Shelf Multipath nicht konfiguriert (ocumDiskShelfConnectivityNotInMultiPath)
+
+Dieses Ereignis gilt nicht für:
+
+* Cluster, die sich in einer MetroCluster-Konfiguration befinden
+* Die folgenden Plattformen: FAS2554, FAS2552, FAS2520 und FAS2240
+
+ a| 
+Dar
+ a| 
+Knoten
+ a| 
+Warnung
+
+
+
+ a| 
+Festplatten-Shelf-Pfad-Ausfall(ocumDiskShelfConnectivitätPathFailure)
+ a| 
+Dar
+ a| 
+Storage Shelf
+ a| 
+Warnung
+
+|===
+
+
+== Impact Area: Konfiguration
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Festplatten-Shelf erkannt (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Knoten
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Entfernte Festplatten-Shelfs (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Knoten
+ a| 
+Informationsdaten
+
+|===

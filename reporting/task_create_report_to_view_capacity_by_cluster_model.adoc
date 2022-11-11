@@ -1,0 +1,38 @@
+---
+permalink: reporting/task_create_report_to_view_capacity_by_cluster_model.html 
+sidebar: sidebar 
+keywords: create, report, view, capacity, cluster, model 
+summary: Sie können einen Bericht erstellen, um die Storage-Kapazität und Auslastung von Clustern auf der Grundlage des Storage-Systemmodells zu analysieren. 
+---
+= Erstellen eines Berichts zur Anzeige der Kapazität nach Clustermodell
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um die Storage-Kapazität und Auslastung von Clustern auf der Grundlage des Storage-Systemmodells zu analysieren.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Mit den folgenden Schritten erstellen Sie eine benutzerdefinierte Ansicht, die Kapazität nach Cluster-Modell anzeigt und dann einen Bericht für diese Ansicht erstellt.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Cluster*.
+. Wählen Sie im Menü Ansicht die Option *Kapazität* > *Alle Cluster*.
+. Wählen Sie *ein-/Ausblenden* aus, um Spalten wie „`Cluster FQDN`“ und „`OS Version`“ zu entfernen, die Sie im Bericht nicht wünschen.
+. Ziehen Sie die „`Gesamt-Rohkapazität`“, die „`Model/Family`“ und die drei Aggregat-Spalten in der Nähe der Spalte „`Cluster`“.
+. Klicken Sie oben in der Spalte „`Model/Family`“, um die Ergebnisse nach Cluster-Typ zu sortieren.
+. Speichern Sie die Ansicht mit einem spezifischen Namen, der die Anzeige beschreibt, z. B. „`Capacity by Cluster Model`“.
+. Klicken Sie auf der Bestandsseite auf die Schaltfläche *geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite *Berichtspläne* eine neue Zeile hinzuzufügen, damit Sie die Terminplaneigenschaften für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtsplan ein, und füllen Sie die anderen Berichtsfelder aus, und klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""]Am Ende der Reihe.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und per E-Mail an die Empfänger gesendet, die unter der angegebenen Häufigkeit aufgeführt sind.
+
+
+
+Auf der Grundlage der im Bericht gezeigten Ergebnisse möchten Sie möglicherweise bestimmte Cluster um mehr Kapazität erweitern oder ältere Cluster-Modelle aktualisieren.

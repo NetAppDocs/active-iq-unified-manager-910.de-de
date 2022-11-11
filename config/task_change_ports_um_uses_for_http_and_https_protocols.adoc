@@ -1,0 +1,44 @@
+---
+permalink: config/task_change_ports_um_uses_for_http_and_https_protocols.html 
+sidebar: sidebar 
+keywords: change, ports, unified manager, uses, http, https, protocols 
+summary: Die Standard-Ports, die Unified Manager für HTTP- und HTTPS-Protokolle verwendet, können nach der Installation geändert werden, falls dies zur Sicherheit erforderlich ist. Die Standardports sind 80 für HTTP und 443 für HTTPS. 
+---
+= Ändern der Ports Unified Manager verwendet für HTTP- und HTTPS-Protokolle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Standard-Ports, die Unified Manager für HTTP- und HTTPS-Protokolle verwendet, können nach der Installation geändert werden, falls dies zur Sicherheit erforderlich ist. Die Standardports sind 80 für HTTP und 443 für HTTPS.
+
+*Was Sie brauchen*
+
+Sie müssen über eine Benutzer-ID und ein Passwort verfügen, um sich bei der Wartungskonsole des Unified Manager-Servers anzumelden.
+
+[NOTE]
+====
+Es gibt einige Ports, die als unsicher, wenn Sie die Mozilla Firefox oder Google Chrome Browser. Fragen Sie im Browser nach, bevor Sie eine neue Portnummer für HTTP- und HTTPS-Datenverkehr zuweisen. Wenn Sie einen unsicheren Anschluss auswählen, kann das System nicht zugänglich gemacht werden. Dies erfordert, dass Sie sich an den Kundendienst wenden, um eine Lösung zu finden.
+
+====
+Die Instanz von Unified Manager wird automatisch neu gestartet, nachdem Sie den Port geändert haben. Stellen Sie also sicher, dass dies ein guter Zeitpunkt ist, um das System für kurze Zeit herunterzufahren.
+
+. Loggen Sie sich mit SSH als Wartungsbenutzer beim Unified Manager Host ein.
++
+Die Eingabeaufforderungen für die Unified ManagerMaintenance-Konsole werden angezeigt.
+
+. Geben Sie die Nummer der Menüoption *Anwendungsports anzeigen/ändern* ein, und drücken Sie dann die Eingabetaste.
+. Geben Sie bei der entsprechenden Aufforderung das Wartungs-Benutzerpasswort erneut ein.
+. Geben Sie die neuen Portnummern für die HTTP- und HTTPS-Ports ein, und drücken Sie dann die Eingabetaste.
++
+Wenn Sie eine Portnummer leer lassen, wird der Standardport für das Protokoll zugewiesen.
+
++
+Sie werden gefragt, ob Sie die Ports ändern und Unified Manager jetzt neu starten möchten.
+
+. Geben Sie *y* ein, um die Ports zu ändern und Unified Manager neu zu starten.
+. Beenden Sie die Wartungskonsole.
+
+
+Nach dieser Änderung müssen Benutzer die neue Portnummer in der URL angeben, um auf die Web-UI von Unified Manager zuzugreifen, z. B. +https://host.company.com:1234+, +https://12.13.14.15:1122+ oder +https://[2001:db8:0:1]:2123+.

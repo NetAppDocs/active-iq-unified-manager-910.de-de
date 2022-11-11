@@ -1,0 +1,877 @@
+---
+permalink: events/reference_volume_events.html 
+sidebar: sidebar 
+keywords: volume, events, impact area, availability, capacity, configuration, performance 
+summary: Volume-Ereignisse liefern Informationen zum Status von Volumes, mit denen Sie auf potenzielle Probleme überwachen können. Die Ereignisse sind nach dem Impact-Bereich gruppiert und umfassen den Event-Namen, den Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad. 
+---
+= Volume-Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Volume-Ereignisse liefern Informationen zum Status von Volumes, mit denen Sie auf potenzielle Probleme überwachen können. Die Ereignisse sind nach dem Impact-Bereich gruppiert und umfassen den Event-Namen, den Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.
+
+Ein Sternchen (*) identifiziert EMS-Ereignisse, die in Unified Manager-Ereignisse konvertiert wurden.
+
+
+
+== Impact Area: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Volumenbeschränkungen (occumEvtVolumeRestricted)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Volume Offline(ocumEvtVolumeOffline)
+ a| 
+Vorfall
+ a| 
+Datenmenge
+ a| 
+Kritisch
+
+
+
+ a| 
+Datenträger teilweise verfügbar(occumEvtVolumePartiallyverfügbar)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+
+
+ a| 
+Volumen abgehängt (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Volume angehängt(nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Volume neu eingebunden (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Volume Junction Path Inaktiv (ocumEvtVolumeJunctionPathInaktiv)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Automatische Volumengröße aktiviert (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Automatische Volume-Größe deaktiviert (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Automatische Volumengröße maximale Kapazität geändert(nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Größe der automatischen Volume-Größe geändert (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+|===
+
+
+== Impact Area: Kapazität
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Volume-Speicherplatz mit Thin Provisioning (ozumThinProvisionVolumeSpaceAtFestplatten)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Voll Volume-Speicherplatz(occumEvtVolumeFull)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+
+
+ a| 
+Volume fast voll (ocumEvtVolumeNearline)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Logischer Speicherplatz des Volume voll * (VolumeLogicalSpaceFull)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+
+
+ a| 
+Logischer Speicherplatz des Volume fast voll * (VolumeLogicalSpaceNearlyFull)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Logischer Speicherplatz des Volume normal *(VolumeLogicalSpaceAllOK)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Volume Snapshot Reserve voll(ocumEvtSnapshotvoll)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Zu viele Snapshot-Kopien (ocumEvtSnapshotTooManche)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+
+
+ a| 
+Volume Qtree Kontingent überengagiert (occumEvtVolumeQtreeQuotaÜberengagiert)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+
+
+ a| 
+Volume Qtree Kontingent fast überengagiert (ocumEvtVolumeQtreeQuotaAlmostÜberengagiert)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Volumenwachstumsrate anormal (ocumEvtVolumeGrowth RowthRateAbnormal)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Volume-Tage bis voll (ocumEvtVolumeTagesUntilFullSoon)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+
+
+ a| 
+Volume Space Guarantee deaktiviert(nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Volume-Space-Garantie Aktiviert (Nicht Zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Volume-Space-Garantie geändert(nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Volume Snapshot Reserve – Tage bis voll (ocumEvtVolumeSnapshotReserviertDaysUntilFullSoon)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+
+
+ a| 
+FlexGroup-Komponenten haben Raumprobleme *(FlexGroupInhaltHaveSpaceIssues)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+
+
+ a| 
+FlexGroup-Komponenten Raumstatus alles OK *(flexGruppeKonstitelenSpaceStatusAllOK)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+FlexGroup-Bestandteile haben Inodes-Probleme *(flexGroupKonstitutionenHaveInodesIssues)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+
+
+ a| 
+FlexGroup-Komponenten inodes Status alles OK *(flexGroupConstitutionenInodesStatusAllOK)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Fehler bei der WAFL-Volume-AutoSize * (WaflVolAutoSizeFail)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+
+
+ a| 
+Automatische WAFL-Volume-Größe abgeschlossen * (WaflVolAutoSizeDone)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+FlexGroup Volumen ist über 80% ausgelastet*
+ a| 
+Vorfall
+ a| 
+Datenmenge
+ a| 
+Fehler
+
+
+
+ a| 
+FlexGroup Volumen ist über 90% ausgelastet*
+ a| 
+Vorfall
+ a| 
+Datenmenge
+ a| 
+Kritisch
+
+
+
+ a| 
+Volume Storage-Effizienz-Anomalie (ocumVolumeAbnormalStorageEffizienzWarnung)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+|===
+
+
+== Impact Area: Konfiguration
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Volumen umbenannt(nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Ermittelte Volumes (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Volume gelöscht (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+|===
+
+
+== Impact Area: Performance
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+QoS Volume Max. IOPS Warnschwellenwert nicht erreicht (ocumQosVolumeMaxIopsWarnung)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+QoS-Volume max. MB/s Warnschwellenwert überschritten(ocumQosVolumeMaxMbpsWarnung)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+QoS Volume Max. IOPS/TB Warnschwellenwert nicht erreicht (ocumQosVolumeMaxIopsPerTbWarnung)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Überschreitung des Workload-Volume-Latenzschwellenwerts gemäß Definition der Performance-Service-Level-Richtlinie (ocumConformanceLatency Warning)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Unterschreiten des kritischen Schwellenwerts für Volume-IOPS (OktumVolumeIopsVorfall)
+ a| 
+Vorfall
+ a| 
+Datenmenge
+ a| 
+Kritisch
+
+
+
+ a| 
+Unterschreitr. Volume IOPS-Warnungsschwellenwert (ocumVolumeIopsWarnung)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Unterschreiten kritischen Schwellenwert für Volume-MB/s (ocumVolumeMbpsVorfall)
+ a| 
+Vorfall
+ a| 
+Datenmenge
+ a| 
+Kritisch
+
+
+
+ a| 
+Volume MB/s Warnschwellenwert überschritten(OccumVolumeMbpsWarnung )
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Volume-Latenz ms/op kritischer Schwellenwert – nicht überschritten (OktumVolumeLatenVorfall)
+ a| 
+Vorfall
+ a| 
+Datenmenge
+ a| 
+Kritisch
+
+
+
+ a| 
+Volume-Latenz ms/op Warnungsschwellenwert nicht überschritten (ocumVolumeLatencyWarnung)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Volume Cache Miss-Verhältnis – kritischer Schwellenwert überschritten (ocumVolumeCacheMissRatioVorfall)
+ a| 
+Vorfall
+ a| 
+Datenmenge
+ a| 
+Kritisch
+
+
+
+ a| 
+Volume Cache Miss Ratio Warnung nicht überschritten (ocumVolumeCacheMissRatioWarnung)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Volume-Latenz und IOPS – kritischer Schwellenwert – nicht erreicht (ocumVolumeLatencyIopsVorfall)
+ a| 
+Vorfall
+ a| 
+Datenmenge
+ a| 
+Kritisch
+
+
+
+ a| 
+Nicht erreichender Volume-Latenz und IOPS -Warnungsschwellenwert (ocumVolumeLatencyIopsWarnung)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Volume-Latenz und MB/s kritischer Schwellenwert – nicht überschritten (ocumVolumeLatencyMbpsVorfall)
+ a| 
+Vorfall
+ a| 
+Datenmenge
+ a| 
+Kritisch
+
+
+
+ a| 
+Volume-Latenz und MB/s Warnschwellenwert nicht eingehalten (ocumVolumeLatencyMbpsWarnung)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Volume-Latenz und Aggregat-Performance-Kapazität eingesetzt. Kritischer Schwellenwert ist nicht erreicht (ocumVolumeLatencyAggregatePerformance-KapazitätenUsedVorfall)
+ a| 
+Vorfall
+ a| 
+Datenmenge
+ a| 
+Kritisch
+
+
+
+ a| 
+Volume-Latenz und verwendete Aggregat-Performance-Kapazität Warnschwellenwert nicht erreicht (ocumVolumeLatencyAggregatePerformance-KapazitätenUsedWarnung)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Volume-Latenz und aggregierte Auslastung kritischer Schwellenwert überschritten (ocumVolumeLatenAggregateUtilizationVorfall)
+ a| 
+Vorfall
+ a| 
+Datenmenge
+ a| 
+Kritisch
+
+
+
+ a| 
+Volume-Latenz und Aggregatauslastung Warnschwellenwert nicht erreicht (ocumVolumeLatenAggregateUtilizationWarnung)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Volume-Latenz und Node-Performance-Kapazität verwendet kritischer Schwellenwert – nicht erreicht (ocumVolumeLatencyNodePerformance-kapazitätBenutzerfall)
+ a| 
+Vorfall
+ a| 
+Datenmenge
+ a| 
+Kritisch
+
+
+
+ a| 
+Verwendete Volume-Latenz und Node-Performance-Kapazität – Warnschwellenwert nicht erreicht (ocumVolumeLatencyNodePerformance-kapazitätUsedWarnung)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Verwendete Volume-Latenz und Node-Performance-Kapazität – Überschreiten kritischer Schwellenwert (ocumVolumeLatencyAggregatePerfkapazitätUseTakeoverIncident)
+ a| 
+Vorfall
+ a| 
+Datenmenge
+ a| 
+Kritisch
+
+
+
+ a| 
+Verwendete Volume-Latenz und Node-Performance-Kapazität – Überschreitung der Schwellenwertverletzungen (ocumVolumeLatencyAggregatePerfkapazitätUseTakeoverWarning)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Volume-Latenz und Node-Auslastung – kritischer Schwellenwert – nicht erreicht (ocumVolumeLatencyNotilationVorfall)
+ a| 
+Vorfall
+ a| 
+Datenmenge
+ a| 
+Kritisch
+
+
+
+ a| 
+Nicht erreichender Schwellenwert für Volume-Latenz und Node-Auslastung (ocumVolumeLatencyNodeUtilizationWarnung)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+|===
+
+
+== Impact Area: Security
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Volume-Anti-Ransomware-Überwachung ist aktiviert (aktiv-Modus) (antiBefreieVolumeaktiviert)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Volume-Anti-Ransomware-Überwachung ist deaktiviert (antiBefreieVolumeSpeicherdeaktiviert)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Volume-Anti-Ransomware-Überwachung ist aktiviert (Learning Mode) (antiBefreieVolumeStateDryrun)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Volume Anti-Ransomware Monitoring ist angehalten (Learning Mode) (antiBefreiwareVolumeStateDryrunPen)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Volume-Anti-Ransomware-Überwachung ist angehalten (aktiver Modus) (antiBefreieVolumeSpeicherErd)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Anti-Ransomware-Monitoring auf Volume wird deaktiviert (AntiErlöserVolumeSpeicherErsternInProgress)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Aktivitäten durch Ransomware (CallHomeBefreiwareActivitySeen)
+ a| 
+Vorfall
+ a| 
+Datenmenge
+ a| 
+Kritisch
+
+
+
+ a| 
+Volume geeignet für die Anti-Ransomware-Überwachung (Lernmodus) (ocumEvtVolumeArwCandidate)
+ a| 
+Ereignis
+ a| 
+Datenmenge
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Volume geeignet für die Anti-Ransomware-Überwachung (aktiver Modus) (ocumVolumeSuitedForActiveAntiBefreiwareDetection)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+
+
+ a| 
+Volume weist eine laute Anti-Ransomware-Warnung auf (antiBefreiwareFeatureNoisyVolume)
+ a| 
+Dar
+ a| 
+Datenmenge
+ a| 
+Warnung
+
+|===

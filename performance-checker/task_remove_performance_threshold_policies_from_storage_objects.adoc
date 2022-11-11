@@ -1,0 +1,59 @@
+---
+permalink: performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html 
+sidebar: sidebar 
+keywords: remove, performance, threshold, policies, storage, objects 
+summary: Sie können eine benutzerdefinierte Performance-Schwellenwertrichtlinie aus einem Storage-Objekt entfernen, wenn Unified Manager den Wert des Performance-Zählers nicht mehr überwachen soll. 
+---
+= Entfernen von Richtlinien für Performance-Schwellenwerte aus Storage-Objekten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine benutzerdefinierte Performance-Schwellenwertrichtlinie aus einem Storage-Objekt entfernen, wenn Unified Manager den Wert des Performance-Zählers nicht mehr überwachen soll.
+
+*Was Sie brauchen*
+
+Sie müssen über die Anwendungsadministratorrolle verfügen.
+
+Sie können jeweils nur eine Richtlinie aus einem ausgewählten Objekt entfernen.
+
+Sie können eine Schwellenwertrichtlinie aus mehreren Speicherobjekten entfernen, indem Sie mehr als ein Objekt in der Liste auswählen.
+
+.Schritte
+. Wählen Sie auf der Seite *Inventory* eines Speicherobjekts ein oder mehrere Objekte aus, auf denen mindestens eine Richtlinie für Leistungsschwellenwerte angewendet wurde.
++
+|===
+| So löschen Sie Schwellenwerte aus... | Tun Sie das... 
+
+
+ a| 
+Ein einzelnes Objekt
+ a| 
+Aktivieren Sie das Kontrollkästchen links neben dem Objekt.
+
+
+
+ a| 
+Mehrere Objekte
+ a| 
+Aktivieren Sie das Kontrollkästchen links neben jedem Objekt.
+
+
+
+ a| 
+Alle Objekte auf der Seite
+ a| 
+Klicken Sie Auf image:../media/select_dropdown_65_png.gif[""] In der Spaltenüberschrift.
+
+|===
+. Klicken Sie Auf *Richtlinie Für Leistungsschwellenwert Löschen*.
++
+Auf der Seite Schwellenwertrichtlinie löschen wird eine Liste mit Schwellenwertrichtlinien angezeigt, die den Speicherobjekten derzeit zugewiesen sind.
+
+. Wählen Sie die Schwellenwertrichtlinie aus, die Sie aus den Objekten entfernen möchten, und klicken Sie auf *Richtlinie löschen*.
++
+Wenn Sie eine Schwellenwertrichtlinie auswählen, werden die Details der Richtlinie angezeigt, damit Sie bestätigen können, dass Sie die entsprechende Richtlinie ausgewählt haben.
+
+

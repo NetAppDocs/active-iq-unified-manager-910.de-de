@@ -1,0 +1,48 @@
+---
+permalink: config/task_perform_initial_setup_of_unified_manager_web_ui.html 
+sidebar: sidebar 
+keywords: perform, initial, setup, unified manager web ui 
+summary: Um Unified Manager zu verwenden, müssen Sie zuerst die anfänglichen Setup-Optionen konfigurieren, einschließlich des NTP-Servers, der Wartungs-Benutzer-E-Mail-Adresse, des SMTP-Server-Hosts und des Hinzufügens von ONTAP-Clustern. 
+---
+= Die Ersteinrichtung der Unified Manager-Weboberfläche durchführen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um Unified Manager zu verwenden, müssen Sie zuerst die anfänglichen Setup-Optionen konfigurieren, einschließlich des NTP-Servers, der Wartungs-Benutzer-E-Mail-Adresse, des SMTP-Server-Hosts und des Hinzufügens von ONTAP-Clustern.
+
+*Was Sie brauchen*
+
+Sie müssen die folgenden Vorgänge durchgeführt haben:
+
+* Die Web-UI von Unified Manager wurde über die nach der Installation bereitgestellte URL gestartet
+* Sie sind mit dem während der Installation erstellten Wartungs-Benutzernamen und -Passwort (umadmin-Benutzer für Linux-Installationen) angemeldet
+
+
+Die Seite Active IQ Unified ManagerGetting Started wird nur angezeigt, wenn Sie das erste Mal auf die Web-Benutzeroberfläche zugreifen. Die folgende Seite ist von einer Installation auf VMware.
+
+image::../media/first_experience_wizard.png[Assistent für die erste Erfahrung]
+
+Wenn Sie später eine dieser Optionen ändern möchten, können Sie Ihre Auswahl aus den Optionen Allgemein im linken Navigationsbereich von Unified Manager auswählen. Beachten Sie, dass die NTP-Einstellung nur für VMware Installationen gilt. Die Einstellung kann später mithilfe der Unified Manager Wartungskonsole geändert werden.
+
+.Schritte
+. Geben Sie auf der Seite Active IQ Unified Manager-Ersteinrichtung die E-Mail-Adresse des Wartungsbenutzers, den Hostnamen des SMTP-Servers und weitere SMTP-Optionen sowie den NTP-Server (nur VMware-Installationen) ein. Klicken Sie dann auf *Weiter*.
+. Klicken Sie auf der AutoSupport Seite auf *zustimmen und fortfahren*, um das Senden von AutoSupport Nachrichten von Unified Manager an NetAppActive IQ zu aktivieren.
++
+Wenn Sie einen Proxy für den Zugriff auf das Internet festlegen müssen, um AutoSupport-Inhalte zu senden, oder wenn Sie AutoSupport deaktivieren möchten, verwenden Sie die Option *Allgemein* > *AutoSupport* von der Web-Benutzeroberfläche.
+
+. Auf Red hat- und CentOS-Systemen können Sie das umadmin-Benutzerpasswort von der standardmäßigen Zeichenfolge „`admin`“ in eine personalisierte Zeichenfolge ändern.
+. Wählen Sie auf der Seite API-Gateway einrichten, ob Sie die API-Gateway-Funktion verwenden möchten, mit der Unified Manager die ONTAP-Cluster verwalten kann, die Sie mit ONTAP REST-APIs überwachen möchten. Klicken Sie dann auf *Weiter*.
++
+Sie können diese Einstellung später in der Web-Benutzeroberfläche über *Allgemein* > *Feature-Einstellungen* > *API-Gateway* aktivieren oder deaktivieren. Weitere Informationen zu den APIs finden Sie unter link:../api-automation/concept_get_started_with_um_apis.html["Erste Schritte mit Active IQ Unified Manager REST APIs"].
+
+. Fügen Sie die Cluster hinzu, die Unified Manager verwalten soll, und klicken Sie dann auf *Weiter*. Für jeden Cluster, den Sie verwalten möchten, müssen Sie den Host-Namen oder die Cluster-Management-IP-Adresse (IPv4 oder IPv6) sowie den Benutzernamen und die Kennwort-Anmeldedaten haben. Der Benutzer muss über die Rolle „`admin`“ verfügen.
++
+Dieser Schritt ist optional. Sie können Cluster später in der Web-Benutzeroberfläche von *Storage Management* > *Cluster-Setup* hinzufügen.
+
+. Überprüfen Sie auf der Seite Zusammenfassung, ob alle Einstellungen korrekt sind, und klicken Sie auf *Fertig stellen*.
+
+
+Die Seite „erste Schritte“ wird geschlossen, und die Seite „Unified Manager Dashboard“ wird angezeigt.

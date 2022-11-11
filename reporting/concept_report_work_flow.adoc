@@ -1,0 +1,16 @@
+---
+permalink: reporting/concept_report_work_flow.html 
+sidebar: sidebar 
+keywords: report, workflow 
+summary: Entscheidungsbaum, in dem der Berichtworkflow beschrieben wird. 
+---
+= Berichtsworkflow zu erstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Entscheidungsbaum, in dem der Berichtworkflow beschrieben wird.
+
+image::../media/reports_view_workflow.png[Berichtsansicht Workflow]

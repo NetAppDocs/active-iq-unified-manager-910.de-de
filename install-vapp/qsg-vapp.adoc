@@ -1,0 +1,54 @@
+---
+permalink: install-vapp/qsg-vapp.html 
+sidebar: sidebar 
+keywords: quick start guide, QSG, VMWare QSG, vApp QSG, quick installation 
+summary: Kurzanleitung für Unified Manager auf VMware vSphere Plattform. 
+---
+= Schnellstartanleitung für VMware Installationen
+:allow-uri-read: 
+
+
+
+
+== Systemanforderungen
+
+* Betriebssystem VMware ESXi 6.5, 6.7 und 7.0
+* RAM: 12 GB
+* CPU: Insgesamt 9572 MHz
+* Freier Speicherplatz: 5 GB (Thin Provisioning), 152 GB (Thick Provisioning)
+
+
+Detaillierte Systemanforderungen finden Sie im link:../install-vapp/concept_requirements_for_installing_unified_manager.html["Anforderungen für die Installation von Unified Manager"] Und link:http://mysupport.netapp.com/matrix["Interoperabilitätsmatrix"].
+
+
+
+== Active IQ Unified Manager wird installiert
+
+
+
+=== Laden Sie das Installationsprogramm herunter
+
+. Laden Sie die herunter `ActiveIQUnifiedManager-<version>.ova` Installationspaket.
+. Speichern Sie die Datei in einem lokalen Verzeichnis oder Netzwerkverzeichnis, auf das Ihr vSphere Client zugreifen kann.
+
+
+
+
+=== Installation Von Unified Manager
+
+. Klicken Sie im vSphere-Client auf *Datei > OVF-Vorlage bereitstellen*.
+. Suchen Sie die OVA-Datei und stellen Sie die virtuelle Appliance mithilfe des Assistenten auf dem ESXi-Server bereit.
+. Füllen Sie auf der Seite Netzwerkkonfiguration auf der Registerkarte Eigenschaften die Felder aus, die für den Installationstyp erforderlich sind, den Sie durchführen:
++
+** Geben Sie für die statische Konfiguration die erforderlichen Informationen in alle Felder ein. Das Hinzufügen von Informationen für das Feld *Secondary DNS* ist nicht erforderlich.
+** Wenn DHCP unter IPv4 verwendet wird, fügen Sie in keinem Feld Informationen hinzu.
+** Aktivieren Sie für DHCP unter Verwendung von IPv6 das Kontrollkästchen „Automatische IPv6-Adresse aktivieren“. Fügen Sie in keinem anderen Feld Informationen hinzu.
+
+
+. Schalten Sie die VM ein.
+. Klicken Sie auf die Registerkarte Konsole, um den anfänglichen Startvorgang anzuzeigen.
+. Zeitzone konfigurieren.
+. Geben Sie einen Benutzernamen und ein Passwort für die Unified Manager-Wartung ein.
+
+
+Am Ende der Installation werden die Informationen zur Verbindung mit der Unified Manager Web-Benutzeroberfläche angezeigt.

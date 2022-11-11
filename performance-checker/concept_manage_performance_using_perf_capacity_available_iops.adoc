@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/concept_manage_performance_using_perf_capacity_available_iops.html 
+sidebar: sidebar 
+keywords: managing, performance, performance, capacity, available, iops, information 
+summary: Die Performance-Kapazität gibt an, wie viel Durchsatz eine Ressource erreicht werden kann, ohne die nützliche Performance dieser Ressource zu überschreiten. Wenn Sie die Nutzung vorhandener Performance-Zähler verwenden, ist die Performance-Kapazität der Punkt, an dem Sie die maximale Auslastung eines Node oder Aggregats erhalten, bevor die Latenz zu einem Problem wird. 
+---
+= Performance-Management mithilfe von Performance-Kapazität und verfügbaren IOPS-Informationen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+_Performance Capacity_ zeigt an, wie viel Durchsatz eine Ressource erhalten kann, ohne die nützliche Performance dieser Ressource zu überschreiten. Wenn Sie die Nutzung vorhandener Performance-Zähler verwenden, ist die Performance-Kapazität der Punkt, an dem Sie die maximale Auslastung eines Node oder Aggregats erhalten, bevor die Latenz zu einem Problem wird.
+
+Unified Manager sammelt Performance-Kapazitätsstatistiken von Nodes und Aggregaten in jedem Cluster. _Performance-Kapazität verwendet_ ist der Prozentsatz der derzeit genutzten Performance-Kapazität und _Performance Capacity free_ ist der Prozentsatz der noch verfügbaren Performance-Kapazität.
+
+Während die freie Performance-Kapazität einen Prozentsatz der noch verfügbaren Ressource bietet, gibt Ihnen _verfügbare IOPS_ die Anzahl an IOPS an, die der Ressource hinzugefügt werden können, bevor sie die maximale Performance-Kapazität erreicht. Mithilfe dieser Kennzahl können Sie sicherstellen, dass Sie Workloads mit einer vorab festgelegten Anzahl von IOPS zu einer Ressource hinzufügen können.
+
+Das Monitoring der Informationen zur Performance-Kapazität bietet folgende Vorteile:
+
+* Hilft bei der Workflow-Bereitstellung und beim Lastausgleich.
+* Hilft Ihnen, eine Überlastung eines Knotens zu verhindern oder seine Ressourcen über den optimalen Punkt hinaus zu schieben, wodurch die Fehlerbehebung verringert wird.
+* Präzisere Bestimmung, bei denen möglicherweise zusätzliche Storage-Geräte erforderlich sind
+

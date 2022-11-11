@@ -1,0 +1,25 @@
+---
+permalink: data-protection/task_view_resource_pool_inventory.html 
+sidebar: sidebar 
+keywords: view, resource pools, inventory 
+summary: Auf der Seite „Ressourcen-Pools“ können Sie den Ressourcenpoolbestand anzeigen und die verbleibende Kapazität für jeden Ressourcenpool überwachen. 
+---
+= Anzeigen des Ressourcenpools-Inventars
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Ressourcen-Pools“ können Sie den Ressourcenpoolbestand anzeigen und die verbleibende Kapazität für jeden Ressourcenpool überwachen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritt
+. Klicken Sie im linken Navigationsbereich auf *Schutz* > *Ressourcen-Pools*.
++
+Der Ressourcenpoolbestand wird angezeigt.
+
+

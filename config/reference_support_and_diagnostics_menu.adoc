@@ -1,0 +1,29 @@
+---
+permalink: config/reference_support_and_diagnostics_menu.html 
+sidebar: sidebar 
+keywords: support and diagnostics, menu 
+summary: Über das Menü „Support and Diagnostics“ können Sie ein Support Bundle erstellen, das Sie zur Fehlerbehebung an den technischen Support senden können. 
+---
+= Menü „Support und Diagnose“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über das Menü „Support and Diagnostics“ können Sie ein Support Bundle erstellen, das Sie zur Fehlerbehebung an den technischen Support senden können.
+
+Folgende Menüoptionen stehen zur Verfügung:
+
+* *Lichtunterstützungspaket Generieren*
++
+Ermöglicht Ihnen die Erstellung eines schlanken Supportpakets, das nur 30 Tage Protokolle und Konfigurationsdatenbankdatensätze enthält - es schließt Leistungsdaten, Erfassungsdateien und Server Heap Dump aus.
+
+* * Unterstützungspaket Generieren*
++
+Mit dieser Funktion können Sie ein komplettes Supportpaket (7-Zip-Datei) mit Diagnoseinformationen im Home-Verzeichnis des Diagnosebenutzers erstellen. Wenn Ihr System mit dem Internet verbunden ist, können Sie auch das Support Bundle auf NetApp hochladen.
+
++
+Die Datei enthält Informationen, die durch eine AutoSupport Meldung, den Inhalt der Unified Manager Datenbank, detaillierte Daten zu den internen Unified Manager Servern und ausführliche Protokolle, die normalerweise nicht in AutoSupport Meldungen oder im Lightweight Support Bundle enthalten sind.
+
+

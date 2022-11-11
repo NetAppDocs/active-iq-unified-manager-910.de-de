@@ -1,0 +1,52 @@
+---
+permalink: reporting/reference_reporting_limitations.html 
+sidebar: sidebar 
+keywords: reporting, limitations 
+summary: Es gibt einige Einschränkungen bei der neuen Active IQ Unified Manager-Berichtsfunktion, die Sie beachten sollten. 
+---
+= Einschränkungen bei der Berichterstellung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es gibt einige Einschränkungen bei der neuen Active IQ Unified Manager-Berichtsfunktion, die Sie beachten sollten.
+
+
+
+== Vorhandene Berichte aus früheren Versionen von Unified Manager
+
+Sie können den Zeitplan und die Empfänger nur für vorhandene Berichte bearbeiten, die in Unified Manager 9.5 und früheren Versionen erstellt und importiert wurden (als .rptdesign-Dateien). Wenn Sie einen der Standardberichte, die mit Unified Manager 9.5 oder früher bereitgestellt wurden, angepasst haben, werden diese benutzerdefinierten Berichte nicht in das neue Reporting-Tool importiert.
+
+Wenn Sie vorhandene Berichte bearbeiten müssen, die aus .rptdesign-Dateien importiert wurden, führen Sie einen der folgenden Schritte aus, und entfernen Sie den importierten Bericht:
+
+* Erstellen einer neuen Ansicht und Planen eines Berichts aus dieser Ansicht (bevorzugt)
+* Bewegen Sie den Mauszeiger über den Bericht, kopieren Sie den SQL, und ziehen Sie die Daten mit einem externen Tool
+
+
+Die Standardansichten können als Berichte erstellt werden, ohne dass eine Anpassung erforderlich ist. Sie können die neue Berichtslösung verwenden, um benutzerdefinierte Berichte neu zu erstellen.
+
+
+
+== Planen und berichten von Beziehungen
+
+Sie können für jeden gespeicherten Bericht viele verschiedene Zeitpläne mit einer beliebigen Kombination von Empfängern erstellen. Sie können den Zeitplan jedoch nicht für mehrere Berichte wiederverwenden.
+
+
+
+== Berichtsschutz
+
+Jeder Benutzer mit den entsprechenden Berechtigungen kann Berichte bearbeiten oder löschen. Es gibt keine Möglichkeit, andere Benutzer daran zu hindern, gespeicherte Ansichten oder Zeitpläne zu entfernen oder zu ändern.
+
+
+
+== Ereignisberichte
+
+Sie können die Ereignisansicht anpassen und den resultierenden Bericht im CSV-Format herunterladen, jedoch können Sie keine wiederkehrenden Ereignisberichte für die Erstellung und Verteilung planen.
+
+
+
+== Berichtsanhänge
+
+Berichte können nicht im Text einer E-Mail gesendet werden. Stattdessen werden Berichte nur als PDF-, Excel- oder CSV-Anlagen versendet.

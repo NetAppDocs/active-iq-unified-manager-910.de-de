@@ -1,0 +1,79 @@
+---
+permalink: performance-checker/task_create_user_defined_performance_threshold_policies.html 
+sidebar: sidebar 
+keywords: create, user-defined, performance, threshold, policies 
+summary: Sie erstellen Performance-Schwellenwertrichtlinien für Storage-Objekte, damit Benachrichtigungen gesendet werden, wenn ein Performance-Zähler einen bestimmten Wert überschreitet. Die Ereignisbenachrichtigung identifiziert, dass ein Performance-Problem auf dem Cluster auftritt. 
+---
+= Benutzerdefinierte Richtlinien für Leistungsschwellenwerte werden erstellt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie erstellen Performance-Schwellenwertrichtlinien für Storage-Objekte, damit Benachrichtigungen gesendet werden, wenn ein Performance-Zähler einen bestimmten Wert überschreitet. Die Ereignisbenachrichtigung identifiziert, dass ein Performance-Problem auf dem Cluster auftritt.
+
+*Was Sie brauchen*
+
+Sie müssen über die Anwendungsadministratorrolle verfügen.
+
+Sie erstellen Richtlinien für Leistungsschwellenwerte, indem Sie die Schwellenwerte auf der Seite Richtlinie für Leistungsschwellenwert erstellen eingeben. Sie können neue Richtlinien erstellen, indem Sie alle Richtlinienwerte auf dieser Seite definieren, oder Sie können eine Kopie einer vorhandenen Richtlinie erstellen und die Werte in der Kopie ändern (genannt _Cloning_).
+
+Gültige Schwellenwerte sind 0.001 bis 10,000,000 für Zahlen, 0.001-100 für Prozentsätze und 0.001-200 für Performance-Kapazität verwendet Prozentwerte.
+
+[NOTE]
+====
+Der aktuelle Release bietet Schwellenwerte, die Ereignisse senden, wenn ein Zählerwert die Schwellenwerteinstellung überschreitet. Sie können keine Schwellenwerte festlegen, die Ereignisse senden, wenn ein Zählerwert unter eine Schwellenwerteinstellung fällt.
+
+====
+.Schritte
+. Wählen Sie im linken Navigationsbereich *Ereignisschwellenwerte* > *Leistung* aus.
++
+Die Seite Leistungsschwellenwerte wird angezeigt.
+
+. Je nachdem, ob Sie eine neue Richtlinie erstellen möchten oder eine ähnliche Richtlinie klonen und die geklonte Version ändern möchten, klicken Sie auf die entsprechende Schaltfläche.
++
+|===
+| An... | Klicken Sie Auf... 
+
+
+ a| 
+Erstellen Sie eine neue Richtlinie
+ a| 
+*Erstellen*
+
+
+
+ a| 
+Vorhandene Richtlinie klonen
+ a| 
+Wählen Sie eine vorhandene Richtlinie aus, und klicken Sie auf *Clone*
+
+|===
++
+Die Seite „Richtlinie für Leistungsschwellenwert erstellen“ oder „Richtlinie für Leistungsschwellenwert klonen“ wird angezeigt.
+
+. Definieren Sie die Schwellenwertrichtlinie, indem Sie die Performance-Zählerschwellenwerte angeben, die für bestimmte Storage-Objekte festgelegt werden sollen:
++
+.. Wählen Sie den Speicherobjekttyp aus, und geben Sie einen Namen und eine Beschreibung für die Richtlinie an.
+.. Wählen Sie den zu verfollenden Leistungszähler aus und geben Sie die Grenzwerte an, die Warnungs- und kritische Ereignisse definieren.
++
+Sie müssen mindestens eine Warnung oder einen kritischen Grenzwert definieren. Sie müssen nicht beide Arten von Limits definieren.
+
+.. Wählen Sie ggf. einen sekundären Leistungsindikenzähler aus und geben Sie die Grenzwerte für Warnungs- und kritische Ereignisse an.
++
+Zum Einbeziehen eines sekundären Zählers müssen beide Zähler die Grenzwerte überschreiten, bevor der Schwellenwert überschritten wird und ein Ereignis gemeldet wird. Es können nur bestimmte Objekte und Zähler anhand einer Kombinationsrichtlinie konfiguriert werden.
+
+.. Wählen Sie die Dauer aus, für die die Grenzwerte für ein zu sendes Ereignis überschritten werden müssen.
+
+
++
+Beim Klonen einer vorhandenen Richtlinie müssen Sie einen neuen Namen für die Richtlinie eingeben.
+
+. Klicken Sie auf *Speichern*, um die Richtlinie zu speichern.
++
+Sie gelangen zur Seite „Performance Schwellenwerte“ zurück. Eine Erfolgsmeldung oben auf der Seite bestätigt, dass die Schwellenwertrichtlinie erstellt wurde und einen Link zur Inventarseite für diesen Objekttyp enthält, damit Sie die neue Richtlinie sofort auf Speicherobjekte anwenden können.
+
+
+
+Wenn Sie die neue Schwellenwertrichtlinie zu diesem Zeitpunkt auf Speicherobjekte anwenden möchten, können Sie auf den Link *Gehe zu Object_type now* klicken, um zur Inventarseite zu gelangen.

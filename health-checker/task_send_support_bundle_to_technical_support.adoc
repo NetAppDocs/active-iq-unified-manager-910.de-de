@@ -1,0 +1,28 @@
+---
+permalink: health-checker/task_send_support_bundle_to_technical_support.html 
+sidebar: sidebar 
+keywords: support bundle, technical support 
+summary: Wenn ein Problem detailliertere Diagnose- und Fehlerbehebungsinformationen erfordert als eine AutoSupport Meldung, können Sie ein Support Bundle an den technischen Support senden. 
+---
+= Senden eines Support Bundle an den technischen Support
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn ein Problem detailliertere Diagnose- und Fehlerbehebungsinformationen erfordert als eine AutoSupport Meldung, können Sie ein Support Bundle an den technischen Support senden.
+
+*Was Sie brauchen*
+
+Sie müssen Zugriff auf das Support-Bundle haben, um es an den technischen Support zu senden.
+
+Sie müssen über die technische Support-Website eine Case-Nummer generiert haben.
+
+.Schritte
+. Loggen Sie sich auf der NetApp Support Site ein.
+. Laden Sie die Datei hoch.
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Miscellaneous/How_to_upload_a_file_to_NetApp["Wie zum Hochladen einer Datei auf NetApp"]
+
+

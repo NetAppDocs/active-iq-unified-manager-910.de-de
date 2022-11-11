@@ -1,0 +1,45 @@
+---
+permalink: install-linux/task_manually_configure_mysql_repository.html 
+sidebar: sidebar 
+keywords: data center manager, manually, configure, mysql repository 
+summary: Wenn das System, auf dem Sie Unified Manager installieren, keinen Zugriff auf das MySQL Community Edition Repository hat, müssen Sie das Repository manuell herunterladen und konfigurieren, damit eine erfolgreiche Installation durchgeführt werden kann. 
+---
+= Manuelles Konfigurieren des MySQL-Repository
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn das System, auf dem Sie Unified Manager installieren, keinen Zugriff auf das MySQL Community Edition Repository hat, müssen Sie das Repository manuell herunterladen und konfigurieren, damit eine erfolgreiche Installation durchgeführt werden kann.
+
+Das MySQL-Repository bietet Zugriff auf die erforderliche MySQL-Software, die auf Ihrem System installiert werden muss.
+
+[NOTE]
+====
+Diese Aufgabe kann fehlschlagen, wenn das System keine Internetverbindung hat. Beachten Sie die MySQL-Dokumentation, wenn das System, auf dem Sie Unified Manager installieren, keinen Internetzugang hat.
+
+====
+.Schritte
+. Laden Sie das entsprechende MySQL-Repository für Ihre Installation herunter. Für Red hat Enterprise Linux 7 können Sie ihn unter folgender Adresse herunterladen:
++
+`+wget http://repo.mysql.com/yum/mysql-8.0-community/el/7/x86_64/mysql80-community-release-el7-3.noarch.rpm+`
+
++
+Laden Sie die Version 8 unter folgender Adresse herunter:
+
++
+`+wget http://repo.mysql.com/yum/mysql-8.0-community/el/8/x86_64/mysql80-community-release-el8-1.noarch.rpm+`
+
+. Konfigurieren Sie das MySQL-Repository:
++
+`yum install mysql80-community-release-<version>.noarch.rpm`
+
+
+
+Wenn Sie für Red hat Enterprise Linux 8 interne Repositorys mit java-11-openjdk, p7zip und anderen vom AppStream-Repository bereitgestellten Softwarepaketen haben, müssen Sie Ihr AppStream-Repository deaktivieren und MySQL Community Server installieren. Führen Sie den folgenden Befehl aus:
+
+[listing]
+----
+# sudo yum --disablerepo=rhel-8-for-x86_64-appstream-rpms install  mysql-community-server
+----

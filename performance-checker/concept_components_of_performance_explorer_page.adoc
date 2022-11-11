@@ -1,0 +1,70 @@
+---
+permalink: performance-checker/concept_components_of_performance_explorer_page.html 
+sidebar: sidebar 
+keywords: components, performance, explorer, page 
+summary: Auf der Seite „Performance Explorer“ können Sie die Performance ähnlicher Objekte in einem Cluster vergleichen, z. B. aller Volumes in einem Cluster. Dies ist von Vorteil bei der Fehlerbehebung von Performance-Ereignissen und bei der Feinabstimmung der Objekt-Performance. Sie können auch Objekte mit dem Root-Objekt vergleichen, dem Basisobjekt, mit dem andere Objektvergleiche erstellt werden. 
+---
+= Komponenten der Seite Performance Explorer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Performance Explorer“ können Sie die Performance ähnlicher Objekte in einem Cluster vergleichen, z. B. aller Volumes in einem Cluster. Dies ist von Vorteil bei der Fehlerbehebung von Performance-Ereignissen und bei der Feinabstimmung der Objekt-Performance. Sie können auch Objekte mit dem Root-Objekt vergleichen, dem Basisobjekt, mit dem andere Objektvergleiche erstellt werden.
+
+Klicken Sie auf die Schaltfläche *zur Integritätsansicht wechseln*, um die Seite Integritätsdetails für dieses Objekt anzuzeigen. In einigen Fällen können Sie wichtige Informationen über die Speicherkonfigurationseinstellungen für dieses Objekt erhalten, die bei der Fehlerbehebung hilfreich sein können.
+
+Auf der Seite Performance Explorer werden eine Liste der Cluster-Objekte und ihre Performance-Daten angezeigt. Auf dieser Seite werden alle Clusterobjekte des gleichen Typs (z. B. Volumes und ihre objektspezifischen Performance-Statistiken) in einem tabellarischen Format angezeigt. Diese Ansicht bietet einen effizienten Überblick über die Cluster-Objekt-Performance.
+
+[NOTE]
+====
+Wenn „`N/A`“ in einer beliebigen Zelle der Tabelle angezeigt wird, bedeutet dies, dass kein Wert für diesen Zähler verfügbar ist, da zu diesem Zeitpunkt kein I/O für dieses Objekt vorhanden ist.
+
+====
+Die Seite Performance Explorer enthält die folgenden Komponenten:
+
+* *Zeitbereich*
++
+Ermöglicht die Auswahl eines Zeitbereichs für die Objektdaten.
+
++
+Sie können einen vordefinierten Bereich auswählen oder Ihren eigenen benutzerdefinierten Zeitbereich festlegen.
+
+* *Anzeigen und Vergleichen*
++
+Ermöglicht die Auswahl, welcher Typ des korrelierten Objekts in der Tabelle angezeigt wird.
+
++
+Die verfügbaren Optionen hängen vom Root-Objekttyp und dessen verfügbaren Daten ab. Sie können auf die Dropdown-Liste Anzeigen und Vergleichen klicken, um einen Objekttyp auszuwählen. Der ausgewählte Objekttyp wird in der Liste angezeigt.
+
+* *Filterung*
++
+Hiermit können Sie die Menge der einbezogenen Daten auf der Grundlage Ihrer Präferenzen eingrenzen.
+
++
+Sie können Filter erstellen, die auf die Objektdaten angewendet werden, z. B. IOPS über 4. Sie können bis zu vier gleichzeitige Filter hinzufügen.
+
+* * Vergleich*
++
+Zeigt eine Liste der Objekte an, die Sie zum Vergleich mit dem Stammobjekt ausgewählt haben.
+
++
+Die Daten für die Objekte im vergleichenden Fensterbereich werden in den Zählerdiagrammen angezeigt.
+
+* *Statistik In* Anzeigen
++
+Bei Volume und LUNs können Sie auswählen, ob die Statistiken nach jedem Erfassungszyklus angezeigt werden (Standardeinstellung 5 Minuten), oder ob die Statistiken als stündlicher Durchschnitt angezeigt werden. Diese Funktionalität ermöglicht die Anzeige des Latenzdiagramms zur Unterstützung des NetApp „Performance-Garantie“-Programms.
+
+* *Counter Charts*
++
+Zeigt graphengraphierte Daten für jede Objektleistungkategorie an.
+
++
+Normalerweise werden standardmäßig nur drei oder vier Diagramme angezeigt. Mit der Komponente Diagramm auswählen können Sie zusätzliche Diagramme anzeigen oder bestimmte Diagramme ausblenden. Sie können auch auswählen, ob Sie die Ereigniszeitleiste ein- oder ausblenden möchten.
+
+* *Zeitleiste Für Veranstaltungen*
++
+Zeigt die Performance- und Integritätsereignisse an, die in der Zeitbereich-Komponente in der von Ihnen ausgewählten Zeitachse auftreten.
+
+

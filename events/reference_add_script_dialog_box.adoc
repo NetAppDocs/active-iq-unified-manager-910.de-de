@@ -1,0 +1,26 @@
+---
+permalink: events/reference_add_script_dialog_box.html 
+sidebar: sidebar 
+keywords: add, script, dialog, box 
+summary: Im Dialogfeld Skript hinzufügen können Sie Skripts zu Unified Manager hinzufügen. Sie können Benachrichtigungen mit Ihren Skripten konfigurieren, um automatisch Ereignisse zu beheben, die für Speicherobjekte generiert werden. 
+---
+= Dialogfeld „Skript hinzufügen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Skript hinzufügen können Sie Skripts zu Unified Manager hinzufügen. Sie können Benachrichtigungen mit Ihren Skripten konfigurieren, um automatisch Ereignisse zu beheben, die für Speicherobjekte generiert werden.
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+* *Wählen Sie Skriptdatei*
++
+Ermöglicht die Auswahl eines Skripts für die Warnmeldung.
+
+* *Beschreibung*
++
+Hier können Sie eine Beschreibung für das Skript angeben.
+
+

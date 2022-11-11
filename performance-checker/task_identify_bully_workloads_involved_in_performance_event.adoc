@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/task_identify_bully_workloads_involved_in_performance_event.html 
+sidebar: sidebar 
+keywords: identify, bully workloads, dynamic, performance, event 
+summary: 'In Unified Manager können Sie ermitteln, welche Workloads die höchste Nutzungsabweichung einer Clusterkomponente aufweisen. Anhand der Ermittlung dieser Workloads können Sie nachvollziehen, warum bestimmte Volumes des Clusters über langsame Reaktionszeiten (Latenz) verfügen.' 
+---
+= Identifizierung problematischer Workloads, die an einem dynamischen Performance-Ereignis beteiligt sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In Unified Manager können Sie ermitteln, welche Workloads die höchste Nutzungsabweichung einer Clusterkomponente aufweisen. Anhand der Ermittlung dieser Workloads können Sie nachvollziehen, warum bestimmte Volumes des Clusters über langsame Reaktionszeiten (Latenz) verfügen.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+* Es müssen neue, anerkannte oder veraltete dynamische Leistungsereignisse vorliegen.
+
+
+Auf der Seite Ereignisdetails wird eine Liste der benutzerdefinierten und systemdefinierten Workloads angezeigt, die nach der höchsten Nutzung der Komponente oder am stärksten von dem Ereignis betroffen sind. Die Werte basieren auf den Peaks, die Unified Manager bei der Erkennung und letzten Analyse des Ereignisses ermittelt hat.
+
+.Schritte
+. Zeigen Sie die Seite Ereignisdetails an, um Informationen zum Ereignis anzuzeigen.
+. Wählen Sie in den Diagrammen Workload-Latenz und Workload-Aktivität *Bully Workloads* aus.
+. Bewegen Sie den Mauszeiger über die Diagramme, um die obersten benutzerdefinierten problematischer Workloads anzuzeigen, die sich auf die Komponente auswirken.
+

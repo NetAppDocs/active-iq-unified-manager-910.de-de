@@ -1,0 +1,36 @@
+---
+permalink: data-protection/task_create_snapvault_policy_to_maximize_transfer_efficiency.html 
+sidebar: sidebar 
+keywords: create, snapvault, policy,  maximize, transfer, efficiency 
+summary: Sie können eine neue SnapVault-Richtlinie erstellen, um die Priorität für eine SnapVault-Übertragung festzulegen. Anhand von Richtlinien wird die Effizienz der Übertragungen in einer Sicherungsbeziehung vom primären zum sekundären Volume maximiert. 
+---
+= Erstellen einer SnapVault-Richtlinie zur Maximierung der Übertragungseffizienz
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine neue SnapVault-Richtlinie erstellen, um die Priorität für eine SnapVault-Übertragung festzulegen. Anhand von Richtlinien wird die Effizienz der Übertragungen in einer Sicherungsbeziehung vom primären zum sekundären Volume maximiert.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen Workflow Automation einrichten.
+* Sie müssen bereits den Bereich Zielinformationen im Dialogfeld Schutz konfigurieren ausgefüllt haben.
+
+
+.Schritte
+. Klicken Sie im Dialogfeld *Schutz konfigurieren* auf der Registerkarte *SnapVault* im Bereich *Beziehungseinstellungen* auf den Link *Richtlinien erstellen*.
++
+Die Registerkarte SnapVault wird angezeigt.
+
+. Geben Sie im Feld *Policy Name* den Namen ein, den Sie der Richtlinie geben möchten.
+. Wählen Sie im Feld *Priorität übertragen* die Übertragungspriorität aus, die Sie der Richtlinie zuweisen möchten.
+. *Optional:* Geben Sie im Feld *Kommentar* einen Kommentar für die Richtlinie ein.
+. Fügen Sie im Bereich *Replication Label* eine Replikationbeschriftung bei Bedarf hinzu oder bearbeiten Sie sie.
+. Klicken Sie Auf *Erstellen*.
++
+Die neue Richtlinie wird in der Dropdown-Liste Richtlinie erstellen angezeigt.
+
+

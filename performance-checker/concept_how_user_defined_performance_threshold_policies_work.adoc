@@ -1,0 +1,107 @@
+---
+permalink: performance-checker/concept_how_user_defined_performance_threshold_policies_work.html 
+sidebar: sidebar 
+keywords: user-defined, performance, threshold, policies, work 
+summary: 'Sie legen für Storage-Objekte Richtlinien für Performance-Schwellenwerte fest (z. B. für Aggregate und Volumes), damit ein Ereignis an den Storage-Administrator gesendet werden kann, um den Administrator zu informieren, dass im Cluster ein Performance-Problem auftritt.' 
+---
+= Funktionsweise benutzerdefinierter Richtlinien für Leistungsschwellenwerte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie legen für Storage-Objekte Richtlinien für Performance-Schwellenwerte fest (z. B. für Aggregate und Volumes), damit ein Ereignis an den Storage-Administrator gesendet werden kann, um den Administrator zu informieren, dass im Cluster ein Performance-Problem auftritt.
+
+Sie erstellen eine Performance-Schwellenwertrichtlinie für ein Storage-Objekt durch:
+
+* Auswählen eines Storage-Objekts
+* Auswählen eines Performance-Zählers, der diesem Objekt zugeordnet ist
+* Festlegen von Werten, die die oberen Grenzwerte des Performance-Zählers definieren, die als Warnung und kritische Situationen gelten
+* Geben Sie einen Zeitraum an, der definiert, wie lange der Zähler den oberen Grenzwert überschreiten muss
+
+
+Beispielsweise können Sie eine Performance-Schwellenwertrichtlinie für ein Volume festlegen, damit Sie bei jedem IOPS für dieses Volume 750 in 10 aufeinanderfolgenden Minuten eine wichtige Ereignisbenachrichtigung erhalten. Diese Schwellenwertrichtlinie kann auch festlegen, dass ein Warnereignis gesendet wird, wenn IOPS mehr als 500 Operationen pro Sekunde für 10 Minuten beträgt.
+
+[NOTE]
+====
+Der aktuelle Release bietet Schwellenwerte, die Ereignisse senden, wenn ein Zählerwert die Schwellenwerteinstellung überschreitet. Sie können keine Schwellenwerte festlegen, die Ereignisse senden, wenn ein Zählerwert unter eine Schwellenwerteinstellung fällt.
+
+====
+Hier wird ein Beispiel für ein Zählerdiagramm angezeigt, das angibt, dass ein Warnschwellenwert (gelbes Symbol) um 1:00 verletzt wurde und dass ein kritischer Schwellenwert (rotes Symbol) um 12:10, 12:30 und 1:10 Uhr verletzt wurde:
+
+image::../media/opm2_threshold_breach.gif[Überschreitung des Opm2-Schwellenwerts]
+
+Für die angegebene Dauer muss eine Schwellenverletzung kontinuierlich auftreten. Wenn der Schwellenwert aus irgendeinem Grund unter die Grenzwerte fällt, wird eine spätere Verletzung als Beginn einer neuen Dauer betrachtet.
+
+Durch einige Cluster-Objekte und Performance-Zähler können Sie eine kombinierte Schwellenwertrichtlinie erstellen, bei der zwei Performance-Zähler ihre Höchstgrenzen überschreiten müssen, bevor ein Ereignis generiert wird. Sie können beispielsweise anhand der folgenden Kriterien eine Schwellenwertrichtlinie erstellen:
+
+|===
+| Cluster-Objekt | Performance-Zähler | Warnschwellenwert | Kritischer Schwellenwert | Dauer 
+
+
+ a| 
+Datenmenge
+ a| 
+Latenz
+ a| 
+10 Millisekunden
+ a| 
+20 Millisekunden
+ a| 
+15 Minuten
+
+
+
+ a| 
+Aggregat
+ a| 
+Auslastung
+ a| 
+65 % erzielt
+ a| 
+85 % erzielt
+ a| 
+
+|===
+Schwellenwertrichtlinien, die zwei Cluster-Objekte verwenden, führen dazu, dass ein Ereignis nur generiert wird, wenn beide Bedingungen nicht erfüllt sind. Beispiel anhand der in der Tabelle definierten Schwellwertrichtlinie:
+
+|===
+| Wenn Volume-Latenz durchschnittlich ist... | Und Festplatten-Auslastung aggregieren ist... | Dann... 
+
+
+ a| 
+15 Millisekunden
+ a| 
+50 % erzielt
+ a| 
+Es wird kein Ereignis gemeldet.
+
+
+
+ a| 
+15 Millisekunden
+ a| 
+75 % erzielt
+ a| 
+Ein Warnereignis wird gemeldet.
+
+
+
+ a| 
+25 Millisekunden
+ a| 
+75 % erzielt
+ a| 
+Ein Warnereignis wird gemeldet.
+
+
+
+ a| 
+25 Millisekunden
+ a| 
+90 % erzielt
+ a| 
+Ein kritisches Ereignis wird gemeldet.
+
+|===

@@ -1,0 +1,115 @@
+---
+permalink: install-vapp/task_deploy_unified_manager_virtual_appliance_vapp.html 
+sidebar: sidebar 
+keywords: deploy, unified manager, virtual appliance 
+summary: Nach dem Herunterladen der Installationsdatei stellen Sie Unified Manager als virtuelle Appliance bereit. Verwenden Sie den vSphere Web Client, um die virtuelle Appliance auf einem ESXi-Server bereitzustellen. Wenn Sie die virtuelle Appliance bereitstellen, wird eine virtuelle Maschine erstellt. 
+---
+= Implementieren der virtuellen Unified Manager Appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach dem Herunterladen der Installationsdatei stellen Sie Unified Manager als virtuelle Appliance bereit. Verwenden Sie den vSphere Web Client, um die virtuelle Appliance auf einem ESXi-Server bereitzustellen. Wenn Sie die virtuelle Appliance bereitstellen, wird eine virtuelle Maschine erstellt.
+
+*Was Sie brauchen*
+
+Sie sollten die Systemanforderungen überprüfen. Nehmen Sie die erforderlichen Änderungen vor der Bereitstellung der virtuellen Unified Manager Appliance vor.
+
+link:concept_virtual_infrastructure_or_hardware_system_requirements.html["Anforderungen an die virtuelle Infrastruktur"]
+
+link:reference_vmware_software_and_installation_requirements.html["VMware Software- und Installationsanforderungen"]
+
+Wenn Sie DHCP (Dynamic Host Configuration Protocol) verwenden, stellen Sie sicher, dass der DHCP-Server verfügbar ist und dass die DHCP- und VM-Netzwerkadapter-Konfigurationen korrekt sind. Standardmäßig ist DHCP konfiguriert.
+
+Wenn Sie eine statische Netzwerkkonfiguration verwenden, stellen Sie sicher, dass die IP-Adresse nicht im selben Subnetz dupliziert wird und dass die entsprechenden DNS-Servereinträge konfiguriert wurden.
+
+Informieren Sie sich vor der Bereitstellung der virtuellen Appliance über die folgenden Informationen:
+
+* Anmeldeinformationen für den Zugriff auf VMware vCenter Server und vSphere Web Client
+* IP-Adresse des ESXi-Servers, auf dem Sie die virtuelle Unified Manager-Appliance bereitstellen
+* Details zum Datacenter, wie zum Beispiel die Verfügbarkeit von Speicherplatz
+* Wenn Sie DHCP nicht verwenden, erhalten Sie die IPv4- oder IPv6-Adressen für die Netzwerkgeräte, mit denen Sie eine Verbindung herstellen möchten:
++
+** Vollständig qualifizierter Domänenname (FQDN) des Hosts
+** IP-Adresse des Hosts
+** Netzwerkmaske
+** IP-Adresse des Standard-Gateways
+** Primäre und sekundäre DNS-Adressen
+** Domänen durchsuchen
+
+
+
+
+Ab Unified Manager 9.8 wurden VMware Tools durch Open VM Tools ersetzt  `_open-vm-tools_`). Sie müssen VMware Tools nicht im Rahmen der Installation installieren, denn `_open-vm-tools_` Ist im Unified Manager-Installationspaket enthalten.
+
+Bei der Bereitstellung der virtuellen Appliance wird ein eigensigniertes Zertifikat für HTTPS-Zugriff generiert. Beim Zugriff auf die Web-Benutzeroberfläche von Unified Manager wird möglicherweise eine Browserwarnung über nicht vertrauenswürdige Zertifikate angezeigt.
+
+VMware Hochverfügbarkeit für die virtuelle Unified Manager Appliance wird unterstützt.
+
+.Schritte
+. Klicken Sie im vSphere-Client auf *Datei* > *OVF-Vorlage bereitstellen*.
+. Schließen Sie den Assistenten zur Bereitstellung der virtuellen Unified Manager-Appliance für die OVF-Vorlage ab.
++
+Auf der Seite Netzwerkkonfiguration:
+
++
+** Lassen Sie alle Felder leer, wenn Sie DHCP- und IPv4-Adressen verwenden.
+** Aktivieren Sie das Kontrollkästchen „`Auto IPv6 Addressing`“, und lassen Sie alle anderen Felder leer, wenn Sie DHCP- und IPv6-Adressen verwenden.
+** Wenn Sie eine statische Netzwerkkonfiguration verwenden möchten, können Sie die Felder auf dieser Seite ausfüllen und diese Einstellungen werden während der Bereitstellung angewendet. Stellen Sie sicher, dass die IP-Adresse für den Host, auf dem sie bereitgestellt wird, eindeutig ist, dass sie nicht bereits verwendet wird und dass er über einen gültigen DNS-Eintrag verfügt.
+
+
+. Nachdem die virtuelle Unified Manager-Appliance auf dem ESXi-Server bereitgestellt wurde, schalten Sie die VM ein, indem Sie mit der rechten Maustaste auf die VM klicken und anschließend *Power on* wählen.
++
+[NOTE]
+====
+Wenn der Einschaltvorgang aufgrund unzureichender Ressourcen fehlschlägt, fügen Sie Ressourcen hinzu und wiederholen Sie die Installation.
+
+====
+. Klicken Sie auf die Registerkarte *Konsole*.
++
+Der erste Bootvorgang dauert einige Minuten.
+
+. Um Ihre Zeitzone zu konfigurieren, geben Sie Ihren geografischen Bereich und Ihre Stadt oder Region wie im VM-Konsolenfenster aufgefordert ein.
++
+Alle angezeigten Datumsangaben verwenden die für Unified Manager konfigurierte Zeitzone, unabhängig von der Zeitzone auf Ihren verwalteten Geräten. Wenn Ihre Speichersysteme und der Management-Server mit demselben NTP-Server konfiguriert sind, verweisen sie sofort auf den gleichen, auch wenn sie anders aussehen. Wenn Sie beispielsweise eine Snapshot Kopie mit einem Gerät erstellen, das mit einer anderen Zeitzone als der des Management-Servers konfiguriert ist, ist der Zeitstempel die Zeit des Management-Servers.
+
+. Wenn keine DHCP-Dienste verfügbar sind oder wenn in den Details für die statische Netzwerkkonfiguration ein Fehler aufgetreten ist, wählen Sie eine der folgenden Optionen aus:
++
+[cols="2*"]
+|===
+| Verwenden Sie... | Dann tun Sie das... 
+
+
+ a| 
+DHCP
+ a| 
+Wählen Sie *DHCP wiederholen*. Wenn Sie DHCP verwenden möchten, sollten Sie sicherstellen, dass es korrekt konfiguriert ist.
+
+Wenn Sie ein DHCP-fähiges Netzwerk verwenden, werden die Einträge FQDN und DNS-Server automatisch der virtuellen Appliance zugewiesen. Wenn DHCP nicht richtig mit DNS konfiguriert ist, wird der Hostname „`UnifiedManager`“ automatisch zugewiesen und dem Sicherheitszertifikat zugeordnet. Wenn Sie kein DHCP-fähiges Netzwerk eingerichtet haben, müssen Sie die Netzwerkkonfigurationsinformationen manuell eingeben.
+
+
+
+ a| 
+Eine statische Netzwerkkonfiguration
+ a| 
+.. Wählen Sie *Geben Sie die Details für die statische Netzwerkkonfiguration* ein.
++
+Die Konfiguration dauert einige Minuten.
+
+.. Bestätigen Sie die eingegebenen Werte und wählen Sie *Y* aus.
+
+
+|===
+. Geben Sie an der Eingabeaufforderung einen Benutzernamen für die Wartung ein, und klicken Sie dann auf *Enter*.
++
+Der Wartungsbenutzername sollte mit einem Buchstaben von a-z beginnen, gefolgt von einer beliebigen Kombination aus -, a-z oder 0-9.
+
+. Geben Sie an der Eingabeaufforderung ein Passwort ein und klicken Sie dann auf *Enter*.
++
+Die VM-Konsole zeigt die URL der Web-UI von Unified Manager an.
+
+
+
+Sie können auf die Web-Benutzeroberfläche zugreifen, um die Ersteinrichtung von Unified Manager durchzuführen, wie in beschrieben link:../config/concept_configure_unified_manager.html["Active IQ Unified Manager wird konfiguriert"].

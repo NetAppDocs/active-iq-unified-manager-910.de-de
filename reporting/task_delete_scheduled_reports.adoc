@@ -1,0 +1,44 @@
+---
+permalink: reporting/task_delete_scheduled_reports.html 
+sidebar: sidebar 
+keywords: delete, reports 
+summary: Nach der Planung von Berichten können Sie diese auf der Seite „Berichtszeitpläne“ löschen. 
+---
+= Löschen geplanter Berichte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach der Planung von Berichten können Sie diese auf der Seite „Berichtszeitpläne“ löschen.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Berichtspläne*.
++
+image::../media/scheduled_reports_2.gif[Geplante Berichte 2]
+
++
+[NOTE]
+====
+Wenn Sie über die entsprechenden Berechtigungen verfügen, können Sie alle Berichte und deren Zeitplan im System entfernen.
+
+====
+. Klicken Sie auf das Symbol Weitere image:../media/more_icon.gif[""] Für den Plan, den Sie entfernen möchten.
+. Klicken Sie Auf *Löschen*.
+. Bestätigen Sie Ihre Entscheidung.
++
+Der geplante Bericht wird aus der Liste entfernt und wird nicht mehr im festgelegten Zeitplan erstellt und verteilt.
+
++
+[NOTE]
+====
+Wenn Sie eine benutzerdefinierte Ansicht auf der Bestandsseite löschen, werden auch alle benutzerdefinierten Excel-Dateien oder geplanten Berichte, die diese Ansicht verwenden, gelöscht.
+
+====
+

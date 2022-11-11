@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_use_threshold_policy_with_node_failover_planning_page.html 
+sidebar: sidebar 
+keywords: threshold, policy, node, failover, planning page 
+summary: Sie können eine Node-Schwellenwertrichtlinie erstellen, sodass Sie auf der Seite „Performance/Node Failover Planning“ eine Benachrichtigung erhalten können, wenn ein potenzieller Failover die Performance des Takeover-Node auf ein inakzeptables Maß verschlechtert. 
+---
+= Verwenden einer Schwellenwertrichtlinie auf der Seite Knoten-Failover-Planung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Node-Schwellenwertrichtlinie erstellen, sodass Sie auf der Seite „Performance/Node Failover Planning“ eine Benachrichtigung erhalten können, wenn ein potenzieller Failover die Performance des Takeover-Node auf ein inakzeptables Maß verschlechtert.
+
+Die vom System definierte Performance-Schwellenwertrichtlinie „`Node HA-Paar Overused`“ erzeugt ein Warnereignis, wenn der Schwellenwert für sechs aufeinanderfolgende Erfassungszeiträume (30 Minuten) überschritten wird. Der Schwellenwert ist dann nicht erreicht, wenn die kombinierte Performance-Kapazität, die von den Nodes in einem HA-Paar genutzt wird, 200 % überschreitet.
+
+Das Ereignis der vom System definierten Schwellenwertrichtlinie gibt Ihnen Warnungen vor, dass ein Failover dazu führt, dass die Latenz des Takeover-Node auf ein inakzeptables Maß erhöht wird. Wenn ein Ereignis, das von dieser Richtlinie für einen bestimmten Node generiert wird, angezeigt wird, können Sie zur Seite Performance/Node-Failover-Planung für diesen Node wechseln, um den prognostizierten Latenzwert aufgrund eines Failover anzuzeigen.
+
+Zusätzlich zur Nutzung dieser systemdefinierten Schwellenwertrichtlinie können Sie unter Verwendung des Zählers „`Performance Capacity Used - Takeover`“ Schwellenwertrichtlinien erstellen und die Richtlinie dann auf ausgewählte Nodes anwenden. Wenn Sie einen Schwellenwert von weniger als 200 % angeben, erhalten Sie ein Ereignis, bevor der Schwellenwert für die vom System definierte Richtlinie nicht erreicht wird. Sie können auch den Mindestzeitraum angeben, für den der Schwellenwert auf weniger als 30 Minuten überschritten wird, wenn Sie benachrichtigt werden möchten, bevor das vom System definierte Richtlinienereignis generiert wird.
+
+Sie können beispielsweise eine Schwellenwertrichtlinie zur Generierung eines Warnungsereignisses definieren, wenn die kombinierte Performance-Kapazität der Nodes in einem HA-Paar mehr als 10 Minuten lang 175 % überschreitet. Sie können diese Richtlinie auf Node1 und Node2 anwenden, die ein HA-Paar bilden. Nachdem Sie eine Warnmeldung für Node1 oder Node2 erhalten haben, können Sie die Seite Performance/Node-Failover-Planung für diesen Node anzeigen, um die geschätzten Performance-Auswirkungen auf den Takeover-Node einzuschätzen. Sie können Korrekturmaßnahmen ergreifen, um bei einem Failover einen Überlastung des Takeover-Node zu vermeiden. Wenn Sie Maßnahmen ergreifen, wenn die kombinierte Performance-Kapazität, die von den Nodes verwendet wird, unter 200 % liegt, erreicht die Latenz des Ersatz-Node nicht ein inakzeptables Maß, selbst wenn in diesem Zeitraum ein Failover stattfindet.

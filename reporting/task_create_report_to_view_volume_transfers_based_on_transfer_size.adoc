@@ -1,0 +1,35 @@
+---
+permalink: reporting/task_create_report_to_view_volume_transfers_based_on_transfer_size.html 
+sidebar: sidebar 
+keywords: create, report, view, volume, transfers, transfer size 
+summary: Sie können einen Bericht erstellen, um Volume-Transfers basierend auf der Übertragungsgröße anzuzeigen. 
+---
+= Erstellen eines Berichts zur Anzeige von Volume-Transfers basierend auf der Übertragungsgröße
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um Volume-Transfers basierend auf der Übertragungsgröße anzuzeigen.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Mit den folgenden Schritten erstellen Sie eine benutzerdefinierte Ansicht für Volume-Transfers basierend auf der Transfergröße und planen dann einen Bericht, der für diese Ansicht erstellt werden soll.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Volumes*.
+. Wählen Sie im Menü Ansicht die Option *Beziehung* > *Letzter 1 Monat Transferrate*.
+. Klicken Sie oben in der Spalte „`Total Transfer Size`“, um die Volume-Transfers nach Größe zu sortieren.
+. Speichern Sie die Ansicht mit einem bestimmten Namen, der die Anzeige beschreibt, z. B. „`Volumes nach Transfergröße`“.
+. Klicken Sie auf der Bestandsseite auf die Schaltfläche *geplante Berichte*.
+. Geben Sie einen Namen für den Berichtsplan ein, und füllen Sie die anderen Berichtsfelder aus, und klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""]Am Ende der Reihe.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und per E-Mail an die Empfänger gesendet, die unter der angegebenen Häufigkeit aufgeführt sind.
+
+
+
+Auf Grundlage der im Bericht gezeigten Ergebnisse können Sie die Volume-Beziehungen anhand der Übertragungsgröße untersuchen.

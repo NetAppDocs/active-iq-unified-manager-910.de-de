@@ -1,0 +1,29 @@
+---
+permalink: install-vapp/task_remove_unified_manager_vapp.html 
+sidebar: sidebar 
+keywords: remove unified manager 
+summary: 'Sie können Unified Manager deinstallieren, indem Sie die virtuelle Maschine (VM) entfernen, auf der die Unified Manager-Software installiert ist.' 
+---
+= Unified Manager Wird Entfernt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Unified Manager deinstallieren, indem Sie die virtuelle Maschine (VM) entfernen, auf der die Unified Manager-Software installiert ist.
+
+*Was Sie brauchen*
+
+* Sie sollten Zugangsdaten für den Zugriff auf VMware vCenter Server und vSphere Web Client besitzen.
+* Jede aktive Verbindung des Unified Manager-Servers zu einem Workflow Automation-Server sollte geschlossen werden.
+* Alle Cluster (Datenquellen) sollten vom Unified Manager-Server entfernt werden, bevor Sie die virtuelle Maschine (VM) entfernen.
+
+
+.Schritte
+. Überprüfen Sie mithilfe der Unified Manager-Wartungskonsole, ob der Unified Manager-Server keine aktive Verbindung zu einem externen Datenanbieter hat.
+. Klicken Sie im vSphere Client auf *Startseite* > *Inventar* > *VMs und Vorlagen*.
+. Wählen Sie die VM aus, die Sie entfernen möchten, und klicken Sie auf die Registerkarte *Zusammenfassung*.
+. Wenn die VM ausgeführt wird, klicken Sie auf *Power* > *Herunterfahren Gast*.
+. Klicken Sie mit der rechten Maustaste auf die VM, die Sie entfernen möchten, und klicken Sie auf *von Festplatte löschen*.
+

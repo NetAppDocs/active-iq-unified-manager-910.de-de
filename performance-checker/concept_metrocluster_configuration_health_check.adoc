@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_metrocluster_configuration_health_check.html 
+sidebar: sidebar 
+keywords: metrocluster, configuration, health, check 
+summary: Mit Unified Manager können Sie den Zustand der Cluster in einer MetroCluster-Konfiguration überprüfen. Anhand des Integritätsstatus und der Ereignisse können Sie ermitteln, ob es Hardware- oder Softwareprobleme gibt, die die Performance Ihrer Workloads beeinträchtigen können. 
+---
+= Zustandsprüfung der MetroCluster Konfiguration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Unified Manager können Sie den Zustand der Cluster in einer MetroCluster-Konfiguration überprüfen. Anhand des Integritätsstatus und der Ereignisse können Sie ermitteln, ob es Hardware- oder Softwareprobleme gibt, die die Performance Ihrer Workloads beeinträchtigen können.
+
+Wenn Sie Unified Manager so konfigurieren, dass E-Mail-Alarme gesendet werden, können Sie Ihre E-Mail auf Probleme mit dem Systemzustand im lokalen oder Remote-Cluster prüfen, die möglicherweise zu einem Performance-Ereignis beigetragen haben. In der Benutzeroberfläche von Unified Manager können Sie *Ereignisverwaltung* auswählen, um eine Liste aktueller Ereignisse anzuzeigen. Anschließend können Sie die Filter verwenden, um nur MetroCluster-Konfigurationsereignisse anzuzeigen.

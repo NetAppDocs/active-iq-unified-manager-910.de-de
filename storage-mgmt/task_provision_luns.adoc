@@ -1,0 +1,62 @@
+---
+permalink: storage-mgmt/task_provision_luns.html 
+sidebar: sidebar 
+keywords: provision, luns 
+summary: 'Sie können LUNs erstellen, die CIFS-/SMB- und NFS-Protokolle unterstützen, auf einem vorhandenen Cluster und auf der Seite „Workloads bereitstellen“ (Storage Virtual Machine).' 
+---
+= Bereitstellung von LUNs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können LUNs erstellen, die CIFS-/SMB- und NFS-Protokolle unterstützen, auf einem vorhandenen Cluster und auf der Seite „Workloads bereitstellen“ (Storage Virtual Machine).
+
+*Was Sie brauchen*
+
+* Die Storage-VM muss Platz für die Bereitstellung der LUN haben.
+* ISCSI und FCP müssen auf der Storage VM aktiviert sein, auf der Sie die LUN erstellen.
+* Für die Auswahl und Zuweisung des Performance Service Level (PSL) und der Storage Efficiency Policy (SEP) für den Workload müssen die Richtlinien erstellt werden, bevor Sie mit der Erstellung des Workloads beginnen.
+
+
+.Schritte
+. Fügen Sie auf der Seite *Workloads bereitstellen* den Namen des Workloads hinzu, den Sie erstellen möchten, und wählen Sie dann den Cluster aus der Liste verfügbar aus.
++
+Basierend auf dem ausgewählten Cluster filtert das Feld *STORAGE VM* die verfügbaren Storage VMs für diesen Cluster.
+
+. Wählen Sie die Storage VM aus der Liste aus, die die iSCSI- und FCP-Services unterstützt.
++
+Je nach Ihrer Auswahl ist die SAN-Option im Abschnitt Hostinformationen aktiviert.
+
+. Weisen Sie im Abschnitt *Speicherung und Optimierung* die Speicherkapazität und PSL zu, und optional den SEP für die Arbeitslast.
++
+Die Spezifikationen für den SEP werden der LUN zugewiesen und die Definitionen für die PSL werden beim Erstellen auf den Workload angewendet.
+
+. Aktivieren Sie das Kontrollkästchen *Leistungsgrenzen erzwingen*, wenn Sie die zugewiesene PSL für den Workload durchsetzen möchten.
++
+Durch die Zuweisung einer PSL zu einem Workload wird sichergestellt, dass das Aggregat, auf dem der Workload erstellt wird, die in der jeweiligen Richtlinie definierten Performance- und Kapazitätsziele unterstützen kann. Wenn einem Workload beispielsweise die PSL „Extreme Performance“ zugewiesen wird, sollte das Aggregat, auf dem der Workload bereitgestellt werden soll, die Performance- und Kapazitätsziele der Richtlinie „Extreme Performance“ unterstützen, z. B. SSD Storage.
+
++
+[NOTE]
+====
+Wenn Sie dieses Kontrollkästchen nicht aktivieren, wird die PSL nicht auf die Arbeitslast angewendet, und der Status des Workloads auf dem Dashboard wird als angezeigt `unassigned`.
+
+====
+. Wählen Sie die Option *SAN* aus. Wenn die Option *SAN* nicht aktiviert ist, überprüfen Sie, ob die von Ihnen ausgewählte Speicher-VM iSCSI und FCP unterstützt.
+. Wählen Sie das Host-Betriebssystem aus.
+. Geben Sie die Host-Zuordnung an, um den Zugriff der Initiatoren auf die LUN zu steuern. Sie können vorhandene Initiatorgruppen zuweisen oder neue Initiatorgruppen definieren und zuordnen.
++
+[NOTE]
+====
+Wenn Sie eine neue Initiatorgruppe erstellen während Sie die LUN bereitstellen, müssen Sie bis zum nächsten Erkennungszyklus (bis zu 15 Minuten) warten, um sie zu verwenden. Daher wird empfohlen, eine vorhandene Initiatorgruppe aus der Liste der verfügbaren Initiatorgruppen zu verwenden.
+
+====
++
+Wenn Sie eine neue Initiatorgruppe erstellen möchten, wählen Sie die Schaltfläche *Neue Initiatorgruppe erstellen* aus, und geben Sie die Informationen für die Initiatorgruppe ein.
+
+. Klicken Sie Auf *Speichern*.
++
+Die LUN wird der Liste der Storage Workloads hinzugefügt.
+
+

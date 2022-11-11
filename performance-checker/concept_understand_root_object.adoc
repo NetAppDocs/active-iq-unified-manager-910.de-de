@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_understand_root_object.html 
+sidebar: sidebar 
+keywords: understand, root, object 
+summary: Das Root-Objekt ist die Basis, mit der andere Objektvergleiche erstellt werden. So lassen sich Daten von anderen Objekten mit dem Root-Objekt anzeigen und vergleichen. So wird eine Performance-Datenanalyse bereitgestellt, mit der Fehler behoben und die Objekt-Performance verbessert werden kann. 
+---
+= Allgemeines zum Root-Objekt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Root-Objekt ist die Basis, mit der andere Objektvergleiche erstellt werden. So lassen sich Daten von anderen Objekten mit dem Root-Objekt anzeigen und vergleichen. So wird eine Performance-Datenanalyse bereitgestellt, mit der Fehler behoben und die Objekt-Performance verbessert werden kann.
+
+Der Name des Stammobjekts wird oben im Fenster „Vergleichen“ angezeigt. Unter dem Root-Objekt werden zusätzliche Objekte angezeigt. Obwohl die Anzahl der zusätzlichen Objekte, die Sie dem Vergleichbereich hinzufügen können, nicht begrenzt ist, ist nur ein Root-Objekt zulässig. Die Daten für das Root-Objekt werden automatisch in den Diagrammen im Bereich Counter Charts angezeigt.
+
+Das Root-Objekt kann nicht geändert werden. Es ist immer auf die Objektseite eingestellt, die Sie anzeigen. Wenn Sie beispielsweise die Seite Volume Performance Explorer von Volume1 öffnen, ist Volume1 das Root-Objekt und kann nicht geändert werden. Wenn Sie einen Vergleich mit einem anderen Root-Objekt durchführen möchten, müssen Sie auf den Link für ein Objekt klicken und seine Landing Page öffnen.
+
+[NOTE]
+====
+Ereignisse und Schwellenwerte werden nur für Root-Objekte angezeigt.
+
+====

@@ -1,0 +1,62 @@
+---
+permalink: events/task_acknowledge_and_resolve_events.html 
+sidebar: sidebar 
+keywords: acknowledge, resolve, events 
+summary: Sie sollten ein Ereignis bestätigen, bevor Sie mit der Bearbeitung des Problems beginnen, das das Ereignis verursacht hat, damit Sie keine wiederholten Warnmeldungen erhalten. Nachdem Sie die Korrekturmaßnahme für ein bestimmtes Ereignis durchgeführt haben, sollten Sie das Ereignis als gelöst markieren. 
+---
+= Bestätigen und Beheben von Ereignissen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten ein Ereignis bestätigen, bevor Sie mit der Bearbeitung des Problems beginnen, das das Ereignis verursacht hat, damit Sie keine wiederholten Warnmeldungen erhalten. Nachdem Sie die Korrekturmaßnahme für ein bestimmtes Ereignis durchgeführt haben, sollten Sie das Ereignis als gelöst markieren.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+
+Sie können mehrere Ereignisse gleichzeitig bestätigen und beheben.
+
+[NOTE]
+====
+Sie können keine Informationsereignisse bestätigen.
+
+====
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Ereignisverwaltung*.
+. Führen Sie in der Ereignisliste die folgenden Aktionen durch, um die Ereignisse zu bestätigen:
++
+|===
+| Ihr Ziel ist | Tun Sie das... 
+
+
+ a| 
+Bestätigen Sie ein einzelnes Ereignis und markieren Sie es als gelöst
+ a| 
+.. Klicken Sie auf den Ereignisnamen.
+.. Bestimmen Sie auf der Seite Ereignisdetails die Ursache des Ereignisses.
+.. Klicken Sie Auf *Bestätigen*.
+.. Ergreifen Sie geeignete Korrekturmaßnahmen.
+.. Klicken Sie Auf *Als Gelöst Markieren*.
+
+
+
+
+ a| 
+Bestätigen und markieren Sie mehrere Ereignisse als erledigt
+ a| 
+.. Bestimmen Sie die Ursache der Ereignisse auf der entsprechenden Seite „Ereignisdetails“.
+.. Wählen Sie die Ereignisse aus.
+.. Klicken Sie Auf *Bestätigen*.
+.. Ergreifen Sie geeignete Korrekturmaßnahmen.
+.. Klicken Sie Auf *Als Gelöst Markieren*.
+
+
+|===
++
+Nachdem das Ereignis als erledigt markiert wurde, wird das Ereignis in die Liste aufgelöster Ereignisse verschoben.
+
+. *Optional*: Fügen Sie im Bereich *Notizen und Updates* einen Hinweis dazu hinzu, wie Sie das Ereignis angesprochen haben, und klicken Sie dann auf *Post*.
+

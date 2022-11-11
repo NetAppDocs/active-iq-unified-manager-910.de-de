@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_understand_cluster_monitoring.html 
+sidebar: sidebar 
+keywords: understand, cluster, monitor 
+summary: Sie können der Unified Manager Datenbank Cluster hinzufügen, um Cluster zu überwachen, um Verfügbarkeit, Kapazität und andere Details wie CPU-Nutzung, Schnittstellenstatistiken, freien Festplattenspeicher, qtree-Nutzung und Chassis-Umgebung zu überwachen. 
+---
+= Allgemeines zum Cluster-Monitoring
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können der Unified Manager Datenbank Cluster hinzufügen, um Cluster zu überwachen, um Verfügbarkeit, Kapazität und andere Details wie CPU-Nutzung, Schnittstellenstatistiken, freien Festplattenspeicher, qtree-Nutzung und Chassis-Umgebung zu überwachen.
+
+Ereignisse werden generiert, wenn der Status anormal ist oder wenn ein vordefinierter Schwellenwert überschritten wird. Bei entsprechender Konfiguration sendet Unified Manager eine Benachrichtigung an einen bestimmten Empfänger, wenn ein Ereignis eine Warnmeldung auslöst.

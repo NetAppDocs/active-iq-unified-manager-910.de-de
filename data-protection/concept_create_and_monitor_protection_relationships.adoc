@@ -1,0 +1,14 @@
+---
+permalink: data-protection/concept_create_and_monitor_protection_relationships.html 
+sidebar: sidebar 
+keywords: create, monitor, troubleshoot, protection, relationships 
+summary: Unified Manager ermöglicht die Erstellung von Sicherungsbeziehungen, um den Spiegelschutz zu überwachen und Fehler zu beheben sowie die Sicherung von Daten, die in gemanagten Clustern gespeichert sind, zu sichern und Daten wiederherzustellen, wenn sie überschrieben oder verloren gehen. 
+---
+= Erstellen, Überwachen und Beheben von Sicherungsbeziehungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager ermöglicht die Erstellung von Sicherungsbeziehungen, um den Spiegelschutz zu überwachen und Fehler zu beheben sowie die Sicherung von Daten, die in gemanagten Clustern gespeichert sind, zu sichern und Daten wiederherzustellen, wenn sie überschrieben oder verloren gehen.

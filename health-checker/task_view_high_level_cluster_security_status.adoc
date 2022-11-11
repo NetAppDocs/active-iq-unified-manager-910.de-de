@@ -1,0 +1,33 @@
+---
+permalink: health-checker/task_view_high_level_cluster_security_status.html 
+sidebar: sidebar 
+keywords: view, cluster security status, svm security status, high-level 
+summary: Je nach der aktuellen Ansicht zeigt das Bedienfeld „Sicherheit“ des Unified Manager-Dashboards den allgemeinen Sicherheitsstatus aller Cluster oder für ein einzelnes Cluster an. 
+---
+= Anzeigen des Sicherheitsstatus eines Clusters im hohen Level
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Security Panel im Unified ManagerDashboard zeigt abhängig von der aktuellen Ansicht den allgemeinen Sicherheitsstatus aller Cluster oder für ein einzelnes Cluster an.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Dashboard*.
+. Je nachdem, ob Sie den Sicherheitsstatus für alle überwachten Cluster oder für einen einzelnen Cluster anzeigen möchten, wählen Sie *Alle Cluster* oder wählen Sie einen einzelnen Cluster aus dem Dropdown-Menü aus.
+. Öffnen Sie das Fenster *Sicherheit*, um den Gesamtstatus anzuzeigen.
++
+In diesem Fenster wird Folgendes angezeigt:
+
++
+** Eine Liste der Sicherheitsereignisse, die in den letzten 24 Stunden eingehen
+** Ein Link von jeder dieser Veranstaltungen zur Seite Veranstaltungsdetails
+** Ein Link, mit dem Sie alle aktiven Sicherheitsereignisse auf der Seite „Ereignisverwaltung“ anzeigen können
+** Cluster-Sicherheitsstatus (Anzahl an kompatiblen oder nicht kompatiblen Clustern)
+** Der SVM-Sicherheitsstatus (Anzahl an konformen oder nicht konformen SVMs)
+** Status der Volume-Verschlüsselung (Anzahl der verschlüsselten oder nicht verschlüsselten Volumes)
+
+
+. Klicken Sie auf den Rechtspfeil oben im Bedienfeld, um die Sicherheitsinformationen auf der Seite *Sicherheit* anzuzeigen.
+

@@ -1,0 +1,23 @@
+---
+permalink: storage-mgmt/task_view_active_events_from_notification_bell.html 
+sidebar: sidebar 
+keywords: view, active, events, notification, bell 
+summary: Die Benachrichtigungs-Bell in der Menüleiste bietet eine schnelle Möglichkeit, die wichtigsten aktiven Ereignisse, die Unified Manager verfolgt, anzuzeigen. 
+---
+= Anzeigen aktiver Ereignisse über die Benachrichtigunglocke
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Benachrichtigungsklingel (image:../media/notification_bell.png[""]) In der Menüleiste bietet eine schnelle Möglichkeit, die wichtigsten aktiven Ereignisse, die Unified Manager verfolgt, anzuzeigen.
+
+Die Liste der aktiven Ereignisse bietet eine Möglichkeit, die Gesamtzahl der kritischen, Fehler-, Warn- und Upgrade-Ereignisse auf allen Clustern anzuzeigen. Diese Liste enthält Ereignisse der letzten 7 Tage und enthält keine Informationsereignisse. Sie können auf einen Link klicken, um die Liste der Veranstaltungen anzuzeigen, für die Sie sich am meisten interessieren.
+
+Hinweis: Wenn ein Cluster nicht erreichbar ist, zeigt Unified Manager diese Informationen auf dieser Seite an. Sie können detaillierte Informationen über ein Cluster anzeigen, das nicht erreichbar ist, indem Sie auf die Schaltfläche *Details* klicken. Mit dieser Aktion wird die Seite Ereignisdetails geöffnet. Auf dieser Seite werden auch Probleme mit der Skalenüberwachung, z. B. wenig Speicherplatz oder RAM auf der Management Station, angezeigt.
+
+.Schritte
+. Klicken Sie in der Menüleiste auf image:../media/notification_bell.png[""].
+. Um Details zu einem der aktiven Ereignisse anzuzeigen, klicken Sie auf den Ereignistext-Link, z. B. „2 Kapazität“ oder „4 Leistung“.
+

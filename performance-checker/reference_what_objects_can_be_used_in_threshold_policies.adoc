@@ -1,0 +1,97 @@
+---
+permalink: performance-checker/reference_what_objects_can_be_used_in_threshold_policies.html 
+sidebar: sidebar 
+keywords: objects, counters, combination, threshold, policies 
+summary: Nur einige Leistungsindikatoren können in Kombinationsrichtlinien kombiniert werden. Wenn primäre und sekundäre Performance-Zähler angegeben werden, müssen beide Performance-Zähler ihre Höchstgrenzen überschreiten, bevor ein Ereignis generiert wird. 
+---
+= Welche Objekte und Zähler können in Schwellwertrichtlinien für Kombinationen verwendet werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nur einige Leistungsindikatoren können in Kombinationsrichtlinien kombiniert werden. Wenn primäre und sekundäre Performance-Zähler angegeben werden, müssen beide Performance-Zähler ihre Höchstgrenzen überschreiten, bevor ein Ereignis generiert wird.
+
+|===
+| Primäres Speicherobjekt und Zähler | Sekundäres Storage Objekt und Zähler 
+
+
+ a| 
+Volume-Latenz
+ a| 
+Volume IOPS
+
+
+
+ a| 
+Volume-MB/s
+
+
+
+ a| 
+Aggregatauslastung
+
+
+
+ a| 
+Verwendete Aggregat-Performance-Kapazität
+
+
+
+ a| 
+Node-Auslastung
+
+
+
+ a| 
+Verwendete Node-Performance-Kapazität
+
+
+
+ a| 
+Verwendete Node-Performance-Kapazität – Übernahme
+
+
+
+ a| 
+LUN-Latenz
+ a| 
+LUN IOPS
+
+
+
+ a| 
+LUN-MB/s
+
+
+
+ a| 
+Aggregatauslastung
+
+
+
+ a| 
+Verwendete Aggregat-Performance-Kapazität
+
+
+
+ a| 
+Node-Auslastung
+
+
+
+ a| 
+Verwendete Node-Performance-Kapazität
+
+
+
+ a| 
+Verwendete Node-Performance-Kapazität – Übernahme
+
+|===
+[NOTE]
+====
+Wenn eine Volume-Combination Policy auf ein FlexGroup Volume anstatt auf ein FlexVol Volume angewendet wird, können nur die Attribute „`Volume IOPS`“ und „`Volume MB/s`“ als sekundärer Zähler ausgewählt werden. Wenn die Schwellenwertrichtlinie eines der Node- oder Aggregatattribute enthält, wird die Richtlinie nicht auf das FlexGroup Volume angewendet. Die hier vorliegende Fehlermeldung wird veröffentlicht. Der Grund dafür ist, dass FlexGroup Volumes auf mehr als einem Node oder Aggregat vorhanden sein können.
+
+====

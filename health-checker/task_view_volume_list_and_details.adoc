@@ -1,0 +1,39 @@
+---
+permalink: health-checker/task_view_volume_list_and_details.html 
+sidebar: sidebar 
+keywords: view, volume list, details 
+summary: 'In der Ansicht „Systemzustand: Alle Volumes“ können Sie Ihr Inventar von Volumes überwachen. Die Kapazität: Die Ansicht aller Volumes ermöglicht die Anzeige von Informationen zur Kapazität und Auslastung von Volumes in einem Cluster.' 
+---
+= Anzeigen der Volume-Liste und der Details
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In der Ansicht „Systemzustand: Alle Volumes“ können Sie Ihr Inventar von Volumes überwachen. Die Kapazität: Die Ansicht aller Volumes ermöglicht die Anzeige von Informationen zur Kapazität und Auslastung von Volumes in einem Cluster.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+
+Auf der Seite Volume/Health Details können Sie auch detaillierte Informationen zu überwachten Volumes anzeigen, einschließlich Kapazität, Effizienz, Konfiguration und Sicherung der Volumes. Sie können auch Informationen zu den zugehörigen Geräten und zugehörigen Warnmeldungen für ein bestimmtes Volume anzeigen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Volumes*.
+. Es gibt folgende Möglichkeiten, die Volume-Details anzuzeigen:
++
+** Um detaillierte Informationen zum Systemzustand von Volumes in einem Cluster anzuzeigen, wählen Sie im Menü Ansicht den Eintrag Systemzustand: Alle Volumes aus.
+** Um ausführliche Informationen zur Kapazität und Auslastung von Volumes in einem Cluster anzuzeigen, wählen Sie im Menü Ansicht die Option Kapazität: Alle Volumes aus.
+** Klicken Sie zum Einblenden der vollständigen Details auf den Volume-Namen.
++
+Sie können die vollständigen Details auch anzeigen, indem Sie im Dialogfeld mit den minimalen Details auf *Details anzeigen* klicken.
+
+
+
+. *Optional:* Anzeigen Sie die Objekte, die mit dem Volumen in Verbindung stehen, indem Sie im Dialogfeld mit den minimalen Details auf *Related* klicken.
+
+
+*Verwandte Informationen*
+
+link:../reporting/task_create_report_to_view_available_volume_capacity_charts.html["Erstellen eines Berichts, um verfügbare Volume-Kapazitätsdiagramme anzuzeigen"]

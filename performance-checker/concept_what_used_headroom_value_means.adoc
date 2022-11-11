@@ -1,0 +1,38 @@
+---
+permalink: performance-checker/concept_what_used_headroom_value_means.html 
+sidebar: sidebar 
+keywords: performance, capacity, value, means 
+summary: Der von Performance genutzte Wert hilft Ihnen dabei, die Nodes und Aggregate zu identifizieren, die derzeit zu stark ausgelastet sind oder nicht ausgelastet sind. Auf diese Weise können Sie Workloads neu verteilen, um die Effizienz der Storage-Ressourcen zu steigern. 
+---
+= Was der Wert der verwendeten Performance-Kapazität bedeutet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der von Performance genutzte Wert hilft Ihnen dabei, die Nodes und Aggregate zu identifizieren, die derzeit zu stark ausgelastet sind oder nicht ausgelastet sind. Auf diese Weise können Sie Workloads neu verteilen, um die Effizienz der Storage-Ressourcen zu steigern.
+
+Die folgende Abbildung zeigt die Latenz im Vergleich zur Auslastungskurve einer Ressource und identifiziert mit farbigen Punkten drei Bereiche, in denen sich der aktuelle betriebliche Punkt befinden könnte.
+
+image::../media/headroom_chart_over_under.gif[Diagramm Reserve über unter]
+
+* Ein Prozentsatz der genutzten Performance-Kapazität gleich 100 ist am optimalen Punkt.
++
+Die Ressourcen werden jetzt effizient genutzt.
+
+* Ein Prozentsatz an Performance, der höher als 100 ist, bedeutet, dass der Node oder das Aggregat zu stark ausgelastet ist und dass Workloads eine suboptimale Performance erhalten.
++
+Der Ressource sollten keine neuen Workloads hinzugefügt werden, die bestehende Workloads müssen eventuell neu verteilt werden.
+
+* Ein Prozentsatz an Performance-Kapazität unter 100 zeigt an, dass der Node oder das Aggregat nicht ausgelastet ist und dass die Ressourcen nicht effizient genutzt werden.
++
+Der Ressource können weitere Workloads hinzugefügt werden.
+
+
+
+[NOTE]
+====
+Im Gegensatz zur Auslastung kann die genutzte Performance-Kapazität über 100 % liegen. Es gibt keinen maximalen Prozentsatz, aber Ressourcen werden in der Regel zwischen 110 % und 140 % liegen, wenn sie überausgelastet sind. Höhere Prozentsätze deuten auf eine Ressource mit schwerwiegenden Problemen hin.
+
+====

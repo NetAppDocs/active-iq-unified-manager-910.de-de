@@ -1,0 +1,29 @@
+---
+permalink: reporting/concept_understand_view_and_reports_relationship.html 
+sidebar: sidebar 
+keywords: understand, view, report, relationship 
+summary: Ansichten und Bestandsseiten werden zu Berichten, wenn Sie sie herunterladen oder planen. 
+---
+= Verständnis der Ansichten und der Berichtsbeziehung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ansichten und Bestandsseiten werden zu Berichten, wenn Sie sie herunterladen oder planen.
+
+Sie können Ansichten und Bestandsseiten zur Wiederverwendung anpassen und speichern. Nahezu alle Daten, die in Unified Manager angezeigt werden, können gespeichert, wiederverwendet, individuell, geplant und als Bericht freigegeben werden.
+
+In der Dropdown-Ansicht sind Elemente mit dem Löschsymbol bereits vorhandene benutzerdefinierte Ansichten, die Sie oder ein anderer Benutzer erstellt haben. Elemente ohne Symbol sind Standardansichten, die in Unified Manager bereitgestellt werden. Standardansichten können nicht geändert oder gelöscht werden.
+
+[NOTE]
+====
+* Wenn Sie eine benutzerdefinierte Ansicht aus der Liste löschen, werden auch alle Excel-Dateien oder geplanten Berichte gelöscht, die diese Ansicht verwenden.
+* Wenn Sie eine benutzerdefinierte Ansicht ändern, werden Berichte, die diese Ansicht verwenden, die Änderung beim nächsten Generieren und Versenden des Berichts per E-Mail entsprechend dem Berichtsplan widerspiegeln. Wenn Sie Ansichten ändern, stellen Sie sicher, dass Ihre Änderungen mit den zugehörigen Excel-Anpassungen funktionieren, die für die Berichte verwendet werden. Sie können die Excel-Datei bei Bedarf aktualisieren, indem Sie sie herunterladen, die erforderlichen Änderungen vornehmen und als neue Excel-Anpassung für die Ansicht hochladen.
+
+
+====
+image::../media/view_drop_down_3.png[Dropdown-Liste anzeigen 3]
+
+Nur Benutzer mit der Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ können das Löschsymbol anzeigen, eine Ansicht ändern oder löschen oder einen geplanten Bericht ändern oder löschen.

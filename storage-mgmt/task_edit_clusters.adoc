@@ -1,0 +1,36 @@
+---
+permalink: storage-mgmt/task_edit_clusters.html 
+sidebar: sidebar 
+keywords: edit, clusters 
+summary: Sie können die Einstellungen eines vorhandenen Clusters, z. B. Host-Name oder IP-Adresse, Benutzername, Passwort und Port, über das Dialogfeld Cluster bearbeiten ändern. 
+---
+= Cluster werden bearbeitet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Einstellungen eines vorhandenen Clusters, z. B. Host-Name oder IP-Adresse, Benutzername, Passwort und Port, über das Dialogfeld Cluster bearbeiten ändern.
+
+*Was Sie brauchen*
+
+Sie müssen über die Anwendungsadministratorrolle oder die Speicheradministratorrolle verfügen.
+
+[NOTE]
+====
+Ab Unified Manager 9.7 können Cluster nur mit HTTPS hinzugefügt werden.
+
+====
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage-Management* > *Cluster-Setup*.
+. Wählen Sie auf der Seite *Cluster Setup* den Cluster aus, den Sie bearbeiten möchten, und klicken Sie dann auf *Bearbeiten*.
+. Ändern Sie im Dialogfeld *Cluster bearbeiten* die Werte nach Bedarf.
+. Klicken Sie Auf *Absenden*.
+
+
+*Verwandte Informationen*
+
+link:../config/task_add_users.html["Benutzer hinzufügen"]
+
+link:../health-checker/task_view_cluster_list_and_details.html["Anzeigen der Cluster-Liste und der Details"]

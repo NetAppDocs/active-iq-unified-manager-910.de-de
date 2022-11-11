@@ -1,0 +1,22 @@
+---
+permalink: reporting/concept_sample_microsoft_excel_reports.html 
+sidebar: sidebar 
+keywords: sample, microsoft, excel, reports 
+summary: Diese Beispielberichte von Microsoft Excel dienen der Einführung von Berichtsoptionen, die über die erweiterten Excel-Funktionen verfügbar sind. 
+---
+= Beispiel für Microsoft Excel-Berichte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese Beispielberichte von Microsoft Excel dienen der Einführung von Berichtsoptionen, die über die erweiterten Excel-Funktionen verfügbar sind.
+
+Mit den erweiterten Funktionen von Excel können Sie eine Vielzahl von Berichten erstellen, die speziell auf Ihre Bedürfnisse zugeschnitten sind. Ausführliche Informationen zur Verwendung von Excel finden Sie in der Produktdokumentation.
+
+[NOTE]
+====
+Zum Verwalten von Berichten müssen Sie über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+====

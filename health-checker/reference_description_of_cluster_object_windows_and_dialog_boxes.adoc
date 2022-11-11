@@ -1,0 +1,22 @@
+---
+permalink: health-checker/reference_description_of_cluster_object_windows_and_dialog_boxes.html 
+sidebar: sidebar 
+keywords: description, cluster, object, windows, dialog boxes 
+summary: Sie können alle Cluster- und Cluster-Objekte auf der jeweiligen Storage-Objektseite anzeigen. Sie können die Details auch auf der entsprechenden Seite mit den Details des Speicherobjekts anzeigen. Sie können die Benutzeroberfläche des System Manager jetzt aus den folgenden ABSCHNITTEN FÜR SPEICHER und SCHUTZ des BESTANDS starten. 
+---
+= Beschreibung der Fenster und Dialogfelder für Cluster-Objekte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können alle Cluster- und Cluster-Objekte auf der jeweiligen Storage-Objektseite anzeigen. Sie können die Details auch auf der entsprechenden Seite mit den Details des Speicherobjekts anzeigen. Sie können die Benutzeroberfläche des System Manager jetzt aus den folgenden ABSCHNITTEN FÜR SPEICHER und SCHUTZ des BESTANDS starten.
+
+* Cluster Inventory, Cluster Health und Cluster Performance Seiten
+* Aggregierte Seiten „Inventar“, „Aggregatzustand“ und „aggregierte Performance“
+* Volume-Bestand, Volume-Zustand und Volume Performance
+* Seiten „Node Inventory“ und „Node Performance“
+* StorageVM Inventory, StorageVM Health und StorageVM Performance Seiten
+* Schutzbeziehungen Seiten
+

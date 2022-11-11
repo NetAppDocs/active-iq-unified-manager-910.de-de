@@ -1,0 +1,44 @@
+---
+permalink: reporting/task_download_reports.html 
+sidebar: sidebar 
+keywords: download, reports 
+summary: 'Sie können Berichte herunterladen und die Daten als CSV-Datei (Comma Separated Values), als Microsoft Excel (.XLSX)-Datei oder als PDF-Datei auf einem lokalen oder Netzwerklaufwerk speichern. Sie können CSV- und XLSX-Dateien mit Tabellenkalkulationsanwendungen wie Microsoft Excel und PDF-Dateien mit Lesern wie Adobe Acrobat öffnen.' 
+---
+= Berichte werden heruntergeladen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Berichte herunterladen und die Daten als CSV-Datei (Comma Separated Values), als Microsoft Excel (.XLSX)-Datei oder als PDF-Datei auf einem lokalen oder Netzwerklaufwerk speichern. Sie können CSV- und XLSX-Dateien mit Tabellenkalkulationsanwendungen wie Microsoft Excel und PDF-Dateien mit Lesern wie Adobe Acrobat öffnen.
+
+.Schritte
+. Klicken Sie auf die Schaltfläche *Berichte*, um den Bericht wie folgt herunterzuladen:
++
+[cols="2*"]
+|===
+| Wählen | An... 
+
+
+ a| 
+Laden Sie CSV herunter
+ a| 
+Speichern Sie den Bericht als kommagetrennte Datei (CSV).
+
+
+
+ a| 
+PDF herunterladen
+ a| 
+Speichern Sie den Bericht als PDF-Datei.
+
+
+
+ a| 
+Excel Herunterladen
+ a| 
+Speichern Sie den Bericht als XLSX-Datei (Microsoft Excel).
+
+|===
+

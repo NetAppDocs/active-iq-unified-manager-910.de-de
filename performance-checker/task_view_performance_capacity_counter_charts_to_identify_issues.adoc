@@ -1,0 +1,37 @@
+---
+permalink: performance-checker/task_view_performance_capacity_counter_charts_to_identify_issues.html 
+sidebar: sidebar 
+keywords: view, performance, capacity, counter charts, identify, issues 
+summary: Auf der Seite „Performance Explorer“ können Sie die verwendeten Performance-Kapazitäten für Nodes und Aggregate anzeigen. Damit können Sie detaillierte Performance-Kapazitätsdaten für die ausgewählten Nodes und Aggregate für einen bestimmten Zeitraum anzeigen. 
+---
+= Anzeigen von Zählerdiagrammen zur Performance-Kapazität zur Erkennung von Problemen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Performance Explorer“ können Sie die verwendeten Performance-Kapazitäten für Nodes und Aggregate anzeigen. Damit können Sie detaillierte Performance-Kapazitätsdaten für die ausgewählten Nodes und Aggregate für einen bestimmten Zeitraum anzeigen.
+
+Das Standard-Zählerdiagramm zeigt die Werte der verwendeten Performance-Kapazität für die ausgewählten Nodes oder Aggregate an. Das Counter Chart Breakdown zeigt die Werte für die Gesamtkapazität des Root-Objekts an, das basierend auf Benutzerprotokollen und Hintergrundsystemprozessen in die Nutzung unterteilt ist. Darüber hinaus wird die Menge der freien Performance-Kapazität dargestellt.
+
+[NOTE]
+====
+Da einige Hintergrundaktivitäten zu System- und Datenmanagement als Benutzer-Workloads identifiziert und als Benutzerprotokolle kategorisiert werden, erscheint der Prozentsatz der Benutzerprotokolle künstlich hoch, wenn diese Prozesse ausgeführt werden. Diese Prozesse laufen normalerweise um Mitternacht, wenn die Cluster-Nutzung gering ist. Wenn bei der Durchführung von Benutzerprotokollen um Mitternacht eine Spitze sichtbar ist, überprüfen Sie, ob Cluster-Backup-Jobs oder andere Hintergrundaktivitäten zu diesem Zeitpunkt konfiguriert wurden.
+
+====
+.Schritte
+. Wählen Sie die *Explorer* Registerkarte von einem Knoten oder Aggregat * Landing* Seite.
+. Klicken Sie im Fenster *Counter Charts* auf *Choose Charts* und wählen Sie dann die Option *Perf. Diagramm „verwendete Kapazität“.
+. Blättern Sie nach unten, bis Sie das Diagramm anzeigen können.
++
+Die Farben des Standarddiagramms zeigen an, wenn sich das Objekt im optimalen Bereich (gelb) befindet, wenn das Objekt nicht ausgelastet ist (grün) und wenn das Objekt überausgelastet ist (rot). Das Diagramm zeigt detaillierte Performance-Kapazitätsdetails nur für das Root-Objekt.
+
++
+image::../media/headroom_counter_charts.gif[Zählerdiagramme der Reserve]
+
+. Wenn Sie eine Karte in einem vollen Format anzeigen möchten, klicken Sie auf *Zoom View*.
++
+Auf diese Weise können Sie mehrere Zählerdiagramme in einem separaten Fenster öffnen, um die genutzte Performance-Kapazität mit IOPS- oder MB/s-Werten im gleichen Zeitraum zu vergleichen.
+
+

@@ -1,0 +1,39 @@
+---
+permalink: health-checker/task_view_aggregate_list_and_details.html 
+sidebar: sidebar 
+keywords: view, aggregate list, details 
+summary: 'Aus der Ansicht „Systemzustand“: Alle Aggregate können Sie Ihr Inventar an Aggregaten überwachen. Die Kapazität: Alle Aggregatansicht ermöglicht es Ihnen, Informationen über Kapazität und Auslastung von Aggregaten in allen Clustern anzuzeigen.' 
+---
+= Anzeigen der Aggregatliste und der Details
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aus der Ansicht „Systemzustand“: Alle Aggregate können Sie Ihr Inventar an Aggregaten überwachen. Die Kapazität: Alle Aggregatansicht ermöglicht es Ihnen, Informationen über Kapazität und Auslastung von Aggregaten in allen Clustern anzuzeigen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+
+Sie können Details wie Aggregatskapazität und -Konfiguration sowie Festplatteninformationen über die Seite „Aggregate/Health Details“ anzeigen. Sie können diese Details verwenden, bevor Sie die Schwellenwerteinstellungen konfigurieren, falls erforderlich.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Aggregate*.
+. Wählen Sie eine der folgenden Möglichkeiten, um die Aggregatdetails anzuzeigen:
++
+** Um Informationen über den Zustand aller Aggregate in allen Clustern anzuzeigen, wählen Sie im Menü Ansicht den Eintrag Systemzustand: Alle Aggregate aus.
+** Um Informationen zur Kapazität und Auslastung aller Aggregate in allen Clustern anzuzeigen, wählen Sie im Menü Ansicht die Option Kapazität: Alle Aggregate anzeigen.
+** Um die vollständigen Details anzuzeigen, klicken Sie auf den Aggregatnamen.
++
+Sie können die vollständigen Details auch anzeigen, indem Sie im Dialogfeld mit den minimalen Details auf *Details anzeigen* klicken.
+
+
+
+. Zeigen Sie die Objekte an, die mit dem Aggregat zusammenhängen, indem Sie im Dialogfeld mit den minimalen Details auf *Related* klicken.
+
+
+*Verwandte Informationen*
+
+link:../health-checker/reference_health_aggregate_details_page.html["Registerkarte „Aggregate/Health Details“"]

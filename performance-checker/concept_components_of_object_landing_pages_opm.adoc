@@ -1,0 +1,53 @@
+---
+permalink: performance-checker/concept_components_of_object_landing_pages_opm.html 
+sidebar: sidebar 
+keywords: components, object, landing pages 
+summary: Auf den Seiten „Objekt-Landing“ werden Details zu allen kritischen, Warn- und Informationsereignissen angezeigt. Sie bieten eine detaillierte Ansicht der Performance aller Cluster-Objekte, sodass Sie einzelne Objekte über verschiedene Zeiträume auswählen und vergleichen können. 
+---
+= Komponenten der ObjektLanding-Pages
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf den Seiten „Objekt-Landing“ werden Details zu allen kritischen, Warn- und Informationsereignissen angezeigt. Sie bieten eine detaillierte Ansicht der Performance aller Cluster-Objekte, sodass Sie einzelne Objekte über verschiedene Zeiträume auswählen und vergleichen können.
+
+Auf den Seiten „Objekt-Landing“ können Sie die Gesamtleistung aller Objekte untersuchen und die Performance-Daten des Objekts im nebeneinander liegenden Format vergleichen. Dies ist bei der Leistungsbeurteilung und bei der Fehlersuche von Ereignissen von Vorteil.
+
+[NOTE]
+====
+Die Daten, die in den Zusammenfassungsfeldern des Zählers und in den Zählerdiagrammen angezeigt werden, basieren auf einem fünfminütigen Abtastintervall. Die Daten, die im Objektbestandsraster links auf der Seite angezeigt werden, basieren auf einem einstündigen Probenahmeintervall.
+
+====
+Die folgende Abbildung zeigt ein Beispiel für eine Landing Page des Objekts, auf der die Explorer-Informationen angezeigt werden:
+
+image::../media/perf_manager_page_1.gif[perf Manager Seite 1]
+
+Abhängig vom angezeigten Storage-Objekt kann auf der Objekt-Landing-Page die folgenden Registerkarten enthalten, die Performance-Daten zum Objekt liefern:
+
+* Zusammenfassung
++
+Zeigt drei oder vier Zählerdiagramme an, die die Ereignisse und die Leistung pro Objekt für den vorangegangenen 72-Stunden-Zeitraum enthalten, einschließlich einer Trendlinie, die die hohen und niedrigen Werte in diesem Zeitraum anzeigt.
+
+* Explorer
++
+Zeigt ein Raster von Storage-Objekten an, die mit dem aktuellen Objekt verknüpft sind. So können Sie die Performance-Werte des aktuellen Objekts mit den zugehörigen Objekten vergleichen. Diese Registerkarte enthält bis zu elf Zählerdiagramme und eine Zeitbereichauswahl, mit der Sie eine Vielzahl von Vergleichen durchführen können.
+
+* Informationsdaten
++
+Zeigt Werte für nicht-Performance-Konfigurationsattribute am Storage-Objekt an, einschließlich der installierten Version der ONTAP Software, des HA-Partnernamens und der Anzahl der Ports und LIFs.
+
+* Erstklassige Performance
++
+Für Cluster: Zeigt die Storage-Objekte an, die basierend auf dem von Ihnen ausgewählten Performance-Zähler die höchste Performance oder die niedrigste Performance haben.
+
+* Failover-Planung
++
+Für Nodes: Zeigt die Schätzung der Performance-Auswirkungen auf einen Node an, wenn der HA-Partner des Node ausfällt.
+
+* Details
++
+Für Volumes: Zeigt detaillierte Performance-Statistiken für alle I/O-Aktivitäten und Vorgänge für den ausgewählten Volume-Workload an. Diese Registerkarte ist für FlexVol Volumes, FlexGroup Volumes und Komponenten von FlexGroups verfügbar.
+
+

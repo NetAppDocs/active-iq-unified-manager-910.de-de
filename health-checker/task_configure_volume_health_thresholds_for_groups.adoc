@@ -1,0 +1,31 @@
+---
+permalink: health-checker/task_configure_volume_health_thresholds_for_groups.html 
+sidebar: sidebar 
+keywords: configure, volume, health, thresholds, groups 
+summary: Sie können Zustandsschwellenwerte für Volumes auf Gruppenebene für Kapazität, Snapshot Kopien, qtree Kontingente, Wachstum und Inodes konfigurieren. 
+---
+= Konfigurieren von Schwellenwerten für den Zustand von Volumes für Gruppen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Zustandsschwellenwerte für Volumes auf Gruppenebene für Kapazität, Snapshot Kopien, qtree Kontingente, Wachstum und Inodes konfigurieren.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Der Schwellenwerttyp für den Volume-Zustand der Gruppenaktion wird nur auf Volumes einer Gruppe angewendet.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Gruppen*.
+. Klicken Sie auf der Registerkarte *Gruppenaktionen* auf *Hinzufügen*.
+. Geben Sie einen Namen und eine Beschreibung für die Gruppenaktion ein.
+. Wählen Sie aus dem Dropdown-Feld *Gruppe* eine Gruppe aus, für die Sie die Gruppenaktion konfigurieren möchten.
+. Wählen Sie als Schwellenwert für den Volumenzustand *Aktionstyp* aus.
+. Wählen Sie die Kategorie aus, für die Sie den Schwellenwert festlegen möchten.
+. Geben Sie die erforderlichen Werte für den Schwellenwert ein.
+. Klicken Sie Auf *Hinzufügen*.
+

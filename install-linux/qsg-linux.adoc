@@ -1,0 +1,59 @@
+---
+permalink: install-linux/qsg-linux.html 
+sidebar: sidebar 
+keywords: quick start guide, QSG, Linux QSG, RHEL QSG, quick installation 
+summary: Kurzanleitung für Unified Manager auf der Linux-Plattform. 
+---
+= Kurzanleitung für Linux-Installationen
+:allow-uri-read: 
+
+
+
+
+== Systemanforderungen
+
+* Betriebssystem: Red hat Enterprise Linux und CentOS Version 7.x und 8.x basierend auf x86_64 Architektur, installiert mit der Basisumgebung „Server mit GUI“ aus der Option *Software Selection* des OS Installers
+* RAM: 12 GB, CPU: 9572 MHz insgesamt
+* Freier Speicherplatz: 100 GB Festplattenspeicher im `/opt/netapp/data` Verzeichnis, 50 GB in der Root-Partition. Für die separate Montage `/opt` Und `/var/log` Verzeichnisse, stellen Sie sicher, dass `/opt` Hat 15 GB, `/var/log` Hat 16 GB, und `/tmp` Verfügt über 10 GB freien Speicherplatz.
+
+
+Detaillierte Systemanforderungen und Informationen zur Installation des Produkts an einem gesicherten Standort finden Sie im link:../install-linux/concept_requirements_for_install_unified_manager.html["Anforderungen für die Installation von Unified Manager"] Und das link:http://mysupport.netapp.com/matrix["Interoperabilitätsmatrix"].
+
+
+
+== Active IQ Unified Manager wird installiert
+
+
+
+=== Laden Sie das Installationsprogramm herunter
+
+. Laden Sie die herunter `ActiveIQUnifiedManager-<version>.zip` Installationspaket.
+. Führen Sie im Verzeichnis, in dem Sie die Installationsdatei heruntergeladen haben, folgende Schritte aus:
++
+`# unzip ActiveIQUnifiedManager-<version>.zip`
+
+
+
+
+
+=== Überprüfung der Repository-Konfiguration
+
+Die Vorgehensweisen für die Konfiguration von Red hat Enterprise Linux- oder CentOS-Repositorys sind standortspezifisch. Sie können das verwenden `pre_install_check.sh` Skript im Installationspaket enthalten, um die Konfiguration Ihres Betriebssystems zu überprüfen. Wenn Ihr System mit dem Internet verbunden ist, erhalten Sie automatisch Anweisungen zum Einrichten der Red hat Enterprise Linux- oder CentOS-Repositories.
+
+`# sudo ./pre_install_check.sh`
+
+
+
+=== Installation Von Unified Manager
+
+Unified Manager verwendet das `yum` Dienstprogramm zum Installieren der Software und der abhängigen Software. Da es unterschiedliche Bilder von Red hat Enterprise Linux oder CentOS gibt, hängen die installierten Pakete von der in den Bildern vorhandenen Software ab. Der `yum` Dienstprogramm bestimmt die abhängigen Softwarepakete für die Installation. Weitere Informationen zu den abhängigen Softwarepaketen finden Sie im link:../install-linux/reference_red_hat_and_centos_software_and_installation_requirements.html["Linux-Software- und Installationsanforderungen"].
+
+Um Unified Manager zu installieren, führen Sie den folgenden Befehl aus, entweder als Root-Benutzer oder mit `sudo`, Aus dem Verzeichnis, in dem die Installationsdatei entpackt wurde:
+
+`# yum install netapp-um<version>.x86_64.rpm`
+
+Oder
+
+`% sudo yum install netapp-um<version>.x86_64.rpm`
+
+Am Ende der Installation werden die Informationen zur Verbindung mit der Unified Manager Web-Benutzeroberfläche angezeigt. Wenn Sie keine Verbindung zur Web-Benutzeroberfläche herstellen können, lesen Sie den `README` Datei mit der Software für weitere Informationen über Port 443 Einschränkungen verpackt.

@@ -1,0 +1,52 @@
+---
+permalink: performance-checker/task_respond_to_user_defined_performance_threshold_events.html 
+sidebar: sidebar 
+keywords: user-defined, performance, threshold, events 
+summary: Sie können Unified Manager verwenden, um Performance-Ereignisse zu untersuchen, die durch einen Performance-Zähler durch eine benutzerdefinierte Warnung oder einen kritischen Schwellenwert verursacht werden. Sie können auch Unified Manager verwenden, um den Systemzustand der Cluster-Komponente zu überprüfen, um zu ermitteln, ob kürzlich Systemzustandsereignisse auf der Komponente, die zum Performance-Ereignis beigetragen haben, erkannt wurden. 
+---
+= Reaktion auf benutzerdefinierte Performance-Schwellenwertereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Unified Manager verwenden, um Performance-Ereignisse zu untersuchen, die durch einen Performance-Zähler durch eine benutzerdefinierte Warnung oder einen kritischen Schwellenwert verursacht werden. Sie können auch Unified Manager verwenden, um den Systemzustand der Cluster-Komponente zu überprüfen, um zu ermitteln, ob kürzlich Systemzustandsereignisse auf der Komponente, die zum Performance-Ereignis beigetragen haben, erkannt wurden.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+* Es müssen neue oder veraltete Performanceereignisse vorliegen.
+
+
+.Schritte
+. Rufen Sie die Seite *Ereignisdetails* auf, um Informationen über das Ereignis anzuzeigen.
+. Lesen Sie die *Beschreibung*, die die Schwellenverletzung beschreibt, die das Ereignis verursacht hat.
++
+Beispielsweise hat die Meldung „`Latency value of 456 ms/op hat ein WARNEREIGNIS auf der Grundlage des Schwellenwerts von 400 ms/op` ausgelöst. Dies zeigt an, dass ein Latenzwarnereignis für das Objekt aufgetreten ist.
+
+. Bewegen Sie den Mauszeiger über den Richtliniennamen, um Details zur Schwellenwertrichtlinie anzuzeigen, die das Ereignis ausgelöst hat.
++
+Dazu zählen der Richtlinienname, der zu bewertete Performance-Zähler, der Zählerwert, der nicht durchbrochen werden muss, um es als kritisches oder Warnereignis zu betrachten, und die Dauer, bis zu der der Zähler den Wert überschreiten muss.
+
+. Notieren Sie sich die *Event Trigger Time*, damit Sie untersuchen können, ob gleichzeitig andere Ereignisse aufgetreten sind, die zu diesem Ereignis beigetragen haben könnten.
+. Führen Sie eine der folgenden Optionen aus, um das Ereignis genauer zu untersuchen, um festzustellen, ob Sie Maßnahmen zur Behebung des Leistungsproblems durchführen müssen:
++
+|===
+| Option | Mögliche Ermittlungsmaßnahmen 
+
+
+ a| 
+Klicken Sie auf den Namen des Quellobjekts, um die Explorer-Seite für dieses Objekt anzuzeigen.
+ a| 
+Auf dieser Seite können Sie die Objektdetails anzeigen und dieses Objekt mit anderen ähnlichen Storage-Objekten vergleichen. So wird ersichtlich, ob es bei anderen Storage-Objekten um die gleiche Zeit ein Performance-Problem gibt. Um zum Beispiel zu sehen, ob andere Volumes auf demselben Aggregat auch ein Performance-Problem haben.
+
+
+
+ a| 
+Klicken Sie auf den Cluster-Namen, um die Seite „Cluster Summary“ anzuzeigen.
+ a| 
+Auf dieser Seite können Sie die Details für den Cluster anzeigen, auf dem dieses Objekt residiert, um zu sehen, ob weitere Performance-Probleme zur gleichen Zeit aufgetreten sind.
+
+|===
+

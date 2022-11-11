@@ -1,0 +1,36 @@
+---
+permalink: performance-checker/task_view_performance_charts_to_compare_volumes_or_luns_in_qos_policy.html 
+sidebar: sidebar 
+keywords: view, performance, charts, compare, volumes, luns, same, qos, policy, group 
+summary: Sie können die Volumes und LUNs in denselben QoS-Richtliniengruppen anzeigen und anschließend die Performance in einem einzelnen Diagramm mit IOPS, MB/s oder IOPS/TB vergleichen, um Probleme zu identifizieren. 
+---
+= Anzeigen von Performance-Diagrammen zum Vergleich von Volumes oder LUNs in derselben QoS-Richtliniengruppe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Volumes und LUNs in denselben QoS-Richtliniengruppen anzeigen und anschließend die Performance in einem einzelnen Diagramm mit IOPS, MB/s oder IOPS/TB vergleichen, um Probleme zu identifizieren.
+
+Die Schritte zum Vergleich der Performance von Volumes in derselben QoS-Richtliniengruppe sind unten dargestellt. Die Schritte zum Anzeigen dieser Informationen für eine LUN sind ähnlich.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Volumes*.
++
+Die Ansicht „Systemzustand: Alle Volumes“ wird standardmäßig angezeigt.
+
+. Wählen Sie im Menü Ansicht die Option *Leistung: Volumes in QoS Policy Group* aus.
+. Klicken Sie auf den Namen des Volumes, das Sie überprüfen möchten.
++
+Die Seite Performance Explorer wird für das Volume angezeigt.
+
+. Wählen Sie im Menü Ansicht und Vergleich die Option *Volumes in derselben QoS Policy Group* aus.
++
+Die anderen Volumes, die dieselbe QoS-Richtlinie aufweisen, sind in der nachfolgenden Tabelle aufgelistet.
+
+. Klicken Sie auf die Schaltfläche *Hinzufügen*, um die Volumes zu den Diagrammen hinzuzufügen, sodass Sie die IOPS, MB/s, IOPS/TB und andere Leistungsindikatoren für alle ausgewählten Volumes in den Diagrammen vergleichen können.
++
+Sie können den Zeitbereich ändern, um die Leistung über verschiedene Zeitintervalle zu sehen, außer dem Standard von 72 Stunden.
+
+

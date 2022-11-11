@@ -1,0 +1,58 @@
+---
+permalink: data-protection/reference_protection_storage_virtual_machine_associations_page.html 
+sidebar: sidebar 
+keywords: svm, peers, page 
+summary: Auf der Seite „SVM Peers“ können Sie vorhandene Storage VM Peers zwischen Quell- und Ziel-Storage VM anzeigen und neue Storage-VM erstellen, die von den Partnerapplikationen zum Erstellen von SnapMirror und SnapVault Beziehungen verwendet werden kann. 
+---
+= Andere SVM-Seite
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „SVM Peers“ können Sie vorhandene Storage VM Peers zwischen Quell- und Ziel-Storage VM anzeigen und neue Storage-VM erstellen, die von den Partnerapplikationen zum Erstellen von SnapMirror und SnapVault Beziehungen verwendet werden kann.
+
+
+
+== Befehlsschaltflächen
+
+Mit den Schaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Erstellen*
++
+Öffnet die Seite Storage Virtual Machine Peers erstellen.
+
+* *Löschen*
++
+Ermöglicht Ihnen das Löschen der ausgewählten Speicher-VM-Peers.
+
+
+
+
+
+== Andere Storage VM-Mitbewerber
+
+Die Liste der SVM-Kollegen wird in einer Tabelle die erstellten Quell- und Ziel-Storage-VM-Zuordnungen sowie die Art der für jede Zuordnung zugelassenen Sicherungsbeziehungen angezeigt.
+
+* * Source Storage Virtual Machine*
++
+Zeigt den Namen der Quell-SVM an.
+
+* * Quellcluster*
++
+Zeigt den Namen des Quell-Clusters an.
+
+* *Zielspeicher Virtual Machine*
++
+Zeigt den Namen der Ziel-SVM an.
+
+* *Zielcluster*
++
+Zeigt den Namen des Ziel-Clusters an.
+
+* *Typ*
++
+Zeigt die Art der Schutzbeziehung an. Beziehungstypen sind entweder SnapMirror oder SnapVault.
+
+

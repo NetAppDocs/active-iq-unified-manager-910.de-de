@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_use_qos_policy_settings_to_prioritize_work_on_this_node.html 
+sidebar: sidebar 
+keywords: qos, policy, settings, prioritize, work, node 
+summary: 'Sie können eine Obergrenze für eine QoS-Richtliniengruppe festlegen, um das Durchsatzlimit für I/O pro Sekunde (IOPS) oder MB/s für die in ihr enthaltenen Workloads zu steuern. Wenn sich Workloads in einer Richtliniengruppe ohne festgelegte Grenzwerte befinden, wie z. B. in der Standardrichtliniengruppe oder das festgelegte Limit Ihren Anforderungen nicht entspricht, können Sie das festgelegte Limit erhöhen oder die Workloads in eine neue oder vorhandene Richtliniengruppe mit dem gewünschten Limit verschieben.' 
+---
+= Setzen Sie QoS-Richtlinieneinstellungen ein, um die Arbeit an diesem Node zu priorisieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Obergrenze für eine QoS-Richtliniengruppe festlegen, um das Durchsatzlimit für I/O pro Sekunde (IOPS) oder MB/s für die in ihr enthaltenen Workloads zu steuern. Wenn sich Workloads in einer Richtliniengruppe ohne festgelegte Grenzwerte befinden, wie z. B. in der Standardrichtliniengruppe oder das festgelegte Limit Ihren Anforderungen nicht entspricht, können Sie das festgelegte Limit erhöhen oder die Workloads in eine neue oder vorhandene Richtliniengruppe mit dem gewünschten Limit verschieben.
+
+Wenn ein Performance-Ereignis auf einem Node durch eine Überlastung der Node-Ressourcen verursacht wird, zeigt die Ereignisbeschreibung auf der Seite Ereignisdetails einen Link zur Liste der betroffenen Volumes an. Auf der Seite „Performance/Volumes“ können die betroffenen Volumes nach IOPS und MB/s sortiert werden, um zu sehen, welche Workloads die höchste Auslastung aufweisen, die möglicherweise an dem Ereignis beigetragen hat.
+
+Durch die Zuweisung von Volumes, die die Node-Ressourcen überbeanspruchen, zu einer restriktiveren Richtliniengruppeneinstellung drosselt die Richtliniengruppe die Workloads, um ihre Aktivität zu beschränken. Dadurch wird die Nutzung der Ressourcen auf diesem Node verringert.
+
+Sie können ONTAP System Manager oder die ONTAP Befehle zum Verwalten von Richtliniengruppen verwenden, einschließlich der folgenden Aufgaben:
+
+* Erstellen einer Richtliniengruppe
+* Hinzufügen oder Entfernen von Workloads in einer Richtliniengruppe
+* Verschieben eines Workloads zwischen Richtliniengruppen
+* Ändern der Durchsatzbegrenzung einer Richtliniengruppe
+

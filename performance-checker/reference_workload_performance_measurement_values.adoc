@@ -1,0 +1,104 @@
+---
+permalink: performance-checker/reference_workload_performance_measurement_values.html 
+sidebar: sidebar 
+keywords: workload, performance, measurement, values 
+summary: Unified Manager misst die Performance von Workloads auf einem Cluster basierend auf historischen und erwarteten statistischen Werten, die die Latenzprognose für Werte für die Workloads bilden. Es vergleicht die tatsächlichen statistischen Workload-Werte mit der Latenzprognose, um zu ermitteln, ob die Workload-Performance zu hoch oder zu niedrig ist. Ein Workload, der nicht wie erwartet ausgeführt wird, löst ein dynamisches Performance-Ereignis aus, um Sie zu benachrichtigen. 
+---
+= Messwerte für die Workload-Performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager misst die Performance von Workloads auf einem Cluster basierend auf historischen und erwarteten statistischen Werten, die die Latenzprognose für Werte für die Workloads bilden. Es vergleicht die tatsächlichen statistischen Workload-Werte mit der Latenzprognose, um zu ermitteln, ob die Workload-Performance zu hoch oder zu niedrig ist. Ein Workload, der nicht wie erwartet ausgeführt wird, löst ein dynamisches Performance-Ereignis aus, um Sie zu benachrichtigen.
+
+In der folgenden Abbildung stellt der tatsächliche Wert in Rot die tatsächlichen Performance-Statistiken im Zeitrahmen dar. Der tatsächliche Wert hat den Performance-Schwellenwert überschritten, was den oberen Grenzwert der Latenzprognose darstellt. Der Peak ist der höchste ist-Wert im Zeitrahmen. Die Abweichung misst die Änderung zwischen den erwarteten Werten (der Prognose) und den Istwerten, während die Peak-Abweichung die größte Änderung zwischen den erwarteten Werten und den Istwerten angibt.
+
+image::../media/opm_wrkld_perf_measurement_png.gif[Messung der Workload-Performance von Unified Manager]
+
+In der folgenden Tabelle sind die Messwerte zur Workload-Performance aufgeführt.
+
+|===
+| Messung | Beschreibung 
+
+
+ a| 
+Aktivität
+ a| 
+Der Prozentsatz des QoS-Limits, der von den Workloads in der Richtliniengruppe verwendet wird
+
+[NOTE]
+====
+Wenn Unified Manager eine Änderung an einer Richtliniengruppe erkennt, z. B. das Hinzufügen oder Entfernen eines Volumes oder das Ändern des QoS-Limits, kann der tatsächliche und erwartete Wert 100 % des festgelegten Grenzwerts überschreiten. Wenn ein Wert 100 % des festgelegten Grenzwerts überschreitet, wird er als >100 % angezeigt. Wenn ein Wert kleiner als 1 % des festgelegten Grenzwerts ist, wird er als <1 % angezeigt.
+
+====
+
+
+ a| 
+Tatsächlich
+ a| 
+Der messbare Performance-Wert zu einem bestimmten Zeitpunkt für einen bestimmten Workload.
+
+
+
+ a| 
+Abweichung
+ a| 
+Die Änderung zwischen den erwarteten Werten und den ist-Werten. Es ist das Verhältnis des ist-Wertes minus dem erwarteten Wert zum oberen Wert des erwarteten Bereichs minus dem erwarteten Wert.
+
+[NOTE]
+====
+Ein negativer Abweichungswert zeigt, dass die Workload-Performance niedriger ist als erwartet, während ein positiver Abweichungswert darauf hinweist, dass die Workload-Performance höher ist als erwartet.
+
+====
+
+
+ a| 
+Erwartet
+ a| 
+Die erwarteten Werte basieren auf der Analyse historischer Performance-Daten für einen bestimmten Workload. Unified Manager analysiert diese statistischen Werte, um den erwarteten Wertebereich (Latenzprognose) zu ermitteln.
+
+
+
+ a| 
+Latenzprognose (Erwarteter Bereich)
+ a| 
+Die Latenzprognose stellt eine Vorhersage des Wert für die obere und untere Performance dar, die zu einem bestimmten Zeitpunkt erwartet werden. Bei der Workload-Latenz bilden die oberen Werte den Performance-Schwellenwert. Wenn der tatsächliche Wert den Performance-Schwellenwert überschreitet, löst Unified Manager ein dynamisches Performance-Ereignis aus.
+
+
+
+ a| 
+Spitze
+ a| 
+Der maximale Wert, der über einen Zeitraum gemessen wird.
+
+
+
+ a| 
+Maximale Abweichung
+ a| 
+Der maximale Abweichungswert, der über einen Zeitraum gemessen wird.
+
+
+
+ a| 
+Warteschlangentiefe
+ a| 
+Die Anzahl der ausstehenden I/O-Anfragen, die an der Interconnect-Komponente warten.
+
+
+
+ a| 
+Auslastung
+ a| 
+Für die Netzwerkverarbeitung, Datenverarbeitung und aggregierte Komponenten ist der prozentuale Anteil der Auslastung während eines bestimmten Zeitraums an den Workload-Vorgängen beschäftigt. Beispielsweise der prozentuale Anteil der Zeit, die für die Netzwerkverarbeitung oder Datenverarbeitung erforderlich ist, um eine I/O-Anfrage zu bearbeiten, oder an ein Aggregat, um eine Lese- oder Schreibanforderung zu erfüllen.
+
+
+
+ a| 
+Schreibdurchsatz
+ a| 
+Die Menge an Schreibdurchsatz in Megabyte pro Sekunde (MB/s), von Workloads in einem lokalen Cluster zum Partner-Cluster in einer MetroCluster-Konfiguration.
+
+|===

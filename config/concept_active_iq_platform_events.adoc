@@ -1,0 +1,20 @@
+---
+permalink: config/concept_active_iq_platform_events.html 
+sidebar: sidebar 
+keywords: feature settings, active iq, portal, events 
+summary: Sie können angeben, ob Sie Active IQ-Portalereignisse aktivieren oder deaktivieren möchten. Mit dieser Einstellung kann das Active IQ-Portal zusätzliche Ereignisse über die Systemkonfiguration, die Verkabelung usw. erkennen und anzeigen. Diese Option ist standardmäßig aktiviert. 
+---
+= Aktivieren von Active IQ Portal-Ereignissen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können angeben, ob Sie Active IQ-Portalereignisse aktivieren oder deaktivieren möchten. Mit dieser Einstellung kann das Active IQ-Portal zusätzliche Ereignisse über die Systemkonfiguration, die Verkabelung usw. erkennen und anzeigen. Diese Option ist standardmäßig aktiviert.
+
+Wenn Sie diese Funktion aktivieren, zeigt Active IQ Unified Manager Ereignisse an, die vom Active IQ-Portal erkannt wurden. Diese Ereignisse werden durch Regelwerke für AutoSupport-Meldungen erstellt, die von allen überwachten Storage-Systemen generiert werden. Diese Ereignisse unterscheiden sich von anderen Unified Manager Ereignissen und sie identifizieren Vorfälle oder Risiken im Zusammenhang mit Systemkonfiguration, Verkabelung, Best Practice und Verfügbarkeitsproblemen.
+
+Sie können diese Funktion über *Allgemein* > *Feature-Einstellungen* > *Active IQ Portal Events* aktivieren oder deaktivieren. Bei Sites ohne externen Netzwerkzugriff müssen Sie die Regeln manuell von *Speicherverwaltung* > *Event-Setup* > *Upload-Regeln* hochladen.
+
+Diese Funktion ist standardmäßig aktiviert. Durch Deaktivieren dieser Funktion wird verhindert, dass Active IQ-Ereignisse auf Unified Manager erkannt oder angezeigt werden. Wenn diese Funktion deaktiviert ist, kann Unified Manager die Active IQ Ereignisse auf einem Cluster bei einer vordefinierten Zeit von 00:15 für diese Cluster-Zeitzone empfangen.

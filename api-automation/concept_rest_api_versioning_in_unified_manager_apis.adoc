@@ -1,0 +1,23 @@
+---
+permalink: api-automation/concept_rest_api_versioning_in_unified_manager_apis.html 
+sidebar: sidebar 
+keywords: api, version, active iq, unified, manager 
+summary: 'DIE REST-API-URIs in Active IQ Unified Manager geben eine Versionsnummer an. Beispiel: /V2/Datacenter/svm/svms. Die Versionsnummer v2 in /v2/Datacenter/svm/svms gibt die in einer bestimmten Version verwendete API-Version an. Die Versionsnummer minimiert die Auswirkungen von API-Änderungen auf die Client-Software durch das Senden einer Antwort, die der Client verarbeiten kann.' 
+---
+= API-Version in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+DIE REST-API-URIs in Active IQ Unified Manager geben eine Versionsnummer an. Beispiel: `/v2/datacenter/svm/svms.` Die Versionsnummer `v2` In `/v2/datacenter/svm/svms` Gibt die in einer bestimmten Version verwendete API-Version an. Die Versionsnummer minimiert die Auswirkungen von API-Änderungen auf die Client-Software durch das Senden einer Antwort, die der Client verarbeiten kann.
+
+Der numerische Teil dieser Versionsnummer ist in Bezug auf Releases inkrementell. URIs mit einer Versionsnummer bieten eine konsistente Schnittstelle, die die Abwärtskompatibilität in zukünftigen Versionen beibehalten. Außerdem finden Sie die gleichen APIs auch ohne eine Version, zum Beispiel `/datacenter/svm/svms,` Das gibt die Basis-APIs ohne eine Version an. Die Basis-APIs sind immer die neueste Version der APIs.
+
+[NOTE]
+====
+In der rechten oberen Ecke der Swagger-Schnittstelle können Sie die Version der zu verwendenden API auswählen. Die höchste Version ist standardmäßig ausgewählt. Es wird empfohlen, die höchste Version einer bestimmten API (im Hinblick auf die inkrementelle Ganzzahl) zu verwenden, die in der Unified Manager-Instanz verfügbar ist.
+
+====
+Für alle Anforderungen müssen Sie explizit die API-Version anfordern, die Sie verwenden möchten. Wenn die Versionsnummer angegeben ist, gibt der Dienst keine Antwortelemente zurück, die von Ihrer Anwendung nicht behandelt werden sollen. IM RUHEZUSTAND sollten Sie den Versionsparameter enthalten. Die früheren Versionen der APIs sind schließlich nach ein paar Releases veraltet. In diesem Release enthält der `v1` Die Version der APIs ist veraltet.

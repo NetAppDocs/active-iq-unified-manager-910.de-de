@@ -1,0 +1,28 @@
+---
+permalink: events/task_edit_alerts.html 
+sidebar: sidebar 
+keywords: edit, alerts 
+summary: Sie können Eigenschaften von Warnmeldungen bearbeiten, z. B. die Ressource, mit der die Warnmeldung verknüpft ist, Ereignisse, Empfänger, Benachrichtigungsoptionen, Benachrichtigungshäufigkeit, Und zugehörigen Skripts. 
+---
+= Bearbeiten von Warnungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Eigenschaften von Warnmeldungen bearbeiten, z. B. die Ressource, mit der die Warnmeldung verknüpft ist, Ereignisse, Empfänger, Benachrichtigungsoptionen, Benachrichtigungshäufigkeit, Und zugehörigen Skripts.
+
+*Was Sie brauchen*
+
+Sie müssen über die Anwendungsadministratorrolle verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage-Management* > *Alarm-Setup*.
+. Wählen Sie auf der Seite *Alarm Setup* die Warnmeldung aus, die Sie bearbeiten möchten, und klicken Sie auf *Bearbeiten*.
+. Bearbeiten Sie im Dialogfeld *Alarm bearbeiten* den Namen, die Ressourcen, Ereignisse und Aktionen. Nach Bedarf.
++
+Sie können das Skript, das der Warnung zugeordnet ist, ändern oder entfernen.
+
+. Klicken Sie Auf *Speichern*.
+

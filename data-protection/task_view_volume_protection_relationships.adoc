@@ -1,0 +1,41 @@
+---
+permalink: data-protection/task_view_volume_protection_relationships.html 
+sidebar: sidebar 
+keywords: view, volume, protection relationships 
+summary: 'Aus der Ansicht „Beziehungen“: Alle Beziehungen und auf der Seite „Volume-Beziehungen“ können Sie den Status vorhandener Volume SnapMirror und SnapVault Beziehungen anzeigen. Sie können auch Details zu Sicherungsbeziehungen unter anderem hinsichtlich Transfer- und lag-Status, Quell- und Zieldetails, Zeitplan- und Richtlinieninformationen usw. prüfen.' 
+---
+= Anzeigen von Volume-Sicherungsbeziehungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aus der Ansicht „Beziehungen“: Alle Beziehungen und auf der Seite „Volume-Beziehungen“ können Sie den Status vorhandener Volume SnapMirror und SnapVault Beziehungen anzeigen. Sie können auch Details zu Sicherungsbeziehungen unter anderem hinsichtlich Transfer- und lag-Status, Quell- und Zieldetails, Zeitplan- und Richtlinieninformationen usw. prüfen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Sie können auch Beziehungsbefehle von dieser Seite aus initiieren.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Volumes*.
+. Wählen Sie im Menü Ansicht die Option *Beziehung* > *Alle Beziehungen*.
++
+Die Ansicht „Beziehung: Alle Beziehungen“ wird angezeigt.
+
+. Es gibt folgende Möglichkeiten, die Details zur Volume-Sicherung anzuzeigen:
++
+** Um aktuelle Informationen über alle Volume-Beziehungen anzuzeigen, bleiben Sie auf der Standard *Alle Beziehungen* Seite.
+** Um detaillierte Informationen zu den Trends der Volume-Übertragung über einen bestimmten Zeitraum anzuzeigen, wählen Sie im Menü Ansicht die Option Beziehung: Status der letzten 1 Monate übertragen.
+** Um detaillierte Informationen über die Aktivität der Volume-Übertragung auf Tagesbasis anzuzeigen, wählen Sie im Menü Ansicht die Option Beziehung: Letzte 1 Monat Transferrate.
+
+
++
+[NOTE]
+====
+Die Volume-Transferansichten zeigen Informationen zu Volumes nur in asynchronen Beziehungen an - Volumes in synchronen Beziehungen werden nicht angezeigt.
+
+====
+

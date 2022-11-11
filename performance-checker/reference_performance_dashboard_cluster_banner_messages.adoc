@@ -1,0 +1,38 @@
+---
+permalink: performance-checker/reference_performance_dashboard_cluster_banner_messages.html 
+sidebar: sidebar 
+keywords: performance, banner, messages, descriptions 
+summary: 'Unified Manager zeigt möglicherweise auf der Seite Benachrichtigungen (über die Bell wird über Benachrichtigung) Bannermeldungen an, um Sie über Statusprobleme für ein bestimmtes Cluster zu benachrichtigen.' 
+---
+= Performance-Banner-Meldungen und -Beschreibungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager zeigt möglicherweise auf der Seite Benachrichtigungen (über die Bell wird über Benachrichtigung) Bannermeldungen an, um Sie über Statusprobleme für ein bestimmtes Cluster zu benachrichtigen.
+
+|===
+| Bannernachricht | Beschreibung | Auflösung 
+
+
+ a| 
+`No performance data is being collected from cluster _cluster_name_. Restart Unified Manager to correct this issue.`
+ a| 
+Der Unified Manager Erfassungsservice wurde angehalten, und keine Performance-Daten werden von allen Clustern erfasst.
+ a| 
+Starten Sie Unified Manager neu, um dieses Problem zu beheben. Falls das Problem dadurch nicht behoben werden kann, wenden Sie sich an den technischen Support.
+
+
+
+ a| 
+`More than x hour(s) of historical data is being collected from cluster _cluster_name_. Current data collections will start after all historical data is collected.`
+ a| 
+Derzeit wird ein Datenkontinuitätssammlung ausgeführt, um Performance-Daten außerhalb des Echtzeit-Cluster Performance-Erfassungszyklus abzurufen.
+ a| 
+Es ist keine Aktion erforderlich. Aktuelle Performance-Daten werden nach Abschluss des Datenerfassungs-Zyklus erfasst.
+
+Ein Datenerfassungszyklus wird ausgeführt, wenn ein neues Cluster hinzugefügt wird oder Unified Manager aktuelle Performance-Daten aus einem bestimmten Grund nicht erfasst hat.
+
+|===

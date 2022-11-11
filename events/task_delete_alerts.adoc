@@ -1,0 +1,24 @@
+---
+permalink: events/task_delete_alerts.html 
+sidebar: sidebar 
+keywords: delete, alerts 
+summary: Sie können eine Meldung löschen, wenn sie nicht mehr benötigt wird. Beispielsweise können Sie eine Warnmeldung löschen, die für eine bestimmte Ressource erstellt wurde, wenn diese Ressource nicht mehr von Unified Manager überwacht wird. 
+---
+= Löschen von Meldungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Meldung löschen, wenn sie nicht mehr benötigt wird. Beispielsweise können Sie eine Warnmeldung löschen, die für eine bestimmte Ressource erstellt wurde, wenn diese Ressource nicht mehr von Unified Manager überwacht wird.
+
+*Was Sie brauchen*
+
+Sie müssen über die Anwendungsadministratorrolle verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage-Management* > *Alarm-Setup*.
+. Wählen Sie auf der Seite *Warnmeldungseinstellungen* die zu löschenden Warnmeldungen aus und klicken Sie auf *Löschen*.
+. Klicken Sie auf *Ja*, um die Löschanforderung zu bestätigen.
+

@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_volume_performance_reports.html 
+sidebar: sidebar 
+keywords: customize, volume, performance, reports 
+summary: Anhand dieser individuellen Berichte können Sie potenzielle Probleme im Zusammenhang mit der Volume-Performance identifizieren und darauf reagieren. 
+---
+= Sie können die Performance-Berichte von Volumes anpassen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Anhand dieser individuellen Berichte können Sie potenzielle Probleme im Zusammenhang mit der Volume-Performance identifizieren und darauf reagieren.

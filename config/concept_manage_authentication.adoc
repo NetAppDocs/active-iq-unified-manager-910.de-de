@@ -1,0 +1,16 @@
+---
+permalink: config/concept_manage_authentication.html 
+sidebar: sidebar 
+keywords: manage, authentication 
+summary: Sie können die Authentifizierung mit LDAP oder Active Directory auf dem Unified Manager-Server aktivieren und so konfigurieren, dass sie mit Ihren Servern zur Authentifizierung von Remote-Benutzern verwendet werden kann. 
+---
+= Verwalten der Authentifizierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Authentifizierung mit LDAP oder Active Directory auf dem Unified Manager-Server aktivieren und so konfigurieren, dass sie mit Ihren Servern zur Authentifizierung von Remote-Benutzern verwendet werden kann.
+
+Informationen zur Aktivierung der Fernauthentifizierung, zum Einrichten von Authentifizierungsdiensten und zum Hinzufügen von Authentifizierungsseviern finden Sie im vorherigen Abschnitt unter *Konfigurieren von Unified Manager zum Senden von Benachrichtigungen*.

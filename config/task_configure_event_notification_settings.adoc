@@ -1,0 +1,44 @@
+---
+permalink: config/task_configure_event_notification_settings.html 
+sidebar: sidebar 
+keywords: configure, event, notification, settings 
+summary: Sie können Unified Manager so konfigurieren, dass Benachrichtigungen gesendet werden, wenn ein Ereignis generiert wird oder ein Ereignis einem Benutzer zugewiesen ist. Sie können den SMTP-Server konfigurieren, der zum Senden der Warnmeldung verwendet wird, und Sie können verschiedene Benachrichtigungsmechanismen festlegen. So können beispielsweise Warnmeldungen als E-Mails oder SNMP-Traps gesendet werden. 
+---
+= Konfigurieren von Einstellungen für Ereignisbenachrichtigungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Unified Manager so konfigurieren, dass Benachrichtigungen gesendet werden, wenn ein Ereignis generiert wird oder ein Ereignis einem Benutzer zugewiesen ist. Sie können den SMTP-Server konfigurieren, der zum Senden der Warnmeldung verwendet wird, und Sie können verschiedene Benachrichtigungsmechanismen festlegen – beispielsweise können Alarmbenachrichtigungen als E-Mails oder SNMP-Traps gesendet werden.
+
+*Was Sie brauchen*
+
+Sie müssen die folgenden Informationen haben:
+
+* E-Mail-Adresse, von der die Benachrichtigung gesendet wird
++
+Die E-Mail-Adresse wird im Feld „`von`“ in gesendeten Warnmeldungen angezeigt. Falls die E-Mail aus irgendeinem Grund nicht zugestellt werden kann, wird diese E-Mail-Adresse auch als Empfänger für nicht lieferbare E-Mails verwendet.
+
+* Hostname des SMTP-Servers sowie Benutzername und Kennwort für den Zugriff auf den Server
+* Hostname oder IP-Adresse für den Trap-Ziel-Host, der den SNMP-Trap empfängt, zusammen mit der SNMP-Version, dem Outbound-Trap-Port, der Community und anderen erforderlichen SNMP-Konfigurationswerten
++
+Um mehrere Trap-Ziele festzulegen, trennen Sie jeden Host durch ein Komma. In diesem Fall müssen alle anderen SNMP-Einstellungen, wie Version und Outbound-Trap-Port, für alle Hosts in der Liste identisch sein.
+
+
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Benachrichtigungen*.
+. Konfigurieren Sie auf der Seite Benachrichtigungen die entsprechenden Einstellungen und klicken Sie auf *Speichern*.
++
+*Hinweise:*
+
++
+** Wenn die von-Adresse mit der Adresse „+ActiveIQUnifiedManager@localhost.com+“ ausgefüllt ist, sollten Sie sie in eine echte, funktionierende E-Mail-Adresse ändern, um sicherzustellen, dass alle E-Mail-Benachrichtigungen erfolgreich versendet werden.
+** Wenn der Hostname des SMTP-Servers nicht aufgelöst werden kann, können Sie anstelle des Host-Namens die IP-Adresse (IPv4 oder IPv6) des SMTP-Servers angeben.
+
+
+

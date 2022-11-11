@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_understand_performance_cluster_landing_page.html 
+sidebar: sidebar 
+keywords: understand, performance, cluster, landing page 
+summary: Die Seite „Performance Cluster Landing“ bietet eine grundlegende Performance-Übersicht über ein ausgewähltes Cluster und legt den Performance-Status der 10 wichtigsten Objekte im Cluster fest. Leistungsprobleme werden oben auf der Seite im Bereich „Alle Ereignisse auf diesem Cluster“ angezeigt. 
+---
+= Informationen zur Landing Page des Performance Cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite „Performance Cluster Landing“ bietet eine grundlegende Performance-Übersicht über ein ausgewähltes Cluster und legt den Performance-Status der 10 wichtigsten Objekte im Cluster fest. Leistungsprobleme werden oben auf der Seite im Bereich „Alle Ereignisse auf diesem Cluster“ angezeigt.
+
+Die Performance Cluster Landing Page bietet eine allgemeine Übersicht über jedes Cluster, das von einer Instanz von Unified Manager gemanagt wird. Auf dieser Seite erhalten Sie Informationen zu Ereignissen und der Performance sowie Informationen zur Überwachung und Fehlerbehebung der Cluster. Das folgende Bild zeigt ein Beispiel der „Performance Cluster Landing Page“ für den Cluster mit dem Namen „opm-Mobility“:
+
+image::../media/opm_cluster_landing_page_draft.gif[opm-Cluster-Landing Page-Entwurf]
+
+Die Ereignisanzahl auf der Seite „Cluster Summary“ entspricht möglicherweise nicht der Ereignisanzahl auf der Seite „Performance Event Inventory“. Dies liegt daran, dass auf der Seite „Cluster Summary“ jeweils ein Ereignis in den Bars für Latenz und Auslastung angezeigt werden kann, wenn gegen eine Kombinationsrichtlinie ein Schwellenwert überschritten wurde, während auf der Seite „Performance Event Inventory“ nur ein Ereignis angezeigt wird, wenn die Kombinationsrichtlinie nicht eingehalten wurde.
+
+[NOTE]
+====
+Wenn ein Cluster aus dem Management durch Unified Manager entfernt wurde, wird rechts neben dem Cluster-Namen oben auf der Seite der Status *removed* angezeigt.
+
+====

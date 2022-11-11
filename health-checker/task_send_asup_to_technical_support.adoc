@@ -1,0 +1,20 @@
+---
+permalink: health-checker/task_send_asup_to_technical_support.html 
+sidebar: sidebar 
+keywords: support bundle, web ui, maintenance console 
+summary: Sie sollten ein Support-Bundle senden, wenn das Problem, das Sie haben, detailliertere Diagnose und Fehlerbehebung erfordert als eine AutoSupport-Meldung. Sie können ein Support-Paket über die Unified Manager Web-UI und die Wartungskonsole an den technischen Support senden. 
+---
+= Senden eines Support-Bundles über eine Web-UI und eine Wartungskonsole
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten ein Support-Bundle senden, wenn das Problem, das Sie haben, detailliertere Diagnose und Fehlerbehebung erfordert als eine AutoSupport-Meldung. Sie können ein Support-Paket über die Unified Manager Web-UI und die Wartungskonsole an den technischen Support senden.
+
+Unified Manager speichert maximal zwei komplette Support Bundles und drei schlanke Support-Bundles gleichzeitig.
+
+*Verwandte Informationen*
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Unified Manager Benutzer-Rollen und -Funktionen"]

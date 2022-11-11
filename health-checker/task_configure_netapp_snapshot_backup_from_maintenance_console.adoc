@@ -1,0 +1,53 @@
+---
+permalink: health-checker/task_configure_netapp_snapshot_backup_from_maintenance_console.html 
+sidebar: sidebar 
+keywords: configure, netapp, snapshot, backup, maintenance console, copy, copies 
+summary: Um Active IQ Unified Manager-Backup mit Snapshot-Kopie zu erstellen, sollten Sie ein paar Konfigurationsschritte von der Wartungskonsole aus durchführen. 
+---
+= Konfigurieren eines Backups mit Snapshot-Kopie von der Wartungskonsole
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um Active IQ Unified Manager-Backup mit Snapshot-Kopie zu erstellen, sollten Sie ein paar Konfigurationsschritte von der Wartungskonsole aus durchführen.
+
+*Was Sie brauchen*
+
+Sie sollten für Ihr System die folgenden Informationen haben:
+
+* Cluster-IP-Adresse
+* Name der Storage-VM
+* Volume-Name
+* Der LUN-Name
+* Mount-Pfad
+* Zugangsdaten für das Storage-System
+
+
+.Schritte
+. Zugriff auf die Wartungskonsole von Unified Manager.
+. Geben Sie 4 ein, um *Wiederherstellung der Sicherung* auszuwählen.
+. Geben Sie 2 ein, um *Backup und Restore mit NetApp Snapshot* auszuwählen.
++
+[NOTE]
+====
+Wenn Sie die Backup-Konfiguration ändern möchten, geben Sie 3 ein, um *NetApp Snapshot Backup Konfiguration aktualisieren* auszuwählen. Sie können nur das Passwort aktualisieren.
+
+====
+. Geben Sie im Menü 1 ein, um *NetApp Snapshot Backup konfigurieren* auszuwählen.
+. Geben Sie 1 ein, um die erforderlichen Informationen einzugeben.
+. Geben Sie den Benutzernamen und das Passwort für die Wartungskonsole ein, und bestätigen Sie, dass die LUN auf dem Host installiert ist.
++
+Anschließend wird überprüft, ob das Datenverzeichnis, der LUN-Pfad, die Storage-VM, die Volumes, die Speicherplatzverfügbarkeit Fahren, und so weiter von Ihnen bereitgestellt sind richtig. Die Vorgänge, die im Hintergrund ausgeführt werden, sind:
+
++
+** Dienste werden angehalten
+** Datenbankverzeichnis wird in gemounteten Speicher verschoben
+** Das Datenbankverzeichnis wird gelöscht und Symlinks werden erstellt
+** Services werden neu gestartet Nachdem die Konfiguration in der Active IQ Unified Manager Schnittstelle abgeschlossen ist, wird der Backup-Typ auf NetApp Snapshot geändert und gibt in der Benutzeroberfläche als Datenbank-Backup (Snapshot basiert) wieder.
+
+
+
+
+Vor Beginn eines Backup-Vorgangs müssen Sie prüfen, ob eine Änderung der Snapshot-Konfiguration vorhanden ist, da dieser dazu führen kann, dass der Snapshot ungültig wird. Angenommen, Sie haben Backup in G-Laufwerk konfiguriert und der Snapshot erstellt. Sie haben später das Backup auf das E-Laufwerk konfiguriert und die Daten werden gemäß der neuen Konfiguration auf dem Laufwerk E gespeichert. Wenn Sie versuchen, Snapshot, der während des Laufwerk G erstellt wurde, wiederherzustellen, schlägt es mit dem Fehler fehl, dass G-Laufwerk nicht vorhanden ist.

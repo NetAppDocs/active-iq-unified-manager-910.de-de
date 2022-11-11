@@ -1,0 +1,18 @@
+---
+permalink: storage-mgmt/concept_what_quota_limits_are.html 
+sidebar: sidebar 
+keywords: quota, limits 
+summary: Benutzerkontingente sind Werte, die der Unified Manager-Server verwendet, um zu bewerten, ob der Speicherverbrauch eines Benutzers sich dem Limit nähert oder das vom Kontingent des Benutzers festgelegte Limit erreicht hat. Wenn das Softlimit überschritten wird oder das harte Limit erreicht wird, generiert der Unified Manager-Server Benutzer-Quota-Ereignisse. 
+---
+= Welche Kontingentbeschränkungen sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Einschränkungen der Benutzerkontingente sind Werte, die der Unified Manager-Server verwendet, um zu bewerten, ob sich der Speicherplatzbedarf eines Benutzers dem Limit nähert oder das vom Kontingent des Benutzers festgelegte Limit erreicht hat. Wenn das Softlimit überschritten wird oder das harte Limit erreicht wird, generiert der Unified Manager-Server Benutzer-Quota-Ereignisse.
+
+Standardmäßig sendet der Unified Manager-Server eine Benachrichtigungs-E-Mail an Benutzer, die das Softlimit für Quotengrenzen überschritten oder das endgültige Kontingent erreicht haben und für die Benutzer-Quota-Ereignisse konfiguriert werden. Benutzer mit der Anwendungsadministratorrolle können Warnungen konfigurieren, die die angegebenen Empfänger über die Quota-Ereignisse der Benutzer- oder Benutzergruppe benachrichtigen.
+
+Sie können die Kontingentgrenze entweder mit ONTAP System Manager oder mit der ONTAP CLI festlegen.

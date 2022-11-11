@@ -1,0 +1,40 @@
+---
+permalink: health-checker/task_perform_diagnotstic_actions_for_volume_offline_conditions.html 
+sidebar: sidebar 
+keywords: perform, diagnostic actions, volume, offline, conditions 
+summary: Nachdem Sie zur Seite Volume / Health Details eines gemeldeten Volumes navigieren, das offline sein soll, können Sie nach zusätzlichen Informationen suchen, die hilfreich sind, um die Offline-Bedingung des Volumens zu diagnostizieren. 
+---
+= Durchführung von Diagnoseaktionen für Offline-Bedingungen des Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie zur Seite Volume / Health Details eines gemeldeten Volumes navigieren, das offline sein soll, können Sie nach zusätzlichen Informationen suchen, die hilfreich sind, um die Offline-Bedingung des Volumens zu diagnostizieren.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+
+Wenn das offline gemeldete Volume nicht absichtlich offline geschaltet wurde, ist das Volume aus verschiedenen Gründen offline.
+
+Beginnend mit der Seite Volume / Health Details des Offline-Volumes können Sie zu anderen Seiten und Fenstern navigieren, um mögliche Ursachen zu bestätigen oder zu eliminieren:
+
+* Klicken Sie auf *Volume / Health* Details Seite Links, um festzustellen, ob das Volume offline ist, weil sein Host-Knoten ausgefallen ist und Storage Failover zu seinem HA-Paar-Partner hat auch fehlgeschlagen.
++
+Siehe link:task_determine_if_volume_offline_condition_is_by_down_cluster_node.html["Ermitteln, ob ein Offline-Zustand eines Volumes von einem Node nach unten verursacht wurde"].
+
+* Klicken Sie auf *Volume / Health* Detailseite Links, um festzustellen, ob das Volume offline ist und seine Host Storage Virtual Machine (SVM) angehalten wird, da der Node, der das Root-Volume dieser SVM hostet, nicht verfügbar ist.
++
+Siehe link:task_determine_if_volume_is_offline_and_its_svm_is_stopped.html["Ermitteln, ob ein Volume offline ist und die SVM angehalten wird, da ein Node ausfällt"].
+
+* Klicken Sie auf *Volumen / Gesundheit* Details Seite Links, um festzustellen, ob das Volumen ist offline wegen gebrochener Festplatten in seinem Host-Aggregat.
++
+Siehe link:task_determine_if_volume_is_offline_because_of_broken_disks.html["Ermitteln, ob ein Volume aufgrund von defekten Festplatten in einem Aggregat offline ist"].
+
+
+
+*Verwandte Informationen*
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Unified Manager Benutzer-Rollen und -Funktionen"]

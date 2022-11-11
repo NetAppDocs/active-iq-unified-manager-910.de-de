@@ -1,0 +1,66 @@
+---
+permalink: events/reference_disk_events.html 
+sidebar: sidebar 
+keywords: disks, events, impact area, availability 
+summary: Festplatten-Events liefern Ihnen Informationen zum Status von Festplatten, sodass Sie Monitoring-Funktionen auf potenzielle Probleme ausführen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad. 
+---
+= Festplatten-Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Festplatten-Events liefern Ihnen Informationen zum Status von Festplatten, sodass Sie Monitoring-Funktionen auf potenzielle Probleme ausführen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.
+
+
+
+== Impact Area: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Flash-Festplatten – Spare Blocks fast verbraucht (ocumEvtClusterFlashDiskFewerSpaeBlockError)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Fehler
+
+
+
+ a| 
+Flash-Festplatten – keine Spare-Blöcke (ocumEvtClusterFlashDiskNoSpareBlockkritisch)
+ a| 
+Vorfall
+ a| 
+Cluster
+ a| 
+Kritisch
+
+
+
+ a| 
+Einige nicht zugewiesene Festplatten (ocumEvtClusterUnzuweisedDisksSome)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Einige ausgefallene Festplatten (ocumEvtDisksSomeFailed)
+ a| 
+Vorfall
+ a| 
+Cluster
+ a| 
+Kritisch
+
+|===

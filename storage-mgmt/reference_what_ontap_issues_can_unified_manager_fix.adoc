@@ -1,0 +1,264 @@
+---
+permalink: storage-mgmt/reference_what_ontap_issues_can_unified_manager_fix.html 
+sidebar: sidebar 
+keywords: ontap issues, fix it action, automatic remediation feature, remediation events, fix-it messages, fix-it events 
+summary: In dieser Tabelle werden die ONTAP Probleme beschrieben, die Unified Manager direkt über die Benutzeroberfläche von Unified Manager lösen kann, indem Sie auf die Schaltfläche „alles beheben“ oder „Alle beheben“ klicken. 
+---
+= Welche Probleme können mit Unified Manager behoben werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der Funktion zur automatischen Korrektur von Active IQ Unified Manager lassen sich bestimmte ONTAP Probleme beheben oder bestimmte ONTAP Funktionen wie die Ransomware-Überwachung effektiv über Unified Manager managen.
+
+In dieser Tabelle werden die ONTAP-Probleme oder Funktionen beschrieben, die Sie direkt über die Schaltfläche *Fix IT* oder *Fix All* auf der Web-Benutzeroberfläche von Unified Manager verwalten können.
+
+|===
+| Name und Beschreibung des Events | Managementaktion | Operation „Fix It“ 
+
+
+ a| 
+Volume-Speicherplatz Voll
+
+Das Volume ist fast nicht mehr Platz vorhanden und es hat den Schwellenwert für die Kapazitäten erreicht. Dieser Schwellenwert ist standardmäßig auf 90 % der Volume-Größe eingestellt.
+ a| 
+Aktivieren Sie Autogrow
+ a| 
+Unified Manager ermittelt, dass Volume Autogrow nicht für dieses Volume konfiguriert ist, sodass es diese Funktion aktiviert, damit das Volume bei Bedarf die Kapazität erweitert.
+
+
+
+ a| 
+Inodes Voll
+
+Dieses Volume hat keine Inodes und kann keine neuen Dateien akzeptieren.
+ a| 
+Erhöhen Sie die Anzahl von Inodes auf dem Volumen
+ a| 
+Erhöht die Anzahl der Inodes auf dem Volumen um 2 Prozent.
+
+
+
+ a| 
+Richtlinie Für Storage-Tier Wurde Nicht Stimmt Überein
+
+Das Volume verfügt über viele inaktive Daten und die aktuelle Tiering-Richtlinie wird auf „nur Snapshots“ oder „keine“ gesetzt.
+ a| 
+Aktivieren Sie automatisches Cloud Tiering
+ a| 
+Da sich das Volume bereits auf einer FabricPool befindet, wird die Tiering-Richtlinie in „automatisch“ geändert, sodass inaktive Daten in die kostengünstigere Cloud-Tier verschoben werden.
+
+
+
+ a| 
+Nichtübereinkommen Bei Storage Tier Erkannt
+
+Auf dem Volume befinden sich viele inaktive Daten, die sich jedoch nicht auf einem Cloud-fähigen Storage Tier (FabricPool) befinden.
+ a| 
+Storage-Tier von Volumes ändern
+ a| 
+Das Volume wird auf Cloud-fähige Storage-Tier verschoben und die Tiering-Richtlinie auf „automatisch“ gesetzt, um inaktive Daten auf die Cloud-Tier zu verschieben.
+
+
+
+ a| 
+Überwachungsprotokoll Deaktiviert
+
+Das Prüfprotokoll ist für die Storage-VM nicht aktiviert
+ a| 
+Aktivieren der Audit-Protokollierung für die Storage-VM
+ a| 
+Aktiviert die Protokollierung von Prüfungen auf der Storage-VM.
+
+Beachten Sie, dass für die Storage-VM bereits ein lokaler oder ein Remote-Audit-Protokollverzeichnis konfiguriert sein muss.
+
+
+
+ a| 
+Anmelde-Banner Deaktiviert
+
+Das Login-Banner für den Cluster sollte aktiviert sein, um die Sicherheit zu erhöhen, indem Zugriffsbeschränkungen klar werden.
+ a| 
+Setzen Sie das Anmeldebanner für den Cluster ein
+ a| 
+Setzt das Cluster-Anmeldebanner auf „`Zugriff beschränkt auf autorisierte Benutzer`“.
+
+
+
+ a| 
+Anmelde-Banner Deaktiviert
+
+Das Login-Banner für die Storage-VM sollte aktiviert sein, um die Sicherheit zu erhöhen, indem Zugriffsbeschränkungen klar werden.
+ a| 
+Setzen Sie das Anmeldebanner für die Storage-VM ein
+ a| 
+Legt den Storage VM Login Banner auf „Access Restricted to Authorized Users“ fest.
+
+
+
+ a| 
+SSH verwendet unsichere Chiffren
+
+Chiffren mit dem Suffix „-cbc“ werden als unsicher betrachtet.
+ a| 
+Entfernen Sie unsichere Chiffren aus dem Cluster
+ a| 
+Entfernt die unsicheren Chiffren - wie aes192-cbc und aes128-cbc -- aus dem Cluster.
+
+
+
+ a| 
+SSH verwendet unsichere Chiffren
+
+Chiffren mit dem Suffix „-cbc“ werden als unsicher betrachtet.
+ a| 
+Entfernen Sie unsichere Chiffren aus der Storage-VM
+ a| 
+Entfernt die unsicheren Chiffren - wie aes192-cbc und aes128-cbc -- von der Storage-VM.
+
+
+
+ a| 
+AutoSupport HTTPS-Transport deaktiviert
+
+Das Transportprotokoll zum Senden von AutoSupport Meldungen an den technischen Support sollte verschlüsselt sein.
+ a| 
+Legen Sie HTTPS als Transportprotokoll für AutoSupport Meldungen fest
+ a| 
+Legt HTTPS als Transportprotokoll für AutoSupport Meldungen auf dem Cluster fest.
+
+
+
+ a| 
+Überschreitung Des Schwellenwerts Für Das Cluster-Load-Ungleichgewicht
+
+Zeigt an, dass der Lastausgleich zwischen den Nodes im Cluster nicht ausgeglichen ist. Dieses Ereignis wird generiert, wenn die verwendete Performance-Abweichung zwischen den Nodes mehr als 30 % beträgt.
+ a| 
+Lastausgleich für Cluster-Workloads
+ a| 
+Unified Manager ermittelt, welches Volume am besten von einem Node zum anderen verschoben werden soll, um das Ungleichgewicht zu verringern und dann das Volume zu verschieben.
+
+
+
+ a| 
+Unterschreiten Des Schwellenwerts Für Die Clusterkapazität
+
+Zeigt an, dass der Kapazitätsausgleich zwischen den Aggregaten im Cluster nicht möglich ist. Dieses Ereignis wird erzeugt, wenn die verwendete Kapazitätsabweichung zwischen Aggregaten mehr als 70 % beträgt.
+ a| 
+Ausgewogene Cluster-Kapazität
+ a| 
+Unified Manager erkennt das optimale Volume für die Verschiebung von einem Aggregat zu einem anderen, um das Ungleichgewicht zu verringern und dann das Volume zu verschieben.
+
+
+
+ a| 
+Nicht Genutzte Performance-Kapazität Schwellenwert
+
+Zeigt an, dass die Last auf dem Node überausgelastet werden kann, wenn die Auslastung nicht um mindestens einen hochaktiven Workload reduziert wird. Dieses Ereignis wird generiert, wenn die genutzte Node-Performance-Kapazität für mehr als 12 Stunden mehr als 100 % beträgt.
+ a| 
+Begrenzen Sie die hohe Last auf dem Node
+ a| 
+Unified Manager ermittelt das Volume mit den höchsten IOPS und wendet eine QoS-Richtlinie auf Basis des erwarteten historischen IOPS-Spitzenniveaus an, um die Last auf dem Node zu verringern.
+
+
+
+ a| 
+Schwellenwert Für Dynamische Ereigniswarnung Überschritten
+
+Zeigt an, dass der Node aufgrund der ungewöhnlich hohen Auslastung einiger Workloads bereits überlastet ist.
+ a| 
+Verringern Sie die Überlastung in einem Node
+ a| 
+Unified Manager ermittelt das Volume mit den höchsten IOPS und wendet eine QoS-Richtlinie auf Basis des erwarteten historischen IOPS-Spitzenniveaus an, um die Last auf dem Node zu verringern.
+
+
+
+ a| 
+Übernahme ist nicht möglich
+
+Der Failover ist derzeit deaktiviert, sodass während eines Ausfalls oder Neubootens der Zugriff auf die Ressourcen des Node unterbrochen wird, bis der Node wieder verfügbar ist.
+ a| 
+Aktivieren Sie Node-Failover
+ a| 
+Unified Manager sendet den entsprechenden Befehl, um Failover auf allen Knoten im Cluster zu aktivieren.
+
+
+
+ a| 
+Option cf.takeover.on_Panic IST AUS konfiguriert
+
+Die nodeshell Option "cf.takeover.on_Panic" wird auf *aus* gesetzt, was bei HA-konfigurierten Systemen zu einem Problem führen könnte.
+ a| 
+Aktivieren Sie die Übernahme in Panikzustand
+ a| 
+Unified Manager sendet den entsprechenden Befehl an den Cluster, um diese Einstellung in *ein* zu ändern.
+
+
+
+ a| 
+Deaktivieren Sie die nodeshell Option snapmirror.enable
+
+Die alte nodeshell Option "snapmirror.enable" steht auf *on*, was nach dem Upgrade auf ONTAP 9.3 oder höher ein Problem beim Booten verursachen kann.
+ a| 
+Setzen Sie die option snapmirror.enable auf aus
+ a| 
+Unified Manager sendet den entsprechenden Befehl an den Cluster, um diese Einstellung in *aus* zu ändern.
+
+
+
+ a| 
+Telnet ist aktiviert
+
+Weist auf ein potenzielles Sicherheitsproblem hin, da Telnet unsicher ist und Daten unverschlüsselt weiterleitet.
+ a| 
+Deaktivieren Sie Telnet
+ a| 
+Unified Manager sendet den entsprechenden Befehl an das Cluster, um Telnet zu deaktivieren.
+
+
+
+ a| 
+Konfiguration des Anti-Ransomware-Lernens für Storage-VMs
+
+Regelmäßige Überprüfungen auf Cluster mit Lizenzen für Anti-Ransomware-Monitoring Validierung, ob eine Storage VM nur NFS- oder SMB-Volumes in einem solchen Cluster unterstützt
+ a| 
+Speichern Sie Storage-VMs in einem `learning` Modus der Anti-Ransomware-Überwachung
+ a| 
+Unified Manager setzt das Ransomware-Monitoring auf `learning` Geben Sie den Status der Storage-VMs über die Cluster-Managementkonsole an. Das Ransomware-Monitoring auf allen neuen Volumes, die auf der Storage-VM erstellt wurden, wird automatisch in den Learning-Modus versetzt. Im Rahmen dieses Enablement lernt ONTAP das Aktivitätsmuster auf den Volumes und erkennt Anomalien aufgrund potenzieller bösartiger Angriffe.
+
+
+
+ a| 
+Konfiguration des Anti-Ransomware-Lernens für Volumes
+
+Regelmäßige Überprüfungen auf Cluster mit Lizenzen für Anti-Ransomware-Monitoring Validierung, ob ein Volume nur NFS- oder SMB-Services in einem solchen Cluster unterstützt
+ a| 
+Legen Sie Volumes in fest `learning` Modus der Anti-Ransomware-Überwachung
+ a| 
+Unified Manager setzt das Ransomware-Monitoring auf `learning` Status für die Volumes über die Cluster-Managementkonsole Im Rahmen dieses Enablement lernt ONTAP das Aktivitätsmuster auf den Volumes und erkennt Anomalien aufgrund potenzieller bösartiger Angriffe.
+
+
+
+ a| 
+Volume-Anti-Ransomware aktivieren
+
+Regelmäßige Überprüfungen auf Cluster mit Lizenzen für Anti-Ransomware-Monitoring Erkennt, ob die Volumes sich in befinden `learning` Modus der Anti-Ransomware-Überwachung für mehr als 45 Tage, und bestimmt die Aussicht, sie in den aktiven Modus zu setzen.
+ a| 
+Legen Sie Volumes in fest `active` Modus der Anti-Ransomware-Überwachung
+ a| 
+Unified Manager setzt das Ransomware-Monitoring auf `active` Auf den Volumes über die Cluster-Managementkonsole zugreifen. Im Rahmen dieses Enablement lernt ONTAP das Aktivitätsmuster auf den Volumes kennen, erkennt Anomalien aufgrund potenzieller bösartiger Angriffe und erstellt Warnmeldungen zu Datensicherungsmaßnahmen.
+
+
+
+ a| 
+Deaktivieren Sie die Anti-Ransomware des Volumes
+
+Regelmäßige Überprüfungen auf Cluster mit Lizenzen für Anti-Ransomware-Monitoring Erkennt sich wiederholende Benachrichtigungen während der aktiven Anti-Ransomware-Überwachung auf den Volumes (so werden beispielsweise mehrere Warnungen vor potenziellen Ransomware-Angriffen über 30 Tage zurückgegeben).
+ a| 
+Deaktivieren Sie das Anti-Ransomware-Monitoring auf Volumes
+ a| 
+Unified Manager deaktiviert das Ransomware-Monitoring auf den Volumes über die Cluster Management-Konsole.
+
+|===

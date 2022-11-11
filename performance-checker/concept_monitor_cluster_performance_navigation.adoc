@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_navigation.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, navigation 
+summary: Sie können die Performance aller von Unified Manager gemanagten Cluster überwachen. Das Monitoring der Cluster bietet einen Überblick über die Cluster- und Objekt-Performance und umfasst das Performance-Ereignis-Monitoring. Sie können sich grundlegende Performance- und Ereignisse anzeigen lassen oder Details zu Cluster- und Objekt-Performance- und Performance-Ereignissen sowie deren Objekt-Performance genauer untersuchen. 
+---
+= Monitoring der Navigation zur Cluster-Performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Performance aller von Unified Manager gemanagten Cluster überwachen. Das Monitoring der Cluster bietet einen Überblick über die Cluster- und Objekt-Performance und umfasst das Performance-Ereignis-Monitoring. Sie können sich grundlegende Performance- und Ereignisse anzeigen lassen oder Details zu Cluster- und Objekt-Performance- und Performance-Ereignissen sowie deren Objekt-Performance genauer untersuchen.
+
+Dies ist ein Beispiel für viele mögliche Navigationspfade zur Cluster-Performance:
+
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Aggregate*.
+. Um Informationen zur Performance in diesen Aggregaten anzuzeigen, wählen Sie die Ansicht Performance: Alle Aggregate aus.
+. Identifizieren Sie das Aggregat, das Sie untersuchen möchten, und klicken Sie auf diesen Aggregatnamen, um zur Seite Aggregat-/Performance Explorer zu navigieren.
+. Wählen Sie optional im Menü Ansicht und Vergleich weitere Objekte aus, die mit diesem Aggregat verglichen werden sollen, und fügen Sie anschließend dem Vergleichsfenster eines der Objekte hinzu.
++
+Statistiken für beide Objekte werden in den Zählerdiagrammen zum Vergleich angezeigt.
+
+. Klicken Sie im Vergleichsanfenster rechts auf der Explorer-Seite auf *Zoom View* in einer der Zählerdiagramme, um Details zum Leistungsverlauf für dieses Aggregat anzuzeigen.
+
+
+image::../media/monitor_cluster_performance.png[Monitoring der Cluster-Performance]

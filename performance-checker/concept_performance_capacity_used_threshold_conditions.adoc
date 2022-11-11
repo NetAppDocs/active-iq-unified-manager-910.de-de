@@ -1,0 +1,53 @@
+---
+permalink: performance-checker/concept_performance_capacity_used_threshold_conditions.html 
+sidebar: sidebar 
+keywords: performance, capacity, threshold, conditions 
+summary: Sie können benutzerdefinierte Performance-Schwellenwertrichtlinien erstellen, damit Ereignisse ausgelöst werden, wenn der für einen Node oder ein Aggregat genutzte Performance-Wert die festgelegte Einstellung für den verwendeten Schwellenwert für die Performance-Kapazität überschreitet. 
+---
+= Performance-Kapazität nutzte Schwellenwertbedingungen für die Performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können benutzerdefinierte Performance-Schwellenwertrichtlinien erstellen, damit Ereignisse ausgelöst werden, wenn der für einen Node oder ein Aggregat genutzte Performance-Wert die festgelegte Einstellung für den verwendeten Schwellenwert für die Performance-Kapazität überschreitet.
+
+Außerdem können Nodes mit einem Schwellenwert von „`Performance Capacity used Takeover`“ konfiguriert werden. Diese Schwellenwertrichtlinie gibt die für beide Nodes verwendeten Performance-Statistiken in einem HA-Paar an und ermittelt, ob einem der beiden Nodes genügend Kapazität fehlen würde, wenn der andere Node ausfällt. Da der Workload während des Failover` Kombination der Workloads der beiden Partner-Nodes ist, kann die gleiche Performance-Kapazität, die für eine Übernahme verwendet wird, auf beide Nodes angewendet werden.
+
+[NOTE]
+====
+Die genutzte Performance-Kapazität entspricht der Leistung im Allgemeinen den Nodes. Ist der Node-übergreifende Datenverkehr jedoch über seinen Failover-Partner für einen der Nodes vorgesehen, kann die Gesamt-Performance, die bei der Ausführung aller Workloads auf einem Partner-Node verwendet wird, auf einem anderen Partner-Node geringfügig anders sein – je nachdem, welcher Node ausgefallen ist.
+
+====
+Die verwendeten Performance-Kapazitäten können auch als sekundäre Performance-Schwellenwerteinstellungen verwendet werden, um bei der Definition von Schwellenwerten für LUNs und Volumes eine kombinierte Schwellenwertrichtlinie zu erstellen. Die verwendete Performance-Kapazität wird auf das Aggregat oder den Node angewendet, auf dem sich das Volume oder die LUN befindet. Sie können beispielsweise anhand der folgenden Kriterien eine kombinierte Schwellenwertrichtlinie erstellen:
+
+|===
+| Storage Objekt | Performance-Zähler | Warnschwellenwert | Kritischer Schwellenwert | Dauer 
+
+
+ a| 
+Datenmenge
+ a| 
+Latenz
+ a| 
+15 ms/OP
+ a| 
+25 ms/OP
+ a| 
+20 Minuten
+
+
+
+ a| 
+Aggregat
+ a| 
+Verwendete Performance-Kapazität
+ a| 
+80 % erzielt
+ a| 
+95 % erzielt
+ a| 
+
+|===
+Aufgrund von Grenzwertrichtlinien wird ein Ereignis nur erzeugt, wenn beide Bedingungen während der gesamten Dauer nicht erfüllt werden.

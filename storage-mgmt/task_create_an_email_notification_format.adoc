@@ -1,0 +1,27 @@
+---
+permalink: storage-mgmt/task_create_an_email_notification_format.html 
+sidebar: sidebar 
+keywords: create, email, notification, format, user, group, quotas 
+summary: 'Sie können ein Benachrichtigungsformat für E-Mails erstellen, die an einen Benutzer oder eine Benutzergruppe gesendet werden, wenn ein mit Quota zusammenhängendes Problem vorliegt (weiche Obergrenze oder harte Grenze erreicht).' 
+---
+= Erstellen eines E-Mail-Benachrichtigungsformats für Benutzer- und Benutzergruppenkontingente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Benachrichtigungsformat für E-Mails erstellen, die an einen Benutzer oder eine Benutzergruppe gesendet werden, wenn ein mit Quota zusammenhängendes Problem vorliegt (weiche Obergrenze oder harte Grenze erreicht).
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Quota E-Mail Format*.
+. Geben Sie die Daten in den Feldern *von*, *Betreff* und *E-Mail-Details* ein oder ändern Sie sie.
+. Klicken Sie auf *Vorschau*, um eine Vorschau der E-Mail-Benachrichtigung anzuzeigen.
+. Klicken Sie auf *Schließen*, um das Vorschaufenster zu schließen.
+. Ändern Sie ggf. den Inhalt der E-Mail-Benachrichtigung.
+. Klicken Sie Auf *Speichern*.
+

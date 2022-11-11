@@ -1,0 +1,85 @@
+---
+permalink: storage-mgmt/concept_manage_storage_efficiency_policies.html 
+sidebar: sidebar 
+keywords: manage, storage, efficiency, policies, guidelines, create, custom 
+summary: 'Mit einer Storage-Effizienz-Richtlinie (SEP) können Sie die Storage-Effizienz-Merkmale eines Workloads definieren. Sie können einem Workload bei der ersten Erstellung des Workloads einen SEP zuweisen oder anschließend den Workload bearbeiten.' 
+---
+= Management Von Richtlinien Zur Storage-Effizienz
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit einer Storage-Effizienz-Richtlinie (SEP) können Sie die Storage-Effizienz-Merkmale eines Workloads definieren. Sie können einem Workload bei der ersten Erstellung des Workloads einen SEP zuweisen oder anschließend den Workload bearbeiten.
+
+Storage-Effizienz beinhaltet Technologien wie Thin Provisioning, Deduplizierung und Datenkomprimierung, die die Storage-Auslastung erhöhen und die Storage-Kosten senken. Bei der Erstellung von SEPs können Sie diese platzsparenden Technologien entweder einzeln oder gemeinsam nutzen, um eine maximale Storage-Effizienz zu erzielen. Wenn Sie die Richtlinien Ihren Storage-Workloads zuordnen, werden ihnen die angegebenen Richtlinieneinstellungen zugewiesen. Mit Unified Manager können Sie systemdefinierte und benutzerdefinierte SEPs zuweisen, um die Speicherressourcen in Ihrem Rechenzentrum zu optimieren.
+
+Unified Manager bietet zwei systemdefinierte SEPs: High und Low. Diese SEPs gelten für die meisten Storage-Workloads in einem Datacenter. Sie können jedoch eigene Richtlinien erstellen, wenn die systemdefinierten SEPs Ihre Anforderungen nicht erfüllen.
+
+Sie können einen SEP, der systemdefiniert ist oder der derzeit einem Workload zugewiesen ist, nicht ändern. Eine SEP, die einem Workload zugewiesen ist, kann nicht gelöscht werden oder ist sie das einzige verfügbare SEP.
+
+Auf der Seite Storage Efficiency Policies werden die verfügbaren SEPs aufgelistet und Sie können benutzerdefinierte SEPs hinzufügen, bearbeiten und löschen. Auf dieser Seite werden die folgenden Informationen angezeigt:
+
+|===
+| Feld | Beschreibung 
+
+
+ a| 
+Name
+ a| 
+Name des SEP.
+
+
+
+ a| 
+Typ
+ a| 
+Gibt an, ob die Richtlinie systemdefiniert oder benutzerdefiniert ist.
+
+
+
+ a| 
+Space Reserve
+ a| 
+Gibt an, ob es sich um Thin Provisioning oder Thick Provisioning für das Volume handelt:
+
+
+
+ a| 
+Deduplizierung
+ a| 
+Gibt an, ob die Deduplizierung für den Workload aktiviert ist:
+
+* Inline: Deduplizierung wird während des Verschreibens auf den Workload durchgeführt
+* Hintergrund: Deduplizierung findet im Workload statt
+* Deaktivieren: Die Deduplizierung ist für den Workload deaktiviert
+
+
+
+
+ a| 
+Komprimierung
+ a| 
+Gibt an, ob die Datenkomprimierung für den Workload aktiviert ist:
+
+* Inline: Datenkomprimierung wird während des Verschreibens auf den Workload ausgeführt
+* Hintergrund: Datenkomprimierung findet im Workload statt
+* Deaktivieren: Für den Workload ist die Datenkomprimierung deaktiviert
+
+
+
+
+ a| 
+Workloads
+ a| 
+Anzahl an Storage Workloads, denen SEP zugewiesen wurde
+
+|===
+
+
+== Richtlinien zum Erstellen einer individuellen Richtlinie zur Storage-Effizienz
+
+Wenn die vorhandenen SEPs die Richtlinienanforderungen für Ihre Storage-Workloads nicht erfüllen, können Sie ein benutzerdefiniertes SEP erstellen. Es wird jedoch empfohlen, die systemdefinierten SEPs für Ihre Speicher-Workloads zu verwenden und bei Bedarf nur benutzerdefinierte SEPs zu erstellen.
+
+Sie können den SEP, der Workloads zugewiesen ist, auf der Seite Alle Workloads und auf der Seite Volume / Health Details anzeigen. Sie können das Datenreduzierungsverhältnis auf Cluster-Ebene basierend auf diesen Storage-Effizienzfunktionen im Bereich Kapazität im Dashboard und in der Ansicht „Kapazität: Alle Cluster“ anzeigen.

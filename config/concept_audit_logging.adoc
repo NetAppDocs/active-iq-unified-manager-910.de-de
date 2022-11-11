@@ -1,0 +1,80 @@
+---
+permalink: config/concept_audit_logging.html 
+sidebar: sidebar 
+keywords: audit, logging 
+summary: Sie können erkennen, ob die Audit-Protokolle unter Verwendung von Audit-Protokollen kompromittiert wurden. Alle von einem Benutzer durchgeführten Aktivitäten werden überwacht und in den Audit-Protokollen protokolliert. Die Audits werden für alle Benutzeroberfläche und öffentlich exponierte APIs die Funktionalitäten von Active IQ Unified Manager durchgeführt. 
+---
+= Audit-Protokollierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können erkennen, ob die Audit-Protokolle unter Verwendung von Audit-Protokollen kompromittiert wurden. Alle von einem Benutzer durchgeführten Aktivitäten werden überwacht und in den Audit-Protokollen protokolliert. Die Audits werden für alle Benutzerschnittstellen und öffentlich exponierte APIs`' Funktionalitäten von Active IQ Unified Manager durchgeführt.
+
+Sie können die Ansicht Überwachungsprotokoll: Dateiansicht verwenden, um alle in Ihrem Active IQ Unified Manager verfügbaren Audit-Log-Dateien anzuzeigen und darauf zuzugreifen. Die Dateien im Audit Log: File View werden basierend auf ihrem Erstellungsdatum aufgelistet. In dieser Ansicht werden Informationen über das gesamte Überwachungsprotokoll angezeigt, das von der Installation oder dem Upgrade auf die im System vorhandenen Protokolle erfasst wird. Wenn Sie in Unified Manager eine Aktion ausführen, werden die Informationen aktualisiert und stehen in den Protokollen zur Verfügung. Der Status jeder Protokolldatei wird mit dem Attribut „`File Integrity Status`“ erfasst, das aktiv überwacht wird, um Manipulation oder Löschung der Protokolldatei zu erkennen. Die Audit-Protokolle können einen der folgenden Status haben, wenn die Audit-Protokolle im System verfügbar sind:
+
+[cols="2*"]
+|===
+| Bundesland | Beschreibung 
+
+
+ a| 
+AKTIV
+ a| 
+Datei, in der Protokolle aktuell protokolliert werden.
+
+
+
+ a| 
+NORMAL
+ a| 
+Datei, die inaktiv, komprimiert und im System gespeichert ist.
+
+
+
+ a| 
+MANIPULIERT
+ a| 
+Datei, die von einem Benutzer kompromittiert wurde, der die Datei manuell bearbeitet hat.
+
+
+
+ a| 
+MANUELL_LÖSCHEN
+ a| 
+Datei, die von einem autorisierten Benutzer gelöscht wurde.
+
+
+
+ a| 
+ROLLOVER_DELETE
+ a| 
+Datei, die aufgrund von Rolling Off auf der Grundlage Rolling Configuration Policy gelöscht wurde.
+
+
+
+ a| 
+UNEXPECTED_DELETE
+ a| 
+Datei, die aus unbekannten Gründen gelöscht wurde.
+
+|===
+Die Seite „Prüfprotokoll“ enthält die folgenden Befehlsschaltflächen:
+
+* Konfigurieren
+* Löschen
+* Download
+
+
+Mit der Schaltfläche *DELETE* können Sie alle in der Ansicht Audit Logs aufgeführten Audit-Protokolle löschen. Sie können ein Audit-Protokoll löschen und optional einen Grund angeben, die Datei zu löschen, was in Zukunft hilft, ein gültiges Löschen zu bestimmen. Die SPALTE GRUND enthält den Grund und den Namen des Benutzers, der den Löschvorgang durchgeführt hat.
+
+[NOTE]
+====
+Das Löschen einer Protokolldatei führt zum Löschen der Datei aus dem System, der Eintrag in der DB-Tabelle wird jedoch nicht gelöscht.
+
+====
+Sie können die Audit-Protokolle von Active IQ Unified Manager mit der Schaltfläche *DOWNLOAD* im Bereich Audit-Protokolle herunterladen und die Audit-Log-Dateien exportieren. Die Dateien, die als „`NORMAL`“ oder „`MANIPULIERT`“ markiert sind, werden komprimiert heruntergeladen `.gzip` Formatieren.
+
+Wenn ein komplettes AutoSupport Bundle generiert wird, enthält das Support Bundle sowohl archivierte als auch aktive Audit-Log-Dateien. Wenn aber ein Light Support Bundle erzeugt wird, enthält es nur die aktiven Audit-Protokolle. Die archivierten Prüfprotokolle sind nicht enthalten.

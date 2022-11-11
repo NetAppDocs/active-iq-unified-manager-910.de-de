@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/task_select_predefined_time_range.html 
+sidebar: sidebar 
+keywords: select, predefined, time, range 
+summary: Die Auswahl eines vordefinierten Zeitbereichs stellt eine schnelle und effiziente Möglichkeit dar, die Datenausgabe bei der Anzeige von Cluster-Objekt-Performance-Daten anzupassen und zu fokussieren. Bei der Auswahl eines vordefinierten Zeitbereichs stehen Daten für bis zu 13 Monate zur Verfügung. 
+---
+= Auswählen eines vordefinierten Zeitbereichs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Auswahl eines vordefinierten Zeitbereichs stellt eine schnelle und effiziente Möglichkeit dar, die Datenausgabe bei der Anzeige von Cluster-Objekt-Performance-Daten anzupassen und zu fokussieren. Bei der Auswahl eines vordefinierten Zeitbereichs stehen Daten für bis zu 13 Monate zur Verfügung.
+
+.Schritte
+. Klicken Sie oben rechts auf der Seite *Performance Explorer* auf *Zeitbereich*.
+. Wählen Sie auf der rechten Seite des Bedienfelds *Zeitbereich Auswahl* einen vordefinierten Zeitbereich aus.
+. Klicken Sie Auf *Bereich Anwenden*.
+

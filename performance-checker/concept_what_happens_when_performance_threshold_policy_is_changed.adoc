@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_what_happens_when_performance_threshold_policy_is_changed.html 
+sidebar: sidebar 
+keywords: happens, performance, threshold, policy, changed 
+summary: Wenn Sie den Zählerwert oder die Dauer einer vorhandenen Richtlinie für den Performance-Schwellenwert anpassen, wird die Richtlinienänderung auf alle Storage-Objekte angewendet, die die Richtlinie verwenden. Die neue Einstellung erfolgt sofort und Unified Manager beginnt, die Performance-Zählerwerte mit den neuen Schwellenwerten für alle neu erfassten Performance-Daten zu vergleichen. 
+---
+= Was passiert, wenn eine Performance-Schwellenwertrichtlinie geändert wird
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie den Zählerwert oder die Dauer einer vorhandenen Richtlinie für den Performance-Schwellenwert anpassen, wird die Richtlinienänderung auf alle Storage-Objekte angewendet, die die Richtlinie verwenden. Die neue Einstellung erfolgt sofort und Unified Manager beginnt, die Performance-Zählerwerte mit den neuen Schwellenwerten für alle neu erfassten Performance-Daten zu vergleichen.
+
+Falls für Objekte, die die geänderte Schwellenwertrichtlinie verwenden, aktive Ereignisse vorhanden sind, werden die Ereignisse als veraltet markiert, und die Schwellenwertrichtlinie beginnt, den Zähler als neu definierte Schwellenwertrichtlinie zu überwachen.
+
+Wenn Sie den Zähler anzeigen, auf dem der Schwellenwert in der Detailansicht Zählerdiagramme angewendet wurde, spiegeln die kritischen und Warnschwellenwerte die aktuellen Schwellenwerteinstellungen wider. Die ursprünglichen Schwellwerteinstellungen werden auf dieser Seite nicht angezeigt, auch wenn Sie historische Daten anzeigen, wenn die alte Schwellenwerteinstellung wirksam war.
+
+[NOTE]
+====
+Da ältere Schwellenwerteinstellungen nicht in der detaillierten Ansicht der Zählerdiagramme angezeigt werden, werden möglicherweise historische Ereignisse unter den aktuellen Schwellenwerten angezeigt.
+
+====

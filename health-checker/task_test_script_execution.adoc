@@ -1,0 +1,53 @@
+---
+permalink: health-checker/task_test_script_execution.html 
+sidebar: sidebar 
+keywords: test, script, execution 
+summary: Sie können überprüfen, ob Ihr Skript korrekt ausgeführt wird, wenn eine Warnung für ein Speicherobjekt generiert wird. 
+---
+= Skriptausführung wird getestet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können überprüfen, ob Ihr Skript korrekt ausgeführt wird, wenn eine Warnung für ein Speicherobjekt generiert wird.
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen ein Skript im unterstützten Dateiformat auf Unified Manager hochgeladen haben.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage-Management* > *Scripts*.
+. Fügen Sie auf der Seite Skripts Ihr Testskript hinzu.
+. Klicken Sie im linken Navigationsbereich auf *Storage-Management* > *Alarm-Setup*.
+. Führen Sie auf der Seite *Alarm Setup* eine der folgenden Aktionen durch:
++
+[cols="2*"]
+|===
+| An... | Tun Sie das... 
+
+
+ a| 
+Fügen Sie eine Meldung hinzu
+ a| 
+.. Klicken Sie Auf *Hinzufügen*.
+.. Verknüpfen Sie im Abschnitt Aktionen den Alarm mit Ihrem Testskript.
+
+
+
+
+ a| 
+Bearbeiten Sie eine Meldung
+ a| 
+.. Wählen Sie einen Alarm aus, und klicken Sie dann auf *Bearbeiten*.
+.. Verknüpfen Sie im Abschnitt Aktionen den Alarm mit Ihrem Testskript.
+
+
+|===
+. Klicken Sie Auf *Speichern*.
+. Wählen Sie auf der Seite *Alarm Setup* die Warnmeldung aus, die Sie hinzugefügt oder geändert haben, und klicken Sie dann auf *Test*.
++
+Das Skript wird mit dem Argument „`-Test`“ ausgeführt, und eine Benachrichtigung wird an die E-Mail-Adressen gesendet, die beim Erstellen der Warnmeldung angegeben wurden.
+
+

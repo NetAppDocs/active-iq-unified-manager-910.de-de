@@ -1,0 +1,31 @@
+---
+permalink: performance-checker/task_view_qos_policy_group_settings_for_volumes_or_luns.html 
+sidebar: sidebar 
+keywords: view, qos, policy, group, settings, applied, specific, volumes, luns 
+summary: Sie können die QoS-Richtliniengruppen anzeigen, die auf Ihre Volumes und LUNs angewendet wurden, und Sie können einen Link zur Ansicht „Performance/QoS-Richtliniengruppen“ erstellen, um die detaillierten Konfigurationseinstellungen für jede QoS-Richtlinie anzuzeigen. 
+---
+= Anzeigen der QoS-Richtliniengruppeneinstellungen, die auf bestimmte Volumes oder LUNs angewendet wurden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die QoS-Richtliniengruppen anzeigen, die auf Ihre Volumes und LUNs angewendet wurden, und Sie können einen Link zur Ansicht „Performance/QoS-Richtliniengruppen“ erstellen, um die detaillierten Konfigurationseinstellungen für jede QoS-Richtlinie anzuzeigen.
+
+Nachfolgend sind die Schritte zur Anzeige der QoS-Richtlinie, die auf ein Volume angewendet wird, aufgeführt. Die Schritte zum Anzeigen dieser Informationen für eine LUN sind ähnlich.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Volumes*.
++
+Die Ansicht „Systemzustand: Alle Volumes“ wird standardmäßig angezeigt.
+
+. Wählen Sie im Menü Ansicht die Option *Leistung: Volumes in QoS Policy Group* aus.
+. Suchen Sie nach dem zu übersehenden Volumen, und scrollen Sie nach rechts, bis die Spalte *QoS Policy Group* angezeigt wird.
+. Klicken Sie auf den Namen der QoS-Richtliniengruppe.
++
+Die entsprechende Seite mit der Quality of Service wird angezeigt, je nachdem, ob es sich um eine herkömmliche QoS-Richtlinie, eine anpassungsfähige QoS-Richtlinie oder eine QoS-Richtlinie handelt, die mit Unified Manager Performance Service-Leveln erstellt wurde.
+
+. Detaillierte Konfigurationseinstellungen für die QoS-Richtliniengruppe anzeigen
+. Klicken Sie auf die Schaltfläche erweitern (image:../media/chevron_down.gif[""]) Neben dem Namen der QoS Policy Group, um weitere Details zur Policy Group anzuzeigen.
+

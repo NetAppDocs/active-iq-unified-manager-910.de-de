@@ -1,0 +1,59 @@
+---
+permalink: events/reference_disable_events_dialog_box.html 
+sidebar: sidebar 
+keywords: disable, events, dialog box, properties, area, command buttons 
+summary: Im Dialogfeld Ereignisse deaktivieren wird die Liste der Ereignistypen angezeigt, für die Sie Ereignisse deaktivieren können. Sie können Ereignisse für einen Ereignistyp auf der Grundlage eines bestimmten Schweregrads oder für eine Reihe von Ereignissen deaktivieren. 
+---
+= Dialogfeld „Ereignisse deaktivieren“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Ereignisse deaktivieren wird die Liste der Ereignistypen angezeigt, für die Sie Ereignisse deaktivieren können. Sie können Ereignisse für einen Ereignistyp auf der Grundlage eines bestimmten Schweregrads oder für eine Reihe von Ereignissen deaktivieren.
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+
+== Bereich Ereigniseigenschaften
+
+Im Bereich Ereigniseigenschaften werden die folgenden Ereigniseigenschaften angegeben:
+
+* *Ereignis Severity*
++
+Ermöglicht die Auswahl von Ereignissen auf der Grundlage des Schweregrads, der kritisch sein kann, Fehler, Warnung oder Informationen.
+
+* *Ereignisname Enthält*
++
+Ermöglicht es Ihnen, Ereignisse zu filtern, deren Name die angegebenen Zeichen enthält.
+
+* *Passende Ereignisse*
++
+Zeigt die Liste der Ereignisse an, die dem Schweregrad des Ereignisses und dem angegebenen Textstring entsprechen.
+
+* *Ereignisse deaktivieren*
++
+Zeigt die Liste der Ereignisse an, die Sie zur Deaktivierung ausgewählt haben.
+
++
+Der Schweregrad des Ereignisses wird auch zusammen mit dem Event-Namen angezeigt.
+
+
+
+
+
+== Befehlsschaltflächen
+
+Mit den Schaltflächen des Befehls können Sie die folgenden Aufgaben für die ausgewählten Ereignisse ausführen:
+
+* * Speichern und schließen*
++
+Deaktiviert den Ereignistyp und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Die Änderungen werden diskCards und das Dialogfeld geschlossen.
+
+

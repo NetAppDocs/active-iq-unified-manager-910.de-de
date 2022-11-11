@@ -1,0 +1,47 @@
+---
+permalink: install-vapp/task_deploy_unified_manager_vapp.html 
+sidebar: sidebar 
+keywords: deploy, unified manager 
+summary: Die Bereitstellung von Unified Manager umfasst das Herunterladen von Software, die Bereitstellung der virtuellen Appliance, das Erstellen eines Benutzernamens und Kennworts für die Wartung und das Durchführen der ersten Einrichtung in der Web-Benutzeroberfläche. 
+---
+= Einführung Von Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Bereitstellung von Unified Manager umfasst das Herunterladen von Software, die Bereitstellung der virtuellen Appliance, das Erstellen eines Benutzernamens und Kennworts für die Wartung und das Durchführen der ersten Einrichtung in der Web-Benutzeroberfläche.
+
+*Was Sie brauchen*
+
+* Sie sollten die Systemanforderungen für die Implementierung überprüfen und vervollständigen.
++
+link:concept_requirements_for_installing_unified_manager.html["Systemanforderungen"]
+
+* Stellen Sie sicher, dass Sie die folgenden Informationen haben:
++
+** Anmeldedaten für die NetApp Support-Website
+** Anmeldeinformationen für den Zugriff auf VMware vCenter Server und vSphere Web Client
+** IP-Adresse des ESXi-Servers, auf dem Sie die virtuelle Unified Manager-Appliance bereitstellen
+** Details zum Datacenter, z. B. Speicherplatz im Datenspeicher und Speicheranforderungen
+** IPv6 sollte auf dem Host aktiviert sein, wenn Sie IPv6-Adressen verwenden möchten.
+
+
+
+
+Sie können Unified Manager als virtuelle Appliance auf einem VMware ESXi Server bereitstellen.
+
+Sie sollten über die VMware Konsole auf die Wartungskonsole zugreifen, nicht über SSH.
+
+[NOTE]
+====
+Ab Unified Manager 9.8 wurden VMware Tools durch Open VM Tools ersetzt  `open-vm-tools`). Sie müssen VMware Tools nicht mehr als Teil der Installation installieren, denn `open-vm-tools` Ist im Unified Manager-Installationspaket enthalten.
+
+====
+Nachdem Sie die Implementierung und das Setup abgeschlossen haben, können Sie entweder Cluster hinzufügen oder zusätzliche Netzwerkeinstellungen in der Wartungskonsole konfigurieren und anschließend auf die Web-Benutzeroberfläche zugreifen.
+
+.Schritte
+. link:task_download_unified_manager_ova_file.html["Laden Sie Unified Manager Herunter"]
+. link:task_deploy_unified_manager_virtual_appliance_vapp.html["Implementieren Sie die virtuelle Unified Manager Appliance"]
+

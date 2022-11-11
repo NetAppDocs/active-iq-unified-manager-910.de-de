@@ -1,0 +1,37 @@
+---
+permalink: reporting/task_create_report_to_view_svms_reaching_maximum_volume_limit.html 
+sidebar: sidebar 
+keywords: create, report, view, storage VMs, volume, limit 
+summary: Sie können einen Bericht erstellen, um SVMs zu finden, die die maximale Volume-Obergrenze erreichen. 
+---
+= Erstellen eines Berichts, um Storage-VMs anzuzeigen, die die maximale Volume-Grenze erreichen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um SVMs zu finden, die die maximale Volume-Obergrenze erreichen.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Mit den folgenden Schritten erstellen Sie eine benutzerdefinierte Ansicht, die Storage-VMs anzeigt, die die maximale Volume-Grenze erreichen. Anschließend können Sie einen Bericht planen, der für diese Ansicht erstellt werden soll.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Storage VMs*.
+. Wählen Sie *ein-/Ausblenden* aus, um alle Spalten zu entfernen, die im Bericht nicht benötigt werden.
+. Ziehen Sie die Spalten „`Datenträgeranzahl`“ und „`Maximum allowed Volumes`“ in der Nähe der Spalte „`Storage VM`“.
+. Klicken Sie oben in der Spalte „`Maximum allowed Volumes`“, um die Ergebnisse nach der höchsten Anzahl von Volumes zu sortieren.
+. Speichern Sie die Ansicht mit einem bestimmten Namen, der die Anzeige wiedergibt. Beispiel: „`SVMs erreichen max Volumes`“, und klicken Sie auf das Häkchen (image:../media/blue_check.gif[""]).
+. Klicken Sie auf der Bestandsseite auf die Schaltfläche *geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite *Berichtspläne* eine neue Zeile hinzuzufügen, damit Sie die Terminplaneigenschaften für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtsplan ein, und füllen Sie die anderen Berichtsfelder aus, und klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""]Am Ende der Reihe.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und per E-Mail an die Empfänger gesendet, die unter der angegebenen Häufigkeit aufgeführt sind.
+
+
+
+Auf Grundlage der im Bericht gezeigten Ergebnisse sollten Sie möglicherweise die Volumes, die Storage VMs zugewiesen sind, ausgleichen oder – falls möglich – mit ONTAP System Manager die maximal zulässigen Volumes ändern.

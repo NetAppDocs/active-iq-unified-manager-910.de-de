@@ -1,0 +1,45 @@
+---
+permalink: health-checker/task_configure_conditions_for_annotation_rules.html 
+sidebar: sidebar 
+keywords: unified manager, configure, conditions, annotation rules 
+summary: Sie können eine oder mehrere Bedingungen konfigurieren, um Anmerkungsregeln zu erstellen, die Unified Manager für die Speicherobjekte anwendet. Die Speicherobjekte, die die Anmerkungsregel erfüllen, werden mit dem in der Regel angegebenen Wert versehen. 
+---
+= Konfigurieren von Bedingungen für Anmerkungsregeln
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine oder mehrere Bedingungen konfigurieren, um Anmerkungsregeln zu erstellen, die Unified Manager für die Speicherobjekte anwendet. Die Speicherobjekte, die die Anmerkungsregel erfüllen, werden mit dem in der Regel angegebenen Wert versehen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage-Management* > *Anmerkungen*.
+. Klicken Sie auf der Registerkarte *Anmerkungsregeln* auf *Hinzufügen*.
+. Geben Sie im Dialogfeld *Anmerkungsregel hinzufügen* einen Namen für die Regel ein.
+. Wählen Sie einen Objekttyp aus der Liste Zielobjekttyp aus, und wählen Sie dann einen Anmerkungsnamen und einen Wert aus der Liste aus.
+. Wählen Sie im Abschnitt *Bedingungen* des Dialogfelds einen Operanden und einen Operator aus der Liste aus und geben Sie einen Bedingungswert ein, oder klicken Sie auf *Bedingung hinzufügen*, um eine neue Bedingung zu erstellen.
+. Klicken Sie auf *Speichern und Hinzufügen*.
+
+
+
+
+== Beispiel für die Konfiguration einer Bedingung für eine Anmerkungsregel
+
+Es empfiehlt sich eine Bedingung für den Objekttyp „SVM“, bei der der Objektname „`svm_Data`“ enthält.
+
+Führen Sie die folgenden Schritte im Dialogfeld Anmerkungsregel hinzufügen durch, um die Bedingung zu konfigurieren:
+
+.Schritte
+. Geben Sie einen Namen für die Anmerkungsregel ein.
+. Wählen Sie den Zielobjekttyp als SVM aus.
+. Wählen Sie eine Anmerkung aus der Liste der Anmerkungen und einen Wert aus.
+. Wählen Sie im Feld *Bedingungen* als Operand *Objektname* aus.
+. Wählen Sie als Operator * enthält* aus.
+. Geben Sie den Wert als ein `svm_data`.
+. Klicken Sie Auf *Hinzufügen*.
+

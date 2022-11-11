@@ -1,0 +1,31 @@
+---
+permalink: config/concept_policy_based_storage_management.html 
+sidebar: sidebar 
+keywords: slo, storage efficiency policy, storage workloads 
+summary: 'Die richtlinienbasierte Option für das Storage-Management ermöglicht Storage-Management auf der Basis von Service Level Objectives (SLOs). Diese Option ist standardmäßig aktiviert.' 
+---
+= Aktivieren eines richtlinienbasierten Storage-Managements
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Option *richtlinienbasiertes Storage Management* ermöglicht Storage-Management basierend auf Service Level Objectives (SLOs). Diese Option ist standardmäßig aktiviert.
+
+Nach der Aktivierung dieser Funktion können Sie Storage-Workloads auf den ONTAP Clustern bereitstellen, die Ihrer Active IQ Unified Manager Instanz hinzugefügt werden, und die Workloads anhand der zugewiesenen Performance-Service-Level und Storage-Effizienz-Richtlinien managen.
+
+Sie können diese Funktion über *Allgemein* > *Feature-Einstellungen* > *Policy-based Storage Management* aktivieren oder deaktivieren. Bei Aktivierung dieser Funktion stehen folgende Seiten für Betrieb und Überwachung zur Verfügung:
+
+* Provisionierung (Provisionierung von Storage-Workloads)
+* *Richtlinien* > *Leistungs-Service-Level*
+* *Richtlinien* > *Storage-Effizienz*
+* Von Performance Service Level verwaltete Workloads auf der Seite Cluster-Einrichtung
+* Workload Performance Panel auf dem *Dashboard*
+
+
+Sie können die Bildschirme verwenden, um Performance Service Level und Storage-Effizienz-Richtlinien zu erstellen und Storage Workloads bereitzustellen. Kunden können auch Storage-Workloads überwachen, die den zugewiesenen Performance-Service-Leveln entsprechen, Der Bereich Workload-Performance und IOPS für Workloads ermöglicht Ihnen zudem, die Gesamtkapazität, verfügbare und genutzte Kapazität und Performance (IOPS) der Cluster im gesamten Datacenter basierend auf den auf ihnen bereitgestellten Storage-Workloads zu bewerten.
+
+Nach Aktivierung dieser Funktion können Sie die Rest-APIs von Unified Manager ausführen, um einige dieser Funktionen aus der *Menüleiste* > *Hilfe-Schaltfläche* > *API-Dokumentation* > *Storage-Anbieter* Kategorie auszuführen. Alternativ können Sie den Hostnamen oder die IP-Adresse und die URL eingeben, um auf die REST-API-Seite im Format +https://<hostname>/docs/api/+ zuzugreifen
+
+Weitere Informationen zu den APIs finden Sie unter link:../api-automation/concept_get_started_with_um_apis.html["Erste Schritte mit Active IQ Unified Manager REST APIs"]

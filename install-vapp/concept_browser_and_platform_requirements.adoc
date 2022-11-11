@@ -1,0 +1,22 @@
+---
+permalink: install-vapp/concept_browser_and_platform_requirements.html 
+sidebar: sidebar 
+keywords: supported browsers 
+summary: Um auf die Web-UI von Unified Manager zuzugreifen, verwenden Sie einen unterstützten Browser. 
+---
+= Unterstützte Browser
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um auf die Web-UI von Unified Manager zuzugreifen, verwenden Sie einen unterstützten Browser.
+
+Die Interoperabilitäts-Matrix enthält eine Liste der unterstützten Browser-Versionen.
+
+http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]
+
+Durch das Deaktivieren von Popup-Blockern für alle Browser wird sichergestellt, dass die Softwarefunktionen ordnungsgemäß angezeigt werden.
+
+Wenn Sie planen, Unified Manager für SAML-Authentifizierung zu konfigurieren, damit ein Identitäts-Provider (IdP) Benutzer authentifizieren kann, sollten Sie die Liste der vom IdP unterstützten Browser überprüfen.

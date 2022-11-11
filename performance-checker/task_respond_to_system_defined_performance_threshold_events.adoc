@@ -1,0 +1,34 @@
+---
+permalink: performance-checker/task_respond_to_system_defined_performance_threshold_events.html 
+sidebar: sidebar 
+keywords: system-defined, performance, threshold, events 
+summary: Sie können Unified Manager verwenden, um Performance-Ereignisse zu untersuchen, die durch einen Performance-Zähler einen vom System definierten Warnschwellenwert verursacht werden. Sie können auch den Systemzustand der Cluster-Komponente mit Unified Manager überprüfen, um zu ermitteln, ob kürzlich entdeckte Ereignisse auf der Komponente, die zum Performance-Ereignis beigetragen hat. 
+---
+= Reaktion auf systemdefinierte Performance-Schwellenwertereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Unified Manager verwenden, um Performance-Ereignisse zu untersuchen, die durch einen Performance-Zähler einen vom System definierten Warnschwellenwert verursacht werden. Sie können auch den Systemzustand der Cluster-Komponente mit Unified Manager überprüfen, um zu ermitteln, ob kürzlich entdeckte Ereignisse auf der Komponente, die zum Performance-Ereignis beigetragen hat.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+* Es müssen neue oder veraltete Performanceereignisse vorliegen.
+
+
+.Schritte
+. Rufen Sie die Seite *Ereignisdetails* auf, um Informationen über das Ereignis anzuzeigen.
+. Lesen Sie die *Beschreibung*, die die Schwellenverletzung beschreibt, die das Ereignis verursacht hat.
++
+Beispielsweise hat die Meldung „`Node Auslastungswert von 90 % ein WARNEREIGNIS ausgelöst, basierend auf dem Schwellenwert von 85 %`“ zeigt an, dass ein Warnereignis für die Node-Auslastung des Cluster-Objekts aufgetreten ist.
+
+. Notieren Sie sich die *Event Trigger Time*, damit Sie untersuchen können, ob gleichzeitig andere Ereignisse aufgetreten sind, die zu diesem Ereignis beigetragen haben könnten.
+. Lesen Sie unter *Systemdiagnose* die kurze Beschreibung des Analysetyps, den die systemdefinierte Richtlinie auf dem Clusterobjekt ausführt.
++
+Bei einigen Ereignissen wird neben der Diagnose ein grünes oder rotes Symbol angezeigt, um anzugeben, ob bei dieser Diagnose ein Problem gefunden wurde. Für andere Typen von systemdefinierten Ereignistypen wird die Zählerdiagramme für das Objekt angezeigt.
+
+. Klicken Sie unter *Suggested Actions* auf den Link *Help me do this*, um die vorgeschlagenen Aktionen anzuzeigen, die Sie durchführen können, um das Aufkommen selbst zu lösen.
+

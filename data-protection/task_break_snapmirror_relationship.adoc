@@ -1,0 +1,32 @@
+---
+permalink: data-protection/task_break_snapmirror_relationship.html 
+sidebar: sidebar 
+keywords: break, snapmirror, relationship, volume, relationship page 
+summary: Sie können eine Sicherungsbeziehung unterbrechen, um die Datenübertragung zwischen einem Quell-Volume und einem Ziel-Volume in einer SnapMirror Beziehung zu unterbrechen. Wenn Sie Daten migrieren, für Disaster Recovery-Zwecke oder zum Testen von Applikationen nutzen möchten, können Sie eine Beziehung unterbrechen. Das Zielvolume wird auf ein Lese-/Schreib-Volume geändert. Man kann keine SnapVault Beziehung durchbrechen. 
+---
+= Brechen einer SnapMirror Beziehung von der Seite „Volume-Beziehungen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Sicherungsbeziehung unterbrechen, um die Datenübertragung zwischen einem Quell-Volume und einem Ziel-Volume in einer SnapMirror Beziehung zu unterbrechen. Wenn Sie Daten migrieren, für Disaster Recovery-Zwecke oder zum Testen von Applikationen nutzen möchten, können Sie eine Beziehung unterbrechen. Das Zielvolume wird auf ein Lese-/Schreib-Volume geändert. Man kann keine SnapVault Beziehung durchbrechen.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen Workflow Automation einrichten.
+
+
+.Schritte
+. Wählen Sie auf der Seite *Volume Relationships* ein oder mehrere Volumes mit Schutzbeziehungen aus, für die Sie die Datenübertragung beenden möchten, und klicken Sie in der Symbolleiste auf *break*.
++
+Das Dialogfeld Beziehung unterbrechen wird angezeigt.
+
+. Klicken Sie auf *Weiter*, um die Beziehung zu brechen.
+. Überprüfen Sie auf der Seite *Volume Relationships* in der Spalte *Relationship State*, ob die Beziehung unterbrochen ist.
++
+Die Spalte „Beziehungsstatus“ ist standardmäßig ausgeblendet, sodass Sie sie in der Spaltenliste „ein-/ausblenden“ auswählen müssen image:../media/icon_columnshowhide_sm_onc.gif[""].
+
+

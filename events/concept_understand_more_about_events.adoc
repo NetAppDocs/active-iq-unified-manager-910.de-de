@@ -1,0 +1,14 @@
+---
+permalink: events/concept_understand_more_about_events.html 
+sidebar: sidebar 
+keywords: understand, more, events 
+summary: Wenn Sie die Konzepte zu Ereignissen verstehen, können Sie Ihre Cluster und Cluster-Objekte effizient managen und Warnmeldungen entsprechend definieren. 
+---
+= Allgemeines zu Ereignissen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie die Konzepte zu Ereignissen verstehen, können Sie Ihre Cluster und Cluster-Objekte effizient managen und Warnmeldungen entsprechend definieren.

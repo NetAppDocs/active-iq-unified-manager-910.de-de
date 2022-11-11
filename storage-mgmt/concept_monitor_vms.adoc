@@ -1,0 +1,73 @@
+---
+permalink: storage-mgmt/concept_monitor_vms.html 
+sidebar: sidebar 
+keywords: monitor, virtual, machines, view, summary, topology, expand 
+summary: 'Um Latenzproblem der Virtual Machine (VM)-Applikationen zu beheben, müssen Sie möglicherweise die VMs überwachen, um die Ursache zu analysieren und zu beheben. Die VMs sind verfügbar, wenn ihr vCenter Server und die ONTAP Cluster, die den VM Storage hosten, zu Unified Manager hinzugefügt werden.' 
+---
+= Monitoring von Virtual Machines
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um Latenzproblem der Virtual Machine (VM)-Applikationen zu beheben, müssen Sie möglicherweise die VMs überwachen, um die Ursache zu analysieren und zu beheben. Die VMs sind verfügbar, wenn ihr vCenter Server und die ONTAP Cluster, die den VM Storage hosten, zu Unified Manager hinzugefügt werden.
+
+Die Details der VMs sehen Sie auf der Seite *VMWARE* > > *virtuelle Maschinen*. Informationen wie Verfügbarkeit, Status, genutzte und zugewiesene Kapazität, Netzwerklatenz sowie IOPS und Latenz der VM, des Datenspeichers und des Hosts werden angezeigt. Bei einer VM, die mehrere Datastores unterstützt, zeigt das Raster die Kennzahlen des Datenspeichers mit der schlechtesten Latenz an. Dabei ist ein Sternchen (*) für weitere Datenspeicher vorhanden. Wenn Sie auf das Symbol klicken, werden die Metriken des zusätzlichen Datastores angezeigt. Einige dieser Spalten sind nicht zum Sortieren und Filtern verfügbar.
+
+[NOTE]
+====
+Um eine VM und deren Details anzuzeigen, muss die Erkennung (Abfrage oder Kennzahlensammlung) des ONTAP Clusters abgeschlossen sein. Wenn das Cluster aus Unified Manager entfernt wird, ist die VM nach dem nächsten Erkennungszyklus nicht mehr verfügbar.
+
+====
+Auf dieser Seite können Sie auch die detaillierte Topologie einer VM anzeigen und die zugehörigen Komponenten anzeigen, beispielsweise den Host, das virtuelle Laufwerk und den damit verbundenen Datastore. Die Topologieansicht zeigt die zugrunde liegenden Komponenten in ihrer jeweiligen Ebene in der folgenden Reihenfolge an: *Virtual Disk* > *VM* > *Host* > *Netzwerk* > *Datastore* > *VMDK*.
+
+Ermitteln Sie den I/O-Pfad und die Latenzen auf Komponentenebene anhand eines topologischen Aspekts und ermitteln, ob Storage die Ursache des Performance-Problems ist. In der Übersichtsansicht der Topologie wird der I/O-Pfad angezeigt und die Komponente mit IOPS- und Latenzproblemen hervorgehoben, damit Sie die Schritte zur Fehlerbehebung bestimmen können. Es besteht außerdem die Möglichkeit, eine erweiterte Ansicht der Topologie, in der jede Komponente separat dargestellt wird, sowie eine größere Latenz der Komponente. Sie können eine Komponente auswählen, um den durch die Ebenen markierten E/A-Pfad zu bestimmen.
+
+
+
+== Anzeigen der zusammenfassenden Topologie
+
+Zur Ermittlung von Performance-Problemen durch Anzeige der VMs in einer zusammengefassten Topologie:
+
+. Gehen Sie zu *VMWARE* > *Virtuelle Maschinen*.
+. Suchen Sie die VM, indem Sie ihren Namen in das Suchfeld eingeben. Sie können Ihre Suchergebnisse nach bestimmten Kriterien filtern, indem Sie auf die Schaltfläche *Filter* klicken. Wenn Sie Ihre VM jedoch nicht finden können, stellen Sie sicher, dass der entsprechende vCenter Server hinzugefügt und erkannt wurde.
++
+[NOTE]
+====
+VCenter Server ermöglichen Sonderzeichen (z. B. %, &, *, €, #, @, !, \, /, :, *, ?, "`, <, >, ;, ') im Namen von vSphere Einheiten wie VM, Cluster, Datenspeicher, Ordner, Oder Datei. Der VMware vCenter Server und ESX/ESXi Server entweichen keine Sonderzeichen, die in den Anzeigenamen verwendet werden. Wenn der Name jedoch in Unified Manager verarbeitet wird, wird er anders angezeigt. Beispiel: Eine VM mit dem Namen  `%$VC_AIQUM_clone_191124%` In vCenter wird Server als angezeigt `%25$VC_AIQUM_clone_191124%25` Mit Unified Manager Sie müssen dieses Problem notieren, wenn Sie eine VM mit einem Namen mit Sonderzeichen abfragen.
+
+====
+. Den Status der VM überprüfen. Die VM-Status werden vom vCenter Server abgerufen. Folgende Status stehen zur Verfügung. Weitere Informationen zu diesen Status finden Sie in der VMware-Dokumentation.
++
+** Normal
+** Warnung
+** Alarm
+** Nicht überwacht
+** Unbekannt
+
+
+. Klicken Sie auf den nach-unten-Pfeil neben der VM, um eine zusammenfassende Ansicht der Topologie der Komponenten auf Computing-, Netzwerk- und Storage-Ebenen anzuzeigen. Der Node mit Latenzproblemen ist hervorgehoben. Die Zusammenfassung zeigt die schlechteste Latenz der Komponenten an. Wenn eine VM beispielsweise mehr als ein virtuelles Laufwerk hat, zeigt diese Ansicht das virtuelle Laufwerk an, das die schlechteste Latenz aller virtuellen Laufwerke hat.
+. Um die Latenz und den Durchsatz des Datastore über einen bestimmten Zeitraum zu analysieren, klicken Sie oben im Datastore-Objektsymbol auf die Schaltfläche *Workload Analyzer*. Sie rufen die Seite Workload Analysis auf. Dort können Sie einen Zeitbereich auswählen und die Performance-Diagramme des Datastores anzeigen. Weitere Informationen zur Workload-Analyse finden Sie unter _Fehlerbehebung von Workloads mithilfe des Workload Analyzer_.
+
+
+
+
+== Anzeigen der erweiterten Topologie
+
+Sie können die einzelnen Komponenten separat anzeigen, indem Sie die erweiterte Topologie der VM anzeigen.
+
+.Schritte
+. Klicken Sie in der Topologieübersicht auf *Expand Topology*. Die detaillierte Topologie jeder Komponente lässt sich separat mit den Latenzzahlen für jedes Objekt anzeigen. Wenn in einer Kategorie mehrere Nodes vorhanden sind, zum Beispiel mehrere Nodes im Datastore oder VMDK, ist der Node mit der schlechtesten Latenz rot markiert.
+. Um den IO-Pfad eines bestimmten Objekts zu überprüfen, klicken Sie auf das Objekt, um den IO-Pfad und die entsprechende Zuordnung anzuzeigen. Um beispielsweise die Zuordnung eines virtuellen Laufwerks anzuzeigen, klicken Sie auf das virtuelle Laufwerk, um die markierte Zuordnung zur jeweiligen VMDK anzuzeigen. Im Fall einer Performance-Verzögerung dieser Komponenten können Sie mehr Daten von ONTAP erfassen und das Problem beheben.
++
+[NOTE]
+====
+Metriken werden nicht für VMDKs gemeldet. In der Topologie werden nur die VMDK-Namen angezeigt, nicht Metriken.
+
+====
+
+
+*Verwandte Informationen*
+
+link:../performance-checker/concept_troubleshooting_workloads_using_workload_analyzer.html["Fehlerbehebung bei Workloads mit der Workload Analyzer"]

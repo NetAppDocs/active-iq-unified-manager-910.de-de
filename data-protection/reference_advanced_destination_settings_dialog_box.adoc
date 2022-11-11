@@ -1,0 +1,29 @@
+---
+permalink: data-protection/reference_advanced_destination_settings_dialog_box.html 
+sidebar: sidebar 
+keywords: advanced, destination, settings, dialog box 
+summary: Sie können das Dialogfeld Erweiterte Zieleinstellungen verwenden, um die Einstellungen für die Speicherplatzgarantien auf einem Zielvolume zu aktivieren. Möglicherweise wählen Sie erweiterte Einstellungen aus, wenn die Speicherplatzgarantie auf der Quelle deaktiviert ist, sie jedoch auf dem Ziel aktiviert sein soll. Die Einstellungen für Deduplizierung, Komprimierung und Autogrow in einer SnapMirror Beziehung setzen sich vom Quell-Volume fort und können nicht geändert werden. 
+---
+= Dialogfeld „Erweiterte Zieleinstellungen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Dialogfeld Erweiterte Zieleinstellungen verwenden, um die Einstellungen für die Speicherplatzgarantien auf einem Zielvolume zu aktivieren. Möglicherweise wählen Sie erweiterte Einstellungen aus, wenn die Speicherplatzgarantie auf der Quelle deaktiviert ist, sie jedoch auf dem Ziel aktiviert sein soll. Die Einstellungen für Deduplizierung, Komprimierung und Autogrow in einer SnapMirror Beziehung setzen sich vom Quell-Volume fort und können nicht geändert werden.
+
+
+
+== Speicherplatzgarantie
+
+Stellt sicher, dass auf dem Ziel-Volume genügend Speicherplatz zugewiesen wird, damit Datentransfers immer erfolgreich durchgeführt werden. Die Einstellung für die Speicherplatzgarantie kann eine der folgenden sein:
+
+* Datei
+* Datenmenge
+* Keine
+
+
+Sie können z. B. ein 200-GB-Volume mit Dateien mit einer Gesamtmenge von 50 GB haben, diese Dateien enthalten jedoch nur 10 GB Daten. Volume-Garantie weist dem Ziel-Volume unabhängig vom Inhalt der Quelle 200 GB zu. Dateigarantie weist 50 GB zu, um sicherzustellen, dass genügend Speicherplatz für Quelldateien auf dem Ziel reserviert ist. Wenn Sie in diesem Szenario *Keine* auswählen, werden nur 10 GB auf dem Ziel für den tatsächlichen Speicherplatz zugewiesen, der von Dateidaten auf der Quelle verwendet wird.
+
+Die Speicherplatzzusage ist standardmäßig auf das Volume festgelegt.

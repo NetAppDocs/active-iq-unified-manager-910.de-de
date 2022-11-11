@@ -1,0 +1,58 @@
+---
+permalink: events/concept_guidelines_for_adding_alerts.html 
+sidebar: sidebar 
+keywords: guidelines, adding, alerts 
+summary: Auf Basis von Ressourcen wie Cluster, Node, Aggregat oder Volume lassen sich Warnmeldungen oder Ereignisse mit einem bestimmten Schweregrad hinzufügen. Als Best Practice können Sie eine Meldung für alle Ihre kritischen Objekte hinzufügen, nachdem Sie den Cluster hinzugefügt haben, zu dem das Objekt gehört. 
+---
+= Richtlinien zum Hinzufügen von Warnmeldungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf Basis von Ressourcen wie Cluster, Node, Aggregat oder Volume lassen sich Warnmeldungen oder Ereignisse mit einem bestimmten Schweregrad hinzufügen. Als Best Practice können Sie eine Meldung für alle Ihre kritischen Objekte hinzufügen, nachdem Sie den Cluster hinzugefügt haben, zu dem das Objekt gehört.
+
+Sie können die folgenden Richtlinien und Überlegungen nutzen, um Warnmeldungen für eine effiziente Verwaltung Ihrer Systeme zu erstellen:
+
+* Alarmbeschreibung
++
+Sie sollten eine Beschreibung für die Warnung angeben, damit Sie Ihre Warnmeldungen effektiv verfolgen können.
+
+* Ressourcen
++
+Sie sollten entscheiden, welche physische oder logische Ressource eine Warnmeldung benötigt. Bei Bedarf können Sie Ressourcen ein- und ausschließen. Wenn Sie beispielsweise Ihre Aggregate durch eine Warnmeldung genau überwachen möchten, müssen Sie die erforderlichen Aggregate aus der Liste der Ressourcen auswählen.
+
++
+Wenn Sie eine Kategorie von Ressourcen auswählen, z. B. *+ User or Group Quotas+*, dann erhalten Sie Benachrichtigungen für alle Objekte in dieser Kategorie.
+
++
+[NOTE]
+====
+Das Auswählen eines Clusters als Ressource wählt nicht automatisch die Speicherobjekte innerhalb dieses Clusters aus. Wenn Sie beispielsweise eine Meldung für alle kritischen Ereignisse für alle Cluster erstellen, erhalten Sie Warnmeldungen nur für Cluster-kritische Ereignisse. Für kritische Ereignisse in Nodes, Aggregaten usw. werden keine Warnmeldungen ausgegeben.
+
+====
+* Schweregrad des Ereignisses
++
+Sie sollten entscheiden, ob ein Ereignis eines bestimmten Schweregrades (kritisch, Fehler, Warnung) die Warnmeldung auslösen soll und, falls ja, welchen Schweregrad.
+
+* Ausgewählte Ereignisse
++
+Wenn Sie eine Meldung basierend auf dem generierten Ereignistyp hinzufügen, sollten Sie entscheiden, für welche Ereignisse eine Meldung erforderlich ist.
+
++
+Wenn Sie einen Ereignisschwergrad auswählen, jedoch keine einzelnen Ereignisse auswählen (wenn Sie die Spalte „Ausgewählte Ereignisse“ leer lassen), erhalten Sie Benachrichtigungen für alle Ereignisse in der Kategorie.
+
+* Aktionen
++
+Sie müssen Benutzernamen und E-Mail-Adressen der Benutzer angeben, die die Benachrichtigung erhalten. Sie können auch einen SNMP-Trap als Benachrichtigungsmodus angeben. Sie können Ihre Skripte einer Warnung zuordnen, damit sie bei der Erzeugung einer Warnmeldung ausgeführt werden.
+
+* Benachrichtigungshäufigkeit
++
+Sie können eine Warnung konfigurieren, um wiederholt Benachrichtigungen an die Empfänger für eine bestimmte Zeit zu senden. Legen Sie fest, zu welchem Zeitpunkt die Ereignisbenachrichtigung für die Warnmeldung aktiv ist. Wenn Sie möchten, dass die Ereignisbenachrichtigung wiederholt wird, bis das Ereignis bestätigt ist, sollten Sie festlegen, wie oft die Benachrichtigung wiederholt werden soll.
+
+* Skript Ausführen
++
+Sie können Ihr Skript mit einer Warnung verknüpfen. Ihr Skript wird ausgeführt, wenn die Warnung erzeugt wird.
+
+

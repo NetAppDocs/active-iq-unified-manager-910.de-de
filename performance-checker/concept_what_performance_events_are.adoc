@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_what_performance_events_are.html 
+sidebar: sidebar 
+keywords: performance, events 
+summary: Performance-Ereignisse sind Störungen im Zusammenhang mit der Workload-Performance auf einem Cluster. Die Sie bei der Ermittlung von Workloads mit langsamen Reaktionszeiten unterstützen. Zusammen mit gleichzeitig aufgetretenen Gesundheitsereignissen können Sie die Probleme bestimmen, die die langsamen Reaktionszeiten verursacht oder dazu beigetragen haben. 
+---
+= Was sind Performance-Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Performance-Ereignisse sind Störungen im Zusammenhang mit der Workload-Performance auf einem Cluster. Die Sie bei der Ermittlung von Workloads mit langsamen Reaktionszeiten unterstützen. Zusammen mit gleichzeitig aufgetretenen Gesundheitsereignissen können Sie die Probleme bestimmen, die die langsamen Reaktionszeiten verursacht oder dazu beigetragen haben.
+
+Wenn Unified Manager mehrere Vorkommen derselben Clusterkomponente erkennt, werden alle Vorkommen als einzelnes Ereignis und nicht als separate Ereignisse behandelt.

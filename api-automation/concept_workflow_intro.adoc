@@ -1,0 +1,29 @@
+---
+permalink: api-automation/concept_workflow_intro.html 
+sidebar: sidebar 
+keywords: common, workflows, storage, management 
+summary: Die üblichen Workflows bieten Entwicklern von Client-Applikationen Beispiele dafür, wie Active IQ Unified Manager APIs von einer Client-Applikation aufgerufen werden können, um allgemeine Storage-Managementfunktionen auszuführen. Dieser Abschnitt enthält einige Beispiele-Workflows. 
+---
+= Typische Workflows für das Storage-Management
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die üblichen Workflows bieten Entwicklern von Client-Applikationen Beispiele dafür, wie Active IQ Unified Manager APIs von einer Client-Applikation aufgerufen werden können, um allgemeine Storage-Managementfunktionen auszuführen. Dieser Abschnitt enthält einige Beispiele-Workflows.
+
+Die Workflows beschreiben einige der am häufigsten verwendeten Anwendungsfälle für das Storage-Management und geben Ihnen Beispielcodes an. Jede Aufgabe wird mit einem Workflow-Prozess beschrieben, der aus einem oder mehreren API-Aufrufen besteht.
+
+
+
+== Allgemeines zu den in den Workflows verwendeten API-Aufrufen
+
+Sie können die Online-Dokumentationsseite von Ihrer Unified Manager Instanz aus einsehen, die alle Einzelheiten zu jedem REST-API-Aufruf enthält. Dieses Dokument wiederholt die Details der Online-Dokumentation nicht. Jeder API-Aufruf, der in den Workflow-Proben in diesem Dokument verwendet wird, enthält nur die Informationen, die Sie benötigen, um den Anruf auf der Dokumentationsseite zu finden. Nach dem Auffinden eines bestimmten API-Aufrufs können Sie die vollständigen Details des Anrufs überprüfen, einschließlich der Eingabeparameter, Ausgabeformate, HTTP-Statuscodes und des Aufruftyps.
+
+Für jeden API-Aufruf in einem Workflow sind folgende Informationen enthalten, um den Anruf auf der Dokumentationsseite zu finden:
+
+* Kategorie: Die API-Aufrufe werden auf der Dokumentationsseite in funktional verwandte Bereiche oder Kategorien organisiert. Um einen bestimmten API-Aufruf zu finden, blättern Sie zum unteren Seitenrand und klicken Sie auf die entsprechende API-Kategorie.
+* HTTP-Verb (Aufruf): Das HTTP-Verb identifiziert die Aktion, die auf einer Ressource ausgeführt wird. Jeder API-Aufruf wird über ein einziges HTTP-Verb ausgeführt.
+* Pfad: Der Pfad bestimmt die spezifische Ressource, auf die die Aktion als Teil der Durchführung eines Anrufs gilt. Der Pfadstring wird an die Core-URL angehängt, um die vollständige URL zur Identifizierung der Ressource zu bilden.
+

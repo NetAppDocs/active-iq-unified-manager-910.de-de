@@ -1,0 +1,16 @@
+---
+permalink: reporting/concept_customize_aggregate_capacity_reports.html 
+sidebar: sidebar 
+keywords: customize, aggregate, capacity, reports 
+summary: Anhand dieser individuellen Beispielberichte können Sie potenzielle Probleme im Zusammenhang mit der Aggregat-Storage-Kapazität identifizieren und darauf reagieren. 
+---
+= Anpassung der Berichte zur Aggregatskapazität
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Anhand dieser individuellen Beispielberichte können Sie potenzielle Probleme im Zusammenhang mit der Aggregat-Storage-Kapazität identifizieren und darauf reagieren.
+
+Die Berichte in diesem Abschnitt sind nur Beispiele, die Ihnen dabei helfen, Berichte über Aggregatskapazität zu erstellen, damit Sie die Storage-Systemressourcen überwachen können.

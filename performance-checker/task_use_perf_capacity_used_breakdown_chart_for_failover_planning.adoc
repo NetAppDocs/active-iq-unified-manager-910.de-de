@@ -1,0 +1,46 @@
+---
+permalink: performance-checker/task_use_perf_capacity_used_breakdown_chart_for_failover_planning.html 
+sidebar: sidebar 
+keywords: performance, capacity, used, breakdown, chart, failover, planning 
+summary: Das Diagramm „Detailed Performance Capacity Used – Breakdown“ zeigt die für den primären Knoten und den Partner-Knoten verwendete Performance-Kapazität an. Er zeigt außerdem die Menge der freien Performance-Kapazität auf dem geschätzten Takeover-Node an. Anhand dieser Informationen können Sie ermitteln, ob bei einem Ausfall des Partner-Node möglicherweise ein Performance-Problem auftritt. 
+---
+= Verwenden des Leistungsdiagramms zur verwendeten Kapazität zur Failover-Planung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Diagramm „Detailed Performance Capacity Used – Breakdown“ zeigt die für den primären Knoten und den Partner-Knoten verwendete Performance-Kapazität an. Er zeigt außerdem die Menge der freien Performance-Kapazität auf dem geschätzten Takeover-Node an. Anhand dieser Informationen können Sie ermitteln, ob bei einem Ausfall des Partner-Node möglicherweise ein Performance-Problem auftritt.
+
+Neben der Anzeige der Gesamt-Performance-Kapazität, die für die Nodes verwendet wird, unterteilt das Diagramm die Werte für jeden Knoten in Benutzerprotokolle und Hintergrundprozesse.
+
+* Benutzerprotokolle sind die I/O-Vorgänge von Benutzerapplikationen auf und vom Cluster.
+* Hintergrundprozesse sind interne Systemprozesse, die mit Storage-Effizienz, Datenreplizierung und Systemzustand verknüpft sind.
+
+
+Mit dieser zusätzlichen Detailebene können Sie ermitteln, ob ein Performance-Problem auf Benutzerapplikationsaktivitäten oder auf System-Prozessen im Hintergrund verursacht wird, wie Deduplizierung, RAID rekonstruieren, Festplatte Schrubben und SnapMirror Kopien.
+
+.Schritte
+. Wechseln Sie zur Seite *Leistung/Knoten-Failover-Planung* für den Knoten, der als Geschätzter Übernahmeknoten dient.
+. Wählen Sie im Auswahlfeld *Zeitbereich* den Zeitraum aus, für den die historischen Statistiken im Zählerraster und in den Zählerdiagrammen angezeigt werden.
++
+Die Zählerdiagramme mit den Statistiken für den primären Node, den Partner-Node und den geschätzten Takeover-Node werden angezeigt.
+
+. Wählen Sie aus der Liste *Choose Charts* die Option *Perf. Verwendete Kapazität*.
+. Im *Perf. Verwendete Kapazität* Diagramm, wählen Sie *Breakdown* und klicken Sie auf *Zoom View*.
++
+Das detaillierte Diagramm für Perf. Die verwendete Kapazität wird angezeigt.
+
++
+image::../media/headroom_advanced_zoom_chart.gif[Diagramm mit erweitertem Zoom in Reserve]
+
+. Bewegen Sie den Cursor über das detaillierte Diagramm, um die Informationen zur verwendeten Performance-Kapazität im Popup-Fenster anzuzeigen.
++
+Die Perf. Der freie Prozentsatz der Kapazität ist die am geschätzten Takeover-Node verfügbare Performance-Kapazität. Es zeigt an, wie viel Performance-Kapazität nach einem Failover auf dem Takeover-Node übrig ist. Wenn der Wert 0 % beträgt, erhöht ein Failover die Latenz auf ein inakzeptables Level auf dem Takeover-Node.
+
+. Ziehen Sie Korrekturmaßnahmen in Betracht, um einen freien Prozentsatz bei niedriger Performance-Kapazität zu vermeiden.
++
+Wenn Sie einen Failover für eine Node-Wartung initiieren möchten, wählen Sie eine Zeit zum Fehlschlagen des Partner-Node aus, wenn der freie Prozentsatz der Performance-Kapazität nicht bei 0 ist.
+
+

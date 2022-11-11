@@ -1,0 +1,139 @@
+---
+permalink: events/reference_snapmirror_relationship_events.html 
+sidebar: sidebar 
+keywords: snapmirror, relationship, events, impact area, protection 
+summary: SnapMirror Beziehungsereignisse geben Ihnen Informationen zum Status Ihrer asynchronen und synchronen SnapMirror Beziehungen, sodass Sie mögliche Probleme überwachen können. Asynchrone SnapMirror Beziehungsereignisse werden sowohl für Storage VMs als auch für Volumes generiert, synchrone SnapMirror Beziehungsereignisse werden jedoch nur für Volume-Beziehungen erstellt. Es gibt keine Ereignisse für zusammengehörige Volumes, die Teil der Disaster-Recovery-Beziehungen für Storage VMs sind. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad. 
+---
+= SnapMirror Beziehungsereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapMirror Beziehungsereignisse geben Ihnen Informationen zum Status Ihrer asynchronen und synchronen SnapMirror Beziehungen, sodass Sie mögliche Probleme überwachen können. Asynchrone SnapMirror Beziehungsereignisse werden sowohl für Storage VMs als auch für Volumes generiert, synchrone SnapMirror Beziehungsereignisse werden jedoch nur für Volume-Beziehungen erstellt. Es gibt keine Ereignisse für zusammengehörige Volumes, die Teil der Disaster-Recovery-Beziehungen für Storage VMs sind. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.
+
+
+
+== Aufprallbereich: Schutz
+
+Ein Sternchen (*) identifiziert EMS-Ereignisse, die in Unified Manager-Ereignisse konvertiert wurden.
+
+[NOTE]
+====
+Die Ereignisse der SnapMirror Beziehungen werden für Storage VMs generiert, die durch die Disaster Recovery von Storage VM gesichert sind, jedoch nicht für einzelne Objektbeziehungen.
+
+====
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Spiegelreplikation ungesund(occumEvtSnapmirrorRelationshipUnHealthy)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+Spiegelreplikation - broken-off(ocumEvtSnapmirrorRelationshipStateBrokenoff)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Spiegelreplikation wird initialisiert fehlgeschlagen(OktEvtSnapmirrorRelationshipInitialisierenFailed)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Aktualisierung der Spiegelreplikation fehlgeschlagen(ocumEvtSnapmirrorRelationshipUpdateFailed)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Spiegelreplikation – Fehler (occumEvtSnapMirrorRelationshipLagerFehler)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Spiegelreplikation Verzögerung Warnung(occumEvtSnapMirrorRelationshipLagerWarnung)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+Resync der Spiegelreplikation fehlgeschlagen(OccumEvtSnapmirrorRelationshipResyncFailed)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Synchronous Replication Out of Sync * (syncSnapmirrorRelationshipOutofsync)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+Synchrone Replizierung wiederhergestellt * (syncSnapmirrorRelationshipInSync)
+ a| 
+Ereignis
+ a| 
+SnapMirror Beziehung
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Synchronous Replication Auto Resync failed * (Synchronisieren von SnapmirrorRelationshipAutoSyncRetryFailed)
+ a| 
+Dar
+ a| 
+SnapMirror Beziehung
+ a| 
+Fehler
+
+|===

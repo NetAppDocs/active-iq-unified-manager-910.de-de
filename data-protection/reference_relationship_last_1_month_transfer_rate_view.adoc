@@ -1,0 +1,30 @@
+---
+permalink: data-protection/reference_relationship_last_1_month_transfer_rate_view.html 
+sidebar: sidebar 
+keywords: relationship, 1 month, transfer rate, view 
+summary: 'Die Beziehung: Die Ansicht der letzten 1 Monate Transferrate ermöglicht Ihnen, die Menge des Datenvolumen, das täglich für Volumes in asynchronen Beziehungen übertragen wird, zu analysieren. Diese Seite bietet auch Details zu täglichen Transfers und die Zeit, die für den Transfer von Volumes und Storage VMs erforderlich ist.' 
+---
+= Beziehung: Letzte 1 Monat Transferrate Ansicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Beziehung: Die Ansicht der letzten 1 Monate Transferrate ermöglicht Ihnen, die Menge des Datenvolumen, das täglich für Volumes in asynchronen Beziehungen übertragen wird, zu analysieren. Diese Seite bietet auch Details zu täglichen Transfers und die Zeit, die für den Transfer von Volumes und Storage VMs erforderlich ist.
+
+Mit den Steuerelementen oben auf der Seite können Sie Suchen durchführen, um bestimmte Objekte zu finden, Filter zu erstellen und anzuwenden, um die Liste der angezeigten Daten einzugrenzen, Spalten auf der Seite hinzuzufügen/zu entfernen/neu zu sortieren und die Daten auf der Seite in eine .csv-, .pdf- oder .xlsx-Datei zu exportieren. Nachdem Sie die Seite angepasst haben, können Sie die Ergebnisse als benutzerdefinierte Ansicht speichern und anschließend einen Bericht dieser Daten erstellen und regelmäßig per E-Mail senden. Wenn Sie beispielsweise Volume-Beziehungen anzeigen möchten, können Sie entweder auf das Menü *Storage* > *Volumes* > *Beziehung: Letzte 1 Monat Transferrate* oder auf *Schutz* > *Beziehungen* > *Beziehungen:Letzte 1 Monat Transferrate* zugreifen und mit *Filter* nur Daten für Volumes anzeigen.
+
+* *Gesamtübertragungsgröße*
++
+Zeigt die Gesamtgröße der Volume-Übertragung in Gigabyte an.
+
+* *Tag*
++
+Zeigt den Tag an, an dem die Volume-Übertragung initiiert wurde.
+
+* *Endzeit*
++
+Zeigt die Endzeit der Volume-Übertragung mit dem Datum an.
+
+

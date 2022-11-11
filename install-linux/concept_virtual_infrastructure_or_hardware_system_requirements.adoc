@@ -1,0 +1,87 @@
+---
+permalink: install-linux/concept_virtual_infrastructure_or_hardware_system_requirements.html 
+sidebar: sidebar 
+keywords: virtual, infrastructure, hardware, system, requirements, host, connectivity 
+summary: Die Installation von Unified Manager auf einer virtuellen Infrastruktur oder auf einem physischen System sollte die Mindestanforderungen an Arbeitsspeicher, CPU und Festplattenspeicher erfüllen. 
+---
+= Systemanforderungen für virtuelle Infrastruktur und Hardware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Installation von Unified Manager auf einer virtuellen Infrastruktur oder auf einem physischen System sollte die Mindestanforderungen an Arbeitsspeicher, CPU und Festplattenspeicher erfüllen.
+
+In der folgenden Tabelle werden die Werte angezeigt, die für Speicher-, CPU- und Festplattenspeicherressourcen empfohlen werden. Diese Werte wurden so qualifiziert, dass Unified Manager die akzeptablen Leistungsniveaus erfüllt.
+
+[cols="2*"]
+|===
+| Hardwarekonfiguration | Empfohlene Einstellungen 
+
+
+ a| 
+RAM
+ a| 
+12 GB (Mindestanforderung 8 GB)
+
+
+
+ a| 
+Prozessoren
+ a| 
+4 CPUs
+
+
+
+ a| 
+CPU-Zykluskapazität
+ a| 
+9572 MHz insgesamt (Mindestanforderung 9572 MHz)
+
+
+
+ a| 
+Freier Speicherplatz
+ a| 
+150 GB, wobei die Kapazität wie folgt zugewiesen wird:
+
+* 50 GB der Root-Partition zugewiesen
+* 100 GB freier Speicherplatz, der dem zugewiesen ist `/opt/netapp/data` Verzeichnis, das auf einem LVM-Laufwerk oder auf einer separaten lokalen Festplatte installiert ist, die an das Zielsystem angeschlossen ist
+
+
+[NOTE]
+====
+Für die separate Montage `/opt` Und `/var/log` Verzeichnisse, stellen Sie sicher, dass `/opt` Hat 15 GB und `/var/log` Verfügt über 16 GB freien Speicherplatz. Der `/tmp` Das Verzeichnis sollte mindestens 10 GB freien Speicherplatz haben.
+
+====
+|===
+Unified Manager kann auf Systemen mit wenig Arbeitsspeicher installiert werden. Die empfohlenen 12 GB RAM sorgen jedoch dafür, dass genügend Arbeitsspeicher für eine optimale Leistung zur Verfügung steht und dass das System bei wachsender Konfiguration zusätzliche Cluster und Speicherobjekte aufnehmen kann. Sie sollten für die VM, wo Unified Manager eingesetzt wird, keine Arbeitsspeicherbeschränkungen festlegen und sollten keine Funktionen (z. B. Ballooning) aktivieren, die die Software daran hindern, den zugewiesenen Arbeitsspeicher im System zu nutzen.
+
+Darüber hinaus ist die Anzahl der Nodes begrenzt, die eine einzelne Instanz von Unified Manager überwachen kann, bevor Sie eine zweite Instanz von Unified Manager installieren. Weitere Informationen finden Sie im _Best Practices Guide_.
+
+http://www.netapp.com/us/media/tr-4621.pdf["Technischer Bericht 4621: Unified Manager Best Practices Guide"]
+
+Das Speicher-Page-Swapping beeinträchtigt die Leistung des Systems und der Verwaltungsanwendung negativ. Konkurrenzfähigkeit gegenüber CPU-Ressourcen, die aufgrund der gesamten Host-Auslastung nicht verfügbar sind, kann die Performance beeinträchtigen.
+
+
+
+== Voraussetzung für dedizierten Einsatz
+
+Das physische oder virtuelle System, auf dem Unified Manager installiert wird, sollte ausschließlich für Unified Manager verwendet werden und darf nicht mit anderen Applikationen gemeinsam genutzt werden. Andere Applikationen nutzen unter Umständen Systemressourcen und können die Performance von Unified Manager deutlich verringern.
+
+
+
+== Speicherplatzanforderungen für Backups
+
+Wenn Sie planen, die Unified Manager Backup- und Restore-Funktion zu verwenden, weisen Sie zusätzliche Kapazität zu, sodass das Verzeichnis „`data`“ oder die Festplatte 150 GB Speicherplatz hat. Ein Backup kann auf ein lokales Ziel oder ein Remote-Ziel geschrieben werden. Als Best Practice empfiehlt es sich, einen Remote-Standort außerhalb des Unified Manager-Hostsystems zu identifizieren, der über mindestens 150 GB Speicherplatz verfügt.
+
+
+
+== Anforderungen für die Host-Konnektivität
+
+Das physische System oder das virtuelle System, auf dem Sie Unified Manager installieren, sollten so konfiguriert werden, dass es erfolgreich sein kann `ping` Der Hostname des Hosts selbst. Bei einer IPv6-Konfiguration sollten Sie dies überprüfen `ping6` Für den Host-Namen ist erfolgreich, um sicherzustellen, dass die Unified Manager-Installation erfolgreich ist.
+
+Sie können den Hostnamen (oder die Host-IP-Adresse) verwenden, um auf die Web-Benutzeroberfläche des Produkts zuzugreifen. Wenn Sie während der Bereitstellung eine statische IP-Adresse für Ihr Netzwerk konfiguriert haben, haben Sie einen Namen für den Netzwerk-Host festgelegt. Wenn Sie das Netzwerk mit DHCP konfiguriert haben, sollten Sie den Hostnamen vom DNS beziehen.
+
+Wenn Sie Benutzern den Zugriff auf Unified Manager über den Kurznamen erlauben möchten, anstatt den vollständig qualifizierten Domänennamen (FQDN) oder die IP-Adresse zu verwenden, muss die Netzwerkkonfiguration diesen Kurznamen einem gültigen FQDN auflösen.

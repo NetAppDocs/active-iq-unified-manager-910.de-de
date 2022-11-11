@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/reference_description_of_quotas_dialog_boxes.html 
+sidebar: sidebar 
+keywords: description, quotas, dialog, boxes 
+summary: 'Sie können die entsprechende Option auf der Registerkarte Benutzer- und Gruppenkontingente in der Ansicht Systemzustand: Alle Storage VMs verwenden, um das Format der E-Mail-Benachrichtigung zu konfigurieren, die bei Auftreten eines quota-bezogenen Problems gesendet wird, und um Regeln zur Angabe von E-Mail-Adressen basierend auf dem Benutzerkontingent zu konfigurieren.' 
+---
+= Beschreibung der Dialogfelder Quotas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die entsprechende Option auf der Registerkarte Benutzer- und Gruppenkontingente in der Ansicht Systemzustand: Alle Storage VMs verwenden, um das Format der E-Mail-Benachrichtigung zu konfigurieren, die bei Auftreten eines quota-bezogenen Problems gesendet wird, und um Regeln zur Angabe von E-Mail-Adressen basierend auf dem Benutzerkontingent zu konfigurieren.

@@ -1,0 +1,42 @@
+---
+permalink: events/task_manage_host_system_resource_events.html 
+sidebar: sidebar 
+keywords: manage, host, system, resource, events 
+summary: Unified Manager umfasst einen Service zur Überwachung von Ressourcenproblemen auf dem Host-System, auf dem Unified Manager installiert ist. Probleme wie der fehlende Speicherplatz oder der fehlende Arbeitsspeicher auf dem Hostsystem können Ereignisse der Managementstation auslösen, die als Banner-Meldungen oben in der Benutzeroberfläche angezeigt werden. 
+---
+= Verwalten von Ressourcenereignissen des Host-Systems
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager umfasst einen Service zur Überwachung von Ressourcenproblemen auf dem Host-System, auf dem Unified Manager installiert ist. Probleme wie der fehlende Speicherplatz oder der fehlende Arbeitsspeicher auf dem Hostsystem können Ereignisse der Managementstation auslösen, die als Banner-Meldungen oben in der Benutzeroberfläche angezeigt werden.
+
+Ereignisse der Managementstation zeigen ein Problem mit dem Hostsystem an, auf dem Unified Manager installiert ist. Beispiele für Probleme mit Management Station sind Festplattenspeicherplatz, der auf dem Host-System niedrig ist, Unified Manager fehlt einen regelmäßigen Datenerfassungszyklus, und Nichtabschluss oder späterer Abschluss der Statistikanalyse, da die nächste Erfassungsabfrage gestartet wurde.
+
+Im Gegensatz zu allen anderen Unified Manager-Ereignismeldungen werden diese speziellen Warnmeldungen der Management Station sowie kritische Ereignisse in Bannermeldungen angezeigt.
+
+.Schritt
+. So zeigen Sie Ereignisinformationen der Management Station an:
++
+|===
+| Ihr Ziel ist | Tun Sie das... 
+
+
+ a| 
+Zeigen Sie Details der Veranstaltung an
+ a| 
+Klicken Sie auf das Veranstaltungsbanner, um die Seite Veranstaltungsdetails mit Lösungsvorschlägen für das Problem anzuzeigen.
+
+
+
+ a| 
+Alle Veranstaltungen der Management Station anzeigen
+ a| 
+.. Klicken Sie im linken Navigationsbereich auf *Ereignisverwaltung*.
+.. Klicken Sie im Fensterbereich Filter auf der Seite „Inventar der Ereignisverwaltung“ in der Liste „Ausgangstyp“ auf das Feld für Management Station.
+
+
+|===
+

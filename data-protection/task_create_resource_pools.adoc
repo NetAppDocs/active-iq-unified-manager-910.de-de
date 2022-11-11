@@ -1,0 +1,25 @@
+---
+permalink: data-protection/task_create_resource_pools.html 
+sidebar: sidebar 
+keywords: creating, resource, pools 
+summary: Sie können das Dialogfeld Ressourcen-Pool erstellen verwenden, um Aggregate für Bereitstellungszwecke zu gruppieren. 
+---
+= Erstellen von Ressourcenpools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Dialogfeld Ressourcen-Pool erstellen verwenden, um Aggregate für Bereitstellungszwecke zu gruppieren.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Ressourcen-Pools können Aggregate von verschiedenen Clustern enthalten, aber das gleiche Aggregat kann nicht zu verschiedenen Ressourcen-Pools gehören.
+
+. Klicken Sie im linken Navigationsbereich auf *Schutz* > *Ressourcen-Pools*.
+. Klicken Sie auf der Seite *Ressourcen-Pools* auf *Erstellen*.
+. Befolgen Sie die Anweisungen im Dialogfeld *Ressourcen-Pool erstellen*, um einen Namen und eine Beschreibung anzugeben und um dem Ressourcenpool, den Sie erstellen möchten, Aggregate als Mitglieder hinzuzufügen.
+

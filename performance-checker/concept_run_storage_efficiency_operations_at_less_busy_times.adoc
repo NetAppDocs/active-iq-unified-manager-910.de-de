@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_run_storage_efficiency_operations_at_less_busy_times.html 
+sidebar: sidebar 
+keywords: run, storage, efficiency, operations, less, busy, times 
+summary: Sie können die Richtlinie oder den Zeitplan ändern, die Storage-Effizienzvorgänge zur Ausführung verarbeiten, wenn die betroffenen Volume-Workloads weniger beschäftigt sind. 
+---
+= Führen Sie Storage-Effizienzvorgänge zu weniger geschäftigen Zeiten aus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Richtlinie oder den Zeitplan ändern, die Storage-Effizienzvorgänge zur Ausführung verarbeiten, wenn die betroffenen Volume-Workloads weniger beschäftigt sind.
+
+Storage-Effizienzvorgänge können viele Cluster-CPU-Ressourcen beanspruchen und zu den Volumes, auf denen die Operationen ausgeführt werden, als problematischer werden. Wenn die Opfer-Volumes gleichzeitig bei Ausführung der Storage-Effizienz-Vorgänge eine hohe Aktivität aufweisen, kann sich ihre Latenz erhöhen und ein Ereignis auslösen.
+
+Auf der Seite Ereignisdetails werden im Abschnitt Systemdiagnose Workloads in der Richtliniengruppe QoS anhand von Spitzenzeiten angezeigt, um die problematische Workload zu identifizieren. Wenn „`sStorage Efficiency`“ oben in der Tabelle angezeigt wird, werden diese Vorgänge die Opfer-Workloads Mobbing. Durch Ändern der Effizienzrichtlinie oder des Zeitplans, die für die Ausführung dieser Workloads weniger stark sind, können Sie verhindern, dass Storage-Effizienz-Vorgänge Konflikte auf einem Cluster verursachen.
+
+Mit ONTAP System Manager managen Sie Effizienzrichtlinien. Sie können die ONTAP-Befehle verwenden, um Effizienzrichtlinien und Zeitpläne zu managen.

@@ -1,0 +1,99 @@
+---
+permalink: reporting/concept_unified_manager_databases_accessible_for_reporting.html 
+sidebar: sidebar 
+keywords: unified manager, databases, access, custom, reporting 
+summary: Unified Manager verwendet eine MySQL Datenbank, um Daten von den überwachten Clustern zu speichern. Die Daten werden in verschiedenen Schemata in der MySQL-Datenbank gespeichert. 
+---
+= Auf Unified Manager-Datenbanken kann für individuelle Berichte zugegriffen werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager verwendet eine MySQL Datenbank, um Daten von den überwachten Clustern zu speichern. Die Daten werden in verschiedenen Schemata in der MySQL-Datenbank gespeichert.
+
+Alle Tabellendaten aus den folgenden Datenbanken sind verfügbar:
+
+[cols="2*"]
+|===
+| Datenbank | Beschreibung 
+
+
+ a| 
+netapp_Modell
+ a| 
+Daten zu den Objekten auf ONTAP Controllern.
+
+
+
+ a| 
+netapp_Modell_Ansicht
+ a| 
+Daten zu den Objekten auf ONTAP Controllern, geeignet für die Nutzung von Berichtstools.
+
+
+
+ a| 
+netapp_Performance
+ a| 
+Cluster-spezifische Performance-Zähler.
+
+
+
+ a| 
+Okum
+ a| 
+Daten und Informationen zu Unified Manager Applikationen unterstützen das Filtern, Sortieren und Berechnen einiger abgeleiteter Felder.
+
+
+
+ a| 
+Ocum_Report
+ a| 
+Daten für die Bestandskonfiguration und Informationen zur Kapazität.
+
+
+
+ a| 
+Ocum_Report_birt
+ a| 
+Ansichten für Bestandskonfiguration und kapazitätsbezogene Daten, geeignet für den Einsatz von Berichtstools.
+
+
+
+ a| 
+opm
+ a| 
+Einstellungen für Performance-Konfiguration und Schwellenwertinformationen.
+
+
+
+ a| 
+Skalemonitor
+ a| 
+Daten zu Zustand- und Performance-Problemen der Unified Manager Applikation
+
+
+
+ a| 
+vmware_Modell
+ a| 
+VMware Objektdaten für Datastores, die auf NetApp Storage gehostet werden.
+
+
+
+ a| 
+vmware_model_view
+ a| 
+Ansichten für VMware Objektdaten für Datastores, die auf NetApp Storage gehostet werden und sich für die Nutzung von Berichtstools eignen.
+
+
+
+ a| 
+vmware_Performance
+ a| 
+Daten der VMware Performance für Datastores, die auf NetApp Storage gehostet werden.
+
+|===
+Ein Berichtbenutzer – ein Datenbankbenutzer mit der Rolle „Berichtschema“ – kann auf die Daten in diesen Tabellen zugreifen. Dieser Benutzer hat schreibgeschützten Zugriff auf Reporting- und andere Datenbankansichten direkt aus der Unified Manager-Datenbank. Beachten Sie, dass dieser Benutzer nicht berechtigt ist, auf Tabellen zuzugreifen, die Benutzerdaten oder Cluster-Anmeldeinformationen enthalten.

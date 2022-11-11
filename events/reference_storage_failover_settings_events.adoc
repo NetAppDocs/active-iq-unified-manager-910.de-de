@@ -1,0 +1,99 @@
+---
+permalink: events/reference_storage_failover_settings_events.html 
+sidebar: sidebar 
+keywords: storage, failover, settings, events, impact area, availability 
+summary: 'Ereignisse im Rahmen der Storage-Failover-Einstellungen (SFO) informieren Sie darüber, ob Ihr Storage-Failover deaktiviert oder nicht konfiguriert ist, damit Sie das System auf potenzielle Probleme überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.' 
+---
+= Ereignisse auf Storage-Failover-Einstellungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ereignisse im Rahmen der Storage-Failover-Einstellungen (SFO) informieren Sie darüber, ob Ihr Storage-Failover deaktiviert oder nicht konfiguriert ist, damit Sie das System auf potenzielle Probleme überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.
+
+
+
+== Impact Area: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Storage Failover Interconnect eine oder mehrere Links nach unten (OktEvtSfoVerbindungsOneOrMehrLinksDown)
+ a| 
+Dar
+ a| 
+Knoten
+ a| 
+Warnung
+
+
+
+ a| 
+Storage Failover deaktiviert(ocumEvtSfoSettingsdeaktiviert)
+ a| 
+Dar
+ a| 
+Knoten
+ a| 
+Fehler
+
+
+
+ a| 
+Storage-Failover nicht konfiguriert(ocumEvtSfoSettingsNotConfigured)
+ a| 
+Dar
+ a| 
+Knoten
+ a| 
+Fehler
+
+
+
+ a| 
+Storage-Failover-Status – Übernahme (OktEvtSfoStateTakeover)
+ a| 
+Dar
+ a| 
+Knoten
+ a| 
+Warnung
+
+
+
+ a| 
+Storage Failover State - Partial GiveBack(ocumEvtSfoStatePartialGiveBack)
+ a| 
+Dar
+ a| 
+Knoten
+ a| 
+Fehler
+
+
+
+ a| 
+Storage Failover Node Status Down (ocumEvtSfoNodeStatusDown)
+ a| 
+Dar
+ a| 
+Knoten
+ a| 
+Fehler
+
+
+
+ a| 
+Storage-Failover-Übernahme nicht möglich (OktEvtSfoÜbernahmemöglich)
+ a| 
+Dar
+ a| 
+Knoten
+ a| 
+Fehler
+
+|===

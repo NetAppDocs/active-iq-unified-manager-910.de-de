@@ -1,0 +1,14 @@
+---
+permalink: health-checker/concept_prioritize_storage_objects_using_annotations.html 
+sidebar: sidebar 
+keywords: prioritize, storage, object, events, annotations 
+summary: Sie können Anmerkungsregeln für Storage-Objekte erstellen und anwenden, sodass Sie diese Objekte auf der Grundlage des Typs der verwendeten Annotation und ihrer Priorität identifizieren und filtern können. 
+---
+= Priorisieren von Storage-Objektereignissen mithilfe von Anmerkungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Anmerkungsregeln für Storage-Objekte erstellen und anwenden, sodass Sie diese Objekte auf der Grundlage des Typs der verwendeten Annotation und ihrer Priorität identifizieren und filtern können.

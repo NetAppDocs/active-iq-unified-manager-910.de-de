@@ -1,0 +1,24 @@
+---
+permalink: data-protection/task_view_job_details.html 
+sidebar: sidebar 
+keywords: view, job, details 
+summary: Nachdem Sie einen Job gestartet haben, können Sie den Fortschritt auf der Seite Jobdetails verfolgen und die zugehörigen Aufgaben auf mögliche Fehler überwachen. 
+---
+= Anzeigen von Jobdetails
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie einen Job gestartet haben, können Sie den Fortschritt auf der Seite Jobdetails verfolgen und die zugehörigen Aufgaben auf mögliche Fehler überwachen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Schutz* > *Jobs*.
+. Klicken Sie auf der Seite Jobs in der Spalte *Name* auf einen Jobnamen, um die Liste der Aufgaben anzuzeigen, die mit dem Job verknüpft sind.
+. Klicken Sie auf eine Aufgabe, um zusätzliche Informationen im Bereich *Aufgabendetails* und im Bereich *Aufgabenmeldungen* rechts neben der Aufgabenliste anzuzeigen.
+

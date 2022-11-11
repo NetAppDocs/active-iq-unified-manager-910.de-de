@@ -1,0 +1,40 @@
+---
+permalink: health-checker/task_calculate_reclaimable_space_for_snapshot_copies.html 
+sidebar: sidebar 
+keywords: calculate, reclaimable space, snapshot copies 
+summary: Sie können den Speicherplatz berechnen, den zurückgewonnen werden kann, wenn eine oder mehrere Snapshot-Kopien gelöscht werden. 
+---
+= Berechnung des nicht anforderbaren Speicherplatzes für Snapshot Kopien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Speicherplatz berechnen, den zurückgewonnen werden kann, wenn eine oder mehrere Snapshot-Kopien gelöscht werden.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+* Das Volume muss sich online sein.
+* Das Volume muss ein FlexVol Volume sein. Diese Funktion wird nicht mit FlexGroup Volumes unterstützt.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Volumes*.
+. Wählen Sie in der Ansicht *Systemzustand: Alle Volumes* das Volume aus, das die Snapshot Kopien enthält, die Sie anzeigen möchten.
++
+Die Liste der Snapshot Kopien wird angezeigt.
+
+. Klicken Sie auf der Seite *Volumen / Gesundheit* Details auf die Registerkarte *Kapazität*.
+. Klicken Sie im Fensterbereich *Details* der Registerkarte *Kapazität* im Abschnitt Weitere Details auf den Link neben *Snapshot Kopien*.
++
+Die Anzahl der Snapshot Kopien ist ein Link, der die Liste der Snapshot Kopien anzeigt.
+
+. Wählen Sie in der Ansicht *Snapshot Kopien* die Snapshot Kopien aus, für die Sie den zurückforderbaren Speicherplatz berechnen möchten.
+. Klicken Sie Auf *Berechnen*.
++
+Der zurückforderbare Speicherplatz (in Prozent und KB, MB, GB usw.) auf dem Volume wird angezeigt.
+
+. Um den wieder einzuforderbaren Speicherplatz neu zu berechnen, wählen Sie die erforderlichen Snapshot Kopien aus, und klicken Sie auf *Neu berechnen*.
+

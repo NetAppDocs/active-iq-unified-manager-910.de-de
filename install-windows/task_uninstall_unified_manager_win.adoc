@@ -1,0 +1,57 @@
+---
+permalink: install-windows/task_uninstall_unified_manager_win.html 
+sidebar: sidebar 
+keywords: uninstall, unified manager 
+summary: Sie können Unified Manager deinstallieren, indem Sie den Assistenten Programme und Funktionen verwenden oder eine unbeaufsichtigte Deinstallation von der Befehlszeilenschnittstelle durchführen. 
+---
+= Deinstallieren Von Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:pp: &#43;&#43;
+
+
+[role="lead"]
+Sie können Unified Manager deinstallieren, indem Sie den Assistenten Programme und Funktionen verwenden oder eine unbeaufsichtigte Deinstallation von der Befehlszeilenschnittstelle durchführen.
+
+*Was Sie brauchen*
+
+* Sie müssen über Administratorrechte für Windows verfügen.
+* Alle Cluster (Datenquellen) müssen vom Unified Manager-Server entfernt werden, bevor die Software deinstalliert wird.
+
+
+.Schritte
+. Deinstallieren Sie Unified Manager, indem Sie eine der folgenden Optionen auswählen:
++
+[cols="2*"]
+|===
+| So deinstallieren Sie Unified Manager über... | Dann... 
+
+
+ a| 
+Assistent Programme und Funktionen:
+| : 
+
+
+ a| 
+.. Navigieren Sie zu *Systemsteuerung* > *Programm und Funktionen*.
+.. Wählen Sie Active IQ Unified Manager, und klicken Sie auf *Deinstallieren*.
+
+ a| 
+Kommandozeile
+
+|===
++
+Wenn die Benutzerkontensteuerung (UAC) auf dem Server aktiviert ist und Sie als Domänenbenutzer angemeldet sind, müssen Sie die Methode zur Deinstallation der Befehlszeile verwenden.
+
++
+Unified Manager wird von Ihrem System deinstalliert.
+
+. Deinstallieren Sie die folgenden Pakete und Daten von Drittanbietern, die während der Deinstallation von Unified Manager nicht entfernt werden:
++
+** Pakete von Drittanbietern: JRE, MySQL, Microsoft Visual C&#43;&#43; 2015 Redistributable und 7zip
+** MySQL Applikationsdaten von Unified Manager
+** Anwendungsprotokolle und Inhalt des Applikationsdatenverzeichnisses
+
+
+

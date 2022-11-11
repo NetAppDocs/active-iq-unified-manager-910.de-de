@@ -1,0 +1,66 @@
+---
+permalink: data-protection/reference_relationship_last_1_month_transfer_status_view.html 
+sidebar: sidebar 
+keywords: relationship, 1 month, transfer status, view 
+summary: 'Die Beziehung: Die Ansicht „Transferstatus der letzten 1 Monate“ ermöglicht Ihnen die Analyse der Übertragungstrends für Volumes und Storage VMs in asynchronen Beziehungen. Auf dieser Seite wird außerdem angezeigt, ob die Übertragung erfolgreich oder fehlgeschlagen ist.' 
+---
+= Beziehung: Letzte 1 Monat Transfer Status Ansicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Beziehung: Die Ansicht „Transferstatus der letzten 1 Monate“ ermöglicht Ihnen die Analyse der Übertragungstrends für Volumes und Storage VMs in asynchronen Beziehungen. Auf dieser Seite wird außerdem angezeigt, ob die Übertragung erfolgreich oder fehlgeschlagen ist.
+
+Mit den Steuerelementen oben auf der Seite können Sie Suchen durchführen, um bestimmte Objekte zu finden, Filter zu erstellen und anzuwenden, um die Liste der angezeigten Daten einzugrenzen, Spalten auf der Seite hinzuzufügen/zu entfernen/neu zu sortieren und die Daten auf der Seite in A zu exportieren `.csv`, `.pdf`, Oder `.xlsx` Datei: Nachdem Sie die Seite angepasst haben, können Sie die Ergebnisse als benutzerdefinierte Ansicht speichern und anschließend einen Bericht dieser Daten erstellen und regelmäßig per E-Mail senden. Mit der Option *Filter* können Sie nur ausgewählte Speichersysteme wie nur Volumes oder nur Storage VMs anzeigen. Derselbe Bericht wird auf der Seite Speicher und nur für die ausgewählte Speichereinheit angezeigt. Wenn Sie beispielsweise Volume-Beziehungen anzeigen möchten, können Sie entweder auf den Relationship: Last 1 Month Transfer Status Report for the Storage VMs entweder aus dem Menü *Storage* > *Storage VMs* > *Relationship: Last 1 month Transfer Status* oder aus *Protection* > *Relationships* > *Relationship: Im Menü „Transferstatus* des letzten Monats“ können Sie mit dem *Filter* nur Daten für Volumes anzeigen.
+
+* *Quellvolumen*
++
+Zeigt den Namen des Quell-Volumes an.
+
+* *Zielvolumen*
++
+Zeigt den Namen des Zieldatenträgers an.
+
+* *Operationstyp*
++
+Zeigt den Typ der Volume-Übertragung an.
+
+* *Operationsergebnis*
++
+Zeigt an, ob die Volume-Übertragung erfolgreich war.
+
+* *Startzeit Der Übertragung*
++
+Zeigt die Startzeit der Volume-Übertragung an.
+
+* *Endzeit Übertragen*
++
+Zeigt die Endzeit der Volume-Übertragung an.
+
+* *Transferdauer*
++
+Zeigt die Zeit an, die für die Durchführung der Volume-Übertragung benötigt wurde (in Stunden).
+
+* *Transfergröße*
++
+Zeigt die Größe (in MB) des übertragenen Volumes an.
+
+* *Quell-SVM*
++
+Zeigt den Namen der Storage Virtual Machine (SVM) an.
+
+* * Quellcluster*
++
+Zeigt den Quellcluster-Namen an.
+
+* *Ziel-SVM*
++
+Zeigt den Namen der Ziel-SVM an.
+
+* *Zielcluster*
++
+Zeigt den Ziel-Cluster-Namen an.
+
+

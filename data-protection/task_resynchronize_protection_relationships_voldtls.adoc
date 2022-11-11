@@ -1,0 +1,54 @@
+---
+permalink: data-protection/task_resynchronize_protection_relationships_voldtls.html 
+sidebar: sidebar 
+keywords: resynchronize, protection, relationships, volume, health details page 
+summary: Sie können Daten auf einer SnapMirror oder SnapVault-Beziehung neu synchronisieren, die unterbrochen wurde, und dann wurde das Ziel gelesen/geschrieben, sodass die Daten auf der Quelle mit den Daten auf dem Ziel übereinstimmen. Sie können auch neu synchronisieren, wenn eine erforderliche gemeinsame Snapshot Kopie auf dem Quell-Volume gelöscht wird, sodass SnapMirror oder SnapVault Updates fehlschlagen. 
+---
+= Sicherungsbeziehungen von der Seite Volume / Health Details neu synchronisieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Daten auf einer SnapMirror oder SnapVault-Beziehung neu synchronisieren, die unterbrochen wurde, und dann wurde das Ziel gelesen/geschrieben, sodass die Daten auf der Quelle mit den Daten auf dem Ziel übereinstimmen. Sie können auch neu synchronisieren, wenn eine erforderliche gemeinsame Snapshot Kopie auf dem Quell-Volume gelöscht wird, sodass SnapMirror oder SnapVault Updates fehlschlagen.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen OnCommand Workflow Automation eingerichtet haben.
+
+
+.Schritte
+. Suchen Sie auf der Registerkarte *Schutz* der Seite *Volumen / Gesundheit* Details in der Topologie die Schutzbeziehung, die Sie neu synchronisieren möchten, und klicken Sie mit der rechten Maustaste darauf.
+. Wählen Sie im Menü * resynchronisieren* aus.
++
+Alternativ können Sie im Menü *Aktionen* die Option *Beziehung* > *Resynchronisieren* wählen, um die Beziehung, für die Sie die Details anzeigen, neu zu synchronisieren.
+
++
+Das Dialogfeld „Resynchronisieren“ wird angezeigt.
+
+. Wählen Sie auf der Registerkarte *Resynchronisierung Optionen* eine Übertragungs-Priorität und die maximale Übertragungsrate aus.
+. Klicken Sie auf *Quelle Snapshot Kopien* und dann in der Spalte *Snapshot Kopie* auf *Standard*.
++
+Das Dialogfeld Quell-Snapshot-Kopie auswählen wird angezeigt.
+
+. Wenn Sie eine vorhandene Snapshot Kopie angeben möchten, anstatt die Standard-Snapshot Kopie zu übertragen, klicken Sie auf *vorhandene Snapshot Kopie* und wählen Sie eine Snapshot Kopie aus der Liste aus.
+. Klicken Sie Auf *Absenden*.
++
+Sie werden wieder zum Dialogfeld „erneut synchronisieren“ angezeigt.
+
+. Wenn Sie mehrere Quellen zum erneuten Synchronisieren ausgewählt haben, klicken Sie für die nächste Quelle, für die Sie eine vorhandene Snapshot Kopie angeben möchten, auf *Standard*.
+. Klicken Sie auf *Senden*, um die Neusynchronisierung zu beginnen.
++
+Der Resynchronisierung-Job wurde gestartet, Sie werden auf die Seite Volume / Health Details zurückgeschickt und oben auf der Seite wird ein Link zu Jobs angezeigt.
+
+. *Optional:* Klicken Sie auf *Jobs anzeigen* auf der Seite *Volume / Health Details*, um den Status jedes Resynchronisierung Jobs zu verfolgen.
++
+Eine gefilterte Liste von Jobs wird angezeigt.
+
+. *Optional:* Klicken Sie auf den Pfeil *Zurück* in Ihrem Browser, um zur Detailseite *Volumen / Gesundheit* zurückzukehren.
++
+Die Neusynchronisierung ist abgeschlossen, nachdem alle Aufgabenstellungen erfolgreich abgeschlossen wurden.
+
+

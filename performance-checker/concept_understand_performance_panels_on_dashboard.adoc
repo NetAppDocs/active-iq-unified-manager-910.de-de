@@ -1,0 +1,42 @@
+---
+permalink: performance-checker/concept_understand_performance_panels_on_dashboard.html 
+sidebar: sidebar 
+keywords: understand, performance, panels, dashboard 
+summary: Das Unified Manager Dashboard bietet einige Bereiche mit hohem Performance-Status für alle Cluster, die in Ihrer Umgebung überwacht werden. Sie können den Status aller Cluster oder für einzelne Cluster anzeigen. 
+---
+= Allgemeines zu den Performance-Fenstern auf dem Dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Unified Manager Dashboard bietet einige Bereiche mit hohem Performance-Status für alle Cluster, die in Ihrer Umgebung überwacht werden. Sie können den Status aller Cluster oder für einzelne Cluster anzeigen.
+
+Neben Leistungsinformationen werden in den meisten Feldern auch die Anzahl der aktiven Ereignisse in dieser Kategorie sowie die Anzahl der neuen Ereignisse angezeigt, die in den letzten 24 Stunden hinzugefügt wurden. Anhand dieser Informationen können Sie festlegen, welche Cluster Sie möglicherweise weiter analysieren müssen, um gemeldete Ereignisse zu lösen. Wenn Sie auf die Ereignisse klicken, werden die wichtigsten Ereignisse angezeigt und es wird ein Link zur Seite „Ereignismanagement“ angezeigt, die gefiltert wurde, um die Ereignisse in dieser Kategorie anzuzeigen.
+
+Die folgenden Bereiche stellen den Leistungsstatus bereit.
+
+* *Performance Capacity Panel*
++
+Bei der Anzeige aller Cluster zeigt dieses Feld den Performance-Kapazitätswert für jedes Cluster (durchschnittlich über die vorherige 1 Stunde) und die Anzahl der Tage an, bis die Performance-Kapazität die Obergrenze erreicht (basierend auf der täglichen Wachstumsrate). Durch Klicken auf das Balkendiagramm gelangen Sie zur Seite „Nodes-Inventar“ für dieses Cluster. Beachten Sie, dass auf der Seite Nodes-Inventar die durchschnittliche Performance-Kapazität der letzten 72 Stunden angezeigt wird. Dieser Wert stimmt daher möglicherweise nicht mit dem Dashboard-Wert überein.
+
++
+Wenn Sie ein einzelnes Cluster anzeigen, wird in diesem Bereich die Cluster-Performance-Kapazität, die IOPS-Gesamtkapazität und der Gesamtdurchsatz angezeigt.
+
+* *Workload IOPS Panel*
++
+Wenn das aktive Workload-Management aktiviert ist und wenn ein einzelnes Cluster angezeigt wird, werden in diesem Bereich die Gesamtzahl der Workloads angezeigt, die derzeit in einem bestimmten IOPS-Bereich ausgeführt werden.
+
+* *Workload Performance Panel*
++
+Wenn das aktive Workload-Management aktiviert ist, wird in diesem Bereich die Gesamtzahl der Workloads angezeigt, die jedem definierten Performance-Service-Level zugeordnet sind und denen nicht entsprechen. Durch Klicken auf ein Balkendiagramm gelangen Sie zu den Workloads, die dieser Richtlinie auf der Seite Workloads zugewiesen sind.
+
+* *Anwendungsübersicht*
++
+Bei der Anzeige aller Cluster können Sie Cluster nach den höchsten IOPS oder dem höchsten Durchsatz (MB/s) anzeigen.
+
++
+Bei der Anzeige eines einzelnen Clusters können Sie Workloads auf diesem Cluster nach den höchsten IOPS oder dem höchsten Durchsatz (MB/s) anzeigen.
+
+

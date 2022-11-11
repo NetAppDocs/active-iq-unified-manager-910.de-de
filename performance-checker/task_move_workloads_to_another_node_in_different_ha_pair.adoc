@@ -1,0 +1,93 @@
+---
+permalink: performance-checker/task_move_workloads_to_another_node_in_different_ha_pair.html 
+sidebar: sidebar 
+keywords: move, workloads, another, node, different, ha pair 
+summary: Mithilfe von Unified Manager können Sie ein Aggregat auf einem Node in einem anderen HA-Paar identifizieren, das weniger beschäftigt ist als das HA-Paar, in dem Ihre Workloads derzeit ausgeführt werden. Anschließend können Sie ausgewählte Volumes auf dem neuen HA-Paar in Aggregate verschieben. Durch die Migration hochperformanter Workloads auf ein Aggregat auf einem weniger ausgelasteten Node können Workloads auf beiden Nodes effizienter ausgeführt werden. 
+---
+= Workloads werden in einem anderen HA-Paar auf einen anderen Node verschoben
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe von Unified Manager können Sie ein Aggregat auf einem Node in einem anderen HA-Paar identifizieren, das weniger beschäftigt ist als das HA-Paar, in dem Ihre Workloads derzeit ausgeführt werden. Anschließend können Sie ausgewählte Volumes auf dem neuen HA-Paar in Aggregate verschieben. Durch die Migration hochperformanter Workloads auf ein Aggregat auf einem weniger ausgelasteten Node können Workloads auf beiden Nodes effizienter ausgeführt werden.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+* Der Cluster muss aus mindestens zwei HA-Paaren bestehen. Diese Problembehebung ist nicht möglich, wenn im Cluster nur ein HA-Paar vorhanden ist.
+* Sie müssen die Namen der beiden Nodes im HA-Paar, in dem derzeit das Performance-Problem aufgetreten ist, notiert haben.
+* Sie müssen das Datum und die Uhrzeit aufgezeichnet haben, zu der die Nodes das Performance-Ereignis erhalten haben.
+* Unified Manager muss einen Monat oder mehrere Performance-Daten erfasst und analysiert haben.
+
+
+Anhand dieser Schritte werden die folgenden Ressourcen ermittelt, damit Sie hochperformante Workloads auf einen weniger ausgelasteten Node in einem anderen HA-Paar verschieben können:
+
+* Die Nodes in einem anderen HA-Paar auf demselben Cluster, das weniger genutzt wird
+* Die Aggregate auf den neuen Nodes, die am wenigsten genutzt werden
+* Auf den aktuellen Nodes höchste Performance
+
+
+.Schritte
+. Identifizieren Sie die Nodes, die zu einem anderen HA-Paar auf demselben Cluster gehören:
++
+.. Klicken Sie im linken Navigationsbereich auf *Storage* > *Cluster* und wählen Sie im Menü Ansicht die Option *Leistung* > *Alle Cluster* aus.
++
+Die Ansicht Performance: Alle Cluster wird angezeigt.
+
+.. Klicken Sie im Feld *Knotenanzahl* für den aktuellen Cluster auf die Zahl.
++
+Die Ansicht Leistung: Alle Knoten wird angezeigt.
+
+.. Notieren Sie sich die Namen der Nodes, die sich in verschiedenen HA-Paaren vom HA-Paar befinden, das derzeit ein Performance-Problem aufweist.
+
+
+. Identifizieren Sie einen Node im neuen HA-Paar, der am wenigsten genutzt wird:
++
+.. Klicken Sie auf die Spalte *Auslastung*, um die Knoten nach der geringsten Auslastung zu sortieren.
++
+Sie können auch die Knoten identifizieren, die die größte *freie Kapazität* haben. Diese enthält eine Liste potenzieller Nodes, zu die Sie Workloads verschieben können.
+
+.. Notieren Sie sich den Namen des Node, auf den Sie die Workloads verschieben möchten.
+
+
+. Identifizieren Sie ein Aggregat auf dem neuen Node, der am wenigsten genutzt wird:
++
+.. Klicken Sie im linken Navigationsbereich auf *Storage* > *Aggregate* und wählen Sie im Menü Ansicht die Option *Performance* > *Alle Aggregate* aus.
++
+Die Performance: Die Ansicht aller Aggregate wird angezeigt.
+
+.. Klicken Sie im linken Dropdown-Menü auf *Filterung*, wählen Sie *Knoten* aus, geben Sie den Namen des Knotens in das Textfeld ein und klicken Sie dann auf *Filter anwenden*.
++
+Die Performance: Alle Aggregate Ansicht wird mit der Liste der auf diesem Node verfügbaren Aggregate neu angezeigt.
+
+.. Klicken Sie auf die Spalte *Nutzung*, um die Aggregate nach den am wenigsten verwendeten Aggregaten zu sortieren.
++
+Sie können auch jene Aggregate identifizieren, die die größte *freie Kapazität* haben. Diese Liste enthält potenzielle Aggregate, zu denen Workloads verschoben werden können.
+
+.. Notieren Sie sich den Namen des Aggregats, zu dem Sie die Workloads verschieben möchten.
+
+
+. Identifizieren Sie die hochperformanten Workloads der Nodes, die das Ereignis erhalten haben:
++
+.. Kehren Sie zur Seite *Event*-Details für die Veranstaltung zurück.
+.. Klicken Sie im Feld *Betroffene Volumes* auf den Link für die Anzahl der Volumes des ersten Knotens.
++
+Die Ansicht Leistung: Alle Volumes wird mit einer gefilterten Liste der Volumes auf diesem Node angezeigt.
+
+.. Klicken Sie auf die Spalte *Gesamtkapazität*, um die Volumes nach dem größten zugewiesenen Speicherplatz zu sortieren.
++
+Hier erhalten Sie eine Liste potenzieller Volumes, die Sie verschieben möchten.
+
+.. Notieren Sie sich die Namen der Volumes, die Sie verschieben möchten, sowie die Namen der aktuellen Aggregate, auf denen sich diese befinden.
+.. Führen Sie für den zweiten Knoten, der zu diesem Ereignis gehörte, Schritte 4c und 4d aus, um mögliche Volumes zu identifizieren, die auch von diesem Knoten verschoben werden sollen.
+
+
+. Verschieben Sie die Volumes zu den Aggregaten, die Sie als niedrige Auslastung auf dem neuen Node angegeben haben.
++
+Sie können den Vorgang der Verschiebung mit ONTAP System Manager, OnCommand Workflow Automation, ONTAP Befehlen oder einer Kombination dieser Tools ausführen.
+
+
+
+Prüfen Sie nach einigen Tagen, ob Sie dieselbe Art von Ereignissen von diesem Node oder Aggregat erhalten.

@@ -1,0 +1,31 @@
+---
+permalink: api-automation/concept_storage_resource_model.html 
+sidebar: sidebar 
+keywords: storage, resource, ONTAP 
+summary: Die Storage-Ressourcen in ONTAP können grob in physische Storage-Ressourcen und logische Storage-Ressourcen eingeteilt werden. Um Ihre ONTAP-Systeme mit den in Active IQ Unified Manager bereitgestellten APIs effizient zu managen, müssen Sie das Storage-Ressourcenmodell und die Beziehung zwischen den verschiedenen Storage-Ressourcen kennen. 
+---
+= Storage-Ressourcen in ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Storage-Ressourcen in ONTAP können grob in _physische Storage-Ressourcen_ und _logische Storage-Ressourcen eingeteilt werden._ um Ihre ONTAP Systeme mit den in Active IQ Unified Manager zur Verfügung gestellten APIs effizient zu managen, müssen Sie das Storage-Ressourcenmodell und die Beziehung zwischen den verschiedenen Storage-Ressourcen kennen.
+
+* *Physische Speicherressourcen*
++
+Bezieht sich auf die von ONTAP zur Verfügung gestellten physischen Speicherobjekte. Physische Storage-Ressourcen umfassen Festplatten, Cluster, Storage Controller, Nodes und Aggregate.
+
+* *Logische Speicherressourcen*
++
+Bezieht sich auf die von ONTAP bereitgestellten Storage-Ressourcen, die nicht an eine physische Ressource gebunden sind. Diese Ressourcen werden einer Storage Virtual Machine (SVM, ehemals Vserver) zugewiesen. Sie stehen unabhängig von spezifischen physischen Storage-Ressourcen wie Festplatten, Array-LUNs oder Aggregaten zur Verfügung.
+
++
+Zu den logischen Storage-Ressourcen zählen Volumes aller Typen und qtrees sowie die Funktionen und Konfigurationen, die in diesen Ressourcen verwendet werden können, beispielsweise Snapshot Kopien, Deduplizierung, Komprimierung und Kontingente.
+
+
+
+Die folgende Abbildung zeigt die Storage-Ressourcen in einem 2-Node Cluster:
+
+image::../media/storage_resource_model.gif[Modell der Storage-Ressourcen]

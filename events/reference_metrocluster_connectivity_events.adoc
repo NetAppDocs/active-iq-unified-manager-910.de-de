@@ -1,0 +1,198 @@
+---
+permalink: events/reference_metrocluster_connectivity_events.html 
+sidebar: sidebar 
+keywords: metrocluster, connectivity, events, impact area, availability 
+summary: Konnektivitätsereignisse bieten Ihnen Informationen über die Konnektivität zwischen den Komponenten eines Clusters und zwischen den Clustern in einer MetroCluster Konfiguration, sodass Sie Monitoring auf potenzielle Probleme durchführen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad. 
+---
+= Veranstaltungen für MetroCluster-Konnektivität
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Konnektivitätsereignisse bieten Ihnen Informationen über die Konnektivität zwischen den Komponenten eines Clusters und zwischen den Clustern in einer MetroCluster Konfiguration, sodass Sie Monitoring auf potenzielle Probleme durchführen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.
+
+
+
+== Impact Area: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Alle Inter-Switch Links Down(ocumEvtMetroClusterAllISLBetweenSwitchesDown)
+ a| 
+Vorfall
+ a| 
+MetroCluster-Inter-Switch-Verbindung
+ a| 
+Kritisch
+
+
+
+ a| 
+Alle Links zwischen MetroCluster Partnern ausgefallen(occumEvtMetroClusterAllLinksBetweenPartnerDown)
+ a| 
+Vorfall
+ a| 
+MetroCluster Beziehung
+ a| 
+Kritisch
+
+
+
+ a| 
+FC-SAS Bridge zu Storage Stack Link Down (ocumEvtBridgeSasPortDown)
+ a| 
+Vorfall
+ a| 
+MetroCluster Bridge-Stack-Verbindung
+ a| 
+Kritisch
+
+
+
+ a| 
+MetroCluster Konfiguration umgeschaltet(ocumEvtMetroClusterDRStatusImpacted)
+ a| 
+Dar
+ a| 
+MetroCluster Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+MetroCluster Konfiguration teilweise umgeschaltet(ocumEvtMetroClusterDRStatusPartially ImpACTED)
+ a| 
+Dar
+ a| 
+MetroCluster Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Betroffene MetroCluster Disaster Recovery-Funktion (ocumEvtMetroClusterDRStatusImpacted)
+ a| 
+Dar
+ a| 
+MetroCluster Beziehung
+ a| 
+Kritisch
+
+
+
+ a| 
+MetroCluster Partner nicht über Peering-Netzwerk erreichbar(ocumEvtMetroClusterPartnerNotErreichbarkeit oberhalb von Netzwerk)
+ a| 
+Vorfall
+ a| 
+MetroCluster Beziehung
+ a| 
+Kritisch
+
+
+
+ a| 
+Knoten zu FC Switch Alle FC-VI Interconnect Links Down (ocumEvtMccNodeSwitchFcviLinksDown)
+ a| 
+Vorfall
+ a| 
+MetroCluster-Node-Switch-Verbindung
+ a| 
+Kritisch
+
+
+
+ a| 
+Knoten zu FC Switch ein oder mehrere FC-Initiator Links nach unten(ocumEvtMccNodeSwitchFcLinksOneOrMoreDown)
+ a| 
+Dar
+ a| 
+MetroCluster-Node-Switch-Verbindung
+ a| 
+Warnung
+
+
+
+ a| 
+Knoten zu FC Switch Alle FC-Initiator Links nach unten (ocumEvtMccNodeSwitchFcLinksDown)
+ a| 
+Vorfall
+ a| 
+MetroCluster-Node-Switch-Verbindung
+ a| 
+Kritisch
+
+
+
+ a| 
+Switch to FC-SAS Bridge FC Link Down (ocumEvtMccSwitchBridgeFcLinksDown)
+ a| 
+Vorfall
+ a| 
+Verbindung mit der MetroCluster-Switch-Bridge
+ a| 
+Kritisch
+
+
+
+ a| 
+Inter Node All FC VI Interconnect Links Down (ocumEvtMccInterNodeLinksDown)
+ a| 
+Vorfall
+ a| 
+Verbindung zwischen Knoten
+ a| 
+Kritisch
+
+
+
+ a| 
+Inter Node One oder More FC VI Interconnect Links Down (ocumEvtMccInterNodeLinksOneOrMoreDown)
+ a| 
+Dar
+ a| 
+Verbindung zwischen Knoten
+ a| 
+Warnung
+
+
+
+ a| 
+Knoten zu Brücke Link nach unten (ocumEvtMccNodeBridgeLinksDown)
+ a| 
+Vorfall
+ a| 
+Node-Bridge-Verbindung
+ a| 
+Kritisch
+
+
+
+ a| 
+Node zu Storage Stack All SAS Links Down (ocumEvtMccNodeStackLinksDown)
+ a| 
+Vorfall
+ a| 
+Node-Stack-Verbindung
+ a| 
+Kritisch
+
+
+
+ a| 
+Knoten zu Storage-Stack eine oder mehrere SAS-Links nach unten ( occumEvtMccNodeStackLinksOneOrMoreDown)
+ a| 
+Dar
+ a| 
+Node-Stack-Verbindung
+ a| 
+Warnung
+
+|===

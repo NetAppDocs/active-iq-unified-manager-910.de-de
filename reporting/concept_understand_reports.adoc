@@ -1,0 +1,25 @@
+---
+permalink: reporting/concept_understand_reports.html 
+sidebar: sidebar 
+keywords: understanding, reports 
+summary: In Berichten werden detaillierte Informationen zu Storage, Netzwerk, Servicequalität und Sicherungsbeziehungen angezeigt, sodass Sie potenzielle Probleme erkennen und beheben können, bevor sie auftreten. 
+---
+= Allgemeines zu Berichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In Berichten werden detaillierte Informationen zu Storage, Netzwerk, Servicequalität und Sicherungsbeziehungen angezeigt, sodass Sie potenzielle Probleme erkennen und beheben können, bevor sie auftreten.
+
+Wenn Sie eine Ansicht anpassen, können Sie diese mit einem eindeutigen Namen für die zukünftige Verwendung speichern. Sie können einen Bericht auf Basis dieser Ansicht so planen, dass er regelmäßig ausgeführt und an andere weitergegeben wird. Sie können die Ansicht auch in Excel herunterladen, um sie mithilfe erweiterter Excel-Funktionen anzupassen, und diese Datei anschließend wieder in Unified Manager hochladen. Wenn Sie einen Bericht über diese Ansicht planen, wird er die hochgeladene Excel-Datei verwenden, um zuverlässige Berichte zu erstellen, die Sie freigeben können.
+
+Sie können alle Berichte verwalten, die geplant wurden, über die Seite „Berichtszeitpläne“.
+
+[NOTE]
+====
+Zum Verwalten von Berichten müssen Sie über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+====
+Sie können Berichte als kommagetrennte Werte (CSV), Excel oder PDF-Dateien herunterladen.

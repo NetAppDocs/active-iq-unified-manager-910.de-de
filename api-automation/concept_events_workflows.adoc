@@ -1,0 +1,43 @@
+---
+permalink: api-automation/concept_events_workflows.html 
+sidebar: sidebar 
+keywords: determine, issues, storage, objects, events 
+summary: Wenn ein Storage-Objekt im Datacenter einen Schwellenwert überschreitet, erhalten Sie eine Benachrichtigung über dieses Ereignis. Mithilfe dieser Benachrichtigung können Sie das Problem analysieren und mithilfe der Ereignis-APIs Korrekturmaßnahmen ergreifen. 
+---
+= Bestimmen von Problemen in Speicherobjekten mithilfe von Ereignissen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn ein Storage-Objekt im Datacenter einen Schwellenwert überschreitet, erhalten Sie eine Benachrichtigung über dieses Ereignis. Mithilfe dieser Benachrichtigung können Sie das Problem analysieren und mithilfe von Korrekturmaßnahmen ergreifen `events` APIs:
+
+Dieser Workflow nimmt das Beispiel eines Volumes als Ressourcenobjekt ein. Sie können das verwenden `events` APIs zum Abrufen der Liste der mit einem Volume verbundenen Ereignisse, zur Analyse kritischer Probleme für das Volume und zur Behebung des Problems
+
+image::../media/handling_event_related_issues_of_a_storage_object_flowchart.gif[Umgang mit Ereignis-bezogenen Problemen eines Storage-Objekt-Ablaufdiagramms]
+
+Führen Sie diese Schritte aus, um die Probleme in Ihrem Volumen zu ermitteln, bevor Sie Schritte zur Problembehebung Unternehmen.
+
+.Schritte
+. Analyse der kritischen Active IQ Unified Manager-Ereignisbenachrichtigungen für die Volumes in Ihrem Datacenter
+. Abfrage aller Ereignisse für die Volumes mit den folgenden Parametern in der /Management-Server/Event-API:
+`"*resource_type": "volume*"`
+`"*severity": "critical*"`
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Management-Server
+ a| 
+GET
+ a| 
+/Management-Server/Ereignisse
+
+|===
+. Anzeigen der Ausgabe und Analyse der Probleme in den spezifischen Volumes.
+. Die erforderlichen Aktionen können mithilfe der Unified Manager REST-APIs oder der Web-UI ausgeführt werden, um die Probleme zu beheben.
+

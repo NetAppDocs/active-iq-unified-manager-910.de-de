@@ -1,0 +1,188 @@
+---
+permalink: events/reference_management_station_events.html 
+sidebar: sidebar 
+keywords: management, station, events, impact area, configuration, performance 
+summary: Management Station-Ereignisse geben Ihnen Informationen über den Status des Servers, auf dem Unified Manager installiert ist, sodass Sie auf mögliche Probleme überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad. 
+---
+= Management Station-Events
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Management Station-Ereignisse geben Ihnen Informationen über den Status des Servers, auf dem Unified Manager installiert ist, sodass Sie auf mögliche Probleme überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.
+
+
+
+== Impact Area: Konfiguration
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Management Server Disk Space Fast Full (ocumEvtUnifiedManagerDiskSpaceNearFast Full)
+ a| 
+Dar
+ a| 
+Management Station
+ a| 
+Warnung
+
+
+
+ a| 
+Freier Speicherplatz auf dem Verwaltungsserver voll (ocumEvtUnifiedManagerDiskSpaceFull)
+ a| 
+Vorfall
+ a| 
+Management Station
+ a| 
+Kritisch
+
+
+
+ a| 
+Management Server, auf dem der Speicher gering ist (ocumEvtUnifiedManagerMemoryLow)
+ a| 
+Dar
+ a| 
+Management Station
+ a| 
+Warnung
+
+
+
+ a| 
+Management Server fast nicht genügend Arbeitsspeicher (ocumEvtUnifiedManagerMemoryAlmostOut)
+ a| 
+Vorfall
+ a| 
+Management Station
+ a| 
+Kritisch
+
+
+
+ a| 
+Größe der MySQL-Log-Datei erhöht; Neustart erforderlich (ocumEvtMystqlLogFileSizeWarnung)
+ a| 
+Vorfall
+ a| 
+Management Station
+ a| 
+Warnung
+
+
+
+ a| 
+Die Zuweisung der Größe des gesamten Prüfprotokolls ist „Jetzt voll“
+ a| 
+Dar
+ a| 
+Management Station
+ a| 
+Warnung
+
+
+
+ a| 
+Syslog-Server-Zertifikat – Informationen zum Ablauf
+ a| 
+Dar
+ a| 
+Management Station
+ a| 
+Warnung
+
+
+
+ a| 
+Syslog Server-Zertifikat Abgelaufen
+ a| 
+Dar
+ a| 
+Management Station
+ a| 
+Fehler
+
+
+
+ a| 
+Audit Log-Datei Manipuliert
+ a| 
+Dar
+ a| 
+Management Station
+ a| 
+Warnung
+
+
+
+ a| 
+Audit Log-Datei Gelöscht
+ a| 
+Dar
+ a| 
+Management Station
+ a| 
+Warnung
+
+
+
+ a| 
+Syslog-Server-Verbindungsfehler
+ a| 
+Dar
+ a| 
+Management Station
+ a| 
+Fehler
+
+
+
+ a| 
+Syslog Server-Konfiguration Geändert
+ a| 
+Ereignis
+ a| 
+Management Station
+ a| 
+Warnung
+
+|===
+
+
+== Impact Area: Performance
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Performance Data Analysis is hited(ocumEvtUnifiedManagerDataMissingAnalyze)
+ a| 
+Dar
+ a| 
+Management Station
+ a| 
+Warnung
+
+
+
+ a| 
+Performance Data Collection ist betroffen(OktEvtUnifiedManagerDataMissingCollection)
+ a| 
+Vorfall
+ a| 
+Management Station
+ a| 
+Kritisch
+
+|===
+[NOTE]
+====
+Die beiden letzten Performance-Ereignisse waren nur für Unified Manager 7.2 verfügbar. Wenn eines dieser Ereignisse im Status „Neu“ vorhanden ist und Sie dann auf eine neuere Version der Unified Manager-Software aktualisieren, werden die Ereignisse nicht automatisch gelöscht. Sie müssen die Ereignisse manuell in den Status „aufgelöst“ verschieben.
+
+====

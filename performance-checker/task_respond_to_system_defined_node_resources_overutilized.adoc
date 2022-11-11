@@ -1,0 +1,46 @@
+---
+permalink: performance-checker/task_respond_to_system_defined_node_resources_overutilized.html 
+sidebar: sidebar 
+keywords: node, resources, overutilized, performance, events 
+summary: Unified Manager generiert zu stark ausgelastete Warnmeldungen bei Node-Ressourcen, wenn ein einzelner Node über die Grenzen seiner betrieblichen Effizienz arbeitet und so die Workload-Latenzen potenziell beeinträchtigen. Diese systemdefinierten Ereignisse bieten die Möglichkeit, potenzielle Performance-Probleme zu beheben, bevor viele Workloads von der Latenz beeinträchtigt werden. 
+---
+= Reaktion auf Node-Ressourcen überlastete Performance-Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager generiert zu stark ausgelastete Warnmeldungen bei Node-Ressourcen, wenn ein einzelner Node über die Grenzen seiner betrieblichen Effizienz arbeitet und so die Workload-Latenzen potenziell beeinträchtigen. Diese systemdefinierten Ereignisse bieten die Möglichkeit, potenzielle Performance-Probleme zu beheben, bevor viele Workloads von der Latenz beeinträchtigt werden.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+* Es müssen neue oder veraltete Performanceereignisse vorliegen.
+
+
+Unified Manager generiert Warnereignisse für überlastete Node-Ressourcen bei Richtlinienverstößen, indem Nodes gesucht werden, die mehr als 30 Minuten lang mehr als 100 % der Performance-Kapazität nutzen.
+
+Sie können diesen Typ eines Performance-Problems mit System Manager oder den Befehlen ONTAP beheben, einschließlich der folgenden Aufgaben:
+
+* Erstellen und Anwenden einer QoS-Richtlinie auf alle Volumes oder LUNs, die die Systemressourcen überbeanspruchen
+* Reduzierung des maximalen Durchsatzes bei QoS in einer Richtliniengruppe, auf die Workloads angewendet wurden
+* Verschieben eines Workloads in ein anderes Aggregat oder Node
+* Erhöhung der Kapazität durch Hinzufügen von Festplatten zum Node oder durch Upgrade auf einen Node mit schnellerer CPU und mehr RAM
+
+
+.Schritte
+. Rufen Sie die Seite *Ereignisdetails* auf, um Informationen über das Ereignis anzuzeigen.
+. Lesen Sie die *Beschreibung*, die die Schwellenverletzung beschreibt, die das Ereignis verursacht hat.
++
+Zum Beispiel die Meldung „`Perf“. Die genutzte Kapazität bei der Einfachheit beträgt 139 %.-02 hat ein WARNEREIGNIS ausgelöst, um potenzielle Performance-Probleme in der Datenverarbeitungseinheit zu identifizieren.`“ zeigt an, dass die Performance auf der Einfachheit eines Node 02 überlastet ist und die Node-Performance beeinträchtigt.
+
+. Lesen Sie im Abschnitt *Systemdiagnose* die drei Diagramme durch: Eins für die auf dem Node genutzte Performance-Kapazität, eins für die durchschnittlichen Storage-IOPS durch die wichtigsten Workloads und eins für die Latenz bei den wichtigsten Workloads. Auf diese Weise sehen Sie, welche Workloads die Ursache der Latenz auf dem Node sind.
++
+Sie können die QoS-Richtlinien auf welche Workloads angewendet werden und welche nicht, indem Sie den Mauszeiger über das IOPS-Diagramm bewegen.
+
+. Überprüfen Sie im Abschnitt * vorgeschlagene Aktionen* die Vorschläge und bestimmen Sie, welche Maßnahmen Sie durchführen sollten, um eine Erhöhung der Latenz für den Workload zu vermeiden.
++
+Klicken Sie bei Bedarf auf die Schaltfläche *Hilfe*, um weitere Details zu den vorgeschlagenen Aktionen anzuzeigen, die Sie durchführen können, um das Leistungsereignis zu lösen.
+
+

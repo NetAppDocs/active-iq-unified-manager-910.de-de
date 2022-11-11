@@ -1,0 +1,55 @@
+---
+permalink: events/reference_nvram_battery_events.html 
+sidebar: sidebar 
+keywords: nvram, battery, events, impact area, availability 
+summary: NVRAM-Batterieereignisse geben Ihnen Informationen zum Status Ihrer Akkus, sodass Sie auf mögliche Probleme überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad. 
+---
+= Ereignisse der NVRAM-Batterie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NVRAM-Batterieereignisse geben Ihnen Informationen zum Status Ihrer Akkus, sodass Sie auf mögliche Probleme überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.
+
+
+
+== Impact Area: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+NVRAM-Batterie schwach(OktEvtNvraBatterienNiedrig)
+ a| 
+Dar
+ a| 
+Knoten
+ a| 
+Warnung
+
+
+
+ a| 
+Entladene NVRAM-Batterie (OktEvtNvramBatteryEntladung)
+ a| 
+Dar
+ a| 
+Knoten
+ a| 
+Fehler
+
+
+
+ a| 
+NVRAM-Batterie übermäßig geladen (OktEvtNvramBatteryÜberCharged)
+ a| 
+Vorfall
+ a| 
+Knoten
+ a| 
+Kritisch
+
+|===

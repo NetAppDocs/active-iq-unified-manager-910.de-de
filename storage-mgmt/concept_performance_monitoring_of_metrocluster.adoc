@@ -1,0 +1,34 @@
+---
+permalink: storage-mgmt/concept_performance_monitoring_of_metrocluster.html 
+sidebar: sidebar 
+keywords: performance, monitor, metrocluster, configurations 
+summary: Unified Manager ermöglicht das Monitoring des Schreibdurchsatzes zwischen Clustern in einer MetroCluster-Konfiguration, um Workloads mit einem hohen Schreibdurchsatz zu identifizieren. Falls diese hochperformanten Workloads dazu führen, dass andere Volumes auf dem lokalen Cluster hohe I/O-Reaktionszeiten aufweisen, löst Unified Manager Performance-Ereignisse aus, um Sie zu benachrichtigen. 
+---
+= Performance Monitoring von MetroCluster-Konfigurationen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager ermöglicht das Monitoring des Schreibdurchsatzes zwischen Clustern in einer MetroCluster-Konfiguration, um Workloads mit einem hohen Schreibdurchsatz zu identifizieren. Falls diese hochperformanten Workloads dazu führen, dass andere Volumes auf dem lokalen Cluster hohe I/O-Reaktionszeiten aufweisen, löst Unified Manager Performance-Ereignisse aus, um Sie zu benachrichtigen.
+
+Wenn ein lokales Cluster in einer MetroCluster-Konfiguration seine Daten auf sein Partner-Cluster spiegelt, werden die Daten in den NVRAM geschrieben und dann über die Interswitch-Links (ISLs) auf die Remote-Aggregate übertragen. Unified Manager analysiert den NVRAM, um die Workloads zu identifizieren, deren hoher Schreibdurchsatz den NVRAM übernutzt und so den NVRAM-Konflikt verursacht.
+
+Workloads, deren Abweichung in der Reaktionszeit den Performance-Schwellenwert überschritten hat, werden „Opfer“ und Workloads genannt, deren Abweichung vom Schreibdurchsatz zum NVRAM höher ist als üblich, was zu den Engpässen führt, werden als _bullies_ bezeichnet. Da nur Schreibanforderungen zum Partner-Cluster gespiegelt werden, analysiert Unified Manager nicht den Lesedurchsatz.
+
+Unified Manager behandelt die Cluster in einer MetroCluster Konfiguration als einzelne Cluster. Es unterscheidet nicht zwischen Clustern, die Partner sind oder den Schreibdurchsatz von jedem Cluster korrelieren.
+
+*Verwandte Informationen*
+
+link:../performance-checker/reference_performance_event_analysis_and_notification.html["Performance-Ereignisanalyse und -Benachrichtigung"]
+
+link:../performance-checker/concept_performance_incident_analysis_for_metrocluster_configuration.html["Performance-Ereignisanalyse für eine MetroCluster-Konfiguration"]
+
+link:../performance-checker/concept_roles_of_workloads_involved_in_performance_incident.html["Rollen von Workloads, die an einem Performance-Ereignis beteiligt sind"]
+
+link:../performance-checker/task_identify_victim_workloads_involved_in_performance_event.html["Identifizierung der Opfer-Workloads, die an einem Performance-Ereignis beteiligt sind"]
+
+link:../performance-checker/task_identify_bully_workloads_involved_in_performance_event.html["Identifizierung problematischer Workloads, die an einem Performance-Ereignis beteiligt sind"]
+
+link:../performance-checker/task_identify_shark_workloads_involved_in_performance_event.html["Ermittlung von Shark Workloads, die an einem Performance-Ereignis beteiligt sind"]

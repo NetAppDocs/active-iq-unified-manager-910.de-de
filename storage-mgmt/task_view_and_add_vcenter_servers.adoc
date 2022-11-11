@@ -1,0 +1,84 @@
+---
+permalink: storage-mgmt/task_view_and_add_vcenter_servers.html 
+sidebar: sidebar 
+keywords: view, add, vcenter, server 
+summary: 'Um die Performance der Virtual Machines (VMs) anzuzeigen und zu beheben, müssen die zugehörigen vCenter Server in Ihrer Active IQ Unified Manager Instanz hinzugefügt werden.' 
+---
+= Anzeigen und Hinzufügen von vCenter Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um die Performance der Virtual Machines (VMs) anzuzeigen und zu beheben, müssen die zugehörigen vCenter Server in Ihrer Active IQ Unified Manager Instanz hinzugefügt werden.
+
+*Was Sie brauchen*
+
+Stellen Sie vor dem Hinzufügen oder Anzeigen von vCenter-Servern Folgendes sicher:
+
+* Sie kennen die vCenter Server-Namen.
+* Sie kennen die IP-Adresse von vCenter Server und verfügen über die erforderlichen Anmeldedaten. Die Anmeldedaten müssen ein vCenter Server-Administrator oder ein Root-Benutzer mit schreibgeschütztem Zugriff auf vCenter Server sein.
+* Der vCenter Server, den Sie hinzufügen möchten, führt vSphere 6.5 oder höher aus.
+* Die Einstellung für die Datenerfassung in vCenter Server ist auf die Statistikebene von festgelegt `_Level 3_`, Sicherstellung der erforderlichen Ebene der Kennzahlensammlung für alle überwachten Objekte. Der Intervallzeitraum sollte sein `_5 minutes_`, Und die Speicherdauer sollte sein `_1 day_`.
++
+Weitere Informationen finden Sie im Abschnitt „`Data Collection Levels`“ der Dokumentation zu vSphere Monitoring and Performance Guide_.
+
+* Die Latenzwerte in vCenter Server werden für die erfolgreiche Berechnung der Latenzwerte in Millisekunden und nicht im Mikrosekunden-Bereich konfiguriert.
+* Während Sie den Datastore zum vCenter Server hinzufügen, können Sie sowohl die IP-Adresse des Hosts als auch den vollqualifizierten Domänennamen (FQDN) verwenden. Wenn Sie FQDN hinzufügen, stellen Sie sicher, dass der Domänenname vom Unified Manager-Server aufgelöst werden kann. Stellen Sie beispielsweise bei einer Linux-Installation sicher, dass der Domänenname in hinzugefügt wird ``/etc/resolv.conf` Datei:
+* Die aktuelle Zeit von vCenter Server ist mit der vCenter Server Zeitzone synchronisiert.
+* VCenter Server ist für eine erfolgreiche Erkennung erreichbar.
+* Sie haben den Lesezugriff auf VMware SDK, wenn Sie den vCenter Server zu Unified Manager hinzufügen. Dies ist für die Konfigurationsabfrage erforderlich.
+
+
+Bei jedem hinzugefügten und erkannten vCenter Server erfasst Unified Manager die Konfigurationsdaten wie z. B. die Angaben zu vCenter Server und ESXi Server, die ONTAP-Zuordnung, die Datenspeicherdetails und die Anzahl der gehosteten VMs. Es sammelt weiter die Leistungskennzahlen der Komponenten.
+
+.Schritte
+. Gehen Sie zu *VMWARE* > *vCenter* und prüfen Sie, ob Ihr vCenter Server auf der Liste verfügbar ist.
++
+[NOTE]
+====
+Wenn Ihr vCenter Server nicht verfügbar ist, müssen Sie vCenter Server hinzufügen.
+
+====
++
+.. Klicken Sie Auf *Hinzufügen*.
+.. Fügen Sie die richtige IP-Adresse für vCenter Server hinzu und stellen Sie sicher, dass das Gerät erreichbar ist.
+.. Fügen Sie den Benutzernamen und das Kennwort des Administrators oder Root-Benutzers mit schreibgeschütztem Zugriff auf vCenter Server hinzu.
+.. Fügen Sie die benutzerdefinierte Portnummer hinzu, wenn Sie einen anderen Port als den Standard 443 verwenden.
+.. Klicken Sie Auf *Speichern*.
++
+Nach erfolgreicher Ermittlung wird ein Serverzertifikat angezeigt, mit dem Sie akzeptieren können.
+
++
+Wenn Sie das Zertifikat akzeptieren, wird vCenter Server zur Liste der verfügbaren vCenter-Server hinzugefügt. Das Hinzufügen des Geräts führt nicht zur Datenerfassung der zugehörigen VMs, und die Sammlung erfolgt in geplanten Intervallen.
+
+
+
+. Wenn Ihr vCenter Server auf der Seite *vCenters* verfügbar ist, überprüfen Sie den Status, indem Sie mit der Maus über das Feld *Status* fahren, um anzuzeigen, ob Ihr vCenter Server erwartungsgemäß funktioniert oder ob eine Warnung oder ein Fehler vorliegt.
++
+[NOTE]
+====
+Beim Hinzufügen von vCenter Server können Sie die folgenden Status anzeigen: Die Performance- und Latenzdaten der entsprechenden VMs können jedoch bis zu eine Stunde dauern, nachdem Sie vCenter Server hinzugefügt haben, um sich exakt wiederspiegeln zu können.
+
+====
++
+** Grün: „Normal“, was darauf hinweist, dass vCenter Server erkannt wurde und Leistungskennzahlen erfolgreich erfasst wurden
+** Gelb: „Warnung“ (z. B. wenn die Statistikebene für vCenter Server nicht auf 3 oder höher eingestellt wurde, um Statistiken für jedes Objekt zu erhalten)
+** Orange: "Fehler" (zeigt alle internen Fehler an, wie Ausnahme, Fehler bei der Erfassung von Konfigurationsdaten oder vCenter Server nicht erreichbar) Sie können auf das Spaltenanzeigesymbol (*Anzeigen/Ausblenden*) klicken, um die Statusmeldung für einen vCenter Server-Status anzuzeigen und das Problem zu beheben.
+
+
+. Falls vCenter Server nicht erreichbar ist oder sich die Anmeldeinformationen geändert haben, bearbeiten Sie die vCenter Server-Details, indem Sie *vCenter* > *Bearbeiten* wählen.
+. Nehmen Sie die erforderlichen Änderungen auf der Seite *Edit VMware vCenter Server* vor.
+. Klicken Sie Auf *Speichern*.
+
+
+*VCenter Server Datenerfassung beginnt*
+
+VCenter Server erfasst in Echtzeit 20-Sekunden-Performance-Datenproben und liefert bis zu 5-Minuten-Proben. Der Zeitplan für die Erfassung von Performance-Daten in Unified Manager basiert auf den Standardeinstellungen von vCenter Server. Unified Manager verarbeitet die 5-minütigen Muster von vCenter Server und berechnet einen stündlichen Durchschnitt der IOPS und Latenz für die virtuellen Festplatten, VMs und Hosts. Bei Datastores berechnet Unified Manager einen stündlichen Durchschnitt der IOPS und Latenz anhand von ONTAP Proben. Diese Werte stehen am Anfang der Stunde zur Verfügung. Die Leistungskennzahlen sind nicht unmittelbar nach dem Hinzufügen von vCenter Server verfügbar und sind nur verfügbar, wenn die nächste Stunde beginnt. Die Abfrage der Leistungsdaten beginnt mit dem Abschluss eines Zyklus der Erfassung von Konfigurationsdaten.
+
+Für das Abrufen der Konfigurationsdaten von vCenter Server folgt Unified Manager demselben Zeitplan wie beim Erfassen von Cluster-Konfigurationsdaten. Informationen zum Konfigurations- und Performance-Datenerfassungsplan von vCenter Server finden Sie unter „Aktivitäten zur Clusterkonfiguration und Erfassung von Performancedaten“.
+
+*Verwandte Informationen*
+
+link:../performance-checker/concept_cluster_configuration_and_performance_data_collection_activity.html["Aktivitäten zur Cluster-Konfiguration und zur Datenerfassung für die Performance"]

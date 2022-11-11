@@ -1,0 +1,109 @@
+---
+permalink: reporting/reference_types_of_reports.html 
+sidebar: sidebar 
+keywords: types, reports 
+summary: Diese Tabelle enthält eine umfassende Liste der Ansichten und Inventarseiten, die als Berichte zur Verfügung stehen, die Sie anpassen, herunterladen und planen können. 
+---
+= Berichtstypen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese Tabelle enthält eine umfassende Liste der Ansichten und Inventarseiten, die als Berichte zur Verfügung stehen, die Sie anpassen, herunterladen und planen können.
+
+
+
+== Active IQ Unified Manager Berichte
+
+[cols="2*"]
+|===
+| Typ | Storage oder Netzwerkobjekt 
+
+
+ a| 
+Kapazität
+ a| 
+Cluster
+
+Aggregate
+
+Volumes
+
+Qtrees
+
+
+
+ a| 
+Systemzustand
+ a| 
+Cluster
+
+Knoten
+
+Aggregate
+
+Storage-VMs
+
+Volumes
+
+SMB/CIFS-Freigaben
+
+NFS-Freigaben
+
+
+
+ a| 
+Leistung
+ a| 
+Cluster
+
+Knoten
+
+Aggregate
+
+Storage-VMs
+
+Volumes
+
+LUNs
+
+NVMe Namespaces
+
+Netzwerkschnittstellen (LIFs)
+
+Ports
+
+
+
+ a| 
+Quality of Service
+ a| 
+Herkömmliche QoS-Richtliniengruppen
+
+Adaptive QoS-Richtliniengruppen
+
+Richtliniengruppen für Performance-Service-Level
+
+
+
+ a| 
+Volume-Sicherungsbeziehungen (verfügbar auf der Seite Volumes)
+ a| 
+Alle Beziehungen
+
+Transferstatus der letzten 1 Monate
+
+Letzte 1 Monat Transferrate
+
+
+
+ a| 
+Sicherheit
+ a| 
+Storage-VMs
+
+Cluster
+
+|===

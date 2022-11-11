@@ -1,0 +1,22 @@
+---
+permalink: config/task_view_users.html 
+sidebar: sidebar 
+keywords: view, users 
+summary: Sie können die Seite Benutzer verwenden, um eine Liste der Benutzer anzuzeigen, die Storage-Objekte und Daten mit Unified Manager managen. Sie können Details zu den Benutzern anzeigen, z. B. den Benutzernamen, den Benutzertyp, die E-Mail-Adresse und die Rolle, die den Benutzern zugewiesen ist. 
+---
+= Anzeigen von Benutzern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Seite Benutzer verwenden, um eine Liste der Benutzer anzuzeigen, die Storage-Objekte und Daten mit Unified Manager managen. Sie können Details zu den Benutzern anzeigen, z. B. den Benutzernamen, den Benutzertyp, die E-Mail-Adresse und die Rolle, die den Benutzern zugewiesen ist.
+
+*Was Sie brauchen*
+
+Sie müssen über die Anwendungsadministratorrolle verfügen.
+
+.Schritt
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Benutzer*.
+

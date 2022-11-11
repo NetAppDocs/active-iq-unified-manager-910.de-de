@@ -1,0 +1,55 @@
+---
+permalink: events/reference_storage_shelf_events.html 
+sidebar: sidebar 
+keywords: storage, shelf, events, impact area, availability 
+summary: Storage Shelf-Ereignisse geben an, ob Ihr Storage Shelf anormal ist, sodass Sie nach potenziellen Problemen überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad. 
+---
+= Storage-Shelf-Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Storage Shelf-Ereignisse geben an, ob Ihr Storage Shelf anormal ist, sodass Sie nach potenziellen Problemen überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.
+
+
+
+== Impact Area: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Anormaler Spannungsbereich (ocumEvtShelfVoltageAbnormal)
+ a| 
+Dar
+ a| 
+Storage Shelf
+ a| 
+Warnung
+
+
+
+ a| 
+Anormaler Strombereich (ocumEvtShelfAktuellesAbnormal)
+ a| 
+Dar
+ a| 
+Storage Shelf
+ a| 
+Warnung
+
+
+
+ a| 
+Anormale Temperatur(OkumEvtShelfTemperatureAbnormal)
+ a| 
+Dar
+ a| 
+Storage Shelf
+ a| 
+Warnung
+
+|===

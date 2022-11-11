@@ -1,0 +1,84 @@
+---
+permalink: events/reference_storage_services_events.html 
+sidebar: sidebar 
+keywords: storage, services, events, impact area, configuration, protection 
+summary: Bei Storage-Services-Ereignissen erhalten Sie Informationen über die Erstellung und das Abonnement von Storage-Services, sodass Sie potenzielle Probleme überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad. 
+---
+= Ereignisse auf Storage-Services
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei Storage-Services-Ereignissen erhalten Sie Informationen über die Erstellung und das Abonnement von Storage-Services, sodass Sie potenzielle Probleme überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.
+
+
+
+== Impact Area: Konfiguration
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Storage-Service erstellt(nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Storage-Service
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Storage Service abonniert (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Storage-Service
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Storage Service nicht abonniert (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Storage-Service
+ a| 
+Informationsdaten
+
+|===
+
+
+== Aufprallbereich: Schutz
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Unerwartetes Löschen von Managed SnapMirror RelationshipokumEvtStorageServiceUnsupportedRelationshipDeltion
+ a| 
+Dar
+ a| 
+Storage-Service
+ a| 
+Warnung
+
+
+
+ a| 
+Unerwartetes Löschen von Storage Service Member Volume(occumEvtStorageServiceUnexpectedVolumeDeltion)
+ a| 
+Vorfall
+ a| 
+Storage-Service
+ a| 
+Kritisch
+
+|===

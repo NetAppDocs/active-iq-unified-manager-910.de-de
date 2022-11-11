@@ -1,0 +1,160 @@
+---
+permalink: data-protection/reference_aggregates_dialog_box.html 
+sidebar: sidebar 
+keywords: aggregates, dialog box 
+summary: Im Dialogfeld Aggregate können Sie die Aggregate auswählen, die Sie Ihrem Ressourcen-Pool hinzufügen möchten. 
+---
+= Dialogfeld „Aggregate“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Aggregate können Sie die Aggregate auswählen, die Sie Ihrem Ressourcen-Pool hinzufügen möchten.
+
+
+
+== Befehlsschaltflächen
+
+Mit den Schaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Hinzufügen*
++
+Fügt die ausgewählten Aggregate dem Ressourcenpool hinzu. Die Schaltfläche Hinzufügen ist erst aktiviert, wenn mindestens ein Aggregat ausgewählt wurde.
+
+* *Abbrechen*
++
+Sperrt die Änderungen und schließt das Dialogfeld Aggregate.
+
+
+
+
+
+== Aggregatliste
+
+In der Liste Aggregate werden die Namen und Eigenschaften der überwachten Aggregate (tabellarisch) angezeigt.
+
+* *Status*
++
+Zeigt den aktuellen Status eines Volumes an. Der Status kann kritisch sein (image:../media/sev_critical_um60.png[""]), Fehler (image:../media/sev_error_um60.png[""]), Warnung (image:../media/sev_warning_um60.png[""]Oder normal (image:../media/sev_normal_um60.png[""]).
+
++
+Sie können den Zeiger über den Status verschieben, um weitere Informationen zu dem für das Volume generierten Ereignis oder Ereignissen anzuzeigen.
+
+* *Aggregatname*
++
+Zeigt den Namen des Aggregats an.
+
+* *Bundesland*
++
+Zeigt den aktuellen Status des Aggregats an. Dieser kann einer der folgenden Werte sein:
+
++
+** Offline
++
+Lese- oder Schreibzugriff ist nicht zulässig.
+
+** Eingeschränkt
++
+Begrenzte Operationen (wie etwa die Paritätsrekonstruktion) sind zulässig, der Datenzugriff ist jedoch nicht zulässig.
+
+** Online
++
+Lese- und Schreibzugriff auf die Volumes, die in diesem Aggregat gehostet werden, ist zulässig.
+
+** Wird Erstellt
++
+Das Aggregat wird erstellt.
+
+** Zerstören
++
+Das Aggregat wird zerstört.
+
+** Fehlgeschlagen
++
+Das Aggregat kann nicht online gebracht werden.
+
+** Eingefroren
++
+Das Aggregat bedient (vorübergehend) keine Anforderungen.
+
+** Uneinheitlich
++
+Das Aggregat wurde als beschädigt markiert; Sie sollten sich an den technischen Support wenden.
+
+** Eisenbeschränkungen
++
+Diagnosetools können nicht auf dem Aggregat ausgeführt werden.
+
+** Montage
++
+Das Aggregat wird gerade montiert.
+
+** Teilweise
++
+Mindestens eine Festplatte für das Aggregat gefunden wurde, aber zwei oder mehr Disketten fehlen.
+
+** Wird Stillgelegt
++
+Das Aggregat wird stillgelegt.
+
+** Stillgelegt
++
+Das Aggregat wird stillgelegt.
+
+** Umgekehrt
++
+Die Umrüstung eines Aggregats ist abgeschlossen.
+
+** Nicht Abgehängt
++
+Das Aggregat ist offline.
+
+** Entmounten
++
+Das Aggregat wird offline geschaltet.
+
+** Unbekannt
++
+Das Aggregat wird erkannt, die Aggregat-Informationen werden noch nicht vom Unified Manager Server abgerufen.
+
+
+
+* * Cluster*
++
+Zeigt den Namen des Clusters an, auf dem sich das Aggregat befindet.
+
+* *Knoten*
++
+Zeigt den Namen des Storage-Controllers an, der das Aggregat enthält.
+
+* *Gesamtkapazität*
++
+Zeigt die Gesamtdatengröße (in MB, GB usw.) des Aggregats an. Standardmäßig ist diese Spalte ausgeblendet.
+
+* * Engagierte Kapazität*
++
+Zeigt den gesamten Speicherplatz an (in MB, GB usw.), der für alle Volumes im Aggregat festgelegt ist. Standardmäßig ist diese Spalte ausgeblendet.
+
+* * Genutzte Kapazität*
++
+Zeigt die Menge an Speicherplatz (in MB, GB usw.) an, die im Aggregat verwendet wird.
+
+* *Verfügbare Kapazität*
++
+Zeigt die Menge an Speicherplatz (in MB, GB usw.) an, die für Daten im Aggregat verfügbar ist. Standardmäßig ist diese Spalte ausgeblendet.
+
+* *Verfügbar %*
++
+Zeigt den Prozentsatz des Speicherplatzes an, der für Daten im Aggregat verfügbar ist. Standardmäßig ist diese Spalte ausgeblendet.
+
+* *%* Genutzt
++
+Zeigt den Prozentsatz des Speicherplatzes an, der von Daten im Aggregat verwendet wird.
+
+* *RAID-Typ*
++
+Zeigt den RAID-Typ des ausgewählten Volumes an. Der RAID-Typ kann RAID0, RAID4, RAID-DP, RAID-TEC oder gemischtes RAID sein.
+
+

@@ -1,0 +1,46 @@
+---
+permalink: performance-checker/task_log_in_to_gui.html 
+sidebar: sidebar 
+keywords: log in, ui, unified manager 
+summary: Sie können sich über einen unterstützten Webbrowser bei der Benutzeroberfläche von Unified Manager anmelden. 
+---
+= Melden Sie sich bei der UI an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können sich über einen unterstützten Webbrowser bei der Benutzeroberfläche von Unified Manager anmelden.
+
+*Was Sie brauchen*
+
+* Der Webbrowser muss die Mindestanforderungen erfüllen.
++
+Weitere Informationen finden Sie in der Interoperabilitäts-Matrix unter http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"] Für die vollständige Liste der unterstützten Browser-Versionen.
+
+* Sie müssen die IP-Adresse oder URL des Unified Manager-Servers haben.
+
+
+Sie werden automatisch nach 1 Stunde Inaktivität von der Sitzung abgemeldet. Dieser Zeitrahmen kann unter *Allgemein* > *Funktionseinstellungen* konfiguriert werden.
+
+.Schritte
+. Geben Sie die URL in Ihrem Webbrowser ein. Dabei handelt es sich um die URL der IP-Adresse oder um den vollqualifizierten Domänennamen (FQDN) des Unified Manager-Servers:
++
+** Für IPv4: `+https://URL/+`
+** Für IPv6: `https://[URL]/`
+
+
+
+
+Wenn der Server ein selbstsigniertes digitales Zertifikat verwendet, zeigt der Browser möglicherweise eine Warnung an, dass das Zertifikat nicht vertrauenswürdig ist. Sie können entweder das Risiko bestätigen, dass der Zugriff fortgesetzt wird, oder ein Zertifikat einer Zertifizierungsstelle (CA) installieren, das digitale Zertifikat für die Serverauthentifizierung unterzeichnet hat. . Geben Sie im Anmeldebildschirm Ihren Benutzernamen und Ihr Kennwort ein.
+
+Wenn die Anmeldung bei der Unified Manager-Benutzeroberfläche mit SAML-Authentifizierung geschützt ist, geben Sie Ihre Anmeldedaten anstelle der Login-Seite des Unified Manager auf der Anmeldeseite des Identitäts-Providers (IdP) ein.
+
+Die Seite Dashboard wird angezeigt.
+
+[NOTE]
+====
+Wenn der Unified Manager-Server nicht initialisiert wird, wird in einem neuen Browser-Fenster der Assistent für die erste Erfahrung angezeigt. Sie müssen einen anfänglichen E-Mail-Empfänger eingeben, an den E-Mail-Benachrichtigungen gesendet werden, den SMTP-Server, der E-Mail-Kommunikation durchführt, und ob AutoSupport aktiviert ist, um Informationen über Ihre Unified Manager-Installation an den technischen Support zu senden. Nach Abschluss dieser Informationen wird die Unified Manager-Benutzeroberfläche angezeigt.
+
+====

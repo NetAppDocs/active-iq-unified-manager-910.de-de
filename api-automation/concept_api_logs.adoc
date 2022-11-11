@@ -1,0 +1,57 @@
+---
+permalink: api-automation/concept_api_logs.html 
+sidebar: sidebar 
+keywords: logs, troubleshooting 
+summary: Mithilfe von Systemprotokollen können Sie die Ursachen eines Ausfalls und die Behebung von Problemen analysieren, die bei der Ausführung der APIs auftreten können. 
+---
+= Protokolle für die Fehlerbehebung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe von Systemprotokollen können Sie die Ursachen eines Ausfalls und die Behebung von Problemen analysieren, die bei der Ausführung der APIs auftreten können.
+
+Rufen Sie die Protokolle vom folgenden Speicherort ab, um Probleme im Zusammenhang mit den API-Aufrufen zu beheben.
+
+[cols="2*"]
+|===
+| Speicherort protokollieren | Nutzung 
+
+
+ a| 
+`/var/log/ocie/access_log.log`
+ a| 
+Enthält alle API-Anrufdetails, z. B. den Benutzernamen des Benutzers, der die API aufruft, Startzeit, Ausführungszeit, Status und URL.
+
+In dieser Protokolldatei können Sie die häufig verwendeten APIs überprüfen oder einen Fehler in jedem GUI-Workflow beheben. Sie können die Analyse auch anhand der Ausführungszeit skalieren.
+
+
+
+ a| 
+`/var/log/ocum/ocumserver.log`
+ a| 
+Enthält alle API-Ausführungsprotokolle.
+
+Sie können diese Protokolldatei zur Fehlerbehebung und Fehlersuche bei API-Aufrufen verwenden.
+
+
+
+ a| 
+`/var/log/ocie/server.log`
+ a| 
+Enthält alle WildFly-Server-Bereitstellungen und Start/Stop-Service-bezogene Protokolle.
+
+Sie können diese Protokolldatei verwenden, um die Ursache von Problemen zu finden, die während des Starts, Stoppens oder der Bereitstellung des WildFly-Servers auftreten.
+
+
+
+ a| 
+`/var/log/ocie/au.log`
+ a| 
+Enthält Protokolle für die Erfassungseinheit.
+
+Sie können diese Protokolldatei verwenden, wenn Sie Objekte in ONTAP erstellt, geändert oder gelöscht haben, sie sich jedoch nicht für die Active IQ Unified Manager REST-APIs wiederspiegeln.
+
+|===

@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_confirm_that_response_time_is_within_expected_range.html 
+sidebar: sidebar 
+keywords: confirm, latency, within, expected, range 
+summary: 'Wenn eine Cluster-Komponente im Konflikt ist, können Volume-Workloads, die diese verwenden, kürzere Reaktionszeiten (Latenz) haben. Sie können die Latenz der einzelnen Opfer-Workloads auf der Komponente mit Konflikten überprüfen, um zu bestätigen, dass die tatsächliche Latenz innerhalb des erwarteten Bereichs liegt. Sie können auch auf einen Volume-Namen klicken, um die historischen Daten für das Volume anzuzeigen.' 
+---
+= Bestätigung, dass die Latenz im erwarteten Bereich liegt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn eine Cluster-Komponente im Konflikt ist, können Volume-Workloads, die diese verwenden, kürzere Reaktionszeiten (Latenz) haben. Sie können die Latenz der einzelnen Opfer-Workloads auf der Komponente mit Konflikten überprüfen, um zu bestätigen, dass die tatsächliche Latenz innerhalb des erwarteten Bereichs liegt. Sie können auch auf einen Volume-Namen klicken, um die historischen Daten für das Volume anzuzeigen.
+
+Wenn das Performance-Ereignis den Status „veraltet“ aufweist, hat die Latenz jedes betroffenen Opfers innerhalb des erwarteten Bereichs zurückgegeben.

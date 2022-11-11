@@ -1,0 +1,30 @@
+---
+permalink: performance-checker/task_specify_custom_time_range.html 
+sidebar: sidebar 
+keywords: specify, custom, time range 
+summary: Auf der Seite „Performance Explorer“ können Sie den Datums- und Zeitbereich für Ihre Leistungsdaten angeben. Die Angabe eines benutzerdefinierten Zeitbereichs bietet größere Flexibilität als die Verwendung vordefinierter Zeitbereiche bei der Raffination von Cluster-Objektdaten. 
+---
+= Festlegen eines benutzerdefinierten Zeitbereichs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Performance Explorer“ können Sie den Datums- und Zeitbereich für Ihre Leistungsdaten angeben. Die Angabe eines benutzerdefinierten Zeitbereichs bietet größere Flexibilität als die Verwendung vordefinierter Zeitbereiche bei der Raffination von Cluster-Objektdaten.
+
+Sie können einen Zeitbereich zwischen einer Stunde und 390 Tagen auswählen. 13 Monate sind 390 Tage, weil jeder Monat als 30 Tage gezählt wird. Wenn Sie einen Datums- und Zeitbereich angeben, erhalten Sie weitere Details, mit denen Sie bestimmte Performanceereignisse oder eine Reihe von Ereignissen vergrößern können. Durch das Festlegen eines Zeitbereichs lassen sich auch potenzielle Leistungsprobleme beheben, da durch das Festlegen eines Datums- und Zeitbereichs die Daten des Performance-Ereignisses detaillierter dargestellt werden. Verwenden Sie das Steuerelement *Zeitbereich*, um vordefinierte Datums- und Zeitbereiche auszuwählen, oder geben Sie Ihren eigenen benutzerdefinierten Datums- und Zeitbereich von bis zu 390 Tagen an. Die Schaltflächen für vordefinierte Zeitbereiche variieren von *Letzte Stunde* bis *Letzte 13 Monate*.
+
+Wenn Sie die Option *Letzte 13 Monate* wählen oder einen benutzerdefinierten Datumsbereich größer als 30 Tage angeben, wird ein Dialogfeld angezeigt, in dem Sie darauf hingewiesen werden, dass die Leistungsdaten für einen Zeitraum von mehr als 30 Tagen mit stündlichen Durchschnittswerten und nicht mit einer 5-minütigen Datenabfrage gespeichert werden. Daher kann es zu einem Verlust der visuellen Granularität bei Timeline kommen. Wenn Sie im Dialogfeld auf die Option *nicht wieder anzeigen* klicken, wird die Meldung nicht angezeigt, wenn Sie die Option *Letzte 13 Monate* wählen oder einen benutzerdefinierten Datumsbereich von mehr als 30 Tagen angeben. Die Übersichtsdaten gelten auch für einen kleineren Zeitbereich, wenn der Zeitbereich ein Datum/Uhrzeit enthält, das mehr als 30 Tage von heute entfernt ist.
+
+Bei der Auswahl eines Zeitbereichs (benutzerdefiniert oder vordefiniert) basieren Zeitbereiche von 30 Tagen oder weniger auf 5-Minuten-Intervalldatenproben. Zeitbereiche, die größer als 30 Tage sind, basieren auf einer Stunde Intervalldatenproben.
+
+image::../media/time_range_selector.gif[Zeitbereich auswählen]
+
+. Klicken Sie auf das Dropdown-Feld *Zeitbereich*, und das Fenster Zeitbereich wird angezeigt.
+. Um einen vordefinierten Zeitbereich auszuwählen, klicken Sie rechts neben dem Fenster *Zeitbereich* auf eine der Schaltflächen *Letzte...*. Bei der Auswahl eines vordefinierten Zeitbereichs stehen Daten für bis zu 13 Monate zur Verfügung. Die von Ihnen ausgewählte Schaltfläche für den vordefinierten Zeitbereich wird hervorgehoben, und die entsprechenden Tage und Zeiten werden in den Kalendern und Zeitauswahlschaltern angezeigt.
+. Um einen benutzerdefinierten Datumsbereich auszuwählen, klicken Sie links im Kalender *von* auf das Startdatum. Klicken Sie auf *<* oder *>*, um im Kalender vorwärts oder rückwärts zu navigieren. Um das Enddatum anzugeben, klicken Sie rechts im Kalender *bis* auf ein Datum. Beachten Sie, dass das Standard-Enddatum heute ist, es sei denn, Sie geben ein anderes Enddatum an. Die Schaltfläche *benutzerdefinierter Bereich* rechts neben dem Fenster Zeitbereich wird hervorgehoben, was darauf hinweist, dass Sie einen benutzerdefinierten Datumsbereich ausgewählt haben.
+. Um einen benutzerdefinierten Zeitbereich auszuwählen, klicken Sie unter dem Kalender *von* auf das Steuerelement *Uhrzeit* und wählen die Startzeit aus. Um die Endzeit festzulegen, klicken Sie rechts unter dem *bis*-Kalender auf das Steuerelement *Zeit* und wählen die Endzeit aus. Die Schaltfläche *benutzerdefinierter Bereich* rechts neben dem Fenster Zeitbereich wird hervorgehoben, was darauf hinweist, dass Sie einen benutzerdefinierten Zeitbereich ausgewählt haben.
+. Optional können Sie die Start- und Endzeiten festlegen, wenn Sie einen vordefinierten Datumsbereich auswählen. Wählen Sie den zuvor beschriebenen vordefinierten Datumsbereich aus, und wählen Sie dann die Start- und Endzeiten wie zuvor beschrieben aus. Die ausgewählten Daten werden in den Kalendern markiert, Ihre festgelegten Start- und Endzeiten werden in den Steuerelementen *Zeit* angezeigt und die Schaltfläche *benutzerdefinierter Bereich* ist markiert.
+. Klicken Sie nach Auswahl des Datums- und Zeitbereichs auf *Bereich anwenden*. Die Performance-Statistiken für diesen Zeitraum werden in den Diagrammen und in der Chronik von Ereignissen angezeigt.
+

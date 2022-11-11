@@ -1,0 +1,36 @@
+---
+permalink: config/reference_https_dialog_box_ocf.html 
+sidebar: sidebar 
+keywords: https certificate page 
+summary: Auf der Seite HTTPS-Zertifikat können Sie das aktuelle Sicherheitszertifikat anzeigen, eine Anforderung zum Signieren von Zertifikaten herunterladen, ein neues HTTPS-Zertifikat erstellen oder ein neues HTTPS-Zertifikat installieren. 
+---
+= Seite „HTTPS-Zertifikat“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite HTTPS-Zertifikat können Sie das aktuelle Sicherheitszertifikat anzeigen, eine Anforderung zum Signieren von Zertifikaten herunterladen, ein neues HTTPS-Zertifikat erstellen oder ein neues HTTPS-Zertifikat installieren.
+
+Wenn Sie kein neues HTTPS-Zertifikat generiert haben, wird auf dieser Seite das Zertifikat angezeigt, das während der Installation generiert wurde.
+
+
+
+== Befehlsschaltflächen
+
+Mit den Schaltflächen können Sie die folgenden Vorgänge ausführen:
+
+* *HTTPS-Zertifikatsignierungsanforderung herunterladen*
++
+Lädt eine Zertifizierungsanfrage für das aktuell installierte HTTPS-Zertifikat herunter. Ihr Browser fordert Sie auf, die Datei <hostname>.csr zu speichern, damit Sie die Datei einer Zertifizierungsstelle zum Signieren zur Verfügung stellen können.
+
+* *HTTPS-Zertifikat installieren*
++
+Ermöglicht es Ihnen, ein Sicherheitszertifikat hochzuladen und zu installieren, nachdem eine Zertifizierungsstelle unterschrieben und zurückgesendet wurde. Das neue Zertifikat wird wirksam, nachdem Sie den Verwaltungsserver neu gestartet haben.
+
+* *HTTPS-Zertifikat neu erstellen*
++
+Ermöglicht Ihnen das Generieren eines HTTPS-Zertifikats, das das aktuelle Sicherheitszertifikat ersetzt. Das neue Zertifikat wird wirksam, nachdem Sie Unified Manager neu gestartet haben.
+
+

@@ -1,0 +1,537 @@
+---
+permalink: health-checker/reference_health_aggregate_details_page.html 
+sidebar: sidebar 
+keywords: unified manager, aggregate, health details page 
+summary: Mithilfe der Seite „Aggregat/Systemzustand“ werden ausführliche Informationen über das ausgewählte Aggregat angezeigt, beispielsweise Kapazität, Festplatteninformationen, Konfigurationsdetails und erzeugte Ereignisse. Sie können auch Informationen zu verwandten Objekten und zugehörigen Warnmeldungen für das Aggregat anzeigen. 
+---
+= Registerkarte „Aggregate/Health Details“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe der Seite „Aggregat/Systemzustand“ werden ausführliche Informationen über das ausgewählte Aggregat angezeigt, beispielsweise Kapazität, Festplatteninformationen, Konfigurationsdetails und erzeugte Ereignisse. Sie können auch Informationen zu verwandten Objekten und zugehörigen Warnmeldungen für das Aggregat anzeigen.
+
+
+
+== Befehlsschaltflächen
+
+[NOTE]
+====
+Bei der Überwachung eines FabricPool-fähigen Aggregats gelten die überzugesund auf dieser Seite überzuschichtenden Werte nur für die lokale Kapazität oder das Performance-Tier. Der auf dem Cloud-Tier verfügbare Speicherplatz wird nicht in den überengagierten Werten dargestellt. Ebenso gelten die Werte für die Aggregatschwellenwerte nur für die lokale Performance-Tier.
+
+====
+Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben für das ausgewählte Aggregat ausführen:
+
+* *Wechseln Sie zur Leistungsansicht*
++
+Ermöglicht Ihnen die Navigation zur Seite „Aggregat-/Performance-Details“.
+
+* *Aktionen*
++
+** Alarm Hinzufügen
++
+Ermöglicht Ihnen das Hinzufügen einer Warnung zum ausgewählten Aggregat.
+
+** Schwellenwerte Bearbeiten
++
+Ermöglicht Ihnen das Ändern der Schwellenwerteinstellungen für das ausgewählte Aggregat.
+
+
+
+* *Aggregate Anzeigen*
++
+Ermöglicht Ihnen die Navigation zur Ansicht „Systemzustand: Alle Aggregate“.
+
+
+
+
+
+== Registerkarte „Kapazität“
+
+Auf der Registerkarte Kapazität werden ausführliche Informationen zum ausgewählten Aggregat, z. B. Kapazität, Schwellenwerte und tägliche Wachstumsrate, angezeigt.
+
+Standardmäßig werden Kapazitätsereignisse nicht für die Root-Aggregate generiert. Darüber hinaus gelten die von Unified Manager verwendeten Schwellenwertwerte nicht für die Root-Aggregate der Nodes. Nur ein Mitarbeiter des technischen Supports kann die Einstellungen für diese zu erstellenden Ereignisse ändern. Wenn die Einstellungen von einem Mitarbeiter des technischen Supports geändert werden, werden die Schwellenwerte auf das Root-Aggregat des Nodes angewendet.
+
+* * Kapazität*
++
+Zeigt das Datenkapazitätsdiagramm und das Diagramm Snapshot Kopien an, in dem Kapazitätsdetails zum Aggregat angezeigt werden:
+
++
+** Genutzter Logischer Speicherplatz
++
+Die tatsächliche Größe der im Aggregat gespeicherten Daten, ohne dabei die Einsparungen durch die ONTAP Storage-Effizienztechnologien zu verwenden.
+
+** Verwendet
++
+Die von Daten im Aggregat genutzte physische Kapazität
+
+** Überengagiert
++
+Wenn der Speicherplatz im Aggregat zu hoch belegt ist, wird im Diagramm ein Flag mit dem überbelegten Betrag angezeigt.
+
+** Warnung
++
+Zeigt eine gepunktete Linie an der Stelle an, an der der Warnschwellenwert eingestellt ist; Bedeutung der Speicherplatz im Aggregat ist fast voll. Wird diese Schwelle nicht erreicht, wird das Ereignis „Space Fast Full“ generiert.
+
+** Fehler
++
+Zeigt eine solide Zeile an dem Ort an, an dem der Fehlerschwellenwert festgelegt ist; bedeutet, dass der Speicherplatz im Aggregat voll ist. Wird dieser Schwellenwert nicht erreicht, wird das Ereignis „Space Full“ generiert.
+
+** Diagramm Snapshot Kopien
++
+Dieses Diagramm wird nur angezeigt, wenn die verwendete Snapshot-Kapazität oder die Snapshot-Reserve nicht null ist.
+
+
+
++
+Beide Diagramme zeigen die Kapazität an, in der die Snapshot-Kapazität die Snapshot-Reserve überschreitet, wenn die genutzte Snapshot-Kapazität die Snapshot-Reserve überschreitet.
+
+* * Cloud Tier*
++
+Zeigt den Speicherplatz an, der für Daten im Cloud-Tier für FabricPool-fähige Aggregate verwendet wird. Ein FabricPool kann entweder lizenziert oder nicht lizenziert sein.
+
++
+Wenn die Cloud-Ebene zu einem anderen Cloud-Provider (die "`mMirror Tier`") gespiegelt wird, werden hier beide Cloud-Tiers angezeigt.
+
+* *Details*
++
+Zeigt detaillierte Informationen zur Kapazität an.
+
++
+** Gesamtkapazität
++
+Zeigt die Gesamtkapazität im Aggregat an.
+
+** Datenkapazität
++
+Zeigt den vom Aggregat (genutzte Kapazität) verwendeten Speicherplatz und die Menge des verfügbaren Speicherplatzes im Aggregat an (freie Kapazität).
+
+** Snapshot-Reserve
++
+Zeigt die verwendete und freie Snapshot Kapazität des Aggregats an.
+
+** Überzuviel Kapazität
++
+Zeigt die Überbelegung des Aggregats an. Aufgrund einer Überbelegung von Aggregaten bieten Sie mehr Storage, als tatsächlich in einem bestimmten Aggregat verfügbar ist, sofern nicht alle Storage-Ressourcen derzeit verwendet werden. Bei Nutzung von Thin Provisioning kann die Gesamtgröße der Volumes im Aggregat die Gesamtkapazität des Aggregats überschreiten.
+
++
+[NOTE]
+====
+Wenn Sie Ihr Aggregat zu hoch ansetzen, müssen Sie den verfügbaren Speicherplatz sorgfältig überwachen und Storage nach Bedarf hinzufügen, um Schreibfehler aufgrund von unzureichendem Speicherplatz zu vermeiden.
+
+====
+** Cloud-Tier
++
+Zeigt den Speicherplatz an, der für Daten im Cloud-Tier für FabricPool-fähige Aggregate verwendet wird. Ein FabricPool kann entweder lizenziert oder nicht lizenziert sein. Wenn der Cloud-Tier zu einem anderen Cloud-Provider (der Spiegeltier) gespiegelt wird, werden hier beide Cloud-Tiers angezeigt
+
+** Cache-Speicherplatz Insgesamt
++
+Zeigt den gesamten Speicherplatz der Solid State-Laufwerke (SSDs) bzw. Zuweisungseinheiten an, die einem Flash Pool Aggregat hinzugefügt werden. Wenn Sie Flash Pool für ein Aggregat aktiviert, aber keine SSDs hinzugefügt haben, wird der Cache-Speicherplatz als 0 KB angezeigt.
+
++
+[NOTE]
+====
+Dieses Feld ist ausgeblendet, wenn Flash Pool für ein Aggregat deaktiviert ist.
+
+====
+** Schwellenwerte Für Aggregate
++
+Zeigt die folgenden Kapazitätsschwellenwerte für das Aggregat an:
+
++
+*** Nahezu Vollständig. Schwellenwert
++
+Gibt den Prozentsatz an, bei dem ein Aggregat fast voll ist.
+
+*** Vollständiger Schwellenwert
++
+Gibt den Prozentsatz an, bei dem ein Aggregat voll ist.
+
+*** Nahezu Überbeanspruchung Des Schwellenwerts
++
+Gibt den Prozentsatz an, mit dem ein Aggregat fast überbelegt ist.
+
+*** Überbeanspruchung Des Schwellenwerts
++
+Gibt den Prozentsatz an, zu dem ein Aggregat überengagiert ist.
+
+
+
+** Weitere Details: Tägliche Wachstumsrate
++
+Zeigt den im Aggregat verwendeten Festplattenspeicher an, wenn die Änderungsrate zwischen den letzten beiden Proben 24 Stunden andauert.
+
++
+Wenn ein Aggregat beispielsweise 10 GB Festplattenspeicher bei 2:00 Uhr und 12 GB bei 6:00 Uhr nutzt, beträgt die tägliche Wachstumsrate (GB) für dieses Aggregat 2 GB.
+
+** Volume-Verschiebung
++
+Zeigt die Anzahl der aktuell laufenden Volume-Move-Vorgänge an:
+
++
+*** Volumes Aus
++
+Zeigt die Anzahl und Kapazität der Volumes an, die aus dem Aggregat verschoben werden.
+
++
+Über den Link können Sie weitere Details anzeigen, beispielsweise den Volume-Namen, die Aggregate, zu denen das Volume verschoben wird, den Status der Verschiebung eines Volumes und die geschätzte Endzeit.
+
+*** Volumes In
++
+Zeigt die Anzahl und die verbleibende Kapazität der Volumes an, die in das Aggregat verschoben werden.
+
++
+Über den Link können Sie weitere Details anzeigen, beispielsweise den Volume-Namen, das Aggregat, aus dem das Volume verschoben wird, den Status der Verschiebung des Volumes und die geschätzte Endzeit.
+
+*** Geschätzte genutzte Kapazität nach der Verschiebung eines Volumes
++
+Zeigt den geschätzten belegten Speicherplatz (in Prozent und in KB, MB, GB usw.) im Aggregat an, nachdem die Verschiebevorgänge des Volumes abgeschlossen sind.
+
+
+
+
+
+* *Kapazitätsüberblick - Volumen*
++
+Zeigt Diagramme an, die Informationen zur Kapazität der Volumes im Aggregat enthalten sind. Es wird die Menge an Speicherplatz angezeigt, die vom Volume (genutzte Kapazität) und die Menge des verfügbaren Speicherplatzes (freie Kapazität) im Volume verwendet wird. Wenn ein Risikoereignis für Thin Provisioning Volume für Volumes mit Thin Provisioning erstellt wird, wird die vom Volume verwendete Menge an Speicherplatz (genutzte Kapazität) und die Menge an Speicherplatz, die im Volume verfügbar ist, jedoch nicht verwendet werden kann (nicht nutzbare Kapazität), da die Kapazität des Aggregats angezeigt wird.
+
++
+Sie können das anzuangezeigte Diagramm in den Dropdown-Listen auswählen. Sie können die im Diagramm angezeigten Daten sortieren, um Details wie die genutzte Größe, die bereitgestellte Größe, die verfügbare Kapazität, die schnellste tägliche Wachstumsrate und die langsamste Wachstumsrate anzuzeigen. Sie können die Daten auf Grundlage der Storage Virtual Machines (SVMs) filtern, die die Volumes im Aggregat enthalten. Sie können auch Details zu Volumes anzeigen, die über Thin Provisioning bereitgestellt wurden. Sie können die Details bestimmter Punkte im Diagramm anzeigen, indem Sie den Cursor über den Bereich von Interesse positionieren. Standardmäßig werden im Diagramm die Top 30 der gefilterten Volumes im Aggregat angezeigt.
+
+
+
+
+
+== Registerkarte „Festplatteninformationen“
+
+Zeigt detaillierte Informationen zu den Festplatten im ausgewählten Aggregat an, einschließlich RAID-Typ und -Größe sowie Typ der im Aggregat verwendeten Festplatten. Auf der Registerkarte werden auch die RAID-Gruppen und die verwendeten Festplatten (z. B. SAS, ATA, FCAL, SSD oder VMDISK) grafisch dargestellt. Weitere Informationen, wie z. B. der Schacht, das Shelf und die Drehgeschwindigkeit der Festplatte, können Sie mit dem Cursor über die Parity-Festplatten und die Daten-Festplatten anzeigen.
+
+* * Daten*
++
+Grafische Anzeige von Details zu dedizierten Datenträgern, freigegebenen Datenträgern oder beidem. Wenn die Datenfestplatten freigegebene Laufwerke enthalten, werden grafische Details der freigegebenen Laufwerke angezeigt. Wenn die Datenfestplatten dedizierte Laufwerke und freigegebene Festplatten enthalten, werden grafische Details sowohl der dedizierten Datenlaufwerke als auch der freigegebenen Datenträger angezeigt.
+
++
+** *RAID-Details*
++
+RAID-Details werden nur für dedizierte Festplatten angezeigt.
+
++
+*** Typ
++
+Zeigt den RAID-Typ an (RAID0, RAID4, RAID-DP oder RAID-TEC).
+
+*** Gruppengröße
++
+Zeigt die maximale Anzahl an Laufwerken an, die in der RAID-Gruppe zulässig sind.
+
+*** Gruppen
++
+Zeigt die Anzahl der RAID-Gruppen im Aggregat an.
+
+
+
+** *Verwendete Festplatten*
++
+*** Effektiver Typ
++
+Zeigt die Typen der Datenfestplatten an (z. B. ATA, SATA, FCAL, SSD, Oder VMDISK) im Aggregat.
+
+*** Datenfestplatten
++
+Zeigt die Anzahl und Kapazität der Datenfestplatten an, die einem Aggregat zugewiesen sind. Details zur Datenfestplatte werden nicht angezeigt, wenn das Aggregat nur gemeinsam genutzte Festplatten enthält.
+
+*** Parity-Festplatten
++
+Zeigt die Anzahl und Kapazität der Paritätsfestplatten an, die einem Aggregat zugewiesen werden. Details zur Parity-Festplatte werden nicht angezeigt, wenn das Aggregat nur gemeinsam genutzte Festplatten enthält.
+
+*** Gemeinsame Festplatten
++
+Zeigt die Anzahl und Kapazität der freigegebenen Datenfestplatten an, die einem Aggregat zugewiesen sind. Details zu gemeinsam genutzten Festplatten werden nur angezeigt, wenn das Aggregat freigegebene Festplatten enthält.
+
+
+
+** *Ersatzfestplatten*
++
+Zeigt den effektiven Typ, die Nummer und die Kapazität der Ersatzfestplatten an, die für den Knoten im ausgewählten Aggregat verfügbar sind.
+
++
+[NOTE]
+====
+Bei einem Failover eines Aggregats an den Partner-Node zeigt Unified Manager nicht alle freien Festplatten an, die mit dem Aggregat kompatibel sind.
+
+====
+
+
+* *SSD Cache*
++
+Enthält Details zu dedizierten Cache-SSD-Festplatten und Shared Cache SSD-Festplatten.
+
++
+Für die dedizierten Cache-SSD-Festplatten werden folgende Details angezeigt:
+
++
+** *RAID-Details*
++
+*** Typ
++
+Zeigt den RAID-Typ an (RAID0, RAID4, RAID-DP oder RAID-TEC).
+
+*** Gruppengröße
++
+Zeigt die maximale Anzahl an Laufwerken an, die in der RAID-Gruppe zulässig sind.
+
+*** Gruppen
++
+Zeigt die Anzahl der RAID-Gruppen im Aggregat an.
+
+
+
+** *Verwendete Festplatten*
++
+*** Effektiver Typ
++
+Gibt an, dass die Festplatten, die für den Cache im Aggregat verwendet werden, vom Typ SSD sind.
+
+*** Datenfestplatten
++
+Zeigt die Anzahl und Kapazität der Datenfestplatten an, die einem Aggregat für den Cache zugewiesen werden.
+
+*** Parity-Festplatten
++
+Zeigt die Anzahl und Kapazität der Paritätsfestplatten an, die einem Aggregat für den Cache zugewiesen werden.
+
+
+
+** *Ersatzfestplatten*
++
+Zeigt den effektiven Typ, die Nummer und die Kapazität der Ersatzfestplatten an, die für den Knoten im ausgewählten Aggregat für den Cache verfügbar sind.
+
++
+[NOTE]
+====
+Bei einem Failover eines Aggregats an den Partner-Node zeigt Unified Manager nicht alle freien Festplatten an, die mit dem Aggregat kompatibel sind.
+
+====
+
+
++
+Enthält die folgenden Details für den gemeinsamen Cache:
+
++
+** *Speicherpool*
++
+Zeigt den Namen des Speicherpools an. Sie können den Zeiger über den Speicherpool-Namen verschieben, um folgende Details anzuzeigen:
+
++
+*** Status
++
+Zeigt den Status des Speicherpools an, der gesund oder ungesund sein kann.
+
+*** Gesamtzuweisungen
++
+Zeigt die Gesamtzuordnungseinheiten und die Größe im Speicherpool an.
+
+*** Größe Der Zuordnungseinheit
++
+Zeigt den minimalen Speicherplatz im Speicherpool an, der einem Aggregat zugewiesen werden kann.
+
+*** Festplatten
++
+Zeigt die Anzahl der Laufwerke an, die zum Erstellen des Speicherpools verwendet werden. Wenn die Anzahl der Laufwerke in der Spalte „Speicherpool“ und die Anzahl der Festplatten, die auf der Registerkarte „Laufwerksinformationen“ für diesen Speicherpool angezeigt werden, nicht übereinstimmen, zeigt dies an, dass eine oder mehrere Festplatten beschädigt sind und der Speicherpool ungesund ist.
+
+*** Zuweisung Verwendet
++
+Zeigt Anzahl und Größe der von den Aggregaten verwendeten Zuordnungseinheiten an. Sie können auf den Aggregatnamen klicken, um Details zum Aggregat anzuzeigen.
+
+*** Verfügbare Zuweisung
++
+Zeigt die Anzahl und Größe der für die Nodes verfügbaren Zuweisungseinheiten an. Sie können auf den Node-Namen klicken, um weitere Details zum Aggregat anzuzeigen.
+
+
+
+** *Zugewiesener Cache*
++
+Zeigt die Größe der vom Aggregat verwendeten Zuordnungseinheiten an.
+
+** *Zuordnungseinheiten*
++
+Zeigt die Anzahl der vom Aggregat verwendeten Zuordnungseinheiten an.
+
+** *Festplatten*
++
+Zeigt die Anzahl der Festplatten im Speicherpool an.
+
+** *Details*
++
+*** Storage-Pool
++
+Zeigt die Anzahl der Speicherpools an.
+
+*** Gesamtgröße
++
+Zeigt die Gesamtgröße der Speicherpools an.
+
+
+
+
+
+* * Cloud Tier*
++
+Zeigt den Namen der Cloud-Tier an, sofern Sie ein FabricPool-fähiges Aggregat konfiguriert haben und den insgesamt verwendeten Speicherplatz anzeigt. Wenn der Cloud-Tier zu einem anderen Cloud-Provider (der Spiegeltier) gespiegelt wird, werden hier die Details für beide Cloud-Tiers angezeigt
+
+
+
+
+
+== Registerkarte Konfiguration
+
+Auf der Registerkarte Konfiguration werden Details zum ausgewählten Aggregat angezeigt, z. B. hinsichtlich seines Cluster-Nodes, des Blocktyps, des RAID-Typs, der RAID-Größe und der Anzahl der RAID-Gruppen:
+
+* *Übersicht*
++
+** Knoten
++
+Zeigt den Namen des Node an, der das ausgewählte Aggregat enthält.
+
+** Blocktyp
++
+Zeigt das Blockformat des Aggregats an: Entweder 32-Bit oder 64-Bit.
+
+** RAID-Typ
++
+Zeigt den RAID-Typ an (RAID0, RAID4, RAID-DP, RAID-TEC oder gemischtes RAID).
+
+** RAID-Größe
++
+Zeigt die Größe der RAID-Gruppe an.
+
+** RAID-Gruppen
++
+Zeigt die Anzahl der RAID-Gruppen im Aggregat an.
+
+** SnapLock-Typ
++
+Zeigt den SnapLock-Typ des Aggregats an.
+
+
+
+* * Cloud Tier*
++
+Wenn es sich um ein FabricPool-fähiges Aggregat handelt, werden die Details für die Cloud-Tier angezeigt. Einige Felder sind je nach Speicheranbieter unterschiedlich. Wenn die Cloud-Ebene zu einem anderen Cloud-Provider (die "`mMirror Tier`") gespiegelt wird, werden hier beide Cloud-Tiers angezeigt.
+
++
+** Anbieter
++
+Zeigt den Namen des Storage-Providers an, z. B. StorageGRID, Amazon S3, IBM Cloud Object Storage, Microsoft Azure Cloud, Google Cloud Storage oder Alibaba Cloud Object Storage.
+
+** Name
++
+Zeigt den Namen des Cloud-Tiers an, als er von ONTAP erstellt wurde.
+
+** Server
++
+Zeigt den FQDN der Cloud-Tier an.
+
+** Port
++
+Der Port, der für die Kommunikation mit dem Cloud-Provider verwendet wird.
+
+** Auf Schlüssel oder Konto zugreifen
++
+Zeigt den Zugriffsschlüssel oder das Konto für die Cloud-Tier an.
+
+** Containername
++
+Zeigt den Bucket- oder Container-Namen des Cloud-Tiers an.
+
+** SSL
++
+Zeigt an, ob die SSL-Verschlüsselung für die Cloud-Ebene aktiviert ist.
+
+
+
+
+
+
+
+== Historienbereich
+
+Im Bereich Verlauf werden Diagramme angezeigt, die Informationen über die Kapazität des ausgewählten Aggregats enthalten. Außerdem können Sie auf die Schaltfläche *Exportieren* klicken, um einen Bericht im CSV-Format für das Diagramm zu erstellen, das Sie anzeigen.
+
+Sie können einen Diagrammtyp aus der Dropdown-Liste oben im Fenster Verlauf auswählen. Sie können Details für einen bestimmten Zeitraum anzeigen, indem Sie entweder 1 Woche, 1 Monat oder 1 Jahr auswählen. Verlaufsdiagramme können Ihnen bei der Identifizierung von Trends helfen: Wenn beispielsweise die Aggregatnutzung konsistent den Schwellenwert „nahezu voll“ überschreitet, können Sie die entsprechenden Maßnahmen ergreifen.
+
+Verlaufsdiagramme zeigen folgende Informationen an:
+
+* *Verwendete Aggregatskapazität (%)*
++
+Zeigt die verwendete Kapazität im Aggregat und den Trend in der Art und Weise an, wie die aggregierte Kapazität basierend auf dem Nutzungsverlauf als Liniendiagramme in Prozentsätzen auf der vertikalen (y) Achse verwendet wird. Der Zeitraum wird auf der horizontalen Achse (x) angezeigt. Sie können einen Zeitraum von einer Woche, einem Monat oder einem Jahr auswählen. Sie können die Details zu bestimmten Punkten im Diagramm anzeigen, indem Sie den Cursor auf einen bestimmten Bereich positionieren. Sie können ein Liniendiagramm ausblenden oder anzeigen, indem Sie auf die entsprechende Legende klicken. Wenn Sie beispielsweise auf die Legende „Kapazität verwendet“ klicken, wird die Diagramm-Zeile mit der verwendeten Kapazität ausgeblendet.
+
+* *Verwendete Aggregatskapazität vs Gesamtkapazität*
++
+Zeigt den Trend in der Verwendung der Aggregatskapazität basierend auf dem Nutzungsverlauf sowie der verwendeten Kapazität und der Gesamtkapazität als Liniendiagramme in Byte, Kilobyte, Megabyte, Und so weiter, auf der vertikalen Achse (y). Der Zeitraum wird auf der horizontalen Achse (x) angezeigt. Sie können einen Zeitraum von einer Woche, einem Monat oder einem Jahr auswählen. Sie können die Details zu bestimmten Punkten im Diagramm anzeigen, indem Sie den Cursor auf einen bestimmten Bereich positionieren. Sie können ein Liniendiagramm ausblenden oder anzeigen, indem Sie auf die entsprechende Legende klicken. Wenn Sie beispielsweise auf die Legende „verwendete Trend-Kapazität“ klicken, wird das Diagramm „verwendete Trendkapazität“ ausgeblendet.
+
+* *Verwendete Aggregatskapazität (%) gegenüber dem Einsatz (%)*
++
+Zeigt den Trend an, wie die aggregierte Kapazität basierend auf dem Nutzungsverlauf verwendet wird, sowie den belegten Speicherplatz als Liniendiagramme in Prozent auf der vertikalen Achse (y). Der Zeitraum wird auf der horizontalen Achse (x) angezeigt. Sie können einen Zeitraum von einer Woche, einem Monat oder einem Jahr auswählen. Sie können die Details zu bestimmten Punkten im Diagramm anzeigen, indem Sie den Cursor auf einen bestimmten Bereich positionieren. Sie können ein Liniendiagramm ausblenden oder anzeigen, indem Sie auf die entsprechende Legende klicken. Wenn Sie beispielsweise auf die Legende „Space engagierte“ klicken, wird die Zeile „Space engagierte“ ausgeblendet.
+
+
+
+
+
+== Ereignisliste
+
+In der Ereignisliste werden Details zu neuen und bestätigten Ereignissen angezeigt:
+
+* *Severity*
++
+Zeigt den Schweregrad des Ereignisses an.
+
+* *Veranstaltung*
++
+Zeigt den Ereignisnamen an.
+
+* *Auslösezeit*
++
+Zeigt die Zeit an, die seit der Erzeugung des Ereignisses verstrichen ist. Wenn die verstrichene Zeit eine Woche überschreitet, wird der Zeitstempel für den Zeitpunkt angezeigt, zu dem das Ereignis generiert wurde.
+
+
+
+
+
+== Bereich „Verwandte Geräte“
+
+Im Bereich „Verwandte Geräte“ können Sie den Clusterknoten, Volumes und Festplatten anzeigen, die mit dem Aggregat in Verbindung stehen:
+
+* *Knoten*
++
+Zeigt die Kapazität und den Integritätsstatus des Node an, der das Aggregat enthält. Kapazität gibt die nutzbare Gesamtkapazität über die verfügbare Kapazität an.
+
+* *Aggregate im Knoten*
++
+Zeigt die Anzahl und Kapazität aller Aggregate im Cluster-Node an, der das ausgewählte Aggregat enthält. Auf der Grundlage des höchsten Schweregrads wird der Systemzustand der Aggregate ebenfalls angezeigt. Wenn z. B. ein Cluster-Node zehn Aggregate enthält, von denen fünf den Warnstatus und die verbleibenden fünf den kritischen Status anzeigen, ist der angezeigte Status „kritisch“.
+
+* *Bände*
++
+Zeigt die Anzahl und Kapazität der FlexVol Volumes und FlexGroup Volumes im Aggregat an. Die Anzahl umfasst keine FlexGroup-Komponenten. Auf der Grundlage des höchsten Schweregrades wird zudem der Integritätsstatus der Volumes angezeigt.
+
+* *Ressourcen-Pool*
++
+Zeigt die mit dem Aggregat verbundenen Ressourcen-Pools an.
+
+* *Festplatten*
++
+Zeigt die Anzahl der Festplatten im ausgewählten Aggregat an.
+
+
+
+
+
+== Bereich „Verwandte Warnungen“
+
+Im Bereich „Related Alerts“ können Sie die Liste der Warnmeldungen anzeigen, die für das ausgewählte Aggregat erstellt wurden. Sie können auch eine Warnung hinzufügen, indem Sie auf den Link Warnung hinzufügen klicken oder eine vorhandene Warnung bearbeiten, indem Sie auf den Alarmnamen klicken.
+
+*Verwandte Informationen*
+
+link:../health-checker/task_view_storage_pool_details.html["Anzeigen von Details zum Speicherpool"]

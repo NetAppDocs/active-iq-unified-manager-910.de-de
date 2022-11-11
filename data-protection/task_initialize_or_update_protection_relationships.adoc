@@ -1,0 +1,56 @@
+---
+permalink: data-protection/task_initialize_or_update_protection_relationships.html 
+sidebar: sidebar 
+keywords: initialize, update, protection, relationships, volume, page 
+summary: Auf der Seite Volume Relationships können Sie eine erste Baseline-Übertragung für eine neue Schutzbeziehung durchführen oder eine Beziehung aktualisieren, wenn sie bereits initialisiert ist und Sie eine manuelle, außerplanmäßige inkrementelle Aktualisierung durchführen möchten, um sie sofort zu übertragen. 
+---
+= Schutzbeziehungen werden auf der Seite Volume-Beziehungen initialisiert oder aktualisiert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite Volume Relationships können Sie eine erste Baseline-Übertragung für eine neue Schutzbeziehung durchführen oder eine Beziehung aktualisieren, wenn sie bereits initialisiert ist und Sie eine manuelle, außerplanmäßige inkrementelle Aktualisierung durchführen möchten, um sie sofort zu übertragen.
+
+[NOTE]
+====
+Sie können Volumes, die durch Konsistenzgruppen geschützt sind, nicht initialisieren oder aktualisieren.
+
+====
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen OnCommand Workflow Automation eingerichtet haben.
+
+
+.Schritte
+. Klicken Sie auf der Seite *Volume Relationships* mit der rechten Maustaste auf ein Volume und wählen Sie ein oder mehrere Volumes mit Beziehungen aus, die Sie aktualisieren oder initialisieren möchten, und klicken Sie dann in der Symbolleiste auf *Initialisieren/Aktualisieren*.
++
+Das Dialogfeld *Initialisieren/Aktualisieren* wird angezeigt.
+
+. Wählen Sie auf der Registerkarte *Übertragungsoptionen* eine Übertragungspriorität und die maximale Übertragungsrate aus.
+. Klicken Sie auf *Quelle Snapshot Kopien* und dann in der Spalte *Snapshot Kopie* auf *Standard*.
++
+Das Dialogfeld Quell-Snapshot-Kopie auswählen wird angezeigt.
+
+. Wenn Sie eine vorhandene Snapshot Kopie angeben möchten, anstatt die Standard-Snapshot Kopie zu übertragen, klicken Sie auf *vorhandene Snapshot Kopie* und wählen Sie eine Snapshot Kopie aus der Liste aus.
+. Klicken Sie Auf *Absenden*.
++
+Sie gelangen zurück zum Dialogfeld *Initialisieren/Aktualisieren*.
+
+. Wenn Sie mehr als eine Quelle zum Initialisieren oder Aktualisieren ausgewählt haben, klicken Sie auf *Standard* für die nächste Quelle, für die Sie eine vorhandene Snapshot Kopie angeben möchten.
+. Klicken Sie auf *Senden*, um die Initialisierung oder Aktualisierung des Jobs zu starten.
++
+Der Initialisierungs- oder Updatejob wird gestartet, Sie gelangen wieder zur Seite Volume-Beziehungen und oben auf der Seite wird ein Link zu Jobs angezeigt.
+
+. *Optional:* Klicken Sie auf *Jobs anzeigen* in der Ansicht *Gesundheit: Alle Volumes*, um den Status jedes Initialisierungs- oder Aktualisierungs-Jobs zu verfolgen.
++
+Eine gefilterte Liste von Jobs wird angezeigt.
+
+. *Optional:* Klicken Sie auf jeden Job, um seine Details anzuzeigen.
+. *Optional:* Klicken Sie auf den Pfeil *Zurück* auf Ihrem Browser, um zur Seite *Volume Relationships* zurückzukehren.
++
+Der Initialisierungs- oder Aktualisierungsvorgang ist abgeschlossen, wenn alle Aufgaben erfolgreich abgeschlossen wurden.
+
+

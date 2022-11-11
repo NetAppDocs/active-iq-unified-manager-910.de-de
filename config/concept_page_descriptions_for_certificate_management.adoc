@@ -1,0 +1,14 @@
+---
+permalink: config/concept_page_descriptions_for_certificate_management.html 
+sidebar: sidebar 
+keywords: page descriptions, certificate management 
+summary: Auf der Seite HTTPS-Zertifikat können Sie die aktuellen Sicherheitszertifikate anzeigen und neue HTTPS-Zertifikate erstellen. 
+---
+= Seitenbeschreibungen zur Zertifikatverwaltung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite HTTPS-Zertifikat können Sie die aktuellen Sicherheitszertifikate anzeigen und neue HTTPS-Zertifikate erstellen.

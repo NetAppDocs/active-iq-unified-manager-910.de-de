@@ -1,0 +1,32 @@
+---
+permalink: data-protection/task_retry_failed_protection_job.html 
+sidebar: sidebar 
+keywords: retry, failed, protection job 
+summary: Nachdem Sie Maßnahmen zur Behebung eines fehlgeschlagenen Schutzjobs ergriffen haben, können Sie den Job mit „Wiederholen“ erneut ausführen. Durch Wiederversuchen eines Jobs wird mithilfe der ursprünglichen Job-ID ein neuer Job erstellt. 
+---
+= Erneutes Versuch eines fehlgeschlagenen Schutzjobs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie Maßnahmen ergriffen haben, um einen fehlgeschlagenen Schutzauftrag zu beheben, können Sie den Job mit *Retry* erneut ausführen. Durch Wiederversuchen eines Jobs wird mithilfe der ursprünglichen Job-ID ein neuer Job erstellt.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Sie können nur einen fehlgeschlagenen Job gleichzeitig erneut versuchen. Wenn Sie mehrere Jobs auswählen, wird die Schaltfläche *Wiederholen* deaktiviert. Es können nur Jobs vom Typ Protection Configuration and Protection Relationship Operation wiederholt werden.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Schutz* > *Jobs*.
+. Wählen Sie aus der Liste der Aufträge einen einzelnen Auftrag vom Typ fehlgeschlagener Schutzkonfiguration oder Schutzbeziehung aus.
++
+Die Schaltfläche *Wiederholen* ist aktiviert.
+
+. Klicken Sie Auf *Wiederholen*.
++
+Der Job wird neu gestartet.
+
+

@@ -1,0 +1,74 @@
+---
+permalink: data-protection/view-protection-status.html 
+sidebar: sidebar 
+keywords: view, volume, protection status, dashboard protection card, protection panel, protection widget 
+summary: Die Seite Datensicherung bietet einen ganzheitlichen Überblick über die Datensicherungsdetails für alle geschützten Volumes in Ihrem Datacenter. 
+---
+= Anzeigen des Volume-Sicherungsstatus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite Datensicherung bietet eine ganzheitliche Übersicht über die Datensicherungsdetails für alle geschützten Volumes in einem einzelnen Cluster oder alle Cluster eines Datacenters.
+
+Sie können diese Details anzeigen, wenn Sie auf den Rechtspfeil oben im Bereich Datensicherung auf dem Dashboard klicken. Auf diesem Bildschirm befinden sich zwei Abschnitte. Wenn Sie alle Cluster auf dem Dashboard auswählen, wird im Abschnitt * Alle Cluster* der Sicherungsstatus aller Cluster auf Datacenter-Ebene angezeigt, die durch SnapMirror Beziehungen und Snapshot Kopien geschützt sind. Sie können einen bestimmten Cluster im Abschnitt *individueller Cluster* auswählen, um den Status der geschützten Volumes in diesem Cluster anzuzeigen.
+
+Wenn Sie im Dashboard einen einzelnen Cluster auswählen, werden auf dieser Seite die Details zu den geschützten Volumes angezeigt, die auf diesem Cluster vorhanden sind.
+
+Sie können mit der Maus auf die Balkendiagramme zeigen, um die entsprechenden Zählungen anzuzeigen. Durch Klicken auf die Balkendiagramme gelangen Sie zum Bildschirm „Volumes“, in dem die entsprechenden Volumes ausgewählt sind. Wenn Sie auf den Link der einzelnen Veranstaltungen klicken, gelangen Sie zur Seite Veranstaltungsdetails. Sie können auf den Link * Alle anzeigen* klicken, um alle aktiven Schutzereignisse auf der Seite Ereignisverwaltung Inventar anzuzeigen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Dashboard*.
+. Je nachdem, ob Sie den Datenschutzstatus für alle überwachten Cluster oder für einen einzelnen Cluster anzeigen möchten, wählen Sie *Alle Cluster* oder wählen Sie einen einzelnen Cluster aus dem Dropdown-Menü aus.
+. Klicken Sie auf den Rechtspfeil im Bereich Datenschutz.
+
+
+
+
+== Datensicherung
+
+Auf der Seite Datensicherung werden die folgenden Felder für geschützte Volumes für alle Cluster angezeigt.
+
+
+NOTE: Für die Anzahl der Snapshot Kopien auf dem Volume werden sowohl Quell- als auch Ziel-Volumes berücksichtigt. Bei SnapMirror Beziehungen werden die Quell-Volumes, die zum Lesen und Schreiben aktiviert sind, gezählt. Ziel- und Root-Volumes werden nicht berücksichtigt. Die SnapMirror Zählung beinhaltet die Anzahl der Volumes mit Quellen und Zielen auf demselben oder verschiedenen Clustern.
+
+* *Snapshot Übersicht*: Eine Übersicht über die durch Snapshot-Kopien geschützten Volumes, wie z. B.:
++
+** Die Gesamtzahl der geschützten und nicht durch Snapshot Kopien geschützten Volumes.
++
+
+NOTE: Wenn Sie ein Volume als gesichert betrachten, sollte der Zeitplan für die Snapshot-Kopie des Volumes aktiviert sein.
+
+** Die Gesamtzahl der Volumes, die den Reservespeicherplatz für die Snapshot Kopien nutzen oder übersteigen. Dieser Wert ist wichtig, um den genutzten Festplattenspeicher anzuzeigen oder den Speicherplatz zu berechnen, der zurückgewonnen werden kann, wenn eine oder mehrere Snapshot-Kopien gelöscht werden.
+
+
+* *SnapMirror Overview*: Eine Übersicht über die durch SnapMirror-Richtlinien geschützten Volumes, wie z. B.:
++
+** Anzahl der Volumes, die durch die jeweiligen SnapMirror Richtlinien gesichert werden, z. B. Volume-SnapMirror Beziehungen, Disaster Recovery für Storage VMs (SVM-DR) und ihre Kombinationen aus diesen Ressourcen.
+** Die Gesamtzahl der Volumes mit Verzögerungen in SnapMirror-Beziehungen. Wenn ein Volume über mehrere SnapMirror-Beziehungen verfügt, wird die schlimmste Verzögerung ausgewählt.
+
+
+
+
+In der einzelnen Cluster-Liste werden der Status der SnapMirror Beziehungen und der Snapshot-Schutz für ein bestimmtes Cluster angezeigt.
+
+* *Snapshot Kopien Analysis* enthält folgende Informationen:
++
+** Einzelne Ereignisse für Snapshot-Kopien, einschließlich der in den letzten 24 Stunden aufgeworfenen Ereignisse
+** Detaillierte Tabelle für Volumes, die geschützt sind und nicht durch Snapshot-Kopien geschützt sind.
+** Volumes verwenden, nicht verwenden und durchbrechen die Kapazität der reservierten Snapshot-Kopie. Sie können mithilfe dieser Informationen den genutzten Speicherplatz berechnen oder den zurückgewonnen werden, wenn eine oder mehrere Snapshot Kopien gelöscht werden.
+** Die Aufsplits der Volumes in Bezug auf die Anzahl ihrer Snapshot-Kopien. Die Anzahl der zurückgegebenen Snapshot-Kopien gilt nur für die Volumes, die online und verfügbar sind.
+
+
+* *SnapMirror Analysis* enthält folgende Informationen:
++
+** Einzelne Ereignisse für SnapMirror Beziehungen, einschließlich der in den letzten 24 Stunden aufgeworfenen Ereignisse
+** Die Anzahl der Volumes, die durch jede der SnapMirror Richtlinien gesichert werden, z. B. Volume-SnapMirror-Beziehungen, Disaster Recovery für Storage-VMs (SVM-DR) und ihre Kombinationen.
+** Anzahl der Volumes, die durch die Typen der SnapMirror Beziehungen gesichert werden, wie zum Beispiel asynchrone Spiegelung, asynchrone Vault, asynchroner MirrorVault, StrictSync, die Konsistenzgruppe SnapMirror Business Continuity (SMBC) und Sync.
+** Die Anzahl der Volumen mit einem gesunden oder ungesunden Beziehungsstatus. Ein Volume wird nur dann als ordnungsgemäß angesehen, wenn alle seine SnapMirror-Beziehungen gesund sind.
+** Die Unterteilung des Volumes erfolgt nach der Rate ihrer RPO-Verzögerungsdauer (Recovery Point Objective).
+
+
+

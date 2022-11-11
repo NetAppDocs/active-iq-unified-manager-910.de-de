@@ -1,0 +1,126 @@
+---
+permalink: events/reference_alert_setup_page.html 
+sidebar: sidebar 
+keywords: alert, setup, page, command buttons, list view, details area 
+summary: Auf der Seite „Alarm-Setup“ wird eine Liste von Warnungen angezeigt und Informationen zu Name, Status, Benachrichtigungsmethode und Benachrichtigungshäufigkeit angezeigt. Sie können auf dieser Seite auch Warnmeldungen hinzufügen, bearbeiten, entfernen, aktivieren oder deaktivieren. 
+---
+= Seite „Alarmkonfiguration“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Alarm-Setup“ wird eine Liste von Warnungen angezeigt und Informationen zu Name, Status, Benachrichtigungsmethode und Benachrichtigungshäufigkeit angezeigt. Sie können auf dieser Seite auch Warnmeldungen hinzufügen, bearbeiten, entfernen, aktivieren oder deaktivieren.
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+
+== Befehlsschaltflächen
+
+* *Hinzufügen*
++
+Zeigt das Dialogfeld Alarm hinzufügen an, in dem Sie neue Warnmeldungen hinzufügen können.
+
+* *Bearbeiten*
++
+Zeigt das Dialogfeld Alarm bearbeiten an, in dem Sie ausgewählte Warnmeldungen bearbeiten können.
+
+* *Löschen*
++
+Löscht die ausgewählten Warnmeldungen.
+
+* *Aktivieren*
++
+Aktiviert das Senden von Benachrichtigungen durch die ausgewählten Warnungen.
+
+* *Deaktivieren*
++
+Deaktiviert die ausgewählten Warnungen, wenn Sie vorübergehend das Senden von Benachrichtigungen beenden möchten.
+
+* *Test*
++
+Testet die ausgewählten Warnungen, um ihre Konfiguration nach dem Hinzufügen oder Bearbeiten zu überprüfen.
+
+* *Warnungen für gelöste und veraltete Ereignisse*
++
+Ermöglicht das Aktivieren oder Deaktivieren des Sendens von Warnungen, wenn Ereignisse in den Status „gelöst“ oder „veraltet“ verschoben werden. Dies kann Benutzern helfen, unnötige Benachrichtigungen zu erhalten.
+
+
+
+
+
+== Listenansicht
+
+Die Listenansicht zeigt in tabellarischer Form Informationen zu den erstellten Warnmeldungen an. Mit den Spaltenfiltern können Sie die angezeigten Daten anpassen. Sie können auch eine Warnung auswählen, um weitere Informationen darüber im Detailbereich anzuzeigen.
+
+* *Status*
++
+Gibt an, ob eine Meldung aktiviert ist (image:../media/alert_status_enabled.gif[""]Oder deaktiviert (image:../media/alert_status_disabled.gif[""]).
+
+* *Alarm*
++
+Zeigt den Namen der Warnmeldung an.
+
+* *Beschreibung*
++
+Zeigt eine Beschreibung für die Warnmeldung an.
+
+* *Benachrichtigungsmethode*
++
+Zeigt die Benachrichtigungsmethode an, die für die Warnmeldung ausgewählt ist. Sie können Benutzer per E-Mail oder SNMP-Traps benachrichtigen.
+
+* *Benachrichtigungshäufigkeit*
++
+Gibt die Häufigkeit (in Minuten) an, mit der der Verwaltungsserver weiterhin Benachrichtigungen sendet, bis das Ereignis bestätigt, aufgelöst oder in den veralteten Status verschoben wird.
+
+
+
+
+
+== Detailbereich
+
+Im Detailbereich finden Sie weitere Informationen zur ausgewählten Warnmeldung.
+
+* *Name Des Alarms*
++
+Zeigt den Namen der Warnmeldung an.
+
+* *Warnhinweis*
++
+Zeigt eine Beschreibung für die Warnmeldung an.
+
+* *Veranstaltungen*
++
+Zeigt die Ereignisse an, für die die Meldung ausgelöst werden soll.
+
+* *Ressourcen*
++
+Zeigt die Ressourcen an, für die die Warnmeldung ausgelöst werden soll.
+
+* *Inklusive*
++
+Zeigt die Gruppe von Ressourcen an, für die die Warnmeldung ausgelöst werden soll.
+
+* *Ohne*
++
+Zeigt die Gruppe von Ressourcen an, für die Sie die Warnung nicht auslösen möchten.
+
+* *Benachrichtigungsmethode*
++
+Zeigt die Benachrichtigungsmethode für die Warnmeldung an.
+
+* *Benachrichtigungshäufigkeit*
++
+Zeigt die Häufigkeit an, mit der der Verwaltungsserver weiterhin Warnmeldungen sendet, bis das Ereignis bestätigt, aufgelöst oder in den veralteten Status verschoben wird.
+
+* *Skriptname*
++
+Zeigt den Namen des Skripts an, das der ausgewählten Warnmeldung zugeordnet ist. Dieses Skript wird ausgeführt, wenn eine Warnung erzeugt wird.
+
+* *E-Mail-Empfänger*
++
+Zeigt die E-Mail-Adressen von Benutzern an, die die Benachrichtigung erhalten.
+
+

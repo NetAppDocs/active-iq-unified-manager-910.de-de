@@ -1,0 +1,44 @@
+---
+permalink: config/task_enable_remote_logging_of_audit_logs.html 
+sidebar: sidebar 
+keywords: enable, remote, logging, audit, logs 
+summary: Sie können das Kontrollkästchen Remote-Protokollierung aktivieren im Dialogfeld Überwachungsprotokolle konfigurieren aktivieren aktivieren, um die Remote-Audit-Protokollierung zu aktivieren. Mit dieser Funktion können Sie Überwachungsprotokolle an einen Remote Syslog-Server übertragen. Auf diese Weise können Sie Ihre Audit-Protokolle verwalten, wenn es Platzbeschränkungen gibt. 
+---
+= Aktivieren der Fernprotokollierung von Audit-Protokollen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aktivieren Sie das Kontrollkästchen *Remote-Protokollierung aktivieren* im Dialogfeld Audit-Protokolle konfigurieren, um die Remote-Audit-Protokollierung zu aktivieren. Mit dieser Funktion können Sie Überwachungsprotokolle an einen Remote Syslog-Server übertragen. Auf diese Weise können Sie Ihre Audit-Protokolle verwalten, wenn es Platzbeschränkungen gibt.
+
+Die Remote-Protokollierung von Audit-Protokollen bietet ein manipulationssicheres Backup, falls die Audit-Log-Dateien auf dem Active IQ Unified Manager Server manipuliert werden.
+
+.Schritte
+. Aktivieren Sie im Dialogfeld *Audit Logs konfigurieren* das Kontrollkästchen *Remote Logging aktivieren*.
++
+Zusätzliche Felder zum Konfigurieren der Remote-Protokollierung werden angezeigt.
+
+. Geben Sie den *HOSTNAME* und den *PORT* des Remoteserver ein, mit dem Sie eine Verbindung herstellen möchten.
+. Klicken Sie im Feld *SERVER CA ZERTIFIKAT* auf *DURCHSUCHEN*, um ein öffentliches Zertifikat des Zielservers auszuwählen.
++
+Das Zertifikat sollte in hochgeladen werden `.pem` Formatieren. Dieses Zertifikat sollte vom Ziel-Syslog-Server abgerufen werden und sollte nicht abgelaufen sein. Das Zertifikat sollte den ausgewählten „`hostname`“ als Teil des enthalten `SubjectAltName` (SAN)-Attribut.
+
+. Geben Sie die Werte für die folgenden Felder ein: *CHARSET*, *VERBINDUNGS-TIMEOUT*, *VERBINDUNGSVERZÖGERUNG*.
++
+Für diese Felder sollten die Werte in Millisekunden angegeben werden.
+
+. Wählen Sie das erforderliche Syslog-Format und die TLS-Protokollversion in den Feldern *FORMAT* und *PROTOKOLL* aus.
+. Aktivieren Sie das Kontrollkästchen *Client Authentication* aktivieren, wenn für den Ziel-Syslog-Server eine zertifikatbasierte Authentifizierung erforderlich ist.
++
+Sie müssen das Clientauthentifizierungszertifikat herunterladen und auf den Syslog-Server hochladen, bevor Sie die Konfiguration des Überwachungsprotokolls speichern. Andernfalls schlägt die Verbindung fehl. Je nach Typ des Syslog-Servers müssen Sie möglicherweise einen Hash des Client-Authentifizierungszertifikats erstellen.
+
++
+Beispiel: Syslog-ng erfordert, dass mit dem Befehl ein <Hash> des Zertifikats erstellt wird `openssl x509 -noout -hash -in cert.pem`, Und dann sollten Sie symbolisch das Clientauthentifizierungszertifikat mit einer Datei verknüpfen, die nach dem <Hash> .0 benannt ist.
+
+. Klicken Sie auf *Speichern*, um die Verbindung mit Ihrem Server zu konfigurieren und die Fernprotokollierung zu aktivieren.
++
+Sie werden zur Seite Audit Logs weitergeleitet.
+
+

@@ -1,0 +1,82 @@
+---
+permalink: config/task_add_clusters.html 
+sidebar: sidebar 
+keywords: add cluster 
+summary: Sie können Active IQ Unified Manager ein Cluster hinzufügen, sodass Sie das Cluster überwachen können. Dazu gehört beispielsweise die Möglichkeit, Cluster-Informationen wie Systemzustand, Kapazität, Performance und Konfiguration des Clusters abzurufen, damit Sie etwaige auftretende Probleme finden und beheben können. 
+---
+= Hinzufügen von Clustern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Active IQ Unified Manager ein Cluster hinzufügen, sodass Sie das Cluster überwachen können. Dazu gehört beispielsweise die Möglichkeit, Cluster-Informationen wie Systemzustand, Kapazität, Performance und Konfiguration des Clusters abzurufen, damit Sie etwaige auftretende Probleme finden und beheben können.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen die folgenden Informationen haben:
++
+** Host-Name oder Cluster-Management-IP-Adresse
++
+Der Hostname ist der FQDN oder der Kurzname, den Unified Manager zur Verbindung mit dem Cluster verwendet. Der Host-Name muss bis zur Cluster-Management-IP-Adresse aufgelöst werden.
+
++
+Die Cluster-Management-IP-Adresse muss die Cluster-Management-LIF der administrativen Storage Virtual Machine (SVM) sein. Wenn Sie eine Node-Management-LIF verwenden, schlägt der Vorgang fehl.
+
+** Der Cluster muss die ONTAP Version 9.1 oder höher ausführen.
+** Benutzername und Passwort für den ONTAP-Administrator
++
+Für dieses Konto muss die Rolle _admin_ mit dem Anwendungszugriff auf _ontapi_, _ssh_ und _http_ eingestellt sein.
+
+** Die Port-Nummer für die Verbindung zum Cluster mithilfe des HTTPS-Protokolls (normalerweise Port 443)
+** Sie verfügen über die erforderlichen Zertifikate. Es sind zwei Arten von Zertifikaten erforderlich:
++
+*Server-Zertifikate*: Zur Registrierung verwendet. Zum Hinzufügen eines Clusters ist ein gültiges Zertifikat erforderlich. Wenn das Serverzertifikat abläuft, sollten Sie es neu generieren und Unified Manager neu starten, damit die Dienste automatisch erneut registriert werden. Informationen zur Erstellung von Zertifikaten finden Sie im Knowledge Base-Artikel (KB): https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_renew_an_SSL_certificate_in_ONTAP_9["So erneuern Sie ein SSL-Zertifikat in ONTAP 9"]
+
++
+*Clientzertifikate*: Zur Authentifizierung verwendet. Zum Hinzufügen eines Clusters ist ein gültiges Zertifikat erforderlich. Sie können ein Cluster nicht zu Unified Manager mit einem abgelaufenen Zertifikat hinzufügen. Wenn das Client-Zertifikat bereits abgelaufen ist, sollten Sie es vor dem Hinzufügen des Clusters neu generieren. Wenn dieses Zertifikat jedoch für einen Cluster abläuft, der bereits hinzugefügt wurde und von Unified Manager verwendet wird, funktioniert EMS Messaging weiterhin mit dem abgelaufenen Zertifikat. Sie müssen das Clientzertifikat nicht erneut generieren.
+
+
+
++
+[NOTE]
+====
+Sie können Cluster hinzufügen, die sich hinter einer NAT/Firewall befinden, indem Sie die Unified Manager NAT IP-Adresse verwenden. Alle angeschlossenen Workflow-Automatisierungs- oder SnapProtect-Systeme müssen sich auch hinter der NAT/Firewall befinden, und SnapProtect-API-Aufrufe müssen die NAT-IP-Adresse verwenden, um den Cluster zu identifizieren.
+
+====
+* Auf dem Unified Manager-Server muss ausreichend Speicherplatz vorhanden sein. Sie können dem Server kein Cluster hinzufügen, wenn mehr als 90 % des Speicherplatzes im Datenbankverzeichnis bereits belegt sind.
+
+
+Für eine MetroCluster Konfiguration müssen Sie sowohl die lokalen als auch die Remote-Cluster hinzufügen, und die Cluster müssen korrekt konfiguriert sein.
+
+Sie können ein einzelnes Cluster durch zwei Instanzen von Unified Manager überwachen, vorausgesetzt, Sie haben eine zweite Cluster-Management-LIF im Cluster konfiguriert, sodass jede Instanz von Unified Manager über eine andere LIF verbunden ist.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage-Management* > *Cluster-Setup*.
+. Klicken Sie auf der Seite Cluster Setup auf *Hinzufügen*.
+. Geben Sie im Dialogfeld Cluster hinzufügen die erforderlichen Werte an, z. B. Hostname oder IP-Adresse des Clusters, Benutzername, Passwort und Portnummer.
++
+Sie können die Cluster-Management-IP-Adresse von IPv6 zu IPv4 oder von IPv4 zu IPv6 ändern. Die neue IP-Adresse wird im Cluster-Raster und die Seite der Cluster-Konfiguration nach Abschluss des nächsten Überwachungszyklus angezeigt.
+
+. Klicken Sie Auf *Absenden*.
+. Klicken Sie im Dialogfeld Host autorisieren auf *Zertifikat anzeigen*, um die Zertifikatsinformationen zum Cluster anzuzeigen.
+. Klicken Sie Auf *Ja*.
++
+Unified Manager überprüft das Zertifikat nur, wenn das Cluster zunächst hinzugefügt wird. Unified Manager überprüft nicht das Zertifikat für jeden API-Aufruf an ONTAP.
+
+
+
+Nachdem alle Objekte für ein neues Cluster erkannt wurden, sammelt Unified Manager historische Performance-Daten für die letzten 15 Tage. Diese Statistiken werden mithilfe der Funktionalität zur Datenerfassung erfasst. Diese Funktion bietet Ihnen sofort nach dem Hinzufügen mehr als zwei Wochen Performance-Informationen für einen Cluster. Nach Abschluss des Datenerfassungszyklus werden Cluster-Performance-Daten in Echtzeit standardmäßig alle fünf Minuten erfasst.
+
+[NOTE]
+====
+Da die Sammlung von 15 Tagen Leistungsdaten CPU-intensiv ist, empfiehlt es sich, das Hinzufügen neuer Cluster zu staffeln, so dass Datenkontinuitätssammlung nicht auf zu vielen Clustern zur gleichen Zeit laufen. Wenn Sie Unified Manager während des Datenerfassungszeitraums neu starten, wird die Sammlung angehalten, und es werden für den fehlenden Zeitraum Lücken in den Leistungsdiagrammen angezeigt.
+
+====
+[TIP]
+====
+Wenn Sie eine Fehlermeldung erhalten, dass Sie das Cluster nicht hinzufügen können, überprüfen Sie, ob die Uhren auf den beiden Systemen nicht synchronisiert sind und das HTTPS-Zertifikat von Unified Manager nach dem Startdatum des Clusters liegt. Sie müssen sicherstellen, dass die Uhren mit NTP oder einem ähnlichen Dienst synchronisiert werden.
+
+====

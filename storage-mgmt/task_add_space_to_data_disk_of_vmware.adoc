@@ -1,0 +1,34 @@
+---
+permalink: storage-mgmt/task_add_space_to_data_disk_of_vmware.html 
+sidebar: sidebar 
+keywords: add space, data, disk, vmware, virtual, machine 
+summary: Wenn Sie die Menge an Speicherplatz auf der Datenfestplatte für die Unified Manager-Datenbank vergrößern müssen, können Sie nach der Installation Kapazität hinzufügen, indem Sie über die Unified Manager-Wartungskonsole Festplattenspeicher erweitern. 
+---
+= Hinzufügen von Speicherplatz zur Datenfestplatte der virtuellen VMware-Maschine
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie die Menge an Speicherplatz auf der Datenfestplatte für die Unified Manager-Datenbank vergrößern müssen, können Sie nach der Installation Kapazität hinzufügen, indem Sie über die Unified Manager-Wartungskonsole Festplattenspeicher erweitern.
+
+*Was Sie brauchen*
+
+* Sie müssen Zugriff auf den vSphere Client haben.
+* Auf der virtuellen Maschine dürfen keine Snapshots lokal gespeichert werden.
+* Sie müssen über die Anmeldeinformationen für den Wartungs-Benutzer verfügen.
+
+
+Wir empfehlen, dass Sie Ihre virtuelle Maschine sichern, bevor Sie die Größe der virtuellen Laufwerke erhöhen.
+
+.Schritte
+. Wählen Sie im vSphere-Client die Virtual Machine Unified Manager aus und fügen Sie den Daten dann weitere Festplattenkapazität hinzu `disk 3`. Details finden Sie in der VMware Dokumentation.
++
+In seltenen Fällen verwendet die Unified Manager-Implementierung „Festplatte 2“ für die Datenfestplatte statt „Festplatte 3“. Wenn dies bei Ihrer Bereitstellung der Fall ist, erhöhen Sie den Speicherplatz, je nachdem, welcher Datenträger größer ist. Die Datenfestplatte hat immer mehr Speicherplatz als die andere Festplatte.
+
+. Wählen Sie im vSphere-Client die virtuelle Unified Manager-Maschine aus und wählen Sie dann die Registerkarte *Konsole* aus.
+. Klicken Sie auf das Konsolenfenster, und melden Sie sich dann mit Ihrem Benutzernamen und Passwort an der Wartungskonsole an.
+. Geben Sie im *Hauptmenü* die Nummer für die Option *Systemkonfiguration* ein.
+. Geben Sie im Menü * Systemkonfiguration* die Nummer für die Option *Datenfestplattengröße erhöhen* ein.
+

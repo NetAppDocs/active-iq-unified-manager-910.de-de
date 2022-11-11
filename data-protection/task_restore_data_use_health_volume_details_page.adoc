@@ -1,0 +1,65 @@
+---
+permalink: data-protection/task_restore_data_use_health_volume_details_page.html 
+sidebar: sidebar 
+keywords: restore, data, volume, health details page 
+summary: Mit der Wiederherstellungsfunktion auf der Seite „Volume/Health Details“ können Sie überschreibte oder gelöschte Dateien, Verzeichnisse oder ein gesamtes Volume anhand einer Snapshot Kopie wiederherstellen. 
+---
+= Wiederherstellen von Daten mithilfe der Seite Volume / Health Details
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der Wiederherstellungsfunktion auf der Seite „Volume/Health Details“ können Sie überschreibte oder gelöschte Dateien, Verzeichnisse oder ein gesamtes Volume anhand einer Snapshot Kopie wiederherstellen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+NTFS-Dateiströme können nicht wiederhergestellt werden.
+
+Die Wiederherstellungsoption ist nicht verfügbar, wenn:
+
+* Die Volume-ID ist unbekannt, z. B. wenn Sie eine Intercluster-Beziehung haben und der Ziel-Cluster noch nicht erkannt wurde.
+* Das Volume ist für die synchrone SnapMirror Replizierung konfiguriert.
+
+
+.Schritte
+. Klicken Sie auf der Registerkarte *Schutz* der Detailseite *Volume / Health* mit der rechten Maustaste in die Topologieansicht auf den Namen des Volumes, das wiederhergestellt werden soll.
+. Wählen Sie im Menü * Wiederherstellen* aus.
++
+Alternativ können Sie im Menü *Aktionen* *Restore* die aktuelle Lautstärke, für die Sie die Details anzeigen, schützen.
+
++
+Das Dialogfeld Wiederherstellen wird angezeigt.
+
+. Wählen Sie das Volume und die Snapshot Kopie aus, von dem Sie Daten wiederherstellen möchten, falls sie sich von dem Standard unterscheiden.
+. Wählen Sie die Elemente aus, die Sie wiederherstellen möchten.
++
+Sie können das gesamte Volume wiederherstellen oder Ordner und Dateien angeben, die wiederhergestellt werden sollen.
+
+. Wählen Sie den Speicherort aus, an dem die ausgewählten Elemente wiederhergestellt werden sollen: Entweder *Originalstandort* oder *alternativer bestehender Standort*.
+. Wenn Sie einen alternativen vorhandenen Standort auswählen, führen Sie einen der folgenden Schritte aus:
++
+** Geben Sie im Textfeld Pfad wiederherstellen den Pfad des Speicherorts ein, zu dem die Daten wiederhergestellt werden sollen, und klicken Sie dann auf *Verzeichnis auswählen*.
+** Klicken Sie auf *Durchsuchen*, um das Dialogfeld Verzeichnisse durchsuchen zu starten und führen Sie die folgenden Schritte aus:
++
+... Wählen Sie das Cluster, die SVM und das Volume aus, das Sie wiederherstellen möchten.
+... Wählen Sie in der Tabelle Name einen Verzeichnisnamen aus.
+... Klicken Sie Auf *Verzeichnis Auswählen*.
+
+
+
+
+. Klicken Sie Auf *Wiederherstellen*.
++
+Der Wiederherstellungsprozess beginnt.
+
++
+[NOTE]
+====
+Wenn eine Wiederherstellung zwischen Cloud Volumes ONTAP HA Clustern mit einem NDMP-Fehler fehlschlägt, müssen Sie möglicherweise eine explizite AWS Route im Ziel-Cluster hinzufügen, damit das Ziel mit der Cluster-Management-LIF des Quellsystems kommunizieren kann. Sie führen diesen Konfigurationsschritt mit BlueXP aus.
+
+====
+

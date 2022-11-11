@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/task_specify_correlated_objects_time_range.html 
+sidebar: sidebar 
+keywords: specify, time range, correlated objects 
+summary: Mit der Auswahl für den Zeitbereich auf der Seite Performance Explorer können Sie den Zeitbereich für den Vergleich von Objektdaten festlegen. Wenn Sie einen Zeitbereich angeben, wird der Inhalt der Seiten des Performance Explorers verfeinert, um nur die Objektdaten innerhalb des von Ihnen angegebenen Zeitbereichs anzuzeigen. 
+---
+= Festlegen eines Zeitbereichs für korrelierte Objekte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der Auswahl für den Zeitbereich auf der Seite Performance Explorer können Sie den Zeitbereich für den Vergleich von Objektdaten festlegen. Wenn Sie einen Zeitbereich angeben, wird der Inhalt der Seiten des Performance Explorers verfeinert, um nur die Objektdaten innerhalb des von Ihnen angegebenen Zeitbereichs anzuzeigen.
+
+Durch die Feinjustierung des Zeitbereichs können nur die Leistungsdaten angezeigt werden, für die Sie sich interessieren. Sie können einen vordefinierten Zeitbereich auswählen oder einen benutzerdefinierten Zeitbereich angeben. Der Standardzeitbereich liegt bei den vorangegangenen 72 Stunden.

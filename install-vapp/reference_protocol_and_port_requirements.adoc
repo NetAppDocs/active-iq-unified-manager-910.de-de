@@ -1,0 +1,217 @@
+---
+permalink: install-vapp/reference_protocol_and_port_requirements.html 
+sidebar: sidebar 
+keywords: unified manager, protocol, port, requirements, server, connections 
+summary: Die erforderlichen Ports und Protokolle ermöglichen die Kommunikation zwischen dem Unified Manager Server und den gemanagten Storage-Systemen, Servern und anderen Komponenten. 
+---
+= Protokoll- und Port-Anforderungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die erforderlichen Ports und Protokolle ermöglichen die Kommunikation zwischen dem Unified Manager Server und den gemanagten Storage-Systemen, Servern und anderen Komponenten.
+
+
+
+== Verbindungen zum Unified Manager-Server
+
+In typischen Installationen müssen Sie bei der Verbindung zur Web-UI von Unified Manager keine Portnummern angeben, da immer Standardports verwendet werden. Da Unified Manager beispielsweise immer versucht, auf seinem Standardport ausgeführt zu werden, können Sie eingeben `+https://<host>+` Statt `+https://<host>:443+`.
+
+
+NOTE: Der Standardport für MySQL, 3306, ist auf localhost beschränkt, während Unified Manager auf VMware vSphere-Systemen installiert wird. Dies wirkt sich nicht auf ein Upgrade-Szenario aus, in dem die vorherige Konfiguration erhalten bleibt. Diese Konfiguration kann geändert werden, und die Verbindung kann anderen Hosts über die Wartungskonsole zur Verfügung gestellt werden.
+
+Der Unified Manager Server verwendet spezifische Protokolle für den Zugriff auf folgende Schnittstellen:
+
+[cols="4*"]
+|===
+| Schnittstelle | Protokoll | Port | Beschreibung 
+
+
+ a| 
+Unified Manager Web-UI
+ a| 
+HTTP
+ a| 
+80
+ a| 
+Wird für den Zugriff auf die Web-UI von Unified Manager verwendet; automatische Umleitung zum sicheren Port 443.
+
+
+
+ a| 
+Unified Manager Web-UI und -Programme mithilfe von APIs
+ a| 
+HTTPS
+ a| 
+443
+ a| 
+Wird verwendet, um sicher auf die Web-UI von Unified Manager zuzugreifen oder API-Aufrufe durchzuführen. API-Aufrufe können nur über HTTPS erfolgen.
+
+
+
+ a| 
+Wartungskonsole
+ a| 
+SSH/SFTP
+ a| 
+22
+ a| 
+Wird verwendet, um auf die Wartungskonsole zuzugreifen und Supportpakete abzurufen.
+
+
+
+ a| 
+Linux Befehlszeile
+ a| 
+SSH/SFTP
+ a| 
+22
+ a| 
+Wird verwendet, um auf die Red hat Enterprise Linux oder CentOS Befehlszeile zuzugreifen und Supportpakete abzurufen.
+
+
+
+ a| 
+Syslog
+ a| 
+UDP
+ a| 
+514
+ a| 
+Wird verwendet, um auf abonnementbasierte EMS-Nachrichten aus ONTAP-Systemen zuzugreifen und Ereignisse auf der Grundlage der Meldungen zu erstellen.
+
+
+
+ a| 
+RUHE
+ a| 
+HTTPS
+ a| 
+9443
+ a| 
+Wird verwendet, um ÜBER authentifizierte ONTAP-Systeme auf Rest-API-basierte EMS-Ereignisse in Echtzeit zuzugreifen.
+
+|===
+[NOTE]
+====
+Die für die HTTP- und HTTPS-Kommunikation verwendeten Ports (die Ports 80 und 443) können mithilfe der Unified Manager-Wartungskonsole geändert werden. Weitere Informationen finden Sie unter link:../config/concept_configure_unified_manager.html["Active IQ Unified Manager wird konfiguriert"].
+
+====
+
+
+== Verbindungen vom Unified Manager-Server
+
+Sie sollten Ihre Firewall so konfigurieren, dass sie Ports öffnen, die die Kommunikation zwischen dem Unified Manager-Server und verwalteten Speichersystemen, Servern und anderen Komponenten ermöglichen. Wenn ein Port nicht geöffnet ist, schlägt die Kommunikation fehl.
+
+Je nach Umgebung können Sie festlegen, welche Ports und Protokolle der Unified Manager-Server für die Verbindung zu bestimmten Zielen verwendet.
+
+Der Unified Manager-Server stellt die Verbindung über folgende Protokolle und Ports zu den gemanagten Storage-Systemen, Servern und anderen Komponenten her:
+
+[cols="4*"]
+|===
+| Ziel | Protokoll | Port | Beschreibung 
+
+
+ a| 
+Storage-System
+ a| 
+HTTPS
+ a| 
+443/TCP
+ a| 
+Dient zum Überwachen und Managen von Storage-Systemen.
+
+
+NOTE: Wenn Sie diesen Port oder einen anderen Port zur Verbindung mit dem VMware vCenter Server oder ESXi Server verwenden, stellen Sie sicher, dass der Port verfügbar ist und an einem sicheren Standort angeschlossen werden kann.
+
+
+
+ a| 
+Storage-System
+ a| 
+NDMP
+ a| 
+10000/TCP
+
+7/TCP
+ a| 
+Wird für bestimmte Snapshot-Restore-Vorgänge verwendet.
+
+
+
+ a| 
+AutoSupport Server
+ a| 
+HTTPS
+ a| 
+443
+ a| 
+Wird zum Senden von AutoSupport-Informationen verwendet. Für diese Funktion ist ein Internetzugang erforderlich.
+
+
+
+ a| 
+Authentifizierungsserver
+ a| 
+LDAP
+ a| 
+389
+ a| 
+Wird zur Erstellung von Authentifizierungsanforderungen sowie von Benutzer- und Gruppenabfragen verwendet.
+
+
+
+ a| 
+LDAPS
+ a| 
+636
+ a| 
+Wird für sichere LDAP-Kommunikation verwendet.
+
+
+
+ a| 
+Mailserver
+ a| 
+SMTP
+ a| 
+25
+ a| 
+Wird zum Senden von Benachrichtigungs-E-Mails verwendet.
+
+
+
+ a| 
+SNMP-Trap-Absender
+ a| 
+SNMPv1 oder SNMPv3
+ a| 
+162/UDP
+ a| 
+Wird zum Senden von SNMP-Traps für Warnmeldungen verwendet.
+
+
+
+ a| 
+Server für externen Datenprovider
+ a| 
+TCP
+ a| 
+2003
+ a| 
+Dient zum Senden von Performance-Daten an einen externen Datenanbieter wie Graphite.
+
+
+
+ a| 
+NTP-Server
+ a| 
+NTP
+ a| 
+123/UDP
+ a| 
+Wird verwendet, um die Zeit auf dem Unified Manager-Server mit einem externen NTP-Zeitserver zu synchronisieren. (Nur VMware Systeme)
+
+|===

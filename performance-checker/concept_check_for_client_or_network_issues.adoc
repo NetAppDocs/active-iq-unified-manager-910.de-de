@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_check_for_client_or_network_issues.html 
+sidebar: sidebar 
+keywords: check, client, network, issues 
+summary: Wenn Clients, die mit Volumes in einem Cluster verbunden sind, ihre I/O-Anforderungen erhöhen, muss das Cluster schwieriger arbeiten, die Anforderungen zu erfüllen. Der erhöhte Bedarf an dem Cluster kann eine Komponente in Konflikt stellen, die Latenz von Workloads erhöhen, die es verwenden, und ein Ereignis in Unified Manager auslösen. 
+---
+= Prüfen Sie auf Client- oder Netzwerkprobleme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Clients, die mit Volumes in einem Cluster verbunden sind, ihre I/O-Anforderungen erhöhen, muss das Cluster schwieriger arbeiten, die Anforderungen zu erfüllen. Der erhöhte Bedarf an dem Cluster kann eine Komponente in Konflikt stellen, die Latenz von Workloads erhöhen, die es verwenden, und ein Ereignis in Unified Manager auslösen.
+
+Auf der Seite Ereignisdetails werden im Abschnitt Systemdiagnose die wichtigsten Volume-Workloads unter Verwendung der zu verstrittenden Komponente angezeigt. Wenn Sie wissen, welcher Client auf ein bestimmtes Volume zugreift, können Sie auf den Client zugreifen, um zu ermitteln, ob die Client-Hardware oder eine Anwendung nicht wie erwartet funktioniert oder mehr Arbeit geleistet hat als sonst. Wenden Sie sich eventuell an Ihren Client-Administrator oder den Anwendungsanbieter, um Unterstützung zu erhalten.
+
+Sie können Ihre Netzwerkinfrastruktur überprüfen, um festzustellen, ob es Hardware-Probleme, Engpässe oder konkurrierende Workloads gibt, die möglicherweise I/O-Anfragen zwischen dem Cluster und den verbundenen Clients verursacht haben, um langsamer als erwartet durchzuführen. Wenden Sie sich möglicherweise an Ihren Netzwerkadministrator, um Hilfe zu erhalten.

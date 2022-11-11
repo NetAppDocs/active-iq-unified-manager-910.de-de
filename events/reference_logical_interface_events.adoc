@@ -1,0 +1,157 @@
+---
+permalink: events/reference_logical_interface_events.html 
+sidebar: sidebar 
+keywords: 'network, interface, (lif) events, impact area, availability, configuration, performance' 
+summary: 'Ereignisse an der Netzwerkschnittstelle liefern Informationen zum Status Ihrer Netzwerkschnittstelle (LIFs), sodass Sie potenzielle Probleme überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.' 
+---
+= Ereignisse der Netzwerkschnittstelle (LIF)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ereignisse an der Netzwerkschnittstelle liefern Informationen zum Status Ihrer Netzwerkschnittstelle (LIFs), sodass Sie potenzielle Probleme überwachen können. Ereignisse sind nach Impact Area gruppiert und umfassen den Ereignis- und Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.
+
+
+
+== Impact Area: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Status der Netzwerkschnittstelle aus (ocumEvtLifStatusDown)
+ a| 
+Dar
+ a| 
+Schnittstelle
+ a| 
+Fehler
+
+
+
+ a| 
+FC/FCoE-Netzwerkschnittstelle Status ausgefallen (occumEvtFCLifStatus aus)
+ a| 
+Dar
+ a| 
+Schnittstelle
+ a| 
+Fehler
+
+
+
+ a| 
+Network Interface Failover nicht möglich (ocumEvtLifFailoverNotMögliche)
+ a| 
+Dar
+ a| 
+Schnittstelle
+ a| 
+Warnung
+
+
+
+ a| 
+Netzwerkschnittstelle nicht am Home Port (ocumEvtLifNotAtHomePort)
+ a| 
+Dar
+ a| 
+Schnittstelle
+ a| 
+Warnung
+
+|===
+
+
+== Impact Area: Konfiguration
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Network Interface Route nicht konfiguriert (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Schnittstelle
+ a| 
+Informationsdaten
+
+|===
+
+
+== Impact Area: Performance
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Netzwerkschnittstelle MB/s kritischer Schwellenwert überschritten (ocumNetworkLifMbpsVorfall)
+ a| 
+Vorfall
+ a| 
+Schnittstelle
+ a| 
+Kritisch
+
+
+
+ a| 
+Netzwerkschnittstelle MB/s Warnschwellenwert verletzt(OccumNetworkLifMbpsWarnung)
+ a| 
+Dar
+ a| 
+Schnittstelle
+ a| 
+Warnung
+
+
+
+ a| 
+FC-Netzwerkschnittstelle MB/s kritischer Schwellenwert überschritten (ocumFcpLifMbpsVorfall)
+ a| 
+Vorfall
+ a| 
+Schnittstelle
+ a| 
+Kritisch
+
+
+
+ a| 
+FC-Netzwerkschnittstelle MB/s Warnschwellenwert verletzt(OccumFcpLifMbpsWarnung)
+ a| 
+Dar
+ a| 
+Schnittstelle
+ a| 
+Warnung
+
+
+
+ a| 
+NVMf FC-Netzwerkschnittstelle MB/s Critical Threshold Überlaufen(ocumNvmfcLifMbpsVorfall)
+ a| 
+Vorfall
+ a| 
+Schnittstelle
+ a| 
+Kritisch
+
+
+
+ a| 
+NVMf FC-Netzwerkschnittstelle MB/s Warnschwellenwert verletzt(ocumNvmfcLifMbpsWarnung)
+ a| 
+Dar
+ a| 
+Schnittstelle
+ a| 
+Warnung
+
+|===

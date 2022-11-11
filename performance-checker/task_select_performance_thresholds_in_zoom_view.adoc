@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/task_select_performance_thresholds_in_zoom_view.html 
+sidebar: sidebar 
+keywords: select, performance, thresholds, counter, charts, zoom, view 
+summary: Das Anwenden von Schwellenwerten in der Zoom-Ansicht von Zählerdiagrammen bietet eine detaillierte Ansicht der Vorkommen von Performance-Schwellenwerten. Auf diese Weise können Sie Schwellenwerte anwenden oder entfernen und die Ergebnisse sofort anzeigen. Dies kann bei der Entscheidung hilfreich sein, ob die Fehlerbehebung Ihr nächster Schritt sein sollte. 
+---
+= Auswählen von Leistungsschwellenwerten in der Zoom-Ansicht der Zählerdiagramme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Anwenden von Schwellenwerten in der Zoom-Ansicht von Zählerdiagrammen bietet eine detaillierte Ansicht der Vorkommen von Performance-Schwellenwerten. Auf diese Weise können Sie Schwellenwerte anwenden oder entfernen und die Ergebnisse sofort anzeigen. Dies kann bei der Entscheidung hilfreich sein, ob die Fehlerbehebung Ihr nächster Schritt sein sollte.
+
+Durch Auswahl von Schwellenwerten in der Zoom-Ansicht für Zählerdiagramme können Sie präzise Daten zu Ereignissen mit Leistungsschwellenwerten anzeigen. Sie können jeden Schwellenwert anwenden, der im Bereich *Richtlinien* der Zoom-Ansicht der Zählerdiagramme angezeigt wird.
+
+Es kann jeweils nur eine Richtlinie auf das Objekt in der Zoom-Ansicht der Zählerdiagramme angewendet werden.
+
+.Schritt
+. Wählen Sie das aus oder heben Sie die Auswahl auf image:../media/eye_icon.gif[""] Das ist einer Richtlinie zugeordnet.
++
+Der ausgewählte Schwellenwert wird auf die Zoom-Ansicht der Zählerdiagramme angewendet. Kritische Schwellenwerte werden als rote Linie angezeigt. Warnschwellenwerte werden als gelbe Linie angezeigt.
+
+

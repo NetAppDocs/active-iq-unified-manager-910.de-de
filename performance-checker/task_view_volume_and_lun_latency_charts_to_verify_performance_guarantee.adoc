@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/task_view_volume_and_lun_latency_charts_to_verify_performance_guarantee.html 
+sidebar: sidebar 
+keywords: view, volume, lun, latency, charts, verify, performance, guarantee 
+summary: Sie können die Volumes und LUNs, die Sie im Programm „Performance Guarantee“ abonniert haben, um zu überprüfen, dass die Latenz nicht das Niveau überschritten hat, das Sie garantiert worden sind. 
+---
+= Anzeigen der Latenzdiagramme von Volumes und LUNs zur Überprüfung der Performance-Garantie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Volumes und LUNs, die Sie für das Programm „`Performance Guarantee`“ abonniert haben, anzeigen, um zu überprüfen, dass die Latenz den Wert nicht überschritten hat, den Sie garantiert haben.
+
+Die Garantie für Latenz-Performance beträgt eine Millisekunde pro Operation, der nicht überschritten werden sollte. Er basiert auf einem stündlichen Durchschnitt und nicht auf dem Standardzeitraum der Performance-Erfassung in fünf Minuten.
+
+.Schritte
+. Wählen Sie in der *Performance: Alle Volumes* Ansicht oder *Performance: Alle LUNs* Ansicht den gewünschten Volume oder LUN aus.
+. Wählen Sie auf der Seite *Performance Explorer* für das ausgewählte Volumen oder die ausgewählte LUN aus dem Auswahlfeld *Statistik in* aus.
++
+Die horizontale Linie im Latenzdiagramm zeigt eine reibungslosere Linie, da die 5-Minuten-Sammlungen durch den Durchschnitt pro Stunde ersetzt werden.
+
+. Wenn Sie andere Volumes auf demselben Aggregat haben, die unter der Performance-Garantie liegen, können Sie diese Volumes hinzufügen, um den Latenzwert im gleichen Diagramm anzuzeigen.
+

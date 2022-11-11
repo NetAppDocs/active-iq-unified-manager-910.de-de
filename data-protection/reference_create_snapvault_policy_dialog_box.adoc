@@ -1,0 +1,78 @@
+---
+permalink: data-protection/reference_create_snapvault_policy_dialog_box.html 
+sidebar: sidebar 
+keywords: create, snapvault, policy, dialog box 
+summary: Im Dialogfeld SnapVault-Richtlinie erstellen können Sie eine Richtlinie erstellen, in der Sie die Priorität für SnapVault-Transfers festlegen können. Sie verwenden Richtlinien, um die Effizienz der Übertragungen vom primären zum sekundären Volume zu maximieren. 
+---
+= Dialogfeld SnapVault-Richtlinie erstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld SnapVault-Richtlinie erstellen können Sie eine Richtlinie erstellen, in der Sie die Priorität für SnapVault-Transfers festlegen können. Sie verwenden Richtlinien, um die Effizienz der Übertragungen vom primären zum sekundären Volume zu maximieren.
+
+* *Zielcluster*
++
+Der Name des Clusters, den Sie im Dialogfeld Schutz konfigurieren auf der Registerkarte SnapVault ausgewählt haben.
+
+* *Ziel-SVM*
++
+Der Name der SVM, die Sie im Dialogfeld Schutz konfigurieren auf der Registerkarte SnapVault ausgewählt haben.
+
+* *Policy Name*
++
+Der Name, den Sie für die neue Richtlinie angeben. Richtliniennamen können aus den Zeichen A bis Z, a bis z, 0 bis 9, Punkt (.), Bindestrich (-), Und Unterstrich (_).
+
+* * Priorität Übertragen*
++
+Die Priorität, mit der die Übertragung ausgeführt wird. Sie können entweder Normal oder Niedrig auswählen. Beziehungen mit Richtlinien übertragen, die eine normale Übertragungspriorität festlegen, die vor den Richtlinien ausgeführt wird, die eine niedrige Übertragungspriorität angeben. Die Standardeinstellung ist Normal.
+
+* *Kommentar*
++
+Ein optionales Feld, in das Sie bis zu 255 Zeichen zur SnapVault-Richtlinie hinzufügen können.
+
+* *Zugriffszeit Ignorieren*
++
+Gibt an, ob inkrementelle Transfers für Dateien ignoriert werden, für die nur die Zugriffszeit geändert wurde.
+
+* *Replikationbeschriftung*
++
+Führt in einer Tabelle die Regeln auf, die mit von ONTAP ausgewählten Snapshot Kopien verknüpft sind und über eine bestimmte Replizierungsbeschriftung in einer Richtlinie verfügen. Folgende Informationen und Maßnahmen stehen ebenfalls zur Verfügung:
+
++
+** Befehlsschaltflächen
++
+Mit den Befehlsschaltflächen können Sie die folgenden Aktionen ausführen:
+
++
+*** Zusatz
++
+Ermöglicht es Ihnen, ein Etikett und eine Aufbewahrungsanzahl für Snapshot Kopien zu erstellen.
+
+*** Anzahl Der Aufbewahrung Bearbeiten
++
+Ermöglicht Ihnen, die Anzahl der Aufbewahrung eines vorhandenen Snapshot-Kopieretiketts zu ändern. Der Aufbewahrungszähler muss eine Zahl zwischen 1 und 251 sein. Die Summe aller Aufbewahrungszählungen für alle Regeln darf 251 nicht überschreiten.
+
+*** Löschen
++
+Ermöglicht Ihnen das Löschen eines vorhandenen Etiketts für Snapshot Kopien.
+
+
+
+** Label Für Snapshot Kopie
++
+Zeigt den Namen der Snapshot Kopie an. Wenn Sie ein oder mehrere Volumes mit derselben lokalen Snapshot-Kopie-Richtlinie auswählen, wird ein Eintrag für jedes Etikett in der Richtlinie angezeigt. Wenn Sie mehrere Volumes auswählen, die zwei oder mehr lokale Snapshot-Kopie-Richtlinien haben, werden in der Tabelle alle Labels aus allen Richtlinien angezeigt
+
+** Zeitplan
++
+Zeigt den Zeitplan an, der mit jedem Etikett der Snapshot Kopie verknüpft ist. Wenn eine Bezeichnung mehr als einen Zeitplan enthält, werden die Zeitpläne für diese Bezeichnung in einer kommagetrennten Liste angezeigt. Wenn Sie mehrere Volumes mit demselben Etikett, jedoch mit unterschiedlichen Zeitplänen auswählen, wird im Zeitplan „`verschiedene`“ angezeigt, um anzugeben, dass mehr als ein Zeitplan den ausgewählten Volumes zugeordnet ist.
+
+** Anzahl Der Zielaufbewahrungsziele
++
+Zeigt die Anzahl der Snapshot Kopien mit dem angegebenen Label an, die auf dem sekundären SnapVault aufbewahrt werden. Aufbewahrungszählungen für Etiketten mit mehreren Zeitplänen zeigen die Summe der Aufbewahrungsanzahl für jedes Etikett und jedes Terminplanpaar an. Wenn Sie mehrere Volumes mit zwei oder mehr lokalen Snapshot-Kopie-Richtlinien auswählen, ist die Anzahl der Aufbewahrung leer.
+
+
+
+

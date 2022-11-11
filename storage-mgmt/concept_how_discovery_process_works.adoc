@@ -1,0 +1,28 @@
+---
+permalink: storage-mgmt/concept_how_discovery_process_works.html 
+sidebar: sidebar 
+keywords: cluster, discovery, process, works 
+summary: Nachdem Sie Unified Manager einen Cluster hinzugefügt haben, erkennt der Server die Cluster-Objekte und fügt sie seiner Datenbank hinzu. Wenn Sie verstehen, wie der Erkennungsprozess funktioniert, können Sie die Cluster und deren Objekte Ihres Unternehmens verwalten. 
+---
+= Funktionsweise der Cluster-Erkennung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie Unified Manager einen Cluster hinzugefügt haben, erkennt der Server die Cluster-Objekte und fügt sie seiner Datenbank hinzu. Wenn Sie verstehen, wie der Erkennungsvorgang funktioniert, können Sie die Cluster und ihre Objekte im Unternehmen managen.
+
+Das Monitoring-Intervall zum Erfassen von Cluster-Konfigurationsinformationen beträgt 15 Minuten. Beispielsweise dauert es nach dem Hinzufügen eines Clusters 15 Minuten, bis die Cluster-Objekte in der UI von Unified Manager angezeigt werden. Dieser Zeitrahmen trifft auch zu, wenn Sie die Änderungen an einem Cluster vornehmen. Wenn Sie beispielsweise einer SVM in einem Cluster zwei neue Volumes hinzufügen, werden diese neuen Objekte in der UI nach dem nächsten Abfrageintervall bis zu 15 Minuten angezeigt.
+
+Das folgende Image veranschaulicht den Erkennungsvorgang:
+
+image::../media/discovery_process_oc_6_0.gif[Funktionsweise des Erkennungsvorgangs]
+
+Nachdem alle Objekte für ein neues Cluster erkannt wurden, sammelt Unified Manager historische Performance-Daten für die letzten 15 Tage. Diese Statistiken werden mithilfe der Funktionalität zur Datenerfassung erfasst. Diese Funktion bietet Ihnen sofort nach dem Hinzufügen mehr als zwei Wochen Performance-Informationen für einen Cluster. Nach Abschluss des Datenerfassungszyklus werden Cluster-Performance-Daten in Echtzeit standardmäßig alle fünf Minuten erfasst.
+
+[NOTE]
+====
+Da die Sammlung von 15 Tagen Leistungsdaten CPU-intensiv ist, empfiehlt es sich, das Hinzufügen neuer Cluster zu staffeln, so dass Datenkontinuitätssammlung nicht auf zu vielen Clustern zur gleichen Zeit laufen.
+
+====

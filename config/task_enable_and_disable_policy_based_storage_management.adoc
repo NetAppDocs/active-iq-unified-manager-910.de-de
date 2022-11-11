@@ -1,0 +1,78 @@
+---
+permalink: config/task_enable_and_disable_policy_based_storage_management.html 
+sidebar: sidebar 
+keywords: provisioning, performance service levels, storage management, enable, disable, policy-based 
+summary: 'Ab Unified Manager 9.7 können Sie Storage-Workloads (Volumes und LUNs) auf Ihren ONTAP Clustern bereitstellen und diese Workloads auf Basis zugewiesener Performance-Service-Level managen. Diese Funktion ähnelt dem Erstellen von Workloads in ONTAP System Manager und dem Anbinden von QoS-Richtlinien. Bei Anwendung mit Unified Manager können Sie Workloads jedoch über alle Cluster bereitstellen und managen, von denen Ihre Unified Manager Instanz überwacht wird.' 
+---
+= Aktivieren und Deaktivieren des richtlinienbasierten Storage-Managements
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ab Unified Manager 9.7 können Sie Storage-Workloads (Volumes und LUNs) auf Ihren ONTAP Clustern bereitstellen und diese Workloads auf Basis zugewiesener Performance-Service-Level managen. Diese Funktion ähnelt dem Erstellen von Workloads in ONTAP System Manager und dem Anbinden von QoS-Richtlinien. Bei Anwendung mit Unified Manager können Sie Workloads jedoch über alle Cluster bereitstellen und managen, von denen Ihre Unified Manager Instanz überwacht wird.
+
+Sie müssen über die Anwendungsadministratorrolle verfügen.
+
+Diese Option ist standardmäßig aktiviert, Sie können sie jedoch deaktivieren, wenn Sie Workloads nicht über Unified Manager bereitstellen und managen möchten.
+
+Wenn diese Option aktiviert ist, werden viele neue Elemente in der Benutzeroberfläche angezeigt:
+
+[cols="2*"]
+|===
+| Neuer Inhalt | Standort 
+
+
+ a| 
+Eine Seite für die Bereitstellung neuer Workloads
+ a| 
+Verfügbar über *Allgemeine Aufgaben* > *Provisioning*
+
+
+
+ a| 
+Eine Seite zum Erstellen von Service-Level-Richtlinien für die Performance
+ a| 
+Verfügbar über *Einstellungen* > *Richtlinien* > *Leistungsstufen*
+
+
+
+ a| 
+Eine Seite, um Richtlinien zur Performance-Storage-Effizienz zu erstellen
+ a| 
+Erhältlich über *Einstellungen* > *Richtlinien* > *Storage-Effizienz*
+
+
+
+ a| 
+Panels zur Beschreibung Ihrer aktuellen Workload-Performance und Workload-IOPS
+ a| 
+Verfügbar über das Dashboard
+
+|===
+Weitere Informationen zu diesen Seiten und zu dieser Funktion finden Sie in der Online-Hilfe des Produkts.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Funktionseinstellungen*.
+. Deaktivieren oder aktivieren Sie auf der Seite *Feature Settings* die richtlinienbasierte Speicherverwaltung, indem Sie eine der folgenden Optionen auswählen:
++
+[cols="2*"]
+|===
+| Ihr Ziel ist | Dann tun Sie das... 
+
+
+ a| 
+Deaktivieren Sie das richtlinienbasierte Storage-Management
+ a| 
+Bewegen Sie im Fenster *Policy-based Storage Management* die Schieberegler-Taste nach links.
+
+
+
+ a| 
+Richtlinienbasiertes Storage-Management
+ a| 
+Bewegen Sie im Fenster *Policy-based Storage Management* die Schieberegler-Taste nach rechts.
+
+|===
+

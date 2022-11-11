@@ -1,0 +1,24 @@
+---
+permalink: install-linux/concept_requirements_for_install_unified_manager.html 
+sidebar: sidebar 
+keywords: requirements, installing, unified manager 
+summary: Bevor Sie mit der Installation beginnen, stellen Sie sicher, dass der Server, auf dem Unified Manager installiert werden soll, die spezifischen Software-, Hardware-, CPU- und Arbeitsspeicheranforderungen erfüllt. 
+---
+= Anforderungen für die Installation von Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie mit der Installation beginnen, stellen Sie sicher, dass der Server, auf dem Unified Manager installiert werden soll, die spezifischen Software-, Hardware-, CPU- und Arbeitsspeicheranforderungen erfüllt.
+
+NetApp unterstützt keine Änderungen am Applikationscode für Unified Manager. Wenn Sie Sicherheitsmaßnahmen auf den Unified Manager-Server anwenden müssen, sollten Sie diese Änderungen am Betriebssystem vornehmen, auf dem Unified Manager installiert ist.
+
+Weitere Informationen zum Anwenden von Sicherheitsmaßnahmen auf den Unified Manager-Server finden Sie im Knowledge Base-Artikel.
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/Supportability_for_Security_Measures_applied_to_Active_IQ_Unified_Manager_for_Clustered_Data_ONTAP["Unterstützbarkeit von Sicherheitsmaßnahmen für Active IQ Unified Manager für Clustered Data ONTAP"]
+
+*Verwandte Informationen*
+
+https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"]

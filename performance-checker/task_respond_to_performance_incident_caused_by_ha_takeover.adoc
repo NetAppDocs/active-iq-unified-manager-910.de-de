@@ -1,0 +1,47 @@
+---
+permalink: performance-checker/task_respond_to_performance_incident_caused_by_ha_takeover.html 
+sidebar: sidebar 
+keywords: dynamic, performance, event, ha, takeover 
+summary: 'Mit Unified Manager können Sie ein Performance-Ereignis anhand hoher Datenverarbeitung auf einem Cluster Node in einem Hochverfügbarkeitspaar (HA-Paar) untersuchen. Sie können auch Unified Manager verwenden, um den Systemzustand der Nodes zu überprüfen, ob kürzlich entdeckte Systemzustandsereignisse auf den Nodes, die zum Performance-Ereignis beigetragen haben.' 
+---
+= Er reagiert auf ein dynamisches Performance-Ereignis, das durch HA Takeover verursacht wird
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Unified Manager können Sie ein Performance-Ereignis anhand hoher Datenverarbeitung auf einem Cluster Node in einem Hochverfügbarkeitspaar (HA-Paar) untersuchen. Sie können auch Unified Manager verwenden, um den Systemzustand der Nodes zu überprüfen, ob kürzlich entdeckte Systemzustandsereignisse auf den Nodes, die zum Performance-Ereignis beigetragen haben.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+* Es müssen neue, anerkannte oder veraltete Ereignisse für die Leistung vorliegen.
+
+
+.Schritte
+. Rufen Sie die Seite *Ereignisdetails* auf, um Informationen über das Ereignis anzuzeigen.
+. Lesen Sie die *Description*, die die Workloads beschreibt, die an dem Ereignis beteiligt sind, und die Clusterkomponente, die mit einem Konflikt verbunden ist.
++
+Es gibt ein Opfer-Volume, dessen Latenz von der Cluster-Komponente im Konflikt beeinträchtigt wurde. Der Datenverarbeitungs-Node, der alle Workloads vom Partner-Node übernommen hat, ist die Cluster-Komponente im Konflikt. Unter Komponente in Konflikt wird das Symbol für die Datenverarbeitung rot markiert und der Name des Node, der zum Zeitpunkt des Ereignisses die Datenverarbeitung verarbeitet hat, wird in Klammern angezeigt.
+
+. Klicken Sie in der *Beschreibung* auf den Namen des Volumes.
++
+Die Seite Volume Performance Explorer wird angezeigt. Oben auf der Seite, in der Zeile Ereignisse Zeit, ein Symbol für das Ereignis ändern (image:../media/opm_change_icon.gif["Symbol „Ereignis ändern“"]) Gibt die Zeit an, zu der Unified Manager den Start der HA-Übernahme erkannt hat.
+
+. Zeigen Sie den Mauszeiger auf das Änderungsereignis-Symbol für die HA-Übernahme und Details zur HA-Übernahme werden in Hover-Text angezeigt.
++
+Im Latenzdiagramm zeigt ein Ereignis an, dass das ausgewählte Volume aufgrund einer hohen Latenz um die gleiche Zeit wie das HA-Takeover den Performance-Schwellenwert überschritten hat.
+
+. Klicken Sie auf *Zoom View*, um das Latenzdiagramm auf einer neuen Seite anzuzeigen.
+. Wählen Sie im Menü Ansicht die Option *Cluster Components* aus, um die Gesamtlatenz nach Clusterkomponente anzuzeigen.
+. Zeigen Sie mit der Maus auf das Änderungssymbol für den Start des HA-Takeover und vergleichen Sie die Latenz für die Datenverarbeitung mit der gesamten Latenz.
++
+Zum Zeitpunkt der HA-Übernahme betrug die Datenverarbeitung aufgrund der steigenden Workload-Anforderungen am Datenverarbeitungs-Node eine Spitze. Die höhere CPU-Auslastung steigerte die Latenz und löste das Ereignis aus.
+
+. Nach der Behebung des fehlerhaften Knotens führt ONTAP System Manager ein HA-Giveback durch, wodurch die Workloads vom Partner-Node zum festgelegten Node verschoben werden.
+. Nach Abschluss des HA-Giveback. Ermitteln Sie nach der nächsten Konfigurationsermittlung im Unified Manager (ca. 15 Minuten) das Ereignis und den Workload, das durch den HA-Takeover auf der Seite *Event Management* Inventory ausgelöst wurde.
++
+Das durch die HA Übernahme ausgelöste Ereignis weist jetzt einen Status als veraltet auf, sodass das Ereignis gelöst werden kann. Die Latenz der Komponente für die Datenverarbeitung wurde herabgesetzt, wodurch die gesamte Latenz verringert wurde. Der Node, den das ausgewählte Volume jetzt zur Datenverarbeitung verwendet, hat das Ereignis aufgelöst.
+
+

@@ -1,0 +1,28 @@
+---
+permalink: events/concept_what_happens_when_an_event_is_received.html 
+sidebar: sidebar 
+keywords: happens, when, event, received 
+summary: 'Wenn Unified Manager ein Ereignis empfängt, wird es auf der Seite Dashboard, auf der Seite Ereignismanagement-Inventar, auf den Registerkarten Zusammenfassung und Explorer der Seite Cluster/Performance und auf der objektspezifischen Bestandsseite (z. B. auf der Seite Volumes/Integritätsbestand) angezeigt.' 
+---
+= Was passiert, wenn ein Ereignis empfangen wird
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Unified Manager ein Ereignis empfängt, wird es auf der Seite Dashboard, auf der Seite Ereignismanagement-Inventar, auf den Registerkarten Zusammenfassung und Explorer der Seite Cluster/Performance und auf der objektspezifischen Bestandsseite (z. B. auf der Seite Volumes/Integritätsbestand) angezeigt.
+
+Wenn Unified Manager mehrere kontinuierliche Vorkommnisse derselben Clusterkomponente erkennt, werden alle Vorkommnisse als einzelnes Ereignis behandelt und nicht als separate Ereignisse. Die Dauer des Ereignisses wird erhöht, um anzugeben, dass das Ereignis noch aktiv ist.
+
+Je nachdem, wie Sie Einstellungen auf der Seite Alarmkonfiguration konfigurieren, können Sie andere Benutzer über diese Ereignisse benachrichtigen. Die Meldung bewirkt, dass folgende Aktionen ausgelöst werden:
+
+* Eine E-Mail über das Ereignis kann an alle Unified Manager Administrator-Benutzer gesendet werden.
+* Das Ereignis kann an weitere E-Mail-Empfänger gesendet werden.
+* Ein SNMP-Trap kann an den Trap-Empfänger gesendet werden.
+* Ein benutzerdefiniertes Skript kann ausgeführt werden, um eine Aktion auszuführen.
+
+
+Dieser Workflow wird im folgenden Diagramm dargestellt.
+
+image::../media/um_perf_threshold_event_flow.gif[Um perf Schwellwert Ereignisfluss]

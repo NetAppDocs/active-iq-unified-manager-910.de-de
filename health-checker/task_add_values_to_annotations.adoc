@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_add_values_to_annotations.html 
+sidebar: sidebar 
+keywords: add, values, annotations 
+summary: Sie können Annotationen Werte hinzufügen und Speicherobjekte anschließend einem bestimmten Namenwertpaar der Anmerkung zuordnen. Durch das Hinzufügen von Werten zu Annotationen können Sie Storage-Objekte effizienter managen. 
+---
+= Hinzufügen von Werten zu Beschriftungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Annotationen Werte hinzufügen und Speicherobjekte anschließend einem bestimmten Namenwertpaar der Anmerkung zuordnen. Durch das Hinzufügen von Werten zu Annotationen können Sie Storage-Objekte effizienter managen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Sie können vordefinierten Anmerkungen keine Werte hinzufügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage-Management* > *Anmerkungen*.
+. Wählen Sie auf der Seite *Anmerkungen* die Anmerkung aus, zu der Sie einen Wert hinzufügen möchten, und klicken Sie dann im Abschnitt *Werte* auf *Hinzufügen*.
+. Geben Sie im Dialogfeld *Anmerkungswert* einen Wert für die Anmerkung an.
++
+Der von Ihnen angegebene Wert muss für die ausgewählte Anmerkung eindeutig sein.
+
+. Klicken Sie Auf *Hinzufügen*.
+

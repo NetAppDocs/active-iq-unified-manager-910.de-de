@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/task_identify_shark_workloads_involved_in_performance_event.html 
+sidebar: sidebar 
+keywords: identify, shark workloads, involved, dynamic, performance, event 
+summary: In Unified Manager können Sie ermitteln, welche Workloads die höchste Nutzungsabweichung einer Storage-Komponente aufweisen. Anhand der Identifizierung dieser Workloads können Sie ermitteln, ob diese Workloads in ein weniger ausgelasttes Cluster verschoben werden sollen. 
+---
+= Erkennen von Haifischlasten, die an einem dynamischen Performance-Ereignis beteiligt sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In Unified Manager können Sie ermitteln, welche Workloads die höchste Nutzungsabweichung einer Storage-Komponente aufweisen. Anhand der Identifizierung dieser Workloads können Sie ermitteln, ob diese Workloads in ein weniger ausgelasttes Cluster verschoben werden sollen.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+* Es gibt ein neues, anerkanntes oder überholes dynamisches Ereignis für die Leistung.
+
+
+Auf der Seite Ereignisdetails wird eine Liste der benutzerdefinierten und systemdefinierten Workloads angezeigt, die nach der höchsten Nutzung der Komponente oder am stärksten von dem Ereignis betroffen sind. Die Werte basieren auf den Peaks, die Unified Manager bei der Erkennung und letzten Analyse des Ereignisses ermittelt hat.
+
+.Schritte
+. Rufen Sie die Seite *Ereignisdetails* auf, um Informationen über das Ereignis anzuzeigen.
+. Wählen Sie in den Diagrammen Workload-Latenz und Workload-Aktivität *Shark-Workloads* aus.
+. Bewegen Sie den Mauszeiger über die Diagramme, um die obersten benutzerdefinierten Workloads anzuzeigen, die sich auf die Komponente auswirken, und den Namen des Haifischarbeitslasts.
+

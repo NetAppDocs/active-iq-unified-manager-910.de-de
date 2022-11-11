@@ -1,0 +1,85 @@
+---
+permalink: config/reference_system_configuration_menu.html 
+sidebar: sidebar 
+keywords: system, configuration, menu 
+summary: Über das Menü Systemkonfiguration können Sie Ihre virtuelle Appliance verwalten, indem Sie verschiedene Optionen angeben, z. B. den Serverstatus anzeigen und die virtuelle Maschine neu starten und herunterfahren. 
+---
+= Menü Systemkonfiguration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über das Menü Systemkonfiguration können Sie Ihre virtuelle Appliance verwalten, indem Sie verschiedene Optionen angeben, z. B. den Serverstatus anzeigen und die virtuelle Maschine neu starten und herunterfahren.
+
+[NOTE]
+====
+Wenn Unified Manager auf einem Linux- oder Microsoft-Windows-System installiert ist, steht in diesem Menü nur die Option „`Restore from a Unified Manager Backup`“ zur Verfügung.
+
+====
+Folgende Menüoptionen stehen zur Verfügung:
+
+* *Serverstatus Anzeigen*
++
+Zeigt den aktuellen Serverstatus an. Die Statusoptionen umfassen „Ausführen“ und „nicht ausgeführt“.
+
++
+Wenn der Server nicht ausgeführt wird, müssen Sie sich möglicherweise an den technischen Support wenden.
+
+* *Virtuelle Maschine Neu Starten*
++
+Startet die virtuelle Maschine neu und stoppt alle Dienste. Nach dem Neustart werden die virtuelle Maschine und die Dienste neu gestartet.
+
+* *Virtuelle Maschine Herunterfahren*
++
+Fährt die virtuelle Maschine herunter und stoppt alle Dienste.
+
++
+Sie können diese Option nur über die Virtual Machine-Konsole auswählen.
+
+* *Ändern <angemeldeter Benutzer> Benutzerkennwort*
++
+Ändert das Kennwort des aktuell angemeldeten Benutzers, der nur der Wartungbenutzer sein kann.
+
+* *Größe Der Datenfestplatte Erhöhen*
++
+Vergrößert die Größe der Datenfestplatte (Festplatte 3) in der virtuellen Maschine.
+
+* *Größe Des Swap-Datenträgers Erhöhen*
++
+Vergrößert die Größe der Swap-Festplatte (Festplatte 2) in der virtuellen Maschine.
+
+* *Zeitzone Ändern*
++
+Ändert die Zeitzone an Ihren Standort.
+
+* *NTP Server ändern*
++
+Ändert die NTP-Server-Einstellungen, z. B. IP-Adresse oder vollqualifizierter Domain-Name (FQDN).
+
+* *NTP Service ändern*
++
+Wechselt zwischen dem `ntp` Und `systemd-timesyncd` Services:
+
+* *Wiederherstellen aus einem Unified Manager Backup*
++
+Stellt die Unified Manager Datenbank- und Konfigurationseinstellungen aus einer zuvor gesicherten Version wieder her.
+
+* *Serverzertifikat Zurücksetzen*
++
+Setzt das Sicherheitszertifikat des Servers zurück.
+
+* *Hostname ändern*
++
+Ändert den Namen des Hosts, auf dem die virtuelle Appliance installiert ist.
+
+* *Zurück*
++
+Beendet das Menü Systemkonfiguration und kehrt zum Hauptmenü zurück.
+
+* *Ausgang*
++
+Beendet das Menü der Wartungskonsole.
+
+

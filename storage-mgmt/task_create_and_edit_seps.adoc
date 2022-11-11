@@ -1,0 +1,59 @@
+---
+permalink: storage-mgmt/task_create_and_edit_seps.html 
+sidebar: sidebar 
+keywords: create, edit, storage, efficiency, policies 
+summary: Wenn die System-definierten Storage-Effizienzrichtlinien nicht Ihren Workload-Anforderungen entsprechen, können Sie Ihre eigenen Storage-Effizienzrichtlinien erstellen, die für Ihre Workloads optimiert sind. 
+---
+= Erstellung und Bearbeitung von Storage-Effizienz-Richtlinien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn die System-definierten Storage-Effizienzrichtlinien nicht Ihren Workload-Anforderungen entsprechen, können Sie Ihre eigenen Storage-Effizienzrichtlinien erstellen, die für Ihre Workloads optimiert sind.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Anwendungsadministratorrolle verfügen.
+* Der Name der Storage Efficiency Policy muss eindeutig sein. Sie können die folgenden reservierten Schlüsselwörter nicht verwenden:
++
+`High`, `Low`, `Unassigned`, `Learning`, `Idle`, `Default`, und `None`.
+
+
+
+Sie können benutzerdefinierte Storage-Effizienz-Richtlinien über die Seite Storage-Effizienz-Richtlinien erstellen und bearbeiten, indem Sie die Merkmale definieren, die Sie für die Applikationen benötigen, die auf den Storage zugreifen.
+
+[NOTE]
+====
+Sie können eine Storage-Effizienz-Richtlinie nicht ändern, wenn sie derzeit einem Workload zugewiesen ist.
+
+====
+.Schritte
+. Wählen Sie im linken Navigationsbereich unter *Einstellungen* *Richtlinien* > *Storage-Effizienz* aus.
+. Klicken Sie auf der Seite *Storage Efficiency Policies* auf die entsprechende Schaltfläche, je nachdem, ob Sie eine neue Storage Efficiency Policy erstellen möchten oder ob Sie eine vorhandene Storage Efficiency Policy bearbeiten möchten.
++
+|===
+| An... | Führen Sie die folgenden Schritte aus... 
+
+
+ a| 
+Erstellen Sie eine neue Storage-Effizienz-Richtlinie
+ a| 
+Klicken Sie Auf *Hinzufügen*
+
+
+
+ a| 
+Bearbeiten Sie eine vorhandene Richtlinie zur Storage-Effizienz
+ a| 
+Wählen Sie eine vorhandene Richtlinie zur Storage-Effizienz aus, und klicken Sie auf *Bearbeiten*
+
+|===
++
+Die Seite zum Hinzufügen oder Bearbeiten einer Richtlinie für die Storage-Effizienz wird angezeigt.
+
+. Passen Sie die Storage-Effizienz-Richtlinie an, indem Sie die Merkmale der Storage-Effizienz angeben. Klicken Sie dann auf *Absenden*, um die Storage-Effizienz-Richtlinie zu speichern.
+
+
+Sie können die neue oder geänderte Storage-Effizienzrichtlinie auf Workloads (LUNs, NFS File Shares, CIFS Shares) auf der Seite Workloads oder bei der Bereitstellung eines neuen Workloads anwenden.

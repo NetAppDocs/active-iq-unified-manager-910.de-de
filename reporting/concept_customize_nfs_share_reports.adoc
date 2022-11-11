@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_nfs_share_reports.html 
+sidebar: sidebar 
+keywords: customize, nfs, share, reports 
+summary: Sie können NFS-Share-Berichte anpassen, um Informationen zu NFS-Exportrichtlinien und Regeln für Volumes auf Ihren Storage-Systemen zu analysieren. Sie können Berichte beispielsweise anpassen, um Volumes mit nicht zugänglichen Mount-Pfaden und Volumes mit der Standard-Exportrichtlinie anzuzeigen. 
+---
+= Anpassen von Berichten zur NFS-Freigabe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können NFS-Share-Berichte anpassen, um Informationen zu NFS-Exportrichtlinien und Regeln für Volumes auf Ihren Storage-Systemen zu analysieren. Sie können Berichte beispielsweise anpassen, um Volumes mit nicht zugänglichen Mount-Pfaden und Volumes mit der Standard-Exportrichtlinie anzuzeigen.

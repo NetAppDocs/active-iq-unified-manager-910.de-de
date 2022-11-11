@@ -1,0 +1,182 @@
+---
+permalink: api-automation/concept_ontap_troubleshooting_workflow.html 
+sidebar: sidebar 
+keywords: troubleshoot, ontap, volumes, gateway, api 
+summary: Die Gateway-APIs dienen als Gateway zum Aufrufen von ONTAP APIs, mit denen Informationen über Ihre ONTAP Storage-Objekte abgefragt und Korrekturmaßnahmen ergriffen werden, um die gemeldeten Probleme anzugehen. 
+---
+= Fehlerbehebung bei ONTAP Volumes mithilfe von Gateway-APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Gateway-APIs dienen als Gateway zum Aufrufen von ONTAP APIs, mit denen Informationen über Ihre ONTAP Storage-Objekte abgefragt und Korrekturmaßnahmen ergriffen werden, um die gemeldeten Probleme anzugehen.
+
+Dieser Workflow greift auf einen Beispielfall zurück, in dem ein Ereignis angehoben wird, wenn ein ONTAP-Volume fast seine Kapazität erreicht. Im Workflow wird außerdem gezeigt, wie Sie das Problem beheben können, indem Sie eine Kombination aus Active IQ Unified Manager und ONTAP REST APIs aufrufen.
+
+[NOTE]
+====
+Bevor Sie die Workflow-Schritte ausführen, stellen Sie Folgendes sicher:
+
+* Sie kennen die Gateway-APIs und deren Nutzung. Weitere Informationen finden Sie im Abschnitt „`Gateway APIs`“.
++
+link:concept_gateway_apis.html["Zugriff auf ONTAP-APIs über Proxy-Zugriff"]
+
+* Sie sind sich der Nutzung von ONTAP REST-APIs bewusst. Informationen zur Verwendung von ONTAP REST-APIs finden Sie unterhttps://docs.netapp.com/us-en/ontap-automation/index.html["Dokumentation zur ONTAP-Automatisierung"].
+* Sie sind ein Anwendungsadministrator.
+* Das Cluster, auf dem Sie die REST-API-Vorgänge ausführen möchten, wird von ONTAP 9.5 oder höher unterstützt, und das Cluster wird Unified Manager über HTTPS hinzugefügt.
+
+
+====
+Das folgende Diagramm zeigt jeden Schritt im Workflow zur Fehlerbehebung bei der Verwendung von ONTAP Volume-Kapazität.
+
+image::../media/api_gateway_ontap_workflow.gif[ONTAP-Workflow des api-Gateways]
+
+Der Workflow umfasst die Anrufinungspunkte sowohl von Unified Manager als auch von ONTAP REST-APIs.
+
+. Notieren Sie den Volume-Namen aus dem Ereignis, um die Kapazitätsauslastung des Volume zu benachrichtigen.
+. Abfragen Sie das Volume durch Ausführen der folgenden Unified Manager-API, indem Sie den Volume-Namen als Wert im Name-Parameter verwenden.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Rechenzentrum
+ a| 
+GET
+ a| 
+`/datacenter/storage/volumes`
+
+|===
+. Abrufen der Cluster-UUID und Volume-UUID von der Ausgabe.
+. Navigieren Sie in der Web-UI von Unified Manager zu *Allgemein* > *Funktionseinstellungen* > *API Gateway*, um zu überprüfen, ob die API-Gateway-Funktion aktiviert ist. Sofern sie nicht aktiviert ist, können Sie die APIs aus der Kategorie Gateway nicht aufrufen. Aktivieren Sie die Funktion, wenn sie deaktiviert ist.
+. Verwenden Sie die Cluster-UUID zum Ausführen der ONTAP-API /`storage/volumes/{uuid}` Über das API-Gateway. Die Abfrage gibt die Volume-Details zurück, wenn die Volume-UUID als API-Parameter übergeben wird.
++
+Zur Ausführung der ONTAP-APIs über das API-Gateway werden die Anmeldeinformationen für den Unified Manager zur internen Authentifizierung übergeben. Sie müssen keinen zusätzlichen Authentifizierungsschritt für den individuellen Cluster-Zugriff ausführen.
+
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Unified Manager: Das Gateway
+
+ONTAP: Storage
+ a| 
+GET
+ a| 
+Gateway-API: `/gateways/\{uuid}/\{path}`
+
+ONTAP-API: `/storage/volumes/\{uuid}`
+
+|===
++
+[NOTE]
+====
+In /Gateways/\{UUID}/\{Path} muss der Wert für \{UUID} durch die Cluster-UUID ersetzt werden, für die der REST-Vorgang ausgeführt werden soll. \{path} muss durch die ONTAP REST-URL /Storage/Volumes/\{UUID} ersetzt werden.
+
+====
++
+Die angehängte URL lautet: `/gateways/\{cluster_uuid}/storage/volumes/\{volume_uuid}`
+
++
+Beim Ausführen des VORGANGS GET lautet die generierte URL: `GEThttps://<hostname\>/api/gateways/<cluster_UUID\>/storage/volumes/\{volume_uuid\}`
+
++
+*Befehl zum Curl-Beispiel*
+
++
+[listing]
+----
+curl -X GET "https://<hostname>/api/gateways/1cd8a442-86d1-11e0-ae1c-9876567890123/storage/volumes/028baa66-41bd-11e9-81d5-00a0986138f7"
+-H "accept: application/hal+json" -H "Authorization: Basic <Base64EncodedCredentials>"
+----
+. Bestimmen Sie von der Ausgabe die zu ergriffende Größe, Nutzung und Abhilfemaßnahme. In diesem Workflow ist die Abhilfemaßnahme die Größe des Volumens.
+. Verwenden Sie die Cluster-UUID, und führen Sie die folgende ONTAP-API über das API-Gateway aus, um die Größe des Volumes zu ändern. Informationen zu den Eingabeparametern für das Gateway und ONTAP APIs finden Sie in Schritt 5.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Unified Manager: Das Gateway
+
+ONTAP: Storage
+ a| 
+PATCH
+ a| 
+Gateway-API: `/gateways/\{uuid}/\{path}`
+
+ONTAP-API: `/storage/volumes/\{uuid}`
+
+|===
++
+[NOTE]
+====
+Zusammen mit der Cluster-UUID und der Volume-UUID müssen Sie einen Wert für den Parameter „Größe“ für die Größenanpassung des Volume eingeben. Stellen Sie sicher, dass Sie den Wert _in Byte_ eingeben. Wenn Sie beispielsweise die Größe eines Volumes von 100 GB auf 120 GB erhöhen möchten, geben Sie am Ende der Abfrage den Wert für die Parametergröße ein: `-d {\"size\": 128849018880}"`
+
+====
++
+*Befehl zum Curl-Beispiel*
+
++
+[listing]
+----
+curl -X PATCH "https://<hostname>/api/gateways/1cd8a442-86d1-11e0-ae1c-9876567890123/storage/volumes/028baa66-41bd-11e9-81d5-00a0986138f7" -H
+    "accept: application/hal+json" -H "Authorization: Basic <Base64EncodedCredentials>" -d
+    {\"size\": 128849018880}"
+----
++
+Die JSON-Ausgabe gibt eine Job-UUID zurück.
+
+. Überprüfen Sie, ob der Job erfolgreich ausgeführt wurde, indem Sie die Job-UUID verwenden. Verwenden Sie die Cluster-UUID und Job-UUID, um die folgende ONTAP-API über das API-Gateway auszuführen. Informationen zu den Eingabeparametern für das Gateway und ONTAP APIs finden Sie in Schritt 5.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Unified Manager: Das Gateway
+
+ONTAP: Cluster
+ a| 
+GET
+ a| 
+Gateway-API: `/gateways/\{uuid}/\{path}`
+
+ONTAP-API: `/cluster/jobs/\{uuid}`
+
+|===
++
+Die zurückgegebenen HTTP-Codes entsprechen den HTTP-Statuscodes der ONTAP REST-API.
+
+. Führen Sie die folgende ONTAP API aus, um die Details des Volumes mit der Größe zu abfragen. Informationen zu den Eingabeparametern für das Gateway und ONTAP APIs finden Sie in Schritt 5.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Unified Manager: Das Gateway
+
+ONTAP: Storage
+ a| 
+GET
+ a| 
+Gateway-API: `/gateways/\{uuid}/\{path}`
+
+ONTAP-API: `/storage/volumes/\{uuid}`
+
+|===
++
+Die Ausgabe zeigt eine erhöhte Lautstärke von 120 GB an.
+
+

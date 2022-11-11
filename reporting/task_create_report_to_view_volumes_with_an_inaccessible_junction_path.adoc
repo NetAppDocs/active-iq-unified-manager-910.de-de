@@ -1,0 +1,40 @@
+---
+permalink: reporting/task_create_report_to_view_volumes_with_an_inaccessible_junction_path.html 
+sidebar: sidebar 
+keywords: create, report, view, volumes, inaccessible, mount, path 
+summary: Sie können einen Bericht erstellen, um nach Volumes zu suchen, die über einen nicht zugänglichen Bereitstellungspfad verfügen. 
+---
+= Erstellen eines Berichts zum Anzeigen von Volumes mit einem nicht zugänglichen Bereitstellungspfad
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um nach Volumes zu suchen, die über einen nicht zugänglichen Bereitstellungspfad verfügen.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht für Volumes zu erstellen, die über einen nicht zugänglichen Mount-Pfad verfügen, und planen Sie dann einen Bericht, der für diese Ansicht erstellt werden soll.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *NFS Shares*.
+. Wählen Sie *ein-/Ausblenden* aus, um alle Spalten zu entfernen, die im Bericht nicht benötigt werden.
+. Klicken Sie auf das Filtersymbol, fügen Sie den folgenden Filter hinzu und klicken Sie dann auf *Filter anwenden*:
++
+** Mount Path Active ist Nein
+
+
+. Speichern Sie die Ansicht mit einem bestimmten Namen, der die Anzeige beschreibt, z. B. „`Volumes mit einem nicht zugänglichen Mount-Pfad`“ und klicken Sie auf das Häkchen (image:../media/blue_check.gif[""]).
+. Klicken Sie auf der Bestandsseite auf die Schaltfläche *geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um eine neue Zeile zur Seite „Berichtszeitpläne“ hinzuzufügen, damit Sie die Terminplaneigenschaften für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtsplan ein, und füllen Sie die anderen Berichtsfelder aus, und klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""]Am Ende der Reihe.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und per E-Mail an die Empfänger gesendet, die unter der angegebenen Häufigkeit aufgeführt sind.
+
+
+
+Anhand der im Bericht gezeigten Ergebnisse möchten Sie möglicherweise die nicht zugänglichen Mount-Pfade korrigieren.

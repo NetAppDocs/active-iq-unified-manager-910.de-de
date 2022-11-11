@@ -1,0 +1,28 @@
+---
+permalink: storage-mgmt/concept_introduction_to_unified_manager_performance_monitoring.html 
+sidebar: sidebar 
+keywords: introduction, active iq unified manager, performance, monitoring 
+summary: 'Active IQ Unified Manager (ehemals OnCommand Unified Manager) bietet Funktionen für das Performance-Monitoring sowie Ursachenanalyse für Systeme, auf denen NetApp ONTAP Software ausgeführt wird.' 
+---
+= Einführung in das Active IQ Unified Manager Performance-Monitoring
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager (ehemals OnCommand Unified Manager) bietet Funktionen für das Performance-Monitoring sowie Ursachenanalyse für Systeme, auf denen NetApp ONTAP Software ausgeführt wird.
+
+Unified Manager hilft Ihnen, Workloads zu identifizieren, die die Cluster-Komponenten überbeanspruchen, und die Performance anderer Workloads auf dem Cluster zu senken. Durch das Definieren von Richtlinien für Performance-Schwellenwerte können Sie auch Maximalwerte für bestimmte Performance-Zähler angeben, sodass Ereignisse bei Überschreitung des Schwellenwerts generiert werden. Unified Manager benachrichtigt Sie über diese Performance-Ereignisse, sodass Korrekturmaßnahmen ergriffen und die Performance wieder auf normalen Niveau des Betriebs wiederhergestellt werden kann. Sie können Ereignisse in der Benutzeroberfläche von Unified Manager anzeigen und analysieren.
+
+Unified Manager überwacht die Performance zweier Workload-Typen:
+
+* Benutzerdefinierte Workloads
++
+Diese Workloads bestehen aus FlexVol Volumes und FlexGroup Volumes, die Sie in dem Cluster erstellt haben.
+
+* Systemdefinierte Workloads
++
+Diese Workloads bestehen aus interner Systemaktivität.
+
+

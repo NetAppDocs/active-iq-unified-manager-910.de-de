@@ -1,0 +1,90 @@
+---
+permalink: data-protection/reference_create_storage_virtual_machine_associations_wizard.html 
+sidebar: sidebar 
+keywords: create, storage, virtual machine, peers, wizard 
+summary: Mit dem Assistenten zum Erstellen von Storage Virtual Machines können Sie Quell- und Ziel-Storage-VM zur Verwendung in SnapMirror- und SnapVault-Sicherungsbeziehungen nutzen. 
+---
+= Storage Virtual Machine Peers Wizard erstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit dem Assistenten zum Erstellen von Storage Virtual Machines können Sie Quell- und Ziel-Storage-VM zur Verwendung in SnapMirror- und SnapVault-Sicherungsbeziehungen nutzen.
+
+
+
+== Wählen Sie Quelle
+
+Im Fenster Quelle auswählen können Sie die Quell- oder primäre Speicher-VM im Speicher-VM-Peer auswählen.
+
+* * Any*
++
+Ermöglicht die Erstellung eines Peer-to-Peer zwischen jeder beliebigen Storage-VM-Quelle zu einer oder mehreren Ziel- oder sekundären Storage-VM. Das heißt, alle bestehenden Storage-VMs, die derzeit gesichert werden müssen, sowie alle zukünftig erstellten Storage-VMs werden mit der angegebenen Ziel-Storage-VM Peering durchgeführt. Beispielsweise kann es sinnvoll sein, dass Applikationen aus verschiedenen Quellen an verschiedenen Standorten auf einer oder mehreren Ziel-Storage-VM an einem Standort gesichert werden.
+
+* *Single*
++
+Ermöglicht es Ihnen, eine bestimmte Quell-Storage-VM mit einer oder mehreren Ziel-Storage-VM abzugleichen. Wenn Sie beispielsweise vielen Clients Storage-Services bereitstellen, deren Daten voneinander getrennt sein müssen, wählen Sie diese Option, um eine bestimmte Storage-VM-Quelle einem bestimmten Storage-VM-Ziel zu zuordnen, das nur diesem Client zugewiesen ist.
+
+* *Keine (Extern)*
++
+Ermöglicht Ihnen die Erstellung einer Verknüpfung zwischen einer Quell-Storage-VM und einem externen flexiblen Volume einer Ziel-Storage-VM.
+
++
+** Storage Virtual Machine
++
+Führt die Namen der verfügbaren Quell-Speicher-VM auf
+
+** Cluster
++
+Listet die Cluster auf, auf denen sich die einzelnen Storage-VMs befinden
+
+
+
+* *Erlauben Sie solche Beziehungen*
++
+Ermöglicht Ihnen die Auswahl des Beziehungstyps für die Zuordnung:
+
++
+** SnapMirror
++
+Gibt eine SnapMirror-Beziehung als Peer-Typ an. Wenn Sie diese Option auswählen, wird die Datenreplikation von den ausgewählten Quellen zu den ausgewählten Zielen aktiviert.
+
+** SnapVault
++
+Gibt eine SnapVault-Beziehung als Peer-Typ an. Wenn Sie diese Option auswählen, werden Backups von den ausgewählten primären Standorten zu den ausgewählten sekundären Standorten aktiviert.
+
+
+
+
+
+
+
+== Wählen Sie Schutzziele
+
+Im Fenster Schutzziele auswählen des Assistenten Erstellen von Speicher-VM-Peers können Sie auswählen, wo die Daten kopiert oder repliziert werden sollen. Sie können einen Peer nur auf einer Ziel-Storage-VM pro Cluster erstellen.
+
+
+
+== Befehlsschaltflächen
+
+Mit den Schaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Weiter*
++
+Sie gelangen zur nächsten Seite des Assistenten.
+
+* *Zurück*
++
+Kehrt zur vorherigen Seite des Assistenten zurück.
+
+* *Fertig*
++
+Wendet Ihre Auswahl an und erstellt die Verknüpfung.
+
+* *Abbrechen*
++
+Legt die Auswahl auf und schließt den Assistenten zum Erstellen von Speicher-VM-Peers.
+
+

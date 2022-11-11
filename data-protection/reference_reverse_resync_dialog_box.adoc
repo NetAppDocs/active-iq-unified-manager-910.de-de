@@ -1,0 +1,64 @@
+---
+permalink: data-protection/reference_reverse_resync_dialog_box.html 
+sidebar: sidebar 
+keywords: reverse, resync, dialog box 
+summary: Wenn eine Sicherungsbeziehung besteht, die beschädigt ist, da das Quell-Volume deaktiviert wurde und das Ziel ein Lese-/Schreib-Volume erstellt wird, kann durch die umgekehrte Resynchronisierung die Richtung der Beziehung rückgängig gemacht werden, so dass das Ziel zur neuen Quelle wird und das Quell-Volume zum neuen Ziel wird. 
+---
+= Dialogfeld „Resync“ umkehren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn eine Sicherungsbeziehung besteht, die beschädigt ist, da das Quell-Volume deaktiviert wurde und das Ziel ein Lese-/Schreib-Volume erstellt wird, kann durch die umgekehrte Resynchronisierung die Richtung der Beziehung rückgängig gemacht werden, so dass das Ziel zur neuen Quelle wird und das Quell-Volume zum neuen Ziel wird.
+
+Wenn ein Notfall das Quellvolume in Ihrer Schutzbeziehung deaktiviert, können Sie das Zielvolume für die Bereitstellung von Daten verwenden, indem Sie es in Lese-/Schreibzugriff konvertieren, während Sie die Quelle reparieren oder ersetzen, die Quelle aktualisieren und die Beziehung wiederherstellen. Wenn Sie einen umgekehrten Neusynchronisierung durchführen, werden Daten auf der Quelle, die neuer als die Daten auf der gemeinsamen Snapshot Kopie sind, gelöscht.
+
+
+
+== Vor der Neusynchronisierung
+
+Zeigt die Quelle und das Ziel einer Beziehung an, bevor eine umgekehrte Resynchronisierung durchgeführt wird.
+
+* *Quellvolumen*
++
+Name und Standort des Quell-Volume vor einer Resynchronisierung
+
+* *Zielvolumen*
++
+Name und Standort des Ziel-Volumes vor einer Resynchronisierung
+
+
+
+
+
+== Nach umgekehrter Resynchronisierung
+
+Zeigt an, was Quelle und Ziel einer Beziehung nach einer Reserve-Resynchronisierung ist.
+
+* *Quellvolumen*
++
+Name und Standort des Quell-Volume nach umgekehrter Resynchronisierung
+
+* *Zielvolumen*
++
+Name und Standort des Ziel-Volumes nach einer umgekehrten Resync-Operation.
+
+
+
+
+
+== Befehlsschaltflächen
+
+Mit den Befehlsschaltflächen können Sie die folgenden Aktionen ausführen:
+
+* *Senden*
++
+Startet die umgekehrte Neusynchronisierung.
+
+* *Abbrechen*
++
+Schließt das Dialogfeld „Resync umkehren“, ohne einen umgekehrten Resync-Vorgang zu initiieren.
+
+

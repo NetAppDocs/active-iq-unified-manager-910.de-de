@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_analyze_events_from_system_defined_performance_thresholds.html 
+sidebar: sidebar 
+keywords: analyze, events, system-defined, performance, thresholds 
+summary: Ereignisse, die aus systemdefinierten Performance-Schwellenwerten generiert werden, geben an, dass ein Performance-Zähler oder eine Gruppe von Performance-Zählern für ein bestimmtes Storage-Objekt den Schwellenwert aus einer systemdefinierten Richtlinie überschritten hat. Dies bedeutet, dass es beim Storage-Objekt, z. B. in einem Aggregat oder Node, zu einem Performance-Problem kommt. 
+---
+= Analyse von Ereignissen aus systemdefinierten Performance-Schwellenwerten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ereignisse, die aus systemdefinierten Performance-Schwellenwerten generiert werden, geben an, dass ein Performance-Zähler oder eine Gruppe von Performance-Zählern für ein bestimmtes Storage-Objekt den Schwellenwert aus einer systemdefinierten Richtlinie überschritten hat. Dies bedeutet, dass es beim Storage-Objekt, z. B. in einem Aggregat oder Node, zu einem Performance-Problem kommt.
+
+Auf der Seite Ereignisdetails können Sie das Leistungsereignis analysieren und bei Bedarf Korrekturmaßnahmen ergreifen, um die Leistung wieder normal zu machen.
+
+[NOTE]
+====
+Systemdefinierte Schwellenwertrichtlinien sind auf Cloud Volumes ONTAP-, ONTAP Edge- oder ONTAP Select-Systemen nicht aktiviert.
+
+====

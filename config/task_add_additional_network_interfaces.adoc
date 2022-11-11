@@ -1,0 +1,50 @@
+---
+permalink: config/task_add_additional_network_interfaces.html 
+sidebar: sidebar 
+keywords: add, network, interfaces 
+summary: Sie können neue Netzwerkschnittstellen hinzufügen, wenn Sie den Netzwerkverkehr trennen müssen. 
+---
+= Hinzufügen von Netzwerkschnittstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können neue Netzwerkschnittstellen hinzufügen, wenn Sie den Netzwerkverkehr trennen müssen.
+
+*Was Sie brauchen*
+
+Sie müssen die Netzwerkschnittstelle der virtuellen Appliance mit vSphere hinzugefügt haben.
+
+Die virtuelle Appliance muss eingeschaltet sein.
+
+[NOTE]
+====
+Dieser Vorgang kann nicht ausgeführt werden, wenn Unified Manager auf Red hat Enterprise Linux oder unter Microsoft Windows installiert ist.
+
+====
+.Schritte
+. Wählen Sie im Hauptmenü der vSphere-Konsole die Option *Systemkonfiguration* > *Betriebssystem neu starten* aus.
++
+Nach dem Neubooten kann die Wartungskonsole die neu hinzugefügte Netzwerkschnittstelle erkennen.
+
+. Öffnen Sie die Wartungskonsole.
+. Wählen Sie *Netzwerkkonfiguration* > *Netzwerkschnittstelle Aktivieren*.
+. Wählen Sie die neue Netzwerkschnittstelle aus, und drücken Sie *Enter*.
++
+Wählen Sie *eth1* und drücken Sie *Enter*.
+
+. Geben Sie *y* ein, um die Netzwerkschnittstelle zu aktivieren.
+. Netzwerkeinstellungen eingeben.
++
+Sie werden aufgefordert, die Netzwerkeinstellungen einzugeben, wenn Sie eine statische Schnittstelle verwenden oder wenn DHCP nicht erkannt wird.
+
++
+Nach Eingabe der Netzwerkeinstellungen kehren Sie automatisch zum Menü *Netzwerkkonfiguration* zurück.
+
+. Wählen Sie *Änderungen Übergeben*.
++
+Sie müssen die Änderungen festlegen, um die Netzwerkschnittstelle hinzuzufügen.
+
+

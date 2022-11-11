@@ -1,0 +1,81 @@
+---
+permalink: reporting/task_create_report_to_view_aggregates_with_most_available_iops.html 
+sidebar: sidebar 
+keywords: create, report, view, aggregates, available, IOPS 
+summary: Dieser Bericht zeigt, welche Aggregate die meisten verfügbaren IOPS pro Aggregattyp haben, auf dem Sie neue Workloads bereitstellen können. 
+---
+= Erstellung eines Berichts, um Aggregate mit den meisten verfügbaren IOPS anzuzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dieser Bericht zeigt, welche Aggregate die meisten verfügbaren IOPS pro Aggregattyp haben, auf dem Sie neue Workloads bereitstellen können.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Gehen Sie wie folgt vor, um eine Health-Ansicht zu öffnen: Alle Volumes, laden Sie die Ansicht in Excel herunter, erstellen Sie ein verfügbares Kapazitätdiagramm, laden Sie die benutzerdefinierte Excel-Datei hoch und planen Sie den Abschlussbericht.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Aggregate*.
+. Wählen Sie aus dem Dropdown-Menü *Ansicht* die Option *Performance: Alle Aggregate* aus.
+. Wählen Sie *ein-/Ausblenden*, um das anzuzeigen `Available IOPS` Und ausblenden Sie die `Cluster FQDN, Inactive Data Reporting,` Und `Threshold Policy` Spalten.
+. Ziehen Sie die und legen Sie sie ab `Available IOPS` Und `Free Capacity` Spalten neben dem `Type` Spalte.
+. Benennen und speichern Sie die benutzerdefinierte Ansicht `Available IOPS Per Aggr.`
+. Wählen Sie *Berichte* > *Excel Herunterladen*.
++
+image::../media/download_excel_menu.png[Excel-Menü herunterladen]
+
++
+Je nach Browser müssen Sie möglicherweise auf *OK* klicken, um die Datei zu speichern.
+
+. Klicken Sie bei Bedarf auf *Bearbeiten aktivieren*.
+. Öffnen Sie in Excel die heruntergeladene Datei.
+. Klicken Sie auf dem Datenblatt oben links auf das kleine Dreieck, um das gesamte Blatt auszuwählen.
+. Wählen Sie auf dem Menüband *Data* im die Option *Sortieren* aus `Sort & Filter area.`
+. Legen Sie die folgenden Sortierstufen fest:
++
+.. Geben Sie die Option * Sortieren nach* als an `Available IOPS` (IOPS), die *Sortieren nach* als `Cell Values,` Und die *Bestellung* als `Largest to Smallest.`
+.. Klicken Sie Auf *Stufe Hinzufügen*.
+.. Geben Sie die Option * Sortieren nach* als an `Type`, Die *Sortieren nach* als `Cell Values,` Und die *Bestellung* als `Z to A.`
+.. Klicken Sie Auf *Stufe Hinzufügen*.
+.. Geben Sie die Option * Sortieren nach* als an `Free Capacity (GB),` Die * Sortieren nach* als `Cell Values,` Und die *Bestellung* als `Largest to Smallest.`
+.. Klicken Sie auf *OK*.
+
+
+. Speichern und schließen Sie die Excel-Datei.
+. Wählen Sie in Unified Manager die Option *Berichte* > *Excel hochladen* aus.
++
+[NOTE]
+====
+Stellen Sie sicher, dass Sie sich in der gleichen Ansicht befinden, in der Sie die Excel-Datei heruntergeladen haben.
+
+====
+. Wählen Sie in diesem Fall die Excel-Datei aus, die Sie geändert haben `performance-aggregates-<date>.xlsx.`
+. Klicken Sie Auf *Offen*.
+. Klicken Sie Auf *Absenden*.
++
+Neben dem Menüpunkt *Berichte* > *Excel hochladen* wird ein Häkchen angezeigt.
+
++
+image::../media/upload_excel.png[Laden Sie Excel hoch]
+
+. Klicken Sie Auf *Geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite Berichtspläne eine neue Zeile hinzuzufügen, damit Sie die Terminplaneigenschaften für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtsplan ein, und füllen Sie die anderen Berichtsfelder aus, und klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""]Am Ende der Reihe.
++
+[NOTE]
+====
+Wählen Sie das Format *XLSX* für den Bericht aus.
+
+====
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und per E-Mail an die Empfänger gesendet, die unter der angegebenen Häufigkeit aufgeführt sind.
+
+
+
+Auf der Grundlage der im Bericht gezeigten Ergebnisse sollten Sie möglicherweise neue Workloads auf den Aggregaten bereitstellen, die über die höchsten verfügbaren IOPS verfügen.

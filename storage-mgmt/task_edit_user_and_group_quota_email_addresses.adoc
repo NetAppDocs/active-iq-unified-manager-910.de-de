@@ -1,0 +1,52 @@
+---
+permalink: storage-mgmt/task_edit_user_and_group_quota_email_addresses.html 
+sidebar: sidebar 
+keywords: edit, user, group, quota, email, addresses 
+summary: 'Sie können die E-Mail-Adressen basierend auf den mit Clustern verbundenen Benutzerkontingenten, Storage Virtual Machines (SVMs), Volumes, qtrees, Benutzern oder Benutzergruppen ändern. Sie können die E-Mail-Adresse ändern, wenn Sie die E-Mail-Adresse überschreiben möchten, die durch Regeln generiert wurde, die im Dialogfeld „Regeln zum Generieren von Benutzer- und Gruppenkontingente-E-Mail-Adresse“ angegeben sind.' 
+---
+= Bearbeiten der E-Mail-Adressen für Benutzer- und Gruppenkontingente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die E-Mail-Adressen basierend auf den mit Clustern verbundenen Benutzerkontingenten, Storage Virtual Machines (SVMs), Volumes, qtrees, Benutzern oder Benutzergruppen ändern. Sie können die E-Mail-Adresse ändern, wenn Sie die E-Mail-Adresse überschreiben möchten, die durch Regeln generiert wurde, die im Dialogfeld „Regeln zum Generieren von Benutzer- und Gruppenkontingente-E-Mail-Adresse“ angegeben sind.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+* Sie müssen den geprüft haben link:reference_rules_to_generate_user_and_group_quota.html["Richtlinien zur Erstellung von Regeln"].
+
+
+Wenn Sie eine E-Mail-Adresse bearbeiten, gelten die Regeln zur Generierung der Benutzer- und Gruppenkontingente-E-Mail-Adressen nicht mehr für das Kontingent. Damit Benachrichtigungen an die von den angegebenen Regeln generierte E-Mail-Adresse gesendet werden können, müssen Sie die E-Mail-Adresse löschen und die Änderung speichern.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *SVMs*.
+. Wählen Sie in der Ansicht *Systemzustand: Alle Storage VMs* eine SVM aus und klicken Sie dann auf die Registerkarte *Benutzer- und Gruppenquoten*.
+. Klicken Sie unter der Zeile der Registerkarten auf *E-Mail-Adresse bearbeiten*.
+. Führen Sie im Dialogfeld *E-Mail-Adresse bearbeiten* die entsprechende Aktion aus:
++
+|===
+| Wenn... | Dann... 
+
+
+ a| 
+Sie möchten, dass Benachrichtigungen an die E-Mail-Adresse gesendet werden, die von den angegebenen Regeln generiert wurde
+ a| 
+.. Löschen Sie die E-Mail-Adresse im Feld * E-Mail-Adresse*.
+.. Klicken Sie Auf *Speichern*.
+.. Aktualisieren Sie den Browser, indem Sie F5 drücken, um das Dialogfeld E-Mail-Adresse bearbeiten neu zu laden. Die durch die angegebene Regel generierte E-Mail-Adresse wird im Feld * E-Mail-Adresse* angezeigt.
+
+
+
+
+ a| 
+Sie möchten Benachrichtigungen an eine bestimmte E-Mail-Adresse senden
+ a| 
+.. Ändern Sie die E-Mail-Adresse im Feld * E-Mail-Adresse*.
+.. Klicken Sie Auf *Speichern*. Die Regeln zur Generierung der Benutzer- und Gruppenkontingente-E-Mail-Adressen gelten nicht mehr für die Quote.
+
+
+|===
+

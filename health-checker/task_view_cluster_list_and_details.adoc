@@ -1,0 +1,32 @@
+---
+permalink: health-checker/task_view_cluster_list_and_details.html 
+sidebar: sidebar 
+keywords: view, cluster list, details 
+summary: 'Sie können die Ansicht Health: All Clusters verwenden, um Ihr Inventar der Cluster anzuzeigen. Die Kapazität: Alle Cluster-Ansichten ermöglichen die Anzeige zusammengefasste Informationen zur Storage-Kapazität und Auslastung in allen Clustern.' 
+---
+= Anzeigen der Cluster-Liste und der Details
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Ansicht Health: All Clusters verwenden, um Ihr Inventar der Cluster anzuzeigen. Die Kapazität: Alle Cluster-Ansichten ermöglichen die Anzeige zusammengefasste Informationen zur Storage-Kapazität und Auslastung in allen Clustern.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+
+Sie können auch Details für einzelne Cluster anzeigen, beispielsweise für den Zustand des Clusters, die Kapazität, die Konfiguration, LIFs, Nodes, Und Festplatten in diesem Cluster mithilfe der Seite „Cluster/Health Details“.
+
+Die Details in der Ansicht Health: All Clusters, Capacity: All Clusters und die Seite Cluster / Health Details helfen Ihnen bei der Planung Ihres Speichers. Vor dem Bereitstellen eines neuen Aggregats können Sie beispielsweise aus der Ansicht Systemzustand: Alle Cluster einen bestimmten Cluster auswählen und Kapazitätsdetails abrufen, um zu ermitteln, ob der Cluster über den erforderlichen Speicherplatz verfügt.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Cluster*.
+. Wählen Sie im Menü Ansicht die Ansicht *Systemzustand: Alle Cluster* aus, um die Gesundheitsinformationen anzuzeigen, oder die Ansicht *Kapazität: Alle Cluster*, um Details zur Speicherkapazität und Auslastung in allen Clustern anzuzeigen.
+. Klicken Sie auf den Namen eines Clusters, um die vollständigen Details des Clusters auf der Seite *Cluster / Health* Details anzuzeigen.
+
+
+*Verwandte Informationen*
+
+link:../health-checker/reference_health_cluster_details_page.html["„Cluster/Systemzustand“-Details"]

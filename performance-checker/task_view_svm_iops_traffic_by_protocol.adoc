@@ -1,0 +1,35 @@
+---
+permalink: performance-checker/task_view_svm_iops_traffic_by_protocol.html 
+sidebar: sidebar 
+keywords: view, svm, iops, traffic, protocol 
+summary: Sie können detaillierte IOPS-Informationen für eine SVM über die Seite „Performance/SVM Explorer“ anzeigen. Das Zählerdiagramm „IOPS – Zählerdiagramm“ zeigt die gesamte IOPS-Auslastung auf der SVM. Das Zählerdiagramm „IOPS – Aufschlüsselung Sie dient zur Ermittlung der Auswirkungen von Lese-, Schreib- und anderen IOPS auf die SVM. 
+---
+= Anzeigen von SVM-IOPS-Traffic nach Protokoll
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können detaillierte IOPS-Informationen für eine SVM über die Seite „Performance/SVM Explorer“ anzeigen. Das Zählerdiagramm „IOPS – Zählerdiagramm“ zeigt die gesamte IOPS-Auslastung auf der SVM. Das Zählerdiagramm „IOPS – Aufschlüsselung Sie dient zur Ermittlung der Auswirkungen von Lese-, Schreib- und anderen IOPS auf die SVM.
+
+Außerdem zeigt das Diagramm „IOPS – Protokolle“ einen detaillierten Vergleich des IOPS-Datenverkehrs für jedes auf der SVM zu verwendenden Protokoll. Folgende Protokolle sind verfügbar:
+
+* CIFS
+* NFS
+* FCP
+* ISCSI
+* NVMe
+
+
+.Schritte
+. Wählen Sie auf der Seite *Performance/SVM Explorer* für Ihre ausgewählte SVM aus dem IOPS-Diagramm im Dropdown-Menü die Option *Protokolle* aus.
++
+Das Diagramm IOPS – Protokolle wird angezeigt.
+
+. Um eine größere Version des Diagramms anzuzeigen, wählen Sie *Zoom-Ansicht*.
++
+Das erweiterte IOPS-Protokoll-Vergleichstabelle wird angezeigt. Sie können den Vergleich einschränken, indem Sie die Auswahl aufheben oder auswählen image:../media/eye_icon.gif[""] Dies ist mit einem Protokoll verbunden.
+
+. Um die spezifischen Werte anzuzeigen, bewegen Sie den Cursor in den Diagrammbereich eines der beiden Diagramme, um das Popup-Fenster anzuzeigen.
+

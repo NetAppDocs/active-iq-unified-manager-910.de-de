@@ -1,0 +1,59 @@
+---
+permalink: performance-checker/concept_understand_um_recommendations_to_tier_data_to_cloud.html 
+sidebar: sidebar 
+keywords: understand, unified manager, recommendations, tier, data, cloud 
+summary: 'Die Ansicht Leistung: Alle Volumes zeigt Informationen zur Größe der auf dem inaktiven (kalten) Volume gespeicherten Benutzerdaten an. In einigen Fällen erkennt Unified Manager bestimmte Volumes, die durch das Tiering inaktiver Daten auf das Cloud-Tier (Cloud-Provider oder StorageGRID) eines FabricPool-fähigen Aggregats profitieren würden.' 
+---
+= Analyse der Empfehlungen von Unified Manager für das Tiering von Daten in die Cloud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Ansicht Leistung: Alle Volumes zeigt Informationen zur Größe der auf dem inaktiven (kalten) Volume gespeicherten Benutzerdaten an. In einigen Fällen erkennt Unified Manager bestimmte Volumes, die durch das Tiering inaktiver Daten auf das Cloud-Tier (Cloud-Provider oder StorageGRID) eines FabricPool-fähigen Aggregats profitieren würden.
+
+[NOTE]
+====
+FabricPool wurde in ONTAP 9.2 eingeführt. Wenn Sie eine Version der ONTAP Software vor 9.2 verwenden, ist für Unified Manager die Empfehlung für Tiering-Daten ein Upgrade der ONTAP Software erforderlich. Darüber hinaus der `*auto*` die tiering-Richtlinie wurde in ONTAP 9.4 eingeführt, und im `*all*` die tiering-Richtlinie wurde in ONTAP 9.6 eingeführt. Wenn also die Empfehlung ist, die Auto-Tiering-Richtlinie zu verwenden, müssen Sie auf ONTAP 9.4 oder höher aktualisieren.
+
+====
+Die folgenden drei Performance-Felder sind in der Ansicht „Alle Volumes“ enthalten Informationen darüber, ob Sie die Festplattenauslastung Ihres Storage-Systems verbessern und Speicherplatz auf der Performance-Tier einsparen können, indem Sie inaktive Daten auf die Cloud-Tier verschieben.
+
+* *Tiering-Richtlinie*
++
+Die Tiering-Richtlinie legt fest, ob die Daten auf dem Volume auf der Performance-Tier verbleiben oder ob einige der Daten von der Performance-Tier in die Cloud-Tier verschoben werden.
+
++
+Der Wert in diesem Feld gibt die Tiering-Richtlinie an, die auf das Volume gesetzt ist, auch wenn sich das Volume derzeit nicht auf einem FabricPool Aggregat befindet. Die Tiering-Richtlinie tritt nur in Kraft, wenn das Volume auf einem FabricPool Aggregat ist.
+
+* *Kalte Daten*
++
+Die kalten Daten zeigen die Größe der auf dem inaktiven (kalten) Volume gespeicherten Benutzerdaten an.
+
++
+Ein Wert wird hier nur angezeigt, wenn ONTAP 9.4 oder höher verwendet wird, da es erfordert, dass das Aggregat, auf dem das Volume bereitgestellt wird, über das verfügt `*inactive data reporting parameter*` Auf einstellen `*enabled*`, Und dass die Mindestzahl der Kühltage Schwelle erreicht worden ist (für Volumen, die die verwenden `*snapshot-only*` Oder `*auto*` tiering-Richtlinie). Andernfalls wird der Wert als „`N/A`“ aufgeführt.
+
+* * Cloud-Empfehlung*
++
+Nachdem genügend Informationen über die Datenaktivität auf dem Volume erfasst wurden, kann Unified Manager feststellen, dass keine Aktionen erforderlich sind oder dass Sie Speicherplatz auf der Performance-Tier einsparen können, indem Sie inaktive Daten per Tiering auf das Cloud-Tier verschieben.
+
+
+
+[NOTE]
+====
+Das Feld „kalte Daten“ wird alle 15 Minuten aktualisiert. Das Feld „Cloud Empfehlung“ wird jedoch alle 7 Tage aktualisiert, wenn die Analyse der kalten Daten auf dem Volume durchgeführt wird. Daher kann die genaue Menge der kalten Daten zwischen den Feldern abweichen. Das Feld Cloud Recommendation zeigt das Datum an, an dem die Analyse ausgeführt wurde.
+
+====
+Wenn die Meldung inaktiver Daten aktiviert ist, zeigt das Feld „kalte Daten“ die genaue Menge inaktiver Daten an. Ohne die Funktion zur Berichterstellung inaktiver Daten bestimmt Unified Manager mithilfe von Performance-Statistiken, ob Daten auf einem Volume inaktiv sind. Die Menge der inaktiven Daten wird in diesem Fall nicht im Feld „kalte Daten“ angezeigt, aber es wird angezeigt, wenn Sie den Mauszeiger über das Wort *Tier* bewegen, um die Cloud-Empfehlung anzuzeigen.
+
+Folgende Cloud-Empfehlungen werden angezeigt:
+
+* *Lernen*. Es wurden nicht genügend Daten gesammelt, um eine Empfehlung zu treffen.
+* *Stufe*. Die Analyse hat festgestellt, dass das Volume inaktive (kalte) Daten enthält und dass Sie das Volume so konfigurieren sollten, dass diese Daten in das Cloud-Tier verschoben werden. In einigen Fällen muss hierfür unter Umständen zunächst das Volume in ein FabricPool-fähiges Aggregat verschoben werden. In anderen Fällen, in denen sich das Volume bereits auf einem FabricPool Aggregat befindet, müssen Sie nur die Tiering-Richtlinie ändern.
+* *Keine Aktion*. Entweder das Volume verfügt über wenige inaktive Daten. Das Volume ist bereits auf die Tiering-Richtlinie „`Auto`“ für ein FabricPool Aggregat festgelegt, oder das Volume ist ein Datensicherungs-Volume. Dieser Wert wird auch angezeigt, wenn das Volume offline ist oder wenn es in einer MetroCluster-Konfiguration verwendet wird.
+
+
+Zum Verschieben eines Volumes oder zum Ändern der Tiering-Richtlinie für Volumes oder der Einstellungen für die Berichterstellung für inaktive Daten für das Aggregat verwenden Sie ONTAP System Manager, ONTAP CLI-Befehle oder eine Kombination dieser Tools.
+
+Wenn Sie mit der Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ bei Unified Manager angemeldet sind, steht in der Cloud-Empfehlung der Link *Volume konfigurieren* zur Verfügung, wenn Sie den Mauszeiger über das Wort *Tier* bewegen. Klicken Sie auf diese Schaltfläche, um die Seite Volumes in System Manager zu öffnen, um die empfohlene Änderung vorzunehmen.

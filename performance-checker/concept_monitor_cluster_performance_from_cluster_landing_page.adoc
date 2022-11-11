@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_from_cluster_landing_page.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, performance, cluster, landing, page 
+summary: Auf der Seite „Performance Cluster Landing“ wird der Performance-Status eines ausgewählten Clusters angezeigt, der von einer Instanz von Unified Manager überwacht wird. Auf dieser Seite können Sie die allgemeine Performance eines bestimmten Clusters bewerten und schnell alle erkannten Cluster-spezifischen Ereignisse bemerken, lokalisieren oder zur Behebung zuweisen. 
+---
+= Monitoring der Cluster-Performance über die Startseite des Performance Cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Performance Cluster Landing“ wird der Performance-Status eines ausgewählten Clusters angezeigt, der von einer Instanz von Unified Manager überwacht wird. Auf dieser Seite können Sie die allgemeine Performance eines bestimmten Clusters bewerten und schnell alle erkannten Cluster-spezifischen Ereignisse bemerken, lokalisieren oder zur Behebung zuweisen.

@@ -1,0 +1,640 @@
+---
+permalink: events/reference_cluster_events.html 
+sidebar: sidebar 
+keywords: cluster events, impact, area, availability, capacity, configuration, performance, security 
+summary: Cluster-Ereignisse bieten Informationen zum Status von Clustern. So können Sie das Cluster auf potenzielle Probleme überwachen. Die Ereignisse sind nach dem Impact-Bereich gruppiert und umfassen den Event-Namen, den Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad. 
+---
+= Cluster-Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cluster-Ereignisse bieten Informationen zum Status von Clustern. So können Sie das Cluster auf potenzielle Probleme überwachen. Die Ereignisse sind nach dem Impact-Bereich gruppiert und umfassen den Event-Namen, den Trap-Namen, den Impact-Level, den Quelltyp und den Schweregrad.
+
+
+
+== Impact Area: Verfügbarkeit
+
+Ein Sternchen (*) identifiziert EMS-Ereignisse, die in Unified Manager-Ereignisse konvertiert wurden.
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Cluster fehlt es an Spare Disks (ocumEvtDiscsNoSpares)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Cluster nicht erreichbar (ocumEvtClusternicht erreichbar)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Fehler
+
+
+
+ a| 
+Cluster-Überwachung fehlgeschlagen (ocumEvtClusterMonitoringFailed)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Kapazitätsbeschränkungen für Cluster-FabricPool-Lizenz, überschritten (OktEvtexterne KapazitätenTierSpaceFull)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+NVMe-of Grace-Zeitraum gestartet *(nvmfGracePeriodStart)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+NVMe-of Grace Period aktiv *(nvmfGracePeriodActive)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+NVMe-of Grace-Zeitraum abgelaufen *(nvmfGracePeriodExpired)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Objekt-Wartungsfenster gestartet (ObjektPflege-Fenster gestartet)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Kritisch
+
+
+
+ a| 
+Objekt-Wartungsfenster beendet(ObjectWartungs-Fenster beendet)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Informationsdaten
+
+
+
+ a| 
+MetroCluster Ersatzfestplatten übrig (ocumEvtSpareDiskLeftBehind)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Fehler
+
+
+
+ a| 
+MetroCluster Automatische ungeplante Umschaltung deaktiviert (ocumEvtMccAutomaticUnplanedSwitchOverdisabled)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Cluster-Benutzerpasswort geändert *(cluster.passwd.changed)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Informationsdaten
+
+|===
+
+
+== Impact Area: Kapazität
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Unausgeglichene Cluster-Kapazität – Schwellenwert überschritten (ocumConformanceNodeImbalanceWarnung)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Cluster-Cloud-Tier-Planung (ClusterCloudTierPlanningWarnung)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Resync der FabricPool-Spiegelreplikation abgeschlossen *(WaflCaResyncComplete)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+FabricPool-Bereich fast voll * (FabricPool Nearvoll)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Fehler
+
+|===
+
+
+== Impact Area: Konfiguration
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Node hinzugefügt (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Node entfernt(nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Cluster entfernt (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Cluster-Add fehlgeschlagen (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Fehler
+
+
+
+ a| 
+Cluster-Name geändert(nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Informationsdaten
+
+
+
+ a| 
+Notfallhilfe erhalten (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Kritisch
+
+
+
+ a| 
+Erhalten von wichtigen EMS (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Kritisch
+
+
+
+ a| 
+Alarm EMS empfangen (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Fehler
+
+
+
+ a| 
+Fehler EMS empfangen (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Warnung EMS empfangen (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Debug EMS empfangen (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Hinweis erhalten EMS (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Information EMS empfangen (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Warnung
+
+|===
+ONTAP EMS-Ereignisse sind in drei Schweregrade für Ereignisse von Unified Manager unterteilt.
+
+|===
+
+
+| Schweregrad für Unified Manager Ereignisse | Schweregrad des ONTAP EMS-Ereignisses-Ereignisses 
+
+
+ a| 
+Kritisch
+ a| 
+Notfall
+
+Kritisch
+
+
+
+ a| 
+Fehler
+ a| 
+Alarm
+
+
+
+ a| 
+Warnung
+ a| 
+Fehler
+
+Warnung
+
+Debuggen
+
+Hinweis
+
+Informativ
+
+|===
+
+
+== Impact Area: Performance
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+Unterschreiten Schwellenwert Für Das Lastwucht Des Clusters()
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Unterschreitster Cluster-IOPS-Schwellenwert (OktumClusterIopsVorfall)
+ a| 
+Vorfall
+ a| 
+Cluster
+ a| 
+Kritisch
+
+
+
+ a| 
+Unterschreitster Cluster IOPS-Warnungsschwellenwert (ocumClusterIopsWarnung)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Cluster-MB/s – kritischer Schwellenwert überschritten (ocumClusterMbpsVorfall)
+ a| 
+Vorfall
+ a| 
+Cluster
+ a| 
+Kritisch
+
+
+
+ a| 
+Cluster MB/s Warnschwellenwert nicht erreicht (ocumClusterMbpsWarnung)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Nicht verbundenes dynamischer Schwellenwert (ocumClusterDynamicEventWarnung)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+|===
+
+
+== Impact Area: Security
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungen | Typ der Quelle | Schweregrad 
+
+
+ a| 
+AutoSupport HTTPS-Transport deaktiviert (ocumClusterASUPHttpsConfigurations deaktiviert)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Protokollweiterleitung nicht verschlüsselt (ocumClusterAuditLogunverschlüsselt)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Lokaler Admin-Standardbenutzer aktiviert (ocumClusterDefaultAdminaktiviert)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+FIPS-Modus deaktiviert (ocumClusterFipsdeaktiviert)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Login Banner deaktiviert (ocumClusterLoginBannerdeaktiviert)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Login Banner geändert (ocumClusterLoginBannerChanged)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Log-Forwarding-Ziele geändert(ocumLogForwardDestinationsChanged)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+NTP-Servernamen geändert(ocumNtpServerNamesChanged)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+NTP-Server-Anzahl ist niedrig (securityConfigNTPServerCountLowRisk)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Cluster-Peer-Kommunikation nicht verschlüsselt (ocumClusterPeerVerschlüsselungdeaktiviert)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+SSH verwendet unsichere Chiffren (ocumClusterSSHInSecure)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Telnet-Protokoll aktiviert (ocumClusterTelnetEnabled)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Passwörter einiger ONTAP-Benutzerkonten verwenden die weniger sichere MD5-Hash-Funktion (ocumClusterMD5PasswordHashUsed).
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Cluster verwendet selbstsigniertes Zertifikat (ocumClusterSelfSignedZertifikat)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+
+
+ a| 
+Cluster-Remote-Shell ist aktiviert (ocumClusterRshdeaktiviert)
+ a| 
+Dar
+ a| 
+Cluster
+ a| 
+Warnung
+
+|===

@@ -1,0 +1,38 @@
+---
+permalink: performance-checker/task_view_performance_status_of_all_san_array_clusters.html 
+sidebar: sidebar 
+keywords: all san, array, performance, clusters 
+summary: 'Sie können die Ansicht Performance: All Clusters verwenden, um den Leistungsstatus Ihrer All-SAN-Array-Cluster anzuzeigen.' 
+---
+= Anzeigen der Performance für All-SAN-Array-Cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Ansicht Performance: All Clusters verwenden, um den Leistungsstatus Ihrer All-SAN-Array-Cluster anzuzeigen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+
+Sie können die Überblicksinformationen für alle SAN-Array-Cluster in der Ansicht Leistung: Alle Cluster und Details auf der Seite Cluster / Performance Explorer anzeigen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Cluster*.
+. Stellen Sie sicher, dass die Spalte „`personality`“ in der Ansicht *Health: All Clusters* angezeigt wird, oder fügen Sie sie mit dem Steuerelement *Anzeigen / Ausblenden* hinzu.
++
+In dieser Spalte wird „`All-SAN-Array`“ für Ihre All-SAN-Array-Cluster angezeigt.
+
+. Um Informationen zur Leistung in diesen Clustern anzuzeigen, wählen Sie die Ansicht *Performance: Alle Cluster* aus.
++
+Zeigen Sie die Performance-Informationen für das All-SAN-Array-Cluster an.
+
+. Um detaillierte Informationen zur Performance in diesen Clustern anzuzeigen, klicken Sie auf den Namen eines All-SAN-Array-Clusters.
+. Klicken Sie auf die Registerkarte *Explorer*.
+. Wählen Sie auf der Seite *Cluster / Performance Explorer* im Menü *Ansicht und Vergleich* *Knoten in diesem Cluster* aus.
++
+Sie können die Performance-Statistiken beider Nodes auf diesem Cluster vergleichen, um sicherzustellen, dass die Last auf beiden Nodes nahezu identisch ist. Wenn zwischen den beiden Knoten große Unterschiede bestehen, können Sie den zweiten Knoten zu den Diagrammen hinzufügen und die Werte über einen längeren Zeitraum vergleichen, um mögliche Konfigurationsprobleme zu erkennen.
+
+

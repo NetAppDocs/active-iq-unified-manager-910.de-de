@@ -1,0 +1,43 @@
+---
+permalink: reporting/task_create_report_to_view_aggregates_that_are_nearly_full.html 
+sidebar: sidebar 
+keywords: create, report, view, aggregates, full 
+summary: 'Sie können einen Bericht erstellen, um die Aggregate zu markieren, die zu 80 % oder mehr voll sind.' 
+---
+= Erstellen eines Berichts, um Aggregate zu sehen, die zu 80 % oder mehr voll sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um die Aggregate zu markieren, die zu 80 % oder mehr voll sind.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Erstellen Sie mithilfe der folgenden Schritte eine benutzerdefinierte Ansicht, in der Aggregate angezeigt werden, die zu 80 % oder mehr voll sind. Planen Sie dann einen Bericht, der für diese Ansicht erstellt werden soll.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *Aggregate*.
+. Wählen Sie im Menü Ansicht die Option *Kapazität* > *Alle Aggregate*.
+. Wählen Sie *ein-/Ausblenden* aus, um alle Spalten zu entfernen, die im Bericht nicht benötigt werden.
+. Ziehen Sie die Spalten „`Available Data %`“ und „`used Data %`“ in die Nähe der Spalte „`Aggregate`“.
+. Klicken Sie auf das Filtersymbol, fügen Sie die folgenden Filter hinzu und klicken Sie dann auf *Filter anwenden*:
++
+** Verwendete Daten % sind größer als 80 %
+
+
+. Klicken Sie oben in der Spalte „`Used Data %`“, um die Ergebnisse nach Capacity prozentual zu sortieren.
+. Speichern Sie die Ansicht mit einem bestimmten Namen, der die Anzeige beschreibt, z. B. „`Aggregate nahezu voll`“, und klicken Sie auf das Häkchen (image:../media/blue_check.gif[""]) .
+. Klicken Sie auf der Bestandsseite auf die Schaltfläche *geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite Berichtspläne eine neue Zeile hinzuzufügen, damit Sie die Terminplaneigenschaften für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtsplan ein, und füllen Sie die anderen Berichtsfelder aus, und klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""]Am Ende der Reihe.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und per E-Mail an die Empfänger gesendet, die unter der angegebenen Häufigkeit aufgeführt sind.
+
+
+
+Möglicherweise möchten Sie auf der Grundlage der im Bericht gezeigten Ergebnisse einige Daten von bestimmten Aggregaten verschieben.

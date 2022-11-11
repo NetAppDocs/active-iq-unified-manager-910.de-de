@@ -1,0 +1,49 @@
+---
+permalink: data-protection/task_reverse_protection_relationships.html 
+sidebar: sidebar 
+keywords: reverse, protection, relationships, volume, relationships page 
+summary: Wenn ein Notfall das Quellvolume in Ihrer Schutzbeziehung deaktiviert, können Sie das Zielvolume für die Bereitstellung von Daten verwenden, indem Sie es in ein Lese-/Schreibvolume konvertieren, während Sie die Quelle reparieren oder ersetzen. Wenn die Quelle für den Empfang von Daten erneut verfügbar ist, können Sie mithilfe der Resynchronisierung auf umgekehrter Richtung die Beziehung herstellen und die Daten auf der Quelle mit den Daten auf dem Ziel für Lesen/Schreiben synchronisieren. 
+---
+= Schutzbeziehungen auf der Seite Volume Relationships rückgängig machen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn ein Notfall das Quellvolume in Ihrer Schutzbeziehung deaktiviert, können Sie das Zielvolume für die Bereitstellung von Daten verwenden, indem Sie es in ein Lese-/Schreibvolume konvertieren, während Sie die Quelle reparieren oder ersetzen. Wenn die Quelle für den Empfang von Daten erneut verfügbar ist, können Sie mithilfe der Resynchronisierung auf umgekehrter Richtung die Beziehung herstellen und die Daten auf der Quelle mit den Daten auf dem Ziel für Lesen/Schreiben synchronisieren.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen Workflow Automation einrichten.
+* Die Beziehung darf keine SnapVault Beziehung sein.
+* Eine Schutzbeziehung muss bereits vorhanden sein.
+* Die Schutzbeziehung muss gebrochen werden.
+* Sowohl die Quelle als auch das Ziel müssen online sein.
+* Die Quelle darf nicht Ziel eines anderen Datensicherungs-Volumes sein.
+* Wenn Sie diese Aufgabe ausführen, werden Daten in der Quelle, die neuer als die Daten in der gemeinsamen Snapshot Kopie ist, gelöscht.
+* Bei der erneuten Synchronisierung erstellte Richtlinien und Zeitpläne sind dieselben wie in der ursprünglichen Sicherungsbeziehung.
++
+Wenn Richtlinien und Zeitpläne nicht vorhanden sind, werden sie erstellt.
+
+
+
+.Schritte
+. Wählen Sie auf der Seite *Volume Relationships* ein oder mehrere Volumes mit Beziehungen aus, die Sie umkehren möchten, und klicken Sie in der Symbolleiste auf *Resync rückwärts*.
++
+Das Dialogfeld Resync umkehren wird angezeigt.
+
+. Stellen Sie sicher, dass die Beziehungen im Dialogfeld *Resync* umkehren angezeigt werden, für die Sie die Neusynchronisierung rückgängig machen möchten, und klicken Sie dann auf *Senden*.
++
+Der Vorgang der umgekehrten Neusynchronisierung wird gestartet, Sie werden zur Seite Volume Relationships zurückkehren und ein Link zu Jobs wird oben auf der Seite angezeigt.
+
+. *Optional:* Klicken Sie auf *Jobs anzeigen* auf der Seite *Volume Relationships*, um den Status jedes Reverse Resynchronisierung Jobs zu verfolgen.
++
+Eine gefilterte Liste der Jobs, die mit diesem Vorgang in Verbindung stehen, wird angezeigt.
+
+. *Optional:* Klicken Sie auf den Pfeil *Zurück* auf Ihrem Browser, um zur Seite *Volume Relationships* zurückzukehren.
++
+Nach erfolgreichem Abschluss aller Jobaufgaben ist die Neusynchronisierung bei umgekehrter Neusynchronisierung abgeschlossen.
+
+

@@ -1,0 +1,26 @@
+---
+permalink: events/task_fix_issues_using_um_automatic_remediations.html 
+sidebar: sidebar 
+keywords: fix, issues, use, unified manager, automatic, remediations 
+summary: Es gibt bestimmte Ereignisse, die Unified Manager ausführlich diagnostizieren und über die Schaltfläche „Fix it“ eine einzige Lösung anbieten kann. Wenn verfügbar, werden diese Auflösungen im Dashboard, auf der Seite Ereignisdetails und aus der Auswahl Workload Analysis im linken Navigationsmenü angezeigt. 
+---
+= Behebung von Problemen mithilfe der automatischen Problembehebung in Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es gibt bestimmte Ereignisse, die Unified Manager gründlich diagnostizieren und eine einzige Lösung mit der Schaltfläche * Fix IT* bereitstellen kann. Wenn verfügbar, werden diese Auflösungen im Dashboard, auf der Seite Ereignisdetails und aus der Auswahl Workload Analysis im linken Navigationsmenü angezeigt.
+
+Die meisten Ereignisse haben eine Vielzahl von möglichen Auflösungen, die auf der Seite Ereignisdetails angezeigt werden, so dass Sie die beste Lösung mit ONTAP System Manager oder der ONTAP CLI implementieren können. Eine Aktion *Beheben Sie es* ist verfügbar, wenn Unified Manager festgestellt hat, dass es eine einzige Lösung gibt, um das Problem zu beheben, und dass es mit einem ONTAP CLI-Befehl behoben werden kann.
+
+.Schritte
+. Um Ereignisse anzuzeigen, die über das *Dashboard* behoben werden können, klicken Sie auf *Dashboard*.
++
+image::../media/management_actions.png[Managementaktionen]
+
+. Um Probleme zu beheben, die Unified Manager beheben kann, klicken Sie auf die Schaltfläche *Fix IT*. Um ein Problem zu beheben, das auf mehreren Objekten vorhanden ist, klicken Sie auf die Schaltfläche * Alle beheben*.
+
+
+Informationen zu Problemen, die durch automatische Problembehebung behoben werden können, finden Sie unter link:..//storage-mgmt/reference_what_ontap_issues_can_unified_manager_fix.html["Welche Probleme können mit Unified Manager behoben werden"]

@@ -1,0 +1,29 @@
+---
+permalink: api-automation/reference_recommendations_to_use_um_apis.html 
+sidebar: sidebar 
+keywords: recommendations, apis, active iq, unified, manager 
+summary: Bei Verwendung der APIs in Active IQ Unified Manager sollten Sie bestimmte empfohlene Methoden befolgen. 
+---
+= Empfehlungen für die Verwendung der APIs für Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei Verwendung der APIs in Active IQ Unified Manager sollten Sie bestimmte empfohlene Methoden befolgen.
+
+* Alle Arten von Antwortinhalten müssen für eine gültige Ausführung das folgende Format aufweisen:
++
+[listing]
+----
+application/json
+----
+* Die API-Versionsnummer steht nicht zur Produktversionsnummer. Sie sollten die neueste Version der für Ihre Unified Manager Instanz verfügbaren API verwenden. Weitere Informationen zu den Unified Manager API-Versionen finden Sie im Abschnitt „`reST API Versionierung in Active IQ Unified Manager`“.
+* Beim Aktualisieren der Array-Werte mithilfe einer Unified Manager API müssen Sie die gesamte Zeichenfolge von Werten aktualisieren. Sie können einem Array keine Werte anhängen. Sie können nur ein vorhandenes Array ersetzen.
+* Filteroperatoren wie Pipe („) und Wild Card (+*+) können für alle Abfrageparameter verwendet werden, mit Ausnahme von doppelten Werten, z. B. IOPS und Performance in den Kennzahlen-APIs.
+* Vermeiden Sie das Abfragen von Objekten, indem Sie eine Kombination aus Wildcard (+*+) und Rohr () des Filterbedieners verwenden. Es kann eine falsche Anzahl von Objekten abrufen.
+* Wenn Sie Werte für Filter verwenden, stellen Sie sicher, dass der Wert keine enthält `?` Zeichen. Dies soll die Risiken der SQL-Injektion mindern.
+* Beachten Sie, dass die `GET` (Alle) die Anforderung für eine beliebige API gibt maximal 1000 Datensätze zurück. Auch wenn Sie die Abfrage ausführen, indem Sie die einstellen `max_records` Parameter auf einen Wert über 1000, nur 1000 Datensätze werden zurückgegeben.
+* Für administrative Aufgaben wird empfohlen, die Unified Manager-Benutzeroberfläche zu verwenden.
+

@@ -1,0 +1,119 @@
+---
+permalink: events/reference_edit_alert_dialog_box.html 
+sidebar: sidebar 
+keywords: edit, alert, dialog box, name, resources, events, actions 
+summary: Sie können Eigenschaften von Warnmeldungen bearbeiten, z. B. die Ressource, mit der die Warnmeldung verknüpft ist, sowie die Optionen für Ereignisse, Skripts und Benachrichtigungen. 
+---
+= Dialogfeld „Warnung bearbeiten“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Eigenschaften von Warnmeldungen bearbeiten, z. B. die Ressource, mit der die Warnmeldung verknüpft ist, sowie die Optionen für Ereignisse, Skripts und Benachrichtigungen.
+
+
+
+== Name
+
+In diesem Bereich können Sie den Namen und die Beschreibung der Warnmeldung bearbeiten.
+
+* *Name Des Alarms*
++
+Ermöglicht Ihnen das Bearbeiten des Warnungsnamens.
+
+* *Warnhinweis*
++
+Ermöglicht Ihnen die Angabe einer Beschreibung für die Warnmeldung.
+
+* * Warnstatus*
++
+Ermöglicht Ihnen, die Meldung zu aktivieren oder zu deaktivieren.
+
+
+
+
+
+== Ressourcen
+
+In diesem Bereich können Sie eine einzelne Ressource auswählen oder die Ressourcen anhand einer dynamischen Regel gruppieren, für die Sie die Warnung auslösen möchten. Sie können nach Ressourcen suchen, indem Sie einen Ressourcentyp aus der Dropdown-Liste auswählen oder den genauen Ressourcennamen angeben, um eine bestimmte Ressource anzuzeigen.
+
+* *Einschließlich*
++
+Ermöglicht Ihnen, die Ressourcen einzuschließen, für die Sie Warnmeldungen auslösen möchten. Sie können eine Textzeichenfolge angeben, um Ressourcen zu gruppieren, die mit dem String übereinstimmen, und diese Gruppe auswählen, die in die Warnmeldung aufgenommen werden soll. Beispielsweise können Sie alle Volumes gruppieren, deren Name die Zeichenfolge „`vol0`“ enthält.
+
+* *Ausschluss*
++
+Hiermit können Sie Ressourcen ausschließen, für die keine Warnmeldungen ausgelöst werden sollen. Sie können beispielsweise alle Volumes ausschließen, deren Name den String „`xyz`“ enthält.
+
++
+[NOTE]
+====
+Die Registerkarte Exclude wird nur angezeigt, wenn Sie alle Ressourcen eines bestimmten Ressourcentyps auswählen - z. B. + Volumes+ oder + Volumes whose name contains 'xyz'+.
+
+====
+
+
+
+
+== Veranstaltungen
+
+In diesem Bereich können Sie die Ereignisse auswählen, für die Sie die Warnungen auslösen möchten. Sie können eine Meldung für Ereignisse auf der Grundlage eines bestimmten Schweregrads oder für eine Reihe von Ereignissen auslösen.
+
+* *Ereignis Severity*
++
+Ermöglicht die Auswahl von Ereignissen auf der Grundlage des Schweregrads, der kritisch sein kann, Fehler oder Warnung.
+
+* *Ereignisname Enthält*
++
+Ermöglicht Ihnen die Auswahl von Ereignissen, deren Name die angegebenen Zeichen enthält.
+
+
+
+
+
+== Aktionen
+
+In diesem Bereich können Sie die Benachrichtigungsmethode und die Benachrichtigungshäufigkeit angeben.
+
+* *Diese Benutzer benachrichtigen*
++
+Ermöglicht Ihnen, die E-Mail-Adresse oder den Benutzernamen zu bearbeiten oder eine neue E-Mail-Adresse oder einen neuen Benutzernamen für den Empfang von Benachrichtigungen anzugeben.
+
+* *Benachrichtigungshäufigkeit*
++
+Hiermit können Sie die Häufigkeit bearbeiten, mit der der Verwaltungsserver Benachrichtigungen sendet, bis das Ereignis bestätigt, aufgelöst oder in den veralteten Status verschoben wird.
+
++
+Sie können die folgenden Benachrichtigungsmethoden wählen:
+
++
+** Nur einmal benachrichtigen
+** Benachrichtigung in einer bestimmten Frequenz
+** Benachrichtigung bei einer bestimmten Frequenz innerhalb des angegebenen Zeitbereichs
+
+
+* *SNMP-Trap ausgeben*
++
+Hiermit können Sie festlegen, ob SNMP-Traps an den global konfigurierten SNMP-Host gesendet werden sollen.
+
+* *Skript Ausführen*
++
+Hiermit können Sie ein Skript mit der Warnmeldung verknüpfen. Dieses Skript wird ausgeführt, wenn eine Warnung erzeugt wird.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Speichern*
++
+Speichert die Änderungen und schließt das Dialogfeld.
+
+* *Abbrechen*
++
+Die Änderungen werden diskCards und das Dialogfeld geschlossen.
+
+

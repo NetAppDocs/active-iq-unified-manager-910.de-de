@@ -1,0 +1,49 @@
+---
+permalink: performance-checker/task_view_event_details_in_performance_explorer_events_timeline.html 
+sidebar: sidebar 
+keywords: view, event, details, timeline 
+summary: Sie können alle Ereignisse und ihre zugehörigen Details im Fenster „Zeitleiste für Ereignisse“ des Performance Explorers anzeigen. Dies ist eine schnelle und effiziente Methode zur Anzeige aller Zustand- und Performance-Ereignisse, die sich während eines bestimmten Zeitbereichs auf dem Root-Objekt auftraten, die bei der Fehlerbehebung von Performance-Problemen hilfreich sein können. 
+---
+= Anzeigen von Ereignisdetails in der Ereigniszeitleiste
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können alle Ereignisse und ihre zugehörigen Details im Fenster „Zeitleiste für Ereignisse“ des Performance Explorers anzeigen. Dies ist eine schnelle und effiziente Methode zur Anzeige aller Zustand- und Performance-Ereignisse, die sich während eines bestimmten Zeitbereichs auf dem Root-Objekt auftraten, die bei der Fehlerbehebung von Performance-Problemen hilfreich sein können.
+
+Im Bereich Ereigniszeitleiste werden kritische Ereignisse, Fehler, Warnungen und Informationsereignisse angezeigt, die während des ausgewählten Zeitbereichs auf dem Root-Objekt aufgetreten sind. Jeder Schweregrad eines Ereignisses hat seine eigene Zeitachse. Einzelne oder mehrere Ereignisse werden durch einen Ereignispunkt in der Zeitleiste dargestellt. Sie können den Cursor über einen Ereignispunkt positionieren, um die Ereignisdetails anzuzeigen. Um die visuelle Granularität mehrerer Ereignisse zu erhöhen, kann der Zeitbereich verkürzt werden. Dadurch werden mehrere Ereignisse in einzelne Ereignisse verteilt, sodass Sie jedes Ereignis einzeln anzeigen und untersuchen können.
+
+Jeder Punkt des Performance-Ereignisses in der Ereignisleiste wird vertikal mit einer entsprechenden Spitze in den Zählerdiagrammen-Trendlinien, die unter der Ereigniszeitleiste angezeigt werden, angeordnet. Dies bietet eine direkte visuelle Korrelation zwischen Ereignissen und Gesamtleistung. Systemzustandsereignisse werden auch in der Zeitleiste angezeigt, jedoch entsprechen diese Arten von Ereignissen nicht unbedingt einer Spitze in einem der Performance-Diagramme.
+
+.Schritte
+. Positionieren Sie den Cursor im Fensterbereich *Ereignisleiste* über einen Ereignispunkt in einer Zeitleiste, um eine Zusammenfassung des Ereignisses oder der Ereignisse an diesem Punkt anzuzeigen.
++
+In einem Popup-Dialogfeld werden Informationen zu den Ereignistypen, zu Datum und Uhrzeit des Ereignisses, zum Status und zur Dauer des Ereignisses angezeigt.
+
+. Vollständige Ereignisdetails für ein oder mehrere Ereignisse anzeigen:
++
+|===
+| Hier... | Klicken Sie hier... 
+
+
+ a| 
+Zeigen Sie Details zu einem einzelnen Event an
+ a| 
+*Ereignisdetails anzeigen* im Popup-Dialog.
+
+
+
+ a| 
+Zeigen Sie Details für mehrere Ereignisse an
+ a| 
+*Ereignisdetails anzeigen* im Popup-Dialog.
+
+[NOTE]
+====
+Durch Klicken auf ein einzelnes Ereignis im Dialogfeld mehrere Ereignisse wird die entsprechende Seite Ereignisdetails angezeigt.
+
+====
+|===
+

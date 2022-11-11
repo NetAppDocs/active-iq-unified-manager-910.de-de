@@ -1,0 +1,59 @@
+---
+permalink: storage-mgmt/concept_monitor_vmware_virtual_infrastructure.html 
+sidebar: sidebar 
+keywords: monitor, vmware, virtual, infrastructure, not, supported 
+summary: 'Active IQ Unified Manager bietet einen Einblick in die Virtual Machines (VMs) in Ihrer virtuellen Infrastruktur und ermöglicht Monitoring und Fehlerbehebung von Storage- und Performance-Problemen in Ihrer virtuellen Umgebung. Mit dieser Funktion können Sie alle Latenzprobleme in Ihrer Storage-Umgebung ermitteln oder ein gemeldeter Performance-Ereignis auf Ihrem vCenter Server durchführen.' 
+---
+= Monitoring der virtuellen VMware Infrastruktur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager bietet einen Einblick in die Virtual Machines (VMs) in Ihrer virtuellen Infrastruktur und ermöglicht Monitoring und Fehlerbehebung von Storage- und Performance-Problemen in Ihrer virtuellen Umgebung. Mit dieser Funktion können Sie alle Latenzprobleme in Ihrer Storage-Umgebung ermitteln oder ein gemeldeter Performance-Ereignis auf Ihrem vCenter Server durchführen.
+
+Eine typische Implementierung einer virtuellen Infrastruktur auf ONTAP setzt auf verschiedene Komponenten, die auf Computing-, Netzwerk- und Storage-Ebenen verteilt sind. Alle Performance-Einbußen bei einer VM-Applikation können aufgrund einer Kombination aus Latenzen auftreten, die bei den verschiedenen Komponenten auf den jeweiligen Ebenen auftreten. Diese Funktion ist nützlich für Storage- und vCenter Server-Administratoren und IT-Generalisten, die ein Performance-Problem in einer virtuellen Umgebung analysieren und verstehen müssen, welche Komponente das Problem aufgetreten ist.
+
+Sie können jetzt über das vCenter-Menü im VMware-Abschnitt auf den vCenter Server zugreifen. In der Vorschau jeder aufgeführten virtuellen Maschine befindet sich der *VCENTER SERVER*-Link in der TOPOLOGIEANSICHT, über den der vCenter Server in einem neuen Browser gestartet wird. Sie können den vCenter Server auch mit der Schaltfläche *Expand Topology* starten und auf die Schaltfläche *View in vCenter* klicken, um die Datastores in vCenter Server anzuzeigen.
+
+Unified Manager stellt das zugrunde liegende Untersystem einer virtuellen Umgebung in einer topologischen Übersicht vor, um zu ermitteln, ob beim Computing-Node, Netzwerk oder Storage ein Latenzproblem aufgetreten ist. Die Ansicht zeigt außerdem das spezifische Objekt, das aufgrund der Performance-Verzögerung Korrekturmaßnahmen ergreifen und das zugrunde liegende Problem lösen kann.
+
+Eine auf ONTAP Storage implementierte virtuelle Infrastruktur umfasst folgende Objekte:
+
+* VCenter Server: Eine zentrale Kontrollebene zum Management von VMware VMs, ESXi Hosts und allen zugehörigen Komponenten in einer virtuellen Umgebung Weitere Informationen zu vCenter Server finden Sie in der VMware-Dokumentation.
+* Host: Ein physisches oder virtuelles System, auf dem ESXi ausgeführt wird, die Virtualisierungssoftware von VMware, und hostet die VM.
+* Datastore: Datastores sind virtuelle Speicherobjekte, die mit den ESXi-Hosts verbunden sind. Datastores sind verwaltbare Storage-Einheiten von ONTAP, beispielsweise LUNs oder Volumes, die als Repository für VM-Dateien, wie Log-Dateien, Skripte, Konfigurationsdateien und virtuelle Festplatten, verwendet werden. Sie sind über eine SAN- oder IP-Netzwerkverbindung mit den Hosts in der Umgebung verbunden. Datastores außerhalb von ONTAP, die vCenter Server zugeordnet sind, werden auf Unified Manager nicht unterstützt oder angezeigt.
+* VM: Eine virtuelle VMware Maschine.
+* Virtuelle Laufwerke: Virtuelle Laufwerke auf Datastores, die zu den VMs gehören und über eine Erweiterung als VMDK verfügen. Die Daten eines virtuellen Laufwerks werden auf der entsprechenden VMDK gespeichert.
+* VMDK: Eine virtuelle Maschine im Datenspeicher, die Speicherplatz für virtuelle Laufwerke bereitstellt. Für jedes virtuelle Laufwerk gibt es eine entsprechende VMDK.
+
+
+Diese Objekte werden in einer VM-Topologieansicht dargestellt.
+
+*VMware Virtualisierung auf ONTAP*
+
+image::../media/vm_deployment.gif[vm-Implementierung]
+
+*Benutzer-Workflow*
+
+Das folgende Diagramm zeigt einen typischen Anwendungsfall der VM-Topologieansicht:
+
+image::../media/vm_workflow.gif[vm-Workflow]
+
+
+
+== Was nicht unterstützt wird
+
+* Datastores, die sich außerhalb von ONTAP befinden und den vCenter Server Instanzen zugeordnet sind, werden auf Unified Manager nicht unterstützt. Alle VMs mit virtuellen Festplatten auf diesen Datenspeichern werden ebenfalls nicht unterstützt.
+* Ein Datastore, der sich über mehrere LUNs erstreckt, wird nicht unterstützt.
+* Datastores, die Network Address Translation (NAT) für die Zuordnung von Daten-LIF (Access Endpunkt) verwenden, werden nicht unterstützt.
+* Das Exportieren von Volumes oder LUNs als Datastores auf verschiedenen Clustern mit denselben IP-Adressen in einer mehrere LIFs-Konfiguration wird nicht unterstützt, da um nicht erkennen kann, welcher Datenspeicher zu welchem Cluster gehört.
++
+Beispiel: Angenommen, Cluster A verfügt über Datastore A. Datastore A wird über Daten-LIF mit derselben IP-Adresse x.x.x.x exportiert und VM A wird auf diesem Datastore erstellt. Gleichermaßen hat Cluster B Datastore B. Der Datenspeicher B wird über Daten-LIF mit derselben IP-Adresse x.x.x.x exportiert und VM B wird auf Datenspeicher B erstellt UM ist es weder möglich, den Datenspeicher A für VM A der Topologie des entsprechenden ONTAP Volume/LUN zuzuordnen noch VM B. abzubilden
+
+* Nur NAS- und SAN-Volumes (iSCSI und FCP für VMFS) werden als Datenspeicher unterstützt, virtuelle Volumes (VVols) werden nicht unterstützt.
+* Es werden nur virtuelle iSCSI-Festplatten unterstützt. Virtuelle Festplatten mit NVMe- und SATA-Typen werden nicht unterstützt.
+* In den Ansichten können Sie keine Berichte zur Analyse der Leistung der verschiedenen Komponenten erstellen.
+* Für die Disaster Recovery (DR) Einrichtung der Storage Virtual Machine (Storage VM), die nur für eine virtuelle Infrastruktur in Unified Manager unterstützt wird, muss die Konfiguration manuell in vCenter Server geändert werden, um auf die aktiven LUNs in Switchover- und Switchback-Szenarien zu verweisen. Ohne manuelle Eingriffe sind ihre Datenspeicher nicht mehr zugänglich.
+

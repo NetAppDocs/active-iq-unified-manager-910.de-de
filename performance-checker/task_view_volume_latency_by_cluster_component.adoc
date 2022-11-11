@@ -1,0 +1,41 @@
+---
+permalink: performance-checker/task_view_volume_latency_by_cluster_component.html 
+sidebar: sidebar 
+keywords: view, volume, latency, cluster, component 
+summary: Sie können detaillierte Latenzinformationen zu einem Volume mithilfe der Seite „Volume Performance Explorer“ anzeigen. Das Zählerdiagramm „Latenz“ zeigt die gesamte Latenz auf dem Volume an, und das Diagramm „Latenz – Aufschlüsselung der Zähler“ ist hilfreich, um die Auswirkungen der Lese- und Schreiblatenz auf das Volume zu ermitteln. 
+---
+= Anzeigen der Volume-Latenz nach Clusterkomponente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können detaillierte Latenzinformationen zu einem Volume mithilfe der Seite „Volume Performance Explorer“ anzeigen. Das Zählerdiagramm „Latenz“ zeigt die gesamte Latenz auf dem Volume an, und das Diagramm „Latenz – Aufschlüsselung der Zähler“ ist hilfreich, um die Auswirkungen der Lese- und Schreiblatenz auf das Volume zu ermitteln.
+
+Außerdem zeigt das Diagramm Latenz – Cluster-Komponenten einen detaillierten Vergleich der Latenz der einzelnen Cluster-Komponenten an, um zu ermitteln, wie jede Komponente zu der gesamten Latenz auf dem Volume beiträgt. Die folgenden Cluster-Komponenten werden angezeigt:
+
+* Netzwerk
+* QoS-Limit Max
+* QoS-Limit Min
+* Netzwerkverarbeitung
+* Cluster Interconnect
+* Datenverarbeitung
+* Aggregatvorgänge
+* Volume-Aktivierung
+* MetroCluster-Ressourcen
+* Cloud-Latenz
+* Sync SnapMirror
+
+
+.Schritte
+. Wählen Sie auf der Seite *Volume Performance Explorer* für Ihr ausgewähltes Volume im Latenzdiagramm im Dropdown-Menü die Option *Cluster Components* aus.
++
+Das Diagramm Latenz – Cluster-Komponenten wird angezeigt.
+
+. Um eine größere Version des Diagramms anzuzeigen, wählen Sie *Zoom-Ansicht*.
++
+Das Vergleichsdiagramm für die Cluster-Komponente wird angezeigt. Sie können den Vergleich einschränken, indem Sie die Auswahl aufheben oder auswählen image:../media/eye_icon.gif[""] Der jeder Cluster-Komponente zugeordnet ist.
+
+. Um die spezifischen Werte anzuzeigen, bewegen Sie den Cursor in den Diagrammbereich, um das Popup-Fenster anzuzeigen.
+

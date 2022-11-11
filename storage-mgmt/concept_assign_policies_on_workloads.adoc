@@ -1,0 +1,66 @@
+---
+permalink: storage-mgmt/concept_assign_policies_on_workloads.html 
+sidebar: sidebar 
+keywords: assign, policies, workloads, single, multiple, storage, system-recommended, psls 
+summary: 'Sie können Storage-Workloads auf der Seite Alle Workloads mit verschiedenen Navigationsoptionen Storage Efficiency Policies (SEPs) und Performance Service Levels (PSLs) zuweisen.' 
+---
+= Zuweisung von Richtlinien zu Workloads
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Storage-Workloads auf der Seite Alle Workloads mit verschiedenen Navigationsoptionen Storage Efficiency Policies (SEPs) und Performance Service Levels (PSLs) zuweisen.
+
+
+
+== Zuweisen von Richtlinien zu einem einzelnen Workload
+
+Sie können eine PSL oder eine SEP oder beide für einen einzelnen Workload zuweisen. Führen Sie hierzu folgende Schritte aus:
+
+. Wählen Sie den Workload aus.
+. Klicken Sie auf das Bearbeiten-Symbol neben der Zeile und dann auf *Bearbeiten*.
++
+Die Felder *zugewiesene Performance Service Level* und *Storage Efficiency Policy* sind aktiviert.
+
+. Wählen Sie die erforderliche PSL oder SEP oder beides aus.
+. Klicken Sie auf das Häkchen-Symbol, um die Änderungen anzuwenden.
+
+
+[NOTE]
+====
+Sie können auch einen Workload auswählen und auf *Mehr Aktionen* klicken, um die Richtlinien zuzuweisen.
+
+====
+
+
+== Zuweisung von Richtlinien zu mehreren Storage Workloads
+
+Sie können eine PSL oder eine SEP mehreren Storage Workloads zuweisen. Führen Sie hierzu folgende Schritte aus:
+
+. Aktivieren Sie die Kontrollkästchen für die Workloads, denen die Richtlinie zugewiesen werden soll, oder wählen Sie alle Workloads in Ihrem Datacenter aus.
+. Klicken Sie Auf *Weitere Aktionen*.
+. Wählen Sie zum Zuweisen einer PSL * Performance Service Level zuweisen* aus. Wählen Sie für die Zuweisung eines SEP * Storage-Effizienz-Policy zuweisen* aus. Es wird ein Popup-Fenster angezeigt, in dem Sie die Richtlinie auswählen können.
+. Wählen Sie die entsprechende Richtlinie aus und klicken Sie auf *Anwenden*. Es werden die Anzahl der Workloads angezeigt, denen die Richtlinien zugewiesen sind. Die Workloads, in denen Richtlinien nicht zugewiesen sind, werden ebenfalls mit der Ursache aufgeführt.
++
+[NOTE]
+====
+Das Anwenden von Richtlinien auf große Workloads kann je nach Anzahl der ausgewählten Workloads eine gewisse Zeit in Anspruch nehmen. Sie können auf die Schaltfläche *Ausführen im Hintergrund* klicken und mit anderen Aufgaben fortfahren, während der Vorgang im Hintergrund ausgeführt wird. Wenn die Massenzuweisung abgeschlossen ist, können Sie den Status des Abschlusses anzeigen. Wenn Sie eine PSL auf mehrere Workloads anwenden, können Sie keine andere Anforderung auslösen, wenn der vorherige Auftrag der Massenzuweisung ausgeführt wird.
+
+====
+
+
+
+
+== Zuweisen von systemempfohlenen PSLs zu Workloads
+
+Sie können den Speicher-Workloads in einem Rechenzentrum, das keine PSLs zugewiesen hat, systemempfohlene PSLs zuweisen, oder die zugewiesenen PSLs stimmen nicht mit der Systemempfehlung überein. Um diese Funktionalität zu nutzen, klicken Sie auf die Schaltfläche *System Empfohlene PSLs*. Es müssen keine spezifischen Workloads ausgewählt werden.
+
+Die Empfehlung wird intern durch Systemanalysen bestimmt und für diese Workloads übersprungen, deren IOPS und andere Parameter nicht mit den Definitionen der verfügbaren PSL übereinstimmen. Storage-Workloads mit `Waiting for I/O` Und Lernstatus sind ebenfalls ausgeschlossen.
+
+[NOTE]
+====
+Es gibt spezielle Schlüsselwörter, nach denen Unified Manager im Workload-Namen sucht, um die Systemanalysen außer Kraft zu setzen und eine andere PSL für den Workload zu empfehlen. Wenn die Arbeitslast die Buchstaben "`ora`" im Namen hat, wird das **Extreme Performance**PSL empfohlen. Und wenn der Workload die Buchstaben "`vm`" im Namen hat, wird das **Performance**PSL empfohlen.
+
+====

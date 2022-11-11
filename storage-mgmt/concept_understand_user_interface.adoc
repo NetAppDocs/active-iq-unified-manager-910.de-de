@@ -1,0 +1,16 @@
+---
+permalink: storage-mgmt/concept_understand_user_interface.html 
+sidebar: sidebar 
+keywords: understand, user, interface 
+summary: Die Benutzeroberfläche von Unified Manager besteht hauptsächlich aus einem Dashboard, das einen Überblick über die überwachten Objekte bietet. Über die Benutzeroberfläche können auch alle Cluster-Objekte angezeigt werden. 
+---
+= Allgemeines zur Benutzeroberfläche
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Benutzeroberfläche von Unified Manager besteht hauptsächlich aus einem Dashboard, das einen Überblick über die überwachten Objekte bietet. Über die Benutzeroberfläche können auch alle Cluster-Objekte angezeigt werden.
+
+Sie können eine bevorzugte Ansicht auswählen und ggf. die Aktionsschaltflächen verwenden. Ihre Bildschirmkonfiguration wird in einem Arbeitsbereich gespeichert, sodass alle Funktionen verfügbar sind, die Sie benötigen, wenn Sie Unified Manager starten. Wenn Sie jedoch von einer Ansicht zur anderen navigieren und dann zurück navigieren, ist die Ansicht möglicherweise nicht identisch.

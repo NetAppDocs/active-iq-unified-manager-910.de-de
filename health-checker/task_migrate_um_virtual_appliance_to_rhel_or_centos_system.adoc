@@ -1,0 +1,68 @@
+---
+permalink: health-checker/task_migrate_um_virtual_appliance_to_rhel_or_centos_system.html 
+sidebar: sidebar 
+keywords: unified manager, migrate, virtual, appliance, linux system 
+summary: Sie können eine Backup-Dump-Datenbank von einer virtuellen Appliance in ein Red hat Enterprise Linux oder CentOS Linux System wiederherstellen, wenn Sie das Host-Betriebssystem ändern möchten, auf dem Unified Manager ausgeführt wird. 
+---
+= Migration einer virtuellen Unified Manager Appliance zu einem Linux System
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Backup-Dump-Datenbank von einer virtuellen Appliance in ein Red hat Enterprise Linux oder CentOS Linux System wiederherstellen, wenn Sie das Host-Betriebssystem ändern möchten, auf dem Unified Manager ausgeführt wird.
+
+*Was Sie brauchen*
+
+* Auf der virtuellen Appliance:
++
+** Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+** Sie müssen den Namen des Unified Manager-Wartungsbenutzers für den Wiederherstellungsvorgang kennen.
+
+
+* Auf dem Linux-System:
++
+** Sie müssen Unified Manager auf einem Linux-Server gemäß den Anweisungen in installiert haben link:../install-linux/concept_install_unified_manager_on_rhel_or_centos.html["Installation von Unified Manager auf Linux Systemen"].
+** Die Version von Unified Manager auf diesem Server muss mit der Version auf der virtuellen Appliance identisch sein, von der aus Sie die Sicherungsdatei verwenden.
+** Starten Sie die UI nicht oder konfigurieren Sie nach der Installation keine Cluster-, Benutzer- oder Authentifizierungseinstellungen auf dem Linux-System. Die Sicherungsdatei füllt diese Informationen während des Wiederherstellungsprozesses aus.
+** Sie müssen über die Stammbenutzeranmeldeinformationen für den Linux-Host verfügen.
+
+
+
+
+In diesen Schritten wird beschrieben, wie eine Sicherungsdatei auf der virtuellen Appliance erstellt, die Sicherungsdateien auf das Red hat Enterprise Linux oder CentOS System kopiert und dann die Datenbanksicherung auf das neue System wiederhergestellt wird.
+
+.Schritte
+. Klicken Sie auf der virtuellen Appliance auf *Verwaltung* > *Datenbank-Backup*.
+. Klicken Sie auf der Seite *Datenbank-Backup* auf *Backup-Einstellungen*.
+. Ändern Sie den Backuppfad in /jail/Support.
+. Wählen Sie im Abschnitt Zeitplan die Option *planmäßig täglich* aus, und geben Sie einige Minuten nach der aktuellen Zeit ein, damit das Backup in Kürze erstellt wird.
+. Klicken Sie Auf *Anwenden*.
+. Warten Sie einige Stunden, bis das Backup erstellt wird.
++
+Ein vollständiges Backup kann über 1 GB betragen und kann drei bis vier Stunden in Anspruch nehmen.
+
+. Melden Sie sich als Root-Benutzer beim Linux-Host an, auf dem Unified Manager installiert ist, und kopieren Sie die Backupdateien von /Support auf der virtuellen Appliance mit SCP.`root@<rhel_server>:/# scp -r admin@<vapp_server_ip_address>:/support/* .`
++
+`root@ocum_rhel-21:/# scp -r admin@10.10.10.10:/support/* .`
+
++
+Stellen Sie sicher, dass Sie die Sicherungsdatei .7z und alle Dateien des .7z-Repository im Unterverzeichnis /Database-Dumps-repo kopiert haben.
+
+. Stellen Sie an der Eingabeaufforderung das Backup wieder her: `um backup restore -f /<backup_file_path>/<backup_file_name>`
++
+`um backup restore -f /UM_9.7.N151113.1348_backup_unix_02-12-2019-04-16.7z`
+
+. Melden Sie sich nach Abschluss der Wiederherstellung bei der Web-UI von Unified Manager an.
+
+
+Sie sollten die folgenden Aufgaben durchführen:
+
+* Generieren Sie ein neues HTTPS-Sicherheitszertifikat, und starten Sie den Unified Manager-Server neu.
+* Ändern Sie den Backuppfad auf die Standardeinstellung für Ihr Linux-System (/Data/ocum-Backup) oder auf einen neuen Pfad Ihrer Wahl, da auf dem Linux-System kein /jail/Support-Pfad vorhanden ist.
+* Konfigurieren Sie beide Seiten Ihrer Workflow Automation Verbindung neu, falls WFA verwendet wird.
+* Konfigurieren Sie SAML-Authentifizierungseinstellungen neu, wenn Sie SAML verwenden.
+
+
+Nachdem Sie überprüft haben, dass alles auf Ihrem Linux-System wie erwartet ausgeführt wird, können Sie die virtuelle Unified Manager-Appliance herunterfahren und entfernen.

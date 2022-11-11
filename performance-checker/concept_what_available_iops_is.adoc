@@ -1,0 +1,34 @@
+---
+permalink: performance-checker/concept_what_available_iops_is.html 
+sidebar: sidebar 
+keywords: available, iops, total iops, aggregate iops, volume iops 
+summary: Der verfügbare IOPS-Zähler ermittelt die verbleibende Anzahl an IOPS, die einem Node oder Aggregat hinzugefügt werden kann, bevor die Ressource ihr Limit erreicht. Die gesamten IOPS, die ein Node bereitstellen kann, basieren auf den physischen Eigenschaften des Nodes, wie z. B. die Anzahl der CPUs, die CPU-Geschwindigkeit und die RAM-Größe. Die Gesamtzahl der IOPS, die ein Aggregat bereitstellen kann, basiert auf den physischen Eigenschaften der Festplatten, z. B. einer SATA-, SAS- oder SSD-Festplatte. 
+---
+= Was verfügbar ist, ist IOPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der verfügbare IOPS-Zähler ermittelt die verbleibende Anzahl an IOPS, die einem Node oder Aggregat hinzugefügt werden kann, bevor die Ressource ihr Limit erreicht.
+
+Die gesamten IOPS, die ein Node bereitstellen kann, basieren auf den physischen Eigenschaften des Node, beispielsweise auf der Anzahl der CPUs, der CPU-Geschwindigkeit und dem RAM-Umfang. Die gesamten IOPS, die ein Aggregat bereitstellen kann, basieren auf den physischen Eigenschaften der Festplatten, zum Beispiel auf einer SATA-, SAS- oder SSD-Festplatte.
+
+Die Gesamtzahl der IOPS aller Volumes in einem Aggregat entspricht möglicherweise nicht den IOPS-Werten des Aggregats. Dies wird in dem folgenden Knowledge Base-Artikel behandelt: KB link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/Why_does_the_sum_of_all_volume_IOPs_in_an_aggregate_not_match_the_aggregate_IOPs%3F["Warum entspricht die Summe aller Volume IOPS in einem Aggregat nicht den aggregierten IOPS?"]
+
+Während der freie Zähler für Performance-Kapazität den Prozentsatz einer noch verfügbaren Ressource angibt, liefert der verfügbare IOPS-Zähler genau die Anzahl der IOPS (Workloads) für eine Ressource, bevor sie die maximale Performance-Kapazität erreicht.
+
+Wenn Sie beispielsweise zwei Storage-Systeme FAS2520 und FAS8060 nutzen, erhalten Sie bei einem Performance-Kapazitätswert von 30 % auch freie Performance-Kapazität. Dieser Wert bietet jedoch keine Übersicht darüber, wie viele Workloads auf diesen Nodes implementiert werden können. Der verfügbare IOPS-Zähler zeigt möglicherweise, dass bei der FAS8060 500 verfügbare IOPS verfügbar sind, bei der FAS2520 jedoch nur 100 verfügbare IOPS.
+
+Die folgende Abbildung zeigt eine Beispiellatenz im Vergleich zur IOPS-Kurve für einen Node.
+
+image::../media/available_iops.gif[Verfügbare iops]
+
+Die maximale Anzahl an IOPS, die eine Ressource liefern kann, ist die Anzahl der IOPS, wenn der Zähler für die Performance-Kapazität bei 100 % liegt (der optimale Punkt). Der Betriebspunkt identifiziert, dass der Node derzeit bei 100.000 IOPS mit einer Latenz von 1.0 ms/op arbeitet Auf der Grundlage der vom Node erfassten Statistiken ermittelt Unified Manager, dass die maximalen IOPS für den Node 160.000 beträgt, was bedeutet, dass 60.000 freie oder verfügbare IOPS vorhanden sind. Daher können Sie diesem Node weitere Workloads hinzufügen, sodass die Systeme effizienter genutzt werden.
+
+[NOTE]
+====
+Wenn die Ressource minimale Benutzeraktivitäten hat, wird der verfügbare IOPS-Wert unter Annahme eines allgemeinen Workloads auf Grundlage von etwa 4,500 IOPS pro CPU-Kern berechnet. Das liegt daran, dass Unified Manager nicht über die Daten verfügt, um die Eigenschaften des Workloads, der bereitgestellt werden soll, exakt abzuschätzen.
+
+====

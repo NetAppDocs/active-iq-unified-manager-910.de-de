@@ -1,0 +1,62 @@
+---
+permalink: config/task_install_ca_signed_and_returned_https_certificate.html 
+sidebar: sidebar 
+keywords: install, ca signed, returned, https, certificate 
+summary: Sie können ein Sicherheitszertifikat hochladen und installieren, nachdem eine Zertifizierungsstelle unterschrieben und zurückgesendet wurde. Die Datei, die Sie hochladen und installieren, muss eine signierte Version des vorhandenen selbstsignierten Zertifikats sein. Ein CA-signiertes Zertifikat hilft bei der Verhinderung von man-in-the-Middle-Angriffen und bietet besseren Schutz als ein selbstsigniertes Zertifikat. 
+---
+= Installieren einer Zertifizierungsstelle, die signiert ist und ein HTTPS-Zertifikat zurückgegeben hat
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Sicherheitszertifikat hochladen und installieren, nachdem eine Zertifizierungsstelle unterschrieben und zurückgesendet wurde. Die Datei, die Sie hochladen und installieren, muss eine signierte Version des vorhandenen selbstsignierten Zertifikats sein. Ein CA-signiertes Zertifikat hilft bei der Verhinderung von man-in-the-Middle-Angriffen und bietet besseren Schutz als ein selbstsigniertes Zertifikat.
+
+*Was Sie brauchen*
+
+Sie müssen die folgenden Aktionen durchgeführt haben:
+
+* Laden Sie die Zertifikatsignierungsanforderungsdatei herunter und lassen Sie sie von einer Zertifizierungsstelle signiert werden
+* Die Zertifikatskette wurde im PEM-Format gespeichert
+* Alle Zertifikate in der Kette enthalten, vom Unified Manager-Serverzertifikat bis zum Stammzertifikat, einschließlich aller vorhandenen Zwischenzertifikate
+
+
+Sie müssen über die Anwendungsadministratorrolle verfügen.
+
+[NOTE]
+====
+Wenn die Gültigkeit des Zertifikats, für das ein CSR erstellt wurde, mehr als 397 Tage beträgt, wird die Gültigkeit von der Zertifizierungsstelle vor dem Signieren und Zurücksenden des Zertifikats auf 397 Tage reduziert
+
+====
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *HTTPS-Zertifikat*.
+. Klicken Sie auf *HTTPS-Zertifikat installieren*.
+. Klicken Sie im angezeigten Dialogfeld auf *Datei auswählen...*, um die hochzuladende Datei zu suchen.
+. Wählen Sie die Datei aus und klicken Sie dann auf *Installieren*, um die Datei zu installieren.
++
+link:concept_install_https_certificate_generated_using_external_tools.html["Installieren eines HTTPS-Zertifikats, das mit externen Tools generiert wurde"]
+
+
+
+
+
+== Beispiel für eine Zertifikatskette
+
+Das folgende Beispiel zeigt, wie die Zertifikatkettendatei angezeigt werden kann:
+
+[listing]
+----
+-----BEGIN CERTIFICATE-----
+<*Server certificate*>
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+<*Intermediate certificate \#1 (if present)*>
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+<*Intermediate certificate \#2 (if present)*>
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+<*Root signing certificate*>
+-----END CERTIFICATE-----
+----

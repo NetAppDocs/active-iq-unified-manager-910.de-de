@@ -1,0 +1,33 @@
+---
+permalink: performance-checker/task_view_node_iops_based_on_workloads_on_local_node.html 
+sidebar: sidebar 
+keywords: view, node, iops, workloads, reside, only, local node 
+summary: 'Das Node-IOPS-Zählerdiagramm kann hervorheben, wo die Vorgänge nur den lokalen Node durchlaufen, indem eine Netzwerk-LIF zum Ausführen von Lese-/Schreibvorgängen auf Volumes auf einem Remote-Node verwendet wird. Die Diagramme IOPS - „Total (Local)“ und „Breakdown (Local)“ zeigen die IOPS für Daten an, die sich nur auf dem aktuellen Knoten in lokalen Volumes befinden.' 
+---
+= Anzeigen von Node-IOPS auf Basis von Workloads, die sich nur auf dem lokalen Node befinden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Node-IOPS-Zählerdiagramm kann hervorheben, wo die Vorgänge nur den lokalen Node durchlaufen, indem eine Netzwerk-LIF zum Ausführen von Lese-/Schreibvorgängen auf Volumes auf einem Remote-Node verwendet wird. Die Diagramme IOPS - „`Total (Local)`“ und „`Breakdown (Local)`“ zeigen die IOPS für Daten an, die sich nur auf dem aktuellen Node in lokalen Volumes befinden.
+
+Die Versionen der „`Local`“ dieser Zählerdiagramme sind denen der Node-Diagramme für die Performance-Kapazität und -Auslastung ähnlich, da sie außerdem nur die Statistiken für Daten anzeigen, die sich auf lokalen Volumes befinden.
+
+Durch den Vergleich der Versionen „`Local`“ dieser Zählerdiagramme mit den regulären Total-Versionen dieser Zählerdiagramme sehen Sie, ob sich viel Datenverkehr durch den lokalen Knoten bewegt, um auf Volumes auf dem entfernten Knoten zuzugreifen. Diese Situation kann zu Performance-Problemen führen, die möglicherweise durch hohe Auslastung auf dem Node angezeigt werden, wenn zu viele Vorgänge den lokalen Node durchlaufen, um ein Volume auf einem Remote-Node zu erreichen. In diesen Fällen möchten Sie möglicherweise ein Volume zum lokalen Node verschieben oder eine LIF auf dem Remote-Node erstellen, wo der Datenverkehr von Hosts, die auf dieses Volume zugreifen, verbunden werden kann.
+
+.Schritte
+. Wählen Sie auf der Seite *Performance/Node Explorer* für den ausgewählten Knoten im IOPS-Diagramm im Dropdown-Menü die Option *Gesamt* aus.
++
+Das Diagramm IOPS – Total wird angezeigt.
+
+. Klicken Sie auf *Zoom View*, um eine größere Version des Diagramms in einem neuen Browser-Tab anzuzeigen.
+. Zurück auf der Seite *Performance/Node Explorer* wählen Sie im IOPS-Diagramm im Dropdown-Menü die Option *Gesamt (lokal)* aus.
++
+Das Diagramm IOPS – Total (Local) wird angezeigt.
+
+. Klicken Sie auf *Zoom View*, um eine größere Version des Diagramms in einem neuen Browser-Tab anzuzeigen.
+. Sie können die beiden Diagramme nebeneinander anzeigen und Bereiche identifizieren, in denen die IOPS-Werte recht unterschiedlich zu sein scheinen.
+. Bewegen Sie den Mauszeiger über diese Bereiche, um den lokalen und den gesamten IOPS für einen bestimmten Zeitpunkt zu vergleichen.
+

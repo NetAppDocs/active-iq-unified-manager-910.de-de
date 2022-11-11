@@ -1,0 +1,52 @@
+---
+permalink: install-vapp/reference_vmware_software_and_installation_requirements.html 
+sidebar: sidebar 
+keywords: vmware, software, installation, requirements 
+summary: Das VMware vSphere System, auf dem Unified Manager installiert wird, erfordert bestimmte Versionen des Betriebssystems und unterstützende Software. 
+---
+= VMware Software- und Installationsanforderungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das VMware vSphere System, auf dem Unified Manager installiert wird, erfordert bestimmte Versionen des Betriebssystems und unterstützende Software.
+
+
+
+== Betriebssystem-Software
+
+Die folgenden Versionen von VMware ESXi werden unterstützt:
+
+* ESXi 6.5, 6.7 und 7.0.
+
+
+[NOTE]
+====
+Informationen zu den Versionen der Hardware für virtuelle Maschinen, die diese Versionen von ESXi-Servern unterstützen können, finden Sie in der VMware-Dokumentation.
+
+====
+Die folgenden Versionen von vSphere werden unterstützt:
+
+* VMware vCenter Server 6.5, 6.7 und 7.0
+
+
+In der Interoperabilitäts-Matrix finden Sie die vollständige und aktuelle Liste der unterstützten ESXi Versionen.
+
+http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]
+
+Die Zeit des VMware ESXi-Servers sollte die gleiche sein wie die NTP-Serverzeit, damit die virtuelle Appliance ordnungsgemäß funktioniert. Das Synchronisieren der VMware ESXi Serverzeit mit der NTP-Serverzeit verhindert einen Zeitausfall.
+
+
+
+== Installationsvoraussetzungen
+
+VMware Hochverfügbarkeit für die virtuelle Unified Manager Appliance wird unterstützt.
+
+Wenn Sie einen NFS-Datenspeicher auf einem Storage-System mit ONTAP Software implementieren, nutzen Sie das NetApp NFS-Plug-in für VMware VAAI, um Thick Provisioning zu nutzen.
+
+Falls die Bereitstellung aufgrund unzureichender Ressourcen nicht in der Umgebung mit hoher Verfügbarkeit funktioniert, müssen Sie die Optionen für virtuelle Clusterfunktionen ändern, indem Sie die Priorität für VM-Neustart deaktivieren und die Host-Isolationsreaktion eingeschaltet lassen.
+
+
+NOTE: Bei der Installation oder beim Upgrade von Unified Manager werden die erforderlichen Software- und Sicherheits-Patches von Drittanbietern automatisch auf einem VMware vSphere System installiert oder aktualisiert. Da die Installations- und Upgrade-Prozesse von Unified Manager diese Komponenten steuern, sollten Sie keine eigenständige Installation oder Aktualisierung von Komponenten anderer Hersteller versuchen.

@@ -1,0 +1,85 @@
+---
+permalink: data-protection/reference_initialize_update_relationship_dialog_box.html 
+sidebar: sidebar 
+keywords: initialize, update, dialog box 
+summary: Das Dialogfeld Initialisieren/Aktualisieren ermöglicht Ihnen die Durchführung einer ersten Basistransfer für eine neue Schutzbeziehung oder die Aktualisierung einer Beziehung, wenn sie bereits initialisiert ist und Sie ein manuelles, ungeplantes, inkrementelles Update durchführen möchten. 
+---
+= Dialogfeld „Initialisierung/Aktualisierung“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Dialogfeld Initialisieren/Aktualisieren ermöglicht Ihnen die Durchführung einer ersten Basistransfer für eine neue Schutzbeziehung oder die Aktualisierung einer Beziehung, wenn sie bereits initialisiert ist und Sie ein manuelles, ungeplantes, inkrementelles Update durchführen möchten.
+
+
+
+== Registerkarte Übertragungsoptionen
+
+Auf der Registerkarte Übertragungsoptionen können Sie die Initialisierungspriorität einer Übertragung ändern und die während der Übertragung verwendete Bandbreite ändern.
+
+* * Priorität Übertragen*
++
+Die Priorität, mit der die Übertragung ausgeführt wird. Sie können entweder Normal oder Niedrig auswählen. Beziehungen mit Richtlinien, die eine normale Übertragungspriorität festlegen, die vor denen ausgeführt wird, die eine niedrige Übertragungspriorität angeben. Standardmäßig ist „Normal“ ausgewählt.
+
+* *Max. Transferrate*
++
+Gibt die maximale Rate an, mit der Daten zwischen Clustern über das Netzwerk übertragen werden. Wenn Sie keine maximale Übertragungsrate verwenden möchten, ist der Basistransfer zwischen den Beziehungen unbegrenzt. Wenn Sie mehrere Beziehungen mit unterschiedlichen maximalen Transferraten auswählen, können Sie eine der folgenden maximalen Transferraten festlegen:
+
++
+** Verwenden Sie Werte, die bei der Einrichtung oder Bearbeitung einzelner Beziehungen angegeben sind
++
+Bei Auswahl dieser Option verwenden Initialisierungsvorgänge und Updates die maximale Übertragungsrate, die zum Zeitpunkt der Erstellung oder Bearbeitung der einzelnen Beziehungen festgelegt wurde. Dieses Feld ist nur verfügbar, wenn mehrere Beziehungen mit unterschiedlichen Transferraten initialisiert oder aktualisiert werden.
+
+** Unbegrenzt
++
+Zeigt an, dass es keine Bandbreitenbeschränkung bei Übertragungen zwischen Beziehungen gibt. Dieses Feld ist nur verfügbar, wenn mehrere Beziehungen mit unterschiedlichen Transferraten initialisiert oder aktualisiert werden.
+
+** Beschränken Sie die Bandbreite auf
++
+Wenn diese Option ausgewählt ist, ist die Netzwerkbandbreite auf den von Ihnen angegebenen Wert beschränkt. Sie können einen numerischen Wert eingeben und dann entweder Kilobyte pro Sekunde (kbps), Megabyte pro Sekunde (Mbps), Gigabyte pro Sekunde (Gbps) oder Terabyte pro Sekunde (Tbit/s) auswählen. Die maximale Übertragungsrate, die Sie angeben, muss größer als 1 kbps und weniger als 4 Tbps sein.
+
+
+
+
+
+
+
+== Registerkarte „Snapshot Kopien der Quelle“
+
+Auf der Registerkarte Snapshot Kopien der Quelle werden die folgenden Informationen über die Snapshot Kopie der Quelle angezeigt, die für den Basistransfer verwendet wird:
+
+* *Quellvolumen*
++
+Zeigt die Namen der entsprechenden Quell-Volumes an.
+
+* *Zielvolumen*
++
+Zeigt die Namen der ausgewählten Zielvolumes an.
+
+* *Quelltyp*
++
+Zeigt den Volume-Typ an. Der Typ kann entweder Lesen/Schreiben oder Datenschutz sein.
+
+* *Snapshot Kopie*
++
+Zeigt die Snapshot Kopie an, die für den Datentransfer verwendet wird. Wenn Sie auf den Wert der Snapshot Kopie klicken, wird das Dialogfeld Quell-Snapshot Kopie auswählen angezeigt, in dem Sie abhängig von dem Typ der Sicherungsbeziehung und dem Vorgang, den Sie durchführen, eine bestimmte Snapshot Kopie für Ihren Transfer auswählen können. Die Option, eine andere Snapshot Kopie anzugeben, ist nicht für Datensicherungsquellen verfügbar.
+
+
+
+
+
+== Befehlsschaltflächen
+
+Mit den Schaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Abbrechen*
++
+Legt die Auswahl auf und schließt das Dialogfeld Initialisieren/Aktualisieren.
+
+* *Senden*
++
+Speichert Ihre Auswahl und startet den Job initialisieren oder aktualisieren.
+
+

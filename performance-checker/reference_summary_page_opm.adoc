@@ -1,0 +1,140 @@
+---
+permalink: performance-checker/reference_summary_page_opm.html 
+sidebar: sidebar 
+keywords: summary page, charts, counter, statistics 
+summary: Auf der Seite Zusammenfassung werden Zählerdiagramme angezeigt, die Details zu den Ereignissen und der Performance pro Objekt für den vorangegangenen 72-Stunden-Zeitraum enthalten. Diese Daten werden nicht automatisch aktualisiert, sondern sind zum letzten Laden der Seite aktuell. Die Diagramme auf der Zusammenfassungsseite beantworten die Frage muss ich weiter suchen? 
+---
+= Übersichtsseite
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite Zusammenfassung werden Zählerdiagramme angezeigt, die Details zu den Ereignissen und der Performance pro Objekt für den vorangegangenen 72-Stunden-Zeitraum enthalten. Diese Daten werden nicht automatisch aktualisiert, sondern sind zum letzten Laden der Seite aktuell. Die Diagramme auf der Übersichtsseite beantworten die Frage _muss ich weiter suchen?_
+
+
+
+== Diagramme und Zählerstatistiken
+
+Die Übersichtsdiagramme bieten einen schnellen, umfassenden Überblick über die letzten 72 Stunden und helfen Ihnen, mögliche Probleme zu identifizieren, für die weitere Untersuchungen erforderlich sind.
+
+Die Zählerstatistiken der Übersichtsseite werden in Diagrammen angezeigt.
+
+Sie können den Cursor in einem Diagramm über die Trendlinie positionieren, um die Zählerwerte für einen bestimmten Zeitpunkt anzuzeigen. In den Übersichtsdiagrammen wird außerdem die Gesamtzahl der aktiven kritischen und Warnereignisse für die letzten 72 Stunden für die folgenden Zähler angezeigt:
+
+* *Latenz*
++
+Durchschnittliche Reaktionszeit aller I/O-Anforderungen, in Millisekunden pro Vorgang ausgedrückt
+
++
+Wird für alle Objekttypen angezeigt.
+
+* *IOPS*
++
+Durchschnittliche Betriebsgeschwindigkeit, ausgedrückt in ein-/Ausgabeoperationen pro Sekunde
+
++
+Wird für alle Objekttypen angezeigt.
+
+* *MB/s*
++
+Durchschnittlicher Durchsatz: In Megabyte pro Sekunde ausgedrückt
+
++
+Wird für alle Objekttypen angezeigt.
+
+* *Verwendete Leistungskapazität*
++
+Prozentsatz der Performance-Kapazität, die von einem Node oder Aggregat verbraucht wird
+
++
+Nur für Nodes und Aggregate angezeigt
+
+* *Nutzung*
++
+Prozentsatz der Objektauslastung für Nodes und Aggregate oder Bandbreitenauslastung für Ports.
+
++
+Nur für Nodes, Aggregate und Ports angezeigt
+
+
+
+Wenn Sie den Mauszeiger über die Ereignisanzahl für aktive Ereignisse positionieren, werden Typ und Anzahl der Ereignisse angezeigt. Kritische Ereignisse werden rot (image:../media/treemapred_png.gif["Symbol für TreeMap – Rot"]), und Warnereignisse werden in gelb (image:../media/treemapstatus_warning_png.gif["Symbol für TreeMap – Warnstatus"]).
+
+Die Zahl oben rechts im Diagramm im grauen Balken ist der Durchschnittswert aus dem letzten 72-Stunden-Zeitraum. Die Zahlen unten und oben im Trendliniendiagramm sind die Mindest- und Höchstwerte der letzten 72 Stunden. Der graue Balken unterhalb des Diagramms enthält die Anzahl der aktiven (neuen und bestätigten) Ereignisse und der veralteten Ereignisse aus dem Zeitraum der letzten 72 Stunden.
+
+image::../media/iops_graph.gif[iops-Diagramm]
+
+* *Latenzzähler-Diagramm*
++
+Das Latenzzähler-Diagramm bietet einen allgemeinen Überblick über die Objektlatenz für den vorherigen 72-Stunden-Zeitraum. Die Latenz bezeichnet die durchschnittliche Reaktionszeit aller I/O-Anfragen. Sie wird in Millisekunden pro Vorgang ausgedrückt, die Servicezeit, die Wartezeit oder beides, während ein Datenpaket oder ein Block in der betrachten Cluster-Storage-Komponente zu finden ist.
+
++
+*Oben (Zählerwert):* die Zahl in der Kopfzeile zeigt den Durchschnitt für den vorangegangenen 72-Stunden-Zeitraum an.
+
++
+*Mitte (Performance-Diagramm):* die Zahl unten im Diagramm zeigt die niedrigste Latenz an, und die Zahl oben im Diagramm zeigt die höchste Latenz für den letzten 72-Stunden-Zeitraum an. Positionieren Sie den Mauszeiger über die Trendkurve, um den Latenzwert für einen bestimmten Zeitraum anzuzeigen.
+
++
+*Bottom (Ereignisse):* im Pop-up-Fenster werden die Details der Ereignisse angezeigt. Klicken Sie unter dem Diagramm auf den Link *Aktive Ereignisse*, um zur Seite „Ereignisinformationen“ zu navigieren, um vollständige Ereignisdetails anzuzeigen.
+
+* *IOPS-Zählerdiagramm*
++
+Das IOPS-Zählerdiagramm bietet eine allgemeine Übersicht über den Objekt-IOPS-Zustand des vorherigen Zeitraums von 72 Stunden. IOPS gibt die Geschwindigkeit des Storage-Systems in der Anzahl der ein-/Ausgabe-Vorgänge pro Sekunde an.
+
++
+*Oben (Zählerwert):* die Zahl in der Kopfzeile zeigt den Durchschnitt für den vorangegangenen 72-Stunden-Zeitraum an.
+
++
+*Mitte (Performance-Diagramm):* die Zahl unten im Diagramm zeigt die niedrigsten IOPS an, und die Zahl oben im Diagramm zeigt die höchsten IOPS für den Zeitraum von 72 Stunden an. Positionieren Sie den Mauszeiger über die Trendkurve, um den IOPS-Wert für einen bestimmten Zeitpunkt anzuzeigen.
+
++
+*Bottom (Ereignisse):* im Pop-up-Fenster werden die Details der Ereignisse angezeigt. Klicken Sie unter dem Diagramm auf den Link *Aktive Ereignisse*, um zur Seite „Ereignisinformationen“ zu navigieren, um vollständige Ereignisdetails anzuzeigen.
+
+* *MB/s-Zählerdiagramm*
++
+Das MB/s-Zählerdiagramm zeigt die MB/s-Performance des Objekts an und gibt an, wie viele Daten in Megabyte pro Sekunde an das Objekt übertragen wurden. Das MB/s-Zählerdiagramm bietet einen allgemeinen Überblick über den Zustand der MB/s des Objekts für den Zeitraum von 72 Stunden.
+
++
+*Oben (Zählerwert):* die Zahl in der Kopfzeile zeigt die durchschnittliche Anzahl von MB/s für den vorangegangenen 72-Stunden-Zeitraum an.
+
++
+*Mitte (Leistungsdiagramm):* der Wert unten im Diagramm zeigt die niedrigste Anzahl von MB/s an, und der Wert oben im Diagramm zeigt die höchste Anzahl von MB/s für den vorangegangenen 72-Stunden-Zeitraum an. Positionieren Sie den Cursor über die Trendlinie des Diagramms, um den MB/s-Wert für eine bestimmte Zeit anzuzeigen.
+
++
+*Bottom (Ereignisse):* im Pop-up-Fenster werden die Details der Ereignisse angezeigt. Klicken Sie unter dem Diagramm auf den Link *Aktive Ereignisse*, um zur Seite „Ereignisinformationen“ zu navigieren, um vollständige Ereignisdetails anzuzeigen.
+
+* *Leistungskapazität verwendetes Zählerdiagramm*
++
+Das Zählerdiagramm mit der verwendeten Performance-Kapazität zeigt den Prozentsatz der Performance-Kapazität an, die vom Objekt verbraucht wird.
+
++
+*Oben (Zählerwert):* die Zahl im Header zeigt die durchschnittliche Nutzleistung für den vorangegangenen 72-Stunden-Zeitraum an.
+
++
+*Mittel (Leistungsdiagramm):* der Wert unten im Diagramm zeigt den am wenigsten genutzten Prozentsatz der Performance-Kapazität an, und der Wert oben im Diagramm zeigt den am höchsten verwendeten Prozentsatz der Performance-Kapazität für den Zeitraum von 72 Stunden an. Positionieren Sie den Cursor über die Trendkurve, um den für eine bestimmte Zeit verwendeten Performance-Kapazitätswert anzuzeigen.
+
++
+*Bottom (Ereignisse):* im Pop-up-Fenster werden die Details der Ereignisse angezeigt. Klicken Sie unter dem Diagramm auf den Link *Aktive Ereignisse*, um zur Seite „Ereignisinformationen“ zu navigieren, um vollständige Ereignisdetails anzuzeigen.
+
+* *Auslastungszähler-Diagramm*
++
+Das Zählerdiagramm mit der Auslastung zeigt den Prozentsatz der Objektauslastung an. Das Zählerdiagramm mit der Auslastung bietet einen allgemeinen Überblick über den Prozentsatz der Objekt- oder Bandbreitenauslastung des vorhergehenden Zeitraums von 72 Stunden.
+
++
+*Oben (Zählerwert):* die Zahl in der Kopfzeile zeigt den durchschnittlichen Auslastungsgrad für den vorangegangenen 72-Stunden-Zeitraum an.
+
++
+*Mitte (Leistungsdiagramm):* der Wert unten im Diagramm zeigt den niedrigsten Prozentsatz der Auslastung an, und der Wert oben im Diagramm zeigt den höchsten Auslastungsgrad für den vorangegangenen 72-Stunden-Zeitraum an. Positionieren Sie den Cursor über die Trendkurve, um den Nutzungswert für eine bestimmte Zeit anzuzeigen.
+
++
+*Bottom (Ereignisse):* im Pop-up-Fenster werden die Details der Ereignisse angezeigt. Klicken Sie unter dem Diagramm auf den Link *Aktive Ereignisse*, um zur Seite „Ereignisinformationen“ zu navigieren, um vollständige Ereignisdetails anzuzeigen.
+
+
+
+
+
+== Veranstaltungen
+
+In der Ereignishistorie-Tabelle werden, sofern zutreffend, die letzten Ereignisse aufgelistet, die auf diesem Objekt aufgetreten sind. Durch Klicken auf den Ereignisnamen werden Details des Ereignisses auf der Seite Ereignisdetails angezeigt.

@@ -1,0 +1,18 @@
+---
+permalink: data-protection/concept_what_jobs_are.html 
+sidebar: sidebar 
+keywords: jobs 
+summary: Ein Job besteht aus einer Reihe von Aufgaben, die Sie mit Unified Manager überwachen können. Durch das Anzeigen von Jobs und den zugehörigen Aufgaben können Sie feststellen, ob diese erfolgreich abgeschlossen wurden. 
+---
+= Was sind Jobs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Job besteht aus einer Reihe von Aufgaben, die Sie mit Unified Manager überwachen können. Durch das Anzeigen von Jobs und den zugehörigen Aufgaben können Sie feststellen, ob diese erfolgreich abgeschlossen wurden.
+
+Jobs werden gestartet, wenn Sie SnapMirror- und SnapVault-Beziehungen erstellen, wenn Sie eine Beziehungsoperation ausführen (Break, edit, quiesce, remove, resume, Werden neu synchronisiert und umgekehrt neu synchronisiert), wenn Sie Wiederherstellungsaufgaben ausführen, wenn Sie sich bei einem Cluster anmelden usw.
+
+Wenn Sie einen Job starten, können Sie die Seite Jobs und die Seite Jobdetails verwenden, um den Job und den Fortschritt der zugeordneten Job-Aufgaben zu überwachen.

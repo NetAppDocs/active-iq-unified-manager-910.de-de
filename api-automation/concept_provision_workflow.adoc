@@ -1,0 +1,37 @@
+---
+permalink: api-automation/concept_provision_workflow.html 
+sidebar: sidebar 
+keywords: workflow, workload, management 
+summary: 'Mithilfe von Active IQ Unified Manager können Storage-Workloads (LUNs, NFS-Dateifreigaben und CIFS-Freigaben) bereitgestellt und geändert werden. Die Bereitstellung besteht aus mehreren Schritten: Von der Erstellung der Storage Virtual Machine (SVM) bis zur Anwendung von Performance Service Level- und Storage-Effizienz-Richtlinien auf die Storage Workloads. Das Ändern von Workloads besteht aus den Schritten zum Ändern spezifischer Parameter und zum Aktivieren zusätzlicher Funktionen für diese.' 
+---
+= Workflows für das Workload-Management
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe von Active IQ Unified Manager können Storage-Workloads (LUNs, NFS-Dateifreigaben und CIFS-Freigaben) bereitgestellt und geändert werden. Die Bereitstellung besteht aus mehreren Schritten: Von der Erstellung der Storage Virtual Machine (SVM) bis zur Anwendung von Performance Service Level- und Storage-Effizienz-Richtlinien auf die Storage Workloads. Das Ändern von Workloads besteht aus den Schritten zum Ändern spezifischer Parameter und zum Aktivieren zusätzlicher Funktionen für diese.
+
+Die folgenden Workflows werden beschrieben:
+
+* Workflow für die Bereitstellung von Storage Virtual Machines (SVMs) in Unified Manager
++
+[NOTE]
+====
+Dieser Workflow muss vor der Bereitstellung von LUNs oder File Shares auf Unified Manager durchgeführt werden.
+
+====
+* Bereitstellen von Dateifreigaben:
+* Bereitstellung von LUNs:
+* Ändern von LUNs und Dateifreigaben (mit dem Beispiel für die Aktualisierung des Parameters für Performance-Service-Level für die Storage-Workloads)
+* Ändern einer NFS-Dateifreigabe zur Unterstützung des CIFS-Protokolls
+* Änderung von Workloads für das Upgrade von QoS auf AQoS
+
+
+[NOTE]
+====
+Stellen Sie für jeden Bereitstellungs-Workflow (LUN und Dateifreigaben) sicher, dass Sie den Workflow zur Überprüfung der SVMs auf den Clustern abgeschlossen haben müssen.
+
+====
+Sie müssen auch die Empfehlungen und Einschränkungen lesen, bevor Sie jede API in den Workflows verwenden. Die relevanten Details der APIs sind in ihren einzelnen Abschnitten in den verwandten Konzepten und Referenzen aufgeführt.

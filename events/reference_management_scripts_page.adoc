@@ -1,0 +1,46 @@
+---
+permalink: events/reference_management_scripts_page.html 
+sidebar: sidebar 
+keywords: scripts, page, command, buttons, list, view 
+summary: Auf der Seite Skripts können Sie Ihre benutzerdefinierten Skripte zu Unified Manager hinzufügen. Sie können diese Skripte mit Warnmeldungen verknüpfen, um die automatische Neukonfiguration von Speicherobjekten zu ermöglichen. 
+---
+= Seite „Skripte“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite Skripts können Sie Ihre benutzerdefinierten Skripte zu Unified Manager hinzufügen. Sie können diese Skripte mit Warnmeldungen verknüpfen, um die automatische Neukonfiguration von Speicherobjekten zu ermöglichen.
+
+Auf der Seite Skripts können Sie Skripte aus Unified Manager hinzufügen oder löschen.
+
+
+
+== Befehlsschaltflächen
+
+* *Hinzufügen*
++
+Zeigt das Dialogfeld Skript hinzufügen an, in dem Sie Skripts hinzufügen können.
+
+* *Löschen*
++
+Löscht das ausgewählte Skript.
+
+
+
+
+
+== Listenansicht
+
+In der Listenansicht werden die Skripte in Tabellenformat angezeigt, die Sie Unified Manager hinzugefügt haben.
+
+* *Name*
++
+Zeigt den Namen des Skripts an.
+
+* *Beschreibung*
++
+Zeigt die Beschreibung des Skripts an.
+
+

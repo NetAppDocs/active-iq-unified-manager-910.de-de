@@ -1,0 +1,26 @@
+---
+permalink: config/concept_what_functionality_maintenance_console_provides.html 
+sidebar: sidebar 
+keywords: functionality, maintenance, console 
+summary: Über die Unified Manager-Wartungskonsole können Sie die Einstellungen Ihres Unified Manager-Systems beibehalten und die erforderlichen Änderungen vornehmen, um mögliche Probleme zu vermeiden. 
+---
+= Welche Funktionen bietet die Wartungskonsole
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über die Unified Manager-Wartungskonsole können Sie die Einstellungen Ihres Unified Manager-Systems beibehalten und die erforderlichen Änderungen vornehmen, um mögliche Probleme zu vermeiden.
+
+Je nach Betriebssystem, auf dem Unified Manager installiert ist, bietet die Wartungskonsole folgende Funktionen:
+
+* Beheben Sie alle Probleme mit Ihrer virtuellen Appliance, insbesondere wenn die Unified Manager Webschnittstelle nicht verfügbar ist
+* Upgrade auf neuere Versionen von Unified Manager
+* Generieren Sie Support Bundles, um den technischen Support zu erhalten
+* Netzwerkeinstellungen konfigurieren
+* Ändern Sie das Wartungs-Benutzerpasswort
+* Stellen Sie eine Verbindung zu einem externen Datenanbieter her, um Leistungsstatistiken zu senden
+* Ändern Sie die interne Erfassung von Performance-Daten
+* Stellen Sie die Unified Manager-Datenbank- und Konfigurationseinstellungen aus einer zuvor gesicherten Version wieder her.
+

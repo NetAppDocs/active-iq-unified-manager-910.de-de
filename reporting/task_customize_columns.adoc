@@ -1,0 +1,23 @@
+---
+permalink: reporting/task_customize_columns.html 
+sidebar: sidebar 
+keywords: customize, columns 
+summary: Wählen Sie mit „Anzeigen/Ausblenden“ die Spalten aus, die in Ihrem Bericht verwendet werden sollen. Ziehen Sie die Spalten auf der Bestandsseite, um sie neu anzuordnen. 
+---
+= Anpassen von Spalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wählen Sie mit *ein-/Ausblenden* die Spalten aus, die Sie in Ihrem Bericht verwenden möchten. Ziehen Sie die Spalten auf der Bestandsseite, um sie neu anzuordnen.
+
+.Schritte
+. Klicken Sie auf *ein-/Ausblenden*, um Spalten hinzuzufügen oder zu entfernen.
++
+image::../media/show_hide_3.png[Ausblenden 3 anzeigen]
+
+. Ziehen Sie auf der Bestandsseite Spalten, um sie in der gewünschten Reihenfolge in Ihrem Bericht neu anzuordnen.
+. Benennen Sie die nicht gespeicherte Ansicht, um Ihre Änderungen zu speichern.
+

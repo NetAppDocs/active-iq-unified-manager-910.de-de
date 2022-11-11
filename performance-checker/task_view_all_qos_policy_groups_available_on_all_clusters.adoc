@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/task_view_all_qos_policy_groups_available_on_all_clusters.html 
+sidebar: sidebar 
+keywords: viewing, qos, policy, groups, available, clusters 
+summary: Sie können eine Liste aller QoS-Richtliniengruppen anzeigen, die in den von Unified Manager überwachten Clustern verfügbar sind. Dies umfasst herkömmliche QoS-Richtlinien, anpassungsfähige QoS-Richtlinien und QoS-Richtlinien, die durch Unified Manager Performance Service Level-Richtlinien gemanagt werden. 
+---
+= Anzeigen aller QoS-Richtliniengruppen, die auf allen Clustern verfügbar sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Liste aller QoS-Richtliniengruppen anzeigen, die in den von Unified Manager überwachten Clustern verfügbar sind. Dies umfasst herkömmliche QoS-Richtlinien, anpassungsfähige QoS-Richtlinien und QoS-Richtlinien, die durch Unified Manager Performance Service Level-Richtlinien gemanagt werden.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Storage* > *QoS Policy Groups*.
++
+Die Ansicht „Performance: Traditionelle QoS-Richtliniengruppen“ wird standardmäßig angezeigt.
+
+. Zeigen Sie die detaillierten Konfigurationseinstellungen für jede verfügbare herkömmliche QoS-Richtliniengruppe an.
+. Klicken Sie auf die Schaltfläche erweitern (image:../media/chevron_down.gif[""]) Neben dem Namen der QoS Policy Group, um weitere Details zur Policy Group anzuzeigen.
+. Wählen Sie im Menü Ansicht eine der zusätzlichen Optionen aus, um alle adaptiven QoS-Richtliniengruppen anzuzeigen oder alle QoS-Richtliniengruppen anzuzeigen, die mit Unified Manager Performance Service-Leveln erstellt wurden.
+

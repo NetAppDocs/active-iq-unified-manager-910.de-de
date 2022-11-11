@@ -1,0 +1,85 @@
+---
+permalink: install-windows/task_install_unified_manager_on_windows.html 
+sidebar: sidebar 
+keywords: install, unified manager 
+summary: Wird Unified Manager installiert, um Storage-Kapazität, -Verfügbarkeit, -Performance und -Sicherungsprobleme zu überwachen und Fehler zu beheben. 
+---
+= Installation Von Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wird Unified Manager installiert, um Storage-Kapazität, -Verfügbarkeit, -Performance und -Sicherungsprobleme zu überwachen und Fehler zu beheben.
+
+*Was Sie brauchen*
+
+* Das System, auf dem Unified Manager installiert werden soll, sollte die System- und Softwareanforderungen erfüllen.
++
+link:concept_virtual_infrastructure_or_hardware_system_requirements.html["Hardwaresystemanforderungen"]
+
++
+link:reference_windows_software_and_installation_requirements.html["Windows Software- und Installationsanforderungen"]
+
++
+[NOTE]
+====
+Ab Unified Manager 9.5 wird OpenJDK im Installationspaket bereitgestellt und automatisch installiert. Oracle Java wird ab Unified Manager 9.5 nicht unterstützt.
+
+====
+* Sie sollten über Windows-Administratorrechte verfügen. Stellen Sie sicher, dass Ihr Benutzername nicht mit einem Ausrufezeichen "` beginnt!`". Installation of Unified Manager might fail if the user name of user running the installation begins with "`!`".
+* Sie sollten über einen unterstützten Webbrowser verfügen.
+* Das Unified Manager-Wartungsbenutzerkennwort sollte zwischen 8 und 20 Zeichen lang sein. Es sollte Groß-/Kleinschreibung oder Buchstaben, Ziffern und Sonderzeichen enthalten.
+* Die folgenden Sonderzeichen sind in der Kennwortzeichenfolge für den Wartungbenutzer oder für den MySQL-Root-Benutzer nicht zulässig: " ' ` % , = & < > ^ \ / ( ) [ ] ;:
++
+Folgende Sonderzeichen sind erlaubt: ~ ! @ # * - ? . + { }
+
+
+
+.Schritte
+. Melden Sie sich unter Windows mit dem lokalen Standardkonto an.
+. Loggen Sie sich auf der NetApp Support Site ein und navigieren Sie zur Download-Seite für Unified Manager:
++
+https://mysupport.netapp.com/site/products/all/details/activeiq-unified-manager/downloads-tab["NetApp Support Website"]
+
+. Wählen Sie die erforderliche Version von Unified Manager aus, und akzeptieren Sie die Endbenutzer-Lizenzvereinbarung (Endbenutzer License Agreement, EULA).
+. Laden Sie die Installationsdatei für Unified Manager Windows in ein Zielverzeichnis auf dem Windows-System herunter.
+. Navigieren Sie zum Verzeichnis, in dem sich die Installationsdatei befindet.
+. Klicken Sie mit der rechten Maustaste, und führen Sie die ausführbare Datei des Unified Manager-Installationsprogramms (.exe) als Administrator aus.
++
+Unified Manager erkennt fehlende oder vorinstallierte Pakete von Drittanbietern und listet sie auf. Wenn die erforderlichen Drittanbieterpakete nicht im System installiert sind, installiert Unified Manager diese im Rahmen der Installation.
+
+. Klicken Sie Auf *Weiter*.
+. Geben Sie den Benutzernamen und das Kennwort ein, um den Wartungbenutzer zu erstellen.
+. Geben Sie im Datenbankverbindungsassistenten das MySQL-Root-Passwort ein.
+. Klicken Sie auf *Ändern*, um einen neuen Speicherort für das Installationsverzeichnis von Unified Manager und das MySQL-Datenverzeichnis anzugeben.
++
+Wenn Sie das Installationsverzeichnis nicht ändern, wird Unified Manager im Standardinstallationsverzeichnis installiert.
+
+. Klicken Sie Auf *Weiter*.
+. Klicken Sie im Assistenten Ready to Install Shield auf *Install*.
+. Klicken Sie nach Abschluss der Installation auf *Fertig stellen*.
+
+
+Die Installation erstellt mehrere Verzeichnisse:
+
+* Installationsverzeichnis vorhanden
++
+Dies ist das Stammverzeichnis für Unified Manager, das Sie während der Installation angegeben haben. Beispiel: `C:\Program Files\NetApp\`
+
+* MySQL-Datenverzeichnis
++
+Dies ist das Verzeichnis, in dem die MySQL-Datenbanken gespeichert werden, die Sie während der Installation angegeben haben. Beispiel: `C:\ProgramData\MySQL\MySQLServerData\`
+
+* Java-Verzeichnis
++
+Dies ist das Verzeichnis, in dem OpenJDK installiert ist. Beispiel: `C:\Program Files\NetApp\JDK\`
+
+* Verzeichnis der Applikationsdaten von Unified Manager (AppDataDir)
++
+Dies ist das Verzeichnis, in dem alle applikationsgenerierten Daten gespeichert werden. Dazu zählen Protokolle, Support-Bundles, Backup und alle anderen zusätzlichen Daten. Beispiel: `C:\ProgramData\NetApp\OnCommandAppData\`
+
+
+
+Sie können auf die Web-Benutzeroberfläche zugreifen, um die Ersteinrichtung von Unified Manager durchzuführen, wie unter beschrieben link:../config/concept_configure_unified_manager.html["Active IQ Unified Manager wird konfiguriert"].

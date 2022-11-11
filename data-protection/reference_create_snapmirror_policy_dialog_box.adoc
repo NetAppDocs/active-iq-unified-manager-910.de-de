@@ -1,0 +1,67 @@
+---
+permalink: data-protection/reference_create_snapmirror_policy_dialog_box.html 
+sidebar: sidebar 
+keywords: create, snapmirror, policy, dialog box 
+summary: Im Dialogfeld Richtlinie erstellen können Sie eine Richtlinie erstellen, mit der Sie die Priorität für SnapMirror Transfers festlegen können. Anhand von Richtlinien wird die Effizienz der Transfers von der Quelle zum Ziel maximiert. 
+---
+= Dialogfeld SnapMirror-Richtlinie erstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld Richtlinie erstellen können Sie eine Richtlinie erstellen, mit der Sie die Priorität für SnapMirror Transfers festlegen können. Anhand von Richtlinien wird die Effizienz der Transfers von der Quelle zum Ziel maximiert.
+
+* *Zielcluster*
++
+Der Name des Clusters, den Sie auf der Registerkarte SnapMirror im Dialogfeld „Schutz konfigurieren“ ausgewählt haben.
+
+* *Ziel-SVM*
++
+Der Name der SVM, die Sie auf der Registerkarte SnapMirror im Dialogfeld Schutz konfigurieren ausgewählt haben.
+
+* *Policy Name*
++
+Der Name, den Sie für die neue Richtlinie angeben. Richtliniennamen können aus den Zeichen A bis Z, a bis z, 0 bis 9, Punkt (.), Bindestrich (-), Und Unterstrich (_).
+
+* * Priorität Übertragen*
++
+Die Priorität, mit der ein Transfer für asynchrone Vorgänge ausgeführt wird. Sie können entweder Normal oder Niedrig auswählen. Beziehungen mit Richtlinien übertragen, die eine normale Übertragungspriorität festlegen, die vor den Richtlinien ausgeführt wird, die eine niedrige Übertragungspriorität angeben.
+
+* *Kommentar*
++
+Ein optionales Feld, in dem Sie Kommentare zur Richtlinie hinzufügen können.
+
+* *Neustart Übertragen*
++
+Gibt an, welche Neustartaktion ausgeführt werden soll, wenn eine Übertragung durch einen Abbruch oder einen beliebigen Ausfall unterbrochen wird, z. B. ein Netzwerkausfall. Sie können eine der folgenden Optionen auswählen:
+
++
+** Immer
++
+Gibt an, dass eine neue Snapshot Kopie erstellt wird, bevor ein Transfer neu gestartet wird. Falls vorhanden, wird der Transfer von einem Checkpoint neu gestartet, gefolgt von einem inkrementellen Transfer aus der neu erstellten Snapshot Kopie.
+
+** Nie
++
+Gibt an, dass unterbrochene Transfers nie neu gestartet werden.
+
+
+
+
+
+
+
+== Befehlsschaltflächen
+
+Mit den Schaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Abbrechen*
++
+Legt die Auswahl auf und schließt das Dialogfeld Schutz konfigurieren.
+
+* *Anwenden*
++
+Wendet Ihre Auswahl an und beginnt den Schutzprozess.
+
+

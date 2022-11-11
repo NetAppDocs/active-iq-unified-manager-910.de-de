@@ -1,0 +1,16 @@
+---
+permalink: config/concept_login_banner.html 
+sidebar: sidebar 
+keywords: login banner, feature settings 
+summary: Mit dieser Funktion kann Ihr Unternehmen alle Informationen anzeigen, z. B. die Personen, die Zugriff auf das System haben, und die Nutzungsbedingungen während der Anmeldung und beim Abmelden. 
+---
+= Anmeldebanner hinzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durch das Hinzufügen eines Anmeldebanners kann Ihr Unternehmen alle Informationen anzeigen, z. B. wer Zugriff auf das System hat und die Nutzungsbedingungen während der Anmeldung und beim Abmelden.
+
+Jeder Benutzer, wie z. B. Storage-Operatoren oder -Administratoren, kann dieses Popup-Banner für die Anmeldung, Anmeldung und Sitzungszeitüberschreitung anzeigen.

@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/reference_resolve_performance_events.html 
+sidebar: sidebar 
+keywords: resolving, performance, events 
+summary: Sie können die vorgeschlagenen Aktionen verwenden, um selbst Leistungsereignisse zu lösen. Die ersten drei Vorschläge werden immer angezeigt, und die Aktionen unter dem vierten Vorschlag sind spezifisch für die Art des angezeigten Ereignisses. 
+---
+= Lösen von Leistungsereignissen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die vorgeschlagenen Aktionen verwenden, um selbst Leistungsereignisse zu lösen. Die ersten drei Vorschläge werden immer angezeigt, und die Aktionen unter dem vierten Vorschlag sind spezifisch für die Art des angezeigten Ereignisses.
+
+Die *help me do this* Links bieten zusätzliche Informationen zu jeder vorgeschlagenen Aktion, einschließlich Anweisungen zur Durchführung einer bestimmten Aktion. Einige der Aktionen können die Verwendung von Unified Manager, ONTAP System Manager, OnCommand Workflow Automation, ONTAP CLI-Befehlen oder einer Kombination dieser Tools umfassen.

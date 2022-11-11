@@ -1,0 +1,71 @@
+---
+permalink: data-protection/reference_edit_relationship_dialog_box.html 
+sidebar: sidebar 
+keywords: edit, relationship, dialog box 
+summary: Sie können eine bestehende Schutzbeziehung bearbeiten, um die maximale Übertragungsrate, die Schutzrichtlinie oder den Schutzzeitplan zu ändern. 
+---
+= Dialogfeld „Beziehung bearbeiten“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine bestehende Schutzbeziehung bearbeiten, um die maximale Übertragungsrate, die Schutzrichtlinie oder den Schutzzeitplan zu ändern.
+
+
+
+== Zielinformationen
+
+* *Zielcluster*
++
+Der Name des ausgewählten Ziel-Clusters.
+
+* *Ziel-SVM*
++
+Der Name der ausgewählten SVM
+
+* *Beziehungseinstellungen*
++
+Hier können Sie die maximale Übertragungsrate, die SnapMirror-Richtlinie und die Planung der Sicherungsbeziehung festlegen:
+
++
+** Max. Übertragungsrate
++
+Gibt die maximale Geschwindigkeit an, mit der Basisdaten zwischen Clustern über das Netzwerk übertragen werden. Wenn diese Option ausgewählt ist, ist die Netzwerkbandbreite auf den von Ihnen angegebenen Wert beschränkt. Sie können einen numerischen Wert eingeben und dann entweder Kilobyte pro Sekunde (kbps), Megabyte pro Sekunde (MBit/s), Gigabyte pro Sekunde (Gbit/s) oder Terabyte pro Sekunde (Tbit/s) auswählen. Die maximale Übertragungsrate, die Sie angeben, muss größer als 1 kbps und weniger als 4 Tbps sein. Wenn Sie keine maximale Übertragungsrate verwenden möchten, ist der Basistransfer zwischen den Beziehungen unbegrenzt. Wenn das primäre Cluster und das sekundäre Cluster identisch sind, wird diese Einstellung deaktiviert.
+
+** SnapMirror Richtlinie
++
+Gibt die ONTAP SnapMirror-Richtlinie für die Beziehung an. Der Standardwert ist DPDefault.
+
+** Erstellen Sie Die Policy
++
+Startet das Dialogfeld SnapMirror-Richtlinie erstellen, mit dem Sie eine neue SnapMirror-Richtlinie erstellen und verwenden können.
+
+** SnapMirror Zeitplan
++
+Gibt die ONTAP SnapMirror-Richtlinie für die Beziehung an. Verfügbare Zeitpläne umfassen Keine, 5min, 8hour, täglich, stündlich, Und wöchentlich. Der Standardwert ist Keine. Er gibt an, dass kein Zeitplan mit der Beziehung verknüpft ist. Beziehungen ohne Zeitpläne haben keine Verzögerungswerte, wenn sie nicht zu einem Storage-Service gehören.
+
+** Zeitplan Erstellen
++
+Startet das Dialogfeld „Zeitplan erstellen“, in dem Sie einen neuen SnapMirror Zeitplan erstellen können.
+
+
+
+
+
+
+
+== Befehlsschaltflächen
+
+Mit den Schaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Abbrechen*
++
+Legt die Auswahl auf und schließt das Dialogfeld Schutz konfigurieren.
+
+* *Senden*
++
+Wendet Ihre Auswahl an und schließt das Dialogfeld Beziehung bearbeiten.
+
+

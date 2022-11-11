@@ -1,0 +1,42 @@
+---
+permalink: reporting/task_create_report_to_view_qtrees_that_are_nearly_full.html 
+sidebar: sidebar 
+keywords: create, report, view, qtrees, full 
+summary: Sie können einen Bericht erstellen, um die Storage-Kapazität und -Auslastung von qtrees zu analysieren und nahezu volle qtrees anzuzeigen. 
+---
+= Erstellung eines Berichts zur Anzeige von fast vollen qtrees
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um die Storage-Kapazität und -Auslastung von qtrees zu analysieren und nahezu volle qtrees anzuzeigen.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Erstellen Sie mit den folgenden Schritten eine benutzerdefinierte Ansicht, in der fast vollständige qtrees angezeigt werden, und planen Sie dann einen Bericht, der für diese Ansicht erstellt werden soll.
+
+.Schritte
+. Klicken Sie im linken Navigationsfenster auf *Storage* > *Qtrees*.
+. Wählen Sie *ein-/Ausblenden* aus, um alle Spalten zu entfernen, die im Bericht nicht benötigt werden.
+. Ziehen Sie die Spalte „`Disk used %`“ in die Spalte „`Qtrees`“.
+. Klicken Sie auf das Filtersymbol, fügen Sie die folgenden Filter hinzu und klicken Sie dann auf *Filter anwenden*:
++
+** Verwendete Festplatten % sind größer als 75 %
+
+
+. Klicken Sie oben in der Spalte „`Disk used %`“, um die Ergebnisse nach Kapazitätsanteil zu sortieren.
+. Speichern Sie die Ansicht mit einem bestimmten Namen, der die Anzeige widerspiegelt, z. B. „`Qtrees enym ennahezu full`“, und klicken Sie auf das Häkchen (image:../media/blue_check.gif[""]).
+. Klicken Sie auf der Bestandsseite auf die Schaltfläche *geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite *Berichtspläne* eine neue Zeile hinzuzufügen, damit Sie die Terminplaneigenschaften für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtsplan ein, und füllen Sie die anderen Berichtsfelder aus, und klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""]Am Ende der Reihe.
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und per E-Mail an die Empfänger gesendet, die unter der angegebenen Häufigkeit aufgeführt sind.
+
+
+
+Basierend auf den im Bericht gezeigten Ergebnissen sollten Sie möglicherweise die Festplatten- und Soft-Limits (sofern vorhanden) anpassen oder die Daten in qtrees ausgleichen.

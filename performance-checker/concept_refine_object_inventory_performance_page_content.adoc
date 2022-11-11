@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_refine_object_inventory_performance_page_content.html 
+sidebar: sidebar 
+keywords: refining, performance, inventory, page, contents 
+summary: Die Inventarseiten für Performance-Objekte enthalten Tools, mit denen Sie Inhalte aus Objektbeständen verfeinern können, damit Sie bestimmte Daten schnell und einfach auffinden können. 
+---
+= Inhalt der Seite zur Leistungsbestandsliste wird verfeinert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Inventarseiten für Performance-Objekte enthalten Tools, mit denen Sie Inhalte aus Objektbeständen verfeinern können, damit Sie bestimmte Daten schnell und einfach auffinden können.
+
+Die Informationen auf den Seiten zum Bestand von Performance-Objekten können umfangreich sein und häufig über mehrere Seiten hinweg erfasst werden. Diese umfassenden Daten eignen sich hervorragend für das Monitoring, die Nachverfolgung und die Performance. Das Auffinden bestimmter Daten erfordert jedoch Tools, mit denen Sie die gesuchten Daten schnell finden. Daher enthalten die Seiten für den Bestand von Performance-Objekten Funktionen zum Suchen, Sortieren und Filtern. Darüber hinaus können Suchen und Filtern zusammenarbeiten, um Ihre Ergebnisse weiter einzugrenzen.

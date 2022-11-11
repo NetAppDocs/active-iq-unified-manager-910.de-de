@@ -1,0 +1,18 @@
+---
+permalink: config/concept_what_role_based_access_control_does.html 
+sidebar: sidebar 
+keywords: role-based, access, control 
+summary: 'Die rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) ermöglicht Administratoren das Management von Benutzergruppen, indem sie Rollen definieren. Wenn Sie den Zugriff auf bestimmte Funktionen auf ausgewählte Administratoren beschränken müssen, müssen Sie Administratorkonten für diese einrichten. Wenn Sie die Informationen beschränken möchten, die Administratoren anzeigen können, und die Vorgänge, die sie ausführen können, müssen Sie Rollen auf die von Ihnen erstellten Administratorkonten anwenden.' 
+---
+= Was ist die rollenbasierte Zugriffssteuerung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) ermöglicht Administratoren das Management von Benutzergruppen, indem sie Rollen definieren. Wenn Sie den Zugriff auf bestimmte Funktionen auf ausgewählte Administratoren beschränken müssen, müssen Sie Administratorkonten für diese einrichten. Wenn Sie die Informationen beschränken möchten, die Administratoren anzeigen können, und die Vorgänge, die sie ausführen können, müssen Sie Rollen auf die von Ihnen erstellten Administratorkonten anwenden.
+
+Der Verwaltungsserver verwendet RBAC für Benutzeranmeldung und Rollenberechtigungen. Wenn Sie die Standardeinstellungen des Managementservers für den Administratorbenutzerzugriff nicht geändert haben, müssen Sie sich nicht anmelden, um sie anzuzeigen.
+
+Wenn Sie einen Vorgang initiieren, der bestimmte Berechtigungen benötigt, fordert der Verwaltungsserver Sie zur Anmeldung auf. Zum Erstellen von Administratorkonten müssen Sie sich beispielsweise mit dem Zugriff auf das Anwendungsadministrator-Konto anmelden.

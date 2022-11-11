@@ -1,0 +1,60 @@
+---
+permalink: events/reference_event_setup_page.html 
+sidebar: sidebar 
+keywords: event, setup, page, command, buttons, list, view 
+summary: Auf der Seite Event Setup werden die Liste der deaktivierten Ereignisse angezeigt und Informationen wie den zugehörigen Objekttyp und den Schweregrad des Ereignisses bereitgestellt. Sie können auch Aufgaben wie Deaktivieren oder Aktivieren von Ereignissen global ausführen. 
+---
+= Seite „Ereignis-Einrichtung“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite Event Setup werden die Liste der deaktivierten Ereignisse angezeigt und Informationen wie den zugehörigen Objekttyp und den Schweregrad des Ereignisses bereitgestellt. Sie können auch Aufgaben wie Deaktivieren oder Aktivieren von Ereignissen global ausführen.
+
+Sie können diese Seite nur aufrufen, wenn Sie die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ besitzen.
+
+
+
+== Befehlsschaltflächen
+
+Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben für ausgewählte Ereignisse ausführen:
+
+* *Deaktivieren*
++
+Öffnet das Dialogfeld Ereignisse deaktivieren, mit dem Sie Ereignisse deaktivieren können.
+
+* *Aktivieren*
++
+Aktiviert ausgewählte Ereignisse, die Sie zuvor deaktiviert hatten.
+
+* *Regeln Hochladen*
++
+Startet das Dialogfeld „Regeln hochladen“, in dem Sites ohne externen Netzwerkzugriff die Datei „Active IQ-Regeln“ manuell auf Unified Manager hochladen können. Die Regeln werden auf Cluster AutoSupport Meldungen ausgeführt, um Ereignisse für die Systemkonfiguration, Verkabelung, Best Practice und Verfügbarkeit zu generieren, die von der Active IQ Plattform definiert wurden.
+
+* *EMS Events abonnieren*
++
+Öffnet das Dialogfeld „EMS-Ereignisse abonnieren“, in dem Sie spezielle EMS-Ereignisse (Event Management System) aus den von Ihnen überwachten Clustern abonnieren können. Das EMS sammelt Informationen über Ereignisse, die auf dem Cluster auftreten. Wenn eine Benachrichtigung für ein abonniertes EMS-Ereignis erhalten wird, wird ein Unified Manager-Ereignis mit dem entsprechenden Schweregrad generiert.
+
+
+
+
+
+== Listenansicht
+
+In der Listenansicht werden Informationen zu deaktivierten Ereignissen (im Tabellenformat) angezeigt. Mit den Spaltenfiltern können Sie die angezeigten Daten anpassen.
+
+* *Veranstaltung*
++
+Zeigt den Namen des Ereignisses an, das deaktiviert ist.
+
+* *Severity*
++
+Zeigt den Schweregrad des Ereignisses an. Der Schweregrad kann kritisch, Fehler, Warnung oder Informationen sein.
+
+* *Quelltyp*
++
+Zeigt den Quelltyp an, für den das Ereignis generiert wird.
+
+

@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_troubleshooting_workloads_using_workload_analyzer.html 
+sidebar: sidebar 
+keywords: workload analyzer, troubleshoot 
+summary: Die Workload-Analyse bietet eine Möglichkeit, wichtige Gesundheits- und Performancekriterien für einen einzelnen Workload auf einer einzelnen Seite anzuzeigen, um die Fehlerbehebung zu unterstützen. Durch die Anzeige aller aktuellen und bisherigen Ereignisse für einen Workload erhalten Sie eine bessere Vorstellung davon, warum der Workload jetzt ein Performance- oder Kapazitätsproblem haben könnte. 
+---
+= Fehlersuche bei Workloads mithilfe der Workload Analyzer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Workload-Analyse bietet eine Möglichkeit, wichtige Gesundheits- und Performancekriterien für einen einzelnen Workload auf einer einzelnen Seite anzuzeigen, um die Fehlerbehebung zu unterstützen. Durch die Anzeige aller aktuellen und bisherigen Ereignisse für einen Workload erhalten Sie eine bessere Vorstellung davon, warum der Workload jetzt ein Performance- oder Kapazitätsproblem haben könnte.
+
+Mit diesem Tool können Sie auch feststellen, ob Speicher die Ursache von Performance-Problemen für eine Anwendung ist oder ob das Problem durch ein Netzwerk oder ein anderes zusammenhänges Problem verursacht wird.
+
+Sie können diese Funktion von einer Vielzahl von Orten in der Benutzeroberfläche aus starten:
+
+* Wählen Sie die Option Workload Analysis im linken Navigationsmenü aus
+* Klicken Sie auf der Seite Ereignisdetails auf die Schaltfläche *Workload analysieren*
+* Aus einer beliebigen Workload-Bestandsseite (Volume, LUN, Workload, NFS-Freigabe oder SMB/CIFS-Freigabe), Durch Klicken auf das Symbol Weitere image:../media/more_icon.gif[""], Dann *Workload analysieren*
+* Klicken Sie auf der Seite Virtuelle Maschinen auf die Schaltfläche *Workload analysieren* von einem beliebigen Datastore-Objekt aus
+
+
+Wenn Sie das Tool im linken Navigationsmenü starten, können Sie den Namen eines beliebigen Workloads eingeben, den Sie analysieren möchten, und den Zeitbereich auswählen, für den Sie eine Fehlerbehebung durchführen möchten. Wenn Sie das Tool von einer beliebigen Arbeitslast oder einer Inventarseite für virtuelle Maschinen starten, wird der Name des Workloads automatisch ausgefüllt, und die Daten des Workloads werden mit dem Standardzeitbereich von 2 Stunden angezeigt. Wenn Sie das Tool auf der Seite „Ereignisdetails“ starten, wird automatisch der Name des Workloads eingegeben, und die Daten von 10 Tagen werden angezeigt.

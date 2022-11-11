@@ -1,0 +1,32 @@
+---
+permalink: events/task_view_event_details.html 
+sidebar: sidebar 
+keywords: view, events, details 
+summary: Sie können die Details zu einem Ereignis anzeigen, das von Unified Manager ausgelöst wird, um Korrekturmaßnahmen zu ergreifen. Wenn beispielsweise ein Systemzustandsereignis-Volume Offline vorhanden ist, können Sie auf dieses Ereignis klicken, um die Details anzuzeigen und Korrekturmaßnahmen durchzuführen. 
+---
+= Anzeigen von Ereignissen und Ereignisdetails
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Details zu einem Ereignis anzeigen, das von Unified Manager ausgelöst wird, um Korrekturmaßnahmen zu ergreifen. Wenn beispielsweise ein Systemzustandsereignis-Volume Offline vorhanden ist, können Sie auf dieses Ereignis klicken, um die Details anzuzeigen und Korrekturmaßnahmen durchzuführen.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+
+Die Ereignisdetails enthalten Informationen wie die Quelle des Ereignisses, die Ursache des Ereignisses und alle Notizen, die mit dem Ereignis zusammenhängen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Ereignisverwaltung*.
++
+Standardmäßig werden in der Ansicht Alle aktiven Ereignisse die neuen und bestätigten (aktiven) Ereignisse angezeigt, die in den letzten 7 Tagen mit einem Level der Auswirkung von Vorfall oder Risiko generiert wurden.
+
+. Wenn Sie eine bestimmte Kategorie von Ereignissen anzeigen möchten, z. B. Kapazitätsereignisse oder Performanceereignisse, klicken Sie auf *Ansicht* und wählen Sie im Menü der Ereignistypen aus.
+. Klicken Sie auf den Ereignisnamen, dessen Details angezeigt werden sollen.
++
+Die Ereignisdetails werden auf der Seite Ereignisdetails angezeigt.
+
+

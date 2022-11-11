@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_understand_performance_events_and_alerts.html 
+sidebar: sidebar 
+keywords: understand, performance, events, alerts 
+summary: Performance-Ereignisse sind Benachrichtigungen, die Unified Manager automatisch generiert, wenn eine vordefinierte Bedingung eintritt oder wenn ein Performance-Zählerwert einen Schwellenwert überschreitet. Ereignisse helfen Ihnen bei der Ermittlung von Performance-Problemen in den überwachten Clustern. 
+---
+= Allgemeines zu Performance-Ereignissen und Meldungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Performance-Ereignisse sind Benachrichtigungen, die Unified Manager automatisch generiert, wenn eine vordefinierte Bedingung eintritt oder wenn ein Performance-Zählerwert einen Schwellenwert überschreitet. Ereignisse helfen Ihnen bei der Ermittlung von Performance-Problemen in den überwachten Clustern.
+
+Sie können Benachrichtigungen so konfigurieren, dass E-Mail-Benachrichtigungen automatisch gesendet werden, wenn Performance-Ereignisse bestimmter Schweregrade auftreten.

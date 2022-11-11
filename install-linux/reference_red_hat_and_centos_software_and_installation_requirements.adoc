@@ -1,0 +1,110 @@
+---
+permalink: install-linux/reference_red_hat_and_centos_software_and_installation_requirements.html 
+sidebar: sidebar 
+keywords: linux software, installation requirements, system, authorization,  requirements 
+summary: Das Linux-System, auf dem Unified Manager installiert wird, erfordert bestimmte Versionen des Betriebssystems und unterstützende Software. 
+---
+= Linux-Software- und Installationsanforderungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Linux-System, auf dem Unified Manager installiert wird, erfordert bestimmte Versionen des Betriebssystems und unterstützende Software.
+
+
+
+== Betriebssystem-Software
+
+Das Linux-System muss die folgenden Versionen des Betriebssystems und die unterstützende Software installiert haben:
+
+* Red hat Enterprise Linux oder CentOS Version 7.x und 8.x, basierend auf einer x86_64-Architektur CentOS Stream wird nicht unterstützt.
+
+
+In der Interoperabilitäts-Matrix finden Sie eine vollständige und aktuelle Liste der unterstützten Red hat Enterprise Linux- und CentOS-Versionen.
+
+http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]
+
+
+NOTE: NetApp unterstützt die Installation von Unified Manager mit Tools von Drittanbietern, wie z. B. Microsoft System Center Configuration Manager (SCCM), nicht.
+
+
+
+== Software von anderen Anbietern
+
+Unified Manager wird auf einem WildFly Web-Server bereitgestellt. WildFly 19.0.0 wird im Paket mit Unified Manager konfiguriert.
+
+Die folgenden Drittanbieterpakete sind erforderlich, jedoch nicht in Unified Manager enthalten. Diese Pakete werden automatisch vom installiert `yum` Installationsprogramm während der Installation, vorausgesetzt, Sie haben die Repositories wie in den folgenden Abschnitten beschrieben konfiguriert.
+
+* MySQL Community Edition Version 8.0.27 (aus dem MySQL-Repository).
+* OpenJDK Version 11.0.12 (aus dem Red hat Extra Enterprise Linux Server Repository)
+* Python 3.6.x
+* P7zip Version 16.02 oder höher (aus dem Red hat Extra Packages for Enterprise Linux Repository)
+
+
+[NOTE]
+====
+Vor dem Upgrade von Software anderer Anbieter müssen Sie eine laufende Instanz von Unified Manager herunterfahren. Nach Abschluss der Softwareinstallation von Drittanbietern können Sie Unified Manager neu starten.
+
+====
+
+
+== Anforderungen an die Benutzerautorisierung
+
+Die Installation von Unified Manager auf einem Linux-System kann vom Root-Benutzer oder von nicht-Root-Benutzern mit dem durchgeführt werden `sudo` Befehl.
+
+
+
+== Installationsvoraussetzungen
+
+Die Best Practices für die Installation von Red hat Enterprise Linux oder CentOS und den zugehörigen Repositorys auf Ihrem System sind unten aufgeführt. Systeme, die unterschiedlich installiert oder konfiguriert sind oder extern bereitgestellt werden (in der Cloud), erfordern möglicherweise weitere Schritte und Unified Manager kann in solchen Implementierungen nicht ordnungsgemäß ausgeführt werden.
+
+* Sie müssen Red hat Enterprise Linux oder CentOS nach Red hat Best Practices installieren, und Sie sollten die folgenden Standardoptionen wählen, die die Auswahl der Basisumgebung „`SServer mit GUI`“ erfordern.
+* Bei der Installation von Unified Manager auf Red hat Enterprise Linux oder CentOS muss das System Zugriff auf das entsprechende Repository haben, damit das Installationsprogramm auf alle erforderlichen Softwareabhängigkeiten zugreifen und diese installieren kann.
+* Für das `yum` Installer um die abhängige Software in den Red hat Enterprise Linux Repositorys zu finden, müssen Sie das System während der Red hat Enterprise Linux Installation oder danach unter Verwendung eines gültigen Red hat Subskriptions registriert haben.
++
+Informationen zum Red hat Subscription Manager finden Sie in der Red hat Dokumentation.
+
+* Sie müssen das EPEL-Repository (Extra Packages for Enterprise Linux) aktivieren, um die erforderlichen Dienstprogramme von Drittanbietern erfolgreich auf Ihrem System installieren zu können.
++
+Wenn das EPEL-Repository auf Ihrem System nicht konfiguriert ist, müssen Sie das Repository manuell herunterladen und konfigurieren.
+
++
+link:task_manually_configure_epel_repository.html["Manuelles Konfigurieren des EPEL-Repositorys"]
+
+* Wenn die korrekte Version von MySQL nicht installiert ist, müssen Sie das MySQL-Repository aktivieren, damit die MySQL-Software auf Ihrem System erfolgreich installiert werden kann.
++
+Wenn das MySQL-Repository nicht auf Ihrem System konfiguriert ist, müssen Sie das Repository manuell herunterladen und konfigurieren.
+
++
+link:task_manually_configure_mysql_repository.html["Manuelles Konfigurieren des MySQL-Repository"]
+
+
+
+Wenn Ihr System keinen Internetzugang hat und die Repositories nicht von einem mit dem Internet verbundenen System mit dem nicht verbundenen System gespiegelt werden, sollten Sie die Installationsanweisungen befolgen, um die externen Softwareabhängigkeiten Ihres Systems zu bestimmen. Anschließend können Sie die erforderliche Software auf das internetverbundene System herunterladen und die kopieren `.rpm` Dateien auf dem System, auf dem Unified Manager installiert werden soll. Um die Artefakte und Pakete herunterzuladen, müssen Sie das verwenden `yum install` Befehl. Sie müssen sicherstellen, dass auf beiden Systemen die gleiche Betriebssystemversion ausgeführt wird und dass die Abonnementlizenz für die entsprechende Red hat Enterprise Linux- oder CentOS-Version gilt.
+
+[NOTE]
+====
+Sie dürfen die erforderliche Drittanbietersoftware nicht aus anderen als den hier aufgeführten Repositorys installieren. Die in den Red hat Repositorys installierte Software wurde speziell für Red hat Enterprise Linux entwickelt und entspricht den Best Practices von Red hat (Verzeichnislayouts, Berechtigungen usw.). Software von anderen Standorten folgt möglicherweise nicht diesen Richtlinien. Dies kann dazu führen, dass die Unified Manager-Installation fehlschlägt oder Probleme mit zukünftigen Upgrades verursachen kann.
+
+====
+
+
+== Port 443 erforderlich
+
+Allgemeine Images von Red hat Enterprise Linux und CentOS blockieren möglicherweise externen Zugriff auf Port 443. Aufgrund dieser Einschränkung können Sie nach der Installation von Unified Manager möglicherweise keine Verbindung zur Administrator-Web-UI herstellen. Der folgende Befehl ermöglicht den Zugriff auf Port 443 für alle externen Benutzer und Anwendungen auf einem generischen Red hat Enterprise Linux oder CentOS System.
+
+`# firewall-cmd --zone=public --add-port=443/tcp --permanent; firewall-cmd --reload`
+
+Sie müssen Red hat Enterprise Linux und CentOS in der Basisumgebung „`SServer mit GUI`“ installieren. Er stellt die Befehle bereit, die von der Installationsanleitung für Unified Manager verwendet werden. Bei anderen Basisumgebungen müssen Sie möglicherweise zusätzliche Befehle installieren, um die Installation zu validieren oder abzuschließen. Wenn der `firewall-cmd` Ist auf Ihrem System nicht verfügbar, müssen Sie es installieren, indem Sie den folgenden Befehl ausführen:
+
+`# sudo yum install firewalld`
+
+Wenden Sie sich an Ihre IT-Abteilung, bevor Sie die Befehle ausführen, um zu prüfen, ob Ihre Sicherheitsrichtlinien ein anderes Verfahren erfordern.
+
+[NOTE]
+====
+THP (Transparent Riesen Pages) sollte auf CentOS- und Red hat-Systemen deaktiviert werden. Wenn diese Option aktiviert ist, kann dies dazu führen, dass Unified Manager heruntergefahren wird, wenn bestimmte Prozesse zu viel Arbeitsspeicher in Anspruch nehmen und beendet werden.
+
+====

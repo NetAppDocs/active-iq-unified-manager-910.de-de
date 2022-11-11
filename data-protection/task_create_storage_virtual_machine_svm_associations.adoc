@@ -1,0 +1,57 @@
+---
+permalink: data-protection/task_create_storage_virtual_machine_svm_associations.html 
+sidebar: sidebar 
+keywords: create, storage, vm, peers 
+summary: Mit dem Assistenten „Create Storage Virtual Machine Peers“ können Partnersicherungsapplikationen eine Quell-Storage-VM zur Verwendung mit SnapMirror und SnapVault Beziehungen mit einer Ziel-Storage-VM verknüpfen. Partnerapplikationen verwenden diese Verknüpfungen zum Zeitpunkt der Erstbereitstellung der Ziel-Volumes, um zu ermitteln, welche Ressourcen ausgewählt werden sollen. 
+---
+= Erstellen von Kollegen aus Storage-VMs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit dem Assistenten „Create Storage Virtual Machine Peers“ können Partnersicherungsapplikationen eine Quell-Storage-VM zur Verwendung mit SnapMirror und SnapVault Beziehungen mit einer Ziel-Storage-VM verknüpfen. Partnerapplikationen verwenden diese Verknüpfungen zum Zeitpunkt der Erstbereitstellung der Ziel-Volumes, um zu ermitteln, welche Ressourcen ausgewählt werden sollen.
+
+*Was Sie brauchen*
+
+* Die Storage-VM, die Sie verknüpfen, muss bereits vorhanden sein.
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Für jede Quell-Storage-VM und jeden Beziehungstyp können Sie nur eine Ziel-Storage-VM auf jedem Ziel-Cluster auswählen.
+
+Das Ändern von Zuordnungen mithilfe der Funktionen Löschen und Erstellen wirkt sich nur auf zukünftige Bereitstellungsvorgänge aus. Es verschiebt keine vorhandenen Ziel-Volumes.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Schutz* > *Storage VM Peers*.
+. Klicken Sie auf der Seite *SVM Peers* auf *Erstellen*.
++
+Der Assistent Create Storage Virtual Machine Peers wird gestartet.
+
+. Wählen Sie eine der folgenden Quellen aus:
++
+** * Any*
++
+Wählen Sie diese Option, wenn Sie eine Zuordnung zwischen einer beliebigen primären Speicher-VM-Quelle zu einer oder mehreren Ziel-Speicher-VM erstellen möchten. Das heißt, alle bestehenden Storage-VMs, die derzeit gesichert werden müssen, sowie jede zukünftig erstellte Storage-VM sind mit der angegebenen Ziel-Storage-VM verknüpft. Beispielsweise kann es sinnvoll sein, dass Applikationen aus verschiedenen Quellen an verschiedenen Standorten auf einer oder mehreren Ziel-Storage-VM an einem Standort gesichert werden.
+
+** *Single*
++
+Wählen Sie diese Option, wenn Sie eine bestimmte Quell-Storage-VM auswählen möchten, die einer oder mehreren Ziel-Storage-VM zugeordnet ist. Wenn Sie beispielsweise vielen Clients Storage-Services bereitstellen, deren Daten voneinander getrennt sein müssen, wählen Sie diese Option, um eine bestimmte Storage-VM-Quelle einem bestimmten Storage-VM-Ziel zu zuordnen, das nur diesem Client zugewiesen ist.
+
+** *Keine (Extern)*
++
+Wählen Sie diese Option, wenn Sie eine Zuordnung zwischen einer Quell-Speicher-VM und einem externen flexiblen Volume einer Ziel-Speicher-VM erstellen möchten.
+
+
+
+. Wählen Sie einen oder beide Arten von Schutzbeziehungen aus, die Sie erstellen möchten:
++
+** *SnapMirror*
+** *SnapVault*
+
+
+. Klicken Sie Auf *Weiter*.
+. Wählen Sie ein oder mehrere Storage-VM-Schutzziele aus.
+. Klicken Sie Auf *Fertig Stellen*.
+

@@ -1,0 +1,184 @@
+---
+permalink: data-protection/reference_select_source_snapshot_copy_dialog_box.html 
+sidebar: sidebar 
+keywords: select, source, snapshot, copy, dialog box 
+summary: Sie verwenden das Dialogfeld Quell-Snapshot Kopie auswählen, um eine bestimmte Snapshot Kopie zum Übertragen von Daten zwischen Sicherungsbeziehungen auszuwählen, oder Sie wählen das Standardverhalten aus, das je nach Initialisierung, Aktualisierung oder erneuten Synchronisierung einer Beziehung variiert. Außerdem können Sie wählen, ob die Beziehung eine SnapMirror oder SnapVault ist. 
+---
+= Wählen Sie das Dialogfeld Snapshot-Kopie der Quelle aus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie verwenden das Dialogfeld Quell-Snapshot Kopie auswählen, um eine bestimmte Snapshot Kopie zum Übertragen von Daten zwischen Sicherungsbeziehungen auszuwählen, oder Sie wählen das Standardverhalten aus, das je nach Initialisierung, Aktualisierung oder erneuten Synchronisierung einer Beziehung variiert. Außerdem können Sie wählen, ob die Beziehung eine SnapMirror oder SnapVault ist.
+
+
+
+== Standard
+
+Ermöglicht Ihnen, das Standardverhalten auszuwählen, um zu ermitteln, welche Snapshot Kopie zum Initialisieren, Aktualisieren und erneuten Synchronisieren von Transfers für SnapVault- und SnapMirror-Beziehungen verwendet wird.
+
+Wenn Sie einen SnapVault-Transfer durchführen, lautet das Standardverhalten für jeden Vorgang wie folgt:
+
+[cols="3*"]
+|===
+| Betrieb | Standardmäßiges SnapVault-Verhalten, wenn die Quelle Lese-/Schreibzugriff ist | Standardmäßiges SnapVault-Verhalten, wenn Quelle Datensicherung (DP) ist 
+
+
+ a| 
+Initialisieren
+ a| 
+Erstellt eine neue Snapshot Kopie und überträgt sie.
+ a| 
+Überträgt die zuletzt exportierte Snapshot Kopie.
+
+
+
+ a| 
+Aktualisierung
+ a| 
+Überträgt nur gekennzeichnete Snapshot-Kopien, wie in der Richtlinie angegeben
+ a| 
+Überträgt die zuletzt exportierte Snapshot Kopie.
+
+
+
+ a| 
+Neu Synchronisieren
+ a| 
+Überträgt alle gekennzeichneten Snapshot-Kopien, die nach der neuesten gemeinsamen Snapshot-Kopie erstellt wurden.
+ a| 
+Überträgt die neueste beschriftete Snapshot Kopie.
+
+|===
+Wenn Sie einen SnapMirror Transfer durchführen, verhält sich das Standardverhalten jedes Vorgangs wie folgt:
+
+[cols="3*"]
+|===
+| Betrieb | Standardverhalten von SnapMirror | Standardverhalten von SnapMirror bei einer Beziehung zweiter Hop in einer SnapMirror-zu-SnapMirror-Kaskadierung 
+
+
+ a| 
+Initialisieren
+ a| 
+Erstellt eine neue Snapshot Kopie und überträgt sie sowie alle Snapshot Kopien, die vor der neuen Snapshot Kopie erstellt wurden.
+ a| 
+Überträgt alle Snapshot Kopien von der Quelle.
+
+
+
+ a| 
+Aktualisierung
+ a| 
+Erstellt eine neue Snapshot Kopie und überträgt sie sowie alle Snapshot Kopien, die vor der neuen Snapshot Kopie erstellt wurden.
+ a| 
+Überträgt alle Snapshot Kopien.
+
+
+
+ a| 
+Neu Synchronisieren
+ a| 
+Erstellt eine neue Snapshot Kopie und überträgt anschließend alle Snapshot Kopien vom Quellspeicherort.
+ a| 
+Überträgt alle Snapshot Kopien vom sekundären Volume auf das tertiäre Volume und löscht alle Daten, die nach der Erstellung der neuesten allgemeinen Snapshot Kopie hinzugefügt wurden.
+
+|===
+
+
+== Vorhandene Snapshot Kopie
+
+Ermöglicht Ihnen, eine vorhandene Snapshot Kopie aus der Liste auszuwählen, wenn die Auswahl von Snapshot Kopien für diesen Vorgang zulässig ist.
+
+* *Snapshot Kopie*
++
+Zeigt die vorhandenen Snapshot Kopien an, aus denen Sie für eine Übertragung auswählen können.
+
+* *Erstellungsdatum*
++
+Zeigt das Datum und die Uhrzeit der Erstellung der Snapshot Kopie an. Snapshot Kopien werden von Neuesten bis zuletzt aufgelistet, wobei sich das neueste an der Spitze der Liste befinden.
+
+
+
+Wenn Sie einen SnapVault Transfer durchführen und Sie eine vorhandene Snapshot Kopie auswählen möchten, um sie von einer Quelle auf ein Ziel zu übertragen, sieht das folgende Verhalten für jeden Vorgang aus:
+
+[cols="3*"]
+|===
+| Betrieb | Verhalten von SnapVault beim Angeben einer Snapshot Kopie | Verhalten von SnapVault bei Angabe einer Snapshot Kopie in einer Kaskadierung 
+
+
+ a| 
+Initialisieren
+ a| 
+Überträgt die angegebene Snapshot Kopie.
+ a| 
+Die Auswahl von Quell-Snapshot Kopien wird für Datensicherungs-Volumes nicht unterstützt.
+
+
+
+ a| 
+Aktualisierung
+ a| 
+Überträgt die angegebene Snapshot Kopie.
+ a| 
+Die Auswahl von Quell-Snapshot Kopien wird für Datensicherungs-Volumes nicht unterstützt.
+
+
+
+ a| 
+Neu Synchronisieren
+ a| 
+Überträgt die ausgewählte Snapshot Kopie.
+ a| 
+Die Auswahl von Quell-Snapshot Kopien wird für Datensicherungs-Volumes nicht unterstützt.
+
+|===
+Wenn Sie einen SnapMirror Transfer durchführen und Sie eine vorhandene Snapshot Kopie auswählen möchten, um sie von einer Quelle auf ein Ziel zu übertragen, sieht die Vorgehensweise für jeden Vorgang wie folgt aus:
+
+[cols="3*"]
+|===
+| Betrieb | Verhalten von SnapMirror beim Angeben einer Snapshot Kopie | Verhalten von SnapMirror bei der Angabe einer Snapshot Kopie in einer Kaskadierung 
+
+
+ a| 
+Initialisieren
+ a| 
+Überträgt alle Snapshot Kopien auf der Quelle bis zur angegebenen Snapshot Kopie.
+ a| 
+Die Auswahl von Quell-Snapshot Kopien wird für Datensicherungs-Volumes nicht unterstützt.
+
+
+
+ a| 
+Aktualisierung
+ a| 
+Überträgt alle Snapshot Kopien auf der Quelle bis zur angegebenen Snapshot Kopie.
+ a| 
+Die Auswahl von Quell-Snapshot Kopien wird für Datensicherungs-Volumes nicht unterstützt.
+
+
+
+ a| 
+Neu Synchronisieren
+ a| 
+Überträgt alle Snapshot Kopien vom Quell- bis zur ausgewählten Snapshot Kopie. Anschließend werden alle Daten gelöscht, die nach der Erstellung der neuesten allgemeinen Snapshot Kopie hinzugefügt wurden.
+ a| 
+Die Auswahl von Quell-Snapshot Kopien wird für Datensicherungs-Volumes nicht unterstützt.
+
+|===
+
+
+== Befehlsschaltflächen
+
+Mit den Schaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Senden*
++
+Reicht Ihre Auswahl ein und schließt das Dialogfeld QuellSnapshot Kopie auswählen.
+
+* *Abbrechen*
++
+Legt die Auswahl auf und schließt das Dialogfeld „Quell-Snapshot-Kopie auswählen“.
+
+

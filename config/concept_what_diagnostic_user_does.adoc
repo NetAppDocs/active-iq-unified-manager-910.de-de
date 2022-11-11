@@ -1,0 +1,16 @@
+---
+permalink: config/concept_what_diagnostic_user_does.html 
+sidebar: sidebar 
+keywords: diagnostic, user, capabilities 
+summary: Der Diagnosezugriff dient dazu, Ihnen den technischen Support bei der Fehlerbehebung zu ermöglichen, und Sie sollten ihn nur verwenden, wenn Sie sich an den technischen Support wenden. 
+---
+= Funktionen von Benutzern zur Diagnose
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Diagnosezugriff dient dazu, Ihnen den technischen Support bei der Fehlerbehebung zu ermöglichen, und Sie sollten ihn nur verwenden, wenn Sie sich an den technischen Support wenden.
+
+Der Diagnose-Benutzer kann Befehle auf Betriebssystemebene ausführen, wenn sie von dem technischen Support gesteuert werden, um die Fehlerbehebung zu ermöglichen.

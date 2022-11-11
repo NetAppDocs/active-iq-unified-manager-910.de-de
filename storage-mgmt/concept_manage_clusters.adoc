@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_manage_clusters.html 
+sidebar: sidebar 
+keywords: manage, clusters 
+summary: ONTAP-Cluster können mit Unified Manager gemanagt werden, um Cluster zu überwachen, hinzuzufügen, zu bearbeiten und zu entfernen. 
+---
+= Verwalten von Clustern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP-Cluster können mit Unified Manager gemanagt werden, um Cluster zu überwachen, hinzuzufügen, zu bearbeiten und zu entfernen.

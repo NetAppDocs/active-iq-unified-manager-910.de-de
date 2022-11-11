@@ -1,0 +1,39 @@
+---
+permalink: performance-checker/task_edit_user_defined_performance_threshold_policies.html 
+sidebar: sidebar 
+keywords: edit, user-defined, performance, threshold, policies 
+summary: Sie können die Schwellenwerteinstellungen für vorhandene Performance-Schwellenwertrichtlinien bearbeiten. Dies kann nützlich sein, wenn Sie feststellen, dass Sie zu viele oder zu wenige Warnmeldungen für bestimmte Schwellwerte erhalten. 
+---
+= Bearbeiten benutzerdefinierter Richtlinien für Leistungsschwellenwerte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Schwellenwerteinstellungen für vorhandene Performance-Schwellenwertrichtlinien bearbeiten. Dies kann nützlich sein, wenn Sie feststellen, dass Sie zu viele oder zu wenige Warnmeldungen für bestimmte Schwellwerte erhalten.
+
+*Was Sie brauchen*
+
+Sie müssen über die Anwendungsadministratorrolle verfügen.
+
+Sie können den Richtliniennamen oder den Typ des Storage-Objekts, das für vorhandene Schwellenwertrichtlinien überwacht wird, nicht ändern.
+
+.Schritte
+. Wählen Sie im linken Navigationsbereich *Ereignisschwellenwerte* > *Leistung* aus.
++
+Die Seite Leistungsschwellenwerte wird angezeigt.
+
+. Wählen Sie die Schwellenwertrichtlinie aus, die Sie ändern möchten, und klicken Sie auf *Bearbeiten*.
++
+Die Seite Richtlinie für Leistungsschwellenwert bearbeiten wird angezeigt.
+
+. Nehmen Sie Ihre Änderungen an der Schwellenwertrichtlinie vor und klicken Sie auf *Speichern*.
++
+Sie gelangen zur Seite „Performance Schwellenwerte“ zurück.
+
+
+
+Nachdem sie gespeichert wurden, werden Änderungen sofort für alle Speicherobjekte aktualisiert, die die Richtlinie verwenden.
+
+Abhängig von der Art der Änderungen, die Sie an der Richtlinie vorgenommen haben, sollten Sie möglicherweise die für die Objekte, die die Richtlinie verwenden, auf der Seite „Alarmkonfiguration“ konfigurierten Warnungseinstellungen überprüfen.

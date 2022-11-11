@@ -1,0 +1,19 @@
+---
+permalink: reporting/task_sort_data.html 
+sidebar: sidebar 
+keywords: sort, data 
+summary: Um die Ergebnisse zu sortieren, klicken Sie auf eine Spalte und zeigen eine aufsteigende oder absteigende Reihenfolge an. Beim Sortieren von Daten werden die für den Bericht erforderlichen Informationen priorisiert. 
+---
+= Daten sortieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um die Ergebnisse zu sortieren, klicken Sie auf eine Spalte und zeigen eine aufsteigende oder absteigende Reihenfolge an. Beim Sortieren von Daten werden die für den Bericht erforderlichen Informationen priorisiert.
+
+.Schritte
+. Klicken Sie oben in einer Spalte, um die Ergebnisse so zu sortieren, dass oben in der Ansicht die wichtigsten Informationen angezeigt werden.
+. Benennen Sie die nicht gespeicherte Ansicht, um Ihre Änderungen zu speichern.
+

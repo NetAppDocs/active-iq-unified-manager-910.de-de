@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/reference_understand_and_use_node_failover_planning_page.html 
+sidebar: sidebar 
+keywords: understanding, node, failover, planning page 
+summary: 'Die Seite Performance/Node Failover Planning schätzt die Auswirkungen auf die Leistung eines Knotens, wenn der hochverfügbare (HA-)Partner-Knoten des Knotens ausfällt. Die Schätzungen von Unified Manager beruhen auf der historischen Performance von Nodes im HA-Paar.' 
+---
+= Verstehen und Verwenden der Seite Node Failover Planning
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite „Performance/Node Failover Planning“ schätzt die Auswirkungen auf die Performance eines Node, wenn der hochverfügbare Partner-Node des Node ausfällt. Die Schätzungen von Unified Manager beruhen auf der historischen Performance von Nodes im HA-Paar.
+
+Die Schätzung der Auswirkungen auf die Performance bei einem Failover hilft Ihnen, die folgenden Szenarien zu planen:
+
+* Wenn ein Failover die geschätzte Performance des übernehmenden Node immer wieder auf ein nicht akzeptables Niveau verschlechtert, können Sie Korrekturmaßnahmen ergreifen, um die Performance-Beeinträchtigung aufgrund eines Failover zu verringern.
+* Vor dem Initiieren eines manuellen Failover zur Durchführung von Hardwarewartungsaufgaben können Sie einschätzen, welche Auswirkungen der Failover auf die Performance des Takeover-Nodes hat, um den optimalen Zeitpunkt für die Durchführung der Aufgabe zu bestimmen.
+

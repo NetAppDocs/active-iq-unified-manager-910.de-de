@@ -1,0 +1,47 @@
+---
+permalink: health-checker/task_determine_if_volume_is_offline_and_its_svm_is_stopped.html 
+sidebar: sidebar 
+keywords: determine, volume, offline, svm, node 
+summary: 'Mit der Unified Manager Web-UI lässt sich die Möglichkeit bestätigen oder ganz vermeiden, dass ein Volume offline ist, da die SVM (Host Storage Virtual Machine) aufgrund des Node, der das Root-Volume dieser SVM hostet, angehalten wird.' 
+---
+= Ermitteln, ob ein Volume offline ist und seine SVM angehalten ist, da ein Node ausfällt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der Unified Manager Web-UI lässt sich die Möglichkeit bestätigen oder ganz vermeiden, dass ein Volume offline ist, da die SVM (Host Storage Virtual Machine) aufgrund des Node, der das Root-Volume dieser SVM hostet, angehalten wird.
+
+*Was Sie brauchen*
+
+Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
+
+Um zu ermitteln, ob die Offline-Bedingung des Volumes dazu führt, dass seine Host-SVM angehalten wird, da der Node, der das Root-Volume dieser SVM hostet, ausgefallen ist, führen Sie die folgenden Aktionen durch:
+
+.Schritte
+. Suchen Sie den Hypertext-Link, der unter der SVM im Bereich *Related Devices* des Offlinesdatentextes angezeigt wird, und klicken Sie auf die Seite *Volume / Health* Details.
++
+Auf der Seite Storage VM / Health Details wird der Status „`running`“ bzw. der Status „`stogedated`“ der Hosting-SVM angezeigt. Wenn der SVM-Status ausgeführt wird, wird die offline-Bedingung des Volumes nicht durch den Node verursacht, der das Root-Volume dieser SVM hostet, der ausgefallen ist.
+
+. Wenn der SVM-Status angehalten wird, klicken Sie auf *View SVMs*, um die Ursache des Anstoppens der Hosting-SVM zu ermitteln.
+. Klicken Sie in der Spaltenüberschrift *Health: All Storage VMs* View SVM auf das Filtersymbol image:../media/filtericon_um60.png["Symbol für Spaltenfilter"] Geben Sie dann den Namen der angehalten SVM ein.
++
+Die Informationen für diese SVM sind in einer Tabelle dargestellt.
+
+. Klicken Sie in der Ansicht *Health: Alle Storage VMs* auf image:../media/gridviewicon.gif["Symbol für die Rasteransicht"] Und wählen Sie dann die Option *Root Volume* aus.
++
+Die Spalte „Root-Volume“ wird dem SVM-Inventar hinzugefügt und zeigt den Namen des Root-Volumes der angehalten SVM an.
+
+. Klicken Sie in der Spalte Root Volume auf den Namen des Root-Volumes, um die Seite *Storage VM / Health* Details für dieses Volume anzuzeigen.
++
+Wenn der Status des SVM-Root-Volumes (Online) lautet, wird die ursprüngliche Offline-Bedingung für das Volume nicht verursacht, da der Node, der das Root-Volume dieser SVM hostet, nicht verfügbar ist.
+
+. Wenn der Status des SVM-Root-Volumes (Offline) lautet, suchen und klicken Sie auf den Hypertext-Link, der unter Aggregat im Fensterbereich Verwandte Geräte der Seite Volume / Health Details des SVM-Root-Volumes angezeigt wird.
+. Suchen und klicken Sie auf den Hypertext-Link, der unter Knoten im Bereich *Verwandte Geräte* der Seite * Aggregate / Health* Details des Aggregats angezeigt wird.
++
+Auf der Registerkarte Nodes auf der Seite Cluster/Integritätsdetails wird der Status des HA-Paars der Nodes angezeigt, dem der Hosting-Node des SVM-Root-Volumes angehört. Der Status des Knotens wird im Display angezeigt.
+
+
+
+Nachdem Sie bestätigt haben, dass der Offline-Zustand des Volume durch den Offline-Zustand des Host-SVM verursacht wurde. Dies selbst wird durch den Node verursacht, der das Root-Volume der SVM hostet, der ausgefallen ist, wenden Sie sich an den entsprechenden Administrator oder Operator, um den ausgefallenen Node manuell neu zu starten.

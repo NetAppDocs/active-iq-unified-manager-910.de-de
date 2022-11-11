@@ -1,0 +1,50 @@
+---
+permalink: data-protection/task_resynchronize_protection_relationships.html 
+sidebar: sidebar 
+keywords: resynchronize, protection, relationships, volume, relationships page 
+summary: Auf der Seite Volume Relationships können Sie eine Beziehung neu synchronisieren, um sie von einem Ereignis wiederherzustellen, bei dem das Quell-Volume deaktiviert wurde, oder wenn Sie die aktuelle Quelle auf ein anderes Volume ändern möchten. 
+---
+= Sicherungsbeziehungen von der Seite Volume Relationships neu synchronisieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite Volume Relationships können Sie eine Beziehung neu synchronisieren, um sie von einem Ereignis wiederherzustellen, bei dem das Quell-Volume deaktiviert wurde, oder wenn Sie die aktuelle Quelle auf ein anderes Volume ändern möchten.
+
+*Was Sie brauchen*
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen Workflow Automation einrichten.
+
+
+.Schritte
+. Wählen Sie auf der Seite *Volume Relationships* ein oder mehrere Volumes mit stillgelegten Beziehungen aus und klicken Sie in der Symbolleiste auf *resynchronisieren*.
++
+Das Dialogfeld „Resynchronisieren“ wird angezeigt.
+
+. Wählen Sie auf der Registerkarte *Resynchronisierung Optionen* eine Übertragungs-Priorität und die maximale Übertragungsrate aus.
+. Klicken Sie auf *Quelle Snapshot Kopien* und dann in der Spalte *Snapshot Kopie* auf *Standard*.
++
+Das Dialogfeld Quell-Snapshot-Kopie auswählen wird angezeigt.
+
+. Wenn Sie eine vorhandene Snapshot Kopie angeben möchten, anstatt die Standard-Snapshot Kopie zu übertragen, klicken Sie auf *vorhandene Snapshot Kopie* und wählen Sie eine Snapshot Kopie aus der Liste aus.
+. Klicken Sie Auf *Absenden*.
++
+Sie werden wieder zum Dialogfeld „erneut synchronisieren“ angezeigt.
+
+. Wenn Sie mehrere Quellen zum erneuten Synchronisieren ausgewählt haben, klicken Sie für die nächste Quelle, für die Sie eine vorhandene Snapshot Kopie angeben möchten, auf *Standard*.
+. Klicken Sie auf *Senden*, um die Neusynchronisierung zu beginnen.
++
+Der Neusynchronisierung Job wurde gestartet, Sie werden zur Seite Volume Relationships zurückgegeben und ein Link für Jobs wird oben auf der Seite angezeigt.
+
+. *Optional:* Klicken Sie auf *Jobs anzeigen* auf der Seite *Volume Relationships*, um den Status jedes Resynchronisierung Jobs zu verfolgen.
++
+Eine gefilterte Liste von Jobs wird angezeigt.
+
+. *Optional:* Klicken Sie auf den Pfeil *Zurück* auf Ihrem Browser, um zur Seite *Volume Relationships* zurückzukehren.
++
+Die Neusynchronisierung ist nach erfolgreichem Abschluss aller Aufgabenstellungen abgeschlossen.
+
+
