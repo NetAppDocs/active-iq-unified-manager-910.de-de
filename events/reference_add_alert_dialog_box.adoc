@@ -48,7 +48,7 @@ Ermöglicht Ihnen, die Ressourcen einzuschließen, für die Sie Warnmeldungen au
 Hiermit können Sie Ressourcen ausschließen, für die keine Warnmeldungen ausgelöst werden sollen. Zum Beispiel können Sie alle Volumes ausschließen, deren Name den "xyz"-String enthält.
 
 +
-Die Registerkarte Ausschließen wird nur angezeigt, wenn Sie alle Ressourcen eines bestimmten Ressourcentyps auswählen, z. B. + Volumes Oder  Volumes whose name contains 'xyz'+.
+Die Registerkarte Ausschließen wird nur angezeigt, wenn Sie alle Ressourcen eines bestimmten Ressourcentyps auswählen, z. B. +<<All Volumes>> Oder <<All Volumes whose name contains 'xyz'>>+.
 
 +
 Wenn eine Ressource sowohl den von Ihnen angegebenen Einschließen- als auch Ausschlussregeln entspricht, hat die Ausschlussregel Vorrang vor der Einschlussregel, und die Warnmeldung wird nicht für das Ereignis generiert.

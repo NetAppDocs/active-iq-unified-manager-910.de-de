@@ -72,7 +72,7 @@ Führen Sie im Dialogfeld Alarm hinzufügen die folgenden Schritte aus:
 . Klicken Sie auf *Ressourcen*, und wählen Sie in der Einschließen-Registerkarte *Volumes* aus der Dropdown-Liste aus.
 +
 .. Eingabe *`abc`* Im Feld *Name enthält* werden die Volumes angezeigt, deren Name "abc" enthält.
-.. Wählen Sie *+ Volumes whose name contains 'abc'+* aus dem Bereich Verfügbare Ressourcen und in den Bereich Ausgewählte Ressourcen verschieben.
+.. Wählen Sie *+<<All Volumes whose name contains 'abc'>>+* aus dem Bereich Verfügbare Ressourcen und in den Bereich Ausgewählte Ressourcen verschieben.
 .. Klicken Sie auf *Ausschließe*, und geben Sie ein *`xyz`* Im Feld *Name enthält* klicken Sie dann auf *Hinzufügen*.
 
 

@@ -24,7 +24,7 @@ Sie sollten eine Beschreibung für die Warnung angeben, damit Sie Ihre Warnmeldu
 Sie sollten entscheiden, welche physische oder logische Ressource eine Warnmeldung benötigt. Bei Bedarf können Sie Ressourcen ein- und ausschließen. Wenn Sie beispielsweise Ihre Aggregate durch eine Warnmeldung genau überwachen möchten, müssen Sie die erforderlichen Aggregate aus der Liste der Ressourcen auswählen.
 
 +
-Wenn Sie eine Kategorie von Ressourcen auswählen, z. B. *+ User or Group Quotas+*, dann erhalten Sie Benachrichtigungen für alle Objekte in dieser Kategorie.
+Wenn Sie eine Kategorie von Ressourcen auswählen, z. B. *+<<All User or Group Quotas>>+*, dann erhalten Sie Benachrichtigungen für alle Objekte in dieser Kategorie.
 
 +
 [NOTE]

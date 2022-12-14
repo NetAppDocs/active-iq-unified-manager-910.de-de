@@ -50,7 +50,7 @@ Hiermit können Sie Ressourcen ausschließen, für die keine Warnmeldungen ausge
 +
 [NOTE]
 ====
-Die Registerkarte Exclude wird nur angezeigt, wenn Sie alle Ressourcen eines bestimmten Ressourcentyps auswählen - z. B. + Volumes+ oder + Volumes whose name contains 'xyz'+.
+Die Registerkarte Exclude wird nur angezeigt, wenn Sie alle Ressourcen eines bestimmten Ressourcentyps auswählen - z. B. +<<All Volumes>>+ oder +<<All Volumes whose name contains 'xyz'>>+.
 
 ====
 

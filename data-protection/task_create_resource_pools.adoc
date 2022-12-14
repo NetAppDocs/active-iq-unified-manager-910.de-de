@@ -17,6 +17,7 @@ Sie können das Dialogfeld Ressourcen-Pool erstellen verwenden, um Aggregate fü
 
 Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
 
+.Schritte
 Ressourcen-Pools können Aggregate von verschiedenen Clustern enthalten, aber das gleiche Aggregat kann nicht zu verschiedenen Ressourcen-Pools gehören.
 
 . Klicken Sie im linken Navigationsbereich auf *Schutz* > *Ressourcen-Pools*.

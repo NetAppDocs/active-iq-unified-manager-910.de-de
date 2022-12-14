@@ -28,7 +28,7 @@ Führen Sie im Dialogfeld Alarm hinzufügen die folgenden Schritte aus:
 . Klicken Sie auf *Ressourcen* und wählen Sie dann die Registerkarte *include* aus.
 +
 .. Wählen Sie in der Dropdown-Liste *Volumen* aus, und geben Sie dann ein *`vol1`* Im Feld *Name enthält* werden die Volumes angezeigt, deren Name "vol1" enthält.
-.. Wählen Sie *+ Volumes whose name contains 'vol1'+* aus dem Bereich *Verfügbare Ressourcen* und in den Bereich *Ausgewählte Ressourcen* verschieben.
+.. Wählen Sie *+<<All Volumes whose name contains 'vol1'>>+* aus dem Bereich *Verfügbare Ressourcen* und in den Bereich *Ausgewählte Ressourcen* verschieben.
 
 
 . Wählen Sie die Registerkarte *exclude* aus, wählen Sie *Lautstärke*, geben Sie ein *`vs1-dr`* Im Feld *Name enthält* klicken Sie dann auf *Hinzufügen*.
