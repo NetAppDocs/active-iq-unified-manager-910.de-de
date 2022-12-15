@@ -11598,7 +11598,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-16 08:00:16 +0000">11/16/2022</time>
+    <time datetime="2022-12-14 18:46:27 +0000">12/14/2022</time>
     
   
 
@@ -11619,7 +11619,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="konfigurieren-des-selinux-kontexts-wenn-optnetappdata-bereitgestellt-wird">Konfigurieren des SELinux-Kontexts, wenn /opt/netapp/Data bereitgestellt wird</h2>
+<h2 id="konfigurieren-des-selinux-kontexts-wenn-optnetappdata-angehängt-ist">Konfigurieren des SELinux-Kontexts, wenn <code>/opt/netapp/data</code> Angehängt ist</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Wenn Sie angehängt sind <code>/opt/netapp/data</code> In Ihrem System und SELinux ist auf festgelegt <code>Enforcing</code>, Stellen Sie sicher, dass der SELinux-Kontexttyp für <code>/opt/netapp/data</code> Ist auf festgelegt <code>mysqld_db_t</code>, Das ist das Standard-Kontextelement für den Speicherort der Datenbankdateien.</p>
@@ -11703,7 +11703,7 @@ restorecon -R -v /opt/netapp/data</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="die-konfiguration-des-selinux-kontexts-beim-anhängen-von-optnetapp-und-optnetappdata-ist-ebenfalls-separat-eingebunden">Die Konfiguration des SELinux-Kontexts beim Anhängen von /opt/netapp und /opt/netapp/Data/ ist ebenfalls separat eingebunden</h2>
+<h2 id="konfigurieren-des-selinux-kontexts-wenn-optnetapp-ist-angehängt-und-optnetappdata-ist-auch-separat-montiert">Konfigurieren des SELinux-Kontexts, wenn <code>/opt/netapp</code> Ist angehängt, und <code>/opt/netapp/data/</code> Ist auch separat montiert</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In diesem Szenario sollten Sie zunächst den Kontext für festlegen <code>/opt/netapp/data/</code> Wie im vorherigen Abschnitt beschrieben. Nachdem Sie den richtigen Kontext für festgelegt haben <code>/opt/netapp/data/</code>, Stellen Sie sicher, dass das übergeordnete Verzeichnis <code>/opt/netapp</code> Der SELinux-Kontext ist nicht auf festgelegt <code>file_t</code>.</p>
@@ -11786,7 +11786,7 @@ restorecon -v /opt/netapp</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="die-konfiguration-des-selinux-kontexts-wenn-optnetapp-angehängt-ist-und-optnetappdata-nicht-separat-gemountet-wird">Die Konfiguration des SELinux-Kontexts, wenn /opt/netapp angehängt ist und /opt/netapp/Data/ nicht separat gemountet wird</h2>
+<h2 id="konfigurieren-des-selinux-kontexts-wenn-optnetapp-ist-angehängt-und-optnetappdata-ist-nicht-separat-montiert">Konfigurieren des SELinux-Kontexts, wenn <code>/opt/netapp</code> Ist angehängt, und <code>/opt/netapp/data/</code> Ist nicht separat montiert</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Wenn Sie angehängt sind  <code>/opt/netapp</code> In Ihrem System und SELinux ist auf festgelegt <code>Enforcing</code>, Stellen Sie sicher, dass der SELinux-Kontexttyp für <code>/opt/netapp</code> Ist auf festgelegt <code>mysqld_db_t</code>, Das ist das Standard-Kontextelement für den Speicherort der Datenbankdateien.</p>
