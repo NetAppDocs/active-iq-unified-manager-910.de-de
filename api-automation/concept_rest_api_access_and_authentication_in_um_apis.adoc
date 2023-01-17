@@ -11,13 +11,9 @@ summary: Auf die Active IQ Unified Manager REST API kann über jeden Webbrowser 
 
 
 [role="lead"]
-Auf die Active IQ Unified Manager REST API kann über jeden Webbrowser oder eine Programmierplattform zugegriffen werden, um HTTP-Anfragen zu stellen. Unified Manager unterstützt den grundlegenden HTTP-Authentifizierungsmechanismus. Bevor Sie die UNIFIED Manager REST API aufrufen, müssen Sie einen Benutzer authentifizieren.
+Auf die Active IQ Unified Manager REST API kann über jeden REST-Client oder jede Programmierplattform zugegriffen werden, die HTTP-Anfragen mit einem grundlegenden HTTP-Authentifizierungsmechanismus ausgeben kann.
 
-
-
-== REST-Zugriff
-
-Sie können jeden Webbrowser oder jede Programmierplattform verwenden, die HTTP-Anfragen zum Zugriff auf die Unified Manager REST-API ausgeben. Nach der Anmeldung bei Unified Manager können Sie beispielsweise die URL in einen beliebigen Browser eingeben, um die Attribute aller Management-Stationen, wie beispielsweise der Name der Management Station, die Taste und die IP-Adresse, abzurufen.
+Beispielanfrage und -Antwort:
 
 * *Anfrage*
 +
