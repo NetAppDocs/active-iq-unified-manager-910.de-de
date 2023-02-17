@@ -17,12 +17,9 @@ Beispielanfrage und -Antwort:
 
 * *Anfrage*
 +
-GET
-
-
-
 [listing]
 ----
+GET
 https://<IP address/hostname>:<port_number>/api/v2/datacenter/cluster/clusters
 ----
 * *Antwort*
@@ -103,7 +100,7 @@ Der Standard-HTTPS-Port 443 ist. Sie können den HTTPS-Port bei Bedarf anpassen.
 
 
 +
-Um HTTP-Anfragen aus einem Webbrowser zu veröffentlichen, ZU PATCHEN und ZU LÖSCHEN, müssen Sie Browser-Plugins verwenden. Sie können auch über Skripting-Plattformen wie Curl und Perl auf DIE REST-API zugreifen.
+Um HTTP-Anfragen von einem Webbrowser zu stellen, müssen Sie REST API Browser-Plugins verwenden. Sie können auch über Skripting-Plattformen wie Curl und Perl auf DIE REST-API zugreifen.
 
 
 

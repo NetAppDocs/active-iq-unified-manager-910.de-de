@@ -34,8 +34,7 @@ entries:
       url: "/install-linux/task_manually_configure_epel_repository.html"
     - title: Manuelles Konfigurieren des MySQL-Repository
       url: "/install-linux/task_manually_configure_mysql_repository.html"
-  - title: SELinux Anforderungen zum Mounten von /opt/netapp oder /opt/netapp/Daten
-      auf einer NFS- oder CIFS-Freigabe
+  - title: SELinux-Anforderungen für NFS- oder CIFS-Freigabe
     url: "/install-linux/task_selinux_requirements_for_mounting_opt_netapp.html"
   - title: Installation von Unified Manager auf Linux Systemen
     url: "/install-linux/concept_install_unified_manager_on_rhel_or_centos.html"

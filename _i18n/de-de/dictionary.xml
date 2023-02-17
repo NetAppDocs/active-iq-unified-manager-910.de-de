@@ -4184,7 +4184,6 @@
   <block id="90bb491fbeff708e2e5dc4390c2d45dd" category="summary">Auf VMware vSphere Systemen können Sie die Unified Manager Software installieren, ein Upgrade auf eine neuere Softwareversion durchführen oder die virtuelle Unified Manager Appliance entfernen.</block>
   <block id="1aae3eac015ac6934f4cce0bdefb715e" category="doc">Installieren, Aktualisieren und Entfernen der Unified Manager Software</block>
   <block id="32e5c16a2c1109e106990eafe2e5051a" category="summary">Kurzanleitung für Unified Manager auf VMware vSphere Plattform.</block>
-  <block id="745f57af3dedfc4d30afa6ced1d0df52" category="doc">Schnellstartanleitung für VMware Installationen</block>
   <block id="1e496ca2f7a66d863132588473f14de2" category="section-title">Systemanforderungen</block>
   <block id="530bfb310dbe9b028de59555016f1eff" category="list-text">Betriebssystem VMware ESXi 6.5, 6.7 und 7.0</block>
   <block id="a2d94c8de89a700634c79d7c9d4fc2c0" category="list-text">RAM: 12 GB</block>
@@ -6643,7 +6642,6 @@
   <block id="eb6391db314b5af4580f33130f643fa1" category="list-text"><block ref="650ecb8f30701643120c1b542226a9c1" prefix="" category="inline-code"></block> Ist die IP-Adresse oder der vollqualifizierte Domain-Name (FQDN) des API-Servers.</block>
   <block id="5c06e352f423d0b621ec486ba1ddac59" category="list-text">Port 443</block>
   <block id="886644038ceb418e68b90e363a33a45e" category="paragraph">Der Standard-HTTPS-Port 443 ist. Sie können den HTTPS-Port bei Bedarf anpassen.</block>
-  <block id="0535c12ab1bf9e6e8b5fa038d3c157ac" category="paragraph">Um HTTP-Anfragen aus einem Webbrowser zu veröffentlichen, ZU PATCHEN und ZU LÖSCHEN, müssen Sie Browser-Plugins verwenden. Sie können auch über Skripting-Plattformen wie Curl und Perl auf DIE REST-API zugreifen.</block>
   <block id="c75f7811d70d17dbcd88e9d03752cbed" category="section-title">Authentifizierung</block>
   <block id="55f5492d0585d69456c8ee38af804ac6" category="paragraph">Unified Manager unterstützt das grundlegende HTTP-Authentifizierungsschema für APIs. Für einen sicheren Informationsfluss (Anfrage und Antwort) sind die REST-APIs nur über HTTPS zugänglich. Der API-Server stellt allen Clients ein selbstsigniertes SSL-Zertifikat zur Server-Überprüfung zur Verfügung. Dieses Zertifikat kann durch ein benutzerdefiniertes Zertifikat (oder ein CA-Zertifikat) ersetzt werden.</block>
   <block id="74b6a9a3bbabb0fe6c40b6199d727d06" category="paragraph">Sie müssen den Benutzerzugriff auf den API-Server konfigurieren, um die REST-APIs zu aufrufen. Die Benutzer können lokale Benutzer (Benutzerprofile, die in der lokalen Datenbank gespeichert sind) oder LDAP-Benutzer (wenn Sie den API-Server für die Authentifizierung über LDAP konfiguriert haben) sein. Sie können den Benutzerzugriff verwalten, indem Sie sich an der Benutzeroberfläche der Unified Manager Administration Console anmelden.</block>
@@ -11509,17 +11507,38 @@
   <block id="c1a9193a29dc40ec352c6691d67ab578" category="sidebar">Installation von Unified Manager auf Windows Systemen</block>
   <block id="d549fcac9e4340e7fb3d154a339f9c13" category="sidebar">Sichern und Wiederherstellen von Daten</block>
   <block id="7daa41760e1a8fba65d06a1a254f35d9" category="sidebar">Erstellen und Beheben von Sicherungsbeziehungen</block>
-  <block id="7518ca1d997947cafeacfe6e7557df98" category="sidebar">Erstellen einer SnapVault-Schutzbeziehung über die Ansicht „Systemzustand“ / „Alle Volumes“</block>
-  <block id="7c35d6a9594204995ca67f76b440f42c" category="sidebar">Erstellen einer SnapMirror Schutzbeziehung in der Ansicht „Systemzustand“/„Alle Volumes“</block>
-  <block id="de2f4d35fcabc7c6e7fc7bd51348d291" category="sidebar">Wiederherstellen von Daten mithilfe der Ansicht „Systemzustand“/„Alle Volumes“</block>
-  <block id="55c616fb8df8d2d739c5a910d9f3e8cc" category="sidebar">Beziehung/Alle Beziehungen anzeigen</block>
-  <block id="917d12d3945843e955409b6049824fe7" category="sidebar">Beziehung / Status der letzten 1 Monat übertragen</block>
-  <block id="b0dea192fed54c3271d44f1043df906f" category="sidebar">Beziehung / Letzte 1 Monat Transferrate anzeigen</block>
   <block id="1d6677925b878ba927adf44f615f75db" category="sidebar">Installation von Unified Manager auf Linux Systemen</block>
-  <block id="2c3b76077caf066bc2963e52113e2e78" category="sidebar">SELinux Anforderungen zum Mounten von /opt/netapp oder /opt/netapp/Daten auf einer NFS- oder CIFS-Freigabe</block>
   <block id="25cd83fcc24b4664d675c70561908db4" category="section-title">Konfigurieren des SELinux-Kontexts, wenn<block ref="7e1f8730cbdb33df27f5c6a989e8b48a" prefix=" " category="inline-code"></block> Angehängt ist</block>
   <block id="8952b2e8f374ce39efcf65ab76f1fb96" category="section-title">Konfigurieren des SELinux-Kontexts, wenn<block ref="4bf2f0d069734974e4d76e679433aa07" prefix=" " category="inline-code"></block> Ist angehängt, und<block ref="90858e32055033b8ac44ac8a8f3461ae" prefix=" " category="inline-code"></block> Ist auch separat montiert</block>
   <block id="c0f62aa70775648ddb09e5af32691c1a" category="section-title">Konfigurieren des SELinux-Kontexts, wenn<block ref="4bf2f0d069734974e4d76e679433aa07" prefix=" " category="inline-code"></block> Ist angehängt, und<block ref="90858e32055033b8ac44ac8a8f3461ae" prefix=" " category="inline-code"></block> Ist nicht separat montiert</block>
   <block id="f9344604b22486566c3e6d70cc163f8b" category="paragraph">Auf die Active IQ Unified Manager REST API kann über jeden REST-Client oder jede Programmierplattform zugegriffen werden, die HTTP-Anfragen mit einem grundlegenden HTTP-Authentifizierungsmechanismus ausgeben kann.</block>
   <block id="e5595563cfe055cddbdb1a7ae1efcfad" category="paragraph">Beispielanfrage und -Antwort:</block>
+  <block id="590e5f2d8030dd7492b5a2f24f056c33" category="paragraph">Um HTTP-Anfragen von einem Webbrowser zu stellen, müssen Sie REST API Browser-Plugins verwenden. Sie können auch über Skripting-Plattformen wie Curl und Perl auf DIE REST-API zugreifen.</block>
+  <block id="6e9d444f5a98d00ae31eff389dc819fa" category="doc">Schnellstartanleitung für VMware Installationen</block>
+  <block id="9304b0fee761c30cb0f91f15de511efc" category="sidebar">Erstellung eines Berichts, um fast voll gezuschlagvolle Aggregate anzuzeigen</block>
+  <block id="f667431c76a047fbe92c5ea4f107f5be" category="sidebar">Bruch einer SnapMirror-Beziehung von der Seite „Volume Health Details“</block>
+  <block id="825540d2e356a2301d8157e67a70b20a" category="sidebar">Schutzbeziehungen werden auf der Seite „Volume Health Details“ rückgängig gemacht</block>
+  <block id="9e602f9b4f36392b1a1428c981e37711" category="sidebar">Entfernen einer Schutzbeziehung von der Seite „Volume Health Details“</block>
+  <block id="a1b4c0ddea6f9c40fd2cd596b4f7b018" category="sidebar">Sicherungsbeziehungen werden auf der Seite mit den Integritätsdetails des Volumes neu synchronisiert</block>
+  <block id="7beb3b00a07447d5a4afb5aac6d417d5" category="sidebar">Erstellen einer SnapVault-Sicherungsbeziehung in der Ansicht Alle Volumes</block>
+  <block id="6e05686f2b2c07b3c6c6117873668333" category="sidebar">Erstellen einer SnapVault-Schutzbeziehung auf der Seite „Volume Health Details“</block>
+  <block id="abb1e0c8ea2c6bf7067893273d7495ea" category="sidebar">Erstellen einer SnapMirror Sicherungsbeziehung aus der Ansicht Alle Volumes</block>
+  <block id="7b8c66535079341892aef1a493ce88c4" category="sidebar">Erstellen einer SnapMirror Schutzbeziehung auf der Seite „Volume Health Details“</block>
+  <block id="7e583f9e2b84b24680ccacedb923f893" category="sidebar">Bearbeiten von Schutzbeziehungen auf der Seite „Volume Health Details“</block>
+  <block id="2f73e4b880758398d71cbda6956e4261" category="sidebar">Aktive Datensicherung wird von der Seite „Volume Health Details“ abgebrochen</block>
+  <block id="1a332e4345b7b166cc346094f426d59b" category="sidebar">Eine Schutzbeziehung wird auf der Seite „Volume Health Details“ stillgelegt</block>
+  <block id="0a7e2554ab5f606db9e7cd3f955d6876" category="sidebar">Wiederaufnahme geplanter Transfers für eine stillgelegte Beziehung von der Seite „Volume Health Details“</block>
+  <block id="6b8b5e644fe51ebdbf59ca41a2e0bd5d" category="sidebar">Initialisierung oder Aktualisierung von Schutzbeziehungen auf der Seite „Volume Health Details“</block>
+  <block id="edf420f8eda3d75228b3b540df2dbc53" category="sidebar">Wiederherstellen von Daten mithilfe der Ansicht „Alle Volumes“</block>
+  <block id="4854bf8d6304b20e8a8e266470ff2f5a" category="sidebar">Wiederherstellen von Daten mithilfe der Seite Volume Health Details</block>
+  <block id="54ad2ceecf79def094226d610fbf9cdf" category="sidebar">Dialogfeld „Initialisierung“ oder „Aktualisieren“</block>
+  <block id="ad1e91efa1709ebf1317182df97e21ac" category="sidebar">Ansicht „Alle Beziehungen“</block>
+  <block id="a1aa3dc0c225c91968f0c1b9e0426594" category="sidebar">Status der letzten 1 Monat anzeigen</block>
+  <block id="97bf8a808bd60b6f18cb0036fc0fa04f" category="sidebar">Anzeige der Transferrate für den letzten Monat</block>
+  <block id="9210be7b581b8db7551fb777e02a3edb" category="sidebar">SELinux-Anforderungen für NFS- oder CIFS-Freigabe</block>
+  <block id="a6d6cdd1e4eb84a93808203243318dd0" category="sidebar">Anzeigen von Details zu SMB- oder CIFS-Freigaben</block>
+  <block id="721115a56e25cbc2949dce662727ea1a" category="sidebar">Einzelheiten zum Volume-Zustand</block>
+  <block id="d2136c0320bc784ec5e976cc7c71f93d" category="sidebar">Einzelheiten zum Zustand von Storage-VM</block>
+  <block id="fbf5dae3b577d533c0b3785c65a5e93f" category="sidebar">Einzelheiten zum Cluster-Systemzustand</block>
+  <block id="3a63c6b863ef9b4f54c6281b5910c2f9" category="sidebar">Zusammengefasste Integritätsdetails</block>
 </blocks>

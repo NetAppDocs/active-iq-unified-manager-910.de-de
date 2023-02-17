@@ -45,7 +45,7 @@ entries:
     url: "/health-checker/task_view_volume_list_and_details.html"
   - title: Anzeigen von Details zu NFS-Freigaben
     url: "/health-checker/task_view_details_about_nfs_shares.html"
-  - title: Anzeigen von Details zu SMB/CIFS-Freigaben
+  - title: Anzeigen von Details zu SMB- oder CIFS-Freigaben
     url: "/health-checker/task_view_details_about_cifs_shares.html"
   - title: Anzeigen der Liste der Snapshot Kopien
     url: "/health-checker/task_view_list_of_snapshot_copies.html"
@@ -293,11 +293,11 @@ entries:
     entries:
     - title: Cluster-Komponenten und warum sie über Konflikte verfügen können
       url: "/health-checker/concept_cluster_components_and_why_they_can_be_in_contention.html"
-    - title: Seite „Volume/Health Details“
+    - title: Einzelheiten zum Volume-Zustand
       url: "/health-checker/reference_health_volume_details_page.html"
-    - title: Storage VM / Health Details Seite
+    - title: Einzelheiten zum Zustand von Storage-VM
       url: "/health-checker/reference_health_svm_details_page.html"
-    - title: "„Cluster/Systemzustand“-Details"
+    - title: Einzelheiten zum Cluster-Systemzustand
       url: "/health-checker/reference_health_cluster_details_page.html"
-    - title: Registerkarte „Aggregate/Health Details“
+    - title: Zusammengefasste Integritätsdetails
       url: "/health-checker/reference_health_aggregate_details_page.html"

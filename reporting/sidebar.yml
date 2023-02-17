@@ -84,8 +84,7 @@ entries:
     - title: Erstellen eines Berichts, um Aggregate anzuzeigen, die voll ausgelastet
         sind
       url: "/reporting/task_create_report_to_view_aggregates_reaching_full_capacity.html"
-    - title: Erstellen eines Berichts, um Aggregate zu sehen, die zu 80 % oder mehr
-        voll sind
+    - title: Erstellung eines Berichts, um fast voll gezuschlagvolle Aggregate anzuzeigen
       url: "/reporting/task_create_report_to_view_aggregates_that_are_nearly_full.html"
     - title: Erstellen eines Berichts, um überzugesetzte Aggregate anzuzeigen
       url: "/reporting/task_create_report_to_view_aggregates_that_are_overcommitted.html"

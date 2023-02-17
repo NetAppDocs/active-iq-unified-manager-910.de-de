@@ -23,13 +23,15 @@ entries:
   - title: Durchführen eines Failover und Failback einer Sicherungsbeziehung
     url: "/data-protection/task_perform_protection_relationship_failover_and_failback.html"
     entries:
-    - title: Eine SnapMirror Beziehung von der Seite „Volume/Health Details“ abbrechen
+    - title: Bruch einer SnapMirror-Beziehung von der Seite „Volume Health Details“
       url: "/data-protection/task_break_snapmirror_relationship_from_health_volume_details.html"
-    - title: Rückkehrschutzbeziehungen auf der Seite Volume/Health Details
+    - title: Schutzbeziehungen werden auf der Seite „Volume Health Details“ rückgängig
+        gemacht
       url: "/data-protection/task_reverse_protection_relationships_from_health_volume_details.html"
-    - title: Entfernen einer Schutzbeziehung von der Seite Volume / Health Details
+    - title: Entfernen einer Schutzbeziehung von der Seite „Volume Health Details“
       url: "/data-protection/task_remove_protection_relationship_voldtls.html"
-    - title: Sicherungsbeziehungen von der Seite Volume / Health Details neu synchronisieren
+    - title: Sicherungsbeziehungen werden auf der Seite mit den Integritätsdetails
+        des Volumes neu synchronisiert
       url: "/data-protection/task_resynchronize_protection_relationships_voldtls.html"
   - title: Behebung eines Schutzauftrags
     url: "/data-protection/task_resolve_protection_job_failure.html"
@@ -48,16 +50,14 @@ entries:
     url: "/data-protection/task_view_volume_protection_relationships.html"
   - title: Überwachung von LUNs in einer Konsistenzgruppe
     url: "/data-protection/view-lun-relationships.html"
-  - title: Erstellen einer SnapVault-Schutzbeziehung über die Ansicht „Systemzustand“
-      / „Alle Volumes“
+  - title: Erstellen einer SnapVault-Sicherungsbeziehung in der Ansicht Alle Volumes
     url: "/data-protection/task_create_snapvault_protection_relationship.html"
-  - title: Erstellen einer SnapVault-Schutzbeziehung auf der Seite „Volume/Health
+  - title: Erstellen einer SnapVault-Schutzbeziehung auf der Seite „Volume Health
       Details“
     url: "/data-protection/task_create_snapvault_protection_relationship_from_health_volume_details.html"
-  - title: Erstellen einer SnapMirror Schutzbeziehung in der Ansicht „Systemzustand“/„Alle
-      Volumes“
+  - title: Erstellen einer SnapMirror Sicherungsbeziehung aus der Ansicht Alle Volumes
     url: "/data-protection/task_create_snapmirror_relationship_from_health_volumes.html"
-  - title: Erstellen einer SnapMirror Schutzbeziehung auf der Seite „Volume/Health
+  - title: Erstellen einer SnapMirror Schutzbeziehung auf der Seite „Volume Health
       Details“
     url: "/data-protection/task_create_snapmirror_relationship_from_health_volume.html"
   - title: Erstellen einer SnapMirror Beziehung mit versionsflexibler Replizierung
@@ -74,7 +74,7 @@ entries:
     url: "/data-protection/task_create_cascade_or_fanout_relationships_to_extend_protection.html"
   - title: Bearbeiten von Schutzbeziehungen auf der Seite Volume Relationships
     url: "/data-protection/task_edit_protection_relationships_from_protection_volume.html"
-  - title: Bearbeiten von Schutzbeziehungen auf der Seite Volume / Health Details
+  - title: Bearbeiten von Schutzbeziehungen auf der Seite „Volume Health Details“
     url: "/data-protection/task_edit_protection_relationships_from_health_volume.html"
   - title: Erstellen einer SnapMirror-Richtlinie zur Maximierung der Übertragungseffizienz
     url: "/data-protection/task_create_snapmirror_policy_to_maximize_transfer_efficiency.html"
@@ -82,11 +82,11 @@ entries:
     url: "/data-protection/task_create_snapvault_policy_to_maximize_transfer_efficiency.html"
   - title: Aktive Datensicherung wird von der Seite „Volume Relationships“ abgebrochen
     url: "/data-protection/task_abort_an_active_data_protection_transfer.html"
-  - title: Aktive Datensicherung wird von der Seite Volume / Health Details abgebrochen
+  - title: Aktive Datensicherung wird von der Seite „Volume Health Details“ abgebrochen
     url: "/data-protection/task_abort_active_data_protection_transfer_from_health_volume.html"
   - title: Eine Schutzbeziehung wird auf der Seite Volume Relationships stillgelegt
     url: "/data-protection/task_quiesce_protection_relationship_from_volume_relationships.html"
-  - title: Eine Schutzbeziehung wird auf der Seite „Volume/Health Details“ stillgelegt
+  - title: Eine Schutzbeziehung wird auf der Seite „Volume Health Details“ stillgelegt
     url: "/data-protection/task_quiesce_protection_relationship_from_health_volume_details.html"
   - title: Brechen einer SnapMirror Beziehung von der Seite „Volume-Beziehungen“
     url: "/data-protection/task_break_snapmirror_relationship.html"
@@ -96,21 +96,21 @@ entries:
       der Seite Volume-Beziehungen
     url: "/data-protection/task_resume_scheduled_transfers_on_quiesced_relationship.html"
   - title: Wiederaufnahme geplanter Transfers für eine stillgelegte Beziehung von
-      der Seite Volume / Health Details
+      der Seite „Volume Health Details“
     url: "/data-protection/task_resume_scheduled_transfers_voldtls_page.html"
   - title: Schutzbeziehungen werden auf der Seite Volume-Beziehungen initialisiert
       oder aktualisiert
     url: "/data-protection/task_initialize_or_update_protection_relationships.html"
   - title: Initialisierung oder Aktualisierung von Schutzbeziehungen auf der Seite
-      Volume / Health Details
+      „Volume Health Details“
     url: "/data-protection/task_update_protection_voldtls_page.html"
   - title: Sicherungsbeziehungen von der Seite Volume Relationships neu synchronisieren
     url: "/data-protection/task_resynchronize_protection_relationships.html"
   - title: Schutzbeziehungen auf der Seite Volume Relationships rückgängig machen
     url: "/data-protection/task_reverse_protection_relationships.html"
-  - title: Wiederherstellen von Daten mithilfe der Ansicht „Systemzustand“/„Alle Volumes“
+  - title: Wiederherstellen von Daten mithilfe der Ansicht „Alle Volumes“
     url: "/data-protection/task_restore_data_use_health_volumes_page.html"
-  - title: Wiederherstellen von Daten mithilfe der Seite Volume / Health Details
+  - title: Wiederherstellen von Daten mithilfe der Seite Volume Health Details
     url: "/data-protection/task_restore_data_use_health_volume_details_page.html"
   - title: Was sind Ressourcen-Pools
     url: "/data-protection/concept_what_resource_pools_are.html"
@@ -192,7 +192,7 @@ entries:
       url: "/data-protection/reference_create_snapvault_policy_dialog_box.html"
     - title: Dialogfeld „Beziehung bearbeiten“
       url: "/data-protection/reference_edit_relationship_dialog_box.html"
-    - title: Dialogfeld „Initialisierung/Aktualisierung“
+    - title: Dialogfeld „Initialisierung“ oder „Aktualisieren“
       url: "/data-protection/reference_initialize_update_relationship_dialog_box.html"
     - title: Dialogfeld erneut synchronisieren
       url: "/data-protection/reference_resynchronize_dialog_box.html"
@@ -200,9 +200,9 @@ entries:
       url: "/data-protection/reference_select_source_snapshot_copy_dialog_box.html"
     - title: Dialogfeld „Resync“ umkehren
       url: "/data-protection/reference_reverse_resync_dialog_box.html"
-    - title: Beziehung/Alle Beziehungen anzeigen
+    - title: Ansicht „Alle Beziehungen“
       url: "/data-protection/reference_relationship_all_relationships_view.html"
-    - title: Beziehung / Status der letzten 1 Monat übertragen
+    - title: Status der letzten 1 Monat anzeigen
       url: "/data-protection/reference_relationship_last_1_month_transfer_status_view.html"
-    - title: Beziehung / Letzte 1 Monat Transferrate anzeigen
+    - title: Anzeige der Transferrate für den letzten Monat
       url: "/data-protection/reference_relationship_last_1_month_transfer_rate_view.html"
