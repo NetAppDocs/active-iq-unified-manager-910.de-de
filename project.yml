@@ -12,6 +12,9 @@ settings:
     version-number: '9.10'
   - name: Unified Manager
     url: "/active-iq-unified-manager"
+    version-number: '9.13'
+  - name: Unified Manager
+    url: "/active-iq-unified-manager-912"
     version-number: '9.12'
   - name: Unified Manager
     url: "/active-iq-unified-manager-911"
@@ -146,5 +149,5 @@ homepage:
       url: https://www.youtube.com/playlist?list=PLdXI3bZJEw7mp3jFSg0IJgo3oeDQRY-Gl
     - title: Unified Manager Blogs
       url: https://www.netapp.com/blog/#q=active%20iq%20unified%20manager&t=Blogs&sort=%40publish_date_mktg%20descending&layout=card&f:@facet_language_mktg=[English]
-    - title: Dokumentation für frühere Versionen
-      url: https://docs.netapp.com/ocum-99/topic/com.netapp.ndc.ocum-vers/GUID-DA5B426C-61E1-45E3-B2BE-834636433934.html
+    - title: Dokumentation für Active IQ Unified Manager 9.9 oder früher
+      url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62791

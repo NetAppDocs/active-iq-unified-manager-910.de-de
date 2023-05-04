@@ -40,3 +40,9 @@ Sie müssen Root-Benutzerzugriff auf Red hat Enterprise Linux oder CentOS Server
 `systemctl start ocieau`
 
 
+
+[NOTE]
+====
+`mysqld` Ist ein Daemon-Programm erforderlich, um den MySQL-Server zu starten und zu stoppen.
+
+====

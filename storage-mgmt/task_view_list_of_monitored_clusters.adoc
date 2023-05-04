@@ -17,12 +17,9 @@ Mithilfe der Seite Cluster Setup können Sie das Inventar der Cluster anzeigen. 
 
 Sie müssen über die Rolle „Operator“, „Application Administrator“ oder „Storage Administrator“ verfügen.
 
-Die Liste der Cluster wird nach der Spalte „Sammlungsstatus“ sortiert. Sie können auf eine Spaltenüberschrift klicken, um die Cluster nach unterschiedlichen Spalten zu sortieren.
-
 .Schritt
 . Klicken Sie im linken Navigationsbereich auf *Storage-Management* > *Cluster-Setup*.
++
+Es werden alle Cluster in Ihrer durch Unified Manager gemanagten Storage-Umgebung angezeigt. Die Liste der Cluster wird nach der Spalte „Sammlungsstatus“ sortiert. Sie können auf eine Spaltenüberschrift klicken, um die Cluster nach unterschiedlichen Spalten zu sortieren.
 
 
-*Verwandte Informationen*
-
-link:["Seite „Configuration/Cluster Data sources“"]
