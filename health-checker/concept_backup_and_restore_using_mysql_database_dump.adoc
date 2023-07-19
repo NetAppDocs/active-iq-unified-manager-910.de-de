@@ -22,7 +22,7 @@ Ein Datenbank-Dump-Backup besteht aus einer einzelnen Datei im Sicherungsverzeic
 
 Beim ersten Generieren einer Datenbanksicherung wird im Backup-Verzeichnis eine einzelne Datei erstellt und im Datenbank-Repository-Verzeichnis eine vollständige Sicherungsdatei erstellt. Wenn Sie das nächste Mal ein Backup erstellen, wird im Backup-Verzeichnis eine einzelne Datei erstellt und im Datenbank-Repository-Verzeichnis eine inkrementelle Sicherungsdatei erstellt, die die Unterschiede zur vollständigen Backup-Datei enthält. Dieser Prozess wird bei der Erstellung zusätzlicher Backups bis zur Einstellung für maximale Aufbewahrung fortgesetzt, wie in der folgenden Abbildung dargestellt.
 
-image::../media/database_backup.gif[Datenbank-Backup]
+image::../media/backup_restore.png[Backup-Restore]
 
 [NOTE]
 ====
