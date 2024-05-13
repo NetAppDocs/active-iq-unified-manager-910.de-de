@@ -12,7 +12,6 @@
   <block id="862b284b4df55f9b1c187c9774e06bab" category="list-text">Upgrade 9.9 -&gt; 9.10.</block>
   <block id="735de3cfc0c0985a1a724be6fb3d04d4" category="inline-link">Knowledge Base-Artikel (KB</block>
   <block id="7ff27f75b12e833d98540444694dad8f" category="paragraph">Weitere Informationen zur Upgrade-Pfad-Matrix finden Sie hier<block ref="873d5f2f4cecdaf6f22eb65b543f2b7f" category="inline-link-rx"></block>.</block>
-  <block id="91d9102f2b20d2487525cb47bf7d79a5" category="summary">Dokumentation für Active IQ Unified Manager, AIQUM Dokumentation, um Dokumentation</block>
   <block id="4a58c6ba2ac7cf0f2cd001d223b14e50" category="doc">Active IQ Unified Manager-Dokumentation</block>
   <block id="369d42629beea2ad70c23667467de925" category="summary">Sie können Rollen erstellen und Funktionen zuweisen, um den Benutzerzugriff auf ausgewählte Cluster-Objekte zu steuern. Sie können Benutzer identifizieren, die über die erforderlichen Funktionen für den Zugriff auf ausgewählte Objekte in einem Cluster verfügen. Nur diese Benutzer haben Zugriff, um Cluster-Objekte zu managen.</block>
   <block id="7307896fb54bf8a51c3bcec77ec0b679" category="doc">Verwalten des Benutzerzugriffs</block>
@@ -11482,7 +11481,6 @@
   <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">Mehr Ressourcen</block>
   <block id="aa193eacf5a35a85044e44de3fa9c91a" category="sidebar">Unified Manager Videos</block>
   <block id="197833bfff97d501603036a0febb7a95" category="sidebar">Unified Manager Blogs</block>
-  <block id="85f73dd16ea214346164b0deea26773b" category="sidebar">Unified Manager</block>
   <block id="09d454f0bf432593d99fbfd84c9f9293" category="sidebar">Durchführung von Konfigurations- und Administrationsaufgaben</block>
   <block id="32d8b1bb1bdc5067bfbde495253b3469" category="sidebar">Überwachen und managen Sie den Cluster-Zustand</block>
   <block id="7a8adec5b77b397bb264a687d8a6c162" category="sidebar">SVM-Compliance-Kategorien</block>
@@ -11545,4 +11543,6 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="74921508f10ccca3d8de0340bf05a39b" category="sidebar">Mit Active IQ Unified Manager (Unified Manager und früher OnCommand Unified Manager) können Sie den Zustand und die Performance Ihrer ONTAP Storage-Systeme über eine einzige Benutzeroberfläche überwachen und managen. Diese Dokumentationsbibliothek enthält Informationen zu Version 9.10.</block>
+  <block id="6ea56a8072cf044e1de510b8b225ef34" category="sidebar">Dokumentation für Active IQ Unified Manager 9.10.</block>
 </blocks>
