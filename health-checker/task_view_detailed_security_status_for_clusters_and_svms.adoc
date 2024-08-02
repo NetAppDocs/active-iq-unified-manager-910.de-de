@@ -41,5 +41,5 @@ Auf der Seite Sicherheit werden die folgenden Informationen angezeigt:
 ** Die Cluster-Authentifizierungsmethoden, die in den einzelnen Clustern verwendet werden
 
 
-. Siehe http://www.netapp.com/us/media/tr-4569.pdf["NetApp Leitfaden zur verstärkte Sicherheit in ONTAP 9"] Wenn Sie Anweisungen zur Verwendung aller Cluster, SVMs und Volumes benötigen, um die Einhaltung von NetApp Sicherheitsempfehlungen zu erhalten.
+. Eine Anleitung, wie Sie alle Ihre Cluster, SVMs und Volumes mit den NetApp Sicherheitsempfehlungen konform gestalten, finden Sie im https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["NetApp Leitfaden zur verstärkte Sicherheit in ONTAP 9"^] .
 

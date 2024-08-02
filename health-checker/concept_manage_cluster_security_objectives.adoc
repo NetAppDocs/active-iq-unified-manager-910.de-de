@@ -15,6 +15,6 @@ Unified Manager bietet ein Dashboard an, in dem die Sicherheit Ihrer ONTAP Clust
 
 Ziel des Sicherheits-Dashboards ist es, Bereiche anzuzeigen, in denen die ONTAP Cluster nicht mit den von NetApp empfohlenen Richtlinien übereinstimmen, damit Sie die potenziellen Probleme beheben können. In den meisten Fällen werden Sie die Probleme mit dem ONTAP System Manager oder der ONTAP CLI beheben. Ihr Unternehmen befolgt möglicherweise nicht alle Empfehlungen, daher müssen Sie in einigen Fällen keine Änderungen vornehmen.
 
-Siehe http://www.netapp.com/us/media/tr-4569.pdf["NetApp Leitfaden zur verstärkte Sicherheit in ONTAP 9"] (TR-4569) Detaillierte Empfehlungen und Lösungen.
+Detaillierte Empfehlungen und Entschließungen finden Sie im https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["NetApp Leitfaden zur verstärkte Sicherheit in ONTAP 9"^] (TR-4569).
 
 Zusätzlich zum Berichten des Sicherheitsstatus generiert Unified Manager auch Sicherheitsereignisse für alle Cluster oder SVMs mit Sicherheitsverletzungen. Sie können diese Probleme auf der Seite „Ereignismanagement-Bestand“ verfolgen und Warnmeldungen für diese Ereignisse so konfigurieren, dass Ihr Speicheradministrator benachrichtigt wird, wenn neue Sicherheitsereignisse auftreten.

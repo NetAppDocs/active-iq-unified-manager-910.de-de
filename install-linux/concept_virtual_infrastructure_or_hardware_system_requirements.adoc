@@ -60,7 +60,7 @@ Unified Manager kann auf Systemen mit wenig Arbeitsspeicher installiert werden. 
 
 Darüber hinaus ist die Anzahl der Nodes begrenzt, die eine einzelne Instanz von Unified Manager überwachen kann, bevor Sie eine zweite Instanz von Unified Manager installieren. Weitere Informationen finden Sie im _Best Practices Guide_.
 
-http://www.netapp.com/us/media/tr-4621.pdf["Technischer Bericht 4621: Unified Manager Best Practices Guide"]
+https://www.netapp.com/pdf.html?item=/media/13504-tr4621pdf.pdf["Technischer Bericht 4621: Unified Manager Best Practices Guide"^]
 
 Das Speicher-Page-Swapping beeinträchtigt die Leistung des Systems und der Verwaltungsanwendung negativ. Konkurrenzfähigkeit gegenüber CPU-Ressourcen, die aufgrund der gesamten Host-Auslastung nicht verfügbar sind, kann die Performance beeinträchtigen.
 

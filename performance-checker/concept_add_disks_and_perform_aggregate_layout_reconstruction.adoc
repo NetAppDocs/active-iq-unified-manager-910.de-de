@@ -17,4 +17,4 @@ Wenn Sie auf der Seite Ereignisdetails ein systemdefiniertes Schwellenwertereign
 
 Die Festplatten, die Sie dem Aggregat hinzufügen, müssen bereits im Cluster vorhanden sein. Wenn auf dem Cluster keine zusätzlichen Festplatten verfügbar sind, müssen Sie sich möglicherweise an den Administrator wenden oder weitere Festplatten erwerben. Mit ONTAP System Manager oder den ONTAP-Befehlen können Sie einem Aggregat Festplatten hinzufügen.
 
-http://www.netapp.com/us/media/tr-3838.pdf["Technischer Bericht 3838: Konfigurationsleitfaden Für Storage-Subsysteme"]
+https://www.netapp.com/pdf.html?item=/media/19675-tr-3838.pdf["Technischer Bericht 3838: Konfigurationsleitfaden Für Storage-Subsysteme"^]

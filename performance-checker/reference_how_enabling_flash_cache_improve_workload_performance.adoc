@@ -21,4 +21,4 @@ Sie können mit dem ONTAP System Manager oder den ONTAP-Befehlen herausfinden, o
 
 Weitere Informationen über Flash Cache und die Anforderungen für deren Verwendung finden Sie im folgenden technischen Bericht:
 
-http://www.netapp.com/us/media/tr-3832.pdf["Technischer Bericht 3832: Flash Cache Best Practices Guide"]
+https://www.netapp.com/pdf.html?item=/media/19754-tr-3832.pdf["Technischer Bericht 3832: Flash Cache Best Practices Guide"^]

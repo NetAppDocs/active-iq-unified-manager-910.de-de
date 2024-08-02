@@ -35,7 +35,7 @@ Schutzereignisse benachrichtigen Sie über Vorfälle oder Risiken im Zusammenhan
 
 * *Sicherheit*
 +
-Sicherheitsereignisse bei der Sicherung von ONTAP Clustern, Storage Virtual Machines (SVMs) und Volumes basieren auf im definierten Parametern http://www.netapp.com/us/media/tr-4569.pdf["NetApp Leitfaden zur verstärkte Sicherheit in ONTAP 9"].
+Sicherheitsereignisse informieren Sie darüber, wie sicher Ihre ONTAP-Cluster, Storage Virtual Machines (SVMs) und Volumes auf den in definierten Parametern basieren https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["NetApp Leitfaden zur verstärkte Sicherheit in ONTAP 9"^].
 
 +
 Darüber hinaus umfasst dieser Bereich Upgrade-Ereignisse, die von der Active IQ-Plattform gemeldet werden.
