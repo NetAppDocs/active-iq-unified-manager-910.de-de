@@ -18,7 +18,7 @@ settings:
     url: "/active-iq-unified-manager-912"
   - version-number: '9.11'
     url: "/active-iq-unified-manager-911"
-  langs: de-de,us-en,ja-jp,ko-kr,zh-cn,zh-tw,es-es,fr-fr,it-it
+  langs: de-de,us-en,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
   - title: Active IQ Unified Manager 9.10 Dokumentation
