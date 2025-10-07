@@ -1,7 +1,7 @@
 ---
 permalink: data-protection/task_restore_data_use_health_volume_details_page.html 
 sidebar: sidebar 
-keywords: restore, data, volume, health details page 
+keywords: restore, data, volume, health details page, netapp console 
 summary: Mit der Wiederherstellungsfunktion auf der Seite „Volume/Health Details“ können Sie überschreibte oder gelöschte Dateien, Verzeichnisse oder ein gesamtes Volume anhand einer Snapshot Kopie wiederherstellen. 
 ---
 = Wiederherstellen von Daten mithilfe der Seite Volume / Health Details
@@ -59,7 +59,7 @@ Der Wiederherstellungsprozess beginnt.
 +
 [NOTE]
 ====
-Wenn eine Wiederherstellung zwischen Cloud Volumes ONTAP HA Clustern mit einem NDMP-Fehler fehlschlägt, müssen Sie möglicherweise eine explizite AWS Route im Ziel-Cluster hinzufügen, damit das Ziel mit der Cluster-Management-LIF des Quellsystems kommunizieren kann. Sie führen diesen Konfigurationsschritt mit BlueXP aus.
+Wenn ein Wiederherstellungsvorgang zwischen Cloud Volumes ONTAP HA-Clustern mit einem NDMP-Fehler fehlschlägt, müssen Sie möglicherweise eine explizite AWS-Route im Zielcluster hinzufügen, damit das Ziel mit dem Cluster-Management-LIF des Quellsystems kommunizieren kann. Sie führen diesen Konfigurationsschritt mithilfe der NetApp Konsole durch.
 
 ====
 
